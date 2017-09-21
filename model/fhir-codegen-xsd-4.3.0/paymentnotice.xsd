@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  Copyright (c) 2011+, HL7, Inc.
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, 
+  are permitted provided that the following conditions are met:
+  
+   * Redistributions of source code must retain the above copyright notice, this 
+     list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+   * Neither the name of HL7 nor the names of its contributors may be used to 
+     endorse or promote products derived from this software without specific 
+     prior written permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+  POSSIBILITY OF SUCH DAMAGE.
+  
+
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+
+  Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
+  valid. Implementers will still need to be familiar with the content of the specification and with
+  any profiles that apply to the resources in order to make a conformant implementation.
+
+--><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+  <xs:include schemaLocation="fhir-base.xsd"/>
+  <xs:element name="PaymentNotice" type="PaymentNotice">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This resource provides the status of the payment for goods and services rendered, and the request and response resource references.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="PaymentNotice">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This resource provides the status of the payment for goods and services rendered, and the request and response resource references.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DomainResource">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A unique identifier assigned to this payment notice.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="status" type="FinancialResourceStatusCodes">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The status of the resource instance.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="request" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reference of resource for which payment is being made.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="response" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reference of response to resource for which payment is being made.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="created" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date when this resource was created.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="provider" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The practitioner who is responsible for the services rendered to the patient.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="payment" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A reference to the payment which is the subject of this notice.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="paymentDate" type="date">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date when the above payment action occurred.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="payee" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party who will receive or has received payment that is the subject of this notification.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="recipient" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party who is notified of the payment status.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="amount" type="Money">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The amount sent to the payee.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="paymentStatus" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A code indicating whether payment has been sent or cleared.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

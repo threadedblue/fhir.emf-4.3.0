@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  Copyright (c) 2011+, HL7, Inc.
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, 
+  are permitted provided that the following conditions are met:
+  
+   * Redistributions of source code must retain the above copyright notice, this 
+     list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+   * Neither the name of HL7 nor the names of its contributors may be used to 
+     endorse or promote products derived from this software without specific 
+     prior written permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+  POSSIBILITY OF SUCH DAMAGE.
+  
+
+  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+
+  Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
+  valid. Implementers will still need to be familiar with the content of the specification and with
+  any profiles that apply to the resources in order to make a conformant implementation.
+
+--><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+  <xs:include schemaLocation="fhir-base.xsd"/>
+  <xs:element name="ChargeItem" type="ChargeItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ChargeItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DomainResource">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifiers assigned to this event performer or other systems.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="definitionUri" type="uri">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">References the (external) source of pricing information, rules of application for the code this ChargeItem uses.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="definitionCanonical" type="canonical">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">References the source of pricing information, rules of application for the code this ChargeItem uses.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="status" type="ChargeItemStatus">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The current state of the ChargeItem.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="partOf" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">ChargeItems can be grouped to larger ChargeItems covering the whole set.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="code" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A code that identifies the charge, like a billing code.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The individual or set of individuals the action is being or was performed on.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="context" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The encounter or episode of care that establishes the context for this event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+                      <xs:element minOccurs="0" name="occurrenceDateTime" type="dateTime">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Date/time(s) or duration when the charged service was applied. (choose any one of occurrence*, but only one)</xs:documentation>
+              </xs:annotation>
+             </xs:element>
+            <xs:element minOccurs="0" name="occurrencePeriod" type="Period">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Date/time(s) or duration when the charged service was applied. (choose any one of occurrence*, but only one)</xs:documentation>
+              </xs:annotation>
+             </xs:element>
+            <xs:element minOccurs="0" name="occurrenceTiming" type="Timing">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Date/time(s) or duration when the charged service was applied. (choose any one of occurrence*, but only one)</xs:documentation>
+              </xs:annotation>
+             </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="performer" type="ChargeItem.Performer">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates who or what performed or participated in the charged service.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="performingOrganization" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The organization requesting the service.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="requestingOrganization" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The organization performing the service.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="costCenter" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The financial cost center permits the tracking of charge attribution.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Quantity of which the charge item has been serviced.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="bodysite" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The anatomical location where the related service has been applied.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="factorOverride" type="decimal">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Factor overriding the factor determined by the rules associated with the code.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="priceOverride" type="Money">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Total price of the charge overriding the list price associated with the code.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="overrideReason" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="enterer" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The device, practitioner, etc. who entered the charge item.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="enteredDate" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Date the charge item was entered.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="reason" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Describes why the event occurred in coded or textual form.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="service" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicated the rendered service that caused this charge.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+                      <xs:element minOccurs="0" name="productReference" type="Reference">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Identifies the device, food, drug or other product being charged either by type code or reference to an instance. (choose any one of product*, but only one)</xs:documentation>
+              </xs:annotation>
+             </xs:element>
+            <xs:element minOccurs="0" name="productCodeableConcept" type="CodeableConcept">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Identifies the device, food, drug or other product being charged either by type code or reference to an instance. (choose any one of product*, but only one)</xs:documentation>
+              </xs:annotation>
+             </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="account" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Account into which this ChargeItems belongs.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="note" type="Annotation">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Comments made about the event by the performer, subject or other participants.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="supportingInformation" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Further information supporting this charge.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ChargeItem.Performer">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="function" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Describes the type of performance or participation(e.g. primary surgeon, anesthesiologiest, etc.).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="actor" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The device, practitioner, etc. who performed or participated in the service.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ChargeItemStatus-list">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="planned">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Planned</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="billable">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Billable</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="not-billable">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Not billable</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="aborted">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Aborted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="billed">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Billed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ChargeItemStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Codes identifying the lifecycle stage of a ChargeItem.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ChargeItemStatus-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

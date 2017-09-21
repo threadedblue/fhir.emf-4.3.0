@@ -1,40 +1,47 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'maven'
-
-sourceCompatibility = 1.8
-version = '1.0'
-
-group 'gov.nist.fhir.emf'
-
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'FHIR EMF Model',
-                   'Implementation-Version': version
-    }
+plugins {
+	id 'application'
+	id 'java'
+	id 'java-library'
+	id 'eclipse'
+    id 'maven-publish'
 }
 
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+version = '4.0.0'
+
+group 'iox.emf'
+
+description = 'Codebase generated from the HL7/FHIR specification'
+
+def mainClassName = 'fhir.emf'
+
+def jarFile = buildDir.name + "/libs/" + mainClassName + "-" + version + ".jar"
+
 repositories {
-	maven {url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath;}
-	maven {url 'http://repo1.maven.org/maven2'}
+	mavenLocal()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
 
 	// EMF
-	compile 'org.eclipse.emf:org.eclipse.emf:2.6.0'
-	compile 'org.eclipse.emf:org.eclipse.emf.common:2.12.0'
-	compile 'org.eclipse.emf:org.eclipse.emf.ecore:2.12.0'
-	compile 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.12.0'
+	implementation 'org.eclipse.emf:org.eclipse.emf.common:2.40.0'
+	implementation 'org.eclipse.emf:org.eclipse.emf.ecore:2.38.0'
+	implementation 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.38.0'
 	
 	// Logging
-	compile 'org.slf4j:slf4j-api:1.7.21'
-	compile 'ch.qos.logback:logback-core:1.1.7'
-	compile 'ch.qos.logback:logback-classic:1.1.7'
-	
-	//XML
-	compile group: 'org.dom4j', name: 'dom4j', version: '2.0.0'
-	
+	implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.1'
 }
 		
 
@@ -44,9 +51,15 @@ test {
 
 sourceSets {
     main {
-    	java {
-     		srcDir 'gen/main/java'
-    	}
+        java {
+            srcDirs 'src/main/java'
+            srcDirs 'gen/main/java'
+         }
+    }
+    test {
+        java {
+            srcDirs 'src/test/java'
+         }
     }
 }
 
@@ -56,10 +69,13 @@ processResources {
   }
 }
 
-uploadArchives {
-    repositories {
-       flatDir {
-           dirs 'repos'
-       }
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'org.hl7.fhir'
+            artifactId mainClassName
+            version '4.3.0'
+            from(components.java)
+        }
     }
 }
