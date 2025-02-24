@@ -1,0 +1,106 @@
+plugins {
+	id 'application'
+	id 'java'
+	id 'java-library'
+	id 'eclipse'
+    id 'maven-publish'
+    id("com.gradleup.shadow") version "9.0.0-beta4"
+}
+
+application {
+    applicationDefaultJvmArgs = ['-Dgreeting.language=en']
+}
+
+version = '4.3.0'
+
+group 'org.cormac'
+def archive ='fhir.emf'
+
+description = 'Codebase generated from the HL7/FHIR specification'
+
+def jarName = "fhir.emf-uber-${version}"
+def jarFile = layout.buildDirectory.file("libs/${jarName}.jar").get().asFile
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << "-Xlint:none"
+}
+
+shadowJar {
+    archiveBaseName.set(jarName) 
+    archiveClassifier.set('all') 
+    archiveVersion.set('4.3.0') 
+    mainClassName = "Main"
+}
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+
+	// EMF
+	implementation 'org.eclipse.emf:org.eclipse.emf.common:2.40.0'
+	implementation 'org.eclipse.emf:org.eclipse.emf.ecore:2.38.0'
+	implementation 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.38.0'
+	
+	// Logging
+	implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.1'
+}
+		
+
+test {
+    systemProperties 'property': 'value'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+            srcDirs 'gen/main/java'
+         }
+    }
+    test {
+        java {
+            srcDirs 'src/test/java'
+         }
+    }
+}
+
+processResources {
+  from ('gen/main/java') {
+     include '**/*.ecore'
+  }
+}
+
+publishing {
+        repositories {
+        mavenLocal()
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId group
+            artifactId archive
+            version version
+            from(components.java)
+        }
+    }
+}

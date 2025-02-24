@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="Provenance" type="Provenance">
     <xs:annotation>
@@ -48,57 +69,57 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="target" type="Reference">
+          <xs:element name="target" minOccurs="1" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-                      <xs:element minOccurs="0" name="occurredPeriod" type="Period">
+                      <xs:element name="occurredPeriod" type="Period" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The period during which the activity occurred. (choose any one of occurred*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="occurredDateTime" type="dateTime">
+            <xs:element name="occurredDateTime" type="dateTime" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The period during which the activity occurred. (choose any one of occurred*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="recorded" type="instant">
+          <xs:element name="recorded" minOccurs="1" maxOccurs="1" type="instant">
             <xs:annotation>
               <xs:documentation xml:lang="en">The instant of time at which the activity was recorded.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="policy" type="uri">
+          <xs:element name="policy" minOccurs="0" maxOccurs="unbounded" type="uri">
             <xs:annotation>
               <xs:documentation xml:lang="en">Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="location" type="Reference">
+          <xs:element name="location" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Where the activity occurred, if relevant.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="reason" type="CodeableConcept">
+          <xs:element name="reason" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The reason that the activity was taking place.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="activity" type="CodeableConcept">
+          <xs:element name="activity" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="agent" type="Provenance.Agent">
+          <xs:element name="agent" type="Provenance.Agent" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the activity taking place.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="entity" type="Provenance.Entity">
+          <xs:element name="entity" type="Provenance.Entity" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">An entity used in this activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="signature" type="Signature">
+          <xs:element name="signature" minOccurs="0" maxOccurs="unbounded" type="Signature">
             <xs:annotation>
               <xs:documentation xml:lang="en">A digital signature on the target Reference(s). The signer should match a Provenance.agent. The purpose of the signature is indicated.</xs:documentation>
            </xs:annotation>
@@ -114,22 +135,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The participation the agent had with respect to the activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="role" type="CodeableConcept">
+          <xs:element name="role" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The function of the agent with respect to the activity. The security role enabling the agent with respect to the activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="who" type="Reference">
+          <xs:element name="who" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual, device or organization that participated in the event.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="onBehalfOf" type="Reference">
+          <xs:element name="onBehalfOf" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual, device, or organization for whom the change was made.</xs:documentation>
            </xs:annotation>
@@ -145,17 +166,17 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="role" type="ProvenanceEntityRole">
+          <xs:element name="role" minOccurs="1" maxOccurs="1" type="ProvenanceEntityRole">
             <xs:annotation>
               <xs:documentation xml:lang="en">How the entity was used during the activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="what" type="Reference">
+          <xs:element name="what" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identity of the  Entity used. May be a logical or physical uri and maybe absolute or relative.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="agent" type="Provenance.Agent">
+          <xs:element name="agent" type="Provenance.Agent" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The entity is attributed to an agent to express the agent's responsibility for that entity, possibly along with other agents. This description can be understood as shorthand for saying that the agent was responsible for the activity which generated the entity.</xs:documentation>
            </xs:annotation>
@@ -164,7 +185,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="ProvenanceEntityRole-list">
+  <xs:simpleType name="ProvenanceEntityRoleEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="derivation">
         <xs:annotation>
@@ -195,12 +216,12 @@
   </xs:simpleType>
   <xs:complexType name="ProvenanceEntityRole">
     <xs:annotation>
-      <xs:documentation xml:lang="en">How an entity was used in an activity.</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="ProvenanceEntityRole-list" use="optional"/>
+        <xs:attribute name="value" type="ProvenanceEntityRoleEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

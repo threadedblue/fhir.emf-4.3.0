@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="ResearchStudy" type="ResearchStudy">
     <xs:annotation>
@@ -48,122 +69,122 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifiers assigned to this research study by the sponsor or other systems.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="title" type="string">
+          <xs:element name="title" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A short, descriptive user-friendly label for the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="protocol" type="Reference">
+          <xs:element name="protocol" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The set of steps expected to be performed as part of the execution of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="partOf" type="Reference">
+          <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A larger research study of which this particular study is a component or step.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="status" type="ResearchStudyStatus">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="ResearchStudyStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">The current state of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="primaryPurposeType" type="CodeableConcept">
+          <xs:element name="primaryPurposeType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of study based upon the intent of the study's activities. A classification of the intent of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="phase" type="CodeableConcept">
+          <xs:element name="phase" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="category" type="CodeableConcept">
+          <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Codes categorizing the type of study such as investigational vs. observational, type of blinding, type of randomization, safety vs. efficacy, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="focus" type="CodeableConcept">
+          <xs:element name="focus" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="condition" type="CodeableConcept">
+          <xs:element name="condition" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The condition that is the focus of the study.  For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion "healthy volunteer", but the target condition code would be a Lupus SNOMED code.</xs:documentation>
+              <xs:documentation xml:lang="en">The condition that is the focus of the study.  For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion &quot;healthy volunteer&quot;, but the target condition code would be a Lupus SNOMED code.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="contact" type="ContactDetail">
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
             <xs:annotation>
               <xs:documentation xml:lang="en">Contact details to assist a user in learning more about or engaging with the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="relatedArtifact" type="RelatedArtifact">
+          <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
             <xs:annotation>
               <xs:documentation xml:lang="en">Citations, references and other related documents.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="keyword" type="CodeableConcept">
+          <xs:element name="keyword" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Key terms to aid in searching for or filtering the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="location" type="CodeableConcept">
+          <xs:element name="location" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates a country, state or other region where the study is taking place.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="description" type="markdown">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">A full description of how the study is being conducted.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="enrollment" type="Reference">
+          <xs:element name="enrollment" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to a Group that defines the criteria for and quantity of subjects participating in the study.  E.g. " 200 female Europeans between the ages of 20 and 45 with early onset diabetes".</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to a Group that defines the criteria for and quantity of subjects participating in the study.  E.g. &quot; 200 female Europeans between the ages of 20 and 45 with early onset diabetes&quot;.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="period" type="Period">
+          <xs:element name="period" minOccurs="0" maxOccurs="1" type="Period">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifies the start date and the expected (or actual, depending on status) end date for the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="sponsor" type="Reference">
+          <xs:element name="sponsor" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">An organization that initiates the investigation and is legally responsible for the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="principalInvestigator" type="Reference">
+          <xs:element name="principalInvestigator" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A researcher in a study who oversees multiple aspects of the study, such as concept development, protocol writing, protocol submission for IRB approval, participant recruitment, informed consent, data collection, analysis, interpretation and presentation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="site" type="Reference">
+          <xs:element name="site" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A facility in which study activities are conducted.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="reasonStopped" type="CodeableConcept">
+          <xs:element name="reasonStopped" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A description and/or code explaining the premature termination of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="note" type="Annotation">
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">Comments made about the study by the performer, subject or other participants.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="arm" type="ResearchStudy.Arm">
+          <xs:element name="arm" type="ResearchStudy.Arm" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="objective" type="ResearchStudy.Objective">
+          <xs:element name="objective" type="ResearchStudy.Objective" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.</xs:documentation>
            </xs:annotation>
@@ -179,17 +200,17 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="name" type="string">
+          <xs:element name="name" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Unique, human-readable label for this arm of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Categorization of study arm, e.g. experimental, active comparator, placebo comparater.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="description" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A succinct description of the path through the study that would be followed by a subject adhering to this arm.</xs:documentation>
            </xs:annotation>
@@ -205,12 +226,12 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="name" type="string">
+          <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Unique, human-readable label for this objective of the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The kind of study objective.</xs:documentation>
            </xs:annotation>
@@ -219,7 +240,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="ResearchStudyStatus-list">
+  <xs:simpleType name="ResearchStudyStatusEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="active">
         <xs:annotation>
@@ -280,12 +301,12 @@
   </xs:simpleType>
   <xs:complexType name="ResearchStudyStatus">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Codes that convey the current status of the research study.</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="ResearchStudyStatus-list" use="optional"/>
+        <xs:attribute name="value" type="ResearchStudyStatusEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

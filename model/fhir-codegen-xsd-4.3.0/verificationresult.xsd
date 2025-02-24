@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="VerificationResult" type="VerificationResult">
     <xs:annotation>
@@ -48,72 +69,72 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="target" type="Reference">
+          <xs:element name="target" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A resource that was validated.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="targetLocation" type="string">
+          <xs:element name="targetLocation" minOccurs="0" maxOccurs="unbounded" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">The fhirpath location(s) within the resource that was validated.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="need" type="CodeableConcept">
+          <xs:element name="need" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The frequency with which the target must be validated (none; initial; periodic).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="status" type="status">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="status">
             <xs:annotation>
               <xs:documentation xml:lang="en">The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="statusDate" type="dateTime">
+          <xs:element name="statusDate" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the validation status was updated.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="validationType" type="CodeableConcept">
+          <xs:element name="validationType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">What the target is validated against (nothing; primary source; multiple sources).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="validationProcess" type="CodeableConcept">
+          <xs:element name="validationProcess" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="frequency" type="Timing">
+          <xs:element name="frequency" minOccurs="0" maxOccurs="1" type="Timing">
             <xs:annotation>
               <xs:documentation xml:lang="en">Frequency of revalidation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="lastPerformed" type="dateTime">
+          <xs:element name="lastPerformed" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date/time validation was last completed (including failed validations).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="nextScheduled" type="date">
+          <xs:element name="nextScheduled" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date when target is next validated, if appropriate.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="failureAction" type="CodeableConcept">
+          <xs:element name="failureAction" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The result if validation fails (fatal; warning; record only; none).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="primarySource" type="VerificationResult.PrimarySource">
+          <xs:element name="primarySource" type="VerificationResult.PrimarySource" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Information about the primary source(s) involved in validation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="attestation" type="VerificationResult.Attestation">
+          <xs:element name="attestation" type="VerificationResult.Attestation" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Information about the entity attesting to information.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="validator" type="VerificationResult.Validator">
+          <xs:element name="validator" type="VerificationResult.Validator" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Information about the entity validating information.</xs:documentation>
            </xs:annotation>
@@ -129,37 +150,37 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="who" type="Reference">
+          <xs:element name="who" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reference to the primary source.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="communicationMethod" type="CodeableConcept">
+          <xs:element name="communicationMethod" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Method for communicating with the primary source (manual; API; Push).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="validationStatus" type="CodeableConcept">
+          <xs:element name="validationStatus" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Status of the validation of the target against the primary source (successful; failed; unknown).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="validationDate" type="dateTime">
+          <xs:element name="validationDate" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the target was validated against the primary source.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="canPushUpdates" type="CodeableConcept">
+          <xs:element name="canPushUpdates" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Ability of the primary source to push updates/alerts (yes; no; undetermined).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="pushTypeAvailable" type="CodeableConcept">
+          <xs:element name="pushTypeAvailable" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).</xs:documentation>
            </xs:annotation>
@@ -175,42 +196,42 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="who" type="Reference">
+          <xs:element name="who" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual or organization attesting to information.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="onBehalfOf" type="Reference">
+          <xs:element name="onBehalfOf" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the who is asserting on behalf of another (organization or individual).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="communicationMethod" type="CodeableConcept">
+          <xs:element name="communicationMethod" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The method by which attested information was submitted/retrieved (manual; API; Push).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="date" type="date">
+          <xs:element name="date" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date the information was attested to.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="sourceIdentityCertificate" type="string">
+          <xs:element name="sourceIdentityCertificate" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A digital identity certificate associated with the attestation source.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="proxyIdentityCertificate" type="string">
+          <xs:element name="proxyIdentityCertificate" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="proxySignature" type="Signature">
+          <xs:element name="proxySignature" minOccurs="0" maxOccurs="1" type="Signature">
             <xs:annotation>
               <xs:documentation xml:lang="en">Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="sourceSignature" type="Signature">
+          <xs:element name="sourceSignature" minOccurs="0" maxOccurs="1" type="Signature">
             <xs:annotation>
               <xs:documentation xml:lang="en">Signed assertion by the attestation source that they have attested to the information.</xs:documentation>
            </xs:annotation>
@@ -226,17 +247,17 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="organization" type="Reference">
+          <xs:element name="organization" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reference to the organization validating information.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="identityCertificate" type="string">
+          <xs:element name="identityCertificate" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A digital identity certificate associated with the validator.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="attestationSignature" type="Signature">
+          <xs:element name="attestationSignature" minOccurs="0" maxOccurs="1" type="Signature">
             <xs:annotation>
               <xs:documentation xml:lang="en">Signed assertion by the validator that they have validated the information.</xs:documentation>
            </xs:annotation>
@@ -245,7 +266,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="status-list">
+  <xs:simpleType name="statusEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="attested">
         <xs:annotation>
@@ -281,12 +302,12 @@
   </xs:simpleType>
   <xs:complexType name="status">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The validation status of the target.</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="status-list" use="optional"/>
+        <xs:attribute name="value" type="statusEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

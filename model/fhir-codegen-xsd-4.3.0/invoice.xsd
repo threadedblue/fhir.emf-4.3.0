@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="Invoice" type="Invoice">
     <xs:annotation>
@@ -48,82 +69,82 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="status" type="InvoiceStatus">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="InvoiceStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">The current state of the Invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="cancelledReason" type="string">
+          <xs:element name="cancelledReason" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">In case of Invoice cancellation a reason must be given (entered in error, superseded by corrected invoice etc.).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="subject" type="Reference">
+          <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual or set of individuals receiving the goods and services billed in this invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="recipient" type="Reference">
+          <xs:element name="recipient" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual or Organization responsible for balancing of this invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="date" type="dateTime">
+          <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">Date/time(s) of when this Invoice was posted.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="participant" type="Invoice.Participant">
+          <xs:element name="participant" type="Invoice.Participant" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates who or what performed or participated in the charged service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="issuer" type="Reference">
+          <xs:element name="issuer" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The organizationissuing the Invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="account" type="Reference">
+          <xs:element name="account" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Account which is supposed to be balanced with this Invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="lineItem" type="Invoice.LineItem">
+          <xs:element name="lineItem" type="Invoice.LineItem" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="totalPriceComponent" type="Invoice.PriceComponent">
+          <xs:element name="totalPriceComponent" type="Invoice.PriceComponent" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="totalNet" type="Money">
+          <xs:element name="totalNet" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Invoice total , taxes excluded.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="totalGross" type="Money">
+          <xs:element name="totalGross" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Invoice total, tax included.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="paymentTerms" type="markdown">
+          <xs:element name="paymentTerms" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Payment details such as banking details, period of payment, deductibles, methods of payment.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="note" type="Annotation">
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">Comments made about the invoice by the issuer, subject, or other participants.</xs:documentation>
            </xs:annotation>
@@ -139,12 +160,12 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="role" type="CodeableConcept">
+          <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Describes the type of involvement (e.g. transcriptionist, creator etc.). If the invoice has been created automatically, the Participant may be a billing engine or another kind of device.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="actor" type="Reference">
+          <xs:element name="actor" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The device, practitioner, etc. who performed or participated in the service.</xs:documentation>
            </xs:annotation>
@@ -160,22 +181,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="sequence" type="positiveInt">
+          <xs:element name="sequence" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">Sequence in which the items appear on the invoice.</xs:documentation>
            </xs:annotation>
           </xs:element>
-                      <xs:element minOccurs="0" name="chargeItemReference" type="Reference">
+                      <xs:element name="chargeItemReference" type="Reference" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference. (choose any one of chargeItem*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="chargeItemCodeableConcept" type="CodeableConcept">
+            <xs:element name="chargeItemCodeableConcept" type="CodeableConcept" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference. (choose any one of chargeItem*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="priceComponent" type="Invoice.PriceComponent">
+          <xs:element name="priceComponent" type="Invoice.PriceComponent" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.</xs:documentation>
            </xs:annotation>
@@ -191,22 +212,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="type" type="InvoicePriceComponentType">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="InvoicePriceComponentType">
             <xs:annotation>
               <xs:documentation xml:lang="en">This code identifies the type of the component.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="code" type="CodeableConcept">
+          <xs:element name="code" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="factor" type="decimal">
+          <xs:element name="factor" minOccurs="0" maxOccurs="1" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">The factor that has been applied on the base price for calculating this component.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="amount" type="Money">
+          <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">The amount calculated for this component.</xs:documentation>
            </xs:annotation>
@@ -215,7 +236,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="InvoiceStatus-list">
+  <xs:simpleType name="InvoiceStatusEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="draft">
         <xs:annotation>
@@ -246,12 +267,12 @@
   </xs:simpleType>
   <xs:complexType name="InvoiceStatus">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Codes identifying the lifecycle stage of an Invoice.</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="InvoiceStatus-list" use="optional"/>
+        <xs:attribute name="value" type="InvoiceStatusEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

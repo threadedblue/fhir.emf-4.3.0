@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="NutritionOrder" type="NutritionOrder">
     <xs:annotation>
@@ -48,87 +69,87 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifiers assigned to this order by the order sender or by the order receiver.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="instantiatesCanonical" type="canonical">
+          <xs:element name="instantiatesCanonical" minOccurs="0" maxOccurs="unbounded" type="canonical">
             <xs:annotation>
               <xs:documentation xml:lang="en">The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="instantiatesUri" type="uri">
+          <xs:element name="instantiatesUri" minOccurs="0" maxOccurs="unbounded" type="uri">
             <xs:annotation>
               <xs:documentation xml:lang="en">The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="instantiates" type="uri">
+          <xs:element name="instantiates" minOccurs="0" maxOccurs="unbounded" type="uri">
             <xs:annotation>
               <xs:documentation xml:lang="en">The URL pointing to a protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="status" type="RequestStatus">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="RequestStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">The workflow status of the nutrition order/request.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="intent" type="RequestIntent">
+          <xs:element name="intent" minOccurs="1" maxOccurs="1" type="RequestIntent">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates the level of authority/intentionality associated with the NutrionOrder and where the request fits into the workflow chain.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="patient" type="Reference">
+          <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="encounter" type="Reference">
+          <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">An encounter that provides additional information about the healthcare context in which this request is made.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="dateTime" type="dateTime">
+          <xs:element name="dateTime" minOccurs="1" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date and time that this nutrition order was requested.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="orderer" type="Reference">
+          <xs:element name="orderer" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="allergyIntolerance" type="Reference">
+          <xs:element name="allergyIntolerance" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A link to a record of allergies or intolerances  which should be included in the nutrition order.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="foodPreferenceModifier" type="CodeableConcept">
+          <xs:element name="foodPreferenceModifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">This modifier is used to convey order-specific modifiers about the type of food that should be given. These can be derived from patient allergies, intolerances, or preferences such as Halal, Vegan or Kosher. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="excludeFoodModifier" type="CodeableConcept">
+          <xs:element name="excludeFoodModifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">This modifier is used to convey Order-specific modifier about the type of oral food or oral fluids that should not be given. These can be derived from patient allergies, intolerances, or preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy or intolerance information captured in the referenced AllergyIntolerance resource in the excludeFoodModifier, this element may be used to convey additional specificity related to foods that should be eliminated from the patient’s diet for any reason.  This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="oralDiet" type="NutritionOrder.OralDiet">
+          <xs:element name="oralDiet" type="NutritionOrder.OralDiet" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Diet given orally in contrast to enteral (tube) feeding.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="supplement" type="NutritionOrder.Supplement">
+          <xs:element name="supplement" type="NutritionOrder.Supplement" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Oral nutritional products given in order to add further nutritional value to the patient's diet.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="enteralFormula" type="NutritionOrder.EnteralFormula">
+          <xs:element name="enteralFormula" type="NutritionOrder.EnteralFormula" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="note" type="Annotation">
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">Comments made about the {{title}} by the requester, performer, subject or other participants.</xs:documentation>
            </xs:annotation>
@@ -144,32 +165,32 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="schedule" type="Timing">
+          <xs:element name="schedule" minOccurs="0" maxOccurs="unbounded" type="Timing">
             <xs:annotation>
               <xs:documentation xml:lang="en">The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="nutrient" type="NutritionOrder.Nutrient">
+          <xs:element name="nutrient" type="NutritionOrder.Nutrient" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="texture" type="NutritionOrder.Texture">
+          <xs:element name="texture" type="NutritionOrder.Texture" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Class that describes any texture modifications required for the patient to safely consume various types of solid foods.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="fluidConsistencyType" type="CodeableConcept">
+          <xs:element name="fluidConsistencyType" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="instruction" type="string">
+          <xs:element name="instruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text or additional instructions or information pertaining to the oral diet.</xs:documentation>
            </xs:annotation>
@@ -185,12 +206,12 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="modifier" type="CodeableConcept">
+          <xs:element name="modifier" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The nutrient that is being modified such as carbohydrate or sodium.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="amount" type="Quantity">
+          <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The quantity of the specified nutrient to include in diet.</xs:documentation>
            </xs:annotation>
@@ -206,12 +227,12 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="modifier" type="CodeableConcept">
+          <xs:element name="modifier" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Any texture modifications (for solid foods) that should be made, e.g. easy to chew, chopped, ground, and pureed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="foodType" type="CodeableConcept">
+          <xs:element name="foodType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The food type(s) (e.g. meats, all foods)  that the texture modification applies to.  This could be all foods types.</xs:documentation>
            </xs:annotation>
@@ -227,27 +248,27 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="productName" type="string">
+          <xs:element name="productName" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The product or brand name of the nutritional supplement such as "Acme Protein Shake".</xs:documentation>
+              <xs:documentation xml:lang="en">The product or brand name of the nutritional supplement such as &quot;Acme Protein Shake&quot;.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="schedule" type="Timing">
+          <xs:element name="schedule" minOccurs="0" maxOccurs="unbounded" type="Timing">
             <xs:annotation>
               <xs:documentation xml:lang="en">The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The amount of the nutritional supplement to be given.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="instruction" type="string">
+          <xs:element name="instruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text or additional instructions or information pertaining to the oral supplement.</xs:documentation>
            </xs:annotation>
@@ -263,47 +284,47 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="baseFormulaType" type="CodeableConcept">
+          <xs:element name="baseFormulaType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="baseFormulaProductName" type="string">
+          <xs:element name="baseFormulaProductName" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The product or brand name of the enteral or infant formula product such as "ACME Adult Standard Formula".</xs:documentation>
+              <xs:documentation xml:lang="en">The product or brand name of the enteral or infant formula product such as &quot;ACME Adult Standard Formula&quot;.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="additiveType" type="CodeableConcept">
+          <xs:element name="additiveType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="additiveProductName" type="string">
+          <xs:element name="additiveProductName" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">The product or brand name of the type of modular component to be added to the formula.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="caloricDensity" type="Quantity">
+          <xs:element name="caloricDensity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="routeofAdministration" type="CodeableConcept">
+          <xs:element name="routeofAdministration" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The route or physiological path of administration into the patient's gastrointestinal  tract for purposes of providing the formula feeding, e.g. nasogastric tube.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="administration" type="NutritionOrder.Administration">
+          <xs:element name="administration" type="NutritionOrder.Administration" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Formula administration instructions as structured data.  This repeating structure allows for changing the administration rate or volume over time for both bolus and continuous feeding.  An example of this would be an instruction to increase the rate of continuous feeding every 2 hours.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="maxVolumeToDeliver" type="Quantity">
+          <xs:element name="maxVolumeToDeliver" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="administrationInstruction" type="string">
+          <xs:element name="administrationInstruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Free text formula administration, feeding instructions or additional instructions or information.</xs:documentation>
            </xs:annotation>
@@ -319,22 +340,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="schedule" type="Timing">
+          <xs:element name="schedule" minOccurs="0" maxOccurs="1" type="Timing">
             <xs:annotation>
               <xs:documentation xml:lang="en">The time period and frequency at which the enteral formula should be delivered to the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The volume of formula to provide to the patient per the specified administration schedule.</xs:documentation>
            </xs:annotation>
           </xs:element>
-                      <xs:element minOccurs="0" name="rateQuantity" type="Quantity">
+                      <xs:element name="rateQuantity" type="Quantity" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The rate of administration of formula via a feeding pump, e.g. 60 mL per hour, according to the specified schedule. (choose any one of rate*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="rateRatio" type="Ratio">
+            <xs:element name="rateRatio" type="Ratio" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The rate of administration of formula via a feeding pump, e.g. 60 mL per hour, according to the specified schedule. (choose any one of rate*, but only one)</xs:documentation>
               </xs:annotation>

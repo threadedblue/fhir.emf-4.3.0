@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: fhir.emf;singleton:=true
-Automatic-Module-Name: fhir.emf
+Bundle-SymbolicName: fhir.emf-4.3.0;singleton:=true
+Automatic-Module-Name: fhir.emf-4.3.0
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.hl7.fhir,
  org.hl7.fhir.impl,
  org.hl7.fhir.util,

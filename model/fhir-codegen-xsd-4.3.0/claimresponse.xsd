@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+ * #%L
+ * org.hl7.fhir.r5
+ * %%
+ * Copyright (C) 2014 - 2019 Health Level 7
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/*
   Copyright (c) 2011+, HL7, Inc.
   All rights reserved.
   
@@ -27,13 +47,14 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Dec 27, 2018 22:37+1100 for FHIR v4.0.0 
+  Generated on Sat, May 28, 2022 12:47+1000 for FHIR v4.3.0 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
   any profiles that apply to the resources in order to make a conformant implementation.
 
---><xs:schema xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://hl7.org/fhir" version="1.0">
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="1.0">
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="ClaimResponse" type="ClaimResponse">
     <xs:annotation>
@@ -48,137 +69,137 @@
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">A unique identifier assigned to this claim response.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="status" type="FinancialResourceStatusCodes">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="FinancialResourceStatusCodes">
             <xs:annotation>
               <xs:documentation xml:lang="en">The status of the resource instance.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="subType" type="CodeableConcept">
+          <xs:element name="subType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="use" type="Use">
+          <xs:element name="use" minOccurs="1" maxOccurs="1" type="Use">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="patient" type="Reference">
+          <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="created" type="dateTime">
+          <xs:element name="created" minOccurs="1" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date this resource was created.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="insurer" type="Reference">
+          <xs:element name="insurer" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The party responsible for authorization, adjudication and reimbursement.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="requestor" type="Reference">
+          <xs:element name="requestor" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The provider which is responsible for the claim, predetermination or preauthorization.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="request" type="Reference">
+          <xs:element name="request" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Original request resource reference.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="outcome" type="ClaimProcessingCodes">
+          <xs:element name="outcome" minOccurs="1" maxOccurs="1" type="RemittanceOutcome">
             <xs:annotation>
               <xs:documentation xml:lang="en">The outcome of the claim, predetermination, or preauthorization processing.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="disposition" type="string">
+          <xs:element name="disposition" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A human readable description of the status of the adjudication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="preAuthRef" type="string">
+          <xs:element name="preAuthRef" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reference from the Insurer which is used in later communications which refers to this adjudication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="preAuthPeriod" type="Period">
+          <xs:element name="preAuthPeriod" minOccurs="0" maxOccurs="1" type="Period">
             <xs:annotation>
               <xs:documentation xml:lang="en">The time frame during which this authorization is effective.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="payeeType" type="CodeableConcept">
+          <xs:element name="payeeType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Type of Party to be reimbursed: subscriber, provider, other.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="ClaimResponse.Item">
+          <xs:element name="item" type="ClaimResponse.Item" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="addItem" type="ClaimResponse.AddItem">
+          <xs:element name="addItem" type="ClaimResponse.AddItem" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The first-tier service adjudications for payor added product or service lines.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results which are presented at the header level rather than at the line-item or add-item levels.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="total" type="ClaimResponse.Total">
+          <xs:element name="total" type="ClaimResponse.Total" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Categorized monetary totals for the adjudication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="payment" type="ClaimResponse.Payment">
+          <xs:element name="payment" type="ClaimResponse.Payment" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Payment details for the adjudication of the claim.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="fundsReserve" type="CodeableConcept">
+          <xs:element name="fundsReserve" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code, used only on a response to a preauthorization, to indicate whether the benefits payable have been reserved and for whom.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="formCode" type="CodeableConcept">
+          <xs:element name="formCode" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code for the form to be used for printing the content.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="form" type="Attachment">
+          <xs:element name="form" minOccurs="0" maxOccurs="1" type="Attachment">
             <xs:annotation>
               <xs:documentation xml:lang="en">The actual form, by reference or inclusion, for printing the content or an EOB.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="processNote" type="ClaimResponse.ProcessNote">
+          <xs:element name="processNote" type="ClaimResponse.ProcessNote" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A note that describes or explains adjudication results in a human readable form.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="communicationRequest" type="Reference">
+          <xs:element name="communicationRequest" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Request for additional supporting or authorizing information.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="insurance" type="ClaimResponse.Insurance">
+          <xs:element name="insurance" type="ClaimResponse.Insurance" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Financial instruments for reimbursement for the health care products and services specified on the claim.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="error" type="ClaimResponse.Error">
+          <xs:element name="error" type="ClaimResponse.Error" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Errors encountered during the processing of the adjudication.</xs:documentation>
            </xs:annotation>
@@ -194,22 +215,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="itemSequence" type="positiveInt">
+          <xs:element name="itemSequence" minOccurs="1" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">A number to uniquely reference the claim item entries.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="detail" type="ClaimResponse.Detail">
+          <xs:element name="detail" type="ClaimResponse.Detail" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A claim detail. Either a simple (a product or service) or a 'group' of sub-details which are simple items.</xs:documentation>
            </xs:annotation>
@@ -225,22 +246,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="category" type="CodeableConcept">
+          <xs:element name="category" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code to indicate the information type of this adjudication record. Information types may include the value submitted, maximum values or percentages allowed or payable under the plan, amounts that: the patient is responsible for in aggregate or pertaining to this item; amounts paid by other coverages; and, the benefit payable for this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="reason" type="CodeableConcept">
+          <xs:element name="reason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code supporting the understanding of the adjudication result and explaining variance from expected amount.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="amount" type="Money">
+          <xs:element name="amount" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Monetary amount associated with the category.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="value" type="decimal">
+          <xs:element name="value" minOccurs="0" maxOccurs="1" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">A non-monetary value associated with the category. Mutually exclusive to the amount element above.</xs:documentation>
            </xs:annotation>
@@ -256,22 +277,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="detailSequence" type="positiveInt">
+          <xs:element name="detailSequence" minOccurs="1" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">A number to uniquely reference the claim detail entry.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="subDetail" type="ClaimResponse.SubDetail">
+          <xs:element name="subDetail" type="ClaimResponse.SubDetail" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A sub-detail adjudication of a simple product or service.</xs:documentation>
            </xs:annotation>
@@ -287,17 +308,17 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="subDetailSequence" type="positiveInt">
+          <xs:element name="subDetailSequence" minOccurs="1" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">A number to uniquely reference the claim sub-detail entry.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results.</xs:documentation>
            </xs:annotation>
@@ -313,107 +334,107 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="itemSequence" type="positiveInt">
+          <xs:element name="itemSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">Claim items which this service line is intended to replace.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="detailSequence" type="positiveInt">
+          <xs:element name="detailSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The sequence number of the details within the claim item which this line is intended to replace.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="subdetailSequence" type="positiveInt">
+          <xs:element name="subdetailSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The sequence number of the sub-details within the details within the claim item which this line is intended to replace.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="provider" type="Reference">
+          <xs:element name="provider" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The providers who are authorized for the services rendered to the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="productOrService" type="CodeableConcept">
+          <xs:element name="productOrService" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="modifier" type="CodeableConcept">
+          <xs:element name="modifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Item typification or modifiers codes to convey additional context for the product or service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="programCode" type="CodeableConcept">
+          <xs:element name="programCode" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifies the program under which this may be recovered.</xs:documentation>
            </xs:annotation>
           </xs:element>
-                      <xs:element minOccurs="0" name="servicedDate" type="date">
+                      <xs:element name="servicedDate" type="date" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The date or dates when the service or product was supplied, performed or completed. (choose any one of serviced*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="servicedPeriod" type="Period">
+            <xs:element name="servicedPeriod" type="Period" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">The date or dates when the service or product was supplied, performed or completed. (choose any one of serviced*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-                      <xs:element minOccurs="0" name="locationCodeableConcept" type="CodeableConcept">
+                      <xs:element name="locationCodeableConcept" type="CodeableConcept" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">Where the product or service was provided. (choose any one of location*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="locationAddress" type="Address">
+            <xs:element name="locationAddress" type="Address" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">Where the product or service was provided. (choose any one of location*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-            <xs:element minOccurs="0" name="locationReference" type="Reference">
+            <xs:element name="locationReference" type="Reference" minOccurs="0">
               <xs:annotation>
                 <xs:documentation xml:lang="en">Where the product or service was provided. (choose any one of location*, but only one)</xs:documentation>
               </xs:annotation>
              </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The number of repetitions of a service or product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="unitPrice" type="Money">
+          <xs:element name="unitPrice" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="factor" type="decimal">
+          <xs:element name="factor" minOccurs="0" maxOccurs="1" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="net" type="Money">
+          <xs:element name="net" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">The quantity times the unit price for an additional service or product or charge.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="bodySite" type="CodeableConcept">
+          <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Physical service site on the patient (limb, tooth, etc.).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="subSite" type="CodeableConcept">
+          <xs:element name="subSite" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A region or surface of the bodySite, e.g. limb region or tooth surface(s).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="detail" type="ClaimResponse.Detail1">
+          <xs:element name="detail" type="ClaimResponse.Detail1" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The second-tier service adjudications for payor added services.</xs:documentation>
            </xs:annotation>
@@ -429,47 +450,47 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="productOrService" type="CodeableConcept">
+          <xs:element name="productOrService" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="modifier" type="CodeableConcept">
+          <xs:element name="modifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Item typification or modifiers codes to convey additional context for the product or service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The number of repetitions of a service or product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="unitPrice" type="Money">
+          <xs:element name="unitPrice" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="factor" type="decimal">
+          <xs:element name="factor" minOccurs="0" maxOccurs="1" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="net" type="Money">
+          <xs:element name="net" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">The quantity times the unit price for an additional service or product or charge.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="subDetail" type="ClaimResponse.SubDetail1">
+          <xs:element name="subDetail" type="ClaimResponse.SubDetail1" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The third-tier service adjudications for payor added services.</xs:documentation>
            </xs:annotation>
@@ -485,42 +506,42 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="productOrService" type="CodeableConcept">
+          <xs:element name="productOrService" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="modifier" type="CodeableConcept">
+          <xs:element name="modifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Item typification or modifiers codes to convey additional context for the product or service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="Quantity">
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
               <xs:documentation xml:lang="en">The number of repetitions of a service or product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="unitPrice" type="Money">
+          <xs:element name="unitPrice" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="factor" type="decimal">
+          <xs:element name="factor" minOccurs="0" maxOccurs="1" type="decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en">A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="net" type="Money">
+          <xs:element name="net" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">The quantity times the unit price for an additional service or product or charge.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="noteNumber" type="positiveInt">
+          <xs:element name="noteNumber" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" name="adjudication" type="ClaimResponse.Adjudication">
+          <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The adjudication results.</xs:documentation>
            </xs:annotation>
@@ -536,12 +557,12 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="category" type="CodeableConcept">
+          <xs:element name="category" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code to indicate the information type of this adjudication record. Information types may include: the value submitted, maximum values or percentages allowed or payable under the plan, amounts that the patient is responsible for in aggregate or pertaining to this item, amounts paid by other coverages, and the benefit payable for this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="amount" type="Money">
+          <xs:element name="amount" minOccurs="1" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Monetary total amount associated with the category.</xs:documentation>
            </xs:annotation>
@@ -557,32 +578,32 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="type" type="CodeableConcept">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Whether this represents partial or complete payment of the benefits payable.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="adjustment" type="Money">
+          <xs:element name="adjustment" minOccurs="0" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Total amount of all adjustments to this payment included in this transaction which are not related to this claim's adjudication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="adjustmentReason" type="CodeableConcept">
+          <xs:element name="adjustmentReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reason for the payment adjustment.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="date" type="date">
+          <xs:element name="date" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
               <xs:documentation xml:lang="en">Estimated date the payment will be issued or the actual issue date of payment.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="amount" type="Money">
+          <xs:element name="amount" minOccurs="1" maxOccurs="1" type="Money">
             <xs:annotation>
               <xs:documentation xml:lang="en">Benefits payable less any payment adjustment.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="identifier" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Issuer's unique identifier for the payment instrument.</xs:documentation>
            </xs:annotation>
@@ -598,22 +619,22 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="number" type="positiveInt">
+          <xs:element name="number" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">A number to uniquely identify a note entry.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="type" type="NoteType">
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="NoteType">
             <xs:annotation>
               <xs:documentation xml:lang="en">The business purpose of the note text.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="text" type="string">
+          <xs:element name="text" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">The explanation or description associated with the processing.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="CodeableConcept">
+          <xs:element name="language" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code to define the language used in the text of the note.</xs:documentation>
            </xs:annotation>
@@ -629,27 +650,27 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="sequence" type="positiveInt">
+          <xs:element name="sequence" minOccurs="1" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">A number to uniquely identify insurance entries and provide a sequence of coverages to convey coordination of benefit order.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="focal" type="boolean">
+          <xs:element name="focal" minOccurs="1" maxOccurs="1" type="boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en">A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="coverage" type="Reference">
+          <xs:element name="coverage" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="businessArrangement" type="string">
+          <xs:element name="businessArrangement" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A business agreement number established between the provider and the insurer for special business processing purposes.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="claimResponse" type="Reference">
+          <xs:element name="claimResponse" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The result of the adjudication of the line items for the Coverage specified in this insurance.</xs:documentation>
            </xs:annotation>
@@ -665,62 +686,27 @@
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="itemSequence" type="positiveInt">
+          <xs:element name="itemSequence" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The sequence number of the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="detailSequence" type="positiveInt">
+          <xs:element name="detailSequence" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The sequence number of the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="subDetailSequence" type="positiveInt">
+          <xs:element name="subDetailSequence" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
               <xs:documentation xml:lang="en">The sequence number of the sub-detail within the detail within the line item submitted which contains the error. This value is omitted when the error occurs outside of the item structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="code" type="CodeableConcept">
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">An error code, from a specified code system, which details why the claim could not be adjudicated.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="ClaimProcessingCodes-list">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="queued">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Queued</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="complete">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Processing Complete</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="error">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Error</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="partial">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Partial Processing</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="ClaimProcessingCodes">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The result of the claim processing.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="ClaimProcessingCodes-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

@@ -1,29 +1,30 @@
 plugins {
-	id 'application'
-	id 'java'
-	id 'java-library'
-	id 'eclipse'
+    id 'java'
+    id 'java-library'
+    id 'eclipse'
     id 'maven-publish'
 }
 
+version = '4.3.0'
+group = 'org.cormac'
+def archive = 'fhir.emf'
+description = 'Codebase generated from the HL7/FHIR specification'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
 }
 
-version = '4.0.0'
-
-group 'iox.emf'
-
-description = 'Codebase generated from the HL7/FHIR specification'
-
-def mainClassName = 'fhir.emf'
-
-def jarFile = buildDir.name + "/libs/" + mainClassName + "-" + version + ".jar"
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << "-Xlint:none"
+}
 
 repositories {
-	mavenLocal()
+    mavenLocal()
     mavenCentral()
     flatDir {
         dirs 'libs'
@@ -31,19 +32,17 @@ repositories {
 }
 
 dependencies {
-
-	// EMF
-	implementation 'org.eclipse.emf:org.eclipse.emf.common:2.40.0'
-	implementation 'org.eclipse.emf:org.eclipse.emf.ecore:2.38.0'
-	implementation 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.38.0'
-	
-	// Logging
-	implementation 'org.slf4j:slf4j-api:1.7.32'
+    // EMF dependencies
+    implementation 'org.eclipse.emf:org.eclipse.emf.common:2.40.0'
+    implementation 'org.eclipse.emf:org.eclipse.emf.ecore:2.38.0'
+    implementation 'org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.38.0'
+    
+    // Logging dependencies
+    implementation 'org.slf4j:slf4j-api:1.7.32'
     implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
     implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.1'
 }
-		
 
 test {
     systemProperties 'property': 'value'
@@ -52,30 +51,40 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs 'src/main/java'
-            srcDirs 'gen/main/java'
-         }
+            srcDirs 'src/main/java', 'gen/main/java'
+        }
     }
     test {
         java {
             srcDirs 'src/test/java'
-         }
+        }
     }
 }
 
 processResources {
-  from ('gen/main/java') {
-     include '**/*.ecore'
-  }
+    from('gen/main/java') {
+        include '**/*.ecore'
+    }
+}
+
+// Optional: create a sources JAR for users of your library
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from sourceSets.main.allJava
 }
 
 publishing {
+    repositories {
+        mavenLocal() // Publishes to your local Maven repository (~/.m2/repository)
+    }
     publications {
         maven(MavenPublication) {
-            groupId 'org.hl7.fhir'
-            artifactId mainClassName
-            version '4.3.0'
+            groupId = group
+            artifactId = archive
+            version = version
             from(components.java)
+            artifact sourcesJar
         }
     }
 }

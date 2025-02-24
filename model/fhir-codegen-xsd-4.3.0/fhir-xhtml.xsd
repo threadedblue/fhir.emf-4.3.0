@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1999/xhtml" version="1.0" xml:lang="en">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" targetNamespace="http://www.w3.org/1999/xhtml" elementFormDefault="qualified" version="1.0" xml:lang="en">
   <!--
   FHIR XHTML Schema
   
@@ -108,7 +108,7 @@
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:length fixed="true" value="1"/>
+      <xs:length value="1" fixed="true"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="Number">
@@ -435,13 +435,13 @@
  -->
     </xs:choice>
   </xs:group>
-  <xs:complexType mixed="true" name="Inline">
+  <xs:complexType name="Inline" mixed="true">
     <xs:annotation>
       <xs:documentation>
       "Inline" covers inline or "text-level" elements
       </xs:documentation>
     </xs:annotation>
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="inline"/>
       <!--      <xs:group ref="misc.inline"/> -->
     </xs:choice>
@@ -488,7 +488,7 @@
     </xs:choice>
   </xs:group>
   <xs:complexType name="Block">
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="block"/>
       <!--
   FHIR: no forms
@@ -497,13 +497,13 @@
 -->
     </xs:choice>
   </xs:complexType>
-  <xs:complexType mixed="true" name="Flow">
+  <xs:complexType name="Flow" mixed="true">
     <xs:annotation>
       <xs:documentation>
       "Flow" mixes block and inline and is used for list items etc.
       </xs:documentation>
     </xs:annotation>
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="block"/>
       <xs:group ref="inline"/>
       <!--
@@ -517,13 +517,13 @@
     ================== Content models for exclusions =====================
     </xs:documentation>
   </xs:annotation>
-  <xs:complexType mixed="true" name="a.content">
+  <xs:complexType name="a.content" mixed="true">
     <xs:annotation>
       <xs:documentation>
       a elements use "Inline" excluding a
       </xs:documentation>
     </xs:annotation>
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="special"/>
       <xs:group ref="fontstyle"/>
       <xs:group ref="phrase"/>
@@ -533,13 +533,13 @@
 -->
     </xs:choice>
   </xs:complexType>
-  <xs:complexType mixed="true" name="pre.content">
+  <xs:complexType name="pre.content" mixed="true">
     <xs:annotation>
       <xs:documentation>
       pre uses "Inline" excluding big, small, sup or sup
       </xs:documentation>
     </xs:annotation>
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="a"/>
       <xs:group ref="fontstyle"/>
       <xs:group ref="phrase"/>
@@ -883,7 +883,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="li"/>
+        <xs:element ref="li" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
     </xs:complexType>
@@ -896,7 +896,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="li"/>
+        <xs:element ref="li" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
     </xs:complexType>
@@ -991,7 +991,7 @@
       <xs:complexContent>
         <xs:extension base="pre.content">
           <xs:attributeGroup ref="attrs"/>
-          <xs:attribute fixed="preserve" ref="xml:space"/>
+          <xs:attribute ref="xml:space" fixed="preserve"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
@@ -1067,7 +1067,7 @@
           <xs:attribute name="hreflang" type="LanguageCode"/>
           <xs:attribute name="rel" type="LinkTypes"/>
           <xs:attribute name="rev" type="LinkTypes"/>
-          <xs:attribute default="rect" name="shape" type="Shape"/>
+          <xs:attribute name="shape" type="Shape" default="rect"/>
           <xs:attribute name="coords" type="Coords"/>
         </xs:extension>
       </xs:complexContent>
@@ -1505,7 +1505,7 @@
           <xs:group ref="misc"/>
 -->
         </xs:choice>
-        <xs:element maxOccurs="unbounded" ref="area"/>
+        <xs:element ref="area" maxOccurs="unbounded"/>
       </xs:choice>
       <xs:attributeGroup ref="i18n"/>
       <xs:attributeGroup ref="events"/>
@@ -1520,7 +1520,7 @@
     <xs:complexType>
       <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="focus"/>
-      <xs:attribute default="rect" name="shape" type="Shape"/>
+      <xs:attribute name="shape" type="Shape" default="rect"/>
       <xs:attribute name="coords" type="Coords"/>
       <xs:attribute name="href" type="URI"/>
       <xs:attribute name="nohref">
@@ -1919,16 +1919,16 @@
   <xs:element name="table">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="caption"/>
+        <xs:element ref="caption" minOccurs="0"/>
         <xs:choice>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="col"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="colgroup"/>
+          <xs:element ref="col" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="colgroup" minOccurs="0" maxOccurs="unbounded"/>
         </xs:choice>
-        <xs:element minOccurs="0" ref="thead"/>
-        <xs:element minOccurs="0" ref="tfoot"/>
+        <xs:element ref="thead" minOccurs="0"/>
+        <xs:element ref="tfoot" minOccurs="0"/>
         <xs:choice>
-          <xs:element maxOccurs="unbounded" ref="tbody"/>
-          <xs:element maxOccurs="unbounded" ref="tr"/>
+          <xs:element ref="tbody" maxOccurs="unbounded"/>
+          <xs:element ref="tr" maxOccurs="unbounded"/>
         </xs:choice>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
@@ -1967,7 +1967,7 @@
   <xs:element name="thead">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="tr"/>
+        <xs:element ref="tr" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="cellhalign"/>
@@ -1977,7 +1977,7 @@
   <xs:element name="tfoot">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="tr"/>
+        <xs:element ref="tr" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="cellhalign"/>
@@ -1987,7 +1987,7 @@
   <xs:element name="tbody">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="tr"/>
+        <xs:element ref="tr" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
       <xs:attributeGroup ref="cellhalign"/>
@@ -2003,10 +2003,10 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" minOccurs="0" ref="col"/>
+        <xs:element ref="col" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attributeGroup ref="attrs"/>
-      <xs:attribute default="1" name="span" type="Number"/>
+      <xs:attribute name="span" type="Number" default="1"/>
       <xs:attribute name="width" type="MultiLength"/>
       <xs:attributeGroup ref="cellhalign"/>
       <xs:attributeGroup ref="cellvalign"/>
@@ -2029,7 +2029,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:attributeGroup ref="attrs"/>
-      <xs:attribute default="1" name="span" type="Number"/>
+      <xs:attribute name="span" type="Number" default="1"/>
       <xs:attribute name="width" type="MultiLength"/>
       <xs:attributeGroup ref="cellhalign"/>
       <xs:attributeGroup ref="cellvalign"/>
@@ -2073,8 +2073,8 @@
           <xs:attribute name="axis"/>
           <xs:attribute name="headers" type="xs:IDREFS"/>
           <xs:attribute name="scope" type="Scope"/>
-          <xs:attribute default="1" name="rowspan" type="Number"/>
-          <xs:attribute default="1" name="colspan" type="Number"/>
+          <xs:attribute name="rowspan" type="Number" default="1"/>
+          <xs:attribute name="colspan" type="Number" default="1"/>
           <xs:attributeGroup ref="cellhalign"/>
           <xs:attributeGroup ref="cellvalign"/>
         </xs:extension>
@@ -2090,8 +2090,8 @@
           <xs:attribute name="axis"/>
           <xs:attribute name="headers" type="xs:IDREFS"/>
           <xs:attribute name="scope" type="Scope"/>
-          <xs:attribute default="1" name="rowspan" type="Number"/>
-          <xs:attribute default="1" name="colspan" type="Number"/>
+          <xs:attribute name="rowspan" type="Number" default="1"/>
+          <xs:attribute name="colspan" type="Number" default="1"/>
           <xs:attributeGroup ref="cellhalign"/>
           <xs:attributeGroup ref="cellvalign"/>
         </xs:extension>
