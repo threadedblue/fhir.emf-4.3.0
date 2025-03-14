@@ -5,11 +5,8 @@ package org.hl7.fhir.impl;
 import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.UnsignedInt;
 

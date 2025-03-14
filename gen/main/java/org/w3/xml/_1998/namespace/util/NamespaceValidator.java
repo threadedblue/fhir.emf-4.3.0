@@ -8,16 +8,14 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
-
-import org.w3.xml._1998.namespace.*;
+import org.w3.xml._1998.namespace.DocumentRoot;
+import org.w3.xml._1998.namespace.LangTypeMember1;
+import org.w3.xml._1998.namespace.NamespacePackage;
+import org.w3.xml._1998.namespace.SpaceType;
 
 /**
  * <!-- begin-user-doc -->

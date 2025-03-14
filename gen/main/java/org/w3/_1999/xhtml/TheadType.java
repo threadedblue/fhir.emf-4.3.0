@@ -5,7 +5,6 @@ package org.w3._1999.xhtml;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

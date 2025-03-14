@@ -3,7 +3,6 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
 

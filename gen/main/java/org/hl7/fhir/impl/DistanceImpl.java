@@ -3,7 +3,6 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.hl7.fhir.Distance;
 import org.hl7.fhir.FhirPackage;
 

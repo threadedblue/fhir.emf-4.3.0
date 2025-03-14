@@ -2,8 +2,7 @@
  */
 package org.hl7.fhir;
 
-import java.lang.String;
-
+import org.hl7.fhir.String;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

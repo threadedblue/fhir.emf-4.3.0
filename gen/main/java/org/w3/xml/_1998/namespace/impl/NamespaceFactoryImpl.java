@@ -6,17 +6,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.emf.ecore.util.Diagnostician;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
-import org.w3.xml._1998.namespace.*;
+import org.w3.xml._1998.namespace.DocumentRoot;
+import org.w3.xml._1998.namespace.LangTypeMember1;
+import org.w3.xml._1998.namespace.NamespaceFactory;
+import org.w3.xml._1998.namespace.NamespacePackage;
+import org.w3.xml._1998.namespace.SpaceType;
 
 /**
  * <!-- begin-user-doc -->

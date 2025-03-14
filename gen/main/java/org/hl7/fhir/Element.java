@@ -2,10 +2,7 @@
  */
 package org.hl7.fhir;
 
-import java.lang.String;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

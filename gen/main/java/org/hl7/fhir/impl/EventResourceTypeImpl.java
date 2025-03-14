@@ -3,11 +3,8 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.hl7.fhir.EventResourceType;
 import org.hl7.fhir.EventResourceTypeEnum;
 import org.hl7.fhir.FhirPackage;

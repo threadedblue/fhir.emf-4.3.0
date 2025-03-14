@@ -3,7 +3,6 @@
 package org.w3._1999.xhtml.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 /**

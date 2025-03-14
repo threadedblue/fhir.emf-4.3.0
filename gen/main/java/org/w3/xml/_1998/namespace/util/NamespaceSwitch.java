@@ -4,10 +4,9 @@ package org.w3.xml._1998.namespace.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.w3.xml._1998.namespace.*;
+import org.w3.xml._1998.namespace.DocumentRoot;
+import org.w3.xml._1998.namespace.NamespacePackage;
 
 /**
  * <!-- begin-user-doc -->

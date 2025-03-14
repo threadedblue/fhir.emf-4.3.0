@@ -3,15 +3,11 @@
 package org.w3._1999.xhtml.impl;
 
 import java.math.BigInteger;
-
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.w3._1999.xhtml.AlignType;
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.Scope;

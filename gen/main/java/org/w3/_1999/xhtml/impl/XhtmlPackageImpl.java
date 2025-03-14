@@ -3,11 +3,9 @@
 package org.w3._1999.xhtml.impl;
 
 import java.io.IOException;
-
 import java.net.URL;
 
 import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -16,26 +14,16 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 import org.hl7.fhir.FhirPackage;
-
 import org.hl7.fhir.impl.FhirPackageImpl;
-
 import org.w3._1999.xhtml.XhtmlFactory;
 import org.w3._1999.xhtml.XhtmlPackage;
-
 import org.w3._1999.xhtml.util.XhtmlValidator;
-
 import org.w3.xml._1998.namespace.NamespacePackage;
-
 import org.w3.xml._1998.namespace.impl.NamespacePackageImpl;
 
 /**

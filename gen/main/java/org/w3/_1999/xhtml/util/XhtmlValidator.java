@@ -3,7 +3,6 @@
 package org.w3._1999.xhtml.util;
 
 import java.math.BigInteger;
-
 import java.util.List;
 import java.util.Map;
 
@@ -11,15 +10,80 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil;
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
-
-import org.w3._1999.xhtml.*;
+import org.w3._1999.xhtml.AContent;
+import org.w3._1999.xhtml.AType;
+import org.w3._1999.xhtml.AbbrType;
+import org.w3._1999.xhtml.AcronymType;
+import org.w3._1999.xhtml.AddressType;
+import org.w3._1999.xhtml.AlignType;
+import org.w3._1999.xhtml.AreaType;
+import org.w3._1999.xhtml.BType;
+import org.w3._1999.xhtml.BdoType;
+import org.w3._1999.xhtml.BigType;
+import org.w3._1999.xhtml.Block;
+import org.w3._1999.xhtml.BlockquoteType;
+import org.w3._1999.xhtml.BrType;
+import org.w3._1999.xhtml.CaptionType;
+import org.w3._1999.xhtml.CiteType;
+import org.w3._1999.xhtml.CodeType;
+import org.w3._1999.xhtml.ColType;
+import org.w3._1999.xhtml.ColgroupType;
+import org.w3._1999.xhtml.DdType;
+import org.w3._1999.xhtml.DfnType;
+import org.w3._1999.xhtml.DirType;
+import org.w3._1999.xhtml.DirType1;
+import org.w3._1999.xhtml.DivType;
+import org.w3._1999.xhtml.DlType;
+import org.w3._1999.xhtml.DocumentRoot;
+import org.w3._1999.xhtml.DtType;
+import org.w3._1999.xhtml.EmType;
+import org.w3._1999.xhtml.Flow;
+import org.w3._1999.xhtml.H1Type;
+import org.w3._1999.xhtml.H2Type;
+import org.w3._1999.xhtml.H3Type;
+import org.w3._1999.xhtml.H4Type;
+import org.w3._1999.xhtml.H5Type;
+import org.w3._1999.xhtml.H6Type;
+import org.w3._1999.xhtml.HrType;
+import org.w3._1999.xhtml.IType;
+import org.w3._1999.xhtml.ImgType;
+import org.w3._1999.xhtml.Inline;
+import org.w3._1999.xhtml.IsmapType;
+import org.w3._1999.xhtml.KbdType;
+import org.w3._1999.xhtml.LiType;
+import org.w3._1999.xhtml.MapType;
+import org.w3._1999.xhtml.NohrefType;
+import org.w3._1999.xhtml.OlType;
+import org.w3._1999.xhtml.PType;
+import org.w3._1999.xhtml.PreContent;
+import org.w3._1999.xhtml.PreType;
+import org.w3._1999.xhtml.QType;
+import org.w3._1999.xhtml.SampType;
+import org.w3._1999.xhtml.Scope;
+import org.w3._1999.xhtml.Shape;
+import org.w3._1999.xhtml.SmallType;
+import org.w3._1999.xhtml.SpanType;
+import org.w3._1999.xhtml.StrongType;
+import org.w3._1999.xhtml.SubType;
+import org.w3._1999.xhtml.SupType;
+import org.w3._1999.xhtml.TFrame;
+import org.w3._1999.xhtml.TRules;
+import org.w3._1999.xhtml.TableType;
+import org.w3._1999.xhtml.TbodyType;
+import org.w3._1999.xhtml.TdType;
+import org.w3._1999.xhtml.TfootType;
+import org.w3._1999.xhtml.ThType;
+import org.w3._1999.xhtml.TheadType;
+import org.w3._1999.xhtml.TrType;
+import org.w3._1999.xhtml.TtType;
+import org.w3._1999.xhtml.UlType;
+import org.w3._1999.xhtml.ValignType;
+import org.w3._1999.xhtml.VarType;
+import org.w3._1999.xhtml.XhtmlPackage;
 
 /**
  * <!-- begin-user-doc -->

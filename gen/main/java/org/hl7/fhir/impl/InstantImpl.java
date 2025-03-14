@@ -5,11 +5,8 @@ package org.hl7.fhir.impl;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Instant;
 

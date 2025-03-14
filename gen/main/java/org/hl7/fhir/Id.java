@@ -2,8 +2,6 @@
  */
 package org.hl7.fhir;
 
-import java.lang.String;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Id</b></em>'.

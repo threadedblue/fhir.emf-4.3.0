@@ -5,11 +5,8 @@ package org.hl7.fhir.util;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
-
 import org.hl7.fhir.FhirPackage;
 
 /**
