@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
@@ -106,6 +109,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMeasure() {
 		return measure;
 	}
@@ -130,6 +134,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasure(CodeableConcept newMeasure) {
 		if (newMeasure != measure) {
 			NotificationChain msgs = null;
@@ -149,6 +154,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDetailQuantity() {
 		return detailQuantity;
 	}
@@ -173,6 +179,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailQuantity(Quantity newDetailQuantity) {
 		if (newDetailQuantity != detailQuantity) {
 			NotificationChain msgs = null;
@@ -192,6 +199,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getDetailRange() {
 		return detailRange;
 	}
@@ -216,6 +224,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailRange(Range newDetailRange) {
 		if (newDetailRange != detailRange) {
 			NotificationChain msgs = null;
@@ -235,6 +244,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDetailCodeableConcept() {
 		return detailCodeableConcept;
 	}
@@ -259,6 +269,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailCodeableConcept(CodeableConcept newDetailCodeableConcept) {
 		if (newDetailCodeableConcept != detailCodeableConcept) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDue() {
 		return due;
 	}
@@ -302,6 +314,7 @@ public class PlanDefinitionTargetImpl extends BackboneElementImpl implements Pla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDue(Duration newDue) {
 		if (newDue != due) {
 			NotificationChain msgs = null;

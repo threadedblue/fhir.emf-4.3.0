@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AppointmentResponse;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -145,6 +150,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.APPOINTMENT_RESPONSE__IDENTIFIER);
@@ -157,6 +163,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAppointment() {
 		return appointment;
 	}
@@ -181,6 +188,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppointment(Reference newAppointment) {
 		if (newAppointment != appointment) {
 			NotificationChain msgs = null;
@@ -200,6 +208,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getStart() {
 		return start;
 	}
@@ -224,6 +233,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(Instant newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -243,6 +253,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getEnd() {
 		return end;
 	}
@@ -267,6 +278,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(Instant newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;
@@ -286,6 +298,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getParticipantType() {
 		if (participantType == null) {
 			participantType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.APPOINTMENT_RESPONSE__PARTICIPANT_TYPE);
@@ -298,6 +311,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getActor() {
 		return actor;
 	}
@@ -322,6 +336,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActor(Reference newActor) {
 		if (newActor != actor) {
 			NotificationChain msgs = null;
@@ -341,6 +356,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParticipationStatus getParticipantStatus() {
 		return participantStatus;
 	}
@@ -365,6 +381,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantStatus(ParticipationStatus newParticipantStatus) {
 		if (newParticipantStatus != participantStatus) {
 			NotificationChain msgs = null;
@@ -384,6 +401,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getComment() {
 		return comment;
 	}
@@ -408,6 +426,7 @@ public class AppointmentResponseImpl extends DomainResourceImpl implements Appoi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(org.hl7.fhir.String newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;

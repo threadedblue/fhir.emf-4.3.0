@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.GroupMember;
 import org.hl7.fhir.Period;
@@ -82,6 +85,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEntity() {
 		return entity;
 	}
@@ -106,6 +110,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEntity(Reference newEntity) {
 		if (newEntity != entity) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -149,6 +155,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getInactive() {
 		return inactive;
 	}
@@ -192,6 +200,7 @@ public class GroupMemberImpl extends BackboneElementImpl implements GroupMember 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInactive(org.hl7.fhir.Boolean newInactive) {
 		if (newInactive != inactive) {
 			NotificationChain msgs = null;

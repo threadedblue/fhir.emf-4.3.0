@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.NoteType;
 import org.hl7.fhir.PaymentReconciliationProcessNote;
@@ -70,6 +73,7 @@ public class PaymentReconciliationProcessNoteImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NoteType getType() {
 		return type;
 	}
@@ -94,6 +98,7 @@ public class PaymentReconciliationProcessNoteImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(NoteType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class PaymentReconciliationProcessNoteImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -137,6 +143,7 @@ public class PaymentReconciliationProcessNoteImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;

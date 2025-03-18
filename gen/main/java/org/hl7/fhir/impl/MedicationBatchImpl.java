@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationBatch;
@@ -70,6 +73,7 @@ public class MedicationBatchImpl extends BackboneElementImpl implements Medicati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLotNumber() {
 		return lotNumber;
 	}
@@ -94,6 +98,7 @@ public class MedicationBatchImpl extends BackboneElementImpl implements Medicati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLotNumber(org.hl7.fhir.String newLotNumber) {
 		if (newLotNumber != lotNumber) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class MedicationBatchImpl extends BackboneElementImpl implements Medicati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getExpirationDate() {
 		return expirationDate;
 	}
@@ -137,6 +143,7 @@ public class MedicationBatchImpl extends BackboneElementImpl implements Medicati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpirationDate(DateTime newExpirationDate) {
 		if (newExpirationDate != expirationDate) {
 			NotificationChain msgs = null;

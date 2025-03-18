@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestReportAction1;
 import org.hl7.fhir.TestReportAssert;
@@ -71,6 +74,7 @@ public class TestReportAction1Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportOperation getOperation() {
 		return operation;
 	}
@@ -95,6 +99,7 @@ public class TestReportAction1Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(TestReportOperation newOperation) {
 		if (newOperation != operation) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class TestReportAction1Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportAssert getAssert() {
 		return assert_;
 	}
@@ -138,6 +144,7 @@ public class TestReportAction1Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssert(TestReportAssert newAssert) {
 		if (newAssert != assert_) {
 			NotificationChain msgs = null;

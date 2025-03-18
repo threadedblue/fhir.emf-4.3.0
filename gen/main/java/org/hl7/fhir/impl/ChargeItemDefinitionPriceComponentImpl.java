@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ChargeItemDefinitionPriceComponent;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Decimal;
@@ -95,6 +98,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoicePriceComponentType getType() {
 		return type;
 	}
@@ -119,6 +123,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(InvoicePriceComponentType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -138,6 +143,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -162,6 +168,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -181,6 +188,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getFactor() {
 		return factor;
 	}
@@ -205,6 +213,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFactor(Decimal newFactor) {
 		if (newFactor != factor) {
 			NotificationChain msgs = null;
@@ -224,6 +233,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getAmount() {
 		return amount;
 	}
@@ -248,6 +258,7 @@ public class ChargeItemDefinitionPriceComponentImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(Money newAmount) {
 		if (newAmount != amount) {
 			NotificationChain msgs = null;

@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.EventResourceType;
 import org.hl7.fhir.EventResourceTypeEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class EventResourceTypeImpl extends ElementImpl implements EventResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventResourceTypeEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class EventResourceTypeImpl extends ElementImpl implements EventResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(EventResourceTypeEnum newValue) {
 		EventResourceTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class EventResourceTypeImpl extends ElementImpl implements EventResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		EventResourceTypeEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class EventResourceTypeImpl extends ElementImpl implements EventResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

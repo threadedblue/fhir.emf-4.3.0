@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactPoint;
@@ -351,6 +356,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.DEVICE__IDENTIFIER);
@@ -363,6 +369,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDefinition() {
 		return definition;
 	}
@@ -387,6 +394,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(Reference newDefinition) {
 		if (newDefinition != definition) {
 			NotificationChain msgs = null;
@@ -406,6 +414,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceUdiCarrier> getUdiCarrier() {
 		if (udiCarrier == null) {
 			udiCarrier = new EObjectContainmentEList<DeviceUdiCarrier>(DeviceUdiCarrier.class, this, FhirPackage.DEVICE__UDI_CARRIER);
@@ -418,6 +427,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRDeviceStatus getStatus() {
 		return status;
 	}
@@ -442,6 +452,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(FHIRDeviceStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -461,6 +472,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getStatusReason() {
 		if (statusReason == null) {
 			statusReason = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.DEVICE__STATUS_REASON);
@@ -473,6 +485,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDistinctIdentifier() {
 		return distinctIdentifier;
 	}
@@ -497,6 +510,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDistinctIdentifier(org.hl7.fhir.String newDistinctIdentifier) {
 		if (newDistinctIdentifier != distinctIdentifier) {
 			NotificationChain msgs = null;
@@ -516,6 +530,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getManufacturer() {
 		return manufacturer;
 	}
@@ -540,6 +555,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufacturer(org.hl7.fhir.String newManufacturer) {
 		if (newManufacturer != manufacturer) {
 			NotificationChain msgs = null;
@@ -559,6 +575,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getManufactureDate() {
 		return manufactureDate;
 	}
@@ -583,6 +600,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufactureDate(DateTime newManufactureDate) {
 		if (newManufactureDate != manufactureDate) {
 			NotificationChain msgs = null;
@@ -602,6 +620,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getExpirationDate() {
 		return expirationDate;
 	}
@@ -626,6 +645,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpirationDate(DateTime newExpirationDate) {
 		if (newExpirationDate != expirationDate) {
 			NotificationChain msgs = null;
@@ -645,6 +665,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLotNumber() {
 		return lotNumber;
 	}
@@ -669,6 +690,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLotNumber(org.hl7.fhir.String newLotNumber) {
 		if (newLotNumber != lotNumber) {
 			NotificationChain msgs = null;
@@ -688,6 +710,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSerialNumber() {
 		return serialNumber;
 	}
@@ -712,6 +735,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSerialNumber(org.hl7.fhir.String newSerialNumber) {
 		if (newSerialNumber != serialNumber) {
 			NotificationChain msgs = null;
@@ -731,6 +755,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceDeviceName> getDeviceName() {
 		if (deviceName == null) {
 			deviceName = new EObjectContainmentEList<DeviceDeviceName>(DeviceDeviceName.class, this, FhirPackage.DEVICE__DEVICE_NAME);
@@ -743,6 +768,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getModelNumber() {
 		return modelNumber;
 	}
@@ -767,6 +793,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModelNumber(org.hl7.fhir.String newModelNumber) {
 		if (newModelNumber != modelNumber) {
 			NotificationChain msgs = null;
@@ -786,6 +813,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPartNumber() {
 		return partNumber;
 	}
@@ -810,6 +838,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartNumber(org.hl7.fhir.String newPartNumber) {
 		if (newPartNumber != partNumber) {
 			NotificationChain msgs = null;
@@ -829,6 +858,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -853,6 +883,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -872,6 +903,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceSpecialization> getSpecialization() {
 		if (specialization == null) {
 			specialization = new EObjectContainmentEList<DeviceSpecialization>(DeviceSpecialization.class, this, FhirPackage.DEVICE__SPECIALIZATION);
@@ -884,6 +916,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceVersion> getVersion() {
 		if (version == null) {
 			version = new EObjectContainmentEList<DeviceVersion>(DeviceVersion.class, this, FhirPackage.DEVICE__VERSION);
@@ -896,6 +929,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceProperty> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<DeviceProperty>(DeviceProperty.class, this, FhirPackage.DEVICE__PROPERTY);
@@ -908,6 +942,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -932,6 +967,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -951,6 +987,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOwner() {
 		return owner;
 	}
@@ -975,6 +1012,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwner(Reference newOwner) {
 		if (newOwner != owner) {
 			NotificationChain msgs = null;
@@ -994,6 +1032,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.DEVICE__CONTACT);
@@ -1006,6 +1045,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLocation() {
 		return location;
 	}
@@ -1030,6 +1070,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(Reference newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -1049,6 +1090,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -1073,6 +1115,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -1092,6 +1135,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.DEVICE__NOTE);
@@ -1104,6 +1148,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSafety() {
 		if (safety == null) {
 			safety = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.DEVICE__SAFETY);
@@ -1116,6 +1161,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParent() {
 		return parent;
 	}
@@ -1140,6 +1186,7 @@ public class DeviceImpl extends DomainResourceImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Reference newParent) {
 		if (newParent != parent) {
 			NotificationChain msgs = null;

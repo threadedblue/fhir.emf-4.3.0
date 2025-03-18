@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Instant;
 import org.hl7.fhir.Reference;
@@ -98,6 +103,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getEventNumber() {
 		return eventNumber;
 	}
@@ -122,6 +128,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEventNumber(org.hl7.fhir.String newEventNumber) {
 		if (newEventNumber != eventNumber) {
 			NotificationChain msgs = null;
@@ -141,6 +148,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getTimestamp() {
 		return timestamp;
 	}
@@ -165,6 +173,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimestamp(Instant newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
@@ -184,6 +193,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFocus() {
 		return focus;
 	}
@@ -208,6 +218,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocus(Reference newFocus) {
 		if (newFocus != focus) {
 			NotificationChain msgs = null;
@@ -227,6 +238,7 @@ public class SubscriptionStatusNotificationEventImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAdditionalContext() {
 		if (additionalContext == null) {
 			additionalContext = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUBSCRIPTION_STATUS_NOTIFICATION_EVENT__ADDITIONAL_CONTEXT);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.EvidenceReportRelatesTo;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -83,6 +86,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReportRelationshipType getCode() {
 		return code;
 	}
@@ -107,6 +111,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(ReportRelationshipType newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getTargetIdentifier() {
 		return targetIdentifier;
 	}
@@ -150,6 +156,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetIdentifier(Identifier newTargetIdentifier) {
 		if (newTargetIdentifier != targetIdentifier) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTargetReference() {
 		return targetReference;
 	}
@@ -193,6 +201,7 @@ public class EvidenceReportRelatesToImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetReference(Reference newTargetReference) {
 		if (newTargetReference != targetReference) {
 			NotificationChain msgs = null;

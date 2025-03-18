@@ -7,13 +7,18 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.w3._1999.xhtml.AlignType;
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.TheadType;
@@ -327,6 +332,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TrType> getTr() {
 		if (tr == null) {
 			tr = new EObjectContainmentEList<TrType>(TrType.class, this, XhtmlPackage.THEAD_TYPE__TR);
@@ -339,6 +345,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AlignType getAlign() {
 		return align;
 	}
@@ -348,6 +355,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlign(AlignType newAlign) {
 		AlignType oldAlign = align;
 		align = newAlign == null ? ALIGN_EDEFAULT : newAlign;
@@ -362,6 +370,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetAlign() {
 		AlignType oldAlign = align;
 		boolean oldAlignESet = alignESet;
@@ -376,6 +385,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetAlign() {
 		return alignESet;
 	}
@@ -385,6 +395,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getChar() {
 		return char_;
 	}
@@ -394,6 +405,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChar(String newChar) {
 		String oldChar = char_;
 		char_ = newChar;
@@ -406,6 +418,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCharoff() {
 		return charoff;
 	}
@@ -415,6 +428,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharoff(String newCharoff) {
 		String oldCharoff = charoff;
 		charoff = newCharoff;
@@ -427,6 +441,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -436,6 +451,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -448,6 +464,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -457,6 +474,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -471,6 +489,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -485,6 +504,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -494,6 +514,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -503,6 +524,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -515,6 +537,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -524,6 +547,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -536,6 +560,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -545,6 +570,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -557,6 +583,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -566,6 +593,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -578,6 +606,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -587,6 +616,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -599,6 +629,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValignType getValign() {
 		return valign;
 	}
@@ -608,6 +639,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValign(ValignType newValign) {
 		ValignType oldValign = valign;
 		valign = newValign == null ? VALIGN_EDEFAULT : newValign;
@@ -622,6 +654,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValign() {
 		ValignType oldValign = valign;
 		boolean oldValignESet = valignESet;
@@ -636,6 +669,7 @@ public class TheadTypeImpl extends MinimalEObjectImpl.Container implements Thead
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValign() {
 		return valignESet;
 	}

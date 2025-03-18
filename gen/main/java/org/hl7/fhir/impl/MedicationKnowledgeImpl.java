@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -310,6 +315,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -334,6 +340,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -353,6 +360,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getStatus() {
 		return status;
 	}
@@ -377,6 +385,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(Code newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -396,6 +405,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getManufacturer() {
 		return manufacturer;
 	}
@@ -420,6 +430,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufacturer(Reference newManufacturer) {
 		if (newManufacturer != manufacturer) {
 			NotificationChain msgs = null;
@@ -439,6 +450,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDoseForm() {
 		return doseForm;
 	}
@@ -463,6 +475,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDoseForm(CodeableConcept newDoseForm) {
 		if (newDoseForm != doseForm) {
 			NotificationChain msgs = null;
@@ -482,6 +495,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getAmount() {
 		return amount;
 	}
@@ -506,6 +520,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(Quantity newAmount) {
 		if (newAmount != amount) {
 			NotificationChain msgs = null;
@@ -525,6 +540,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getSynonym() {
 		if (synonym == null) {
 			synonym = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.MEDICATION_KNOWLEDGE__SYNONYM);
@@ -537,6 +553,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeRelatedMedicationKnowledge> getRelatedMedicationKnowledge() {
 		if (relatedMedicationKnowledge == null) {
 			relatedMedicationKnowledge = new EObjectContainmentEList<MedicationKnowledgeRelatedMedicationKnowledge>(MedicationKnowledgeRelatedMedicationKnowledge.class, this, FhirPackage.MEDICATION_KNOWLEDGE__RELATED_MEDICATION_KNOWLEDGE);
@@ -549,6 +566,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAssociatedMedication() {
 		if (associatedMedication == null) {
 			associatedMedication = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEDICATION_KNOWLEDGE__ASSOCIATED_MEDICATION);
@@ -561,6 +579,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getProductType() {
 		if (productType == null) {
 			productType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEDICATION_KNOWLEDGE__PRODUCT_TYPE);
@@ -573,6 +592,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeMonograph> getMonograph() {
 		if (monograph == null) {
 			monograph = new EObjectContainmentEList<MedicationKnowledgeMonograph>(MedicationKnowledgeMonograph.class, this, FhirPackage.MEDICATION_KNOWLEDGE__MONOGRAPH);
@@ -585,6 +605,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeIngredient> getIngredient() {
 		if (ingredient == null) {
 			ingredient = new EObjectContainmentEList<MedicationKnowledgeIngredient>(MedicationKnowledgeIngredient.class, this, FhirPackage.MEDICATION_KNOWLEDGE__INGREDIENT);
@@ -597,6 +618,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPreparationInstruction() {
 		return preparationInstruction;
 	}
@@ -621,6 +643,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreparationInstruction(Markdown newPreparationInstruction) {
 		if (newPreparationInstruction != preparationInstruction) {
 			NotificationChain msgs = null;
@@ -640,6 +663,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getIntendedRoute() {
 		if (intendedRoute == null) {
 			intendedRoute = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEDICATION_KNOWLEDGE__INTENDED_ROUTE);
@@ -652,6 +676,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeCost> getCost() {
 		if (cost == null) {
 			cost = new EObjectContainmentEList<MedicationKnowledgeCost>(MedicationKnowledgeCost.class, this, FhirPackage.MEDICATION_KNOWLEDGE__COST);
@@ -664,6 +689,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeMonitoringProgram> getMonitoringProgram() {
 		if (monitoringProgram == null) {
 			monitoringProgram = new EObjectContainmentEList<MedicationKnowledgeMonitoringProgram>(MedicationKnowledgeMonitoringProgram.class, this, FhirPackage.MEDICATION_KNOWLEDGE__MONITORING_PROGRAM);
@@ -676,6 +702,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeAdministrationGuidelines> getAdministrationGuidelines() {
 		if (administrationGuidelines == null) {
 			administrationGuidelines = new EObjectContainmentEList<MedicationKnowledgeAdministrationGuidelines>(MedicationKnowledgeAdministrationGuidelines.class, this, FhirPackage.MEDICATION_KNOWLEDGE__ADMINISTRATION_GUIDELINES);
@@ -688,6 +715,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeMedicineClassification> getMedicineClassification() {
 		if (medicineClassification == null) {
 			medicineClassification = new EObjectContainmentEList<MedicationKnowledgeMedicineClassification>(MedicationKnowledgeMedicineClassification.class, this, FhirPackage.MEDICATION_KNOWLEDGE__MEDICINE_CLASSIFICATION);
@@ -700,6 +728,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgePackaging getPackaging() {
 		return packaging;
 	}
@@ -724,6 +753,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackaging(MedicationKnowledgePackaging newPackaging) {
 		if (newPackaging != packaging) {
 			NotificationChain msgs = null;
@@ -743,6 +773,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeDrugCharacteristic> getDrugCharacteristic() {
 		if (drugCharacteristic == null) {
 			drugCharacteristic = new EObjectContainmentEList<MedicationKnowledgeDrugCharacteristic>(MedicationKnowledgeDrugCharacteristic.class, this, FhirPackage.MEDICATION_KNOWLEDGE__DRUG_CHARACTERISTIC);
@@ -755,6 +786,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getContraindication() {
 		if (contraindication == null) {
 			contraindication = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEDICATION_KNOWLEDGE__CONTRAINDICATION);
@@ -767,6 +799,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeRegulatory> getRegulatory() {
 		if (regulatory == null) {
 			regulatory = new EObjectContainmentEList<MedicationKnowledgeRegulatory>(MedicationKnowledgeRegulatory.class, this, FhirPackage.MEDICATION_KNOWLEDGE__REGULATORY);
@@ -779,6 +812,7 @@ public class MedicationKnowledgeImpl extends DomainResourceImpl implements Medic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeKinetics> getKinetics() {
 		if (kinetics == null) {
 			kinetics = new EObjectContainmentEList<MedicationKnowledgeKinetics>(MedicationKnowledgeKinetics.class, this, FhirPackage.MEDICATION_KNOWLEDGE__KINETICS);

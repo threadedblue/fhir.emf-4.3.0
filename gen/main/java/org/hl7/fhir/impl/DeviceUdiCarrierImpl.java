@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Base64Binary;
 import org.hl7.fhir.DeviceUdiCarrier;
 import org.hl7.fhir.FhirPackage;
@@ -116,6 +119,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDeviceIdentifier() {
 		return deviceIdentifier;
 	}
@@ -140,6 +144,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceIdentifier(org.hl7.fhir.String newDeviceIdentifier) {
 		if (newDeviceIdentifier != deviceIdentifier) {
 			NotificationChain msgs = null;
@@ -159,6 +164,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getIssuer() {
 		return issuer;
 	}
@@ -183,6 +189,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssuer(Uri newIssuer) {
 		if (newIssuer != issuer) {
 			NotificationChain msgs = null;
@@ -202,6 +209,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getJurisdiction() {
 		return jurisdiction;
 	}
@@ -226,6 +234,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setJurisdiction(Uri newJurisdiction) {
 		if (newJurisdiction != jurisdiction) {
 			NotificationChain msgs = null;
@@ -245,6 +254,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getCarrierAIDC() {
 		return carrierAIDC;
 	}
@@ -269,6 +279,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCarrierAIDC(Base64Binary newCarrierAIDC) {
 		if (newCarrierAIDC != carrierAIDC) {
 			NotificationChain msgs = null;
@@ -288,6 +299,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCarrierHRF() {
 		return carrierHRF;
 	}
@@ -312,6 +324,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCarrierHRF(org.hl7.fhir.String newCarrierHRF) {
 		if (newCarrierHRF != carrierHRF) {
 			NotificationChain msgs = null;
@@ -331,6 +344,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UDIEntryType getEntryType() {
 		return entryType;
 	}
@@ -355,6 +369,7 @@ public class DeviceUdiCarrierImpl extends BackboneElementImpl implements DeviceU
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEntryType(UDIEntryType newEntryType) {
 		if (newEntryType != entryType) {
 			NotificationChain msgs = null;

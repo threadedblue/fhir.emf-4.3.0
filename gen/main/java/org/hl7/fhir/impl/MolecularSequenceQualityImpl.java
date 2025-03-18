@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -217,6 +220,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QualityType getType() {
 		return type;
 	}
@@ -241,6 +245,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(QualityType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -260,6 +265,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStandardSequence() {
 		return standardSequence;
 	}
@@ -284,6 +290,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStandardSequence(CodeableConcept newStandardSequence) {
 		if (newStandardSequence != standardSequence) {
 			NotificationChain msgs = null;
@@ -303,6 +310,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getStart() {
 		return start;
 	}
@@ -327,6 +335,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(org.hl7.fhir.Integer newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -346,6 +355,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getEnd() {
 		return end;
 	}
@@ -370,6 +380,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(org.hl7.fhir.Integer newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;
@@ -389,6 +400,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getScore() {
 		return score;
 	}
@@ -413,6 +425,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScore(Quantity newScore) {
 		if (newScore != score) {
 			NotificationChain msgs = null;
@@ -432,6 +445,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -456,6 +470,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -475,6 +490,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getTruthTP() {
 		return truthTP;
 	}
@@ -499,6 +515,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTruthTP(Decimal newTruthTP) {
 		if (newTruthTP != truthTP) {
 			NotificationChain msgs = null;
@@ -518,6 +535,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getQueryTP() {
 		return queryTP;
 	}
@@ -542,6 +560,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQueryTP(Decimal newQueryTP) {
 		if (newQueryTP != queryTP) {
 			NotificationChain msgs = null;
@@ -561,6 +580,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getTruthFN() {
 		return truthFN;
 	}
@@ -585,6 +605,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTruthFN(Decimal newTruthFN) {
 		if (newTruthFN != truthFN) {
 			NotificationChain msgs = null;
@@ -604,6 +625,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getQueryFP() {
 		return queryFP;
 	}
@@ -628,6 +650,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQueryFP(Decimal newQueryFP) {
 		if (newQueryFP != queryFP) {
 			NotificationChain msgs = null;
@@ -647,6 +670,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getGtFP() {
 		return gtFP;
 	}
@@ -671,6 +695,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGtFP(Decimal newGtFP) {
 		if (newGtFP != gtFP) {
 			NotificationChain msgs = null;
@@ -690,6 +715,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getPrecision() {
 		return precision;
 	}
@@ -714,6 +740,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrecision(Decimal newPrecision) {
 		if (newPrecision != precision) {
 			NotificationChain msgs = null;
@@ -733,6 +760,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getRecall() {
 		return recall;
 	}
@@ -757,6 +785,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRecall(Decimal newRecall) {
 		if (newRecall != recall) {
 			NotificationChain msgs = null;
@@ -776,6 +805,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getFScore() {
 		return fScore;
 	}
@@ -800,6 +830,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFScore(Decimal newFScore) {
 		if (newFScore != fScore) {
 			NotificationChain msgs = null;
@@ -819,6 +850,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceRoc getRoc() {
 		return roc;
 	}
@@ -843,6 +875,7 @@ public class MolecularSequenceQualityImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoc(MolecularSequenceRoc newRoc) {
 		if (newRoc != roc) {
 			NotificationChain msgs = null;

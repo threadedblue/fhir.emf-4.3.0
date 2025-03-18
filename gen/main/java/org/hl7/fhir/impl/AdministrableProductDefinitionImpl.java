@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AdministrableProductDefinition;
 import org.hl7.fhir.AdministrableProductDefinitionProperty;
 import org.hl7.fhir.AdministrableProductDefinitionRouteOfAdministration;
@@ -168,6 +173,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__IDENTIFIER);
@@ -180,6 +186,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -204,6 +211,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -223,6 +231,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getFormOf() {
 		if (formOf == null) {
 			formOf = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__FORM_OF);
@@ -235,6 +244,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAdministrableDoseForm() {
 		return administrableDoseForm;
 	}
@@ -259,6 +269,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdministrableDoseForm(CodeableConcept newAdministrableDoseForm) {
 		if (newAdministrableDoseForm != administrableDoseForm) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getUnitOfPresentation() {
 		return unitOfPresentation;
 	}
@@ -302,6 +314,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnitOfPresentation(CodeableConcept newUnitOfPresentation) {
 		if (newUnitOfPresentation != unitOfPresentation) {
 			NotificationChain msgs = null;
@@ -321,6 +334,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getProducedFrom() {
 		if (producedFrom == null) {
 			producedFrom = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__PRODUCED_FROM);
@@ -333,6 +347,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getIngredient() {
 		if (ingredient == null) {
 			ingredient = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__INGREDIENT);
@@ -345,6 +360,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDevice() {
 		return device;
 	}
@@ -369,6 +385,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDevice(Reference newDevice) {
 		if (newDevice != device) {
 			NotificationChain msgs = null;
@@ -388,6 +405,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AdministrableProductDefinitionProperty> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<AdministrableProductDefinitionProperty>(AdministrableProductDefinitionProperty.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__PROPERTY);
@@ -400,6 +418,7 @@ public class AdministrableProductDefinitionImpl extends DomainResourceImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AdministrableProductDefinitionRouteOfAdministration> getRouteOfAdministration() {
 		if (routeOfAdministration == null) {
 			routeOfAdministration = new EObjectContainmentEList<AdministrableProductDefinitionRouteOfAdministration>(AdministrableProductDefinitionRouteOfAdministration.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION__ROUTE_OF_ADMINISTRATION);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
 import org.hl7.fhir.RatioRange;
@@ -81,6 +84,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getLowNumerator() {
 		return lowNumerator;
 	}
@@ -105,6 +109,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowNumerator(Quantity newLowNumerator) {
 		if (newLowNumerator != lowNumerator) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getHighNumerator() {
 		return highNumerator;
 	}
@@ -148,6 +154,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHighNumerator(Quantity newHighNumerator) {
 		if (newHighNumerator != highNumerator) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDenominator() {
 		return denominator;
 	}
@@ -191,6 +199,7 @@ public class RatioRangeImpl extends ElementImpl implements RatioRange {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDenominator(Quantity newDenominator) {
 		if (newDenominator != denominator) {
 			NotificationChain msgs = null;

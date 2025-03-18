@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CitationSummary;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class CitationSummaryImpl extends BackboneElementImpl implements Citation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStyle() {
 		return style;
 	}
@@ -95,6 +99,7 @@ public class CitationSummaryImpl extends BackboneElementImpl implements Citation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(CodeableConcept newStyle) {
 		if (newStyle != style) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CitationSummaryImpl extends BackboneElementImpl implements Citation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getText() {
 		return text;
 	}
@@ -138,6 +144,7 @@ public class CitationSummaryImpl extends BackboneElementImpl implements Citation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(Markdown newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;

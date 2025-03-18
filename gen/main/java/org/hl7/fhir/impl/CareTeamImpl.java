@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CareTeam;
 import org.hl7.fhir.CareTeamParticipant;
@@ -203,6 +208,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CARE_TEAM__IDENTIFIER);
@@ -215,6 +221,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CareTeamStatus getStatus() {
 		return status;
 	}
@@ -239,6 +246,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(CareTeamStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -258,6 +266,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CARE_TEAM__CATEGORY);
@@ -270,6 +279,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -294,6 +304,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -313,6 +324,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -337,6 +349,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -356,6 +369,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -380,6 +394,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -399,6 +414,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -423,6 +439,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -442,6 +459,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CareTeamParticipant> getParticipant() {
 		if (participant == null) {
 			participant = new EObjectContainmentEList<CareTeamParticipant>(CareTeamParticipant.class, this, FhirPackage.CARE_TEAM__PARTICIPANT);
@@ -454,6 +472,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getReasonCode() {
 		if (reasonCode == null) {
 			reasonCode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CARE_TEAM__REASON_CODE);
@@ -466,6 +485,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReasonReference() {
 		if (reasonReference == null) {
 			reasonReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CARE_TEAM__REASON_REFERENCE);
@@ -478,6 +498,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getManagingOrganization() {
 		if (managingOrganization == null) {
 			managingOrganization = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CARE_TEAM__MANAGING_ORGANIZATION);
@@ -490,6 +511,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.CARE_TEAM__TELECOM);
@@ -502,6 +524,7 @@ public class CareTeamImpl extends DomainResourceImpl implements CareTeam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.CARE_TEAM__NOTE);

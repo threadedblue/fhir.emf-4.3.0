@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CitationAffiliationInfo;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -86,6 +91,7 @@ public class CitationAffiliationInfoImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAffiliation() {
 		return affiliation;
 	}
@@ -110,6 +116,7 @@ public class CitationAffiliationInfoImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAffiliation(org.hl7.fhir.String newAffiliation) {
 		if (newAffiliation != affiliation) {
 			NotificationChain msgs = null;
@@ -129,6 +136,7 @@ public class CitationAffiliationInfoImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRole() {
 		return role;
 	}
@@ -153,6 +161,7 @@ public class CitationAffiliationInfoImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(org.hl7.fhir.String newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -172,6 +181,7 @@ public class CitationAffiliationInfoImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION_AFFILIATION_INFO__IDENTIFIER);

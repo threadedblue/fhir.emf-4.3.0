@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
 
@@ -66,6 +69,7 @@ public class DecimalImpl extends ElementImpl implements Decimal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getValue() {
 		return value;
 	}
@@ -75,6 +79,7 @@ public class DecimalImpl extends ElementImpl implements Decimal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Object newValue) {
 		Object oldValue = value;
 		value = newValue;

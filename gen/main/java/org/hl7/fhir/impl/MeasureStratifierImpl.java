@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Expression;
 import org.hl7.fhir.FhirPackage;
@@ -99,6 +104,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -123,6 +129,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -142,6 +149,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -166,6 +174,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -185,6 +194,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getCriteria() {
 		return criteria;
 	}
@@ -209,6 +219,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCriteria(Expression newCriteria) {
 		if (newCriteria != criteria) {
 			NotificationChain msgs = null;
@@ -228,6 +239,7 @@ public class MeasureStratifierImpl extends BackboneElementImpl implements Measur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureComponent> getComponent() {
 		if (component == null) {
 			component = new EObjectContainmentEList<MeasureComponent>(MeasureComponent.class, this, FhirPackage.MEASURE_STRATIFIER__COMPONENT);

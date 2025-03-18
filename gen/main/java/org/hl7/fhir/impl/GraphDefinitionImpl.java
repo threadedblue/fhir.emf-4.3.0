@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactDetail;
@@ -227,6 +232,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -251,6 +257,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -270,6 +277,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -294,6 +302,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -313,6 +322,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -337,6 +347,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -356,6 +367,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -380,6 +392,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -399,6 +412,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -423,6 +437,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -442,6 +457,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -466,6 +482,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -485,6 +502,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -509,6 +527,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -528,6 +547,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.GRAPH_DEFINITION__CONTACT);
@@ -540,6 +560,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -564,6 +585,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -583,6 +605,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.GRAPH_DEFINITION__USE_CONTEXT);
@@ -595,6 +618,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.GRAPH_DEFINITION__JURISDICTION);
@@ -607,6 +631,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -631,6 +656,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -650,6 +676,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType getStart() {
 		return start;
 	}
@@ -674,6 +701,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(ResourceType newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -693,6 +721,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getProfile() {
 		return profile;
 	}
@@ -717,6 +746,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProfile(Canonical newProfile) {
 		if (newProfile != profile) {
 			NotificationChain msgs = null;
@@ -736,6 +766,7 @@ public class GraphDefinitionImpl extends DomainResourceImpl implements GraphDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GraphDefinitionLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<GraphDefinitionLink>(GraphDefinitionLink.class, this, FhirPackage.GRAPH_DEFINITION__LINK);

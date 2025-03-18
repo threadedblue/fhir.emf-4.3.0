@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Dosage;
 import org.hl7.fhir.DosageDoseAndRate;
@@ -211,6 +216,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getSequence() {
 		return sequence;
 	}
@@ -235,6 +241,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(org.hl7.fhir.Integer newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -254,6 +261,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -278,6 +286,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -297,6 +306,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAdditionalInstruction() {
 		if (additionalInstruction == null) {
 			additionalInstruction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.DOSAGE__ADDITIONAL_INSTRUCTION);
@@ -309,6 +319,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPatientInstruction() {
 		return patientInstruction;
 	}
@@ -333,6 +344,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatientInstruction(org.hl7.fhir.String newPatientInstruction) {
 		if (newPatientInstruction != patientInstruction) {
 			NotificationChain msgs = null;
@@ -352,6 +364,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getTiming() {
 		return timing;
 	}
@@ -376,6 +389,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTiming(Timing newTiming) {
 		if (newTiming != timing) {
 			NotificationChain msgs = null;
@@ -395,6 +409,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAsNeededBoolean() {
 		return asNeededBoolean;
 	}
@@ -419,6 +434,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAsNeededBoolean(org.hl7.fhir.Boolean newAsNeededBoolean) {
 		if (newAsNeededBoolean != asNeededBoolean) {
 			NotificationChain msgs = null;
@@ -438,6 +454,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAsNeededCodeableConcept() {
 		return asNeededCodeableConcept;
 	}
@@ -462,6 +479,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAsNeededCodeableConcept(CodeableConcept newAsNeededCodeableConcept) {
 		if (newAsNeededCodeableConcept != asNeededCodeableConcept) {
 			NotificationChain msgs = null;
@@ -481,6 +499,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSite() {
 		return site;
 	}
@@ -505,6 +524,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSite(CodeableConcept newSite) {
 		if (newSite != site) {
 			NotificationChain msgs = null;
@@ -524,6 +544,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRoute() {
 		return route;
 	}
@@ -548,6 +569,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoute(CodeableConcept newRoute) {
 		if (newRoute != route) {
 			NotificationChain msgs = null;
@@ -567,6 +589,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -591,6 +614,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -610,6 +634,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DosageDoseAndRate> getDoseAndRate() {
 		if (doseAndRate == null) {
 			doseAndRate = new EObjectContainmentEList<DosageDoseAndRate>(DosageDoseAndRate.class, this, FhirPackage.DOSAGE__DOSE_AND_RATE);
@@ -622,6 +647,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getMaxDosePerPeriod() {
 		return maxDosePerPeriod;
 	}
@@ -646,6 +672,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDosePerPeriod(Ratio newMaxDosePerPeriod) {
 		if (newMaxDosePerPeriod != maxDosePerPeriod) {
 			NotificationChain msgs = null;
@@ -665,6 +692,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxDosePerAdministration() {
 		return maxDosePerAdministration;
 	}
@@ -689,6 +717,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDosePerAdministration(Quantity newMaxDosePerAdministration) {
 		if (newMaxDosePerAdministration != maxDosePerAdministration) {
 			NotificationChain msgs = null;
@@ -708,6 +737,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxDosePerLifetime() {
 		return maxDosePerLifetime;
 	}
@@ -732,6 +762,7 @@ public class DosageImpl extends BackboneElementImpl implements Dosage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDosePerLifetime(Quantity newMaxDosePerLifetime) {
 		if (newMaxDosePerLifetime != maxDosePerLifetime) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.AdministrativeGender;
 import org.hl7.fhir.Attachment;
@@ -263,6 +268,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.PATIENT__IDENTIFIER);
@@ -275,6 +281,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActive() {
 		return active;
 	}
@@ -299,6 +306,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActive(org.hl7.fhir.Boolean newActive) {
 		if (newActive != active) {
 			NotificationChain msgs = null;
@@ -318,6 +326,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<HumanName> getName() {
 		if (name == null) {
 			name = new EObjectContainmentEList<HumanName>(HumanName.class, this, FhirPackage.PATIENT__NAME);
@@ -330,6 +339,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.PATIENT__TELECOM);
@@ -342,6 +352,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrativeGender getGender() {
 		return gender;
 	}
@@ -366,6 +377,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGender(AdministrativeGender newGender) {
 		if (newGender != gender) {
 			NotificationChain msgs = null;
@@ -385,6 +397,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getBirthDate() {
 		return birthDate;
 	}
@@ -409,6 +422,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBirthDate(Date newBirthDate) {
 		if (newBirthDate != birthDate) {
 			NotificationChain msgs = null;
@@ -428,6 +442,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getDeceasedBoolean() {
 		return deceasedBoolean;
 	}
@@ -452,6 +467,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeceasedBoolean(org.hl7.fhir.Boolean newDeceasedBoolean) {
 		if (newDeceasedBoolean != deceasedBoolean) {
 			NotificationChain msgs = null;
@@ -471,6 +487,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDeceasedDateTime() {
 		return deceasedDateTime;
 	}
@@ -495,6 +512,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeceasedDateTime(DateTime newDeceasedDateTime) {
 		if (newDeceasedDateTime != deceasedDateTime) {
 			NotificationChain msgs = null;
@@ -514,6 +532,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Address> getAddress() {
 		if (address == null) {
 			address = new EObjectContainmentEList<Address>(Address.class, this, FhirPackage.PATIENT__ADDRESS);
@@ -526,6 +545,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMaritalStatus() {
 		return maritalStatus;
 	}
@@ -550,6 +570,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaritalStatus(CodeableConcept newMaritalStatus) {
 		if (newMaritalStatus != maritalStatus) {
 			NotificationChain msgs = null;
@@ -569,6 +590,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getMultipleBirthBoolean() {
 		return multipleBirthBoolean;
 	}
@@ -593,6 +615,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultipleBirthBoolean(org.hl7.fhir.Boolean newMultipleBirthBoolean) {
 		if (newMultipleBirthBoolean != multipleBirthBoolean) {
 			NotificationChain msgs = null;
@@ -612,6 +635,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMultipleBirthInteger() {
 		return multipleBirthInteger;
 	}
@@ -636,6 +660,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultipleBirthInteger(org.hl7.fhir.Integer newMultipleBirthInteger) {
 		if (newMultipleBirthInteger != multipleBirthInteger) {
 			NotificationChain msgs = null;
@@ -655,6 +680,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attachment> getPhoto() {
 		if (photo == null) {
 			photo = new EObjectContainmentEList<Attachment>(Attachment.class, this, FhirPackage.PATIENT__PHOTO);
@@ -667,6 +693,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PatientContact> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<PatientContact>(PatientContact.class, this, FhirPackage.PATIENT__CONTACT);
@@ -679,6 +706,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PatientCommunication> getCommunication() {
 		if (communication == null) {
 			communication = new EObjectContainmentEList<PatientCommunication>(PatientCommunication.class, this, FhirPackage.PATIENT__COMMUNICATION);
@@ -691,6 +719,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getGeneralPractitioner() {
 		if (generalPractitioner == null) {
 			generalPractitioner = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.PATIENT__GENERAL_PRACTITIONER);
@@ -703,6 +732,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getManagingOrganization() {
 		return managingOrganization;
 	}
@@ -727,6 +757,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManagingOrganization(Reference newManagingOrganization) {
 		if (newManagingOrganization != managingOrganization) {
 			NotificationChain msgs = null;
@@ -746,6 +777,7 @@ public class PatientImpl extends DomainResourceImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PatientLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<PatientLink>(PatientLink.class, this, FhirPackage.PATIENT__LINK);

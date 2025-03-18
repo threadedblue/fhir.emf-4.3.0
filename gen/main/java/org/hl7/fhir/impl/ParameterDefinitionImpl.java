@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.Code;
 import org.hl7.fhir.FhirPackage;
@@ -126,6 +129,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getName() {
 		return name;
 	}
@@ -150,6 +154,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(Code newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -169,6 +174,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getUse() {
 		return use;
 	}
@@ -193,6 +199,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUse(Code newUse) {
 		if (newUse != use) {
 			NotificationChain msgs = null;
@@ -212,6 +219,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMin() {
 		return min;
 	}
@@ -236,6 +244,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(org.hl7.fhir.Integer newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -255,6 +264,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -279,6 +289,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;
@@ -298,6 +309,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDocumentation() {
 		return documentation;
 	}
@@ -322,6 +334,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentation(org.hl7.fhir.String newDocumentation) {
 		if (newDocumentation != documentation) {
 			NotificationChain msgs = null;
@@ -341,6 +354,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getType() {
 		return type;
 	}
@@ -365,6 +379,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Code newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -384,6 +399,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getProfile() {
 		return profile;
 	}
@@ -408,6 +424,7 @@ public class ParameterDefinitionImpl extends ElementImpl implements ParameterDef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProfile(Canonical newProfile) {
 		if (newProfile != profile) {
 			NotificationChain msgs = null;

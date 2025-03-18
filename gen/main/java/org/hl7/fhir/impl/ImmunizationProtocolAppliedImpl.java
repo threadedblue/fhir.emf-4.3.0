@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ImmunizationProtocolApplied;
@@ -132,6 +137,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSeries() {
 		return series;
 	}
@@ -156,6 +162,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeries(org.hl7.fhir.String newSeries) {
 		if (newSeries != series) {
 			NotificationChain msgs = null;
@@ -175,6 +182,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAuthority() {
 		return authority;
 	}
@@ -199,6 +207,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthority(Reference newAuthority) {
 		if (newAuthority != authority) {
 			NotificationChain msgs = null;
@@ -218,6 +227,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTargetDisease() {
 		if (targetDisease == null) {
 			targetDisease = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.IMMUNIZATION_PROTOCOL_APPLIED__TARGET_DISEASE);
@@ -230,6 +240,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDoseNumberPositiveInt() {
 		return doseNumberPositiveInt;
 	}
@@ -254,6 +265,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDoseNumberPositiveInt(PositiveInt newDoseNumberPositiveInt) {
 		if (newDoseNumberPositiveInt != doseNumberPositiveInt) {
 			NotificationChain msgs = null;
@@ -273,6 +285,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDoseNumberString() {
 		return doseNumberString;
 	}
@@ -297,6 +310,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDoseNumberString(org.hl7.fhir.String newDoseNumberString) {
 		if (newDoseNumberString != doseNumberString) {
 			NotificationChain msgs = null;
@@ -316,6 +330,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSeriesDosesPositiveInt() {
 		return seriesDosesPositiveInt;
 	}
@@ -340,6 +355,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeriesDosesPositiveInt(PositiveInt newSeriesDosesPositiveInt) {
 		if (newSeriesDosesPositiveInt != seriesDosesPositiveInt) {
 			NotificationChain msgs = null;
@@ -359,6 +375,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSeriesDosesString() {
 		return seriesDosesString;
 	}
@@ -383,6 +400,7 @@ public class ImmunizationProtocolAppliedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeriesDosesString(org.hl7.fhir.String newSeriesDosesString) {
 		if (newSeriesDosesString != seriesDosesString) {
 			NotificationChain msgs = null;

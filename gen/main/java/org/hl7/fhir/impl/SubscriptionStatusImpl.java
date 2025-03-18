@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -135,6 +140,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionStatusCodes getStatus() {
 		return status;
 	}
@@ -159,6 +165,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(SubscriptionStatusCodes newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -178,6 +185,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionNotificationType getType() {
 		return type;
 	}
@@ -202,6 +210,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(SubscriptionNotificationType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -221,6 +230,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getEventsSinceSubscriptionStart() {
 		return eventsSinceSubscriptionStart;
 	}
@@ -245,6 +255,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEventsSinceSubscriptionStart(org.hl7.fhir.String newEventsSinceSubscriptionStart) {
 		if (newEventsSinceSubscriptionStart != eventsSinceSubscriptionStart) {
 			NotificationChain msgs = null;
@@ -264,6 +275,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubscriptionStatusNotificationEvent> getNotificationEvent() {
 		if (notificationEvent == null) {
 			notificationEvent = new EObjectContainmentEList<SubscriptionStatusNotificationEvent>(SubscriptionStatusNotificationEvent.class, this, FhirPackage.SUBSCRIPTION_STATUS__NOTIFICATION_EVENT);
@@ -276,6 +288,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubscription() {
 		return subscription;
 	}
@@ -300,6 +313,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubscription(Reference newSubscription) {
 		if (newSubscription != subscription) {
 			NotificationChain msgs = null;
@@ -319,6 +333,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getTopic() {
 		return topic;
 	}
@@ -343,6 +358,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTopic(Canonical newTopic) {
 		if (newTopic != topic) {
 			NotificationChain msgs = null;
@@ -362,6 +378,7 @@ public class SubscriptionStatusImpl extends DomainResourceImpl implements Subscr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getError() {
 		if (error == null) {
 			error = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSCRIPTION_STATUS__ERROR);

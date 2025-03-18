@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CompositionAttestationMode;
 import org.hl7.fhir.CompositionAttester;
 import org.hl7.fhir.DateTime;
@@ -83,6 +86,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionAttestationMode getMode() {
 		return mode;
 	}
@@ -107,6 +111,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(CompositionAttestationMode newMode) {
 		if (newMode != mode) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTime() {
 		return time;
 	}
@@ -150,6 +156,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(DateTime newTime) {
 		if (newTime != time) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParty() {
 		return party;
 	}
@@ -193,6 +201,7 @@ public class CompositionAttesterImpl extends BackboneElementImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParty(Reference newParty) {
 		if (newParty != party) {
 			NotificationChain msgs = null;

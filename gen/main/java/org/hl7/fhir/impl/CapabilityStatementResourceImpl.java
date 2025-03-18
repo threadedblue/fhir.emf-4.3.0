@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CapabilityStatementInteraction;
 import org.hl7.fhir.CapabilityStatementOperation;
@@ -249,6 +254,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType getType() {
 		return type;
 	}
@@ -273,6 +279,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ResourceType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -292,6 +299,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getProfile() {
 		return profile;
 	}
@@ -316,6 +324,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProfile(Canonical newProfile) {
 		if (newProfile != profile) {
 			NotificationChain msgs = null;
@@ -335,6 +344,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getSupportedProfile() {
 		if (supportedProfile == null) {
 			supportedProfile = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__SUPPORTED_PROFILE);
@@ -347,6 +357,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDocumentation() {
 		return documentation;
 	}
@@ -371,6 +382,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentation(Markdown newDocumentation) {
 		if (newDocumentation != documentation) {
 			NotificationChain msgs = null;
@@ -390,6 +402,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CapabilityStatementInteraction> getInteraction() {
 		if (interaction == null) {
 			interaction = new EObjectContainmentEList<CapabilityStatementInteraction>(CapabilityStatementInteraction.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__INTERACTION);
@@ -402,6 +415,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceVersionPolicy getVersioning() {
 		return versioning;
 	}
@@ -426,6 +440,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersioning(ResourceVersionPolicy newVersioning) {
 		if (newVersioning != versioning) {
 			NotificationChain msgs = null;
@@ -445,6 +460,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getReadHistory() {
 		return readHistory;
 	}
@@ -469,6 +485,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReadHistory(org.hl7.fhir.Boolean newReadHistory) {
 		if (newReadHistory != readHistory) {
 			NotificationChain msgs = null;
@@ -488,6 +505,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getUpdateCreate() {
 		return updateCreate;
 	}
@@ -512,6 +530,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpdateCreate(org.hl7.fhir.Boolean newUpdateCreate) {
 		if (newUpdateCreate != updateCreate) {
 			NotificationChain msgs = null;
@@ -531,6 +550,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getConditionalCreate() {
 		return conditionalCreate;
 	}
@@ -555,6 +575,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConditionalCreate(org.hl7.fhir.Boolean newConditionalCreate) {
 		if (newConditionalCreate != conditionalCreate) {
 			NotificationChain msgs = null;
@@ -574,6 +595,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalReadStatus getConditionalRead() {
 		return conditionalRead;
 	}
@@ -598,6 +620,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConditionalRead(ConditionalReadStatus newConditionalRead) {
 		if (newConditionalRead != conditionalRead) {
 			NotificationChain msgs = null;
@@ -617,6 +640,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getConditionalUpdate() {
 		return conditionalUpdate;
 	}
@@ -641,6 +665,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConditionalUpdate(org.hl7.fhir.Boolean newConditionalUpdate) {
 		if (newConditionalUpdate != conditionalUpdate) {
 			NotificationChain msgs = null;
@@ -660,6 +685,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalDeleteStatus getConditionalDelete() {
 		return conditionalDelete;
 	}
@@ -684,6 +710,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConditionalDelete(ConditionalDeleteStatus newConditionalDelete) {
 		if (newConditionalDelete != conditionalDelete) {
 			NotificationChain msgs = null;
@@ -703,6 +730,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ReferenceHandlingPolicy> getReferencePolicy() {
 		if (referencePolicy == null) {
 			referencePolicy = new EObjectContainmentEList<ReferenceHandlingPolicy>(ReferenceHandlingPolicy.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__REFERENCE_POLICY);
@@ -715,6 +743,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getSearchInclude() {
 		if (searchInclude == null) {
 			searchInclude = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__SEARCH_INCLUDE);
@@ -727,6 +756,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getSearchRevInclude() {
 		if (searchRevInclude == null) {
 			searchRevInclude = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__SEARCH_REV_INCLUDE);
@@ -739,6 +769,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CapabilityStatementSearchParam> getSearchParam() {
 		if (searchParam == null) {
 			searchParam = new EObjectContainmentEList<CapabilityStatementSearchParam>(CapabilityStatementSearchParam.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__SEARCH_PARAM);
@@ -751,6 +782,7 @@ public class CapabilityStatementResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CapabilityStatementOperation> getOperation() {
 		if (operation == null) {
 			operation = new EObjectContainmentEList<CapabilityStatementOperation>(CapabilityStatementOperation.class, this, FhirPackage.CAPABILITY_STATEMENT_RESOURCE__OPERATION);

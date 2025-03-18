@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceVariant;
 import org.hl7.fhir.Reference;
@@ -114,6 +117,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getStart() {
 		return start;
 	}
@@ -138,6 +142,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(org.hl7.fhir.Integer newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -157,6 +162,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getEnd() {
 		return end;
 	}
@@ -181,6 +187,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(org.hl7.fhir.Integer newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;
@@ -200,6 +207,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getObservedAllele() {
 		return observedAllele;
 	}
@@ -224,6 +232,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObservedAllele(org.hl7.fhir.String newObservedAllele) {
 		if (newObservedAllele != observedAllele) {
 			NotificationChain msgs = null;
@@ -243,6 +252,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getReferenceAllele() {
 		return referenceAllele;
 	}
@@ -267,6 +277,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferenceAllele(org.hl7.fhir.String newReferenceAllele) {
 		if (newReferenceAllele != referenceAllele) {
 			NotificationChain msgs = null;
@@ -286,6 +297,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCigar() {
 		return cigar;
 	}
@@ -310,6 +322,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCigar(org.hl7.fhir.String newCigar) {
 		if (newCigar != cigar) {
 			NotificationChain msgs = null;
@@ -329,6 +342,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getVariantPointer() {
 		return variantPointer;
 	}
@@ -353,6 +367,7 @@ public class MolecularSequenceVariantImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariantPointer(Reference newVariantPointer) {
 		if (newVariantPointer != variantPointer) {
 			NotificationChain msgs = null;

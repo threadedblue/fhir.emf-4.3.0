@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.OperationDefinitionReferencedFrom;
 
@@ -69,6 +72,7 @@ public class OperationDefinitionReferencedFromImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSource() {
 		return source;
 	}
@@ -93,6 +97,7 @@ public class OperationDefinitionReferencedFromImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(org.hl7.fhir.String newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -112,6 +117,7 @@ public class OperationDefinitionReferencedFromImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSourceId() {
 		return sourceId;
 	}
@@ -136,6 +142,7 @@ public class OperationDefinitionReferencedFromImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceId(org.hl7.fhir.String newSourceId) {
 		if (newSourceId != sourceId) {
 			NotificationChain msgs = null;

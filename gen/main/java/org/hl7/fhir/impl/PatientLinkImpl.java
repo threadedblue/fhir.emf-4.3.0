@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.LinkType;
 import org.hl7.fhir.PatientLink;
@@ -71,6 +74,7 @@ public class PatientLinkImpl extends BackboneElementImpl implements PatientLink 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOther() {
 		return other;
 	}
@@ -95,6 +99,7 @@ public class PatientLinkImpl extends BackboneElementImpl implements PatientLink 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOther(Reference newOther) {
 		if (newOther != other) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class PatientLinkImpl extends BackboneElementImpl implements PatientLink 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkType getType() {
 		return type;
 	}
@@ -138,6 +144,7 @@ public class PatientLinkImpl extends BackboneElementImpl implements PatientLink 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(LinkType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

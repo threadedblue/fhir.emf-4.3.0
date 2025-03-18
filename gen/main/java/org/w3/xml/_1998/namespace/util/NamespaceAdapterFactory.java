@@ -4,10 +4,12 @@ package org.w3.xml._1998.namespace.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
-import org.w3.xml._1998.namespace.DocumentRoot;
-import org.w3.xml._1998.namespace.NamespacePackage;
+
+import org.w3.xml._1998.namespace.*;
 
 /**
  * <!-- begin-user-doc -->

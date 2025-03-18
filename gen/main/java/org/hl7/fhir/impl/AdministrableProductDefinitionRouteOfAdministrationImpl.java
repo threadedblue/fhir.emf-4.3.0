@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AdministrableProductDefinitionRouteOfAdministration;
 import org.hl7.fhir.AdministrableProductDefinitionTargetSpecies;
 import org.hl7.fhir.CodeableConcept;
@@ -134,6 +139,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -158,6 +164,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -177,6 +184,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getFirstDose() {
 		return firstDose;
 	}
@@ -201,6 +209,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstDose(Quantity newFirstDose) {
 		if (newFirstDose != firstDose) {
 			NotificationChain msgs = null;
@@ -220,6 +229,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxSingleDose() {
 		return maxSingleDose;
 	}
@@ -244,6 +254,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxSingleDose(Quantity newMaxSingleDose) {
 		if (newMaxSingleDose != maxSingleDose) {
 			NotificationChain msgs = null;
@@ -263,6 +274,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxDosePerDay() {
 		return maxDosePerDay;
 	}
@@ -287,6 +299,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDosePerDay(Quantity newMaxDosePerDay) {
 		if (newMaxDosePerDay != maxDosePerDay) {
 			NotificationChain msgs = null;
@@ -306,6 +319,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getMaxDosePerTreatmentPeriod() {
 		return maxDosePerTreatmentPeriod;
 	}
@@ -330,6 +344,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDosePerTreatmentPeriod(Ratio newMaxDosePerTreatmentPeriod) {
 		if (newMaxDosePerTreatmentPeriod != maxDosePerTreatmentPeriod) {
 			NotificationChain msgs = null;
@@ -349,6 +364,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getMaxTreatmentPeriod() {
 		return maxTreatmentPeriod;
 	}
@@ -373,6 +389,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxTreatmentPeriod(Duration newMaxTreatmentPeriod) {
 		if (newMaxTreatmentPeriod != maxTreatmentPeriod) {
 			NotificationChain msgs = null;
@@ -392,6 +409,7 @@ public class AdministrableProductDefinitionRouteOfAdministrationImpl extends Bac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AdministrableProductDefinitionTargetSpecies> getTargetSpecies() {
 		if (targetSpecies == null) {
 			targetSpecies = new EObjectContainmentEList<AdministrableProductDefinitionTargetSpecies>(AdministrableProductDefinitionTargetSpecies.class, this, FhirPackage.ADMINISTRABLE_PRODUCT_DEFINITION_ROUTE_OF_ADMINISTRATION__TARGET_SPECIES);

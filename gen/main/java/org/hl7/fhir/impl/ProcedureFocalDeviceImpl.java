@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ProcedureFocalDevice;
@@ -71,6 +74,7 @@ public class ProcedureFocalDeviceImpl extends BackboneElementImpl implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAction() {
 		return action;
 	}
@@ -95,6 +99,7 @@ public class ProcedureFocalDeviceImpl extends BackboneElementImpl implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAction(CodeableConcept newAction) {
 		if (newAction != action) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ProcedureFocalDeviceImpl extends BackboneElementImpl implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getManipulated() {
 		return manipulated;
 	}
@@ -138,6 +144,7 @@ public class ProcedureFocalDeviceImpl extends BackboneElementImpl implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManipulated(Reference newManipulated) {
 		if (newManipulated != manipulated) {
 			NotificationChain msgs = null;

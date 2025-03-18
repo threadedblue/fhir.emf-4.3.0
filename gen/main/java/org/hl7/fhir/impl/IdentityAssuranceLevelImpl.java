@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.IdentityAssuranceLevel;
 import org.hl7.fhir.IdentityAssuranceLevelEnum;
@@ -76,6 +79,7 @@ public class IdentityAssuranceLevelImpl extends ElementImpl implements IdentityA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentityAssuranceLevelEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class IdentityAssuranceLevelImpl extends ElementImpl implements IdentityA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(IdentityAssuranceLevelEnum newValue) {
 		IdentityAssuranceLevelEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class IdentityAssuranceLevelImpl extends ElementImpl implements IdentityA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		IdentityAssuranceLevelEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class IdentityAssuranceLevelImpl extends ElementImpl implements IdentityA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

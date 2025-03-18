@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
 import org.hl7.fhir.TestReportActionResult;
@@ -82,6 +85,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportActionResult getResult() {
 		return result;
 	}
@@ -106,6 +110,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(TestReportActionResult newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getMessage() {
 		return message;
 	}
@@ -149,6 +155,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessage(Markdown newMessage) {
 		if (newMessage != message) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDetail() {
 		return detail;
 	}
@@ -192,6 +200,7 @@ public class TestReportAssertImpl extends BackboneElementImpl implements TestRep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetail(org.hl7.fhir.String newDetail) {
 		if (newDetail != detail) {
 			NotificationChain msgs = null;

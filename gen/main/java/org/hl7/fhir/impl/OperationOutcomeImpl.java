@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.OperationOutcome;
 import org.hl7.fhir.OperationOutcomeIssue;
@@ -62,6 +66,7 @@ public class OperationOutcomeImpl extends DomainResourceImpl implements Operatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OperationOutcomeIssue> getIssue() {
 		if (issue == null) {
 			issue = new EObjectContainmentEList<OperationOutcomeIssue>(OperationOutcomeIssue.class, this, FhirPackage.OPERATION_OUTCOME__ISSUE);

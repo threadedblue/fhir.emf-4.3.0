@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.FinancialResourceStatusCodes;
@@ -145,6 +150,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.VISION_PRESCRIPTION__IDENTIFIER);
@@ -157,6 +163,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FinancialResourceStatusCodes getStatus() {
 		return status;
 	}
@@ -181,6 +188,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(FinancialResourceStatusCodes newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -200,6 +208,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreated() {
 		return created;
 	}
@@ -224,6 +233,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreated(DateTime newCreated) {
 		if (newCreated != created) {
 			NotificationChain msgs = null;
@@ -243,6 +253,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -267,6 +278,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -286,6 +298,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -310,6 +323,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -329,6 +343,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDateWritten() {
 		return dateWritten;
 	}
@@ -353,6 +368,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateWritten(DateTime newDateWritten) {
 		if (newDateWritten != dateWritten) {
 			NotificationChain msgs = null;
@@ -372,6 +388,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPrescriber() {
 		return prescriber;
 	}
@@ -396,6 +413,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrescriber(Reference newPrescriber) {
 		if (newPrescriber != prescriber) {
 			NotificationChain msgs = null;
@@ -415,6 +433,7 @@ public class VisionPrescriptionImpl extends DomainResourceImpl implements Vision
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VisionPrescriptionLensSpecification> getLensSpecification() {
 		if (lensSpecification == null) {
 			lensSpecification = new EObjectContainmentEList<VisionPrescriptionLensSpecification>(VisionPrescriptionLensSpecification.class, this, FhirPackage.VISION_PRESCRIPTION__LENS_SPECIFICATION);

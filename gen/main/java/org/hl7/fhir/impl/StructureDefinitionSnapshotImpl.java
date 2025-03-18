@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ElementDefinition;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.StructureDefinitionSnapshot;
@@ -62,6 +66,7 @@ public class StructureDefinitionSnapshotImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinition> getElement() {
 		if (element == null) {
 			element = new EObjectContainmentEList<ElementDefinition>(ElementDefinition.class, this, FhirPackage.STRUCTURE_DEFINITION_SNAPSHOT__ELEMENT);

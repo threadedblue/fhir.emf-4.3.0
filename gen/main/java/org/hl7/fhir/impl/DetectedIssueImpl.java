@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.DetectedIssue;
@@ -205,6 +210,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.DETECTED_ISSUE__IDENTIFIER);
@@ -217,6 +223,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationStatus getStatus() {
 		return status;
 	}
@@ -241,6 +248,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ObservationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -260,6 +268,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -284,6 +293,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -303,6 +313,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssueSeverity getSeverity() {
 		return severity;
 	}
@@ -327,6 +338,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeverity(DetectedIssueSeverity newSeverity) {
 		if (newSeverity != severity) {
 			NotificationChain msgs = null;
@@ -346,6 +358,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -370,6 +383,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -389,6 +403,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getIdentifiedDateTime() {
 		return identifiedDateTime;
 	}
@@ -413,6 +428,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifiedDateTime(DateTime newIdentifiedDateTime) {
 		if (newIdentifiedDateTime != identifiedDateTime) {
 			NotificationChain msgs = null;
@@ -432,6 +448,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getIdentifiedPeriod() {
 		return identifiedPeriod;
 	}
@@ -456,6 +473,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifiedPeriod(Period newIdentifiedPeriod) {
 		if (newIdentifiedPeriod != identifiedPeriod) {
 			NotificationChain msgs = null;
@@ -475,6 +493,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAuthor() {
 		return author;
 	}
@@ -499,6 +518,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthor(Reference newAuthor) {
 		if (newAuthor != author) {
 			NotificationChain msgs = null;
@@ -518,6 +538,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getImplicated() {
 		if (implicated == null) {
 			implicated = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DETECTED_ISSUE__IMPLICATED);
@@ -530,6 +551,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DetectedIssueEvidence> getEvidence() {
 		if (evidence == null) {
 			evidence = new EObjectContainmentEList<DetectedIssueEvidence>(DetectedIssueEvidence.class, this, FhirPackage.DETECTED_ISSUE__EVIDENCE);
@@ -542,6 +564,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDetail() {
 		return detail;
 	}
@@ -566,6 +589,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetail(org.hl7.fhir.String newDetail) {
 		if (newDetail != detail) {
 			NotificationChain msgs = null;
@@ -585,6 +609,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getReference() {
 		return reference;
 	}
@@ -609,6 +634,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Uri newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -628,6 +654,7 @@ public class DetectedIssueImpl extends DomainResourceImpl implements DetectedIss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DetectedIssueMitigation> getMitigation() {
 		if (mitigation == null) {
 			mitigation = new EObjectContainmentEList<DetectedIssueMitigation>(DetectedIssueMitigation.class, this, FhirPackage.DETECTED_ISSUE__MITIGATION);

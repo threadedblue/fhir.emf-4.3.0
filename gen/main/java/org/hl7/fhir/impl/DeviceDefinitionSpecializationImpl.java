@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DeviceDefinitionSpecialization;
 import org.hl7.fhir.FhirPackage;
 
@@ -69,6 +72,7 @@ public class DeviceDefinitionSpecializationImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSystemType() {
 		return systemType;
 	}
@@ -93,6 +97,7 @@ public class DeviceDefinitionSpecializationImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemType(org.hl7.fhir.String newSystemType) {
 		if (newSystemType != systemType) {
 			NotificationChain msgs = null;
@@ -112,6 +117,7 @@ public class DeviceDefinitionSpecializationImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -136,6 +142,7 @@ public class DeviceDefinitionSpecializationImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;

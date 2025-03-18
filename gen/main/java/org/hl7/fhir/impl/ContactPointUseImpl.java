@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ContactPointUse;
 import org.hl7.fhir.ContactPointUseEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class ContactPointUseImpl extends ElementImpl implements ContactPointUse 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPointUseEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class ContactPointUseImpl extends ElementImpl implements ContactPointUse 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(ContactPointUseEnum newValue) {
 		ContactPointUseEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class ContactPointUseImpl extends ElementImpl implements ContactPointUse 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		ContactPointUseEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class ContactPointUseImpl extends ElementImpl implements ContactPointUse 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

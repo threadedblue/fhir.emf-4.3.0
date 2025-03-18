@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
@@ -407,6 +412,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.TASK__IDENTIFIER);
@@ -419,6 +425,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getInstantiatesCanonical() {
 		return instantiatesCanonical;
 	}
@@ -443,6 +450,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstantiatesCanonical(Canonical newInstantiatesCanonical) {
 		if (newInstantiatesCanonical != instantiatesCanonical) {
 			NotificationChain msgs = null;
@@ -462,6 +470,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getInstantiatesUri() {
 		return instantiatesUri;
 	}
@@ -486,6 +495,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstantiatesUri(Uri newInstantiatesUri) {
 		if (newInstantiatesUri != instantiatesUri) {
 			NotificationChain msgs = null;
@@ -505,6 +515,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getBasedOn() {
 		if (basedOn == null) {
 			basedOn = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.TASK__BASED_ON);
@@ -517,6 +528,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getGroupIdentifier() {
 		return groupIdentifier;
 	}
@@ -541,6 +553,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroupIdentifier(Identifier newGroupIdentifier) {
 		if (newGroupIdentifier != groupIdentifier) {
 			NotificationChain msgs = null;
@@ -560,6 +573,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPartOf() {
 		if (partOf == null) {
 			partOf = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.TASK__PART_OF);
@@ -572,6 +586,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskStatus getStatus() {
 		return status;
 	}
@@ -596,6 +611,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(TaskStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -615,6 +631,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStatusReason() {
 		return statusReason;
 	}
@@ -639,6 +656,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatusReason(CodeableConcept newStatusReason) {
 		if (newStatusReason != statusReason) {
 			NotificationChain msgs = null;
@@ -658,6 +676,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getBusinessStatus() {
 		return businessStatus;
 	}
@@ -682,6 +701,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBusinessStatus(CodeableConcept newBusinessStatus) {
 		if (newBusinessStatus != businessStatus) {
 			NotificationChain msgs = null;
@@ -701,6 +721,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskIntent getIntent() {
 		return intent;
 	}
@@ -725,6 +746,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIntent(TaskIntent newIntent) {
 		if (newIntent != intent) {
 			NotificationChain msgs = null;
@@ -744,6 +766,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestPriority getPriority() {
 		return priority;
 	}
@@ -768,6 +791,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(RequestPriority newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -787,6 +811,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -811,6 +836,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -830,6 +856,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -854,6 +881,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -873,6 +901,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFocus() {
 		return focus;
 	}
@@ -897,6 +926,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocus(Reference newFocus) {
 		if (newFocus != focus) {
 			NotificationChain msgs = null;
@@ -916,6 +946,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFor() {
 		return for_;
 	}
@@ -940,6 +971,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFor(Reference newFor) {
 		if (newFor != for_) {
 			NotificationChain msgs = null;
@@ -959,6 +991,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -983,6 +1016,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -1002,6 +1036,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getExecutionPeriod() {
 		return executionPeriod;
 	}
@@ -1026,6 +1061,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExecutionPeriod(Period newExecutionPeriod) {
 		if (newExecutionPeriod != executionPeriod) {
 			NotificationChain msgs = null;
@@ -1045,6 +1081,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getAuthoredOn() {
 		return authoredOn;
 	}
@@ -1069,6 +1106,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthoredOn(DateTime newAuthoredOn) {
 		if (newAuthoredOn != authoredOn) {
 			NotificationChain msgs = null;
@@ -1088,6 +1126,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getLastModified() {
 		return lastModified;
 	}
@@ -1112,6 +1151,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastModified(DateTime newLastModified) {
 		if (newLastModified != lastModified) {
 			NotificationChain msgs = null;
@@ -1131,6 +1171,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getRequester() {
 		return requester;
 	}
@@ -1155,6 +1196,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequester(Reference newRequester) {
 		if (newRequester != requester) {
 			NotificationChain msgs = null;
@@ -1174,6 +1216,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getPerformerType() {
 		if (performerType == null) {
 			performerType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.TASK__PERFORMER_TYPE);
@@ -1186,6 +1229,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOwner() {
 		return owner;
 	}
@@ -1210,6 +1254,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwner(Reference newOwner) {
 		if (newOwner != owner) {
 			NotificationChain msgs = null;
@@ -1229,6 +1274,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLocation() {
 		return location;
 	}
@@ -1253,6 +1299,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(Reference newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -1272,6 +1319,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getReasonCode() {
 		return reasonCode;
 	}
@@ -1296,6 +1344,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReasonCode(CodeableConcept newReasonCode) {
 		if (newReasonCode != reasonCode) {
 			NotificationChain msgs = null;
@@ -1315,6 +1364,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReasonReference() {
 		return reasonReference;
 	}
@@ -1339,6 +1389,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReasonReference(Reference newReasonReference) {
 		if (newReasonReference != reasonReference) {
 			NotificationChain msgs = null;
@@ -1358,6 +1409,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getInsurance() {
 		if (insurance == null) {
 			insurance = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.TASK__INSURANCE);
@@ -1370,6 +1422,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.TASK__NOTE);
@@ -1382,6 +1435,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getRelevantHistory() {
 		if (relevantHistory == null) {
 			relevantHistory = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.TASK__RELEVANT_HISTORY);
@@ -1394,6 +1448,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskRestriction getRestriction() {
 		return restriction;
 	}
@@ -1418,6 +1473,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRestriction(TaskRestriction newRestriction) {
 		if (newRestriction != restriction) {
 			NotificationChain msgs = null;
@@ -1437,6 +1493,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TaskInput> getInput() {
 		if (input == null) {
 			input = new EObjectContainmentEList<TaskInput>(TaskInput.class, this, FhirPackage.TASK__INPUT);
@@ -1449,6 +1506,7 @@ public class TaskImpl extends DomainResourceImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TaskOutput> getOutput() {
 		if (output == null) {
 			output = new EObjectContainmentEList<TaskOutput>(TaskOutput.class, this, FhirPackage.TASK__OUTPUT);

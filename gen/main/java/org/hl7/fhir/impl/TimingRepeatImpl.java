@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.Duration;
@@ -249,6 +254,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getBoundsDuration() {
 		return boundsDuration;
 	}
@@ -273,6 +279,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBoundsDuration(Duration newBoundsDuration) {
 		if (newBoundsDuration != boundsDuration) {
 			NotificationChain msgs = null;
@@ -292,6 +299,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getBoundsRange() {
 		return boundsRange;
 	}
@@ -316,6 +324,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBoundsRange(Range newBoundsRange) {
 		if (newBoundsRange != boundsRange) {
 			NotificationChain msgs = null;
@@ -335,6 +344,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getBoundsPeriod() {
 		return boundsPeriod;
 	}
@@ -359,6 +369,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBoundsPeriod(Period newBoundsPeriod) {
 		if (newBoundsPeriod != boundsPeriod) {
 			NotificationChain msgs = null;
@@ -378,6 +389,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getCount() {
 		return count;
 	}
@@ -402,6 +414,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCount(PositiveInt newCount) {
 		if (newCount != count) {
 			NotificationChain msgs = null;
@@ -421,6 +434,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getCountMax() {
 		return countMax;
 	}
@@ -445,6 +459,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCountMax(PositiveInt newCountMax) {
 		if (newCountMax != countMax) {
 			NotificationChain msgs = null;
@@ -464,6 +479,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getDuration() {
 		return duration;
 	}
@@ -488,6 +504,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDuration(Decimal newDuration) {
 		if (newDuration != duration) {
 			NotificationChain msgs = null;
@@ -507,6 +524,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getDurationMax() {
 		return durationMax;
 	}
@@ -531,6 +549,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDurationMax(Decimal newDurationMax) {
 		if (newDurationMax != durationMax) {
 			NotificationChain msgs = null;
@@ -550,6 +569,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitsOfTime getDurationUnit() {
 		return durationUnit;
 	}
@@ -574,6 +594,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDurationUnit(UnitsOfTime newDurationUnit) {
 		if (newDurationUnit != durationUnit) {
 			NotificationChain msgs = null;
@@ -593,6 +614,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getFrequency() {
 		return frequency;
 	}
@@ -617,6 +639,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrequency(PositiveInt newFrequency) {
 		if (newFrequency != frequency) {
 			NotificationChain msgs = null;
@@ -636,6 +659,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getFrequencyMax() {
 		return frequencyMax;
 	}
@@ -660,6 +684,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrequencyMax(PositiveInt newFrequencyMax) {
 		if (newFrequencyMax != frequencyMax) {
 			NotificationChain msgs = null;
@@ -679,6 +704,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getPeriod() {
 		return period;
 	}
@@ -703,6 +729,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Decimal newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -722,6 +749,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getPeriodMax() {
 		return periodMax;
 	}
@@ -746,6 +774,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriodMax(Decimal newPeriodMax) {
 		if (newPeriodMax != periodMax) {
 			NotificationChain msgs = null;
@@ -765,6 +794,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitsOfTime getPeriodUnit() {
 		return periodUnit;
 	}
@@ -789,6 +819,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriodUnit(UnitsOfTime newPeriodUnit) {
 		if (newPeriodUnit != periodUnit) {
 			NotificationChain msgs = null;
@@ -808,6 +839,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Code> getDayOfWeek() {
 		if (dayOfWeek == null) {
 			dayOfWeek = new EObjectContainmentEList<Code>(Code.class, this, FhirPackage.TIMING_REPEAT__DAY_OF_WEEK);
@@ -820,6 +852,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Time> getTimeOfDay() {
 		if (timeOfDay == null) {
 			timeOfDay = new EObjectContainmentEList<Time>(Time.class, this, FhirPackage.TIMING_REPEAT__TIME_OF_DAY);
@@ -832,6 +865,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EventTiming> getWhen() {
 		if (when == null) {
 			when = new EObjectContainmentEList<EventTiming>(EventTiming.class, this, FhirPackage.TIMING_REPEAT__WHEN);
@@ -844,6 +878,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getOffset() {
 		return offset;
 	}
@@ -868,6 +903,7 @@ public class TimingRepeatImpl extends BackboneElementImpl implements TimingRepea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOffset(UnsignedInt newOffset) {
 		if (newOffset != offset) {
 			NotificationChain msgs = null;

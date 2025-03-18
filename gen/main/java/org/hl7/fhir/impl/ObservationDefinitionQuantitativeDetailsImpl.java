@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCustomaryUnit() {
 		return customaryUnit;
 	}
@@ -117,6 +121,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCustomaryUnit(CodeableConcept newCustomaryUnit) {
 		if (newCustomaryUnit != customaryUnit) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getUnit() {
 		return unit;
 	}
@@ -160,6 +166,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(CodeableConcept newUnit) {
 		if (newUnit != unit) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getConversionFactor() {
 		return conversionFactor;
 	}
@@ -203,6 +211,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConversionFactor(Decimal newConversionFactor) {
 		if (newConversionFactor != conversionFactor) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getDecimalPrecision() {
 		return decimalPrecision;
 	}
@@ -246,6 +256,7 @@ public class ObservationDefinitionQuantitativeDetailsImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecimalPrecision(org.hl7.fhir.Integer newDecimalPrecision) {
 		if (newDecimalPrecision != decimalPrecision) {
 			NotificationChain msgs = null;

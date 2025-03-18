@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.NutritionOrderAdministration;
@@ -154,6 +159,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getBaseFormulaType() {
 		return baseFormulaType;
 	}
@@ -178,6 +184,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseFormulaType(CodeableConcept newBaseFormulaType) {
 		if (newBaseFormulaType != baseFormulaType) {
 			NotificationChain msgs = null;
@@ -197,6 +204,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getBaseFormulaProductName() {
 		return baseFormulaProductName;
 	}
@@ -221,6 +229,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseFormulaProductName(org.hl7.fhir.String newBaseFormulaProductName) {
 		if (newBaseFormulaProductName != baseFormulaProductName) {
 			NotificationChain msgs = null;
@@ -240,6 +249,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAdditiveType() {
 		return additiveType;
 	}
@@ -264,6 +274,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveType(CodeableConcept newAdditiveType) {
 		if (newAdditiveType != additiveType) {
 			NotificationChain msgs = null;
@@ -283,6 +294,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAdditiveProductName() {
 		return additiveProductName;
 	}
@@ -307,6 +319,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveProductName(org.hl7.fhir.String newAdditiveProductName) {
 		if (newAdditiveProductName != additiveProductName) {
 			NotificationChain msgs = null;
@@ -326,6 +339,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getCaloricDensity() {
 		return caloricDensity;
 	}
@@ -350,6 +364,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaloricDensity(Quantity newCaloricDensity) {
 		if (newCaloricDensity != caloricDensity) {
 			NotificationChain msgs = null;
@@ -369,6 +384,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRouteofAdministration() {
 		return routeofAdministration;
 	}
@@ -393,6 +409,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRouteofAdministration(CodeableConcept newRouteofAdministration) {
 		if (newRouteofAdministration != routeofAdministration) {
 			NotificationChain msgs = null;
@@ -412,6 +429,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NutritionOrderAdministration> getAdministration() {
 		if (administration == null) {
 			administration = new EObjectContainmentEList<NutritionOrderAdministration>(NutritionOrderAdministration.class, this, FhirPackage.NUTRITION_ORDER_ENTERAL_FORMULA__ADMINISTRATION);
@@ -424,6 +442,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxVolumeToDeliver() {
 		return maxVolumeToDeliver;
 	}
@@ -448,6 +467,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxVolumeToDeliver(Quantity newMaxVolumeToDeliver) {
 		if (newMaxVolumeToDeliver != maxVolumeToDeliver) {
 			NotificationChain msgs = null;
@@ -467,6 +487,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAdministrationInstruction() {
 		return administrationInstruction;
 	}
@@ -491,6 +512,7 @@ public class NutritionOrderEnteralFormulaImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdministrationInstruction(org.hl7.fhir.String newAdministrationInstruction) {
 		if (newAdministrationInstruction != administrationInstruction) {
 			NotificationChain msgs = null;

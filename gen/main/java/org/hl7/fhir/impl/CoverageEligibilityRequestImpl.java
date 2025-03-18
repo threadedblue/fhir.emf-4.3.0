@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CoverageEligibilityRequest;
 import org.hl7.fhir.CoverageEligibilityRequestInsurance;
@@ -228,6 +233,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST__IDENTIFIER);
@@ -240,6 +246,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FinancialResourceStatusCodes getStatus() {
 		return status;
 	}
@@ -264,6 +271,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(FinancialResourceStatusCodes newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -283,6 +291,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPriority() {
 		return priority;
 	}
@@ -307,6 +316,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(CodeableConcept newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -326,6 +336,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EligibilityRequestPurpose> getPurpose() {
 		if (purpose == null) {
 			purpose = new EObjectContainmentEList<EligibilityRequestPurpose>(EligibilityRequestPurpose.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST__PURPOSE);
@@ -338,6 +349,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -362,6 +374,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -381,6 +394,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getServicedDate() {
 		return servicedDate;
 	}
@@ -405,6 +419,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServicedDate(Date newServicedDate) {
 		if (newServicedDate != servicedDate) {
 			NotificationChain msgs = null;
@@ -424,6 +439,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getServicedPeriod() {
 		return servicedPeriod;
 	}
@@ -448,6 +464,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServicedPeriod(Period newServicedPeriod) {
 		if (newServicedPeriod != servicedPeriod) {
 			NotificationChain msgs = null;
@@ -467,6 +484,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreated() {
 		return created;
 	}
@@ -491,6 +509,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreated(DateTime newCreated) {
 		if (newCreated != created) {
 			NotificationChain msgs = null;
@@ -510,6 +529,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEnterer() {
 		return enterer;
 	}
@@ -534,6 +554,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnterer(Reference newEnterer) {
 		if (newEnterer != enterer) {
 			NotificationChain msgs = null;
@@ -553,6 +574,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getProvider() {
 		return provider;
 	}
@@ -577,6 +599,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvider(Reference newProvider) {
 		if (newProvider != provider) {
 			NotificationChain msgs = null;
@@ -596,6 +619,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getInsurer() {
 		return insurer;
 	}
@@ -620,6 +644,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInsurer(Reference newInsurer) {
 		if (newInsurer != insurer) {
 			NotificationChain msgs = null;
@@ -639,6 +664,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFacility() {
 		return facility;
 	}
@@ -663,6 +689,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFacility(Reference newFacility) {
 		if (newFacility != facility) {
 			NotificationChain msgs = null;
@@ -682,6 +709,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CoverageEligibilityRequestSupportingInfo> getSupportingInfo() {
 		if (supportingInfo == null) {
 			supportingInfo = new EObjectContainmentEList<CoverageEligibilityRequestSupportingInfo>(CoverageEligibilityRequestSupportingInfo.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST__SUPPORTING_INFO);
@@ -694,6 +722,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CoverageEligibilityRequestInsurance> getInsurance() {
 		if (insurance == null) {
 			insurance = new EObjectContainmentEList<CoverageEligibilityRequestInsurance>(CoverageEligibilityRequestInsurance.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST__INSURANCE);
@@ -706,6 +735,7 @@ public class CoverageEligibilityRequestImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CoverageEligibilityRequestItem> getItem() {
 		if (item == null) {
 			item = new EObjectContainmentEList<CoverageEligibilityRequestItem>(CoverageEligibilityRequestItem.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST__ITEM);

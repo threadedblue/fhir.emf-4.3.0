@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.Decimal;
@@ -139,6 +142,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -163,6 +167,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -182,6 +187,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValueString() {
 		return valueString;
 	}
@@ -206,6 +212,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueString(org.hl7.fhir.String newValueString) {
 		if (newValueString != valueString) {
 			NotificationChain msgs = null;
@@ -225,6 +232,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getValueBoolean() {
 		return valueBoolean;
 	}
@@ -249,6 +257,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBoolean(org.hl7.fhir.Boolean newValueBoolean) {
 		if (newValueBoolean != valueBoolean) {
 			NotificationChain msgs = null;
@@ -268,6 +277,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getValueInteger() {
 		return valueInteger;
 	}
@@ -292,6 +302,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueInteger(org.hl7.fhir.Integer newValueInteger) {
 		if (newValueInteger != valueInteger) {
 			NotificationChain msgs = null;
@@ -311,6 +322,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getValueDecimal() {
 		return valueDecimal;
 	}
@@ -335,6 +347,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDecimal(Decimal newValueDecimal) {
 		if (newValueDecimal != valueDecimal) {
 			NotificationChain msgs = null;
@@ -354,6 +367,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getValueUri() {
 		return valueUri;
 	}
@@ -378,6 +392,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUri(Uri newValueUri) {
 		if (newValueUri != valueUri) {
 			NotificationChain msgs = null;
@@ -397,6 +412,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getValueCode() {
 		return valueCode;
 	}
@@ -421,6 +437,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCode(Code newValueCode) {
 		if (newValueCode != valueCode) {
 			NotificationChain msgs = null;
@@ -440,6 +457,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getValueDateTime() {
 		return valueDateTime;
 	}
@@ -464,6 +482,7 @@ public class ValueSetParameterImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDateTime(DateTime newValueDateTime) {
 		if (newValueDateTime != valueDateTime) {
 			NotificationChain msgs = null;

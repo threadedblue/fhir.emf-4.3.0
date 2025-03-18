@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ImmunizationReaction;
@@ -82,6 +85,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -106,6 +110,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDetail() {
 		return detail;
 	}
@@ -149,6 +155,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetail(Reference newDetail) {
 		if (newDetail != detail) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getReported() {
 		return reported;
 	}
@@ -192,6 +200,7 @@ public class ImmunizationReactionImpl extends BackboneElementImpl implements Imm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReported(org.hl7.fhir.Boolean newReported) {
 		if (newReported != reported) {
 			NotificationChain msgs = null;

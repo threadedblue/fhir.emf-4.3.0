@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.Duration;
@@ -152,6 +155,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCollector() {
 		return collector;
 	}
@@ -176,6 +180,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollector(Reference newCollector) {
 		if (newCollector != collector) {
 			NotificationChain msgs = null;
@@ -195,6 +200,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCollectedDateTime() {
 		return collectedDateTime;
 	}
@@ -219,6 +225,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectedDateTime(DateTime newCollectedDateTime) {
 		if (newCollectedDateTime != collectedDateTime) {
 			NotificationChain msgs = null;
@@ -238,6 +245,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getCollectedPeriod() {
 		return collectedPeriod;
 	}
@@ -262,6 +270,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectedPeriod(Period newCollectedPeriod) {
 		if (newCollectedPeriod != collectedPeriod) {
 			NotificationChain msgs = null;
@@ -281,6 +290,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDuration() {
 		return duration;
 	}
@@ -305,6 +315,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDuration(Duration newDuration) {
 		if (newDuration != duration) {
 			NotificationChain msgs = null;
@@ -324,6 +335,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -348,6 +360,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -367,6 +380,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -391,6 +405,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -410,6 +425,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getBodySite() {
 		return bodySite;
 	}
@@ -434,6 +450,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodySite(CodeableConcept newBodySite) {
 		if (newBodySite != bodySite) {
 			NotificationChain msgs = null;
@@ -453,6 +470,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFastingStatusCodeableConcept() {
 		return fastingStatusCodeableConcept;
 	}
@@ -477,6 +495,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFastingStatusCodeableConcept(CodeableConcept newFastingStatusCodeableConcept) {
 		if (newFastingStatusCodeableConcept != fastingStatusCodeableConcept) {
 			NotificationChain msgs = null;
@@ -496,6 +515,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getFastingStatusDuration() {
 		return fastingStatusDuration;
 	}
@@ -520,6 +540,7 @@ public class SpecimenCollectionImpl extends BackboneElementImpl implements Speci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFastingStatusDuration(Duration newFastingStatusDuration) {
 		if (newFastingStatusDuration != fastingStatusDuration) {
 			NotificationChain msgs = null;

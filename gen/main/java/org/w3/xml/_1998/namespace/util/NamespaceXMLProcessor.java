@@ -5,8 +5,11 @@ package org.w3.xml._1998.namespace.util;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.resource.Resource;
+
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
+
 import org.w3.xml._1998.namespace.NamespacePackage;
 
 /**

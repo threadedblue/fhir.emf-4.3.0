@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.GraphDefinitionCompartment;
@@ -111,6 +116,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType getType() {
 		return type;
 	}
@@ -135,6 +141,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ResourceType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -154,6 +161,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getParams() {
 		return params;
 	}
@@ -178,6 +186,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParams(org.hl7.fhir.String newParams) {
 		if (newParams != params) {
 			NotificationChain msgs = null;
@@ -197,6 +206,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getProfile() {
 		return profile;
 	}
@@ -221,6 +231,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProfile(Canonical newProfile) {
 		if (newProfile != profile) {
 			NotificationChain msgs = null;
@@ -240,6 +251,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GraphDefinitionCompartment> getCompartment() {
 		if (compartment == null) {
 			compartment = new EObjectContainmentEList<GraphDefinitionCompartment>(GraphDefinitionCompartment.class, this, FhirPackage.GRAPH_DEFINITION_TARGET__COMPARTMENT);
@@ -252,6 +264,7 @@ public class GraphDefinitionTargetImpl extends BackboneElementImpl implements Gr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GraphDefinitionLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<GraphDefinitionLink>(GraphDefinitionLink.class, this, FhirPackage.GRAPH_DEFINITION_TARGET__LINK);

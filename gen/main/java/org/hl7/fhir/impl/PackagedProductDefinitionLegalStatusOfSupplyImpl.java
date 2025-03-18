@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.PackagedProductDefinitionLegalStatusOfSupply;
@@ -70,6 +73,7 @@ public class PackagedProductDefinitionLegalStatusOfSupplyImpl extends BackboneEl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -94,6 +98,7 @@ public class PackagedProductDefinitionLegalStatusOfSupplyImpl extends BackboneEl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class PackagedProductDefinitionLegalStatusOfSupplyImpl extends BackboneEl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getJurisdiction() {
 		return jurisdiction;
 	}
@@ -137,6 +143,7 @@ public class PackagedProductDefinitionLegalStatusOfSupplyImpl extends BackboneEl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setJurisdiction(CodeableConcept newJurisdiction) {
 		if (newJurisdiction != jurisdiction) {
 			NotificationChain msgs = null;

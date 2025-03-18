@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.HumanName;
 import org.hl7.fhir.NameUse;
@@ -131,6 +136,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NameUse getUse() {
 		return use;
 	}
@@ -155,6 +161,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUse(NameUse newUse) {
 		if (newUse != use) {
 			NotificationChain msgs = null;
@@ -174,6 +181,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -198,6 +206,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -217,6 +226,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getFamily() {
 		return family;
 	}
@@ -241,6 +251,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFamily(org.hl7.fhir.String newFamily) {
 		if (newFamily != family) {
 			NotificationChain msgs = null;
@@ -260,6 +271,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getGiven() {
 		if (given == null) {
 			given = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.HUMAN_NAME__GIVEN);
@@ -272,6 +284,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getPrefix() {
 		if (prefix == null) {
 			prefix = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.HUMAN_NAME__PREFIX);
@@ -284,6 +297,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getSuffix() {
 		if (suffix == null) {
 			suffix = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.HUMAN_NAME__SUFFIX);
@@ -296,6 +310,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -320,6 +335,7 @@ public class HumanNameImpl extends ElementImpl implements HumanName {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;

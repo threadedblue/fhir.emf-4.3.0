@@ -3,11 +3,15 @@
 package org.w3._1999.xhtml.impl;
 
 import java.math.BigInteger;
+
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.w3._1999.xhtml.AlignType;
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.Scope;
@@ -463,6 +467,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAbbr1() {
 		return abbr1;
 	}
@@ -472,6 +477,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbbr1(String newAbbr1) {
 		String oldAbbr1 = abbr1;
 		abbr1 = newAbbr1;
@@ -484,6 +490,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AlignType getAlign() {
 		return align;
 	}
@@ -493,6 +500,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlign(AlignType newAlign) {
 		AlignType oldAlign = align;
 		align = newAlign == null ? ALIGN_EDEFAULT : newAlign;
@@ -507,6 +515,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetAlign() {
 		AlignType oldAlign = align;
 		boolean oldAlignESet = alignESet;
@@ -521,6 +530,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetAlign() {
 		return alignESet;
 	}
@@ -530,6 +540,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getAxis() {
 		return axis;
 	}
@@ -539,6 +550,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAxis(Object newAxis) {
 		Object oldAxis = axis;
 		axis = newAxis;
@@ -551,6 +563,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getChar() {
 		return char_;
 	}
@@ -560,6 +573,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChar(String newChar) {
 		String oldChar = char_;
 		char_ = newChar;
@@ -572,6 +586,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCharoff() {
 		return charoff;
 	}
@@ -581,6 +596,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharoff(String newCharoff) {
 		String oldCharoff = charoff;
 		charoff = newCharoff;
@@ -593,6 +609,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -602,6 +619,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -614,6 +632,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigInteger getColspan() {
 		return colspan;
 	}
@@ -623,6 +642,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColspan(BigInteger newColspan) {
 		BigInteger oldColspan = colspan;
 		colspan = newColspan;
@@ -637,6 +657,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetColspan() {
 		BigInteger oldColspan = colspan;
 		boolean oldColspanESet = colspanESet;
@@ -651,6 +672,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetColspan() {
 		return colspanESet;
 	}
@@ -660,6 +682,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -669,6 +692,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -683,6 +707,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -697,6 +722,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -706,6 +732,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getHeaders() {
 		return headers;
 	}
@@ -715,6 +742,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeaders(List<String> newHeaders) {
 		List<String> oldHeaders = headers;
 		headers = newHeaders;
@@ -727,6 +755,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -736,6 +765,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -748,6 +778,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -757,6 +788,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -769,6 +801,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -778,6 +811,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -790,6 +824,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigInteger getRowspan() {
 		return rowspan;
 	}
@@ -799,6 +834,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRowspan(BigInteger newRowspan) {
 		BigInteger oldRowspan = rowspan;
 		rowspan = newRowspan;
@@ -813,6 +849,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetRowspan() {
 		BigInteger oldRowspan = rowspan;
 		boolean oldRowspanESet = rowspanESet;
@@ -827,6 +864,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRowspan() {
 		return rowspanESet;
 	}
@@ -836,6 +874,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scope getScope() {
 		return scope;
 	}
@@ -845,6 +884,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScope(Scope newScope) {
 		Scope oldScope = scope;
 		scope = newScope == null ? SCOPE_EDEFAULT : newScope;
@@ -859,6 +899,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetScope() {
 		Scope oldScope = scope;
 		boolean oldScopeESet = scopeESet;
@@ -873,6 +914,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetScope() {
 		return scopeESet;
 	}
@@ -882,6 +924,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -891,6 +934,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -903,6 +947,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -912,6 +957,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -924,6 +970,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValignType getValign() {
 		return valign;
 	}
@@ -933,6 +980,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValign(ValignType newValign) {
 		ValignType oldValign = valign;
 		valign = newValign == null ? VALIGN_EDEFAULT : newValign;
@@ -947,6 +995,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValign() {
 		ValignType oldValign = valign;
 		boolean oldValignESet = valignESet;
@@ -961,6 +1010,7 @@ public class ThTypeImpl extends FlowImpl implements ThType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValign() {
 		return valignESet;
 	}

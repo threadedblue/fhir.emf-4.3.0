@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Coding;
@@ -176,6 +179,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -200,6 +204,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -219,6 +224,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCategory() {
 		return category;
 	}
@@ -243,6 +249,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(CodeableConcept newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -262,6 +269,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -286,6 +294,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -305,6 +314,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getTimingDate() {
 		return timingDate;
 	}
@@ -329,6 +339,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingDate(Date newTimingDate) {
 		if (newTimingDate != timingDate) {
 			NotificationChain msgs = null;
@@ -348,6 +359,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getTimingPeriod() {
 		return timingPeriod;
 	}
@@ -372,6 +384,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingPeriod(Period newTimingPeriod) {
 		if (newTimingPeriod != timingPeriod) {
 			NotificationChain msgs = null;
@@ -391,6 +404,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getValueBoolean() {
 		return valueBoolean;
 	}
@@ -415,6 +429,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBoolean(org.hl7.fhir.Boolean newValueBoolean) {
 		if (newValueBoolean != valueBoolean) {
 			NotificationChain msgs = null;
@@ -434,6 +449,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValueString() {
 		return valueString;
 	}
@@ -458,6 +474,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueString(org.hl7.fhir.String newValueString) {
 		if (newValueString != valueString) {
 			NotificationChain msgs = null;
@@ -477,6 +494,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getValueQuantity() {
 		return valueQuantity;
 	}
@@ -501,6 +519,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueQuantity(Quantity newValueQuantity) {
 		if (newValueQuantity != valueQuantity) {
 			NotificationChain msgs = null;
@@ -520,6 +539,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getValueAttachment() {
 		return valueAttachment;
 	}
@@ -544,6 +564,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueAttachment(Attachment newValueAttachment) {
 		if (newValueAttachment != valueAttachment) {
 			NotificationChain msgs = null;
@@ -563,6 +584,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getValueReference() {
 		return valueReference;
 	}
@@ -587,6 +609,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueReference(Reference newValueReference) {
 		if (newValueReference != valueReference) {
 			NotificationChain msgs = null;
@@ -606,6 +629,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getReason() {
 		return reason;
 	}
@@ -630,6 +654,7 @@ public class ExplanationOfBenefitSupportingInfoImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReason(Coding newReason) {
 		if (newReason != reason) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.Duration;
@@ -163,6 +166,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMeasure() {
 		return measure;
 	}
@@ -187,6 +191,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasure(CodeableConcept newMeasure) {
 		if (newMeasure != measure) {
 			NotificationChain msgs = null;
@@ -206,6 +211,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDetailQuantity() {
 		return detailQuantity;
 	}
@@ -230,6 +236,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailQuantity(Quantity newDetailQuantity) {
 		if (newDetailQuantity != detailQuantity) {
 			NotificationChain msgs = null;
@@ -249,6 +256,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getDetailRange() {
 		return detailRange;
 	}
@@ -273,6 +281,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailRange(Range newDetailRange) {
 		if (newDetailRange != detailRange) {
 			NotificationChain msgs = null;
@@ -292,6 +301,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDetailCodeableConcept() {
 		return detailCodeableConcept;
 	}
@@ -316,6 +326,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailCodeableConcept(CodeableConcept newDetailCodeableConcept) {
 		if (newDetailCodeableConcept != detailCodeableConcept) {
 			NotificationChain msgs = null;
@@ -335,6 +346,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDetailString() {
 		return detailString;
 	}
@@ -359,6 +371,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailString(org.hl7.fhir.String newDetailString) {
 		if (newDetailString != detailString) {
 			NotificationChain msgs = null;
@@ -378,6 +391,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getDetailBoolean() {
 		return detailBoolean;
 	}
@@ -402,6 +416,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailBoolean(org.hl7.fhir.Boolean newDetailBoolean) {
 		if (newDetailBoolean != detailBoolean) {
 			NotificationChain msgs = null;
@@ -421,6 +436,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getDetailInteger() {
 		return detailInteger;
 	}
@@ -445,6 +461,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailInteger(org.hl7.fhir.Integer newDetailInteger) {
 		if (newDetailInteger != detailInteger) {
 			NotificationChain msgs = null;
@@ -464,6 +481,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getDetailRatio() {
 		return detailRatio;
 	}
@@ -488,6 +506,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailRatio(Ratio newDetailRatio) {
 		if (newDetailRatio != detailRatio) {
 			NotificationChain msgs = null;
@@ -507,6 +526,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDueDate() {
 		return dueDate;
 	}
@@ -531,6 +551,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDueDate(Date newDueDate) {
 		if (newDueDate != dueDate) {
 			NotificationChain msgs = null;
@@ -550,6 +571,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDueDuration() {
 		return dueDuration;
 	}
@@ -574,6 +596,7 @@ public class GoalTargetImpl extends BackboneElementImpl implements GoalTarget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDueDuration(Duration newDueDuration) {
 		if (newDueDuration != dueDuration) {
 			NotificationChain msgs = null;

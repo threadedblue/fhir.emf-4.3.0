@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ExampleScenarioContainedInstance;
 import org.hl7.fhir.ExampleScenarioInstance;
 import org.hl7.fhir.ExampleScenarioVersion;
@@ -122,6 +127,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getResourceId() {
 		return resourceId;
 	}
@@ -146,6 +152,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResourceId(org.hl7.fhir.String newResourceId) {
 		if (newResourceId != resourceId) {
 			NotificationChain msgs = null;
@@ -165,6 +172,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType getResourceType() {
 		return resourceType;
 	}
@@ -189,6 +197,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResourceType(ResourceType newResourceType) {
 		if (newResourceType != resourceType) {
 			NotificationChain msgs = null;
@@ -208,6 +217,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -232,6 +242,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -251,6 +262,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -275,6 +287,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -294,6 +307,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExampleScenarioVersion> getVersion() {
 		if (version == null) {
 			version = new EObjectContainmentEList<ExampleScenarioVersion>(ExampleScenarioVersion.class, this, FhirPackage.EXAMPLE_SCENARIO_INSTANCE__VERSION);
@@ -306,6 +320,7 @@ public class ExampleScenarioInstanceImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExampleScenarioContainedInstance> getContainedInstance() {
 		if (containedInstance == null) {
 			containedInstance = new EObjectContainmentEList<ExampleScenarioContainedInstance>(ExampleScenarioContainedInstance.class, this, FhirPackage.EXAMPLE_SCENARIO_INSTANCE__CONTAINED_INSTANCE);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
@@ -71,6 +74,7 @@ public class MessageDefinitionAllowedResponseImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getMessage() {
 		return message;
 	}
@@ -95,6 +99,7 @@ public class MessageDefinitionAllowedResponseImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessage(Canonical newMessage) {
 		if (newMessage != message) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class MessageDefinitionAllowedResponseImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getSituation() {
 		return situation;
 	}
@@ -138,6 +144,7 @@ public class MessageDefinitionAllowedResponseImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSituation(Markdown newSituation) {
 		if (newSituation != situation) {
 			NotificationChain msgs = null;

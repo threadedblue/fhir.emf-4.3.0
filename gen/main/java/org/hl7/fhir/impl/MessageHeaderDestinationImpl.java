@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MessageHeaderDestination;
 import org.hl7.fhir.Reference;
@@ -93,6 +96,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -117,6 +121,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTarget() {
 		return target;
 	}
@@ -160,6 +166,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Reference newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getEndpoint() {
 		return endpoint;
 	}
@@ -203,6 +211,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEndpoint(Url newEndpoint) {
 		if (newEndpoint != endpoint) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReceiver() {
 		return receiver;
 	}
@@ -246,6 +256,7 @@ public class MessageHeaderDestinationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReceiver(Reference newReceiver) {
 		if (newReceiver != receiver) {
 			NotificationChain msgs = null;

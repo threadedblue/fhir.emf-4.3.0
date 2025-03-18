@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactPoint;
 import org.hl7.fhir.FhirPackage;
@@ -189,6 +194,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.ORGANIZATION_AFFILIATION__IDENTIFIER);
@@ -201,6 +207,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActive() {
 		return active;
 	}
@@ -225,6 +232,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActive(org.hl7.fhir.Boolean newActive) {
 		if (newActive != active) {
 			NotificationChain msgs = null;
@@ -244,6 +252,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -268,6 +277,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -287,6 +297,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOrganization() {
 		return organization;
 	}
@@ -311,6 +322,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrganization(Reference newOrganization) {
 		if (newOrganization != organization) {
 			NotificationChain msgs = null;
@@ -330,6 +342,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParticipatingOrganization() {
 		return participatingOrganization;
 	}
@@ -354,6 +367,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipatingOrganization(Reference newParticipatingOrganization) {
 		if (newParticipatingOrganization != participatingOrganization) {
 			NotificationChain msgs = null;
@@ -373,6 +387,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getNetwork() {
 		if (network == null) {
 			network = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ORGANIZATION_AFFILIATION__NETWORK);
@@ -385,6 +400,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCode() {
 		if (code == null) {
 			code = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ORGANIZATION_AFFILIATION__CODE);
@@ -397,6 +413,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialty() {
 		if (specialty == null) {
 			specialty = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ORGANIZATION_AFFILIATION__SPECIALTY);
@@ -409,6 +426,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getLocation() {
 		if (location == null) {
 			location = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ORGANIZATION_AFFILIATION__LOCATION);
@@ -421,6 +439,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getHealthcareService() {
 		if (healthcareService == null) {
 			healthcareService = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ORGANIZATION_AFFILIATION__HEALTHCARE_SERVICE);
@@ -433,6 +452,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.ORGANIZATION_AFFILIATION__TELECOM);
@@ -445,6 +465,7 @@ public class OrganizationAffiliationImpl extends DomainResourceImpl implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEndpoint() {
 		if (endpoint == null) {
 			endpoint = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.ORGANIZATION_AFFILIATION__ENDPOINT);

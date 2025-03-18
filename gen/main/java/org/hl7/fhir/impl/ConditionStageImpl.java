@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ConditionStage;
 import org.hl7.fhir.FhirPackage;
@@ -87,6 +92,7 @@ public class ConditionStageImpl extends BackboneElementImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSummary() {
 		return summary;
 	}
@@ -111,6 +117,7 @@ public class ConditionStageImpl extends BackboneElementImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSummary(CodeableConcept newSummary) {
 		if (newSummary != summary) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class ConditionStageImpl extends BackboneElementImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAssessment() {
 		if (assessment == null) {
 			assessment = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CONDITION_STAGE__ASSESSMENT);
@@ -142,6 +150,7 @@ public class ConditionStageImpl extends BackboneElementImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -166,6 +175,7 @@ public class ConditionStageImpl extends BackboneElementImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

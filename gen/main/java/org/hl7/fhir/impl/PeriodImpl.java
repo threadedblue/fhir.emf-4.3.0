@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Period;
@@ -70,6 +73,7 @@ public class PeriodImpl extends ElementImpl implements Period {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getStart() {
 		return start;
 	}
@@ -94,6 +98,7 @@ public class PeriodImpl extends ElementImpl implements Period {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(DateTime newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class PeriodImpl extends ElementImpl implements Period {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getEnd() {
 		return end;
 	}
@@ -137,6 +143,7 @@ public class PeriodImpl extends ElementImpl implements Period {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(DateTime newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;

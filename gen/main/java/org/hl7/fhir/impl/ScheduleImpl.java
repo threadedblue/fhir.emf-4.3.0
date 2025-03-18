@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -144,6 +149,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SCHEDULE__IDENTIFIER);
@@ -156,6 +162,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActive() {
 		return active;
 	}
@@ -180,6 +187,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActive(org.hl7.fhir.Boolean newActive) {
 		if (newActive != active) {
 			NotificationChain msgs = null;
@@ -199,6 +207,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getServiceCategory() {
 		if (serviceCategory == null) {
 			serviceCategory = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SCHEDULE__SERVICE_CATEGORY);
@@ -211,6 +220,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getServiceType() {
 		if (serviceType == null) {
 			serviceType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SCHEDULE__SERVICE_TYPE);
@@ -223,6 +233,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialty() {
 		if (specialty == null) {
 			specialty = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SCHEDULE__SPECIALTY);
@@ -235,6 +246,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getActor() {
 		if (actor == null) {
 			actor = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SCHEDULE__ACTOR);
@@ -247,6 +259,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPlanningHorizon() {
 		return planningHorizon;
 	}
@@ -271,6 +284,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlanningHorizon(Period newPlanningHorizon) {
 		if (newPlanningHorizon != planningHorizon) {
 			NotificationChain msgs = null;
@@ -290,6 +304,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getComment() {
 		return comment;
 	}
@@ -314,6 +329,7 @@ public class ScheduleImpl extends DomainResourceImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(org.hl7.fhir.String newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;

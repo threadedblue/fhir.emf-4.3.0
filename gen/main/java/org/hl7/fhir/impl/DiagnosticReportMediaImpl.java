@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DiagnosticReportMedia;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -70,6 +73,7 @@ public class DiagnosticReportMediaImpl extends BackboneElementImpl implements Di
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getComment() {
 		return comment;
 	}
@@ -94,6 +98,7 @@ public class DiagnosticReportMediaImpl extends BackboneElementImpl implements Di
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(org.hl7.fhir.String newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class DiagnosticReportMediaImpl extends BackboneElementImpl implements Di
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLink() {
 		return link;
 	}
@@ -137,6 +143,7 @@ public class DiagnosticReportMediaImpl extends BackboneElementImpl implements Di
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLink(Reference newLink) {
 		if (newLink != link) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ClinicalUseDefinitionInteractant;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class ClinicalUseDefinitionInteractantImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getItemReference() {
 		return itemReference;
 	}
@@ -95,6 +99,7 @@ public class ClinicalUseDefinitionInteractantImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemReference(Reference newItemReference) {
 		if (newItemReference != itemReference) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ClinicalUseDefinitionInteractantImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getItemCodeableConcept() {
 		return itemCodeableConcept;
 	}
@@ -138,6 +144,7 @@ public class ClinicalUseDefinitionInteractantImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemCodeableConcept(CodeableConcept newItemCodeableConcept) {
 		if (newItemCodeableConcept != itemCodeableConcept) {
 			NotificationChain msgs = null;

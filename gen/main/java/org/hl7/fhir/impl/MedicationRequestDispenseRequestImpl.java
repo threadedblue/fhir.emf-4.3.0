@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationRequestDispenseRequest;
@@ -130,6 +133,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequestInitialFill getInitialFill() {
 		return initialFill;
 	}
@@ -154,6 +158,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitialFill(MedicationRequestInitialFill newInitialFill) {
 		if (newInitialFill != initialFill) {
 			NotificationChain msgs = null;
@@ -173,6 +178,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDispenseInterval() {
 		return dispenseInterval;
 	}
@@ -197,6 +203,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDispenseInterval(Duration newDispenseInterval) {
 		if (newDispenseInterval != dispenseInterval) {
 			NotificationChain msgs = null;
@@ -216,6 +223,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -240,6 +248,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidityPeriod(Period newValidityPeriod) {
 		if (newValidityPeriod != validityPeriod) {
 			NotificationChain msgs = null;
@@ -259,6 +268,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getNumberOfRepeatsAllowed() {
 		return numberOfRepeatsAllowed;
 	}
@@ -283,6 +293,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumberOfRepeatsAllowed(UnsignedInt newNumberOfRepeatsAllowed) {
 		if (newNumberOfRepeatsAllowed != numberOfRepeatsAllowed) {
 			NotificationChain msgs = null;
@@ -302,6 +313,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -326,6 +338,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -345,6 +358,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getExpectedSupplyDuration() {
 		return expectedSupplyDuration;
 	}
@@ -369,6 +383,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpectedSupplyDuration(Duration newExpectedSupplyDuration) {
 		if (newExpectedSupplyDuration != expectedSupplyDuration) {
 			NotificationChain msgs = null;
@@ -388,6 +403,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPerformer() {
 		return performer;
 	}
@@ -412,6 +428,7 @@ public class MedicationRequestDispenseRequestImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerformer(Reference newPerformer) {
 		if (newPerformer != performer) {
 			NotificationChain msgs = null;

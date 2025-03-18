@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.LinkageItem;
 import org.hl7.fhir.LinkageType;
@@ -71,6 +74,7 @@ public class LinkageItemImpl extends BackboneElementImpl implements LinkageItem 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkageType getType() {
 		return type;
 	}
@@ -95,6 +99,7 @@ public class LinkageItemImpl extends BackboneElementImpl implements LinkageItem 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(LinkageType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class LinkageItemImpl extends BackboneElementImpl implements LinkageItem 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getResource() {
 		return resource;
 	}
@@ -138,6 +144,7 @@ public class LinkageItemImpl extends BackboneElementImpl implements LinkageItem 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Reference newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;

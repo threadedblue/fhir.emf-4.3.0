@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationRequestSubstitution;
@@ -81,6 +84,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAllowedBoolean() {
 		return allowedBoolean;
 	}
@@ -105,6 +109,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowedBoolean(org.hl7.fhir.Boolean newAllowedBoolean) {
 		if (newAllowedBoolean != allowedBoolean) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAllowedCodeableConcept() {
 		return allowedCodeableConcept;
 	}
@@ -148,6 +154,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowedCodeableConcept(CodeableConcept newAllowedCodeableConcept) {
 		if (newAllowedCodeableConcept != allowedCodeableConcept) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getReason() {
 		return reason;
 	}
@@ -191,6 +199,7 @@ public class MedicationRequestSubstitutionImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReason(CodeableConcept newReason) {
 		if (newReason != reason) {
 			NotificationChain msgs = null;

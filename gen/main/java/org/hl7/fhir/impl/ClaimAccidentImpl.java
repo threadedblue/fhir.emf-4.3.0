@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.ClaimAccident;
 import org.hl7.fhir.CodeableConcept;
@@ -95,6 +98,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return date;
 	}
@@ -119,6 +123,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -138,6 +143,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -162,6 +168,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -181,6 +188,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getLocationAddress() {
 		return locationAddress;
 	}
@@ -205,6 +213,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocationAddress(Address newLocationAddress) {
 		if (newLocationAddress != locationAddress) {
 			NotificationChain msgs = null;
@@ -224,6 +233,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLocationReference() {
 		return locationReference;
 	}
@@ -248,6 +258,7 @@ public class ClaimAccidentImpl extends BackboneElementImpl implements ClaimAccid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocationReference(Reference newLocationReference) {
 		if (newLocationReference != locationReference) {
 			NotificationChain msgs = null;

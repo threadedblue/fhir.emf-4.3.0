@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EncounterLocation;
 import org.hl7.fhir.EncounterLocationStatus;
@@ -95,6 +98,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLocation() {
 		return location;
 	}
@@ -119,6 +123,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(Reference newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -138,6 +143,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterLocationStatus getStatus() {
 		return status;
 	}
@@ -162,6 +168,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(EncounterLocationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -181,6 +188,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPhysicalType() {
 		return physicalType;
 	}
@@ -205,6 +213,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPhysicalType(CodeableConcept newPhysicalType) {
 		if (newPhysicalType != physicalType) {
 			NotificationChain msgs = null;
@@ -224,6 +233,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -248,6 +258,7 @@ public class EncounterLocationImpl extends BackboneElementImpl implements Encoun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;

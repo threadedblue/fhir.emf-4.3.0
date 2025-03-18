@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.ContractSigner;
 import org.hl7.fhir.FhirPackage;
@@ -88,6 +93,7 @@ public class ContractSignerImpl extends BackboneElementImpl implements ContractS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getType() {
 		return type;
 	}
@@ -112,6 +118,7 @@ public class ContractSignerImpl extends BackboneElementImpl implements ContractS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Coding newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -131,6 +138,7 @@ public class ContractSignerImpl extends BackboneElementImpl implements ContractS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParty() {
 		return party;
 	}
@@ -155,6 +163,7 @@ public class ContractSignerImpl extends BackboneElementImpl implements ContractS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParty(Reference newParty) {
 		if (newParty != party) {
 			NotificationChain msgs = null;
@@ -174,6 +183,7 @@ public class ContractSignerImpl extends BackboneElementImpl implements ContractS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Signature> getSignature() {
 		if (signature == null) {
 			signature = new EObjectContainmentEList<Signature>(Signature.class, this, FhirPackage.CONTRACT_SIGNER__SIGNATURE);

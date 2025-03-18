@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Date;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ValueSetCompose;
@@ -98,6 +103,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getLockedDate() {
 		return lockedDate;
 	}
@@ -122,6 +128,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLockedDate(Date newLockedDate) {
 		if (newLockedDate != lockedDate) {
 			NotificationChain msgs = null;
@@ -141,6 +148,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getInactive() {
 		return inactive;
 	}
@@ -165,6 +173,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInactive(org.hl7.fhir.Boolean newInactive) {
 		if (newInactive != inactive) {
 			NotificationChain msgs = null;
@@ -184,6 +193,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetInclude> getInclude() {
 		if (include == null) {
 			include = new EObjectContainmentEList<ValueSetInclude>(ValueSetInclude.class, this, FhirPackage.VALUE_SET_COMPOSE__INCLUDE);
@@ -196,6 +206,7 @@ public class ValueSetComposeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetInclude> getExclude() {
 		if (exclude == null) {
 			exclude = new EObjectContainmentEList<ValueSetInclude>(ValueSetInclude.class, this, FhirPackage.VALUE_SET_COMPOSE__EXCLUDE);

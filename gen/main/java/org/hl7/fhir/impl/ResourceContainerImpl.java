@@ -4,11 +4,156 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.hl7.fhir.*;
+
+import org.hl7.fhir.Account;
+import org.hl7.fhir.ActivityDefinition;
+import org.hl7.fhir.AdministrableProductDefinition;
+import org.hl7.fhir.AdverseEvent;
+import org.hl7.fhir.AllergyIntolerance;
+import org.hl7.fhir.Appointment;
+import org.hl7.fhir.AppointmentResponse;
+import org.hl7.fhir.AuditEvent;
+import org.hl7.fhir.Basic;
+import org.hl7.fhir.Binary;
+import org.hl7.fhir.BiologicallyDerivedProduct;
+import org.hl7.fhir.BodyStructure;
+import org.hl7.fhir.Bundle;
+import org.hl7.fhir.CapabilityStatement;
+import org.hl7.fhir.CarePlan;
+import org.hl7.fhir.CareTeam;
+import org.hl7.fhir.CatalogEntry;
+import org.hl7.fhir.ChargeItem;
+import org.hl7.fhir.ChargeItemDefinition;
+import org.hl7.fhir.Citation;
+import org.hl7.fhir.Claim;
+import org.hl7.fhir.ClaimResponse;
+import org.hl7.fhir.ClinicalImpression;
+import org.hl7.fhir.ClinicalUseDefinition;
+import org.hl7.fhir.CodeSystem;
+import org.hl7.fhir.Communication;
+import org.hl7.fhir.CommunicationRequest;
+import org.hl7.fhir.CompartmentDefinition;
+import org.hl7.fhir.Composition;
+import org.hl7.fhir.ConceptMap;
+import org.hl7.fhir.Condition;
+import org.hl7.fhir.Consent;
+import org.hl7.fhir.Contract;
+import org.hl7.fhir.Coverage;
+import org.hl7.fhir.CoverageEligibilityRequest;
+import org.hl7.fhir.CoverageEligibilityResponse;
+import org.hl7.fhir.DetectedIssue;
+import org.hl7.fhir.Device;
+import org.hl7.fhir.DeviceDefinition;
+import org.hl7.fhir.DeviceMetric;
+import org.hl7.fhir.DeviceRequest;
+import org.hl7.fhir.DeviceUseStatement;
+import org.hl7.fhir.DiagnosticReport;
+import org.hl7.fhir.DocumentManifest;
+import org.hl7.fhir.DocumentReference;
+import org.hl7.fhir.Encounter;
+import org.hl7.fhir.Endpoint;
+import org.hl7.fhir.EnrollmentRequest;
+import org.hl7.fhir.EnrollmentResponse;
+import org.hl7.fhir.EpisodeOfCare;
+import org.hl7.fhir.EventDefinition;
+import org.hl7.fhir.Evidence;
+import org.hl7.fhir.EvidenceReport;
+import org.hl7.fhir.EvidenceVariable;
+import org.hl7.fhir.ExampleScenario;
+import org.hl7.fhir.ExplanationOfBenefit;
+import org.hl7.fhir.FamilyMemberHistory;
+import org.hl7.fhir.FhirPackage;
+import org.hl7.fhir.Flag;
+import org.hl7.fhir.Goal;
+import org.hl7.fhir.GraphDefinition;
+import org.hl7.fhir.Group;
+import org.hl7.fhir.GuidanceResponse;
+import org.hl7.fhir.HealthcareService;
+import org.hl7.fhir.ImagingStudy;
+import org.hl7.fhir.Immunization;
+import org.hl7.fhir.ImmunizationEvaluation;
+import org.hl7.fhir.ImmunizationRecommendation;
+import org.hl7.fhir.ImplementationGuide;
+import org.hl7.fhir.Ingredient;
+import org.hl7.fhir.InsurancePlan;
+import org.hl7.fhir.Invoice;
+import org.hl7.fhir.Library;
+import org.hl7.fhir.Linkage;
+import org.hl7.fhir.List;
+import org.hl7.fhir.Location;
+import org.hl7.fhir.ManufacturedItemDefinition;
+import org.hl7.fhir.Measure;
+import org.hl7.fhir.MeasureReport;
+import org.hl7.fhir.Media;
+import org.hl7.fhir.Medication;
+import org.hl7.fhir.MedicationAdministration;
+import org.hl7.fhir.MedicationDispense;
+import org.hl7.fhir.MedicationKnowledge;
+import org.hl7.fhir.MedicationRequest;
+import org.hl7.fhir.MedicationStatement;
+import org.hl7.fhir.MedicinalProductDefinition;
+import org.hl7.fhir.MessageDefinition;
+import org.hl7.fhir.MessageHeader;
+import org.hl7.fhir.MolecularSequence;
+import org.hl7.fhir.NamingSystem;
+import org.hl7.fhir.NutritionOrder;
+import org.hl7.fhir.NutritionProduct;
+import org.hl7.fhir.Observation;
+import org.hl7.fhir.ObservationDefinition;
+import org.hl7.fhir.OperationDefinition;
+import org.hl7.fhir.OperationOutcome;
+import org.hl7.fhir.Organization;
+import org.hl7.fhir.OrganizationAffiliation;
+import org.hl7.fhir.PackagedProductDefinition;
+import org.hl7.fhir.Parameters;
+import org.hl7.fhir.Patient;
+import org.hl7.fhir.PaymentNotice;
+import org.hl7.fhir.PaymentReconciliation;
+import org.hl7.fhir.Person;
+import org.hl7.fhir.PlanDefinition;
+import org.hl7.fhir.Practitioner;
+import org.hl7.fhir.PractitionerRole;
+import org.hl7.fhir.Procedure;
+import org.hl7.fhir.Provenance;
+import org.hl7.fhir.Questionnaire;
+import org.hl7.fhir.QuestionnaireResponse;
+import org.hl7.fhir.RegulatedAuthorization;
+import org.hl7.fhir.RelatedPerson;
+import org.hl7.fhir.RequestGroup;
+import org.hl7.fhir.ResearchDefinition;
+import org.hl7.fhir.ResearchElementDefinition;
+import org.hl7.fhir.ResearchStudy;
+import org.hl7.fhir.ResearchSubject;
+import org.hl7.fhir.ResourceContainer;
+import org.hl7.fhir.RiskAssessment;
+import org.hl7.fhir.Schedule;
+import org.hl7.fhir.SearchParameter;
+import org.hl7.fhir.ServiceRequest;
+import org.hl7.fhir.Slot;
+import org.hl7.fhir.Specimen;
+import org.hl7.fhir.SpecimenDefinition;
+import org.hl7.fhir.StructureDefinition;
+import org.hl7.fhir.StructureMap;
+import org.hl7.fhir.Subscription;
+import org.hl7.fhir.SubscriptionStatus;
+import org.hl7.fhir.SubscriptionTopic;
+import org.hl7.fhir.Substance;
+import org.hl7.fhir.SubstanceDefinition;
+import org.hl7.fhir.SupplyDelivery;
+import org.hl7.fhir.SupplyRequest;
+import org.hl7.fhir.Task;
+import org.hl7.fhir.TerminologyCapabilities;
+import org.hl7.fhir.TestReport;
+import org.hl7.fhir.TestScript;
+import org.hl7.fhir.ValueSet;
+import org.hl7.fhir.VerificationResult;
+import org.hl7.fhir.VisionPrescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -1598,6 +1743,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Account getAccount() {
 		return account;
 	}
@@ -1622,6 +1768,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccount(Account newAccount) {
 		if (newAccount != account) {
 			NotificationChain msgs = null;
@@ -1641,6 +1788,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityDefinition getActivityDefinition() {
 		return activityDefinition;
 	}
@@ -1665,6 +1813,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivityDefinition(ActivityDefinition newActivityDefinition) {
 		if (newActivityDefinition != activityDefinition) {
 			NotificationChain msgs = null;
@@ -1684,6 +1833,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinition getAdministrableProductDefinition() {
 		return administrableProductDefinition;
 	}
@@ -1708,6 +1858,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdministrableProductDefinition(AdministrableProductDefinition newAdministrableProductDefinition) {
 		if (newAdministrableProductDefinition != administrableProductDefinition) {
 			NotificationChain msgs = null;
@@ -1727,6 +1878,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdverseEvent getAdverseEvent() {
 		return adverseEvent;
 	}
@@ -1751,6 +1903,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdverseEvent(AdverseEvent newAdverseEvent) {
 		if (newAdverseEvent != adverseEvent) {
 			NotificationChain msgs = null;
@@ -1770,6 +1923,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntolerance getAllergyIntolerance() {
 		return allergyIntolerance;
 	}
@@ -1794,6 +1948,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllergyIntolerance(AllergyIntolerance newAllergyIntolerance) {
 		if (newAllergyIntolerance != allergyIntolerance) {
 			NotificationChain msgs = null;
@@ -1813,6 +1968,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Appointment getAppointment() {
 		return appointment;
 	}
@@ -1837,6 +1993,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppointment(Appointment newAppointment) {
 		if (newAppointment != appointment) {
 			NotificationChain msgs = null;
@@ -1856,6 +2013,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AppointmentResponse getAppointmentResponse() {
 		return appointmentResponse;
 	}
@@ -1880,6 +2038,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppointmentResponse(AppointmentResponse newAppointmentResponse) {
 		if (newAppointmentResponse != appointmentResponse) {
 			NotificationChain msgs = null;
@@ -1899,6 +2058,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEvent getAuditEvent() {
 		return auditEvent;
 	}
@@ -1923,6 +2083,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuditEvent(AuditEvent newAuditEvent) {
 		if (newAuditEvent != auditEvent) {
 			NotificationChain msgs = null;
@@ -1942,6 +2103,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Basic getBasic() {
 		return basic;
 	}
@@ -1966,6 +2128,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBasic(Basic newBasic) {
 		if (newBasic != basic) {
 			NotificationChain msgs = null;
@@ -1985,6 +2148,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binary getBinary() {
 		return binary;
 	}
@@ -2009,6 +2173,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBinary(Binary newBinary) {
 		if (newBinary != binary) {
 			NotificationChain msgs = null;
@@ -2028,6 +2193,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProduct getBiologicallyDerivedProduct() {
 		return biologicallyDerivedProduct;
 	}
@@ -2052,6 +2218,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBiologicallyDerivedProduct(BiologicallyDerivedProduct newBiologicallyDerivedProduct) {
 		if (newBiologicallyDerivedProduct != biologicallyDerivedProduct) {
 			NotificationChain msgs = null;
@@ -2071,6 +2238,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BodyStructure getBodyStructure() {
 		return bodyStructure;
 	}
@@ -2095,6 +2263,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodyStructure(BodyStructure newBodyStructure) {
 		if (newBodyStructure != bodyStructure) {
 			NotificationChain msgs = null;
@@ -2114,6 +2283,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bundle getBundle() {
 		return bundle;
 	}
@@ -2138,6 +2308,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBundle(Bundle newBundle) {
 		if (newBundle != bundle) {
 			NotificationChain msgs = null;
@@ -2157,6 +2328,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatement getCapabilityStatement() {
 		return capabilityStatement;
 	}
@@ -2181,6 +2353,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCapabilityStatement(CapabilityStatement newCapabilityStatement) {
 		if (newCapabilityStatement != capabilityStatement) {
 			NotificationChain msgs = null;
@@ -2200,6 +2373,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlan getCarePlan() {
 		return carePlan;
 	}
@@ -2224,6 +2398,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCarePlan(CarePlan newCarePlan) {
 		if (newCarePlan != carePlan) {
 			NotificationChain msgs = null;
@@ -2243,6 +2418,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CareTeam getCareTeam() {
 		return careTeam;
 	}
@@ -2267,6 +2443,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCareTeam(CareTeam newCareTeam) {
 		if (newCareTeam != careTeam) {
 			NotificationChain msgs = null;
@@ -2286,6 +2463,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntry getCatalogEntry() {
 		return catalogEntry;
 	}
@@ -2310,6 +2488,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCatalogEntry(CatalogEntry newCatalogEntry) {
 		if (newCatalogEntry != catalogEntry) {
 			NotificationChain msgs = null;
@@ -2329,6 +2508,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItem getChargeItem() {
 		return chargeItem;
 	}
@@ -2353,6 +2533,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChargeItem(ChargeItem newChargeItem) {
 		if (newChargeItem != chargeItem) {
 			NotificationChain msgs = null;
@@ -2372,6 +2553,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemDefinition getChargeItemDefinition() {
 		return chargeItemDefinition;
 	}
@@ -2396,6 +2578,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChargeItemDefinition(ChargeItemDefinition newChargeItemDefinition) {
 		if (newChargeItemDefinition != chargeItemDefinition) {
 			NotificationChain msgs = null;
@@ -2415,6 +2598,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Citation getCitation() {
 		return citation;
 	}
@@ -2439,6 +2623,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCitation(Citation newCitation) {
 		if (newCitation != citation) {
 			NotificationChain msgs = null;
@@ -2458,6 +2643,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Claim getClaim() {
 		return claim;
 	}
@@ -2482,6 +2668,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClaim(Claim newClaim) {
 		if (newClaim != claim) {
 			NotificationChain msgs = null;
@@ -2501,6 +2688,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponse getClaimResponse() {
 		return claimResponse;
 	}
@@ -2525,6 +2713,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClaimResponse(ClaimResponse newClaimResponse) {
 		if (newClaimResponse != claimResponse) {
 			NotificationChain msgs = null;
@@ -2544,6 +2733,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpression getClinicalImpression() {
 		return clinicalImpression;
 	}
@@ -2568,6 +2758,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClinicalImpression(ClinicalImpression newClinicalImpression) {
 		if (newClinicalImpression != clinicalImpression) {
 			NotificationChain msgs = null;
@@ -2587,6 +2778,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinition getClinicalUseDefinition() {
 		return clinicalUseDefinition;
 	}
@@ -2611,6 +2803,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClinicalUseDefinition(ClinicalUseDefinition newClinicalUseDefinition) {
 		if (newClinicalUseDefinition != clinicalUseDefinition) {
 			NotificationChain msgs = null;
@@ -2630,6 +2823,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystem getCodeSystem() {
 		return codeSystem;
 	}
@@ -2654,6 +2848,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCodeSystem(CodeSystem newCodeSystem) {
 		if (newCodeSystem != codeSystem) {
 			NotificationChain msgs = null;
@@ -2673,6 +2868,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Communication getCommunication() {
 		return communication;
 	}
@@ -2697,6 +2893,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCommunication(Communication newCommunication) {
 		if (newCommunication != communication) {
 			NotificationChain msgs = null;
@@ -2716,6 +2913,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationRequest getCommunicationRequest() {
 		return communicationRequest;
 	}
@@ -2740,6 +2938,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCommunicationRequest(CommunicationRequest newCommunicationRequest) {
 		if (newCommunicationRequest != communicationRequest) {
 			NotificationChain msgs = null;
@@ -2759,6 +2958,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompartmentDefinition getCompartmentDefinition() {
 		return compartmentDefinition;
 	}
@@ -2783,6 +2983,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCompartmentDefinition(CompartmentDefinition newCompartmentDefinition) {
 		if (newCompartmentDefinition != compartmentDefinition) {
 			NotificationChain msgs = null;
@@ -2802,6 +3003,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Composition getComposition() {
 		return composition;
 	}
@@ -2826,6 +3028,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComposition(Composition newComposition) {
 		if (newComposition != composition) {
 			NotificationChain msgs = null;
@@ -2845,6 +3048,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMap getConceptMap() {
 		return conceptMap;
 	}
@@ -2869,6 +3073,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConceptMap(ConceptMap newConceptMap) {
 		if (newConceptMap != conceptMap) {
 			NotificationChain msgs = null;
@@ -2888,6 +3093,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Condition getCondition() {
 		return condition;
 	}
@@ -2912,6 +3118,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Condition newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -2931,6 +3138,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Consent getConsent() {
 		return consent;
 	}
@@ -2955,6 +3163,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConsent(Consent newConsent) {
 		if (newConsent != consent) {
 			NotificationChain msgs = null;
@@ -2974,6 +3183,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contract getContract() {
 		return contract;
 	}
@@ -2998,6 +3208,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContract(Contract newContract) {
 		if (newContract != contract) {
 			NotificationChain msgs = null;
@@ -3017,6 +3228,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coverage getCoverage() {
 		return coverage;
 	}
@@ -3041,6 +3253,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoverage(Coverage newCoverage) {
 		if (newCoverage != coverage) {
 			NotificationChain msgs = null;
@@ -3060,6 +3273,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequest getCoverageEligibilityRequest() {
 		return coverageEligibilityRequest;
 	}
@@ -3084,6 +3298,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoverageEligibilityRequest(CoverageEligibilityRequest newCoverageEligibilityRequest) {
 		if (newCoverageEligibilityRequest != coverageEligibilityRequest) {
 			NotificationChain msgs = null;
@@ -3103,6 +3318,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponse getCoverageEligibilityResponse() {
 		return coverageEligibilityResponse;
 	}
@@ -3127,6 +3343,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoverageEligibilityResponse(CoverageEligibilityResponse newCoverageEligibilityResponse) {
 		if (newCoverageEligibilityResponse != coverageEligibilityResponse) {
 			NotificationChain msgs = null;
@@ -3146,6 +3363,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssue getDetectedIssue() {
 		return detectedIssue;
 	}
@@ -3170,6 +3388,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetectedIssue(DetectedIssue newDetectedIssue) {
 		if (newDetectedIssue != detectedIssue) {
 			NotificationChain msgs = null;
@@ -3189,6 +3408,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Device getDevice() {
 		return device;
 	}
@@ -3213,6 +3433,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDevice(Device newDevice) {
 		if (newDevice != device) {
 			NotificationChain msgs = null;
@@ -3232,6 +3453,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinition getDeviceDefinition() {
 		return deviceDefinition;
 	}
@@ -3256,6 +3478,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceDefinition(DeviceDefinition newDeviceDefinition) {
 		if (newDeviceDefinition != deviceDefinition) {
 			NotificationChain msgs = null;
@@ -3275,6 +3498,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetric getDeviceMetric() {
 		return deviceMetric;
 	}
@@ -3299,6 +3523,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceMetric(DeviceMetric newDeviceMetric) {
 		if (newDeviceMetric != deviceMetric) {
 			NotificationChain msgs = null;
@@ -3318,6 +3543,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceRequest getDeviceRequest() {
 		return deviceRequest;
 	}
@@ -3342,6 +3568,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceRequest(DeviceRequest newDeviceRequest) {
 		if (newDeviceRequest != deviceRequest) {
 			NotificationChain msgs = null;
@@ -3361,6 +3588,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceUseStatement getDeviceUseStatement() {
 		return deviceUseStatement;
 	}
@@ -3385,6 +3613,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceUseStatement(DeviceUseStatement newDeviceUseStatement) {
 		if (newDeviceUseStatement != deviceUseStatement) {
 			NotificationChain msgs = null;
@@ -3404,6 +3633,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DiagnosticReport getDiagnosticReport() {
 		return diagnosticReport;
 	}
@@ -3428,6 +3658,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiagnosticReport(DiagnosticReport newDiagnosticReport) {
 		if (newDiagnosticReport != diagnosticReport) {
 			NotificationChain msgs = null;
@@ -3447,6 +3678,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentManifest getDocumentManifest() {
 		return documentManifest;
 	}
@@ -3471,6 +3703,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentManifest(DocumentManifest newDocumentManifest) {
 		if (newDocumentManifest != documentManifest) {
 			NotificationChain msgs = null;
@@ -3490,6 +3723,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReference getDocumentReference() {
 		return documentReference;
 	}
@@ -3514,6 +3748,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentReference(DocumentReference newDocumentReference) {
 		if (newDocumentReference != documentReference) {
 			NotificationChain msgs = null;
@@ -3533,6 +3768,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Encounter getEncounter() {
 		return encounter;
 	}
@@ -3557,6 +3793,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Encounter newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -3576,6 +3813,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Endpoint getEndpoint() {
 		return endpoint;
 	}
@@ -3600,6 +3838,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEndpoint(Endpoint newEndpoint) {
 		if (newEndpoint != endpoint) {
 			NotificationChain msgs = null;
@@ -3619,6 +3858,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnrollmentRequest getEnrollmentRequest() {
 		return enrollmentRequest;
 	}
@@ -3643,6 +3883,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnrollmentRequest(EnrollmentRequest newEnrollmentRequest) {
 		if (newEnrollmentRequest != enrollmentRequest) {
 			NotificationChain msgs = null;
@@ -3662,6 +3903,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnrollmentResponse getEnrollmentResponse() {
 		return enrollmentResponse;
 	}
@@ -3686,6 +3928,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnrollmentResponse(EnrollmentResponse newEnrollmentResponse) {
 		if (newEnrollmentResponse != enrollmentResponse) {
 			NotificationChain msgs = null;
@@ -3705,6 +3948,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EpisodeOfCare getEpisodeOfCare() {
 		return episodeOfCare;
 	}
@@ -3729,6 +3973,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEpisodeOfCare(EpisodeOfCare newEpisodeOfCare) {
 		if (newEpisodeOfCare != episodeOfCare) {
 			NotificationChain msgs = null;
@@ -3748,6 +3993,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventDefinition getEventDefinition() {
 		return eventDefinition;
 	}
@@ -3772,6 +4018,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEventDefinition(EventDefinition newEventDefinition) {
 		if (newEventDefinition != eventDefinition) {
 			NotificationChain msgs = null;
@@ -3791,6 +4038,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Evidence getEvidence() {
 		return evidence;
 	}
@@ -3815,6 +4063,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEvidence(Evidence newEvidence) {
 		if (newEvidence != evidence) {
 			NotificationChain msgs = null;
@@ -3834,6 +4083,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReport getEvidenceReport() {
 		return evidenceReport;
 	}
@@ -3858,6 +4108,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEvidenceReport(EvidenceReport newEvidenceReport) {
 		if (newEvidenceReport != evidenceReport) {
 			NotificationChain msgs = null;
@@ -3877,6 +4128,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariable getEvidenceVariable() {
 		return evidenceVariable;
 	}
@@ -3901,6 +4153,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEvidenceVariable(EvidenceVariable newEvidenceVariable) {
 		if (newEvidenceVariable != evidenceVariable) {
 			NotificationChain msgs = null;
@@ -3920,6 +4173,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenario getExampleScenario() {
 		return exampleScenario;
 	}
@@ -3944,6 +4198,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExampleScenario(ExampleScenario newExampleScenario) {
 		if (newExampleScenario != exampleScenario) {
 			NotificationChain msgs = null;
@@ -3963,6 +4218,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefit getExplanationOfBenefit() {
 		return explanationOfBenefit;
 	}
@@ -3987,6 +4243,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExplanationOfBenefit(ExplanationOfBenefit newExplanationOfBenefit) {
 		if (newExplanationOfBenefit != explanationOfBenefit) {
 			NotificationChain msgs = null;
@@ -4006,6 +4263,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FamilyMemberHistory getFamilyMemberHistory() {
 		return familyMemberHistory;
 	}
@@ -4030,6 +4288,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFamilyMemberHistory(FamilyMemberHistory newFamilyMemberHistory) {
 		if (newFamilyMemberHistory != familyMemberHistory) {
 			NotificationChain msgs = null;
@@ -4049,6 +4308,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Flag getFlag() {
 		return flag;
 	}
@@ -4073,6 +4333,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFlag(Flag newFlag) {
 		if (newFlag != flag) {
 			NotificationChain msgs = null;
@@ -4092,6 +4353,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Goal getGoal() {
 		return goal;
 	}
@@ -4116,6 +4378,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGoal(Goal newGoal) {
 		if (newGoal != goal) {
 			NotificationChain msgs = null;
@@ -4135,6 +4398,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphDefinition getGraphDefinition() {
 		return graphDefinition;
 	}
@@ -4159,6 +4423,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGraphDefinition(GraphDefinition newGraphDefinition) {
 		if (newGraphDefinition != graphDefinition) {
 			NotificationChain msgs = null;
@@ -4178,6 +4443,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Group getGroup() {
 		return group;
 	}
@@ -4202,6 +4468,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroup(Group newGroup) {
 		if (newGroup != group) {
 			NotificationChain msgs = null;
@@ -4221,6 +4488,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GuidanceResponse getGuidanceResponse() {
 		return guidanceResponse;
 	}
@@ -4245,6 +4513,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuidanceResponse(GuidanceResponse newGuidanceResponse) {
 		if (newGuidanceResponse != guidanceResponse) {
 			NotificationChain msgs = null;
@@ -4264,6 +4533,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HealthcareService getHealthcareService() {
 		return healthcareService;
 	}
@@ -4288,6 +4558,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHealthcareService(HealthcareService newHealthcareService) {
 		if (newHealthcareService != healthcareService) {
 			NotificationChain msgs = null;
@@ -4307,6 +4578,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudy getImagingStudy() {
 		return imagingStudy;
 	}
@@ -4331,6 +4603,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImagingStudy(ImagingStudy newImagingStudy) {
 		if (newImagingStudy != imagingStudy) {
 			NotificationChain msgs = null;
@@ -4350,6 +4623,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Immunization getImmunization() {
 		return immunization;
 	}
@@ -4374,6 +4648,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImmunization(Immunization newImmunization) {
 		if (newImmunization != immunization) {
 			NotificationChain msgs = null;
@@ -4393,6 +4668,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationEvaluation getImmunizationEvaluation() {
 		return immunizationEvaluation;
 	}
@@ -4417,6 +4693,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImmunizationEvaluation(ImmunizationEvaluation newImmunizationEvaluation) {
 		if (newImmunizationEvaluation != immunizationEvaluation) {
 			NotificationChain msgs = null;
@@ -4436,6 +4713,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationRecommendation getImmunizationRecommendation() {
 		return immunizationRecommendation;
 	}
@@ -4460,6 +4738,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImmunizationRecommendation(ImmunizationRecommendation newImmunizationRecommendation) {
 		if (newImmunizationRecommendation != immunizationRecommendation) {
 			NotificationChain msgs = null;
@@ -4479,6 +4758,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuide getImplementationGuide() {
 		return implementationGuide;
 	}
@@ -4503,6 +4783,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImplementationGuide(ImplementationGuide newImplementationGuide) {
 		if (newImplementationGuide != implementationGuide) {
 			NotificationChain msgs = null;
@@ -4522,6 +4803,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ingredient getIngredient() {
 		return ingredient;
 	}
@@ -4546,6 +4828,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIngredient(Ingredient newIngredient) {
 		if (newIngredient != ingredient) {
 			NotificationChain msgs = null;
@@ -4565,6 +4848,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlan getInsurancePlan() {
 		return insurancePlan;
 	}
@@ -4589,6 +4873,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInsurancePlan(InsurancePlan newInsurancePlan) {
 		if (newInsurancePlan != insurancePlan) {
 			NotificationChain msgs = null;
@@ -4608,6 +4893,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Invoice getInvoice() {
 		return invoice;
 	}
@@ -4632,6 +4918,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInvoice(Invoice newInvoice) {
 		if (newInvoice != invoice) {
 			NotificationChain msgs = null;
@@ -4651,6 +4938,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Library getLibrary() {
 		return library;
 	}
@@ -4675,6 +4963,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLibrary(Library newLibrary) {
 		if (newLibrary != library) {
 			NotificationChain msgs = null;
@@ -4694,6 +4983,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Linkage getLinkage() {
 		return linkage;
 	}
@@ -4718,6 +5008,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLinkage(Linkage newLinkage) {
 		if (newLinkage != linkage) {
 			NotificationChain msgs = null;
@@ -4737,6 +5028,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List getList() {
 		return list;
 	}
@@ -4761,6 +5053,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setList(List newList) {
 		if (newList != list) {
 			NotificationChain msgs = null;
@@ -4780,6 +5073,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location getLocation() {
 		return location;
 	}
@@ -4804,6 +5098,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(Location newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -4823,6 +5118,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ManufacturedItemDefinition getManufacturedItemDefinition() {
 		return manufacturedItemDefinition;
 	}
@@ -4847,6 +5143,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufacturedItemDefinition(ManufacturedItemDefinition newManufacturedItemDefinition) {
 		if (newManufacturedItemDefinition != manufacturedItemDefinition) {
 			NotificationChain msgs = null;
@@ -4866,6 +5163,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Measure getMeasure() {
 		return measure;
 	}
@@ -4890,6 +5188,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasure(Measure newMeasure) {
 		if (newMeasure != measure) {
 			NotificationChain msgs = null;
@@ -4909,6 +5208,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReport getMeasureReport() {
 		return measureReport;
 	}
@@ -4933,6 +5233,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasureReport(MeasureReport newMeasureReport) {
 		if (newMeasureReport != measureReport) {
 			NotificationChain msgs = null;
@@ -4952,6 +5253,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Media getMedia() {
 		return media;
 	}
@@ -4976,6 +5278,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedia(Media newMedia) {
 		if (newMedia != media) {
 			NotificationChain msgs = null;
@@ -4995,6 +5298,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Medication getMedication() {
 		return medication;
 	}
@@ -5019,6 +5323,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedication(Medication newMedication) {
 		if (newMedication != medication) {
 			NotificationChain msgs = null;
@@ -5038,6 +5343,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationAdministration getMedicationAdministration() {
 		return medicationAdministration;
 	}
@@ -5062,6 +5368,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicationAdministration(MedicationAdministration newMedicationAdministration) {
 		if (newMedicationAdministration != medicationAdministration) {
 			NotificationChain msgs = null;
@@ -5081,6 +5388,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationDispense getMedicationDispense() {
 		return medicationDispense;
 	}
@@ -5105,6 +5413,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicationDispense(MedicationDispense newMedicationDispense) {
 		if (newMedicationDispense != medicationDispense) {
 			NotificationChain msgs = null;
@@ -5124,6 +5433,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledge getMedicationKnowledge() {
 		return medicationKnowledge;
 	}
@@ -5148,6 +5458,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicationKnowledge(MedicationKnowledge newMedicationKnowledge) {
 		if (newMedicationKnowledge != medicationKnowledge) {
 			NotificationChain msgs = null;
@@ -5167,6 +5478,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequest getMedicationRequest() {
 		return medicationRequest;
 	}
@@ -5191,6 +5503,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicationRequest(MedicationRequest newMedicationRequest) {
 		if (newMedicationRequest != medicationRequest) {
 			NotificationChain msgs = null;
@@ -5210,6 +5523,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationStatement getMedicationStatement() {
 		return medicationStatement;
 	}
@@ -5234,6 +5548,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicationStatement(MedicationStatement newMedicationStatement) {
 		if (newMedicationStatement != medicationStatement) {
 			NotificationChain msgs = null;
@@ -5253,6 +5568,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinition getMedicinalProductDefinition() {
 		return medicinalProductDefinition;
 	}
@@ -5277,6 +5593,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedicinalProductDefinition(MedicinalProductDefinition newMedicinalProductDefinition) {
 		if (newMedicinalProductDefinition != medicinalProductDefinition) {
 			NotificationChain msgs = null;
@@ -5296,6 +5613,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageDefinition getMessageDefinition() {
 		return messageDefinition;
 	}
@@ -5320,6 +5638,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessageDefinition(MessageDefinition newMessageDefinition) {
 		if (newMessageDefinition != messageDefinition) {
 			NotificationChain msgs = null;
@@ -5339,6 +5658,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageHeader getMessageHeader() {
 		return messageHeader;
 	}
@@ -5363,6 +5683,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessageHeader(MessageHeader newMessageHeader) {
 		if (newMessageHeader != messageHeader) {
 			NotificationChain msgs = null;
@@ -5382,6 +5703,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequence getMolecularSequence() {
 		return molecularSequence;
 	}
@@ -5406,6 +5728,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMolecularSequence(MolecularSequence newMolecularSequence) {
 		if (newMolecularSequence != molecularSequence) {
 			NotificationChain msgs = null;
@@ -5425,6 +5748,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamingSystem getNamingSystem() {
 		return namingSystem;
 	}
@@ -5449,6 +5773,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNamingSystem(NamingSystem newNamingSystem) {
 		if (newNamingSystem != namingSystem) {
 			NotificationChain msgs = null;
@@ -5468,6 +5793,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrder getNutritionOrder() {
 		return nutritionOrder;
 	}
@@ -5492,6 +5818,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNutritionOrder(NutritionOrder newNutritionOrder) {
 		if (newNutritionOrder != nutritionOrder) {
 			NotificationChain msgs = null;
@@ -5511,6 +5838,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProduct getNutritionProduct() {
 		return nutritionProduct;
 	}
@@ -5535,6 +5863,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNutritionProduct(NutritionProduct newNutritionProduct) {
 		if (newNutritionProduct != nutritionProduct) {
 			NotificationChain msgs = null;
@@ -5554,6 +5883,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Observation getObservation() {
 		return observation;
 	}
@@ -5578,6 +5908,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObservation(Observation newObservation) {
 		if (newObservation != observation) {
 			NotificationChain msgs = null;
@@ -5597,6 +5928,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDefinition getObservationDefinition() {
 		return observationDefinition;
 	}
@@ -5621,6 +5953,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObservationDefinition(ObservationDefinition newObservationDefinition) {
 		if (newObservationDefinition != observationDefinition) {
 			NotificationChain msgs = null;
@@ -5640,6 +5973,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinition getOperationDefinition() {
 		return operationDefinition;
 	}
@@ -5664,6 +5998,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperationDefinition(OperationDefinition newOperationDefinition) {
 		if (newOperationDefinition != operationDefinition) {
 			NotificationChain msgs = null;
@@ -5683,6 +6018,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationOutcome getOperationOutcome() {
 		return operationOutcome;
 	}
@@ -5707,6 +6043,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperationOutcome(OperationOutcome newOperationOutcome) {
 		if (newOperationOutcome != operationOutcome) {
 			NotificationChain msgs = null;
@@ -5726,6 +6063,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Organization getOrganization() {
 		return organization;
 	}
@@ -5750,6 +6088,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrganization(Organization newOrganization) {
 		if (newOrganization != organization) {
 			NotificationChain msgs = null;
@@ -5769,6 +6108,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrganizationAffiliation getOrganizationAffiliation() {
 		return organizationAffiliation;
 	}
@@ -5793,6 +6133,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrganizationAffiliation(OrganizationAffiliation newOrganizationAffiliation) {
 		if (newOrganizationAffiliation != organizationAffiliation) {
 			NotificationChain msgs = null;
@@ -5812,6 +6153,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinition getPackagedProductDefinition() {
 		return packagedProductDefinition;
 	}
@@ -5836,6 +6178,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackagedProductDefinition(PackagedProductDefinition newPackagedProductDefinition) {
 		if (newPackagedProductDefinition != packagedProductDefinition) {
 			NotificationChain msgs = null;
@@ -5855,6 +6198,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Patient getPatient() {
 		return patient;
 	}
@@ -5879,6 +6223,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Patient newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -5898,6 +6243,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentNotice getPaymentNotice() {
 		return paymentNotice;
 	}
@@ -5922,6 +6268,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaymentNotice(PaymentNotice newPaymentNotice) {
 		if (newPaymentNotice != paymentNotice) {
 			NotificationChain msgs = null;
@@ -5941,6 +6288,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentReconciliation getPaymentReconciliation() {
 		return paymentReconciliation;
 	}
@@ -5965,6 +6313,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaymentReconciliation(PaymentReconciliation newPaymentReconciliation) {
 		if (newPaymentReconciliation != paymentReconciliation) {
 			NotificationChain msgs = null;
@@ -5984,6 +6333,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Person getPerson() {
 		return person;
 	}
@@ -6008,6 +6358,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerson(Person newPerson) {
 		if (newPerson != person) {
 			NotificationChain msgs = null;
@@ -6027,6 +6378,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinition getPlanDefinition() {
 		return planDefinition;
 	}
@@ -6051,6 +6403,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlanDefinition(PlanDefinition newPlanDefinition) {
 		if (newPlanDefinition != planDefinition) {
 			NotificationChain msgs = null;
@@ -6070,6 +6423,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Practitioner getPractitioner() {
 		return practitioner;
 	}
@@ -6094,6 +6448,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPractitioner(Practitioner newPractitioner) {
 		if (newPractitioner != practitioner) {
 			NotificationChain msgs = null;
@@ -6113,6 +6468,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PractitionerRole getPractitionerRole() {
 		return practitionerRole;
 	}
@@ -6137,6 +6493,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPractitionerRole(PractitionerRole newPractitionerRole) {
 		if (newPractitionerRole != practitionerRole) {
 			NotificationChain msgs = null;
@@ -6156,6 +6513,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Procedure getProcedure() {
 		return procedure;
 	}
@@ -6180,6 +6538,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProcedure(Procedure newProcedure) {
 		if (newProcedure != procedure) {
 			NotificationChain msgs = null;
@@ -6199,6 +6558,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Provenance getProvenance() {
 		return provenance;
 	}
@@ -6223,6 +6583,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvenance(Provenance newProvenance) {
 		if (newProvenance != provenance) {
 			NotificationChain msgs = null;
@@ -6242,6 +6603,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Questionnaire getQuestionnaire() {
 		return questionnaire;
 	}
@@ -6266,6 +6628,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuestionnaire(Questionnaire newQuestionnaire) {
 		if (newQuestionnaire != questionnaire) {
 			NotificationChain msgs = null;
@@ -6285,6 +6648,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireResponse getQuestionnaireResponse() {
 		return questionnaireResponse;
 	}
@@ -6309,6 +6673,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuestionnaireResponse(QuestionnaireResponse newQuestionnaireResponse) {
 		if (newQuestionnaireResponse != questionnaireResponse) {
 			NotificationChain msgs = null;
@@ -6328,6 +6693,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegulatedAuthorization getRegulatedAuthorization() {
 		return regulatedAuthorization;
 	}
@@ -6352,6 +6718,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegulatedAuthorization(RegulatedAuthorization newRegulatedAuthorization) {
 		if (newRegulatedAuthorization != regulatedAuthorization) {
 			NotificationChain msgs = null;
@@ -6371,6 +6738,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedPerson getRelatedPerson() {
 		return relatedPerson;
 	}
@@ -6395,6 +6763,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelatedPerson(RelatedPerson newRelatedPerson) {
 		if (newRelatedPerson != relatedPerson) {
 			NotificationChain msgs = null;
@@ -6414,6 +6783,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestGroup getRequestGroup() {
 		return requestGroup;
 	}
@@ -6438,6 +6808,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequestGroup(RequestGroup newRequestGroup) {
 		if (newRequestGroup != requestGroup) {
 			NotificationChain msgs = null;
@@ -6457,6 +6828,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchDefinition getResearchDefinition() {
 		return researchDefinition;
 	}
@@ -6481,6 +6853,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResearchDefinition(ResearchDefinition newResearchDefinition) {
 		if (newResearchDefinition != researchDefinition) {
 			NotificationChain msgs = null;
@@ -6500,6 +6873,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchElementDefinition getResearchElementDefinition() {
 		return researchElementDefinition;
 	}
@@ -6524,6 +6898,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResearchElementDefinition(ResearchElementDefinition newResearchElementDefinition) {
 		if (newResearchElementDefinition != researchElementDefinition) {
 			NotificationChain msgs = null;
@@ -6543,6 +6918,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchStudy getResearchStudy() {
 		return researchStudy;
 	}
@@ -6567,6 +6943,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResearchStudy(ResearchStudy newResearchStudy) {
 		if (newResearchStudy != researchStudy) {
 			NotificationChain msgs = null;
@@ -6586,6 +6963,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchSubject getResearchSubject() {
 		return researchSubject;
 	}
@@ -6610,6 +6988,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResearchSubject(ResearchSubject newResearchSubject) {
 		if (newResearchSubject != researchSubject) {
 			NotificationChain msgs = null;
@@ -6629,6 +7008,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RiskAssessment getRiskAssessment() {
 		return riskAssessment;
 	}
@@ -6653,6 +7033,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRiskAssessment(RiskAssessment newRiskAssessment) {
 		if (newRiskAssessment != riskAssessment) {
 			NotificationChain msgs = null;
@@ -6672,6 +7053,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Schedule getSchedule() {
 		return schedule;
 	}
@@ -6696,6 +7078,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSchedule(Schedule newSchedule) {
 		if (newSchedule != schedule) {
 			NotificationChain msgs = null;
@@ -6715,6 +7098,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchParameter getSearchParameter() {
 		return searchParameter;
 	}
@@ -6739,6 +7123,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSearchParameter(SearchParameter newSearchParameter) {
 		if (newSearchParameter != searchParameter) {
 			NotificationChain msgs = null;
@@ -6758,6 +7143,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServiceRequest getServiceRequest() {
 		return serviceRequest;
 	}
@@ -6782,6 +7168,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServiceRequest(ServiceRequest newServiceRequest) {
 		if (newServiceRequest != serviceRequest) {
 			NotificationChain msgs = null;
@@ -6801,6 +7188,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Slot getSlot() {
 		return slot;
 	}
@@ -6825,6 +7213,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSlot(Slot newSlot) {
 		if (newSlot != slot) {
 			NotificationChain msgs = null;
@@ -6844,6 +7233,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Specimen getSpecimen() {
 		return specimen;
 	}
@@ -6868,6 +7258,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecimen(Specimen newSpecimen) {
 		if (newSpecimen != specimen) {
 			NotificationChain msgs = null;
@@ -6887,6 +7278,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinition getSpecimenDefinition() {
 		return specimenDefinition;
 	}
@@ -6911,6 +7303,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecimenDefinition(SpecimenDefinition newSpecimenDefinition) {
 		if (newSpecimenDefinition != specimenDefinition) {
 			NotificationChain msgs = null;
@@ -6930,6 +7323,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinition getStructureDefinition() {
 		return structureDefinition;
 	}
@@ -6954,6 +7348,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStructureDefinition(StructureDefinition newStructureDefinition) {
 		if (newStructureDefinition != structureDefinition) {
 			NotificationChain msgs = null;
@@ -6973,6 +7368,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMap getStructureMap() {
 		return structureMap;
 	}
@@ -6997,6 +7393,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStructureMap(StructureMap newStructureMap) {
 		if (newStructureMap != structureMap) {
 			NotificationChain msgs = null;
@@ -7016,6 +7413,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Subscription getSubscription() {
 		return subscription;
 	}
@@ -7040,6 +7438,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubscription(Subscription newSubscription) {
 		if (newSubscription != subscription) {
 			NotificationChain msgs = null;
@@ -7059,6 +7458,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionStatus getSubscriptionStatus() {
 		return subscriptionStatus;
 	}
@@ -7083,6 +7483,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubscriptionStatus(SubscriptionStatus newSubscriptionStatus) {
 		if (newSubscriptionStatus != subscriptionStatus) {
 			NotificationChain msgs = null;
@@ -7102,6 +7503,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopic getSubscriptionTopic() {
 		return subscriptionTopic;
 	}
@@ -7126,6 +7528,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubscriptionTopic(SubscriptionTopic newSubscriptionTopic) {
 		if (newSubscriptionTopic != subscriptionTopic) {
 			NotificationChain msgs = null;
@@ -7145,6 +7548,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substance getSubstance() {
 		return substance;
 	}
@@ -7169,6 +7573,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstance(Substance newSubstance) {
 		if (newSubstance != substance) {
 			NotificationChain msgs = null;
@@ -7188,6 +7593,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinition getSubstanceDefinition() {
 		return substanceDefinition;
 	}
@@ -7212,6 +7618,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstanceDefinition(SubstanceDefinition newSubstanceDefinition) {
 		if (newSubstanceDefinition != substanceDefinition) {
 			NotificationChain msgs = null;
@@ -7231,6 +7638,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDelivery getSupplyDelivery() {
 		return supplyDelivery;
 	}
@@ -7255,6 +7663,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSupplyDelivery(SupplyDelivery newSupplyDelivery) {
 		if (newSupplyDelivery != supplyDelivery) {
 			NotificationChain msgs = null;
@@ -7274,6 +7683,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyRequest getSupplyRequest() {
 		return supplyRequest;
 	}
@@ -7298,6 +7708,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSupplyRequest(SupplyRequest newSupplyRequest) {
 		if (newSupplyRequest != supplyRequest) {
 			NotificationChain msgs = null;
@@ -7317,6 +7728,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Task getTask() {
 		return task;
 	}
@@ -7341,6 +7753,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTask(Task newTask) {
 		if (newTask != task) {
 			NotificationChain msgs = null;
@@ -7360,6 +7773,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilities getTerminologyCapabilities() {
 		return terminologyCapabilities;
 	}
@@ -7384,6 +7798,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTerminologyCapabilities(TerminologyCapabilities newTerminologyCapabilities) {
 		if (newTerminologyCapabilities != terminologyCapabilities) {
 			NotificationChain msgs = null;
@@ -7403,6 +7818,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReport getTestReport() {
 		return testReport;
 	}
@@ -7427,6 +7843,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTestReport(TestReport newTestReport) {
 		if (newTestReport != testReport) {
 			NotificationChain msgs = null;
@@ -7446,6 +7863,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScript getTestScript() {
 		return testScript;
 	}
@@ -7470,6 +7888,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTestScript(TestScript newTestScript) {
 		if (newTestScript != testScript) {
 			NotificationChain msgs = null;
@@ -7489,6 +7908,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSet getValueSet() {
 		return valueSet;
 	}
@@ -7513,6 +7933,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueSet(ValueSet newValueSet) {
 		if (newValueSet != valueSet) {
 			NotificationChain msgs = null;
@@ -7532,6 +7953,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResult getVerificationResult() {
 		return verificationResult;
 	}
@@ -7556,6 +7978,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVerificationResult(VerificationResult newVerificationResult) {
 		if (newVerificationResult != verificationResult) {
 			NotificationChain msgs = null;
@@ -7575,6 +7998,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionPrescription getVisionPrescription() {
 		return visionPrescription;
 	}
@@ -7599,6 +8023,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisionPrescription(VisionPrescription newVisionPrescription) {
 		if (newVisionPrescription != visionPrescription) {
 			NotificationChain msgs = null;
@@ -7618,6 +8043,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameters getParameters() {
 		return parameters;
 	}
@@ -7642,6 +8068,7 @@ public class ResourceContainerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameters(Parameters newParameters) {
 		if (newParameters != parameters) {
 			NotificationChain msgs = null;

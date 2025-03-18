@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ConsentVerification;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -82,6 +85,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getVerified() {
 		return verified;
 	}
@@ -106,6 +110,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVerified(org.hl7.fhir.Boolean newVerified) {
 		if (newVerified != verified) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getVerifiedWith() {
 		return verifiedWith;
 	}
@@ -149,6 +155,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVerifiedWith(Reference newVerifiedWith) {
 		if (newVerifiedWith != verifiedWith) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getVerificationDate() {
 		return verificationDate;
 	}
@@ -192,6 +200,7 @@ public class ConsentVerificationImpl extends BackboneElementImpl implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVerificationDate(DateTime newVerificationDate) {
 		if (newVerificationDate != verificationDate) {
 			NotificationChain msgs = null;

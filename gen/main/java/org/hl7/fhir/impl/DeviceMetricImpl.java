@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DeviceMetric;
 import org.hl7.fhir.DeviceMetricCalibration;
@@ -170,6 +175,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.DEVICE_METRIC__IDENTIFIER);
@@ -182,6 +188,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -206,6 +213,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -225,6 +233,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getUnit() {
 		return unit;
 	}
@@ -249,6 +258,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(CodeableConcept newUnit) {
 		if (newUnit != unit) {
 			NotificationChain msgs = null;
@@ -268,6 +278,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSource() {
 		return source;
 	}
@@ -292,6 +303,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Reference newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -311,6 +323,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParent() {
 		return parent;
 	}
@@ -335,6 +348,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Reference newParent) {
 		if (newParent != parent) {
 			NotificationChain msgs = null;
@@ -354,6 +368,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricOperationalStatus getOperationalStatus() {
 		return operationalStatus;
 	}
@@ -378,6 +393,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperationalStatus(DeviceMetricOperationalStatus newOperationalStatus) {
 		if (newOperationalStatus != operationalStatus) {
 			NotificationChain msgs = null;
@@ -397,6 +413,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricColor getColor() {
 		return color;
 	}
@@ -421,6 +438,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColor(DeviceMetricColor newColor) {
 		if (newColor != color) {
 			NotificationChain msgs = null;
@@ -440,6 +458,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricCategory getCategory() {
 		return category;
 	}
@@ -464,6 +483,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(DeviceMetricCategory newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -483,6 +503,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getMeasurementPeriod() {
 		return measurementPeriod;
 	}
@@ -507,6 +528,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasurementPeriod(Timing newMeasurementPeriod) {
 		if (newMeasurementPeriod != measurementPeriod) {
 			NotificationChain msgs = null;
@@ -526,6 +548,7 @@ public class DeviceMetricImpl extends DomainResourceImpl implements DeviceMetric
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeviceMetricCalibration> getCalibration() {
 		if (calibration == null) {
 			calibration = new EObjectContainmentEList<DeviceMetricCalibration>(DeviceMetricCalibration.class, this, FhirPackage.DEVICE_METRIC__CALIBRATION);

@@ -2,9 +2,6 @@
  */
 package org.hl7.fhir.impl;
 
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
 import java.math.BigInteger;
 
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -13,12 +10,1164 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.emf.ecore.util.Diagnostician;
+
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import org.hl7.fhir.*;
+
+import org.hl7.fhir.Account;
+import org.hl7.fhir.AccountCoverage;
+import org.hl7.fhir.AccountGuarantor;
+import org.hl7.fhir.AccountStatus;
+import org.hl7.fhir.AccountStatusEnum;
+import org.hl7.fhir.ActionCardinalityBehavior;
+import org.hl7.fhir.ActionCardinalityBehaviorEnum;
+import org.hl7.fhir.ActionConditionKind;
+import org.hl7.fhir.ActionConditionKindEnum;
+import org.hl7.fhir.ActionGroupingBehavior;
+import org.hl7.fhir.ActionGroupingBehaviorEnum;
+import org.hl7.fhir.ActionParticipantType;
+import org.hl7.fhir.ActionParticipantTypeEnum;
+import org.hl7.fhir.ActionPrecheckBehavior;
+import org.hl7.fhir.ActionPrecheckBehaviorEnum;
+import org.hl7.fhir.ActionRelationshipType;
+import org.hl7.fhir.ActionRelationshipTypeEnum;
+import org.hl7.fhir.ActionRequiredBehavior;
+import org.hl7.fhir.ActionRequiredBehaviorEnum;
+import org.hl7.fhir.ActionSelectionBehavior;
+import org.hl7.fhir.ActionSelectionBehaviorEnum;
+import org.hl7.fhir.ActivityDefinition;
+import org.hl7.fhir.ActivityDefinitionDynamicValue;
+import org.hl7.fhir.ActivityDefinitionParticipant;
+import org.hl7.fhir.Address;
+import org.hl7.fhir.AddressType;
+import org.hl7.fhir.AddressTypeEnum;
+import org.hl7.fhir.AddressUse;
+import org.hl7.fhir.AddressUseEnum;
+import org.hl7.fhir.AdministrableProductDefinition;
+import org.hl7.fhir.AdministrableProductDefinitionProperty;
+import org.hl7.fhir.AdministrableProductDefinitionRouteOfAdministration;
+import org.hl7.fhir.AdministrableProductDefinitionTargetSpecies;
+import org.hl7.fhir.AdministrableProductDefinitionWithdrawalPeriod;
+import org.hl7.fhir.AdministrativeGender;
+import org.hl7.fhir.AdministrativeGenderEnum;
+import org.hl7.fhir.AdverseEvent;
+import org.hl7.fhir.AdverseEventActuality;
+import org.hl7.fhir.AdverseEventActualityEnum;
+import org.hl7.fhir.AdverseEventCausality;
+import org.hl7.fhir.AdverseEventSuspectEntity;
+import org.hl7.fhir.Age;
+import org.hl7.fhir.AgeUnits;
+import org.hl7.fhir.AgeUnitsEnum;
+import org.hl7.fhir.AggregationMode;
+import org.hl7.fhir.AggregationModeEnum;
+import org.hl7.fhir.AllergyIntolerance;
+import org.hl7.fhir.AllergyIntoleranceCategory;
+import org.hl7.fhir.AllergyIntoleranceCategoryEnum;
+import org.hl7.fhir.AllergyIntoleranceCriticality;
+import org.hl7.fhir.AllergyIntoleranceCriticalityEnum;
+import org.hl7.fhir.AllergyIntoleranceReaction;
+import org.hl7.fhir.AllergyIntoleranceSeverity;
+import org.hl7.fhir.AllergyIntoleranceSeverityEnum;
+import org.hl7.fhir.AllergyIntoleranceType;
+import org.hl7.fhir.AllergyIntoleranceTypeEnum;
+import org.hl7.fhir.Annotation;
+import org.hl7.fhir.Appointment;
+import org.hl7.fhir.AppointmentParticipant;
+import org.hl7.fhir.AppointmentResponse;
+import org.hl7.fhir.AppointmentStatus;
+import org.hl7.fhir.AppointmentStatusEnum;
+import org.hl7.fhir.AssertionDirectionType;
+import org.hl7.fhir.AssertionDirectionTypeEnum;
+import org.hl7.fhir.AssertionOperatorType;
+import org.hl7.fhir.AssertionOperatorTypeEnum;
+import org.hl7.fhir.AssertionResponseTypes;
+import org.hl7.fhir.AssertionResponseTypesEnum;
+import org.hl7.fhir.Attachment;
+import org.hl7.fhir.AuditEvent;
+import org.hl7.fhir.AuditEventAction;
+import org.hl7.fhir.AuditEventActionEnum;
+import org.hl7.fhir.AuditEventAgent;
+import org.hl7.fhir.AuditEventAgentNetworkType;
+import org.hl7.fhir.AuditEventAgentNetworkTypeEnum;
+import org.hl7.fhir.AuditEventDetail;
+import org.hl7.fhir.AuditEventEntity;
+import org.hl7.fhir.AuditEventNetwork;
+import org.hl7.fhir.AuditEventOutcome;
+import org.hl7.fhir.AuditEventOutcomeEnum;
+import org.hl7.fhir.AuditEventSource;
+import org.hl7.fhir.BackboneElement;
+import org.hl7.fhir.Base64Binary;
+import org.hl7.fhir.Basic;
+import org.hl7.fhir.Binary;
+import org.hl7.fhir.BindingStrength;
+import org.hl7.fhir.BindingStrengthEnum;
+import org.hl7.fhir.BiologicallyDerivedProduct;
+import org.hl7.fhir.BiologicallyDerivedProductCategory;
+import org.hl7.fhir.BiologicallyDerivedProductCategoryEnum;
+import org.hl7.fhir.BiologicallyDerivedProductCollection;
+import org.hl7.fhir.BiologicallyDerivedProductManipulation;
+import org.hl7.fhir.BiologicallyDerivedProductProcessing;
+import org.hl7.fhir.BiologicallyDerivedProductStatus;
+import org.hl7.fhir.BiologicallyDerivedProductStatusEnum;
+import org.hl7.fhir.BiologicallyDerivedProductStorage;
+import org.hl7.fhir.BiologicallyDerivedProductStorageScale;
+import org.hl7.fhir.BiologicallyDerivedProductStorageScaleEnum;
+import org.hl7.fhir.BodyStructure;
+import org.hl7.fhir.Bundle;
+import org.hl7.fhir.BundleEntry;
+import org.hl7.fhir.BundleLink;
+import org.hl7.fhir.BundleRequest;
+import org.hl7.fhir.BundleResponse;
+import org.hl7.fhir.BundleSearch;
+import org.hl7.fhir.BundleType;
+import org.hl7.fhir.BundleTypeEnum;
+import org.hl7.fhir.Canonical;
+import org.hl7.fhir.CapabilityStatement;
+import org.hl7.fhir.CapabilityStatementDocument;
+import org.hl7.fhir.CapabilityStatementEndpoint;
+import org.hl7.fhir.CapabilityStatementImplementation;
+import org.hl7.fhir.CapabilityStatementInteraction;
+import org.hl7.fhir.CapabilityStatementInteraction1;
+import org.hl7.fhir.CapabilityStatementKind;
+import org.hl7.fhir.CapabilityStatementKindEnum;
+import org.hl7.fhir.CapabilityStatementMessaging;
+import org.hl7.fhir.CapabilityStatementOperation;
+import org.hl7.fhir.CapabilityStatementResource;
+import org.hl7.fhir.CapabilityStatementRest;
+import org.hl7.fhir.CapabilityStatementSearchParam;
+import org.hl7.fhir.CapabilityStatementSecurity;
+import org.hl7.fhir.CapabilityStatementSoftware;
+import org.hl7.fhir.CapabilityStatementSupportedMessage;
+import org.hl7.fhir.CarePlan;
+import org.hl7.fhir.CarePlanActivity;
+import org.hl7.fhir.CarePlanActivityKind;
+import org.hl7.fhir.CarePlanActivityKindEnum;
+import org.hl7.fhir.CarePlanActivityStatus;
+import org.hl7.fhir.CarePlanActivityStatusEnum;
+import org.hl7.fhir.CarePlanDetail;
+import org.hl7.fhir.CarePlanIntent;
+import org.hl7.fhir.CarePlanIntentEnum;
+import org.hl7.fhir.CareTeam;
+import org.hl7.fhir.CareTeamParticipant;
+import org.hl7.fhir.CareTeamStatus;
+import org.hl7.fhir.CareTeamStatusEnum;
+import org.hl7.fhir.CatalogEntry;
+import org.hl7.fhir.CatalogEntryRelatedEntry;
+import org.hl7.fhir.CatalogEntryRelationType;
+import org.hl7.fhir.CatalogEntryRelationTypeEnum;
+import org.hl7.fhir.CharacteristicCombination;
+import org.hl7.fhir.CharacteristicCombinationEnum;
+import org.hl7.fhir.ChargeItem;
+import org.hl7.fhir.ChargeItemDefinition;
+import org.hl7.fhir.ChargeItemDefinitionApplicability;
+import org.hl7.fhir.ChargeItemDefinitionPriceComponent;
+import org.hl7.fhir.ChargeItemDefinitionPropertyGroup;
+import org.hl7.fhir.ChargeItemPerformer;
+import org.hl7.fhir.ChargeItemStatus;
+import org.hl7.fhir.ChargeItemStatusEnum;
+import org.hl7.fhir.Citation;
+import org.hl7.fhir.CitationAbstract;
+import org.hl7.fhir.CitationAffiliationInfo;
+import org.hl7.fhir.CitationCitedArtifact;
+import org.hl7.fhir.CitationClassification;
+import org.hl7.fhir.CitationClassification1;
+import org.hl7.fhir.CitationContributionInstance;
+import org.hl7.fhir.CitationContributorship;
+import org.hl7.fhir.CitationDateOfPublication;
+import org.hl7.fhir.CitationEntry;
+import org.hl7.fhir.CitationPart;
+import org.hl7.fhir.CitationPeriodicRelease;
+import org.hl7.fhir.CitationPublicationForm;
+import org.hl7.fhir.CitationPublishedIn;
+import org.hl7.fhir.CitationRelatesTo;
+import org.hl7.fhir.CitationRelatesTo1;
+import org.hl7.fhir.CitationStatusDate;
+import org.hl7.fhir.CitationStatusDate1;
+import org.hl7.fhir.CitationSummary;
+import org.hl7.fhir.CitationSummary1;
+import org.hl7.fhir.CitationTitle;
+import org.hl7.fhir.CitationVersion;
+import org.hl7.fhir.CitationWebLocation;
+import org.hl7.fhir.CitationWhoClassified;
+import org.hl7.fhir.Claim;
+import org.hl7.fhir.ClaimAccident;
+import org.hl7.fhir.ClaimCareTeam;
+import org.hl7.fhir.ClaimDetail;
+import org.hl7.fhir.ClaimDiagnosis;
+import org.hl7.fhir.ClaimInsurance;
+import org.hl7.fhir.ClaimItem;
+import org.hl7.fhir.ClaimPayee;
+import org.hl7.fhir.ClaimProcedure;
+import org.hl7.fhir.ClaimRelated;
+import org.hl7.fhir.ClaimResponse;
+import org.hl7.fhir.ClaimResponseAddItem;
+import org.hl7.fhir.ClaimResponseAdjudication;
+import org.hl7.fhir.ClaimResponseDetail;
+import org.hl7.fhir.ClaimResponseDetail1;
+import org.hl7.fhir.ClaimResponseError;
+import org.hl7.fhir.ClaimResponseInsurance;
+import org.hl7.fhir.ClaimResponseItem;
+import org.hl7.fhir.ClaimResponsePayment;
+import org.hl7.fhir.ClaimResponseProcessNote;
+import org.hl7.fhir.ClaimResponseSubDetail;
+import org.hl7.fhir.ClaimResponseSubDetail1;
+import org.hl7.fhir.ClaimResponseTotal;
+import org.hl7.fhir.ClaimSubDetail;
+import org.hl7.fhir.ClaimSupportingInfo;
+import org.hl7.fhir.ClinicalImpression;
+import org.hl7.fhir.ClinicalImpressionFinding;
+import org.hl7.fhir.ClinicalImpressionInvestigation;
+import org.hl7.fhir.ClinicalImpressionStatus;
+import org.hl7.fhir.ClinicalImpressionStatusEnum;
+import org.hl7.fhir.ClinicalUseDefinition;
+import org.hl7.fhir.ClinicalUseDefinitionContraindication;
+import org.hl7.fhir.ClinicalUseDefinitionIndication;
+import org.hl7.fhir.ClinicalUseDefinitionInteractant;
+import org.hl7.fhir.ClinicalUseDefinitionInteraction;
+import org.hl7.fhir.ClinicalUseDefinitionOtherTherapy;
+import org.hl7.fhir.ClinicalUseDefinitionType;
+import org.hl7.fhir.ClinicalUseDefinitionTypeEnum;
+import org.hl7.fhir.ClinicalUseDefinitionUndesirableEffect;
+import org.hl7.fhir.ClinicalUseDefinitionWarning;
+import org.hl7.fhir.Code;
+import org.hl7.fhir.CodeSearchSupport;
+import org.hl7.fhir.CodeSearchSupportEnum;
+import org.hl7.fhir.CodeSystem;
+import org.hl7.fhir.CodeSystemConcept;
+import org.hl7.fhir.CodeSystemContentMode;
+import org.hl7.fhir.CodeSystemContentModeEnum;
+import org.hl7.fhir.CodeSystemDesignation;
+import org.hl7.fhir.CodeSystemFilter;
+import org.hl7.fhir.CodeSystemHierarchyMeaning;
+import org.hl7.fhir.CodeSystemHierarchyMeaningEnum;
+import org.hl7.fhir.CodeSystemProperty;
+import org.hl7.fhir.CodeSystemProperty1;
+import org.hl7.fhir.CodeableConcept;
+import org.hl7.fhir.CodeableReference;
+import org.hl7.fhir.Coding;
+import org.hl7.fhir.Communication;
+import org.hl7.fhir.CommunicationPayload;
+import org.hl7.fhir.CommunicationRequest;
+import org.hl7.fhir.CommunicationRequestPayload;
+import org.hl7.fhir.CompartmentDefinition;
+import org.hl7.fhir.CompartmentDefinitionResource;
+import org.hl7.fhir.CompartmentType;
+import org.hl7.fhir.CompartmentTypeEnum;
+import org.hl7.fhir.Composition;
+import org.hl7.fhir.CompositionAttestationMode;
+import org.hl7.fhir.CompositionAttestationModeEnum;
+import org.hl7.fhir.CompositionAttester;
+import org.hl7.fhir.CompositionEvent;
+import org.hl7.fhir.CompositionRelatesTo;
+import org.hl7.fhir.CompositionSection;
+import org.hl7.fhir.CompositionStatus;
+import org.hl7.fhir.CompositionStatusEnum;
+import org.hl7.fhir.ConceptMap;
+import org.hl7.fhir.ConceptMapDependsOn;
+import org.hl7.fhir.ConceptMapElement;
+import org.hl7.fhir.ConceptMapEquivalence;
+import org.hl7.fhir.ConceptMapEquivalenceEnum;
+import org.hl7.fhir.ConceptMapGroup;
+import org.hl7.fhir.ConceptMapGroupUnmappedMode;
+import org.hl7.fhir.ConceptMapGroupUnmappedModeEnum;
+import org.hl7.fhir.ConceptMapTarget;
+import org.hl7.fhir.ConceptMapUnmapped;
+import org.hl7.fhir.Condition;
+import org.hl7.fhir.ConditionEvidence;
+import org.hl7.fhir.ConditionStage;
+import org.hl7.fhir.ConditionalDeleteStatus;
+import org.hl7.fhir.ConditionalDeleteStatusEnum;
+import org.hl7.fhir.ConditionalReadStatus;
+import org.hl7.fhir.ConditionalReadStatusEnum;
+import org.hl7.fhir.Confidentiality;
+import org.hl7.fhir.ConfidentialityEnum;
+import org.hl7.fhir.Consent;
+import org.hl7.fhir.ConsentActor;
+import org.hl7.fhir.ConsentData;
+import org.hl7.fhir.ConsentDataMeaning;
+import org.hl7.fhir.ConsentDataMeaningEnum;
+import org.hl7.fhir.ConsentPolicy;
+import org.hl7.fhir.ConsentProvision;
+import org.hl7.fhir.ConsentProvisionType;
+import org.hl7.fhir.ConsentProvisionTypeEnum;
+import org.hl7.fhir.ConsentState;
+import org.hl7.fhir.ConsentStateEnum;
+import org.hl7.fhir.ConsentVerification;
+import org.hl7.fhir.ConstraintSeverity;
+import org.hl7.fhir.ConstraintSeverityEnum;
+import org.hl7.fhir.ContactDetail;
+import org.hl7.fhir.ContactPoint;
+import org.hl7.fhir.ContactPointSystem;
+import org.hl7.fhir.ContactPointSystemEnum;
+import org.hl7.fhir.ContactPointUse;
+import org.hl7.fhir.ContactPointUseEnum;
+import org.hl7.fhir.Contract;
+import org.hl7.fhir.ContractAction;
+import org.hl7.fhir.ContractAnswer;
+import org.hl7.fhir.ContractAsset;
+import org.hl7.fhir.ContractContentDefinition;
+import org.hl7.fhir.ContractContext;
+import org.hl7.fhir.ContractFriendly;
+import org.hl7.fhir.ContractLegal;
+import org.hl7.fhir.ContractOffer;
+import org.hl7.fhir.ContractParty;
+import org.hl7.fhir.ContractResourcePublicationStatusCodes;
+import org.hl7.fhir.ContractResourcePublicationStatusCodesEnum;
+import org.hl7.fhir.ContractResourceStatusCodes;
+import org.hl7.fhir.ContractResourceStatusCodesEnum;
+import org.hl7.fhir.ContractRule;
+import org.hl7.fhir.ContractSecurityLabel;
+import org.hl7.fhir.ContractSigner;
+import org.hl7.fhir.ContractSubject;
+import org.hl7.fhir.ContractTerm;
+import org.hl7.fhir.ContractValuedItem;
+import org.hl7.fhir.Contributor;
+import org.hl7.fhir.ContributorType;
+import org.hl7.fhir.ContributorTypeEnum;
+import org.hl7.fhir.Count;
+import org.hl7.fhir.Coverage;
+import org.hl7.fhir.CoverageClass;
+import org.hl7.fhir.CoverageCostToBeneficiary;
+import org.hl7.fhir.CoverageEligibilityRequest;
+import org.hl7.fhir.CoverageEligibilityRequestDiagnosis;
+import org.hl7.fhir.CoverageEligibilityRequestInsurance;
+import org.hl7.fhir.CoverageEligibilityRequestItem;
+import org.hl7.fhir.CoverageEligibilityRequestSupportingInfo;
+import org.hl7.fhir.CoverageEligibilityResponse;
+import org.hl7.fhir.CoverageEligibilityResponseBenefit;
+import org.hl7.fhir.CoverageEligibilityResponseError;
+import org.hl7.fhir.CoverageEligibilityResponseInsurance;
+import org.hl7.fhir.CoverageEligibilityResponseItem;
+import org.hl7.fhir.CoverageException;
+import org.hl7.fhir.CriteriaNotExistsBehavior;
+import org.hl7.fhir.CriteriaNotExistsBehaviorEnum;
+import org.hl7.fhir.DataRequirement;
+import org.hl7.fhir.DataRequirementCodeFilter;
+import org.hl7.fhir.DataRequirementDateFilter;
+import org.hl7.fhir.DataRequirementSort;
+import org.hl7.fhir.Date;
+import org.hl7.fhir.DateTime;
+import org.hl7.fhir.DaysOfWeek;
+import org.hl7.fhir.DaysOfWeekEnum;
+import org.hl7.fhir.Decimal;
+import org.hl7.fhir.DefinitionResourceType;
+import org.hl7.fhir.DefinitionResourceTypeEnum;
+import org.hl7.fhir.DetectedIssue;
+import org.hl7.fhir.DetectedIssueEvidence;
+import org.hl7.fhir.DetectedIssueMitigation;
+import org.hl7.fhir.DetectedIssueSeverity;
+import org.hl7.fhir.DetectedIssueSeverityEnum;
+import org.hl7.fhir.Device;
+import org.hl7.fhir.DeviceDefinition;
+import org.hl7.fhir.DeviceDefinitionCapability;
+import org.hl7.fhir.DeviceDefinitionDeviceName;
+import org.hl7.fhir.DeviceDefinitionMaterial;
+import org.hl7.fhir.DeviceDefinitionProperty;
+import org.hl7.fhir.DeviceDefinitionSpecialization;
+import org.hl7.fhir.DeviceDefinitionUdiDeviceIdentifier;
+import org.hl7.fhir.DeviceDeviceName;
+import org.hl7.fhir.DeviceMetric;
+import org.hl7.fhir.DeviceMetricCalibration;
+import org.hl7.fhir.DeviceMetricCalibrationState;
+import org.hl7.fhir.DeviceMetricCalibrationStateEnum;
+import org.hl7.fhir.DeviceMetricCalibrationType;
+import org.hl7.fhir.DeviceMetricCalibrationTypeEnum;
+import org.hl7.fhir.DeviceMetricCategory;
+import org.hl7.fhir.DeviceMetricCategoryEnum;
+import org.hl7.fhir.DeviceMetricColor;
+import org.hl7.fhir.DeviceMetricColorEnum;
+import org.hl7.fhir.DeviceMetricOperationalStatus;
+import org.hl7.fhir.DeviceMetricOperationalStatusEnum;
+import org.hl7.fhir.DeviceNameType;
+import org.hl7.fhir.DeviceNameTypeEnum;
+import org.hl7.fhir.DeviceProperty;
+import org.hl7.fhir.DeviceRequest;
+import org.hl7.fhir.DeviceRequestParameter;
+import org.hl7.fhir.DeviceSpecialization;
+import org.hl7.fhir.DeviceUdiCarrier;
+import org.hl7.fhir.DeviceUseStatement;
+import org.hl7.fhir.DeviceUseStatementStatus;
+import org.hl7.fhir.DeviceUseStatementStatusEnum;
+import org.hl7.fhir.DeviceVersion;
+import org.hl7.fhir.DiagnosticReport;
+import org.hl7.fhir.DiagnosticReportMedia;
+import org.hl7.fhir.DiagnosticReportStatus;
+import org.hl7.fhir.DiagnosticReportStatusEnum;
+import org.hl7.fhir.DiscriminatorType;
+import org.hl7.fhir.DiscriminatorTypeEnum;
+import org.hl7.fhir.Distance;
+import org.hl7.fhir.DocumentManifest;
+import org.hl7.fhir.DocumentManifestRelated;
+import org.hl7.fhir.DocumentMode;
+import org.hl7.fhir.DocumentModeEnum;
+import org.hl7.fhir.DocumentReference;
+import org.hl7.fhir.DocumentReferenceContent;
+import org.hl7.fhir.DocumentReferenceContext;
+import org.hl7.fhir.DocumentReferenceRelatesTo;
+import org.hl7.fhir.DocumentReferenceStatus;
+import org.hl7.fhir.DocumentReferenceStatusEnum;
+import org.hl7.fhir.DocumentRelationshipType;
+import org.hl7.fhir.DocumentRelationshipTypeEnum;
+import org.hl7.fhir.DocumentRoot;
+import org.hl7.fhir.DomainResource;
+import org.hl7.fhir.Dosage;
+import org.hl7.fhir.DosageDoseAndRate;
+import org.hl7.fhir.Duration;
+import org.hl7.fhir.Element;
+import org.hl7.fhir.ElementDefinition;
+import org.hl7.fhir.ElementDefinitionBase;
+import org.hl7.fhir.ElementDefinitionBinding;
+import org.hl7.fhir.ElementDefinitionConstraint;
+import org.hl7.fhir.ElementDefinitionDiscriminator;
+import org.hl7.fhir.ElementDefinitionExample;
+import org.hl7.fhir.ElementDefinitionMapping;
+import org.hl7.fhir.ElementDefinitionSlicing;
+import org.hl7.fhir.ElementDefinitionType;
+import org.hl7.fhir.EligibilityRequestPurpose;
+import org.hl7.fhir.EligibilityRequestPurposeEnum;
+import org.hl7.fhir.EligibilityResponsePurpose;
+import org.hl7.fhir.EligibilityResponsePurposeEnum;
+import org.hl7.fhir.EnableWhenBehavior;
+import org.hl7.fhir.EnableWhenBehaviorEnum;
+import org.hl7.fhir.Encounter;
+import org.hl7.fhir.EncounterClassHistory;
+import org.hl7.fhir.EncounterDiagnosis;
+import org.hl7.fhir.EncounterHospitalization;
+import org.hl7.fhir.EncounterLocation;
+import org.hl7.fhir.EncounterLocationStatus;
+import org.hl7.fhir.EncounterLocationStatusEnum;
+import org.hl7.fhir.EncounterParticipant;
+import org.hl7.fhir.EncounterStatus;
+import org.hl7.fhir.EncounterStatusEnum;
+import org.hl7.fhir.EncounterStatusHistory;
+import org.hl7.fhir.Endpoint;
+import org.hl7.fhir.EndpointStatus;
+import org.hl7.fhir.EndpointStatusEnum;
+import org.hl7.fhir.EnrollmentRequest;
+import org.hl7.fhir.EnrollmentResponse;
+import org.hl7.fhir.EpisodeOfCare;
+import org.hl7.fhir.EpisodeOfCareDiagnosis;
+import org.hl7.fhir.EpisodeOfCareStatus;
+import org.hl7.fhir.EpisodeOfCareStatusEnum;
+import org.hl7.fhir.EpisodeOfCareStatusHistory;
+import org.hl7.fhir.EventCapabilityMode;
+import org.hl7.fhir.EventCapabilityModeEnum;
+import org.hl7.fhir.EventDefinition;
+import org.hl7.fhir.EventOrRequestResourceTypes;
+import org.hl7.fhir.EventOrRequestResourceTypesEnum;
+import org.hl7.fhir.EventResourceType;
+import org.hl7.fhir.EventResourceTypeEnum;
+import org.hl7.fhir.EventStatus;
+import org.hl7.fhir.EventStatusEnum;
+import org.hl7.fhir.EventTiming;
+import org.hl7.fhir.EventTimingEnum;
+import org.hl7.fhir.Evidence;
+import org.hl7.fhir.EvidenceAttributeEstimate;
+import org.hl7.fhir.EvidenceCertainty;
+import org.hl7.fhir.EvidenceModelCharacteristic;
+import org.hl7.fhir.EvidenceReport;
+import org.hl7.fhir.EvidenceReportCharacteristic;
+import org.hl7.fhir.EvidenceReportRelatesTo;
+import org.hl7.fhir.EvidenceReportSection;
+import org.hl7.fhir.EvidenceReportSubject;
+import org.hl7.fhir.EvidenceSampleSize;
+import org.hl7.fhir.EvidenceStatistic;
+import org.hl7.fhir.EvidenceVariable;
+import org.hl7.fhir.EvidenceVariable1;
+import org.hl7.fhir.EvidenceVariableCategory;
+import org.hl7.fhir.EvidenceVariableCharacteristic;
+import org.hl7.fhir.EvidenceVariableDefinition;
+import org.hl7.fhir.EvidenceVariableHandling;
+import org.hl7.fhir.EvidenceVariableHandlingEnum;
+import org.hl7.fhir.EvidenceVariableTimeFromStart;
+import org.hl7.fhir.ExampleScenario;
+import org.hl7.fhir.ExampleScenarioActor;
+import org.hl7.fhir.ExampleScenarioActorType;
+import org.hl7.fhir.ExampleScenarioActorTypeEnum;
+import org.hl7.fhir.ExampleScenarioAlternative;
+import org.hl7.fhir.ExampleScenarioContainedInstance;
+import org.hl7.fhir.ExampleScenarioInstance;
+import org.hl7.fhir.ExampleScenarioOperation;
+import org.hl7.fhir.ExampleScenarioProcess;
+import org.hl7.fhir.ExampleScenarioStep;
+import org.hl7.fhir.ExampleScenarioVersion;
+import org.hl7.fhir.ExplanationOfBenefit;
+import org.hl7.fhir.ExplanationOfBenefitAccident;
+import org.hl7.fhir.ExplanationOfBenefitAddItem;
+import org.hl7.fhir.ExplanationOfBenefitAdjudication;
+import org.hl7.fhir.ExplanationOfBenefitBenefitBalance;
+import org.hl7.fhir.ExplanationOfBenefitCareTeam;
+import org.hl7.fhir.ExplanationOfBenefitDetail;
+import org.hl7.fhir.ExplanationOfBenefitDetail1;
+import org.hl7.fhir.ExplanationOfBenefitDiagnosis;
+import org.hl7.fhir.ExplanationOfBenefitFinancial;
+import org.hl7.fhir.ExplanationOfBenefitInsurance;
+import org.hl7.fhir.ExplanationOfBenefitItem;
+import org.hl7.fhir.ExplanationOfBenefitPayee;
+import org.hl7.fhir.ExplanationOfBenefitPayment;
+import org.hl7.fhir.ExplanationOfBenefitProcedure;
+import org.hl7.fhir.ExplanationOfBenefitProcessNote;
+import org.hl7.fhir.ExplanationOfBenefitRelated;
+import org.hl7.fhir.ExplanationOfBenefitStatus;
+import org.hl7.fhir.ExplanationOfBenefitStatusEnum;
+import org.hl7.fhir.ExplanationOfBenefitSubDetail;
+import org.hl7.fhir.ExplanationOfBenefitSubDetail1;
+import org.hl7.fhir.ExplanationOfBenefitSupportingInfo;
+import org.hl7.fhir.ExplanationOfBenefitTotal;
+import org.hl7.fhir.Expression;
+import org.hl7.fhir.ExpressionLanguage;
+import org.hl7.fhir.ExpressionLanguageEnum;
+import org.hl7.fhir.Extension;
+import org.hl7.fhir.ExtensionContextType;
+import org.hl7.fhir.ExtensionContextTypeEnum;
+import org.hl7.fhir.FHIRAllTypes;
+import org.hl7.fhir.FHIRAllTypesEnum;
+import org.hl7.fhir.FHIRDefinedType;
+import org.hl7.fhir.FHIRDefinedTypeEnum;
+import org.hl7.fhir.FHIRDeviceStatus;
+import org.hl7.fhir.FHIRDeviceStatusEnum;
+import org.hl7.fhir.FHIRPathTypes;
+import org.hl7.fhir.FHIRPathTypesEnum;
+import org.hl7.fhir.FHIRSubstanceStatus;
+import org.hl7.fhir.FHIRSubstanceStatusEnum;
+import org.hl7.fhir.FHIRVersion;
+import org.hl7.fhir.FHIRVersionEnum;
+import org.hl7.fhir.FamilyHistoryStatus;
+import org.hl7.fhir.FamilyHistoryStatusEnum;
+import org.hl7.fhir.FamilyMemberHistory;
+import org.hl7.fhir.FamilyMemberHistoryCondition;
+import org.hl7.fhir.FhirFactory;
+import org.hl7.fhir.FhirPackage;
+import org.hl7.fhir.FilterOperator;
+import org.hl7.fhir.FilterOperatorEnum;
+import org.hl7.fhir.FinancialResourceStatusCodes;
+import org.hl7.fhir.FinancialResourceStatusCodesEnum;
+import org.hl7.fhir.Flag;
+import org.hl7.fhir.FlagStatus;
+import org.hl7.fhir.FlagStatusEnum;
+import org.hl7.fhir.Goal;
+import org.hl7.fhir.GoalLifecycleStatus;
+import org.hl7.fhir.GoalLifecycleStatusEnum;
+import org.hl7.fhir.GoalTarget;
+import org.hl7.fhir.GraphCompartmentRule;
+import org.hl7.fhir.GraphCompartmentRuleEnum;
+import org.hl7.fhir.GraphCompartmentUse;
+import org.hl7.fhir.GraphCompartmentUseEnum;
+import org.hl7.fhir.GraphDefinition;
+import org.hl7.fhir.GraphDefinitionCompartment;
+import org.hl7.fhir.GraphDefinitionLink;
+import org.hl7.fhir.GraphDefinitionTarget;
+import org.hl7.fhir.Group;
+import org.hl7.fhir.GroupCharacteristic;
+import org.hl7.fhir.GroupMeasure;
+import org.hl7.fhir.GroupMeasureEnum;
+import org.hl7.fhir.GroupMember;
+import org.hl7.fhir.GroupType;
+import org.hl7.fhir.GroupTypeEnum;
+import org.hl7.fhir.GuidanceResponse;
+import org.hl7.fhir.GuidanceResponseStatus;
+import org.hl7.fhir.GuidanceResponseStatusEnum;
+import org.hl7.fhir.GuidePageGeneration;
+import org.hl7.fhir.GuidePageGenerationEnum;
+import org.hl7.fhir.GuideParameterCode;
+import org.hl7.fhir.GuideParameterCodeEnum;
+import org.hl7.fhir.HTTPVerb;
+import org.hl7.fhir.HTTPVerbEnum;
+import org.hl7.fhir.HealthcareService;
+import org.hl7.fhir.HealthcareServiceAvailableTime;
+import org.hl7.fhir.HealthcareServiceEligibility;
+import org.hl7.fhir.HealthcareServiceNotAvailable;
+import org.hl7.fhir.HumanName;
+import org.hl7.fhir.Id;
+import org.hl7.fhir.Identifier;
+import org.hl7.fhir.IdentifierUse;
+import org.hl7.fhir.IdentifierUseEnum;
+import org.hl7.fhir.IdentityAssuranceLevel;
+import org.hl7.fhir.IdentityAssuranceLevelEnum;
+import org.hl7.fhir.ImagingStudy;
+import org.hl7.fhir.ImagingStudyInstance;
+import org.hl7.fhir.ImagingStudyPerformer;
+import org.hl7.fhir.ImagingStudySeries;
+import org.hl7.fhir.ImagingStudyStatus;
+import org.hl7.fhir.ImagingStudyStatusEnum;
+import org.hl7.fhir.Immunization;
+import org.hl7.fhir.ImmunizationEducation;
+import org.hl7.fhir.ImmunizationEvaluation;
+import org.hl7.fhir.ImmunizationEvaluationStatusCodes;
+import org.hl7.fhir.ImmunizationEvaluationStatusCodesEnum;
+import org.hl7.fhir.ImmunizationPerformer;
+import org.hl7.fhir.ImmunizationProtocolApplied;
+import org.hl7.fhir.ImmunizationReaction;
+import org.hl7.fhir.ImmunizationRecommendation;
+import org.hl7.fhir.ImmunizationRecommendationDateCriterion;
+import org.hl7.fhir.ImmunizationRecommendationRecommendation;
+import org.hl7.fhir.ImmunizationStatusCodes;
+import org.hl7.fhir.ImmunizationStatusCodesEnum;
+import org.hl7.fhir.ImplementationGuide;
+import org.hl7.fhir.ImplementationGuideDefinition;
+import org.hl7.fhir.ImplementationGuideDependsOn;
+import org.hl7.fhir.ImplementationGuideGlobal;
+import org.hl7.fhir.ImplementationGuideGrouping;
+import org.hl7.fhir.ImplementationGuideManifest;
+import org.hl7.fhir.ImplementationGuidePage;
+import org.hl7.fhir.ImplementationGuidePage1;
+import org.hl7.fhir.ImplementationGuideParameter;
+import org.hl7.fhir.ImplementationGuideResource;
+import org.hl7.fhir.ImplementationGuideResource1;
+import org.hl7.fhir.ImplementationGuideTemplate;
+import org.hl7.fhir.Ingredient;
+import org.hl7.fhir.IngredientManufacturer;
+import org.hl7.fhir.IngredientManufacturerRole;
+import org.hl7.fhir.IngredientManufacturerRoleEnum;
+import org.hl7.fhir.IngredientReferenceStrength;
+import org.hl7.fhir.IngredientStrength;
+import org.hl7.fhir.IngredientSubstance;
+import org.hl7.fhir.Instant;
+import org.hl7.fhir.InsurancePlan;
+import org.hl7.fhir.InsurancePlanBenefit;
+import org.hl7.fhir.InsurancePlanBenefit1;
+import org.hl7.fhir.InsurancePlanContact;
+import org.hl7.fhir.InsurancePlanCost;
+import org.hl7.fhir.InsurancePlanCoverage;
+import org.hl7.fhir.InsurancePlanGeneralCost;
+import org.hl7.fhir.InsurancePlanLimit;
+import org.hl7.fhir.InsurancePlanPlan;
+import org.hl7.fhir.InsurancePlanSpecificCost;
+import org.hl7.fhir.InteractionTrigger;
+import org.hl7.fhir.InteractionTriggerEnum;
+import org.hl7.fhir.Invoice;
+import org.hl7.fhir.InvoiceLineItem;
+import org.hl7.fhir.InvoiceParticipant;
+import org.hl7.fhir.InvoicePriceComponent;
+import org.hl7.fhir.InvoicePriceComponentType;
+import org.hl7.fhir.InvoicePriceComponentTypeEnum;
+import org.hl7.fhir.InvoiceStatus;
+import org.hl7.fhir.InvoiceStatusEnum;
+import org.hl7.fhir.IssueSeverity;
+import org.hl7.fhir.IssueSeverityEnum;
+import org.hl7.fhir.IssueType;
+import org.hl7.fhir.IssueTypeEnum;
+import org.hl7.fhir.KnowledgeResourceType;
+import org.hl7.fhir.KnowledgeResourceTypeEnum;
+import org.hl7.fhir.Library;
+import org.hl7.fhir.LinkType;
+import org.hl7.fhir.LinkTypeEnum;
+import org.hl7.fhir.Linkage;
+import org.hl7.fhir.LinkageItem;
+import org.hl7.fhir.LinkageType;
+import org.hl7.fhir.LinkageTypeEnum;
+import org.hl7.fhir.List;
+import org.hl7.fhir.ListEntry;
+import org.hl7.fhir.ListMode;
+import org.hl7.fhir.ListModeEnum;
+import org.hl7.fhir.ListStatus;
+import org.hl7.fhir.ListStatusEnum;
+import org.hl7.fhir.Location;
+import org.hl7.fhir.LocationHoursOfOperation;
+import org.hl7.fhir.LocationMode;
+import org.hl7.fhir.LocationModeEnum;
+import org.hl7.fhir.LocationPosition;
+import org.hl7.fhir.LocationStatus;
+import org.hl7.fhir.LocationStatusEnum;
+import org.hl7.fhir.ManufacturedItemDefinition;
+import org.hl7.fhir.ManufacturedItemDefinitionProperty;
+import org.hl7.fhir.Markdown;
+import org.hl7.fhir.MarketingStatus;
+import org.hl7.fhir.Measure;
+import org.hl7.fhir.MeasureComponent;
+import org.hl7.fhir.MeasureGroup;
+import org.hl7.fhir.MeasurePopulation;
+import org.hl7.fhir.MeasureReport;
+import org.hl7.fhir.MeasureReportComponent;
+import org.hl7.fhir.MeasureReportGroup;
+import org.hl7.fhir.MeasureReportPopulation;
+import org.hl7.fhir.MeasureReportPopulation1;
+import org.hl7.fhir.MeasureReportStatus;
+import org.hl7.fhir.MeasureReportStatusEnum;
+import org.hl7.fhir.MeasureReportStratifier;
+import org.hl7.fhir.MeasureReportStratum;
+import org.hl7.fhir.MeasureReportType;
+import org.hl7.fhir.MeasureReportTypeEnum;
+import org.hl7.fhir.MeasureStratifier;
+import org.hl7.fhir.MeasureSupplementalData;
+import org.hl7.fhir.Media;
+import org.hl7.fhir.Medication;
+import org.hl7.fhir.MedicationAdministration;
+import org.hl7.fhir.MedicationAdministrationDosage;
+import org.hl7.fhir.MedicationAdministrationPerformer;
+import org.hl7.fhir.MedicationBatch;
+import org.hl7.fhir.MedicationDispense;
+import org.hl7.fhir.MedicationDispensePerformer;
+import org.hl7.fhir.MedicationDispenseSubstitution;
+import org.hl7.fhir.MedicationIngredient;
+import org.hl7.fhir.MedicationKnowledge;
+import org.hl7.fhir.MedicationKnowledgeAdministrationGuidelines;
+import org.hl7.fhir.MedicationKnowledgeCost;
+import org.hl7.fhir.MedicationKnowledgeDosage;
+import org.hl7.fhir.MedicationKnowledgeDrugCharacteristic;
+import org.hl7.fhir.MedicationKnowledgeIngredient;
+import org.hl7.fhir.MedicationKnowledgeKinetics;
+import org.hl7.fhir.MedicationKnowledgeMaxDispense;
+import org.hl7.fhir.MedicationKnowledgeMedicineClassification;
+import org.hl7.fhir.MedicationKnowledgeMonitoringProgram;
+import org.hl7.fhir.MedicationKnowledgeMonograph;
+import org.hl7.fhir.MedicationKnowledgePackaging;
+import org.hl7.fhir.MedicationKnowledgePatientCharacteristics;
+import org.hl7.fhir.MedicationKnowledgeRegulatory;
+import org.hl7.fhir.MedicationKnowledgeRelatedMedicationKnowledge;
+import org.hl7.fhir.MedicationKnowledgeSchedule;
+import org.hl7.fhir.MedicationKnowledgeSubstitution;
+import org.hl7.fhir.MedicationRequest;
+import org.hl7.fhir.MedicationRequestDispenseRequest;
+import org.hl7.fhir.MedicationRequestInitialFill;
+import org.hl7.fhir.MedicationRequestIntent;
+import org.hl7.fhir.MedicationRequestIntentEnum;
+import org.hl7.fhir.MedicationRequestSubstitution;
+import org.hl7.fhir.MedicationStatement;
+import org.hl7.fhir.MedicationStatementStatusCodes;
+import org.hl7.fhir.MedicationStatementStatusCodesEnum;
+import org.hl7.fhir.MedicationStatusCodes;
+import org.hl7.fhir.MedicationStatusCodesEnum;
+import org.hl7.fhir.MedicationrequestStatus;
+import org.hl7.fhir.MedicationrequestStatusEnum;
+import org.hl7.fhir.MedicinalProductDefinition;
+import org.hl7.fhir.MedicinalProductDefinitionCharacteristic;
+import org.hl7.fhir.MedicinalProductDefinitionContact;
+import org.hl7.fhir.MedicinalProductDefinitionCountryLanguage;
+import org.hl7.fhir.MedicinalProductDefinitionCrossReference;
+import org.hl7.fhir.MedicinalProductDefinitionName;
+import org.hl7.fhir.MedicinalProductDefinitionNamePart;
+import org.hl7.fhir.MedicinalProductDefinitionOperation;
+import org.hl7.fhir.MessageDefinition;
+import org.hl7.fhir.MessageDefinitionAllowedResponse;
+import org.hl7.fhir.MessageDefinitionFocus;
+import org.hl7.fhir.MessageHeader;
+import org.hl7.fhir.MessageHeaderDestination;
+import org.hl7.fhir.MessageHeaderResponse;
+import org.hl7.fhir.MessageHeaderSource;
+import org.hl7.fhir.MessageSignificanceCategory;
+import org.hl7.fhir.MessageSignificanceCategoryEnum;
+import org.hl7.fhir.MessageheaderResponseRequest;
+import org.hl7.fhir.MessageheaderResponseRequestEnum;
+import org.hl7.fhir.Meta;
+import org.hl7.fhir.MolecularSequence;
+import org.hl7.fhir.MolecularSequenceInner;
+import org.hl7.fhir.MolecularSequenceOuter;
+import org.hl7.fhir.MolecularSequenceQuality;
+import org.hl7.fhir.MolecularSequenceReferenceSeq;
+import org.hl7.fhir.MolecularSequenceRepository;
+import org.hl7.fhir.MolecularSequenceRoc;
+import org.hl7.fhir.MolecularSequenceStructureVariant;
+import org.hl7.fhir.MolecularSequenceVariant;
+import org.hl7.fhir.Money;
+import org.hl7.fhir.NameUse;
+import org.hl7.fhir.NameUseEnum;
+import org.hl7.fhir.NamingSystem;
+import org.hl7.fhir.NamingSystemIdentifierType;
+import org.hl7.fhir.NamingSystemIdentifierTypeEnum;
+import org.hl7.fhir.NamingSystemType;
+import org.hl7.fhir.NamingSystemTypeEnum;
+import org.hl7.fhir.NamingSystemUniqueId;
+import org.hl7.fhir.Narrative;
+import org.hl7.fhir.NarrativeStatus;
+import org.hl7.fhir.NarrativeStatusEnum;
+import org.hl7.fhir.NoteType;
+import org.hl7.fhir.NoteTypeEnum;
+import org.hl7.fhir.NutritionOrder;
+import org.hl7.fhir.NutritionOrderAdministration;
+import org.hl7.fhir.NutritionOrderEnteralFormula;
+import org.hl7.fhir.NutritionOrderNutrient;
+import org.hl7.fhir.NutritionOrderOralDiet;
+import org.hl7.fhir.NutritionOrderSupplement;
+import org.hl7.fhir.NutritionOrderTexture;
+import org.hl7.fhir.NutritionProduct;
+import org.hl7.fhir.NutritionProductIngredient;
+import org.hl7.fhir.NutritionProductInstance;
+import org.hl7.fhir.NutritionProductNutrient;
+import org.hl7.fhir.NutritionProductProductCharacteristic;
+import org.hl7.fhir.NutritionProductStatus;
+import org.hl7.fhir.NutritionProductStatusEnum;
+import org.hl7.fhir.Observation;
+import org.hl7.fhir.ObservationComponent;
+import org.hl7.fhir.ObservationDataType;
+import org.hl7.fhir.ObservationDataTypeEnum;
+import org.hl7.fhir.ObservationDefinition;
+import org.hl7.fhir.ObservationDefinitionQualifiedInterval;
+import org.hl7.fhir.ObservationDefinitionQuantitativeDetails;
+import org.hl7.fhir.ObservationRangeCategory;
+import org.hl7.fhir.ObservationRangeCategoryEnum;
+import org.hl7.fhir.ObservationReferenceRange;
+import org.hl7.fhir.ObservationStatus;
+import org.hl7.fhir.ObservationStatusEnum;
+import org.hl7.fhir.Oid;
+import org.hl7.fhir.OperationDefinition;
+import org.hl7.fhir.OperationDefinitionBinding;
+import org.hl7.fhir.OperationDefinitionOverload;
+import org.hl7.fhir.OperationDefinitionParameter;
+import org.hl7.fhir.OperationDefinitionReferencedFrom;
+import org.hl7.fhir.OperationKind;
+import org.hl7.fhir.OperationKindEnum;
+import org.hl7.fhir.OperationOutcome;
+import org.hl7.fhir.OperationOutcomeIssue;
+import org.hl7.fhir.OperationParameterUse;
+import org.hl7.fhir.OperationParameterUseEnum;
+import org.hl7.fhir.Organization;
+import org.hl7.fhir.OrganizationAffiliation;
+import org.hl7.fhir.OrganizationContact;
+import org.hl7.fhir.OrientationType;
+import org.hl7.fhir.OrientationTypeEnum;
+import org.hl7.fhir.PackagedProductDefinition;
+import org.hl7.fhir.PackagedProductDefinitionContainedItem;
+import org.hl7.fhir.PackagedProductDefinitionLegalStatusOfSupply;
+import org.hl7.fhir.PackagedProductDefinitionPackage;
+import org.hl7.fhir.PackagedProductDefinitionProperty;
+import org.hl7.fhir.PackagedProductDefinitionShelfLifeStorage;
+import org.hl7.fhir.ParameterDefinition;
+import org.hl7.fhir.Parameters;
+import org.hl7.fhir.ParametersParameter;
+import org.hl7.fhir.ParticipantRequired;
+import org.hl7.fhir.ParticipantRequiredEnum;
+import org.hl7.fhir.ParticipationStatus;
+import org.hl7.fhir.ParticipationStatusEnum;
+import org.hl7.fhir.Patient;
+import org.hl7.fhir.PatientCommunication;
+import org.hl7.fhir.PatientContact;
+import org.hl7.fhir.PatientLink;
+import org.hl7.fhir.PaymentNotice;
+import org.hl7.fhir.PaymentReconciliation;
+import org.hl7.fhir.PaymentReconciliationDetail;
+import org.hl7.fhir.PaymentReconciliationProcessNote;
+import org.hl7.fhir.Period;
+import org.hl7.fhir.Person;
+import org.hl7.fhir.PersonLink;
+import org.hl7.fhir.PlanDefinition;
+import org.hl7.fhir.PlanDefinitionAction;
+import org.hl7.fhir.PlanDefinitionCondition;
+import org.hl7.fhir.PlanDefinitionDynamicValue;
+import org.hl7.fhir.PlanDefinitionGoal;
+import org.hl7.fhir.PlanDefinitionParticipant;
+import org.hl7.fhir.PlanDefinitionRelatedAction;
+import org.hl7.fhir.PlanDefinitionTarget;
+import org.hl7.fhir.Population;
+import org.hl7.fhir.PositiveInt;
+import org.hl7.fhir.Practitioner;
+import org.hl7.fhir.PractitionerQualification;
+import org.hl7.fhir.PractitionerRole;
+import org.hl7.fhir.PractitionerRoleAvailableTime;
+import org.hl7.fhir.PractitionerRoleNotAvailable;
+import org.hl7.fhir.Procedure;
+import org.hl7.fhir.ProcedureFocalDevice;
+import org.hl7.fhir.ProcedurePerformer;
+import org.hl7.fhir.ProdCharacteristic;
+import org.hl7.fhir.ProductShelfLife;
+import org.hl7.fhir.PropertyRepresentation;
+import org.hl7.fhir.PropertyRepresentationEnum;
+import org.hl7.fhir.PropertyType;
+import org.hl7.fhir.PropertyTypeEnum;
+import org.hl7.fhir.Provenance;
+import org.hl7.fhir.ProvenanceAgent;
+import org.hl7.fhir.ProvenanceEntity;
+import org.hl7.fhir.ProvenanceEntityRole;
+import org.hl7.fhir.ProvenanceEntityRoleEnum;
+import org.hl7.fhir.PublicationStatus;
+import org.hl7.fhir.PublicationStatusEnum;
+import org.hl7.fhir.QualityType;
+import org.hl7.fhir.QualityTypeEnum;
+import org.hl7.fhir.Quantity;
+import org.hl7.fhir.QuantityComparator;
+import org.hl7.fhir.QuantityComparatorEnum;
+import org.hl7.fhir.Questionnaire;
+import org.hl7.fhir.QuestionnaireAnswerOption;
+import org.hl7.fhir.QuestionnaireEnableWhen;
+import org.hl7.fhir.QuestionnaireInitial;
+import org.hl7.fhir.QuestionnaireItem;
+import org.hl7.fhir.QuestionnaireItemOperator;
+import org.hl7.fhir.QuestionnaireItemOperatorEnum;
+import org.hl7.fhir.QuestionnaireItemType;
+import org.hl7.fhir.QuestionnaireItemTypeEnum;
+import org.hl7.fhir.QuestionnaireResponse;
+import org.hl7.fhir.QuestionnaireResponseAnswer;
+import org.hl7.fhir.QuestionnaireResponseItem;
+import org.hl7.fhir.QuestionnaireResponseStatus;
+import org.hl7.fhir.QuestionnaireResponseStatusEnum;
+import org.hl7.fhir.Range;
+import org.hl7.fhir.Ratio;
+import org.hl7.fhir.RatioRange;
+import org.hl7.fhir.Reference;
+import org.hl7.fhir.ReferenceHandlingPolicy;
+import org.hl7.fhir.ReferenceHandlingPolicyEnum;
+import org.hl7.fhir.ReferenceVersionRules;
+import org.hl7.fhir.ReferenceVersionRulesEnum;
+import org.hl7.fhir.RegulatedAuthorization;
+import org.hl7.fhir.RegulatedAuthorizationCase;
+import org.hl7.fhir.RelatedArtifact;
+import org.hl7.fhir.RelatedArtifactType;
+import org.hl7.fhir.RelatedArtifactTypeEnum;
+import org.hl7.fhir.RelatedPerson;
+import org.hl7.fhir.RelatedPersonCommunication;
+import org.hl7.fhir.RemittanceOutcome;
+import org.hl7.fhir.RemittanceOutcomeEnum;
+import org.hl7.fhir.ReportRelationshipType;
+import org.hl7.fhir.ReportRelationshipTypeEnum;
+import org.hl7.fhir.RepositoryType;
+import org.hl7.fhir.RepositoryTypeEnum;
+import org.hl7.fhir.RequestGroup;
+import org.hl7.fhir.RequestGroupAction;
+import org.hl7.fhir.RequestGroupCondition;
+import org.hl7.fhir.RequestGroupRelatedAction;
+import org.hl7.fhir.RequestIntent;
+import org.hl7.fhir.RequestIntentEnum;
+import org.hl7.fhir.RequestPriority;
+import org.hl7.fhir.RequestPriorityEnum;
+import org.hl7.fhir.RequestResourceType;
+import org.hl7.fhir.RequestResourceTypeEnum;
+import org.hl7.fhir.RequestStatus;
+import org.hl7.fhir.RequestStatusEnum;
+import org.hl7.fhir.ResearchDefinition;
+import org.hl7.fhir.ResearchElementDefinition;
+import org.hl7.fhir.ResearchElementDefinitionCharacteristic;
+import org.hl7.fhir.ResearchElementType;
+import org.hl7.fhir.ResearchElementTypeEnum;
+import org.hl7.fhir.ResearchStudy;
+import org.hl7.fhir.ResearchStudyArm;
+import org.hl7.fhir.ResearchStudyObjective;
+import org.hl7.fhir.ResearchStudyStatus;
+import org.hl7.fhir.ResearchStudyStatusEnum;
+import org.hl7.fhir.ResearchSubject;
+import org.hl7.fhir.ResearchSubjectStatus;
+import org.hl7.fhir.ResearchSubjectStatusEnum;
+import org.hl7.fhir.Resource;
+import org.hl7.fhir.ResourceContainer;
+import org.hl7.fhir.ResourceType;
+import org.hl7.fhir.ResourceTypeEnum;
+import org.hl7.fhir.ResourceVersionPolicy;
+import org.hl7.fhir.ResourceVersionPolicyEnum;
+import org.hl7.fhir.ResponseType;
+import org.hl7.fhir.ResponseTypeEnum;
+import org.hl7.fhir.RestfulCapabilityMode;
+import org.hl7.fhir.RestfulCapabilityModeEnum;
+import org.hl7.fhir.RiskAssessment;
+import org.hl7.fhir.RiskAssessmentPrediction;
+import org.hl7.fhir.SPDXLicense;
+import org.hl7.fhir.SPDXLicenseEnum;
+import org.hl7.fhir.SampledData;
+import org.hl7.fhir.SampledDataDataType;
+import org.hl7.fhir.Schedule;
+import org.hl7.fhir.SearchComparator;
+import org.hl7.fhir.SearchComparatorEnum;
+import org.hl7.fhir.SearchEntryMode;
+import org.hl7.fhir.SearchEntryModeEnum;
+import org.hl7.fhir.SearchModifierCode;
+import org.hl7.fhir.SearchModifierCodeEnum;
+import org.hl7.fhir.SearchParamType;
+import org.hl7.fhir.SearchParamTypeEnum;
+import org.hl7.fhir.SearchParameter;
+import org.hl7.fhir.SearchParameterComponent;
+import org.hl7.fhir.SequenceType;
+import org.hl7.fhir.SequenceTypeEnum;
+import org.hl7.fhir.ServiceRequest;
+import org.hl7.fhir.Signature;
+import org.hl7.fhir.SlicingRules;
+import org.hl7.fhir.SlicingRulesEnum;
+import org.hl7.fhir.Slot;
+import org.hl7.fhir.SlotStatus;
+import org.hl7.fhir.SlotStatusEnum;
+import org.hl7.fhir.SortDirection;
+import org.hl7.fhir.SortDirectionEnum;
+import org.hl7.fhir.Specimen;
+import org.hl7.fhir.SpecimenCollection;
+import org.hl7.fhir.SpecimenContainedPreference;
+import org.hl7.fhir.SpecimenContainedPreferenceEnum;
+import org.hl7.fhir.SpecimenContainer;
+import org.hl7.fhir.SpecimenDefinition;
+import org.hl7.fhir.SpecimenDefinitionAdditive;
+import org.hl7.fhir.SpecimenDefinitionContainer;
+import org.hl7.fhir.SpecimenDefinitionHandling;
+import org.hl7.fhir.SpecimenDefinitionTypeTested;
+import org.hl7.fhir.SpecimenProcessing;
+import org.hl7.fhir.SpecimenStatus;
+import org.hl7.fhir.SpecimenStatusEnum;
+import org.hl7.fhir.Status;
+import org.hl7.fhir.StatusEnum;
+import org.hl7.fhir.StrandType;
+import org.hl7.fhir.StrandTypeEnum;
+import org.hl7.fhir.StructureDefinition;
+import org.hl7.fhir.StructureDefinitionContext;
+import org.hl7.fhir.StructureDefinitionDifferential;
+import org.hl7.fhir.StructureDefinitionKind;
+import org.hl7.fhir.StructureDefinitionKindEnum;
+import org.hl7.fhir.StructureDefinitionMapping;
+import org.hl7.fhir.StructureDefinitionSnapshot;
+import org.hl7.fhir.StructureMap;
+import org.hl7.fhir.StructureMapContextType;
+import org.hl7.fhir.StructureMapContextTypeEnum;
+import org.hl7.fhir.StructureMapDependent;
+import org.hl7.fhir.StructureMapGroup;
+import org.hl7.fhir.StructureMapGroupTypeMode;
+import org.hl7.fhir.StructureMapGroupTypeModeEnum;
+import org.hl7.fhir.StructureMapInput;
+import org.hl7.fhir.StructureMapInputMode;
+import org.hl7.fhir.StructureMapInputModeEnum;
+import org.hl7.fhir.StructureMapModelMode;
+import org.hl7.fhir.StructureMapModelModeEnum;
+import org.hl7.fhir.StructureMapParameter;
+import org.hl7.fhir.StructureMapRule;
+import org.hl7.fhir.StructureMapSource;
+import org.hl7.fhir.StructureMapSourceListMode;
+import org.hl7.fhir.StructureMapSourceListModeEnum;
+import org.hl7.fhir.StructureMapStructure;
+import org.hl7.fhir.StructureMapTarget;
+import org.hl7.fhir.StructureMapTargetListMode;
+import org.hl7.fhir.StructureMapTargetListModeEnum;
+import org.hl7.fhir.StructureMapTransform;
+import org.hl7.fhir.StructureMapTransformEnum;
+import org.hl7.fhir.Subscription;
+import org.hl7.fhir.SubscriptionChannel;
+import org.hl7.fhir.SubscriptionChannelType;
+import org.hl7.fhir.SubscriptionChannelTypeEnum;
+import org.hl7.fhir.SubscriptionNotificationType;
+import org.hl7.fhir.SubscriptionNotificationTypeEnum;
+import org.hl7.fhir.SubscriptionStatus;
+import org.hl7.fhir.SubscriptionStatusCodes;
+import org.hl7.fhir.SubscriptionStatusCodesEnum;
+import org.hl7.fhir.SubscriptionStatusNotificationEvent;
+import org.hl7.fhir.SubscriptionTopic;
+import org.hl7.fhir.SubscriptionTopicCanFilterBy;
+import org.hl7.fhir.SubscriptionTopicEventTrigger;
+import org.hl7.fhir.SubscriptionTopicNotificationShape;
+import org.hl7.fhir.SubscriptionTopicQueryCriteria;
+import org.hl7.fhir.SubscriptionTopicResourceTrigger;
+import org.hl7.fhir.Substance;
+import org.hl7.fhir.SubstanceDefinition;
+import org.hl7.fhir.SubstanceDefinitionCode;
+import org.hl7.fhir.SubstanceDefinitionMoiety;
+import org.hl7.fhir.SubstanceDefinitionMolecularWeight;
+import org.hl7.fhir.SubstanceDefinitionName;
+import org.hl7.fhir.SubstanceDefinitionOfficial;
+import org.hl7.fhir.SubstanceDefinitionProperty;
+import org.hl7.fhir.SubstanceDefinitionRelationship;
+import org.hl7.fhir.SubstanceDefinitionRepresentation;
+import org.hl7.fhir.SubstanceDefinitionSourceMaterial;
+import org.hl7.fhir.SubstanceDefinitionStructure;
+import org.hl7.fhir.SubstanceIngredient;
+import org.hl7.fhir.SubstanceInstance;
+import org.hl7.fhir.SupplyDelivery;
+import org.hl7.fhir.SupplyDeliveryStatus;
+import org.hl7.fhir.SupplyDeliveryStatusEnum;
+import org.hl7.fhir.SupplyDeliverySuppliedItem;
+import org.hl7.fhir.SupplyRequest;
+import org.hl7.fhir.SupplyRequestParameter;
+import org.hl7.fhir.SupplyRequestStatus;
+import org.hl7.fhir.SupplyRequestStatusEnum;
+import org.hl7.fhir.SystemRestfulInteraction;
+import org.hl7.fhir.SystemRestfulInteractionEnum;
+import org.hl7.fhir.Task;
+import org.hl7.fhir.TaskInput;
+import org.hl7.fhir.TaskIntent;
+import org.hl7.fhir.TaskIntentEnum;
+import org.hl7.fhir.TaskOutput;
+import org.hl7.fhir.TaskRestriction;
+import org.hl7.fhir.TaskStatus;
+import org.hl7.fhir.TaskStatusEnum;
+import org.hl7.fhir.TerminologyCapabilities;
+import org.hl7.fhir.TerminologyCapabilitiesClosure;
+import org.hl7.fhir.TerminologyCapabilitiesCodeSystem;
+import org.hl7.fhir.TerminologyCapabilitiesExpansion;
+import org.hl7.fhir.TerminologyCapabilitiesFilter;
+import org.hl7.fhir.TerminologyCapabilitiesImplementation;
+import org.hl7.fhir.TerminologyCapabilitiesParameter;
+import org.hl7.fhir.TerminologyCapabilitiesSoftware;
+import org.hl7.fhir.TerminologyCapabilitiesTranslation;
+import org.hl7.fhir.TerminologyCapabilitiesValidateCode;
+import org.hl7.fhir.TerminologyCapabilitiesVersion;
+import org.hl7.fhir.TestReport;
+import org.hl7.fhir.TestReportAction;
+import org.hl7.fhir.TestReportAction1;
+import org.hl7.fhir.TestReportAction2;
+import org.hl7.fhir.TestReportActionResult;
+import org.hl7.fhir.TestReportActionResultEnum;
+import org.hl7.fhir.TestReportAssert;
+import org.hl7.fhir.TestReportOperation;
+import org.hl7.fhir.TestReportParticipant;
+import org.hl7.fhir.TestReportParticipantType;
+import org.hl7.fhir.TestReportParticipantTypeEnum;
+import org.hl7.fhir.TestReportResult;
+import org.hl7.fhir.TestReportResultEnum;
+import org.hl7.fhir.TestReportSetup;
+import org.hl7.fhir.TestReportStatus;
+import org.hl7.fhir.TestReportStatusEnum;
+import org.hl7.fhir.TestReportTeardown;
+import org.hl7.fhir.TestReportTest;
+import org.hl7.fhir.TestScript;
+import org.hl7.fhir.TestScriptAction;
+import org.hl7.fhir.TestScriptAction1;
+import org.hl7.fhir.TestScriptAction2;
+import org.hl7.fhir.TestScriptAssert;
+import org.hl7.fhir.TestScriptCapability;
+import org.hl7.fhir.TestScriptDestination;
+import org.hl7.fhir.TestScriptFixture;
+import org.hl7.fhir.TestScriptLink;
+import org.hl7.fhir.TestScriptMetadata;
+import org.hl7.fhir.TestScriptOperation;
+import org.hl7.fhir.TestScriptOrigin;
+import org.hl7.fhir.TestScriptRequestHeader;
+import org.hl7.fhir.TestScriptRequestMethodCode;
+import org.hl7.fhir.TestScriptRequestMethodCodeEnum;
+import org.hl7.fhir.TestScriptSetup;
+import org.hl7.fhir.TestScriptTeardown;
+import org.hl7.fhir.TestScriptTest;
+import org.hl7.fhir.TestScriptVariable;
+import org.hl7.fhir.Time;
+import org.hl7.fhir.Timing;
+import org.hl7.fhir.TimingRepeat;
+import org.hl7.fhir.TriggerDefinition;
+import org.hl7.fhir.TriggerType;
+import org.hl7.fhir.TriggerTypeEnum;
+import org.hl7.fhir.TypeDerivationRule;
+import org.hl7.fhir.TypeDerivationRuleEnum;
+import org.hl7.fhir.TypeRestfulInteraction;
+import org.hl7.fhir.TypeRestfulInteractionEnum;
+import org.hl7.fhir.UDIEntryType;
+import org.hl7.fhir.UDIEntryTypeEnum;
+import org.hl7.fhir.UnitsOfTime;
+import org.hl7.fhir.UnitsOfTimeEnum;
+import org.hl7.fhir.UnsignedInt;
+import org.hl7.fhir.Uri;
+import org.hl7.fhir.Url;
+import org.hl7.fhir.UsageContext;
+import org.hl7.fhir.Use;
+import org.hl7.fhir.UseEnum;
+import org.hl7.fhir.Uuid;
+import org.hl7.fhir.ValueSet;
+import org.hl7.fhir.ValueSetCompose;
+import org.hl7.fhir.ValueSetConcept;
+import org.hl7.fhir.ValueSetContains;
+import org.hl7.fhir.ValueSetDesignation;
+import org.hl7.fhir.ValueSetExpansion;
+import org.hl7.fhir.ValueSetFilter;
+import org.hl7.fhir.ValueSetInclude;
+import org.hl7.fhir.ValueSetParameter;
+import org.hl7.fhir.VariableType;
+import org.hl7.fhir.VariableTypeEnum;
+import org.hl7.fhir.VerificationResult;
+import org.hl7.fhir.VerificationResultAttestation;
+import org.hl7.fhir.VerificationResultPrimarySource;
+import org.hl7.fhir.VerificationResultValidator;
+import org.hl7.fhir.VisionBase;
+import org.hl7.fhir.VisionBaseEnum;
+import org.hl7.fhir.VisionEyes;
+import org.hl7.fhir.VisionEyesEnum;
+import org.hl7.fhir.VisionPrescription;
+import org.hl7.fhir.VisionPrescriptionLensSpecification;
+import org.hl7.fhir.VisionPrescriptionPrism;
+import org.hl7.fhir.XPathUsageType;
+import org.hl7.fhir.XPathUsageTypeEnum;
 
 /**
  * <!-- begin-user-doc -->
@@ -2906,6 +4055,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Account createAccount() {
 		AccountImpl account = new AccountImpl();
 		return account;
@@ -2916,6 +4066,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AccountCoverage createAccountCoverage() {
 		AccountCoverageImpl accountCoverage = new AccountCoverageImpl();
 		return accountCoverage;
@@ -2926,6 +4077,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AccountGuarantor createAccountGuarantor() {
 		AccountGuarantorImpl accountGuarantor = new AccountGuarantorImpl();
 		return accountGuarantor;
@@ -2936,6 +4088,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AccountStatus createAccountStatus() {
 		AccountStatusImpl accountStatus = new AccountStatusImpl();
 		return accountStatus;
@@ -2946,6 +4099,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionCardinalityBehavior createActionCardinalityBehavior() {
 		ActionCardinalityBehaviorImpl actionCardinalityBehavior = new ActionCardinalityBehaviorImpl();
 		return actionCardinalityBehavior;
@@ -2956,6 +4110,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionConditionKind createActionConditionKind() {
 		ActionConditionKindImpl actionConditionKind = new ActionConditionKindImpl();
 		return actionConditionKind;
@@ -2966,6 +4121,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionGroupingBehavior createActionGroupingBehavior() {
 		ActionGroupingBehaviorImpl actionGroupingBehavior = new ActionGroupingBehaviorImpl();
 		return actionGroupingBehavior;
@@ -2976,6 +4132,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionParticipantType createActionParticipantType() {
 		ActionParticipantTypeImpl actionParticipantType = new ActionParticipantTypeImpl();
 		return actionParticipantType;
@@ -2986,6 +4143,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionPrecheckBehavior createActionPrecheckBehavior() {
 		ActionPrecheckBehaviorImpl actionPrecheckBehavior = new ActionPrecheckBehaviorImpl();
 		return actionPrecheckBehavior;
@@ -2996,6 +4154,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionRelationshipType createActionRelationshipType() {
 		ActionRelationshipTypeImpl actionRelationshipType = new ActionRelationshipTypeImpl();
 		return actionRelationshipType;
@@ -3006,6 +4165,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionRequiredBehavior createActionRequiredBehavior() {
 		ActionRequiredBehaviorImpl actionRequiredBehavior = new ActionRequiredBehaviorImpl();
 		return actionRequiredBehavior;
@@ -3016,6 +4176,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionSelectionBehavior createActionSelectionBehavior() {
 		ActionSelectionBehaviorImpl actionSelectionBehavior = new ActionSelectionBehaviorImpl();
 		return actionSelectionBehavior;
@@ -3026,6 +4187,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityDefinition createActivityDefinition() {
 		ActivityDefinitionImpl activityDefinition = new ActivityDefinitionImpl();
 		return activityDefinition;
@@ -3036,6 +4198,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityDefinitionDynamicValue createActivityDefinitionDynamicValue() {
 		ActivityDefinitionDynamicValueImpl activityDefinitionDynamicValue = new ActivityDefinitionDynamicValueImpl();
 		return activityDefinitionDynamicValue;
@@ -3046,6 +4209,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityDefinitionParticipant createActivityDefinitionParticipant() {
 		ActivityDefinitionParticipantImpl activityDefinitionParticipant = new ActivityDefinitionParticipantImpl();
 		return activityDefinitionParticipant;
@@ -3056,6 +4220,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address createAddress() {
 		AddressImpl address = new AddressImpl();
 		return address;
@@ -3066,6 +4231,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddressType createAddressType() {
 		AddressTypeImpl addressType = new AddressTypeImpl();
 		return addressType;
@@ -3076,6 +4242,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddressUse createAddressUse() {
 		AddressUseImpl addressUse = new AddressUseImpl();
 		return addressUse;
@@ -3086,6 +4253,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinition createAdministrableProductDefinition() {
 		AdministrableProductDefinitionImpl administrableProductDefinition = new AdministrableProductDefinitionImpl();
 		return administrableProductDefinition;
@@ -3096,6 +4264,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinitionProperty createAdministrableProductDefinitionProperty() {
 		AdministrableProductDefinitionPropertyImpl administrableProductDefinitionProperty = new AdministrableProductDefinitionPropertyImpl();
 		return administrableProductDefinitionProperty;
@@ -3106,6 +4275,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinitionRouteOfAdministration createAdministrableProductDefinitionRouteOfAdministration() {
 		AdministrableProductDefinitionRouteOfAdministrationImpl administrableProductDefinitionRouteOfAdministration = new AdministrableProductDefinitionRouteOfAdministrationImpl();
 		return administrableProductDefinitionRouteOfAdministration;
@@ -3116,6 +4286,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinitionTargetSpecies createAdministrableProductDefinitionTargetSpecies() {
 		AdministrableProductDefinitionTargetSpeciesImpl administrableProductDefinitionTargetSpecies = new AdministrableProductDefinitionTargetSpeciesImpl();
 		return administrableProductDefinitionTargetSpecies;
@@ -3126,6 +4297,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrableProductDefinitionWithdrawalPeriod createAdministrableProductDefinitionWithdrawalPeriod() {
 		AdministrableProductDefinitionWithdrawalPeriodImpl administrableProductDefinitionWithdrawalPeriod = new AdministrableProductDefinitionWithdrawalPeriodImpl();
 		return administrableProductDefinitionWithdrawalPeriod;
@@ -3136,6 +4308,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrativeGender createAdministrativeGender() {
 		AdministrativeGenderImpl administrativeGender = new AdministrativeGenderImpl();
 		return administrativeGender;
@@ -3146,6 +4319,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdverseEvent createAdverseEvent() {
 		AdverseEventImpl adverseEvent = new AdverseEventImpl();
 		return adverseEvent;
@@ -3156,6 +4330,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdverseEventActuality createAdverseEventActuality() {
 		AdverseEventActualityImpl adverseEventActuality = new AdverseEventActualityImpl();
 		return adverseEventActuality;
@@ -3166,6 +4341,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdverseEventCausality createAdverseEventCausality() {
 		AdverseEventCausalityImpl adverseEventCausality = new AdverseEventCausalityImpl();
 		return adverseEventCausality;
@@ -3176,6 +4352,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdverseEventSuspectEntity createAdverseEventSuspectEntity() {
 		AdverseEventSuspectEntityImpl adverseEventSuspectEntity = new AdverseEventSuspectEntityImpl();
 		return adverseEventSuspectEntity;
@@ -3186,6 +4363,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age createAge() {
 		AgeImpl age = new AgeImpl();
 		return age;
@@ -3196,6 +4374,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AgeUnits createAgeUnits() {
 		AgeUnitsImpl ageUnits = new AgeUnitsImpl();
 		return ageUnits;
@@ -3206,6 +4385,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AggregationMode createAggregationMode() {
 		AggregationModeImpl aggregationMode = new AggregationModeImpl();
 		return aggregationMode;
@@ -3216,6 +4396,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntolerance createAllergyIntolerance() {
 		AllergyIntoleranceImpl allergyIntolerance = new AllergyIntoleranceImpl();
 		return allergyIntolerance;
@@ -3226,6 +4407,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceCategory createAllergyIntoleranceCategory() {
 		AllergyIntoleranceCategoryImpl allergyIntoleranceCategory = new AllergyIntoleranceCategoryImpl();
 		return allergyIntoleranceCategory;
@@ -3236,6 +4418,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceCriticality createAllergyIntoleranceCriticality() {
 		AllergyIntoleranceCriticalityImpl allergyIntoleranceCriticality = new AllergyIntoleranceCriticalityImpl();
 		return allergyIntoleranceCriticality;
@@ -3246,6 +4429,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceReaction createAllergyIntoleranceReaction() {
 		AllergyIntoleranceReactionImpl allergyIntoleranceReaction = new AllergyIntoleranceReactionImpl();
 		return allergyIntoleranceReaction;
@@ -3256,6 +4440,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceSeverity createAllergyIntoleranceSeverity() {
 		AllergyIntoleranceSeverityImpl allergyIntoleranceSeverity = new AllergyIntoleranceSeverityImpl();
 		return allergyIntoleranceSeverity;
@@ -3266,6 +4451,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceType createAllergyIntoleranceType() {
 		AllergyIntoleranceTypeImpl allergyIntoleranceType = new AllergyIntoleranceTypeImpl();
 		return allergyIntoleranceType;
@@ -3276,6 +4462,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation createAnnotation() {
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
@@ -3286,6 +4473,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Appointment createAppointment() {
 		AppointmentImpl appointment = new AppointmentImpl();
 		return appointment;
@@ -3296,6 +4484,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AppointmentParticipant createAppointmentParticipant() {
 		AppointmentParticipantImpl appointmentParticipant = new AppointmentParticipantImpl();
 		return appointmentParticipant;
@@ -3306,6 +4495,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AppointmentResponse createAppointmentResponse() {
 		AppointmentResponseImpl appointmentResponse = new AppointmentResponseImpl();
 		return appointmentResponse;
@@ -3316,6 +4506,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AppointmentStatus createAppointmentStatus() {
 		AppointmentStatusImpl appointmentStatus = new AppointmentStatusImpl();
 		return appointmentStatus;
@@ -3326,6 +4517,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssertionDirectionType createAssertionDirectionType() {
 		AssertionDirectionTypeImpl assertionDirectionType = new AssertionDirectionTypeImpl();
 		return assertionDirectionType;
@@ -3336,6 +4528,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssertionOperatorType createAssertionOperatorType() {
 		AssertionOperatorTypeImpl assertionOperatorType = new AssertionOperatorTypeImpl();
 		return assertionOperatorType;
@@ -3346,6 +4539,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssertionResponseTypes createAssertionResponseTypes() {
 		AssertionResponseTypesImpl assertionResponseTypes = new AssertionResponseTypesImpl();
 		return assertionResponseTypes;
@@ -3356,6 +4550,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment createAttachment() {
 		AttachmentImpl attachment = new AttachmentImpl();
 		return attachment;
@@ -3366,6 +4561,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEvent createAuditEvent() {
 		AuditEventImpl auditEvent = new AuditEventImpl();
 		return auditEvent;
@@ -3376,6 +4572,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventAction createAuditEventAction() {
 		AuditEventActionImpl auditEventAction = new AuditEventActionImpl();
 		return auditEventAction;
@@ -3386,6 +4583,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventAgent createAuditEventAgent() {
 		AuditEventAgentImpl auditEventAgent = new AuditEventAgentImpl();
 		return auditEventAgent;
@@ -3396,6 +4594,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventAgentNetworkType createAuditEventAgentNetworkType() {
 		AuditEventAgentNetworkTypeImpl auditEventAgentNetworkType = new AuditEventAgentNetworkTypeImpl();
 		return auditEventAgentNetworkType;
@@ -3406,6 +4605,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventDetail createAuditEventDetail() {
 		AuditEventDetailImpl auditEventDetail = new AuditEventDetailImpl();
 		return auditEventDetail;
@@ -3416,6 +4616,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventEntity createAuditEventEntity() {
 		AuditEventEntityImpl auditEventEntity = new AuditEventEntityImpl();
 		return auditEventEntity;
@@ -3426,6 +4627,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventNetwork createAuditEventNetwork() {
 		AuditEventNetworkImpl auditEventNetwork = new AuditEventNetworkImpl();
 		return auditEventNetwork;
@@ -3436,6 +4638,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventOutcome createAuditEventOutcome() {
 		AuditEventOutcomeImpl auditEventOutcome = new AuditEventOutcomeImpl();
 		return auditEventOutcome;
@@ -3446,6 +4649,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventSource createAuditEventSource() {
 		AuditEventSourceImpl auditEventSource = new AuditEventSourceImpl();
 		return auditEventSource;
@@ -3456,6 +4660,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BackboneElement createBackboneElement() {
 		BackboneElementImpl backboneElement = new BackboneElementImpl();
 		return backboneElement;
@@ -3466,6 +4671,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary createBase64Binary() {
 		Base64BinaryImpl base64Binary = new Base64BinaryImpl();
 		return base64Binary;
@@ -3476,6 +4682,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Basic createBasic() {
 		BasicImpl basic = new BasicImpl();
 		return basic;
@@ -3486,6 +4693,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binary createBinary() {
 		BinaryImpl binary = new BinaryImpl();
 		return binary;
@@ -3496,6 +4704,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BindingStrength createBindingStrength() {
 		BindingStrengthImpl bindingStrength = new BindingStrengthImpl();
 		return bindingStrength;
@@ -3506,6 +4715,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProduct createBiologicallyDerivedProduct() {
 		BiologicallyDerivedProductImpl biologicallyDerivedProduct = new BiologicallyDerivedProductImpl();
 		return biologicallyDerivedProduct;
@@ -3516,6 +4726,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductCategory createBiologicallyDerivedProductCategory() {
 		BiologicallyDerivedProductCategoryImpl biologicallyDerivedProductCategory = new BiologicallyDerivedProductCategoryImpl();
 		return biologicallyDerivedProductCategory;
@@ -3526,6 +4737,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductCollection createBiologicallyDerivedProductCollection() {
 		BiologicallyDerivedProductCollectionImpl biologicallyDerivedProductCollection = new BiologicallyDerivedProductCollectionImpl();
 		return biologicallyDerivedProductCollection;
@@ -3536,6 +4748,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductManipulation createBiologicallyDerivedProductManipulation() {
 		BiologicallyDerivedProductManipulationImpl biologicallyDerivedProductManipulation = new BiologicallyDerivedProductManipulationImpl();
 		return biologicallyDerivedProductManipulation;
@@ -3546,6 +4759,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductProcessing createBiologicallyDerivedProductProcessing() {
 		BiologicallyDerivedProductProcessingImpl biologicallyDerivedProductProcessing = new BiologicallyDerivedProductProcessingImpl();
 		return biologicallyDerivedProductProcessing;
@@ -3556,6 +4770,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductStatus createBiologicallyDerivedProductStatus() {
 		BiologicallyDerivedProductStatusImpl biologicallyDerivedProductStatus = new BiologicallyDerivedProductStatusImpl();
 		return biologicallyDerivedProductStatus;
@@ -3566,6 +4781,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductStorage createBiologicallyDerivedProductStorage() {
 		BiologicallyDerivedProductStorageImpl biologicallyDerivedProductStorage = new BiologicallyDerivedProductStorageImpl();
 		return biologicallyDerivedProductStorage;
@@ -3576,6 +4792,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductStorageScale createBiologicallyDerivedProductStorageScale() {
 		BiologicallyDerivedProductStorageScaleImpl biologicallyDerivedProductStorageScale = new BiologicallyDerivedProductStorageScaleImpl();
 		return biologicallyDerivedProductStorageScale;
@@ -3586,6 +4803,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BodyStructure createBodyStructure() {
 		BodyStructureImpl bodyStructure = new BodyStructureImpl();
 		return bodyStructure;
@@ -3596,6 +4814,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean createBoolean() {
 		BooleanImpl boolean_ = new BooleanImpl();
 		return boolean_;
@@ -3606,6 +4825,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bundle createBundle() {
 		BundleImpl bundle = new BundleImpl();
 		return bundle;
@@ -3616,6 +4836,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleEntry createBundleEntry() {
 		BundleEntryImpl bundleEntry = new BundleEntryImpl();
 		return bundleEntry;
@@ -3626,6 +4847,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleLink createBundleLink() {
 		BundleLinkImpl bundleLink = new BundleLinkImpl();
 		return bundleLink;
@@ -3636,6 +4858,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleRequest createBundleRequest() {
 		BundleRequestImpl bundleRequest = new BundleRequestImpl();
 		return bundleRequest;
@@ -3646,6 +4869,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleResponse createBundleResponse() {
 		BundleResponseImpl bundleResponse = new BundleResponseImpl();
 		return bundleResponse;
@@ -3656,6 +4880,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleSearch createBundleSearch() {
 		BundleSearchImpl bundleSearch = new BundleSearchImpl();
 		return bundleSearch;
@@ -3666,6 +4891,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleType createBundleType() {
 		BundleTypeImpl bundleType = new BundleTypeImpl();
 		return bundleType;
@@ -3676,6 +4902,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical createCanonical() {
 		CanonicalImpl canonical = new CanonicalImpl();
 		return canonical;
@@ -3686,6 +4913,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatement createCapabilityStatement() {
 		CapabilityStatementImpl capabilityStatement = new CapabilityStatementImpl();
 		return capabilityStatement;
@@ -3696,6 +4924,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementDocument createCapabilityStatementDocument() {
 		CapabilityStatementDocumentImpl capabilityStatementDocument = new CapabilityStatementDocumentImpl();
 		return capabilityStatementDocument;
@@ -3706,6 +4935,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementEndpoint createCapabilityStatementEndpoint() {
 		CapabilityStatementEndpointImpl capabilityStatementEndpoint = new CapabilityStatementEndpointImpl();
 		return capabilityStatementEndpoint;
@@ -3716,6 +4946,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementImplementation createCapabilityStatementImplementation() {
 		CapabilityStatementImplementationImpl capabilityStatementImplementation = new CapabilityStatementImplementationImpl();
 		return capabilityStatementImplementation;
@@ -3726,6 +4957,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementInteraction createCapabilityStatementInteraction() {
 		CapabilityStatementInteractionImpl capabilityStatementInteraction = new CapabilityStatementInteractionImpl();
 		return capabilityStatementInteraction;
@@ -3736,6 +4968,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementInteraction1 createCapabilityStatementInteraction1() {
 		CapabilityStatementInteraction1Impl capabilityStatementInteraction1 = new CapabilityStatementInteraction1Impl();
 		return capabilityStatementInteraction1;
@@ -3746,6 +4979,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementKind createCapabilityStatementKind() {
 		CapabilityStatementKindImpl capabilityStatementKind = new CapabilityStatementKindImpl();
 		return capabilityStatementKind;
@@ -3756,6 +4990,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementMessaging createCapabilityStatementMessaging() {
 		CapabilityStatementMessagingImpl capabilityStatementMessaging = new CapabilityStatementMessagingImpl();
 		return capabilityStatementMessaging;
@@ -3766,6 +5001,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementOperation createCapabilityStatementOperation() {
 		CapabilityStatementOperationImpl capabilityStatementOperation = new CapabilityStatementOperationImpl();
 		return capabilityStatementOperation;
@@ -3776,6 +5012,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementResource createCapabilityStatementResource() {
 		CapabilityStatementResourceImpl capabilityStatementResource = new CapabilityStatementResourceImpl();
 		return capabilityStatementResource;
@@ -3786,6 +5023,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementRest createCapabilityStatementRest() {
 		CapabilityStatementRestImpl capabilityStatementRest = new CapabilityStatementRestImpl();
 		return capabilityStatementRest;
@@ -3796,6 +5034,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementSearchParam createCapabilityStatementSearchParam() {
 		CapabilityStatementSearchParamImpl capabilityStatementSearchParam = new CapabilityStatementSearchParamImpl();
 		return capabilityStatementSearchParam;
@@ -3806,6 +5045,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementSecurity createCapabilityStatementSecurity() {
 		CapabilityStatementSecurityImpl capabilityStatementSecurity = new CapabilityStatementSecurityImpl();
 		return capabilityStatementSecurity;
@@ -3816,6 +5056,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementSoftware createCapabilityStatementSoftware() {
 		CapabilityStatementSoftwareImpl capabilityStatementSoftware = new CapabilityStatementSoftwareImpl();
 		return capabilityStatementSoftware;
@@ -3826,6 +5067,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CapabilityStatementSupportedMessage createCapabilityStatementSupportedMessage() {
 		CapabilityStatementSupportedMessageImpl capabilityStatementSupportedMessage = new CapabilityStatementSupportedMessageImpl();
 		return capabilityStatementSupportedMessage;
@@ -3836,6 +5078,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlan createCarePlan() {
 		CarePlanImpl carePlan = new CarePlanImpl();
 		return carePlan;
@@ -3846,6 +5089,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanActivity createCarePlanActivity() {
 		CarePlanActivityImpl carePlanActivity = new CarePlanActivityImpl();
 		return carePlanActivity;
@@ -3856,6 +5100,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanActivityKind createCarePlanActivityKind() {
 		CarePlanActivityKindImpl carePlanActivityKind = new CarePlanActivityKindImpl();
 		return carePlanActivityKind;
@@ -3866,6 +5111,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanActivityStatus createCarePlanActivityStatus() {
 		CarePlanActivityStatusImpl carePlanActivityStatus = new CarePlanActivityStatusImpl();
 		return carePlanActivityStatus;
@@ -3876,6 +5122,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanDetail createCarePlanDetail() {
 		CarePlanDetailImpl carePlanDetail = new CarePlanDetailImpl();
 		return carePlanDetail;
@@ -3886,6 +5133,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanIntent createCarePlanIntent() {
 		CarePlanIntentImpl carePlanIntent = new CarePlanIntentImpl();
 		return carePlanIntent;
@@ -3896,6 +5144,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CareTeam createCareTeam() {
 		CareTeamImpl careTeam = new CareTeamImpl();
 		return careTeam;
@@ -3906,6 +5155,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CareTeamParticipant createCareTeamParticipant() {
 		CareTeamParticipantImpl careTeamParticipant = new CareTeamParticipantImpl();
 		return careTeamParticipant;
@@ -3916,6 +5166,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CareTeamStatus createCareTeamStatus() {
 		CareTeamStatusImpl careTeamStatus = new CareTeamStatusImpl();
 		return careTeamStatus;
@@ -3926,6 +5177,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntry createCatalogEntry() {
 		CatalogEntryImpl catalogEntry = new CatalogEntryImpl();
 		return catalogEntry;
@@ -3936,6 +5188,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntryRelatedEntry createCatalogEntryRelatedEntry() {
 		CatalogEntryRelatedEntryImpl catalogEntryRelatedEntry = new CatalogEntryRelatedEntryImpl();
 		return catalogEntryRelatedEntry;
@@ -3946,6 +5199,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntryRelationType createCatalogEntryRelationType() {
 		CatalogEntryRelationTypeImpl catalogEntryRelationType = new CatalogEntryRelationTypeImpl();
 		return catalogEntryRelationType;
@@ -3956,6 +5210,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CharacteristicCombination createCharacteristicCombination() {
 		CharacteristicCombinationImpl characteristicCombination = new CharacteristicCombinationImpl();
 		return characteristicCombination;
@@ -3966,6 +5221,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItem createChargeItem() {
 		ChargeItemImpl chargeItem = new ChargeItemImpl();
 		return chargeItem;
@@ -3976,6 +5232,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemDefinition createChargeItemDefinition() {
 		ChargeItemDefinitionImpl chargeItemDefinition = new ChargeItemDefinitionImpl();
 		return chargeItemDefinition;
@@ -3986,6 +5243,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemDefinitionApplicability createChargeItemDefinitionApplicability() {
 		ChargeItemDefinitionApplicabilityImpl chargeItemDefinitionApplicability = new ChargeItemDefinitionApplicabilityImpl();
 		return chargeItemDefinitionApplicability;
@@ -3996,6 +5254,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemDefinitionPriceComponent createChargeItemDefinitionPriceComponent() {
 		ChargeItemDefinitionPriceComponentImpl chargeItemDefinitionPriceComponent = new ChargeItemDefinitionPriceComponentImpl();
 		return chargeItemDefinitionPriceComponent;
@@ -4006,6 +5265,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemDefinitionPropertyGroup createChargeItemDefinitionPropertyGroup() {
 		ChargeItemDefinitionPropertyGroupImpl chargeItemDefinitionPropertyGroup = new ChargeItemDefinitionPropertyGroupImpl();
 		return chargeItemDefinitionPropertyGroup;
@@ -4016,6 +5276,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemPerformer createChargeItemPerformer() {
 		ChargeItemPerformerImpl chargeItemPerformer = new ChargeItemPerformerImpl();
 		return chargeItemPerformer;
@@ -4026,6 +5287,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChargeItemStatus createChargeItemStatus() {
 		ChargeItemStatusImpl chargeItemStatus = new ChargeItemStatusImpl();
 		return chargeItemStatus;
@@ -4036,6 +5298,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Citation createCitation() {
 		CitationImpl citation = new CitationImpl();
 		return citation;
@@ -4046,6 +5309,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationAbstract createCitationAbstract() {
 		CitationAbstractImpl citationAbstract = new CitationAbstractImpl();
 		return citationAbstract;
@@ -4056,6 +5320,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationAffiliationInfo createCitationAffiliationInfo() {
 		CitationAffiliationInfoImpl citationAffiliationInfo = new CitationAffiliationInfoImpl();
 		return citationAffiliationInfo;
@@ -4066,6 +5331,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationCitedArtifact createCitationCitedArtifact() {
 		CitationCitedArtifactImpl citationCitedArtifact = new CitationCitedArtifactImpl();
 		return citationCitedArtifact;
@@ -4076,6 +5342,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationClassification createCitationClassification() {
 		CitationClassificationImpl citationClassification = new CitationClassificationImpl();
 		return citationClassification;
@@ -4086,6 +5353,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationClassification1 createCitationClassification1() {
 		CitationClassification1Impl citationClassification1 = new CitationClassification1Impl();
 		return citationClassification1;
@@ -4096,6 +5364,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationContributionInstance createCitationContributionInstance() {
 		CitationContributionInstanceImpl citationContributionInstance = new CitationContributionInstanceImpl();
 		return citationContributionInstance;
@@ -4106,6 +5375,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationContributorship createCitationContributorship() {
 		CitationContributorshipImpl citationContributorship = new CitationContributorshipImpl();
 		return citationContributorship;
@@ -4116,6 +5386,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationDateOfPublication createCitationDateOfPublication() {
 		CitationDateOfPublicationImpl citationDateOfPublication = new CitationDateOfPublicationImpl();
 		return citationDateOfPublication;
@@ -4126,6 +5397,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationEntry createCitationEntry() {
 		CitationEntryImpl citationEntry = new CitationEntryImpl();
 		return citationEntry;
@@ -4136,6 +5408,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPart createCitationPart() {
 		CitationPartImpl citationPart = new CitationPartImpl();
 		return citationPart;
@@ -4146,6 +5419,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPeriodicRelease createCitationPeriodicRelease() {
 		CitationPeriodicReleaseImpl citationPeriodicRelease = new CitationPeriodicReleaseImpl();
 		return citationPeriodicRelease;
@@ -4156,6 +5430,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPublicationForm createCitationPublicationForm() {
 		CitationPublicationFormImpl citationPublicationForm = new CitationPublicationFormImpl();
 		return citationPublicationForm;
@@ -4166,6 +5441,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPublishedIn createCitationPublishedIn() {
 		CitationPublishedInImpl citationPublishedIn = new CitationPublishedInImpl();
 		return citationPublishedIn;
@@ -4176,6 +5452,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationRelatesTo createCitationRelatesTo() {
 		CitationRelatesToImpl citationRelatesTo = new CitationRelatesToImpl();
 		return citationRelatesTo;
@@ -4186,6 +5463,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationRelatesTo1 createCitationRelatesTo1() {
 		CitationRelatesTo1Impl citationRelatesTo1 = new CitationRelatesTo1Impl();
 		return citationRelatesTo1;
@@ -4196,6 +5474,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationStatusDate createCitationStatusDate() {
 		CitationStatusDateImpl citationStatusDate = new CitationStatusDateImpl();
 		return citationStatusDate;
@@ -4206,6 +5485,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationStatusDate1 createCitationStatusDate1() {
 		CitationStatusDate1Impl citationStatusDate1 = new CitationStatusDate1Impl();
 		return citationStatusDate1;
@@ -4216,6 +5496,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationSummary createCitationSummary() {
 		CitationSummaryImpl citationSummary = new CitationSummaryImpl();
 		return citationSummary;
@@ -4226,6 +5507,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationSummary1 createCitationSummary1() {
 		CitationSummary1Impl citationSummary1 = new CitationSummary1Impl();
 		return citationSummary1;
@@ -4236,6 +5518,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationTitle createCitationTitle() {
 		CitationTitleImpl citationTitle = new CitationTitleImpl();
 		return citationTitle;
@@ -4246,6 +5529,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationVersion createCitationVersion() {
 		CitationVersionImpl citationVersion = new CitationVersionImpl();
 		return citationVersion;
@@ -4256,6 +5540,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationWebLocation createCitationWebLocation() {
 		CitationWebLocationImpl citationWebLocation = new CitationWebLocationImpl();
 		return citationWebLocation;
@@ -4266,6 +5551,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationWhoClassified createCitationWhoClassified() {
 		CitationWhoClassifiedImpl citationWhoClassified = new CitationWhoClassifiedImpl();
 		return citationWhoClassified;
@@ -4276,6 +5562,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Claim createClaim() {
 		ClaimImpl claim = new ClaimImpl();
 		return claim;
@@ -4286,6 +5573,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimAccident createClaimAccident() {
 		ClaimAccidentImpl claimAccident = new ClaimAccidentImpl();
 		return claimAccident;
@@ -4296,6 +5584,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimCareTeam createClaimCareTeam() {
 		ClaimCareTeamImpl claimCareTeam = new ClaimCareTeamImpl();
 		return claimCareTeam;
@@ -4306,6 +5595,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimDetail createClaimDetail() {
 		ClaimDetailImpl claimDetail = new ClaimDetailImpl();
 		return claimDetail;
@@ -4316,6 +5606,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimDiagnosis createClaimDiagnosis() {
 		ClaimDiagnosisImpl claimDiagnosis = new ClaimDiagnosisImpl();
 		return claimDiagnosis;
@@ -4326,6 +5617,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimInsurance createClaimInsurance() {
 		ClaimInsuranceImpl claimInsurance = new ClaimInsuranceImpl();
 		return claimInsurance;
@@ -4336,6 +5628,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimItem createClaimItem() {
 		ClaimItemImpl claimItem = new ClaimItemImpl();
 		return claimItem;
@@ -4346,6 +5639,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimPayee createClaimPayee() {
 		ClaimPayeeImpl claimPayee = new ClaimPayeeImpl();
 		return claimPayee;
@@ -4356,6 +5650,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimProcedure createClaimProcedure() {
 		ClaimProcedureImpl claimProcedure = new ClaimProcedureImpl();
 		return claimProcedure;
@@ -4366,6 +5661,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimRelated createClaimRelated() {
 		ClaimRelatedImpl claimRelated = new ClaimRelatedImpl();
 		return claimRelated;
@@ -4376,6 +5672,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponse createClaimResponse() {
 		ClaimResponseImpl claimResponse = new ClaimResponseImpl();
 		return claimResponse;
@@ -4386,6 +5683,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseAddItem createClaimResponseAddItem() {
 		ClaimResponseAddItemImpl claimResponseAddItem = new ClaimResponseAddItemImpl();
 		return claimResponseAddItem;
@@ -4396,6 +5694,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseAdjudication createClaimResponseAdjudication() {
 		ClaimResponseAdjudicationImpl claimResponseAdjudication = new ClaimResponseAdjudicationImpl();
 		return claimResponseAdjudication;
@@ -4406,6 +5705,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseDetail createClaimResponseDetail() {
 		ClaimResponseDetailImpl claimResponseDetail = new ClaimResponseDetailImpl();
 		return claimResponseDetail;
@@ -4416,6 +5716,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseDetail1 createClaimResponseDetail1() {
 		ClaimResponseDetail1Impl claimResponseDetail1 = new ClaimResponseDetail1Impl();
 		return claimResponseDetail1;
@@ -4426,6 +5727,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseError createClaimResponseError() {
 		ClaimResponseErrorImpl claimResponseError = new ClaimResponseErrorImpl();
 		return claimResponseError;
@@ -4436,6 +5738,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseInsurance createClaimResponseInsurance() {
 		ClaimResponseInsuranceImpl claimResponseInsurance = new ClaimResponseInsuranceImpl();
 		return claimResponseInsurance;
@@ -4446,6 +5749,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseItem createClaimResponseItem() {
 		ClaimResponseItemImpl claimResponseItem = new ClaimResponseItemImpl();
 		return claimResponseItem;
@@ -4456,6 +5760,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponsePayment createClaimResponsePayment() {
 		ClaimResponsePaymentImpl claimResponsePayment = new ClaimResponsePaymentImpl();
 		return claimResponsePayment;
@@ -4466,6 +5771,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseProcessNote createClaimResponseProcessNote() {
 		ClaimResponseProcessNoteImpl claimResponseProcessNote = new ClaimResponseProcessNoteImpl();
 		return claimResponseProcessNote;
@@ -4476,6 +5782,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseSubDetail createClaimResponseSubDetail() {
 		ClaimResponseSubDetailImpl claimResponseSubDetail = new ClaimResponseSubDetailImpl();
 		return claimResponseSubDetail;
@@ -4486,6 +5793,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseSubDetail1 createClaimResponseSubDetail1() {
 		ClaimResponseSubDetail1Impl claimResponseSubDetail1 = new ClaimResponseSubDetail1Impl();
 		return claimResponseSubDetail1;
@@ -4496,6 +5804,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimResponseTotal createClaimResponseTotal() {
 		ClaimResponseTotalImpl claimResponseTotal = new ClaimResponseTotalImpl();
 		return claimResponseTotal;
@@ -4506,6 +5815,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimSubDetail createClaimSubDetail() {
 		ClaimSubDetailImpl claimSubDetail = new ClaimSubDetailImpl();
 		return claimSubDetail;
@@ -4516,6 +5826,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClaimSupportingInfo createClaimSupportingInfo() {
 		ClaimSupportingInfoImpl claimSupportingInfo = new ClaimSupportingInfoImpl();
 		return claimSupportingInfo;
@@ -4526,6 +5837,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpression createClinicalImpression() {
 		ClinicalImpressionImpl clinicalImpression = new ClinicalImpressionImpl();
 		return clinicalImpression;
@@ -4536,6 +5848,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpressionFinding createClinicalImpressionFinding() {
 		ClinicalImpressionFindingImpl clinicalImpressionFinding = new ClinicalImpressionFindingImpl();
 		return clinicalImpressionFinding;
@@ -4546,6 +5859,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpressionInvestigation createClinicalImpressionInvestigation() {
 		ClinicalImpressionInvestigationImpl clinicalImpressionInvestigation = new ClinicalImpressionInvestigationImpl();
 		return clinicalImpressionInvestigation;
@@ -4556,6 +5870,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpressionStatus createClinicalImpressionStatus() {
 		ClinicalImpressionStatusImpl clinicalImpressionStatus = new ClinicalImpressionStatusImpl();
 		return clinicalImpressionStatus;
@@ -4566,6 +5881,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinition createClinicalUseDefinition() {
 		ClinicalUseDefinitionImpl clinicalUseDefinition = new ClinicalUseDefinitionImpl();
 		return clinicalUseDefinition;
@@ -4576,6 +5892,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionContraindication createClinicalUseDefinitionContraindication() {
 		ClinicalUseDefinitionContraindicationImpl clinicalUseDefinitionContraindication = new ClinicalUseDefinitionContraindicationImpl();
 		return clinicalUseDefinitionContraindication;
@@ -4586,6 +5903,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionIndication createClinicalUseDefinitionIndication() {
 		ClinicalUseDefinitionIndicationImpl clinicalUseDefinitionIndication = new ClinicalUseDefinitionIndicationImpl();
 		return clinicalUseDefinitionIndication;
@@ -4596,6 +5914,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionInteractant createClinicalUseDefinitionInteractant() {
 		ClinicalUseDefinitionInteractantImpl clinicalUseDefinitionInteractant = new ClinicalUseDefinitionInteractantImpl();
 		return clinicalUseDefinitionInteractant;
@@ -4606,6 +5925,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionInteraction createClinicalUseDefinitionInteraction() {
 		ClinicalUseDefinitionInteractionImpl clinicalUseDefinitionInteraction = new ClinicalUseDefinitionInteractionImpl();
 		return clinicalUseDefinitionInteraction;
@@ -4616,6 +5936,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionOtherTherapy createClinicalUseDefinitionOtherTherapy() {
 		ClinicalUseDefinitionOtherTherapyImpl clinicalUseDefinitionOtherTherapy = new ClinicalUseDefinitionOtherTherapyImpl();
 		return clinicalUseDefinitionOtherTherapy;
@@ -4626,6 +5947,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionType createClinicalUseDefinitionType() {
 		ClinicalUseDefinitionTypeImpl clinicalUseDefinitionType = new ClinicalUseDefinitionTypeImpl();
 		return clinicalUseDefinitionType;
@@ -4636,6 +5958,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionUndesirableEffect createClinicalUseDefinitionUndesirableEffect() {
 		ClinicalUseDefinitionUndesirableEffectImpl clinicalUseDefinitionUndesirableEffect = new ClinicalUseDefinitionUndesirableEffectImpl();
 		return clinicalUseDefinitionUndesirableEffect;
@@ -4646,6 +5969,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalUseDefinitionWarning createClinicalUseDefinitionWarning() {
 		ClinicalUseDefinitionWarningImpl clinicalUseDefinitionWarning = new ClinicalUseDefinitionWarningImpl();
 		return clinicalUseDefinitionWarning;
@@ -4656,6 +5980,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code createCode() {
 		CodeImpl code = new CodeImpl();
 		return code;
@@ -4666,6 +5991,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept createCodeableConcept() {
 		CodeableConceptImpl codeableConcept = new CodeableConceptImpl();
 		return codeableConcept;
@@ -4676,6 +6002,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference createCodeableReference() {
 		CodeableReferenceImpl codeableReference = new CodeableReferenceImpl();
 		return codeableReference;
@@ -4686,6 +6013,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSearchSupport createCodeSearchSupport() {
 		CodeSearchSupportImpl codeSearchSupport = new CodeSearchSupportImpl();
 		return codeSearchSupport;
@@ -4696,6 +6024,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystem createCodeSystem() {
 		CodeSystemImpl codeSystem = new CodeSystemImpl();
 		return codeSystem;
@@ -4706,6 +6035,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemConcept createCodeSystemConcept() {
 		CodeSystemConceptImpl codeSystemConcept = new CodeSystemConceptImpl();
 		return codeSystemConcept;
@@ -4716,6 +6046,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemContentMode createCodeSystemContentMode() {
 		CodeSystemContentModeImpl codeSystemContentMode = new CodeSystemContentModeImpl();
 		return codeSystemContentMode;
@@ -4726,6 +6057,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemDesignation createCodeSystemDesignation() {
 		CodeSystemDesignationImpl codeSystemDesignation = new CodeSystemDesignationImpl();
 		return codeSystemDesignation;
@@ -4736,6 +6068,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemFilter createCodeSystemFilter() {
 		CodeSystemFilterImpl codeSystemFilter = new CodeSystemFilterImpl();
 		return codeSystemFilter;
@@ -4746,6 +6079,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemHierarchyMeaning createCodeSystemHierarchyMeaning() {
 		CodeSystemHierarchyMeaningImpl codeSystemHierarchyMeaning = new CodeSystemHierarchyMeaningImpl();
 		return codeSystemHierarchyMeaning;
@@ -4756,6 +6090,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemProperty createCodeSystemProperty() {
 		CodeSystemPropertyImpl codeSystemProperty = new CodeSystemPropertyImpl();
 		return codeSystemProperty;
@@ -4766,6 +6101,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemProperty1 createCodeSystemProperty1() {
 		CodeSystemProperty1Impl codeSystemProperty1 = new CodeSystemProperty1Impl();
 		return codeSystemProperty1;
@@ -4776,6 +6112,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding createCoding() {
 		CodingImpl coding = new CodingImpl();
 		return coding;
@@ -4786,6 +6123,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Communication createCommunication() {
 		CommunicationImpl communication = new CommunicationImpl();
 		return communication;
@@ -4796,6 +6134,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationPayload createCommunicationPayload() {
 		CommunicationPayloadImpl communicationPayload = new CommunicationPayloadImpl();
 		return communicationPayload;
@@ -4806,6 +6145,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationRequest createCommunicationRequest() {
 		CommunicationRequestImpl communicationRequest = new CommunicationRequestImpl();
 		return communicationRequest;
@@ -4816,6 +6156,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationRequestPayload createCommunicationRequestPayload() {
 		CommunicationRequestPayloadImpl communicationRequestPayload = new CommunicationRequestPayloadImpl();
 		return communicationRequestPayload;
@@ -4826,6 +6167,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompartmentDefinition createCompartmentDefinition() {
 		CompartmentDefinitionImpl compartmentDefinition = new CompartmentDefinitionImpl();
 		return compartmentDefinition;
@@ -4836,6 +6178,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompartmentDefinitionResource createCompartmentDefinitionResource() {
 		CompartmentDefinitionResourceImpl compartmentDefinitionResource = new CompartmentDefinitionResourceImpl();
 		return compartmentDefinitionResource;
@@ -4846,6 +6189,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompartmentType createCompartmentType() {
 		CompartmentTypeImpl compartmentType = new CompartmentTypeImpl();
 		return compartmentType;
@@ -4856,6 +6200,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Composition createComposition() {
 		CompositionImpl composition = new CompositionImpl();
 		return composition;
@@ -4866,6 +6211,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionAttestationMode createCompositionAttestationMode() {
 		CompositionAttestationModeImpl compositionAttestationMode = new CompositionAttestationModeImpl();
 		return compositionAttestationMode;
@@ -4876,6 +6222,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionAttester createCompositionAttester() {
 		CompositionAttesterImpl compositionAttester = new CompositionAttesterImpl();
 		return compositionAttester;
@@ -4886,6 +6233,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionEvent createCompositionEvent() {
 		CompositionEventImpl compositionEvent = new CompositionEventImpl();
 		return compositionEvent;
@@ -4896,6 +6244,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionRelatesTo createCompositionRelatesTo() {
 		CompositionRelatesToImpl compositionRelatesTo = new CompositionRelatesToImpl();
 		return compositionRelatesTo;
@@ -4906,6 +6255,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionSection createCompositionSection() {
 		CompositionSectionImpl compositionSection = new CompositionSectionImpl();
 		return compositionSection;
@@ -4916,6 +6266,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionStatus createCompositionStatus() {
 		CompositionStatusImpl compositionStatus = new CompositionStatusImpl();
 		return compositionStatus;
@@ -4926,6 +6277,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMap createConceptMap() {
 		ConceptMapImpl conceptMap = new ConceptMapImpl();
 		return conceptMap;
@@ -4936,6 +6288,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapDependsOn createConceptMapDependsOn() {
 		ConceptMapDependsOnImpl conceptMapDependsOn = new ConceptMapDependsOnImpl();
 		return conceptMapDependsOn;
@@ -4946,6 +6299,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapElement createConceptMapElement() {
 		ConceptMapElementImpl conceptMapElement = new ConceptMapElementImpl();
 		return conceptMapElement;
@@ -4956,6 +6310,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapEquivalence createConceptMapEquivalence() {
 		ConceptMapEquivalenceImpl conceptMapEquivalence = new ConceptMapEquivalenceImpl();
 		return conceptMapEquivalence;
@@ -4966,6 +6321,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapGroup createConceptMapGroup() {
 		ConceptMapGroupImpl conceptMapGroup = new ConceptMapGroupImpl();
 		return conceptMapGroup;
@@ -4976,6 +6332,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapGroupUnmappedMode createConceptMapGroupUnmappedMode() {
 		ConceptMapGroupUnmappedModeImpl conceptMapGroupUnmappedMode = new ConceptMapGroupUnmappedModeImpl();
 		return conceptMapGroupUnmappedMode;
@@ -4986,6 +6343,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapTarget createConceptMapTarget() {
 		ConceptMapTargetImpl conceptMapTarget = new ConceptMapTargetImpl();
 		return conceptMapTarget;
@@ -4996,6 +6354,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapUnmapped createConceptMapUnmapped() {
 		ConceptMapUnmappedImpl conceptMapUnmapped = new ConceptMapUnmappedImpl();
 		return conceptMapUnmapped;
@@ -5006,6 +6365,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Condition createCondition() {
 		ConditionImpl condition = new ConditionImpl();
 		return condition;
@@ -5016,6 +6376,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalDeleteStatus createConditionalDeleteStatus() {
 		ConditionalDeleteStatusImpl conditionalDeleteStatus = new ConditionalDeleteStatusImpl();
 		return conditionalDeleteStatus;
@@ -5026,6 +6387,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalReadStatus createConditionalReadStatus() {
 		ConditionalReadStatusImpl conditionalReadStatus = new ConditionalReadStatusImpl();
 		return conditionalReadStatus;
@@ -5036,6 +6398,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionEvidence createConditionEvidence() {
 		ConditionEvidenceImpl conditionEvidence = new ConditionEvidenceImpl();
 		return conditionEvidence;
@@ -5046,6 +6409,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionStage createConditionStage() {
 		ConditionStageImpl conditionStage = new ConditionStageImpl();
 		return conditionStage;
@@ -5056,6 +6420,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Confidentiality createConfidentiality() {
 		ConfidentialityImpl confidentiality = new ConfidentialityImpl();
 		return confidentiality;
@@ -5066,6 +6431,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Consent createConsent() {
 		ConsentImpl consent = new ConsentImpl();
 		return consent;
@@ -5076,6 +6442,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentActor createConsentActor() {
 		ConsentActorImpl consentActor = new ConsentActorImpl();
 		return consentActor;
@@ -5086,6 +6453,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentData createConsentData() {
 		ConsentDataImpl consentData = new ConsentDataImpl();
 		return consentData;
@@ -5096,6 +6464,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentDataMeaning createConsentDataMeaning() {
 		ConsentDataMeaningImpl consentDataMeaning = new ConsentDataMeaningImpl();
 		return consentDataMeaning;
@@ -5106,6 +6475,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentPolicy createConsentPolicy() {
 		ConsentPolicyImpl consentPolicy = new ConsentPolicyImpl();
 		return consentPolicy;
@@ -5116,6 +6486,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentProvision createConsentProvision() {
 		ConsentProvisionImpl consentProvision = new ConsentProvisionImpl();
 		return consentProvision;
@@ -5126,6 +6497,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentProvisionType createConsentProvisionType() {
 		ConsentProvisionTypeImpl consentProvisionType = new ConsentProvisionTypeImpl();
 		return consentProvisionType;
@@ -5136,6 +6508,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentState createConsentState() {
 		ConsentStateImpl consentState = new ConsentStateImpl();
 		return consentState;
@@ -5146,6 +6519,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentVerification createConsentVerification() {
 		ConsentVerificationImpl consentVerification = new ConsentVerificationImpl();
 		return consentVerification;
@@ -5156,6 +6530,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConstraintSeverity createConstraintSeverity() {
 		ConstraintSeverityImpl constraintSeverity = new ConstraintSeverityImpl();
 		return constraintSeverity;
@@ -5166,6 +6541,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail createContactDetail() {
 		ContactDetailImpl contactDetail = new ContactDetailImpl();
 		return contactDetail;
@@ -5176,6 +6552,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint createContactPoint() {
 		ContactPointImpl contactPoint = new ContactPointImpl();
 		return contactPoint;
@@ -5186,6 +6563,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPointSystem createContactPointSystem() {
 		ContactPointSystemImpl contactPointSystem = new ContactPointSystemImpl();
 		return contactPointSystem;
@@ -5196,6 +6574,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPointUse createContactPointUse() {
 		ContactPointUseImpl contactPointUse = new ContactPointUseImpl();
 		return contactPointUse;
@@ -5206,6 +6585,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contract createContract() {
 		ContractImpl contract = new ContractImpl();
 		return contract;
@@ -5216,6 +6596,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractAction createContractAction() {
 		ContractActionImpl contractAction = new ContractActionImpl();
 		return contractAction;
@@ -5226,6 +6607,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractAnswer createContractAnswer() {
 		ContractAnswerImpl contractAnswer = new ContractAnswerImpl();
 		return contractAnswer;
@@ -5236,6 +6618,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractAsset createContractAsset() {
 		ContractAssetImpl contractAsset = new ContractAssetImpl();
 		return contractAsset;
@@ -5246,6 +6629,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractContentDefinition createContractContentDefinition() {
 		ContractContentDefinitionImpl contractContentDefinition = new ContractContentDefinitionImpl();
 		return contractContentDefinition;
@@ -5256,6 +6640,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractContext createContractContext() {
 		ContractContextImpl contractContext = new ContractContextImpl();
 		return contractContext;
@@ -5266,6 +6651,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractFriendly createContractFriendly() {
 		ContractFriendlyImpl contractFriendly = new ContractFriendlyImpl();
 		return contractFriendly;
@@ -5276,6 +6662,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractLegal createContractLegal() {
 		ContractLegalImpl contractLegal = new ContractLegalImpl();
 		return contractLegal;
@@ -5286,6 +6673,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractOffer createContractOffer() {
 		ContractOfferImpl contractOffer = new ContractOfferImpl();
 		return contractOffer;
@@ -5296,6 +6684,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractParty createContractParty() {
 		ContractPartyImpl contractParty = new ContractPartyImpl();
 		return contractParty;
@@ -5306,6 +6695,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractResourcePublicationStatusCodes createContractResourcePublicationStatusCodes() {
 		ContractResourcePublicationStatusCodesImpl contractResourcePublicationStatusCodes = new ContractResourcePublicationStatusCodesImpl();
 		return contractResourcePublicationStatusCodes;
@@ -5316,6 +6706,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractResourceStatusCodes createContractResourceStatusCodes() {
 		ContractResourceStatusCodesImpl contractResourceStatusCodes = new ContractResourceStatusCodesImpl();
 		return contractResourceStatusCodes;
@@ -5326,6 +6717,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractRule createContractRule() {
 		ContractRuleImpl contractRule = new ContractRuleImpl();
 		return contractRule;
@@ -5336,6 +6728,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractSecurityLabel createContractSecurityLabel() {
 		ContractSecurityLabelImpl contractSecurityLabel = new ContractSecurityLabelImpl();
 		return contractSecurityLabel;
@@ -5346,6 +6739,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractSigner createContractSigner() {
 		ContractSignerImpl contractSigner = new ContractSignerImpl();
 		return contractSigner;
@@ -5356,6 +6750,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractSubject createContractSubject() {
 		ContractSubjectImpl contractSubject = new ContractSubjectImpl();
 		return contractSubject;
@@ -5366,6 +6761,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractTerm createContractTerm() {
 		ContractTermImpl contractTerm = new ContractTermImpl();
 		return contractTerm;
@@ -5376,6 +6772,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractValuedItem createContractValuedItem() {
 		ContractValuedItemImpl contractValuedItem = new ContractValuedItemImpl();
 		return contractValuedItem;
@@ -5386,6 +6783,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor createContributor() {
 		ContributorImpl contributor = new ContributorImpl();
 		return contributor;
@@ -5396,6 +6794,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContributorType createContributorType() {
 		ContributorTypeImpl contributorType = new ContributorTypeImpl();
 		return contributorType;
@@ -5406,6 +6805,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count createCount() {
 		CountImpl count = new CountImpl();
 		return count;
@@ -5416,6 +6816,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coverage createCoverage() {
 		CoverageImpl coverage = new CoverageImpl();
 		return coverage;
@@ -5426,6 +6827,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageClass createCoverageClass() {
 		CoverageClassImpl coverageClass = new CoverageClassImpl();
 		return coverageClass;
@@ -5436,6 +6838,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageCostToBeneficiary createCoverageCostToBeneficiary() {
 		CoverageCostToBeneficiaryImpl coverageCostToBeneficiary = new CoverageCostToBeneficiaryImpl();
 		return coverageCostToBeneficiary;
@@ -5446,6 +6849,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequest createCoverageEligibilityRequest() {
 		CoverageEligibilityRequestImpl coverageEligibilityRequest = new CoverageEligibilityRequestImpl();
 		return coverageEligibilityRequest;
@@ -5456,6 +6860,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequestDiagnosis createCoverageEligibilityRequestDiagnosis() {
 		CoverageEligibilityRequestDiagnosisImpl coverageEligibilityRequestDiagnosis = new CoverageEligibilityRequestDiagnosisImpl();
 		return coverageEligibilityRequestDiagnosis;
@@ -5466,6 +6871,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequestInsurance createCoverageEligibilityRequestInsurance() {
 		CoverageEligibilityRequestInsuranceImpl coverageEligibilityRequestInsurance = new CoverageEligibilityRequestInsuranceImpl();
 		return coverageEligibilityRequestInsurance;
@@ -5476,6 +6882,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequestItem createCoverageEligibilityRequestItem() {
 		CoverageEligibilityRequestItemImpl coverageEligibilityRequestItem = new CoverageEligibilityRequestItemImpl();
 		return coverageEligibilityRequestItem;
@@ -5486,6 +6893,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityRequestSupportingInfo createCoverageEligibilityRequestSupportingInfo() {
 		CoverageEligibilityRequestSupportingInfoImpl coverageEligibilityRequestSupportingInfo = new CoverageEligibilityRequestSupportingInfoImpl();
 		return coverageEligibilityRequestSupportingInfo;
@@ -5496,6 +6904,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponse createCoverageEligibilityResponse() {
 		CoverageEligibilityResponseImpl coverageEligibilityResponse = new CoverageEligibilityResponseImpl();
 		return coverageEligibilityResponse;
@@ -5506,6 +6915,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponseBenefit createCoverageEligibilityResponseBenefit() {
 		CoverageEligibilityResponseBenefitImpl coverageEligibilityResponseBenefit = new CoverageEligibilityResponseBenefitImpl();
 		return coverageEligibilityResponseBenefit;
@@ -5516,6 +6926,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponseError createCoverageEligibilityResponseError() {
 		CoverageEligibilityResponseErrorImpl coverageEligibilityResponseError = new CoverageEligibilityResponseErrorImpl();
 		return coverageEligibilityResponseError;
@@ -5526,6 +6937,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponseInsurance createCoverageEligibilityResponseInsurance() {
 		CoverageEligibilityResponseInsuranceImpl coverageEligibilityResponseInsurance = new CoverageEligibilityResponseInsuranceImpl();
 		return coverageEligibilityResponseInsurance;
@@ -5536,6 +6948,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageEligibilityResponseItem createCoverageEligibilityResponseItem() {
 		CoverageEligibilityResponseItemImpl coverageEligibilityResponseItem = new CoverageEligibilityResponseItemImpl();
 		return coverageEligibilityResponseItem;
@@ -5546,6 +6959,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoverageException createCoverageException() {
 		CoverageExceptionImpl coverageException = new CoverageExceptionImpl();
 		return coverageException;
@@ -5556,6 +6970,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CriteriaNotExistsBehavior createCriteriaNotExistsBehavior() {
 		CriteriaNotExistsBehaviorImpl criteriaNotExistsBehavior = new CriteriaNotExistsBehaviorImpl();
 		return criteriaNotExistsBehavior;
@@ -5566,6 +6981,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement createDataRequirement() {
 		DataRequirementImpl dataRequirement = new DataRequirementImpl();
 		return dataRequirement;
@@ -5576,6 +6992,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirementCodeFilter createDataRequirementCodeFilter() {
 		DataRequirementCodeFilterImpl dataRequirementCodeFilter = new DataRequirementCodeFilterImpl();
 		return dataRequirementCodeFilter;
@@ -5586,6 +7003,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirementDateFilter createDataRequirementDateFilter() {
 		DataRequirementDateFilterImpl dataRequirementDateFilter = new DataRequirementDateFilterImpl();
 		return dataRequirementDateFilter;
@@ -5596,6 +7014,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirementSort createDataRequirementSort() {
 		DataRequirementSortImpl dataRequirementSort = new DataRequirementSortImpl();
 		return dataRequirementSort;
@@ -5606,6 +7025,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date createDate() {
 		DateImpl date = new DateImpl();
 		return date;
@@ -5616,6 +7036,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime createDateTime() {
 		DateTimeImpl dateTime = new DateTimeImpl();
 		return dateTime;
@@ -5626,6 +7047,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DaysOfWeek createDaysOfWeek() {
 		DaysOfWeekImpl daysOfWeek = new DaysOfWeekImpl();
 		return daysOfWeek;
@@ -5636,6 +7058,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal createDecimal() {
 		DecimalImpl decimal = new DecimalImpl();
 		return decimal;
@@ -5646,6 +7069,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DefinitionResourceType createDefinitionResourceType() {
 		DefinitionResourceTypeImpl definitionResourceType = new DefinitionResourceTypeImpl();
 		return definitionResourceType;
@@ -5656,6 +7080,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssue createDetectedIssue() {
 		DetectedIssueImpl detectedIssue = new DetectedIssueImpl();
 		return detectedIssue;
@@ -5666,6 +7091,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssueEvidence createDetectedIssueEvidence() {
 		DetectedIssueEvidenceImpl detectedIssueEvidence = new DetectedIssueEvidenceImpl();
 		return detectedIssueEvidence;
@@ -5676,6 +7102,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssueMitigation createDetectedIssueMitigation() {
 		DetectedIssueMitigationImpl detectedIssueMitigation = new DetectedIssueMitigationImpl();
 		return detectedIssueMitigation;
@@ -5686,6 +7113,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DetectedIssueSeverity createDetectedIssueSeverity() {
 		DetectedIssueSeverityImpl detectedIssueSeverity = new DetectedIssueSeverityImpl();
 		return detectedIssueSeverity;
@@ -5696,6 +7124,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Device createDevice() {
 		DeviceImpl device = new DeviceImpl();
 		return device;
@@ -5706,6 +7135,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinition createDeviceDefinition() {
 		DeviceDefinitionImpl deviceDefinition = new DeviceDefinitionImpl();
 		return deviceDefinition;
@@ -5716,6 +7146,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionCapability createDeviceDefinitionCapability() {
 		DeviceDefinitionCapabilityImpl deviceDefinitionCapability = new DeviceDefinitionCapabilityImpl();
 		return deviceDefinitionCapability;
@@ -5726,6 +7157,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionDeviceName createDeviceDefinitionDeviceName() {
 		DeviceDefinitionDeviceNameImpl deviceDefinitionDeviceName = new DeviceDefinitionDeviceNameImpl();
 		return deviceDefinitionDeviceName;
@@ -5736,6 +7168,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionMaterial createDeviceDefinitionMaterial() {
 		DeviceDefinitionMaterialImpl deviceDefinitionMaterial = new DeviceDefinitionMaterialImpl();
 		return deviceDefinitionMaterial;
@@ -5746,6 +7179,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionProperty createDeviceDefinitionProperty() {
 		DeviceDefinitionPropertyImpl deviceDefinitionProperty = new DeviceDefinitionPropertyImpl();
 		return deviceDefinitionProperty;
@@ -5756,6 +7190,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionSpecialization createDeviceDefinitionSpecialization() {
 		DeviceDefinitionSpecializationImpl deviceDefinitionSpecialization = new DeviceDefinitionSpecializationImpl();
 		return deviceDefinitionSpecialization;
@@ -5766,6 +7201,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDefinitionUdiDeviceIdentifier createDeviceDefinitionUdiDeviceIdentifier() {
 		DeviceDefinitionUdiDeviceIdentifierImpl deviceDefinitionUdiDeviceIdentifier = new DeviceDefinitionUdiDeviceIdentifierImpl();
 		return deviceDefinitionUdiDeviceIdentifier;
@@ -5776,6 +7212,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceDeviceName createDeviceDeviceName() {
 		DeviceDeviceNameImpl deviceDeviceName = new DeviceDeviceNameImpl();
 		return deviceDeviceName;
@@ -5786,6 +7223,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetric createDeviceMetric() {
 		DeviceMetricImpl deviceMetric = new DeviceMetricImpl();
 		return deviceMetric;
@@ -5796,6 +7234,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricCalibration createDeviceMetricCalibration() {
 		DeviceMetricCalibrationImpl deviceMetricCalibration = new DeviceMetricCalibrationImpl();
 		return deviceMetricCalibration;
@@ -5806,6 +7245,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricCalibrationState createDeviceMetricCalibrationState() {
 		DeviceMetricCalibrationStateImpl deviceMetricCalibrationState = new DeviceMetricCalibrationStateImpl();
 		return deviceMetricCalibrationState;
@@ -5816,6 +7256,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricCalibrationType createDeviceMetricCalibrationType() {
 		DeviceMetricCalibrationTypeImpl deviceMetricCalibrationType = new DeviceMetricCalibrationTypeImpl();
 		return deviceMetricCalibrationType;
@@ -5826,6 +7267,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricCategory createDeviceMetricCategory() {
 		DeviceMetricCategoryImpl deviceMetricCategory = new DeviceMetricCategoryImpl();
 		return deviceMetricCategory;
@@ -5836,6 +7278,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricColor createDeviceMetricColor() {
 		DeviceMetricColorImpl deviceMetricColor = new DeviceMetricColorImpl();
 		return deviceMetricColor;
@@ -5846,6 +7289,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceMetricOperationalStatus createDeviceMetricOperationalStatus() {
 		DeviceMetricOperationalStatusImpl deviceMetricOperationalStatus = new DeviceMetricOperationalStatusImpl();
 		return deviceMetricOperationalStatus;
@@ -5856,6 +7300,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceNameType createDeviceNameType() {
 		DeviceNameTypeImpl deviceNameType = new DeviceNameTypeImpl();
 		return deviceNameType;
@@ -5866,6 +7311,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceProperty createDeviceProperty() {
 		DevicePropertyImpl deviceProperty = new DevicePropertyImpl();
 		return deviceProperty;
@@ -5876,6 +7322,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceRequest createDeviceRequest() {
 		DeviceRequestImpl deviceRequest = new DeviceRequestImpl();
 		return deviceRequest;
@@ -5886,6 +7333,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceRequestParameter createDeviceRequestParameter() {
 		DeviceRequestParameterImpl deviceRequestParameter = new DeviceRequestParameterImpl();
 		return deviceRequestParameter;
@@ -5896,6 +7344,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceSpecialization createDeviceSpecialization() {
 		DeviceSpecializationImpl deviceSpecialization = new DeviceSpecializationImpl();
 		return deviceSpecialization;
@@ -5906,6 +7355,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceUdiCarrier createDeviceUdiCarrier() {
 		DeviceUdiCarrierImpl deviceUdiCarrier = new DeviceUdiCarrierImpl();
 		return deviceUdiCarrier;
@@ -5916,6 +7366,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceUseStatement createDeviceUseStatement() {
 		DeviceUseStatementImpl deviceUseStatement = new DeviceUseStatementImpl();
 		return deviceUseStatement;
@@ -5926,6 +7377,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceUseStatementStatus createDeviceUseStatementStatus() {
 		DeviceUseStatementStatusImpl deviceUseStatementStatus = new DeviceUseStatementStatusImpl();
 		return deviceUseStatementStatus;
@@ -5936,6 +7388,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceVersion createDeviceVersion() {
 		DeviceVersionImpl deviceVersion = new DeviceVersionImpl();
 		return deviceVersion;
@@ -5946,6 +7399,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DiagnosticReport createDiagnosticReport() {
 		DiagnosticReportImpl diagnosticReport = new DiagnosticReportImpl();
 		return diagnosticReport;
@@ -5956,6 +7410,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DiagnosticReportMedia createDiagnosticReportMedia() {
 		DiagnosticReportMediaImpl diagnosticReportMedia = new DiagnosticReportMediaImpl();
 		return diagnosticReportMedia;
@@ -5966,6 +7421,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DiagnosticReportStatus createDiagnosticReportStatus() {
 		DiagnosticReportStatusImpl diagnosticReportStatus = new DiagnosticReportStatusImpl();
 		return diagnosticReportStatus;
@@ -5976,6 +7432,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DiscriminatorType createDiscriminatorType() {
 		DiscriminatorTypeImpl discriminatorType = new DiscriminatorTypeImpl();
 		return discriminatorType;
@@ -5986,6 +7443,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance createDistance() {
 		DistanceImpl distance = new DistanceImpl();
 		return distance;
@@ -5996,6 +7454,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentManifest createDocumentManifest() {
 		DocumentManifestImpl documentManifest = new DocumentManifestImpl();
 		return documentManifest;
@@ -6006,6 +7465,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentManifestRelated createDocumentManifestRelated() {
 		DocumentManifestRelatedImpl documentManifestRelated = new DocumentManifestRelatedImpl();
 		return documentManifestRelated;
@@ -6016,6 +7476,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentMode createDocumentMode() {
 		DocumentModeImpl documentMode = new DocumentModeImpl();
 		return documentMode;
@@ -6026,6 +7487,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReference createDocumentReference() {
 		DocumentReferenceImpl documentReference = new DocumentReferenceImpl();
 		return documentReference;
@@ -6036,6 +7498,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReferenceContent createDocumentReferenceContent() {
 		DocumentReferenceContentImpl documentReferenceContent = new DocumentReferenceContentImpl();
 		return documentReferenceContent;
@@ -6046,6 +7509,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReferenceContext createDocumentReferenceContext() {
 		DocumentReferenceContextImpl documentReferenceContext = new DocumentReferenceContextImpl();
 		return documentReferenceContext;
@@ -6056,6 +7520,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReferenceRelatesTo createDocumentReferenceRelatesTo() {
 		DocumentReferenceRelatesToImpl documentReferenceRelatesTo = new DocumentReferenceRelatesToImpl();
 		return documentReferenceRelatesTo;
@@ -6066,6 +7531,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReferenceStatus createDocumentReferenceStatus() {
 		DocumentReferenceStatusImpl documentReferenceStatus = new DocumentReferenceStatusImpl();
 		return documentReferenceStatus;
@@ -6076,6 +7542,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRelationshipType createDocumentRelationshipType() {
 		DocumentRelationshipTypeImpl documentRelationshipType = new DocumentRelationshipTypeImpl();
 		return documentRelationshipType;
@@ -6086,6 +7553,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
@@ -6096,6 +7564,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DomainResource createDomainResource() {
 		DomainResourceImpl domainResource = new DomainResourceImpl();
 		return domainResource;
@@ -6106,6 +7575,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage createDosage() {
 		DosageImpl dosage = new DosageImpl();
 		return dosage;
@@ -6116,6 +7586,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DosageDoseAndRate createDosageDoseAndRate() {
 		DosageDoseAndRateImpl dosageDoseAndRate = new DosageDoseAndRateImpl();
 		return dosageDoseAndRate;
@@ -6126,6 +7597,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration createDuration() {
 		DurationImpl duration = new DurationImpl();
 		return duration;
@@ -6136,6 +7608,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element createElement() {
 		ElementImpl element = new ElementImpl();
 		return element;
@@ -6146,6 +7619,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinition createElementDefinition() {
 		ElementDefinitionImpl elementDefinition = new ElementDefinitionImpl();
 		return elementDefinition;
@@ -6156,6 +7630,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionBase createElementDefinitionBase() {
 		ElementDefinitionBaseImpl elementDefinitionBase = new ElementDefinitionBaseImpl();
 		return elementDefinitionBase;
@@ -6166,6 +7641,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionBinding createElementDefinitionBinding() {
 		ElementDefinitionBindingImpl elementDefinitionBinding = new ElementDefinitionBindingImpl();
 		return elementDefinitionBinding;
@@ -6176,6 +7652,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionConstraint createElementDefinitionConstraint() {
 		ElementDefinitionConstraintImpl elementDefinitionConstraint = new ElementDefinitionConstraintImpl();
 		return elementDefinitionConstraint;
@@ -6186,6 +7663,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionDiscriminator createElementDefinitionDiscriminator() {
 		ElementDefinitionDiscriminatorImpl elementDefinitionDiscriminator = new ElementDefinitionDiscriminatorImpl();
 		return elementDefinitionDiscriminator;
@@ -6196,6 +7674,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionExample createElementDefinitionExample() {
 		ElementDefinitionExampleImpl elementDefinitionExample = new ElementDefinitionExampleImpl();
 		return elementDefinitionExample;
@@ -6206,6 +7685,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionMapping createElementDefinitionMapping() {
 		ElementDefinitionMappingImpl elementDefinitionMapping = new ElementDefinitionMappingImpl();
 		return elementDefinitionMapping;
@@ -6216,6 +7696,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionSlicing createElementDefinitionSlicing() {
 		ElementDefinitionSlicingImpl elementDefinitionSlicing = new ElementDefinitionSlicingImpl();
 		return elementDefinitionSlicing;
@@ -6226,6 +7707,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionType createElementDefinitionType() {
 		ElementDefinitionTypeImpl elementDefinitionType = new ElementDefinitionTypeImpl();
 		return elementDefinitionType;
@@ -6236,6 +7718,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EligibilityRequestPurpose createEligibilityRequestPurpose() {
 		EligibilityRequestPurposeImpl eligibilityRequestPurpose = new EligibilityRequestPurposeImpl();
 		return eligibilityRequestPurpose;
@@ -6246,6 +7729,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EligibilityResponsePurpose createEligibilityResponsePurpose() {
 		EligibilityResponsePurposeImpl eligibilityResponsePurpose = new EligibilityResponsePurposeImpl();
 		return eligibilityResponsePurpose;
@@ -6256,6 +7740,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnableWhenBehavior createEnableWhenBehavior() {
 		EnableWhenBehaviorImpl enableWhenBehavior = new EnableWhenBehaviorImpl();
 		return enableWhenBehavior;
@@ -6266,6 +7751,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Encounter createEncounter() {
 		EncounterImpl encounter = new EncounterImpl();
 		return encounter;
@@ -6276,6 +7762,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterClassHistory createEncounterClassHistory() {
 		EncounterClassHistoryImpl encounterClassHistory = new EncounterClassHistoryImpl();
 		return encounterClassHistory;
@@ -6286,6 +7773,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterDiagnosis createEncounterDiagnosis() {
 		EncounterDiagnosisImpl encounterDiagnosis = new EncounterDiagnosisImpl();
 		return encounterDiagnosis;
@@ -6296,6 +7784,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterHospitalization createEncounterHospitalization() {
 		EncounterHospitalizationImpl encounterHospitalization = new EncounterHospitalizationImpl();
 		return encounterHospitalization;
@@ -6306,6 +7795,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterLocation createEncounterLocation() {
 		EncounterLocationImpl encounterLocation = new EncounterLocationImpl();
 		return encounterLocation;
@@ -6316,6 +7806,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterLocationStatus createEncounterLocationStatus() {
 		EncounterLocationStatusImpl encounterLocationStatus = new EncounterLocationStatusImpl();
 		return encounterLocationStatus;
@@ -6326,6 +7817,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterParticipant createEncounterParticipant() {
 		EncounterParticipantImpl encounterParticipant = new EncounterParticipantImpl();
 		return encounterParticipant;
@@ -6336,6 +7828,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterStatus createEncounterStatus() {
 		EncounterStatusImpl encounterStatus = new EncounterStatusImpl();
 		return encounterStatus;
@@ -6346,6 +7839,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EncounterStatusHistory createEncounterStatusHistory() {
 		EncounterStatusHistoryImpl encounterStatusHistory = new EncounterStatusHistoryImpl();
 		return encounterStatusHistory;
@@ -6356,6 +7850,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Endpoint createEndpoint() {
 		EndpointImpl endpoint = new EndpointImpl();
 		return endpoint;
@@ -6366,6 +7861,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EndpointStatus createEndpointStatus() {
 		EndpointStatusImpl endpointStatus = new EndpointStatusImpl();
 		return endpointStatus;
@@ -6376,6 +7872,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnrollmentRequest createEnrollmentRequest() {
 		EnrollmentRequestImpl enrollmentRequest = new EnrollmentRequestImpl();
 		return enrollmentRequest;
@@ -6386,6 +7883,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnrollmentResponse createEnrollmentResponse() {
 		EnrollmentResponseImpl enrollmentResponse = new EnrollmentResponseImpl();
 		return enrollmentResponse;
@@ -6396,6 +7894,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EpisodeOfCare createEpisodeOfCare() {
 		EpisodeOfCareImpl episodeOfCare = new EpisodeOfCareImpl();
 		return episodeOfCare;
@@ -6406,6 +7905,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EpisodeOfCareDiagnosis createEpisodeOfCareDiagnosis() {
 		EpisodeOfCareDiagnosisImpl episodeOfCareDiagnosis = new EpisodeOfCareDiagnosisImpl();
 		return episodeOfCareDiagnosis;
@@ -6416,6 +7916,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EpisodeOfCareStatus createEpisodeOfCareStatus() {
 		EpisodeOfCareStatusImpl episodeOfCareStatus = new EpisodeOfCareStatusImpl();
 		return episodeOfCareStatus;
@@ -6426,6 +7927,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EpisodeOfCareStatusHistory createEpisodeOfCareStatusHistory() {
 		EpisodeOfCareStatusHistoryImpl episodeOfCareStatusHistory = new EpisodeOfCareStatusHistoryImpl();
 		return episodeOfCareStatusHistory;
@@ -6436,6 +7938,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventCapabilityMode createEventCapabilityMode() {
 		EventCapabilityModeImpl eventCapabilityMode = new EventCapabilityModeImpl();
 		return eventCapabilityMode;
@@ -6446,6 +7949,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventDefinition createEventDefinition() {
 		EventDefinitionImpl eventDefinition = new EventDefinitionImpl();
 		return eventDefinition;
@@ -6456,6 +7960,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventOrRequestResourceTypes createEventOrRequestResourceTypes() {
 		EventOrRequestResourceTypesImpl eventOrRequestResourceTypes = new EventOrRequestResourceTypesImpl();
 		return eventOrRequestResourceTypes;
@@ -6466,6 +7971,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventResourceType createEventResourceType() {
 		EventResourceTypeImpl eventResourceType = new EventResourceTypeImpl();
 		return eventResourceType;
@@ -6476,6 +7982,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventStatus createEventStatus() {
 		EventStatusImpl eventStatus = new EventStatusImpl();
 		return eventStatus;
@@ -6486,6 +7993,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventTiming createEventTiming() {
 		EventTimingImpl eventTiming = new EventTimingImpl();
 		return eventTiming;
@@ -6496,6 +8004,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Evidence createEvidence() {
 		EvidenceImpl evidence = new EvidenceImpl();
 		return evidence;
@@ -6506,6 +8015,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceAttributeEstimate createEvidenceAttributeEstimate() {
 		EvidenceAttributeEstimateImpl evidenceAttributeEstimate = new EvidenceAttributeEstimateImpl();
 		return evidenceAttributeEstimate;
@@ -6516,6 +8026,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceCertainty createEvidenceCertainty() {
 		EvidenceCertaintyImpl evidenceCertainty = new EvidenceCertaintyImpl();
 		return evidenceCertainty;
@@ -6526,6 +8037,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceModelCharacteristic createEvidenceModelCharacteristic() {
 		EvidenceModelCharacteristicImpl evidenceModelCharacteristic = new EvidenceModelCharacteristicImpl();
 		return evidenceModelCharacteristic;
@@ -6536,6 +8048,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReport createEvidenceReport() {
 		EvidenceReportImpl evidenceReport = new EvidenceReportImpl();
 		return evidenceReport;
@@ -6546,6 +8059,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReportCharacteristic createEvidenceReportCharacteristic() {
 		EvidenceReportCharacteristicImpl evidenceReportCharacteristic = new EvidenceReportCharacteristicImpl();
 		return evidenceReportCharacteristic;
@@ -6556,6 +8070,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReportRelatesTo createEvidenceReportRelatesTo() {
 		EvidenceReportRelatesToImpl evidenceReportRelatesTo = new EvidenceReportRelatesToImpl();
 		return evidenceReportRelatesTo;
@@ -6566,6 +8081,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReportSection createEvidenceReportSection() {
 		EvidenceReportSectionImpl evidenceReportSection = new EvidenceReportSectionImpl();
 		return evidenceReportSection;
@@ -6576,6 +8092,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReportSubject createEvidenceReportSubject() {
 		EvidenceReportSubjectImpl evidenceReportSubject = new EvidenceReportSubjectImpl();
 		return evidenceReportSubject;
@@ -6586,6 +8103,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceSampleSize createEvidenceSampleSize() {
 		EvidenceSampleSizeImpl evidenceSampleSize = new EvidenceSampleSizeImpl();
 		return evidenceSampleSize;
@@ -6596,6 +8114,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceStatistic createEvidenceStatistic() {
 		EvidenceStatisticImpl evidenceStatistic = new EvidenceStatisticImpl();
 		return evidenceStatistic;
@@ -6606,6 +8125,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariable createEvidenceVariable() {
 		EvidenceVariableImpl evidenceVariable = new EvidenceVariableImpl();
 		return evidenceVariable;
@@ -6616,6 +8136,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariable1 createEvidenceVariable1() {
 		EvidenceVariable1Impl evidenceVariable1 = new EvidenceVariable1Impl();
 		return evidenceVariable1;
@@ -6626,6 +8147,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableCategory createEvidenceVariableCategory() {
 		EvidenceVariableCategoryImpl evidenceVariableCategory = new EvidenceVariableCategoryImpl();
 		return evidenceVariableCategory;
@@ -6636,6 +8158,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableCharacteristic createEvidenceVariableCharacteristic() {
 		EvidenceVariableCharacteristicImpl evidenceVariableCharacteristic = new EvidenceVariableCharacteristicImpl();
 		return evidenceVariableCharacteristic;
@@ -6646,6 +8169,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableDefinition createEvidenceVariableDefinition() {
 		EvidenceVariableDefinitionImpl evidenceVariableDefinition = new EvidenceVariableDefinitionImpl();
 		return evidenceVariableDefinition;
@@ -6656,6 +8180,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableHandling createEvidenceVariableHandling() {
 		EvidenceVariableHandlingImpl evidenceVariableHandling = new EvidenceVariableHandlingImpl();
 		return evidenceVariableHandling;
@@ -6666,6 +8191,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableTimeFromStart createEvidenceVariableTimeFromStart() {
 		EvidenceVariableTimeFromStartImpl evidenceVariableTimeFromStart = new EvidenceVariableTimeFromStartImpl();
 		return evidenceVariableTimeFromStart;
@@ -6676,6 +8202,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenario createExampleScenario() {
 		ExampleScenarioImpl exampleScenario = new ExampleScenarioImpl();
 		return exampleScenario;
@@ -6686,6 +8213,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioActor createExampleScenarioActor() {
 		ExampleScenarioActorImpl exampleScenarioActor = new ExampleScenarioActorImpl();
 		return exampleScenarioActor;
@@ -6696,6 +8224,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioActorType createExampleScenarioActorType() {
 		ExampleScenarioActorTypeImpl exampleScenarioActorType = new ExampleScenarioActorTypeImpl();
 		return exampleScenarioActorType;
@@ -6706,6 +8235,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioAlternative createExampleScenarioAlternative() {
 		ExampleScenarioAlternativeImpl exampleScenarioAlternative = new ExampleScenarioAlternativeImpl();
 		return exampleScenarioAlternative;
@@ -6716,6 +8246,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioContainedInstance createExampleScenarioContainedInstance() {
 		ExampleScenarioContainedInstanceImpl exampleScenarioContainedInstance = new ExampleScenarioContainedInstanceImpl();
 		return exampleScenarioContainedInstance;
@@ -6726,6 +8257,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioInstance createExampleScenarioInstance() {
 		ExampleScenarioInstanceImpl exampleScenarioInstance = new ExampleScenarioInstanceImpl();
 		return exampleScenarioInstance;
@@ -6736,6 +8268,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioOperation createExampleScenarioOperation() {
 		ExampleScenarioOperationImpl exampleScenarioOperation = new ExampleScenarioOperationImpl();
 		return exampleScenarioOperation;
@@ -6746,6 +8279,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioProcess createExampleScenarioProcess() {
 		ExampleScenarioProcessImpl exampleScenarioProcess = new ExampleScenarioProcessImpl();
 		return exampleScenarioProcess;
@@ -6756,6 +8290,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioStep createExampleScenarioStep() {
 		ExampleScenarioStepImpl exampleScenarioStep = new ExampleScenarioStepImpl();
 		return exampleScenarioStep;
@@ -6766,6 +8301,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioVersion createExampleScenarioVersion() {
 		ExampleScenarioVersionImpl exampleScenarioVersion = new ExampleScenarioVersionImpl();
 		return exampleScenarioVersion;
@@ -6776,6 +8312,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefit createExplanationOfBenefit() {
 		ExplanationOfBenefitImpl explanationOfBenefit = new ExplanationOfBenefitImpl();
 		return explanationOfBenefit;
@@ -6786,6 +8323,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitAccident createExplanationOfBenefitAccident() {
 		ExplanationOfBenefitAccidentImpl explanationOfBenefitAccident = new ExplanationOfBenefitAccidentImpl();
 		return explanationOfBenefitAccident;
@@ -6796,6 +8334,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitAddItem createExplanationOfBenefitAddItem() {
 		ExplanationOfBenefitAddItemImpl explanationOfBenefitAddItem = new ExplanationOfBenefitAddItemImpl();
 		return explanationOfBenefitAddItem;
@@ -6806,6 +8345,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitAdjudication createExplanationOfBenefitAdjudication() {
 		ExplanationOfBenefitAdjudicationImpl explanationOfBenefitAdjudication = new ExplanationOfBenefitAdjudicationImpl();
 		return explanationOfBenefitAdjudication;
@@ -6816,6 +8356,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitBenefitBalance createExplanationOfBenefitBenefitBalance() {
 		ExplanationOfBenefitBenefitBalanceImpl explanationOfBenefitBenefitBalance = new ExplanationOfBenefitBenefitBalanceImpl();
 		return explanationOfBenefitBenefitBalance;
@@ -6826,6 +8367,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitCareTeam createExplanationOfBenefitCareTeam() {
 		ExplanationOfBenefitCareTeamImpl explanationOfBenefitCareTeam = new ExplanationOfBenefitCareTeamImpl();
 		return explanationOfBenefitCareTeam;
@@ -6836,6 +8378,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitDetail createExplanationOfBenefitDetail() {
 		ExplanationOfBenefitDetailImpl explanationOfBenefitDetail = new ExplanationOfBenefitDetailImpl();
 		return explanationOfBenefitDetail;
@@ -6846,6 +8389,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitDetail1 createExplanationOfBenefitDetail1() {
 		ExplanationOfBenefitDetail1Impl explanationOfBenefitDetail1 = new ExplanationOfBenefitDetail1Impl();
 		return explanationOfBenefitDetail1;
@@ -6856,6 +8400,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitDiagnosis createExplanationOfBenefitDiagnosis() {
 		ExplanationOfBenefitDiagnosisImpl explanationOfBenefitDiagnosis = new ExplanationOfBenefitDiagnosisImpl();
 		return explanationOfBenefitDiagnosis;
@@ -6866,6 +8411,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitFinancial createExplanationOfBenefitFinancial() {
 		ExplanationOfBenefitFinancialImpl explanationOfBenefitFinancial = new ExplanationOfBenefitFinancialImpl();
 		return explanationOfBenefitFinancial;
@@ -6876,6 +8422,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitInsurance createExplanationOfBenefitInsurance() {
 		ExplanationOfBenefitInsuranceImpl explanationOfBenefitInsurance = new ExplanationOfBenefitInsuranceImpl();
 		return explanationOfBenefitInsurance;
@@ -6886,6 +8433,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitItem createExplanationOfBenefitItem() {
 		ExplanationOfBenefitItemImpl explanationOfBenefitItem = new ExplanationOfBenefitItemImpl();
 		return explanationOfBenefitItem;
@@ -6896,6 +8444,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitPayee createExplanationOfBenefitPayee() {
 		ExplanationOfBenefitPayeeImpl explanationOfBenefitPayee = new ExplanationOfBenefitPayeeImpl();
 		return explanationOfBenefitPayee;
@@ -6906,6 +8455,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitPayment createExplanationOfBenefitPayment() {
 		ExplanationOfBenefitPaymentImpl explanationOfBenefitPayment = new ExplanationOfBenefitPaymentImpl();
 		return explanationOfBenefitPayment;
@@ -6916,6 +8466,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitProcedure createExplanationOfBenefitProcedure() {
 		ExplanationOfBenefitProcedureImpl explanationOfBenefitProcedure = new ExplanationOfBenefitProcedureImpl();
 		return explanationOfBenefitProcedure;
@@ -6926,6 +8477,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitProcessNote createExplanationOfBenefitProcessNote() {
 		ExplanationOfBenefitProcessNoteImpl explanationOfBenefitProcessNote = new ExplanationOfBenefitProcessNoteImpl();
 		return explanationOfBenefitProcessNote;
@@ -6936,6 +8488,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitRelated createExplanationOfBenefitRelated() {
 		ExplanationOfBenefitRelatedImpl explanationOfBenefitRelated = new ExplanationOfBenefitRelatedImpl();
 		return explanationOfBenefitRelated;
@@ -6946,6 +8499,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitStatus createExplanationOfBenefitStatus() {
 		ExplanationOfBenefitStatusImpl explanationOfBenefitStatus = new ExplanationOfBenefitStatusImpl();
 		return explanationOfBenefitStatus;
@@ -6956,6 +8510,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitSubDetail createExplanationOfBenefitSubDetail() {
 		ExplanationOfBenefitSubDetailImpl explanationOfBenefitSubDetail = new ExplanationOfBenefitSubDetailImpl();
 		return explanationOfBenefitSubDetail;
@@ -6966,6 +8521,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitSubDetail1 createExplanationOfBenefitSubDetail1() {
 		ExplanationOfBenefitSubDetail1Impl explanationOfBenefitSubDetail1 = new ExplanationOfBenefitSubDetail1Impl();
 		return explanationOfBenefitSubDetail1;
@@ -6976,6 +8532,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitSupportingInfo createExplanationOfBenefitSupportingInfo() {
 		ExplanationOfBenefitSupportingInfoImpl explanationOfBenefitSupportingInfo = new ExplanationOfBenefitSupportingInfoImpl();
 		return explanationOfBenefitSupportingInfo;
@@ -6986,6 +8543,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitTotal createExplanationOfBenefitTotal() {
 		ExplanationOfBenefitTotalImpl explanationOfBenefitTotal = new ExplanationOfBenefitTotalImpl();
 		return explanationOfBenefitTotal;
@@ -6996,6 +8554,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
 		return expression;
@@ -7006,6 +8565,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionLanguage createExpressionLanguage() {
 		ExpressionLanguageImpl expressionLanguage = new ExpressionLanguageImpl();
 		return expressionLanguage;
@@ -7016,6 +8576,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension createExtension() {
 		ExtensionImpl extension = new ExtensionImpl();
 		return extension;
@@ -7026,6 +8587,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionContextType createExtensionContextType() {
 		ExtensionContextTypeImpl extensionContextType = new ExtensionContextTypeImpl();
 		return extensionContextType;
@@ -7036,6 +8598,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FamilyHistoryStatus createFamilyHistoryStatus() {
 		FamilyHistoryStatusImpl familyHistoryStatus = new FamilyHistoryStatusImpl();
 		return familyHistoryStatus;
@@ -7046,6 +8609,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FamilyMemberHistory createFamilyMemberHistory() {
 		FamilyMemberHistoryImpl familyMemberHistory = new FamilyMemberHistoryImpl();
 		return familyMemberHistory;
@@ -7056,6 +8620,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FamilyMemberHistoryCondition createFamilyMemberHistoryCondition() {
 		FamilyMemberHistoryConditionImpl familyMemberHistoryCondition = new FamilyMemberHistoryConditionImpl();
 		return familyMemberHistoryCondition;
@@ -7066,6 +8631,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRAllTypes createFHIRAllTypes() {
 		FHIRAllTypesImpl fhirAllTypes = new FHIRAllTypesImpl();
 		return fhirAllTypes;
@@ -7076,6 +8642,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRDefinedType createFHIRDefinedType() {
 		FHIRDefinedTypeImpl fhirDefinedType = new FHIRDefinedTypeImpl();
 		return fhirDefinedType;
@@ -7086,6 +8653,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRDeviceStatus createFHIRDeviceStatus() {
 		FHIRDeviceStatusImpl fhirDeviceStatus = new FHIRDeviceStatusImpl();
 		return fhirDeviceStatus;
@@ -7096,6 +8664,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRPathTypes createFHIRPathTypes() {
 		FHIRPathTypesImpl fhirPathTypes = new FHIRPathTypesImpl();
 		return fhirPathTypes;
@@ -7106,6 +8675,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRSubstanceStatus createFHIRSubstanceStatus() {
 		FHIRSubstanceStatusImpl fhirSubstanceStatus = new FHIRSubstanceStatusImpl();
 		return fhirSubstanceStatus;
@@ -7116,6 +8686,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRVersion createFHIRVersion() {
 		FHIRVersionImpl fhirVersion = new FHIRVersionImpl();
 		return fhirVersion;
@@ -7126,6 +8697,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FilterOperator createFilterOperator() {
 		FilterOperatorImpl filterOperator = new FilterOperatorImpl();
 		return filterOperator;
@@ -7136,6 +8708,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FinancialResourceStatusCodes createFinancialResourceStatusCodes() {
 		FinancialResourceStatusCodesImpl financialResourceStatusCodes = new FinancialResourceStatusCodesImpl();
 		return financialResourceStatusCodes;
@@ -7146,6 +8719,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Flag createFlag() {
 		FlagImpl flag = new FlagImpl();
 		return flag;
@@ -7156,6 +8730,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FlagStatus createFlagStatus() {
 		FlagStatusImpl flagStatus = new FlagStatusImpl();
 		return flagStatus;
@@ -7166,6 +8741,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Goal createGoal() {
 		GoalImpl goal = new GoalImpl();
 		return goal;
@@ -7176,6 +8752,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GoalLifecycleStatus createGoalLifecycleStatus() {
 		GoalLifecycleStatusImpl goalLifecycleStatus = new GoalLifecycleStatusImpl();
 		return goalLifecycleStatus;
@@ -7186,6 +8763,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GoalTarget createGoalTarget() {
 		GoalTargetImpl goalTarget = new GoalTargetImpl();
 		return goalTarget;
@@ -7196,6 +8774,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphCompartmentRule createGraphCompartmentRule() {
 		GraphCompartmentRuleImpl graphCompartmentRule = new GraphCompartmentRuleImpl();
 		return graphCompartmentRule;
@@ -7206,6 +8785,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphCompartmentUse createGraphCompartmentUse() {
 		GraphCompartmentUseImpl graphCompartmentUse = new GraphCompartmentUseImpl();
 		return graphCompartmentUse;
@@ -7216,6 +8796,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphDefinition createGraphDefinition() {
 		GraphDefinitionImpl graphDefinition = new GraphDefinitionImpl();
 		return graphDefinition;
@@ -7226,6 +8807,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphDefinitionCompartment createGraphDefinitionCompartment() {
 		GraphDefinitionCompartmentImpl graphDefinitionCompartment = new GraphDefinitionCompartmentImpl();
 		return graphDefinitionCompartment;
@@ -7236,6 +8818,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphDefinitionLink createGraphDefinitionLink() {
 		GraphDefinitionLinkImpl graphDefinitionLink = new GraphDefinitionLinkImpl();
 		return graphDefinitionLink;
@@ -7246,6 +8829,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GraphDefinitionTarget createGraphDefinitionTarget() {
 		GraphDefinitionTargetImpl graphDefinitionTarget = new GraphDefinitionTargetImpl();
 		return graphDefinitionTarget;
@@ -7256,6 +8840,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Group createGroup() {
 		GroupImpl group = new GroupImpl();
 		return group;
@@ -7266,6 +8851,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupCharacteristic createGroupCharacteristic() {
 		GroupCharacteristicImpl groupCharacteristic = new GroupCharacteristicImpl();
 		return groupCharacteristic;
@@ -7276,6 +8862,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupMeasure createGroupMeasure() {
 		GroupMeasureImpl groupMeasure = new GroupMeasureImpl();
 		return groupMeasure;
@@ -7286,6 +8873,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupMember createGroupMember() {
 		GroupMemberImpl groupMember = new GroupMemberImpl();
 		return groupMember;
@@ -7296,6 +8884,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupType createGroupType() {
 		GroupTypeImpl groupType = new GroupTypeImpl();
 		return groupType;
@@ -7306,6 +8895,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GuidanceResponse createGuidanceResponse() {
 		GuidanceResponseImpl guidanceResponse = new GuidanceResponseImpl();
 		return guidanceResponse;
@@ -7316,6 +8906,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GuidanceResponseStatus createGuidanceResponseStatus() {
 		GuidanceResponseStatusImpl guidanceResponseStatus = new GuidanceResponseStatusImpl();
 		return guidanceResponseStatus;
@@ -7326,6 +8917,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GuidePageGeneration createGuidePageGeneration() {
 		GuidePageGenerationImpl guidePageGeneration = new GuidePageGenerationImpl();
 		return guidePageGeneration;
@@ -7336,6 +8928,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GuideParameterCode createGuideParameterCode() {
 		GuideParameterCodeImpl guideParameterCode = new GuideParameterCodeImpl();
 		return guideParameterCode;
@@ -7346,6 +8939,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HealthcareService createHealthcareService() {
 		HealthcareServiceImpl healthcareService = new HealthcareServiceImpl();
 		return healthcareService;
@@ -7356,6 +8950,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HealthcareServiceAvailableTime createHealthcareServiceAvailableTime() {
 		HealthcareServiceAvailableTimeImpl healthcareServiceAvailableTime = new HealthcareServiceAvailableTimeImpl();
 		return healthcareServiceAvailableTime;
@@ -7366,6 +8961,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HealthcareServiceEligibility createHealthcareServiceEligibility() {
 		HealthcareServiceEligibilityImpl healthcareServiceEligibility = new HealthcareServiceEligibilityImpl();
 		return healthcareServiceEligibility;
@@ -7376,6 +8972,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HealthcareServiceNotAvailable createHealthcareServiceNotAvailable() {
 		HealthcareServiceNotAvailableImpl healthcareServiceNotAvailable = new HealthcareServiceNotAvailableImpl();
 		return healthcareServiceNotAvailable;
@@ -7386,6 +8983,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HTTPVerb createHTTPVerb() {
 		HTTPVerbImpl httpVerb = new HTTPVerbImpl();
 		return httpVerb;
@@ -7396,6 +8994,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName createHumanName() {
 		HumanNameImpl humanName = new HumanNameImpl();
 		return humanName;
@@ -7406,6 +9005,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id createId() {
 		IdImpl id = new IdImpl();
 		return id;
@@ -7416,6 +9016,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier createIdentifier() {
 		IdentifierImpl identifier = new IdentifierImpl();
 		return identifier;
@@ -7426,6 +9027,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentifierUse createIdentifierUse() {
 		IdentifierUseImpl identifierUse = new IdentifierUseImpl();
 		return identifierUse;
@@ -7436,6 +9038,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentityAssuranceLevel createIdentityAssuranceLevel() {
 		IdentityAssuranceLevelImpl identityAssuranceLevel = new IdentityAssuranceLevelImpl();
 		return identityAssuranceLevel;
@@ -7446,6 +9049,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudy createImagingStudy() {
 		ImagingStudyImpl imagingStudy = new ImagingStudyImpl();
 		return imagingStudy;
@@ -7456,6 +9060,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudyInstance createImagingStudyInstance() {
 		ImagingStudyInstanceImpl imagingStudyInstance = new ImagingStudyInstanceImpl();
 		return imagingStudyInstance;
@@ -7466,6 +9071,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudyPerformer createImagingStudyPerformer() {
 		ImagingStudyPerformerImpl imagingStudyPerformer = new ImagingStudyPerformerImpl();
 		return imagingStudyPerformer;
@@ -7476,6 +9082,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudySeries createImagingStudySeries() {
 		ImagingStudySeriesImpl imagingStudySeries = new ImagingStudySeriesImpl();
 		return imagingStudySeries;
@@ -7486,6 +9093,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImagingStudyStatus createImagingStudyStatus() {
 		ImagingStudyStatusImpl imagingStudyStatus = new ImagingStudyStatusImpl();
 		return imagingStudyStatus;
@@ -7496,6 +9104,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Immunization createImmunization() {
 		ImmunizationImpl immunization = new ImmunizationImpl();
 		return immunization;
@@ -7506,6 +9115,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationEducation createImmunizationEducation() {
 		ImmunizationEducationImpl immunizationEducation = new ImmunizationEducationImpl();
 		return immunizationEducation;
@@ -7516,6 +9126,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationEvaluation createImmunizationEvaluation() {
 		ImmunizationEvaluationImpl immunizationEvaluation = new ImmunizationEvaluationImpl();
 		return immunizationEvaluation;
@@ -7526,6 +9137,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationEvaluationStatusCodes createImmunizationEvaluationStatusCodes() {
 		ImmunizationEvaluationStatusCodesImpl immunizationEvaluationStatusCodes = new ImmunizationEvaluationStatusCodesImpl();
 		return immunizationEvaluationStatusCodes;
@@ -7536,6 +9148,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationPerformer createImmunizationPerformer() {
 		ImmunizationPerformerImpl immunizationPerformer = new ImmunizationPerformerImpl();
 		return immunizationPerformer;
@@ -7546,6 +9159,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationProtocolApplied createImmunizationProtocolApplied() {
 		ImmunizationProtocolAppliedImpl immunizationProtocolApplied = new ImmunizationProtocolAppliedImpl();
 		return immunizationProtocolApplied;
@@ -7556,6 +9170,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationReaction createImmunizationReaction() {
 		ImmunizationReactionImpl immunizationReaction = new ImmunizationReactionImpl();
 		return immunizationReaction;
@@ -7566,6 +9181,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationRecommendation createImmunizationRecommendation() {
 		ImmunizationRecommendationImpl immunizationRecommendation = new ImmunizationRecommendationImpl();
 		return immunizationRecommendation;
@@ -7576,6 +9192,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationRecommendationDateCriterion createImmunizationRecommendationDateCriterion() {
 		ImmunizationRecommendationDateCriterionImpl immunizationRecommendationDateCriterion = new ImmunizationRecommendationDateCriterionImpl();
 		return immunizationRecommendationDateCriterion;
@@ -7586,6 +9203,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationRecommendationRecommendation createImmunizationRecommendationRecommendation() {
 		ImmunizationRecommendationRecommendationImpl immunizationRecommendationRecommendation = new ImmunizationRecommendationRecommendationImpl();
 		return immunizationRecommendationRecommendation;
@@ -7596,6 +9214,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImmunizationStatusCodes createImmunizationStatusCodes() {
 		ImmunizationStatusCodesImpl immunizationStatusCodes = new ImmunizationStatusCodesImpl();
 		return immunizationStatusCodes;
@@ -7606,6 +9225,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuide createImplementationGuide() {
 		ImplementationGuideImpl implementationGuide = new ImplementationGuideImpl();
 		return implementationGuide;
@@ -7616,6 +9236,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideDefinition createImplementationGuideDefinition() {
 		ImplementationGuideDefinitionImpl implementationGuideDefinition = new ImplementationGuideDefinitionImpl();
 		return implementationGuideDefinition;
@@ -7626,6 +9247,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideDependsOn createImplementationGuideDependsOn() {
 		ImplementationGuideDependsOnImpl implementationGuideDependsOn = new ImplementationGuideDependsOnImpl();
 		return implementationGuideDependsOn;
@@ -7636,6 +9258,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideGlobal createImplementationGuideGlobal() {
 		ImplementationGuideGlobalImpl implementationGuideGlobal = new ImplementationGuideGlobalImpl();
 		return implementationGuideGlobal;
@@ -7646,6 +9269,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideGrouping createImplementationGuideGrouping() {
 		ImplementationGuideGroupingImpl implementationGuideGrouping = new ImplementationGuideGroupingImpl();
 		return implementationGuideGrouping;
@@ -7656,6 +9280,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideManifest createImplementationGuideManifest() {
 		ImplementationGuideManifestImpl implementationGuideManifest = new ImplementationGuideManifestImpl();
 		return implementationGuideManifest;
@@ -7666,6 +9291,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuidePage createImplementationGuidePage() {
 		ImplementationGuidePageImpl implementationGuidePage = new ImplementationGuidePageImpl();
 		return implementationGuidePage;
@@ -7676,6 +9302,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuidePage1 createImplementationGuidePage1() {
 		ImplementationGuidePage1Impl implementationGuidePage1 = new ImplementationGuidePage1Impl();
 		return implementationGuidePage1;
@@ -7686,6 +9313,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideParameter createImplementationGuideParameter() {
 		ImplementationGuideParameterImpl implementationGuideParameter = new ImplementationGuideParameterImpl();
 		return implementationGuideParameter;
@@ -7696,6 +9324,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideResource createImplementationGuideResource() {
 		ImplementationGuideResourceImpl implementationGuideResource = new ImplementationGuideResourceImpl();
 		return implementationGuideResource;
@@ -7706,6 +9335,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideResource1 createImplementationGuideResource1() {
 		ImplementationGuideResource1Impl implementationGuideResource1 = new ImplementationGuideResource1Impl();
 		return implementationGuideResource1;
@@ -7716,6 +9346,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImplementationGuideTemplate createImplementationGuideTemplate() {
 		ImplementationGuideTemplateImpl implementationGuideTemplate = new ImplementationGuideTemplateImpl();
 		return implementationGuideTemplate;
@@ -7726,6 +9357,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ingredient createIngredient() {
 		IngredientImpl ingredient = new IngredientImpl();
 		return ingredient;
@@ -7736,6 +9368,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientManufacturer createIngredientManufacturer() {
 		IngredientManufacturerImpl ingredientManufacturer = new IngredientManufacturerImpl();
 		return ingredientManufacturer;
@@ -7746,6 +9379,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientManufacturerRole createIngredientManufacturerRole() {
 		IngredientManufacturerRoleImpl ingredientManufacturerRole = new IngredientManufacturerRoleImpl();
 		return ingredientManufacturerRole;
@@ -7756,6 +9390,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientReferenceStrength createIngredientReferenceStrength() {
 		IngredientReferenceStrengthImpl ingredientReferenceStrength = new IngredientReferenceStrengthImpl();
 		return ingredientReferenceStrength;
@@ -7766,6 +9401,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientStrength createIngredientStrength() {
 		IngredientStrengthImpl ingredientStrength = new IngredientStrengthImpl();
 		return ingredientStrength;
@@ -7776,6 +9412,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientSubstance createIngredientSubstance() {
 		IngredientSubstanceImpl ingredientSubstance = new IngredientSubstanceImpl();
 		return ingredientSubstance;
@@ -7786,6 +9423,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant createInstant() {
 		InstantImpl instant = new InstantImpl();
 		return instant;
@@ -7796,6 +9434,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlan createInsurancePlan() {
 		InsurancePlanImpl insurancePlan = new InsurancePlanImpl();
 		return insurancePlan;
@@ -7806,6 +9445,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanBenefit createInsurancePlanBenefit() {
 		InsurancePlanBenefitImpl insurancePlanBenefit = new InsurancePlanBenefitImpl();
 		return insurancePlanBenefit;
@@ -7816,6 +9456,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanBenefit1 createInsurancePlanBenefit1() {
 		InsurancePlanBenefit1Impl insurancePlanBenefit1 = new InsurancePlanBenefit1Impl();
 		return insurancePlanBenefit1;
@@ -7826,6 +9467,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanContact createInsurancePlanContact() {
 		InsurancePlanContactImpl insurancePlanContact = new InsurancePlanContactImpl();
 		return insurancePlanContact;
@@ -7836,6 +9478,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanCost createInsurancePlanCost() {
 		InsurancePlanCostImpl insurancePlanCost = new InsurancePlanCostImpl();
 		return insurancePlanCost;
@@ -7846,6 +9489,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanCoverage createInsurancePlanCoverage() {
 		InsurancePlanCoverageImpl insurancePlanCoverage = new InsurancePlanCoverageImpl();
 		return insurancePlanCoverage;
@@ -7856,6 +9500,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanGeneralCost createInsurancePlanGeneralCost() {
 		InsurancePlanGeneralCostImpl insurancePlanGeneralCost = new InsurancePlanGeneralCostImpl();
 		return insurancePlanGeneralCost;
@@ -7866,6 +9511,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanLimit createInsurancePlanLimit() {
 		InsurancePlanLimitImpl insurancePlanLimit = new InsurancePlanLimitImpl();
 		return insurancePlanLimit;
@@ -7876,6 +9522,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanPlan createInsurancePlanPlan() {
 		InsurancePlanPlanImpl insurancePlanPlan = new InsurancePlanPlanImpl();
 		return insurancePlanPlan;
@@ -7886,6 +9533,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InsurancePlanSpecificCost createInsurancePlanSpecificCost() {
 		InsurancePlanSpecificCostImpl insurancePlanSpecificCost = new InsurancePlanSpecificCostImpl();
 		return insurancePlanSpecificCost;
@@ -7896,6 +9544,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer createInteger() {
 		IntegerImpl integer = new IntegerImpl();
 		return integer;
@@ -7906,6 +9555,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionTrigger createInteractionTrigger() {
 		InteractionTriggerImpl interactionTrigger = new InteractionTriggerImpl();
 		return interactionTrigger;
@@ -7916,6 +9566,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Invoice createInvoice() {
 		InvoiceImpl invoice = new InvoiceImpl();
 		return invoice;
@@ -7926,6 +9577,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoiceLineItem createInvoiceLineItem() {
 		InvoiceLineItemImpl invoiceLineItem = new InvoiceLineItemImpl();
 		return invoiceLineItem;
@@ -7936,6 +9588,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoiceParticipant createInvoiceParticipant() {
 		InvoiceParticipantImpl invoiceParticipant = new InvoiceParticipantImpl();
 		return invoiceParticipant;
@@ -7946,6 +9599,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoicePriceComponent createInvoicePriceComponent() {
 		InvoicePriceComponentImpl invoicePriceComponent = new InvoicePriceComponentImpl();
 		return invoicePriceComponent;
@@ -7956,6 +9610,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoicePriceComponentType createInvoicePriceComponentType() {
 		InvoicePriceComponentTypeImpl invoicePriceComponentType = new InvoicePriceComponentTypeImpl();
 		return invoicePriceComponentType;
@@ -7966,6 +9621,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InvoiceStatus createInvoiceStatus() {
 		InvoiceStatusImpl invoiceStatus = new InvoiceStatusImpl();
 		return invoiceStatus;
@@ -7976,6 +9632,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IssueSeverity createIssueSeverity() {
 		IssueSeverityImpl issueSeverity = new IssueSeverityImpl();
 		return issueSeverity;
@@ -7986,6 +9643,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IssueType createIssueType() {
 		IssueTypeImpl issueType = new IssueTypeImpl();
 		return issueType;
@@ -7996,6 +9654,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public KnowledgeResourceType createKnowledgeResourceType() {
 		KnowledgeResourceTypeImpl knowledgeResourceType = new KnowledgeResourceTypeImpl();
 		return knowledgeResourceType;
@@ -8006,6 +9665,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Library createLibrary() {
 		LibraryImpl library = new LibraryImpl();
 		return library;
@@ -8016,6 +9676,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Linkage createLinkage() {
 		LinkageImpl linkage = new LinkageImpl();
 		return linkage;
@@ -8026,6 +9687,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkageItem createLinkageItem() {
 		LinkageItemImpl linkageItem = new LinkageItemImpl();
 		return linkageItem;
@@ -8036,6 +9698,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkageType createLinkageType() {
 		LinkageTypeImpl linkageType = new LinkageTypeImpl();
 		return linkageType;
@@ -8046,6 +9709,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkType createLinkType() {
 		LinkTypeImpl linkType = new LinkTypeImpl();
 		return linkType;
@@ -8056,6 +9720,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List createList() {
 		ListImpl list = new ListImpl();
 		return list;
@@ -8066,6 +9731,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListEntry createListEntry() {
 		ListEntryImpl listEntry = new ListEntryImpl();
 		return listEntry;
@@ -8076,6 +9742,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListMode createListMode() {
 		ListModeImpl listMode = new ListModeImpl();
 		return listMode;
@@ -8086,6 +9753,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListStatus createListStatus() {
 		ListStatusImpl listStatus = new ListStatusImpl();
 		return listStatus;
@@ -8096,6 +9764,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location createLocation() {
 		LocationImpl location = new LocationImpl();
 		return location;
@@ -8106,6 +9775,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationHoursOfOperation createLocationHoursOfOperation() {
 		LocationHoursOfOperationImpl locationHoursOfOperation = new LocationHoursOfOperationImpl();
 		return locationHoursOfOperation;
@@ -8116,6 +9786,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationMode createLocationMode() {
 		LocationModeImpl locationMode = new LocationModeImpl();
 		return locationMode;
@@ -8126,6 +9797,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationPosition createLocationPosition() {
 		LocationPositionImpl locationPosition = new LocationPositionImpl();
 		return locationPosition;
@@ -8136,6 +9808,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationStatus createLocationStatus() {
 		LocationStatusImpl locationStatus = new LocationStatusImpl();
 		return locationStatus;
@@ -8146,6 +9819,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ManufacturedItemDefinition createManufacturedItemDefinition() {
 		ManufacturedItemDefinitionImpl manufacturedItemDefinition = new ManufacturedItemDefinitionImpl();
 		return manufacturedItemDefinition;
@@ -8156,6 +9830,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ManufacturedItemDefinitionProperty createManufacturedItemDefinitionProperty() {
 		ManufacturedItemDefinitionPropertyImpl manufacturedItemDefinitionProperty = new ManufacturedItemDefinitionPropertyImpl();
 		return manufacturedItemDefinitionProperty;
@@ -8166,6 +9841,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown createMarkdown() {
 		MarkdownImpl markdown = new MarkdownImpl();
 		return markdown;
@@ -8176,6 +9852,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarketingStatus createMarketingStatus() {
 		MarketingStatusImpl marketingStatus = new MarketingStatusImpl();
 		return marketingStatus;
@@ -8186,6 +9863,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Measure createMeasure() {
 		MeasureImpl measure = new MeasureImpl();
 		return measure;
@@ -8196,6 +9874,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureComponent createMeasureComponent() {
 		MeasureComponentImpl measureComponent = new MeasureComponentImpl();
 		return measureComponent;
@@ -8206,6 +9885,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureGroup createMeasureGroup() {
 		MeasureGroupImpl measureGroup = new MeasureGroupImpl();
 		return measureGroup;
@@ -8216,6 +9896,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasurePopulation createMeasurePopulation() {
 		MeasurePopulationImpl measurePopulation = new MeasurePopulationImpl();
 		return measurePopulation;
@@ -8226,6 +9907,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReport createMeasureReport() {
 		MeasureReportImpl measureReport = new MeasureReportImpl();
 		return measureReport;
@@ -8236,6 +9918,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportComponent createMeasureReportComponent() {
 		MeasureReportComponentImpl measureReportComponent = new MeasureReportComponentImpl();
 		return measureReportComponent;
@@ -8246,6 +9929,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportGroup createMeasureReportGroup() {
 		MeasureReportGroupImpl measureReportGroup = new MeasureReportGroupImpl();
 		return measureReportGroup;
@@ -8256,6 +9940,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportPopulation createMeasureReportPopulation() {
 		MeasureReportPopulationImpl measureReportPopulation = new MeasureReportPopulationImpl();
 		return measureReportPopulation;
@@ -8266,6 +9951,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportPopulation1 createMeasureReportPopulation1() {
 		MeasureReportPopulation1Impl measureReportPopulation1 = new MeasureReportPopulation1Impl();
 		return measureReportPopulation1;
@@ -8276,6 +9962,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportStatus createMeasureReportStatus() {
 		MeasureReportStatusImpl measureReportStatus = new MeasureReportStatusImpl();
 		return measureReportStatus;
@@ -8286,6 +9973,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportStratifier createMeasureReportStratifier() {
 		MeasureReportStratifierImpl measureReportStratifier = new MeasureReportStratifierImpl();
 		return measureReportStratifier;
@@ -8296,6 +9984,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportStratum createMeasureReportStratum() {
 		MeasureReportStratumImpl measureReportStratum = new MeasureReportStratumImpl();
 		return measureReportStratum;
@@ -8306,6 +9995,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportType createMeasureReportType() {
 		MeasureReportTypeImpl measureReportType = new MeasureReportTypeImpl();
 		return measureReportType;
@@ -8316,6 +10006,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureStratifier createMeasureStratifier() {
 		MeasureStratifierImpl measureStratifier = new MeasureStratifierImpl();
 		return measureStratifier;
@@ -8326,6 +10017,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureSupplementalData createMeasureSupplementalData() {
 		MeasureSupplementalDataImpl measureSupplementalData = new MeasureSupplementalDataImpl();
 		return measureSupplementalData;
@@ -8336,6 +10028,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Media createMedia() {
 		MediaImpl media = new MediaImpl();
 		return media;
@@ -8346,6 +10039,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Medication createMedication() {
 		MedicationImpl medication = new MedicationImpl();
 		return medication;
@@ -8356,6 +10050,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationAdministration createMedicationAdministration() {
 		MedicationAdministrationImpl medicationAdministration = new MedicationAdministrationImpl();
 		return medicationAdministration;
@@ -8366,6 +10061,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationAdministrationDosage createMedicationAdministrationDosage() {
 		MedicationAdministrationDosageImpl medicationAdministrationDosage = new MedicationAdministrationDosageImpl();
 		return medicationAdministrationDosage;
@@ -8376,6 +10072,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationAdministrationPerformer createMedicationAdministrationPerformer() {
 		MedicationAdministrationPerformerImpl medicationAdministrationPerformer = new MedicationAdministrationPerformerImpl();
 		return medicationAdministrationPerformer;
@@ -8386,6 +10083,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationBatch createMedicationBatch() {
 		MedicationBatchImpl medicationBatch = new MedicationBatchImpl();
 		return medicationBatch;
@@ -8396,6 +10094,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationDispense createMedicationDispense() {
 		MedicationDispenseImpl medicationDispense = new MedicationDispenseImpl();
 		return medicationDispense;
@@ -8406,6 +10105,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationDispensePerformer createMedicationDispensePerformer() {
 		MedicationDispensePerformerImpl medicationDispensePerformer = new MedicationDispensePerformerImpl();
 		return medicationDispensePerformer;
@@ -8416,6 +10116,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationDispenseSubstitution createMedicationDispenseSubstitution() {
 		MedicationDispenseSubstitutionImpl medicationDispenseSubstitution = new MedicationDispenseSubstitutionImpl();
 		return medicationDispenseSubstitution;
@@ -8426,6 +10127,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationIngredient createMedicationIngredient() {
 		MedicationIngredientImpl medicationIngredient = new MedicationIngredientImpl();
 		return medicationIngredient;
@@ -8436,6 +10138,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledge createMedicationKnowledge() {
 		MedicationKnowledgeImpl medicationKnowledge = new MedicationKnowledgeImpl();
 		return medicationKnowledge;
@@ -8446,6 +10149,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeAdministrationGuidelines createMedicationKnowledgeAdministrationGuidelines() {
 		MedicationKnowledgeAdministrationGuidelinesImpl medicationKnowledgeAdministrationGuidelines = new MedicationKnowledgeAdministrationGuidelinesImpl();
 		return medicationKnowledgeAdministrationGuidelines;
@@ -8456,6 +10160,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeCost createMedicationKnowledgeCost() {
 		MedicationKnowledgeCostImpl medicationKnowledgeCost = new MedicationKnowledgeCostImpl();
 		return medicationKnowledgeCost;
@@ -8466,6 +10171,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeDosage createMedicationKnowledgeDosage() {
 		MedicationKnowledgeDosageImpl medicationKnowledgeDosage = new MedicationKnowledgeDosageImpl();
 		return medicationKnowledgeDosage;
@@ -8476,6 +10182,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeDrugCharacteristic createMedicationKnowledgeDrugCharacteristic() {
 		MedicationKnowledgeDrugCharacteristicImpl medicationKnowledgeDrugCharacteristic = new MedicationKnowledgeDrugCharacteristicImpl();
 		return medicationKnowledgeDrugCharacteristic;
@@ -8486,6 +10193,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeIngredient createMedicationKnowledgeIngredient() {
 		MedicationKnowledgeIngredientImpl medicationKnowledgeIngredient = new MedicationKnowledgeIngredientImpl();
 		return medicationKnowledgeIngredient;
@@ -8496,6 +10204,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeKinetics createMedicationKnowledgeKinetics() {
 		MedicationKnowledgeKineticsImpl medicationKnowledgeKinetics = new MedicationKnowledgeKineticsImpl();
 		return medicationKnowledgeKinetics;
@@ -8506,6 +10215,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeMaxDispense createMedicationKnowledgeMaxDispense() {
 		MedicationKnowledgeMaxDispenseImpl medicationKnowledgeMaxDispense = new MedicationKnowledgeMaxDispenseImpl();
 		return medicationKnowledgeMaxDispense;
@@ -8516,6 +10226,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeMedicineClassification createMedicationKnowledgeMedicineClassification() {
 		MedicationKnowledgeMedicineClassificationImpl medicationKnowledgeMedicineClassification = new MedicationKnowledgeMedicineClassificationImpl();
 		return medicationKnowledgeMedicineClassification;
@@ -8526,6 +10237,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeMonitoringProgram createMedicationKnowledgeMonitoringProgram() {
 		MedicationKnowledgeMonitoringProgramImpl medicationKnowledgeMonitoringProgram = new MedicationKnowledgeMonitoringProgramImpl();
 		return medicationKnowledgeMonitoringProgram;
@@ -8536,6 +10248,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeMonograph createMedicationKnowledgeMonograph() {
 		MedicationKnowledgeMonographImpl medicationKnowledgeMonograph = new MedicationKnowledgeMonographImpl();
 		return medicationKnowledgeMonograph;
@@ -8546,6 +10259,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgePackaging createMedicationKnowledgePackaging() {
 		MedicationKnowledgePackagingImpl medicationKnowledgePackaging = new MedicationKnowledgePackagingImpl();
 		return medicationKnowledgePackaging;
@@ -8556,6 +10270,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgePatientCharacteristics createMedicationKnowledgePatientCharacteristics() {
 		MedicationKnowledgePatientCharacteristicsImpl medicationKnowledgePatientCharacteristics = new MedicationKnowledgePatientCharacteristicsImpl();
 		return medicationKnowledgePatientCharacteristics;
@@ -8566,6 +10281,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeRegulatory createMedicationKnowledgeRegulatory() {
 		MedicationKnowledgeRegulatoryImpl medicationKnowledgeRegulatory = new MedicationKnowledgeRegulatoryImpl();
 		return medicationKnowledgeRegulatory;
@@ -8576,6 +10292,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeRelatedMedicationKnowledge createMedicationKnowledgeRelatedMedicationKnowledge() {
 		MedicationKnowledgeRelatedMedicationKnowledgeImpl medicationKnowledgeRelatedMedicationKnowledge = new MedicationKnowledgeRelatedMedicationKnowledgeImpl();
 		return medicationKnowledgeRelatedMedicationKnowledge;
@@ -8586,6 +10303,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeSchedule createMedicationKnowledgeSchedule() {
 		MedicationKnowledgeScheduleImpl medicationKnowledgeSchedule = new MedicationKnowledgeScheduleImpl();
 		return medicationKnowledgeSchedule;
@@ -8596,6 +10314,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeSubstitution createMedicationKnowledgeSubstitution() {
 		MedicationKnowledgeSubstitutionImpl medicationKnowledgeSubstitution = new MedicationKnowledgeSubstitutionImpl();
 		return medicationKnowledgeSubstitution;
@@ -8606,6 +10325,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequest createMedicationRequest() {
 		MedicationRequestImpl medicationRequest = new MedicationRequestImpl();
 		return medicationRequest;
@@ -8616,6 +10336,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequestDispenseRequest createMedicationRequestDispenseRequest() {
 		MedicationRequestDispenseRequestImpl medicationRequestDispenseRequest = new MedicationRequestDispenseRequestImpl();
 		return medicationRequestDispenseRequest;
@@ -8626,6 +10347,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequestInitialFill createMedicationRequestInitialFill() {
 		MedicationRequestInitialFillImpl medicationRequestInitialFill = new MedicationRequestInitialFillImpl();
 		return medicationRequestInitialFill;
@@ -8636,6 +10358,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequestIntent createMedicationRequestIntent() {
 		MedicationRequestIntentImpl medicationRequestIntent = new MedicationRequestIntentImpl();
 		return medicationRequestIntent;
@@ -8646,6 +10369,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationrequestStatus createMedicationrequestStatus() {
 		MedicationrequestStatusImpl medicationrequestStatus = new MedicationrequestStatusImpl();
 		return medicationrequestStatus;
@@ -8656,6 +10380,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationRequestSubstitution createMedicationRequestSubstitution() {
 		MedicationRequestSubstitutionImpl medicationRequestSubstitution = new MedicationRequestSubstitutionImpl();
 		return medicationRequestSubstitution;
@@ -8666,6 +10391,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationStatement createMedicationStatement() {
 		MedicationStatementImpl medicationStatement = new MedicationStatementImpl();
 		return medicationStatement;
@@ -8676,6 +10402,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationStatementStatusCodes createMedicationStatementStatusCodes() {
 		MedicationStatementStatusCodesImpl medicationStatementStatusCodes = new MedicationStatementStatusCodesImpl();
 		return medicationStatementStatusCodes;
@@ -8686,6 +10413,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationStatusCodes createMedicationStatusCodes() {
 		MedicationStatusCodesImpl medicationStatusCodes = new MedicationStatusCodesImpl();
 		return medicationStatusCodes;
@@ -8696,6 +10424,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinition createMedicinalProductDefinition() {
 		MedicinalProductDefinitionImpl medicinalProductDefinition = new MedicinalProductDefinitionImpl();
 		return medicinalProductDefinition;
@@ -8706,6 +10435,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionCharacteristic createMedicinalProductDefinitionCharacteristic() {
 		MedicinalProductDefinitionCharacteristicImpl medicinalProductDefinitionCharacteristic = new MedicinalProductDefinitionCharacteristicImpl();
 		return medicinalProductDefinitionCharacteristic;
@@ -8716,6 +10446,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionContact createMedicinalProductDefinitionContact() {
 		MedicinalProductDefinitionContactImpl medicinalProductDefinitionContact = new MedicinalProductDefinitionContactImpl();
 		return medicinalProductDefinitionContact;
@@ -8726,6 +10457,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionCountryLanguage createMedicinalProductDefinitionCountryLanguage() {
 		MedicinalProductDefinitionCountryLanguageImpl medicinalProductDefinitionCountryLanguage = new MedicinalProductDefinitionCountryLanguageImpl();
 		return medicinalProductDefinitionCountryLanguage;
@@ -8736,6 +10468,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionCrossReference createMedicinalProductDefinitionCrossReference() {
 		MedicinalProductDefinitionCrossReferenceImpl medicinalProductDefinitionCrossReference = new MedicinalProductDefinitionCrossReferenceImpl();
 		return medicinalProductDefinitionCrossReference;
@@ -8746,6 +10479,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionName createMedicinalProductDefinitionName() {
 		MedicinalProductDefinitionNameImpl medicinalProductDefinitionName = new MedicinalProductDefinitionNameImpl();
 		return medicinalProductDefinitionName;
@@ -8756,6 +10490,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionNamePart createMedicinalProductDefinitionNamePart() {
 		MedicinalProductDefinitionNamePartImpl medicinalProductDefinitionNamePart = new MedicinalProductDefinitionNamePartImpl();
 		return medicinalProductDefinitionNamePart;
@@ -8766,6 +10501,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicinalProductDefinitionOperation createMedicinalProductDefinitionOperation() {
 		MedicinalProductDefinitionOperationImpl medicinalProductDefinitionOperation = new MedicinalProductDefinitionOperationImpl();
 		return medicinalProductDefinitionOperation;
@@ -8776,6 +10512,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageDefinition createMessageDefinition() {
 		MessageDefinitionImpl messageDefinition = new MessageDefinitionImpl();
 		return messageDefinition;
@@ -8786,6 +10523,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageDefinitionAllowedResponse createMessageDefinitionAllowedResponse() {
 		MessageDefinitionAllowedResponseImpl messageDefinitionAllowedResponse = new MessageDefinitionAllowedResponseImpl();
 		return messageDefinitionAllowedResponse;
@@ -8796,6 +10534,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageDefinitionFocus createMessageDefinitionFocus() {
 		MessageDefinitionFocusImpl messageDefinitionFocus = new MessageDefinitionFocusImpl();
 		return messageDefinitionFocus;
@@ -8806,6 +10545,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageHeader createMessageHeader() {
 		MessageHeaderImpl messageHeader = new MessageHeaderImpl();
 		return messageHeader;
@@ -8816,6 +10556,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageHeaderDestination createMessageHeaderDestination() {
 		MessageHeaderDestinationImpl messageHeaderDestination = new MessageHeaderDestinationImpl();
 		return messageHeaderDestination;
@@ -8826,6 +10567,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageHeaderResponse createMessageHeaderResponse() {
 		MessageHeaderResponseImpl messageHeaderResponse = new MessageHeaderResponseImpl();
 		return messageHeaderResponse;
@@ -8836,6 +10578,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageheaderResponseRequest createMessageheaderResponseRequest() {
 		MessageheaderResponseRequestImpl messageheaderResponseRequest = new MessageheaderResponseRequestImpl();
 		return messageheaderResponseRequest;
@@ -8846,6 +10589,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageHeaderSource createMessageHeaderSource() {
 		MessageHeaderSourceImpl messageHeaderSource = new MessageHeaderSourceImpl();
 		return messageHeaderSource;
@@ -8856,6 +10600,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageSignificanceCategory createMessageSignificanceCategory() {
 		MessageSignificanceCategoryImpl messageSignificanceCategory = new MessageSignificanceCategoryImpl();
 		return messageSignificanceCategory;
@@ -8866,6 +10611,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Meta createMeta() {
 		MetaImpl meta = new MetaImpl();
 		return meta;
@@ -8876,6 +10622,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequence createMolecularSequence() {
 		MolecularSequenceImpl molecularSequence = new MolecularSequenceImpl();
 		return molecularSequence;
@@ -8886,6 +10633,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceInner createMolecularSequenceInner() {
 		MolecularSequenceInnerImpl molecularSequenceInner = new MolecularSequenceInnerImpl();
 		return molecularSequenceInner;
@@ -8896,6 +10644,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceOuter createMolecularSequenceOuter() {
 		MolecularSequenceOuterImpl molecularSequenceOuter = new MolecularSequenceOuterImpl();
 		return molecularSequenceOuter;
@@ -8906,6 +10655,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceQuality createMolecularSequenceQuality() {
 		MolecularSequenceQualityImpl molecularSequenceQuality = new MolecularSequenceQualityImpl();
 		return molecularSequenceQuality;
@@ -8916,6 +10666,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceReferenceSeq createMolecularSequenceReferenceSeq() {
 		MolecularSequenceReferenceSeqImpl molecularSequenceReferenceSeq = new MolecularSequenceReferenceSeqImpl();
 		return molecularSequenceReferenceSeq;
@@ -8926,6 +10677,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceRepository createMolecularSequenceRepository() {
 		MolecularSequenceRepositoryImpl molecularSequenceRepository = new MolecularSequenceRepositoryImpl();
 		return molecularSequenceRepository;
@@ -8936,6 +10688,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceRoc createMolecularSequenceRoc() {
 		MolecularSequenceRocImpl molecularSequenceRoc = new MolecularSequenceRocImpl();
 		return molecularSequenceRoc;
@@ -8946,6 +10699,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceStructureVariant createMolecularSequenceStructureVariant() {
 		MolecularSequenceStructureVariantImpl molecularSequenceStructureVariant = new MolecularSequenceStructureVariantImpl();
 		return molecularSequenceStructureVariant;
@@ -8956,6 +10710,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceVariant createMolecularSequenceVariant() {
 		MolecularSequenceVariantImpl molecularSequenceVariant = new MolecularSequenceVariantImpl();
 		return molecularSequenceVariant;
@@ -8966,6 +10721,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money createMoney() {
 		MoneyImpl money = new MoneyImpl();
 		return money;
@@ -8976,6 +10732,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NameUse createNameUse() {
 		NameUseImpl nameUse = new NameUseImpl();
 		return nameUse;
@@ -8986,6 +10743,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamingSystem createNamingSystem() {
 		NamingSystemImpl namingSystem = new NamingSystemImpl();
 		return namingSystem;
@@ -8996,6 +10754,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamingSystemIdentifierType createNamingSystemIdentifierType() {
 		NamingSystemIdentifierTypeImpl namingSystemIdentifierType = new NamingSystemIdentifierTypeImpl();
 		return namingSystemIdentifierType;
@@ -9006,6 +10765,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamingSystemType createNamingSystemType() {
 		NamingSystemTypeImpl namingSystemType = new NamingSystemTypeImpl();
 		return namingSystemType;
@@ -9016,6 +10776,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamingSystemUniqueId createNamingSystemUniqueId() {
 		NamingSystemUniqueIdImpl namingSystemUniqueId = new NamingSystemUniqueIdImpl();
 		return namingSystemUniqueId;
@@ -9026,6 +10787,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Narrative createNarrative() {
 		NarrativeImpl narrative = new NarrativeImpl();
 		return narrative;
@@ -9036,6 +10798,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NarrativeStatus createNarrativeStatus() {
 		NarrativeStatusImpl narrativeStatus = new NarrativeStatusImpl();
 		return narrativeStatus;
@@ -9046,6 +10809,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NoteType createNoteType() {
 		NoteTypeImpl noteType = new NoteTypeImpl();
 		return noteType;
@@ -9056,6 +10820,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrder createNutritionOrder() {
 		NutritionOrderImpl nutritionOrder = new NutritionOrderImpl();
 		return nutritionOrder;
@@ -9066,6 +10831,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderAdministration createNutritionOrderAdministration() {
 		NutritionOrderAdministrationImpl nutritionOrderAdministration = new NutritionOrderAdministrationImpl();
 		return nutritionOrderAdministration;
@@ -9076,6 +10842,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderEnteralFormula createNutritionOrderEnteralFormula() {
 		NutritionOrderEnteralFormulaImpl nutritionOrderEnteralFormula = new NutritionOrderEnteralFormulaImpl();
 		return nutritionOrderEnteralFormula;
@@ -9086,6 +10853,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderNutrient createNutritionOrderNutrient() {
 		NutritionOrderNutrientImpl nutritionOrderNutrient = new NutritionOrderNutrientImpl();
 		return nutritionOrderNutrient;
@@ -9096,6 +10864,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderOralDiet createNutritionOrderOralDiet() {
 		NutritionOrderOralDietImpl nutritionOrderOralDiet = new NutritionOrderOralDietImpl();
 		return nutritionOrderOralDiet;
@@ -9106,6 +10875,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderSupplement createNutritionOrderSupplement() {
 		NutritionOrderSupplementImpl nutritionOrderSupplement = new NutritionOrderSupplementImpl();
 		return nutritionOrderSupplement;
@@ -9116,6 +10886,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionOrderTexture createNutritionOrderTexture() {
 		NutritionOrderTextureImpl nutritionOrderTexture = new NutritionOrderTextureImpl();
 		return nutritionOrderTexture;
@@ -9126,6 +10897,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProduct createNutritionProduct() {
 		NutritionProductImpl nutritionProduct = new NutritionProductImpl();
 		return nutritionProduct;
@@ -9136,6 +10908,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProductIngredient createNutritionProductIngredient() {
 		NutritionProductIngredientImpl nutritionProductIngredient = new NutritionProductIngredientImpl();
 		return nutritionProductIngredient;
@@ -9146,6 +10919,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProductInstance createNutritionProductInstance() {
 		NutritionProductInstanceImpl nutritionProductInstance = new NutritionProductInstanceImpl();
 		return nutritionProductInstance;
@@ -9156,6 +10930,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProductNutrient createNutritionProductNutrient() {
 		NutritionProductNutrientImpl nutritionProductNutrient = new NutritionProductNutrientImpl();
 		return nutritionProductNutrient;
@@ -9166,6 +10941,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProductProductCharacteristic createNutritionProductProductCharacteristic() {
 		NutritionProductProductCharacteristicImpl nutritionProductProductCharacteristic = new NutritionProductProductCharacteristicImpl();
 		return nutritionProductProductCharacteristic;
@@ -9176,6 +10952,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NutritionProductStatus createNutritionProductStatus() {
 		NutritionProductStatusImpl nutritionProductStatus = new NutritionProductStatusImpl();
 		return nutritionProductStatus;
@@ -9186,6 +10963,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Observation createObservation() {
 		ObservationImpl observation = new ObservationImpl();
 		return observation;
@@ -9196,6 +10974,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationComponent createObservationComponent() {
 		ObservationComponentImpl observationComponent = new ObservationComponentImpl();
 		return observationComponent;
@@ -9206,6 +10985,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDataType createObservationDataType() {
 		ObservationDataTypeImpl observationDataType = new ObservationDataTypeImpl();
 		return observationDataType;
@@ -9216,6 +10996,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDefinition createObservationDefinition() {
 		ObservationDefinitionImpl observationDefinition = new ObservationDefinitionImpl();
 		return observationDefinition;
@@ -9226,6 +11007,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDefinitionQualifiedInterval createObservationDefinitionQualifiedInterval() {
 		ObservationDefinitionQualifiedIntervalImpl observationDefinitionQualifiedInterval = new ObservationDefinitionQualifiedIntervalImpl();
 		return observationDefinitionQualifiedInterval;
@@ -9236,6 +11018,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDefinitionQuantitativeDetails createObservationDefinitionQuantitativeDetails() {
 		ObservationDefinitionQuantitativeDetailsImpl observationDefinitionQuantitativeDetails = new ObservationDefinitionQuantitativeDetailsImpl();
 		return observationDefinitionQuantitativeDetails;
@@ -9246,6 +11029,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationRangeCategory createObservationRangeCategory() {
 		ObservationRangeCategoryImpl observationRangeCategory = new ObservationRangeCategoryImpl();
 		return observationRangeCategory;
@@ -9256,6 +11040,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationReferenceRange createObservationReferenceRange() {
 		ObservationReferenceRangeImpl observationReferenceRange = new ObservationReferenceRangeImpl();
 		return observationReferenceRange;
@@ -9266,6 +11051,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationStatus createObservationStatus() {
 		ObservationStatusImpl observationStatus = new ObservationStatusImpl();
 		return observationStatus;
@@ -9276,6 +11062,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid createOid() {
 		OidImpl oid = new OidImpl();
 		return oid;
@@ -9286,6 +11073,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinition createOperationDefinition() {
 		OperationDefinitionImpl operationDefinition = new OperationDefinitionImpl();
 		return operationDefinition;
@@ -9296,6 +11084,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinitionBinding createOperationDefinitionBinding() {
 		OperationDefinitionBindingImpl operationDefinitionBinding = new OperationDefinitionBindingImpl();
 		return operationDefinitionBinding;
@@ -9306,6 +11095,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinitionOverload createOperationDefinitionOverload() {
 		OperationDefinitionOverloadImpl operationDefinitionOverload = new OperationDefinitionOverloadImpl();
 		return operationDefinitionOverload;
@@ -9316,6 +11106,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinitionParameter createOperationDefinitionParameter() {
 		OperationDefinitionParameterImpl operationDefinitionParameter = new OperationDefinitionParameterImpl();
 		return operationDefinitionParameter;
@@ -9326,6 +11117,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationDefinitionReferencedFrom createOperationDefinitionReferencedFrom() {
 		OperationDefinitionReferencedFromImpl operationDefinitionReferencedFrom = new OperationDefinitionReferencedFromImpl();
 		return operationDefinitionReferencedFrom;
@@ -9336,6 +11128,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationKind createOperationKind() {
 		OperationKindImpl operationKind = new OperationKindImpl();
 		return operationKind;
@@ -9346,6 +11139,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationOutcome createOperationOutcome() {
 		OperationOutcomeImpl operationOutcome = new OperationOutcomeImpl();
 		return operationOutcome;
@@ -9356,6 +11150,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationOutcomeIssue createOperationOutcomeIssue() {
 		OperationOutcomeIssueImpl operationOutcomeIssue = new OperationOutcomeIssueImpl();
 		return operationOutcomeIssue;
@@ -9366,6 +11161,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationParameterUse createOperationParameterUse() {
 		OperationParameterUseImpl operationParameterUse = new OperationParameterUseImpl();
 		return operationParameterUse;
@@ -9376,6 +11172,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Organization createOrganization() {
 		OrganizationImpl organization = new OrganizationImpl();
 		return organization;
@@ -9386,6 +11183,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrganizationAffiliation createOrganizationAffiliation() {
 		OrganizationAffiliationImpl organizationAffiliation = new OrganizationAffiliationImpl();
 		return organizationAffiliation;
@@ -9396,6 +11194,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrganizationContact createOrganizationContact() {
 		OrganizationContactImpl organizationContact = new OrganizationContactImpl();
 		return organizationContact;
@@ -9406,6 +11205,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrientationType createOrientationType() {
 		OrientationTypeImpl orientationType = new OrientationTypeImpl();
 		return orientationType;
@@ -9416,6 +11216,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinition createPackagedProductDefinition() {
 		PackagedProductDefinitionImpl packagedProductDefinition = new PackagedProductDefinitionImpl();
 		return packagedProductDefinition;
@@ -9426,6 +11227,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinitionContainedItem createPackagedProductDefinitionContainedItem() {
 		PackagedProductDefinitionContainedItemImpl packagedProductDefinitionContainedItem = new PackagedProductDefinitionContainedItemImpl();
 		return packagedProductDefinitionContainedItem;
@@ -9436,6 +11238,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinitionLegalStatusOfSupply createPackagedProductDefinitionLegalStatusOfSupply() {
 		PackagedProductDefinitionLegalStatusOfSupplyImpl packagedProductDefinitionLegalStatusOfSupply = new PackagedProductDefinitionLegalStatusOfSupplyImpl();
 		return packagedProductDefinitionLegalStatusOfSupply;
@@ -9446,6 +11249,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinitionPackage createPackagedProductDefinitionPackage() {
 		PackagedProductDefinitionPackageImpl packagedProductDefinitionPackage = new PackagedProductDefinitionPackageImpl();
 		return packagedProductDefinitionPackage;
@@ -9456,6 +11260,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinitionProperty createPackagedProductDefinitionProperty() {
 		PackagedProductDefinitionPropertyImpl packagedProductDefinitionProperty = new PackagedProductDefinitionPropertyImpl();
 		return packagedProductDefinitionProperty;
@@ -9466,6 +11271,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackagedProductDefinitionShelfLifeStorage createPackagedProductDefinitionShelfLifeStorage() {
 		PackagedProductDefinitionShelfLifeStorageImpl packagedProductDefinitionShelfLifeStorage = new PackagedProductDefinitionShelfLifeStorageImpl();
 		return packagedProductDefinitionShelfLifeStorage;
@@ -9476,6 +11282,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition createParameterDefinition() {
 		ParameterDefinitionImpl parameterDefinition = new ParameterDefinitionImpl();
 		return parameterDefinition;
@@ -9486,6 +11293,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameters createParameters() {
 		ParametersImpl parameters = new ParametersImpl();
 		return parameters;
@@ -9496,6 +11304,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParametersParameter createParametersParameter() {
 		ParametersParameterImpl parametersParameter = new ParametersParameterImpl();
 		return parametersParameter;
@@ -9506,6 +11315,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParticipantRequired createParticipantRequired() {
 		ParticipantRequiredImpl participantRequired = new ParticipantRequiredImpl();
 		return participantRequired;
@@ -9516,6 +11326,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParticipationStatus createParticipationStatus() {
 		ParticipationStatusImpl participationStatus = new ParticipationStatusImpl();
 		return participationStatus;
@@ -9526,6 +11337,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Patient createPatient() {
 		PatientImpl patient = new PatientImpl();
 		return patient;
@@ -9536,6 +11348,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PatientCommunication createPatientCommunication() {
 		PatientCommunicationImpl patientCommunication = new PatientCommunicationImpl();
 		return patientCommunication;
@@ -9546,6 +11359,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PatientContact createPatientContact() {
 		PatientContactImpl patientContact = new PatientContactImpl();
 		return patientContact;
@@ -9556,6 +11370,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PatientLink createPatientLink() {
 		PatientLinkImpl patientLink = new PatientLinkImpl();
 		return patientLink;
@@ -9566,6 +11381,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentNotice createPaymentNotice() {
 		PaymentNoticeImpl paymentNotice = new PaymentNoticeImpl();
 		return paymentNotice;
@@ -9576,6 +11392,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentReconciliation createPaymentReconciliation() {
 		PaymentReconciliationImpl paymentReconciliation = new PaymentReconciliationImpl();
 		return paymentReconciliation;
@@ -9586,6 +11403,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentReconciliationDetail createPaymentReconciliationDetail() {
 		PaymentReconciliationDetailImpl paymentReconciliationDetail = new PaymentReconciliationDetailImpl();
 		return paymentReconciliationDetail;
@@ -9596,6 +11414,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PaymentReconciliationProcessNote createPaymentReconciliationProcessNote() {
 		PaymentReconciliationProcessNoteImpl paymentReconciliationProcessNote = new PaymentReconciliationProcessNoteImpl();
 		return paymentReconciliationProcessNote;
@@ -9606,6 +11425,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period createPeriod() {
 		PeriodImpl period = new PeriodImpl();
 		return period;
@@ -9616,6 +11436,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Person createPerson() {
 		PersonImpl person = new PersonImpl();
 		return person;
@@ -9626,6 +11447,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PersonLink createPersonLink() {
 		PersonLinkImpl personLink = new PersonLinkImpl();
 		return personLink;
@@ -9636,6 +11458,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinition createPlanDefinition() {
 		PlanDefinitionImpl planDefinition = new PlanDefinitionImpl();
 		return planDefinition;
@@ -9646,6 +11469,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionAction createPlanDefinitionAction() {
 		PlanDefinitionActionImpl planDefinitionAction = new PlanDefinitionActionImpl();
 		return planDefinitionAction;
@@ -9656,6 +11480,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionCondition createPlanDefinitionCondition() {
 		PlanDefinitionConditionImpl planDefinitionCondition = new PlanDefinitionConditionImpl();
 		return planDefinitionCondition;
@@ -9666,6 +11491,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionDynamicValue createPlanDefinitionDynamicValue() {
 		PlanDefinitionDynamicValueImpl planDefinitionDynamicValue = new PlanDefinitionDynamicValueImpl();
 		return planDefinitionDynamicValue;
@@ -9676,6 +11502,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionGoal createPlanDefinitionGoal() {
 		PlanDefinitionGoalImpl planDefinitionGoal = new PlanDefinitionGoalImpl();
 		return planDefinitionGoal;
@@ -9686,6 +11513,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionParticipant createPlanDefinitionParticipant() {
 		PlanDefinitionParticipantImpl planDefinitionParticipant = new PlanDefinitionParticipantImpl();
 		return planDefinitionParticipant;
@@ -9696,6 +11524,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionRelatedAction createPlanDefinitionRelatedAction() {
 		PlanDefinitionRelatedActionImpl planDefinitionRelatedAction = new PlanDefinitionRelatedActionImpl();
 		return planDefinitionRelatedAction;
@@ -9706,6 +11535,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlanDefinitionTarget createPlanDefinitionTarget() {
 		PlanDefinitionTargetImpl planDefinitionTarget = new PlanDefinitionTargetImpl();
 		return planDefinitionTarget;
@@ -9716,6 +11546,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Population createPopulation() {
 		PopulationImpl population = new PopulationImpl();
 		return population;
@@ -9726,6 +11557,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt createPositiveInt() {
 		PositiveIntImpl positiveInt = new PositiveIntImpl();
 		return positiveInt;
@@ -9736,6 +11568,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Practitioner createPractitioner() {
 		PractitionerImpl practitioner = new PractitionerImpl();
 		return practitioner;
@@ -9746,6 +11579,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PractitionerQualification createPractitionerQualification() {
 		PractitionerQualificationImpl practitionerQualification = new PractitionerQualificationImpl();
 		return practitionerQualification;
@@ -9756,6 +11590,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PractitionerRole createPractitionerRole() {
 		PractitionerRoleImpl practitionerRole = new PractitionerRoleImpl();
 		return practitionerRole;
@@ -9766,6 +11601,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PractitionerRoleAvailableTime createPractitionerRoleAvailableTime() {
 		PractitionerRoleAvailableTimeImpl practitionerRoleAvailableTime = new PractitionerRoleAvailableTimeImpl();
 		return practitionerRoleAvailableTime;
@@ -9776,6 +11612,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PractitionerRoleNotAvailable createPractitionerRoleNotAvailable() {
 		PractitionerRoleNotAvailableImpl practitionerRoleNotAvailable = new PractitionerRoleNotAvailableImpl();
 		return practitionerRoleNotAvailable;
@@ -9786,6 +11623,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Procedure createProcedure() {
 		ProcedureImpl procedure = new ProcedureImpl();
 		return procedure;
@@ -9796,6 +11634,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProcedureFocalDevice createProcedureFocalDevice() {
 		ProcedureFocalDeviceImpl procedureFocalDevice = new ProcedureFocalDeviceImpl();
 		return procedureFocalDevice;
@@ -9806,6 +11645,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProcedurePerformer createProcedurePerformer() {
 		ProcedurePerformerImpl procedurePerformer = new ProcedurePerformerImpl();
 		return procedurePerformer;
@@ -9816,6 +11656,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProdCharacteristic createProdCharacteristic() {
 		ProdCharacteristicImpl prodCharacteristic = new ProdCharacteristicImpl();
 		return prodCharacteristic;
@@ -9826,6 +11667,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProductShelfLife createProductShelfLife() {
 		ProductShelfLifeImpl productShelfLife = new ProductShelfLifeImpl();
 		return productShelfLife;
@@ -9836,6 +11678,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PropertyRepresentation createPropertyRepresentation() {
 		PropertyRepresentationImpl propertyRepresentation = new PropertyRepresentationImpl();
 		return propertyRepresentation;
@@ -9846,6 +11689,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PropertyType createPropertyType() {
 		PropertyTypeImpl propertyType = new PropertyTypeImpl();
 		return propertyType;
@@ -9856,6 +11700,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Provenance createProvenance() {
 		ProvenanceImpl provenance = new ProvenanceImpl();
 		return provenance;
@@ -9866,6 +11711,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProvenanceAgent createProvenanceAgent() {
 		ProvenanceAgentImpl provenanceAgent = new ProvenanceAgentImpl();
 		return provenanceAgent;
@@ -9876,6 +11722,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProvenanceEntity createProvenanceEntity() {
 		ProvenanceEntityImpl provenanceEntity = new ProvenanceEntityImpl();
 		return provenanceEntity;
@@ -9886,6 +11733,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProvenanceEntityRole createProvenanceEntityRole() {
 		ProvenanceEntityRoleImpl provenanceEntityRole = new ProvenanceEntityRoleImpl();
 		return provenanceEntityRole;
@@ -9896,6 +11744,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus createPublicationStatus() {
 		PublicationStatusImpl publicationStatus = new PublicationStatusImpl();
 		return publicationStatus;
@@ -9906,6 +11755,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QualityType createQualityType() {
 		QualityTypeImpl qualityType = new QualityTypeImpl();
 		return qualityType;
@@ -9916,6 +11766,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity createQuantity() {
 		QuantityImpl quantity = new QuantityImpl();
 		return quantity;
@@ -9926,6 +11777,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuantityComparator createQuantityComparator() {
 		QuantityComparatorImpl quantityComparator = new QuantityComparatorImpl();
 		return quantityComparator;
@@ -9936,6 +11788,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Questionnaire createQuestionnaire() {
 		QuestionnaireImpl questionnaire = new QuestionnaireImpl();
 		return questionnaire;
@@ -9946,6 +11799,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireAnswerOption createQuestionnaireAnswerOption() {
 		QuestionnaireAnswerOptionImpl questionnaireAnswerOption = new QuestionnaireAnswerOptionImpl();
 		return questionnaireAnswerOption;
@@ -9956,6 +11810,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireEnableWhen createQuestionnaireEnableWhen() {
 		QuestionnaireEnableWhenImpl questionnaireEnableWhen = new QuestionnaireEnableWhenImpl();
 		return questionnaireEnableWhen;
@@ -9966,6 +11821,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireInitial createQuestionnaireInitial() {
 		QuestionnaireInitialImpl questionnaireInitial = new QuestionnaireInitialImpl();
 		return questionnaireInitial;
@@ -9976,6 +11832,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireItem createQuestionnaireItem() {
 		QuestionnaireItemImpl questionnaireItem = new QuestionnaireItemImpl();
 		return questionnaireItem;
@@ -9986,6 +11843,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireItemOperator createQuestionnaireItemOperator() {
 		QuestionnaireItemOperatorImpl questionnaireItemOperator = new QuestionnaireItemOperatorImpl();
 		return questionnaireItemOperator;
@@ -9996,6 +11854,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireItemType createQuestionnaireItemType() {
 		QuestionnaireItemTypeImpl questionnaireItemType = new QuestionnaireItemTypeImpl();
 		return questionnaireItemType;
@@ -10006,6 +11865,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireResponse createQuestionnaireResponse() {
 		QuestionnaireResponseImpl questionnaireResponse = new QuestionnaireResponseImpl();
 		return questionnaireResponse;
@@ -10016,6 +11876,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireResponseAnswer createQuestionnaireResponseAnswer() {
 		QuestionnaireResponseAnswerImpl questionnaireResponseAnswer = new QuestionnaireResponseAnswerImpl();
 		return questionnaireResponseAnswer;
@@ -10026,6 +11887,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireResponseItem createQuestionnaireResponseItem() {
 		QuestionnaireResponseItemImpl questionnaireResponseItem = new QuestionnaireResponseItemImpl();
 		return questionnaireResponseItem;
@@ -10036,6 +11898,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuestionnaireResponseStatus createQuestionnaireResponseStatus() {
 		QuestionnaireResponseStatusImpl questionnaireResponseStatus = new QuestionnaireResponseStatusImpl();
 		return questionnaireResponseStatus;
@@ -10046,6 +11909,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range createRange() {
 		RangeImpl range = new RangeImpl();
 		return range;
@@ -10056,6 +11920,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio createRatio() {
 		RatioImpl ratio = new RatioImpl();
 		return ratio;
@@ -10066,6 +11931,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange createRatioRange() {
 		RatioRangeImpl ratioRange = new RatioRangeImpl();
 		return ratioRange;
@@ -10076,6 +11942,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference createReference() {
 		ReferenceImpl reference = new ReferenceImpl();
 		return reference;
@@ -10086,6 +11953,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReferenceHandlingPolicy createReferenceHandlingPolicy() {
 		ReferenceHandlingPolicyImpl referenceHandlingPolicy = new ReferenceHandlingPolicyImpl();
 		return referenceHandlingPolicy;
@@ -10096,6 +11964,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReferenceVersionRules createReferenceVersionRules() {
 		ReferenceVersionRulesImpl referenceVersionRules = new ReferenceVersionRulesImpl();
 		return referenceVersionRules;
@@ -10106,6 +11975,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegulatedAuthorization createRegulatedAuthorization() {
 		RegulatedAuthorizationImpl regulatedAuthorization = new RegulatedAuthorizationImpl();
 		return regulatedAuthorization;
@@ -10116,6 +11986,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RegulatedAuthorizationCase createRegulatedAuthorizationCase() {
 		RegulatedAuthorizationCaseImpl regulatedAuthorizationCase = new RegulatedAuthorizationCaseImpl();
 		return regulatedAuthorizationCase;
@@ -10126,6 +11997,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact createRelatedArtifact() {
 		RelatedArtifactImpl relatedArtifact = new RelatedArtifactImpl();
 		return relatedArtifact;
@@ -10136,6 +12008,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifactType createRelatedArtifactType() {
 		RelatedArtifactTypeImpl relatedArtifactType = new RelatedArtifactTypeImpl();
 		return relatedArtifactType;
@@ -10146,6 +12019,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedPerson createRelatedPerson() {
 		RelatedPersonImpl relatedPerson = new RelatedPersonImpl();
 		return relatedPerson;
@@ -10156,6 +12030,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedPersonCommunication createRelatedPersonCommunication() {
 		RelatedPersonCommunicationImpl relatedPersonCommunication = new RelatedPersonCommunicationImpl();
 		return relatedPersonCommunication;
@@ -10166,6 +12041,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RemittanceOutcome createRemittanceOutcome() {
 		RemittanceOutcomeImpl remittanceOutcome = new RemittanceOutcomeImpl();
 		return remittanceOutcome;
@@ -10176,6 +12052,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReportRelationshipType createReportRelationshipType() {
 		ReportRelationshipTypeImpl reportRelationshipType = new ReportRelationshipTypeImpl();
 		return reportRelationshipType;
@@ -10186,6 +12063,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RepositoryType createRepositoryType() {
 		RepositoryTypeImpl repositoryType = new RepositoryTypeImpl();
 		return repositoryType;
@@ -10196,6 +12074,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestGroup createRequestGroup() {
 		RequestGroupImpl requestGroup = new RequestGroupImpl();
 		return requestGroup;
@@ -10206,6 +12085,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestGroupAction createRequestGroupAction() {
 		RequestGroupActionImpl requestGroupAction = new RequestGroupActionImpl();
 		return requestGroupAction;
@@ -10216,6 +12096,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestGroupCondition createRequestGroupCondition() {
 		RequestGroupConditionImpl requestGroupCondition = new RequestGroupConditionImpl();
 		return requestGroupCondition;
@@ -10226,6 +12107,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestGroupRelatedAction createRequestGroupRelatedAction() {
 		RequestGroupRelatedActionImpl requestGroupRelatedAction = new RequestGroupRelatedActionImpl();
 		return requestGroupRelatedAction;
@@ -10236,6 +12118,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestIntent createRequestIntent() {
 		RequestIntentImpl requestIntent = new RequestIntentImpl();
 		return requestIntent;
@@ -10246,6 +12129,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestPriority createRequestPriority() {
 		RequestPriorityImpl requestPriority = new RequestPriorityImpl();
 		return requestPriority;
@@ -10256,6 +12140,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestResourceType createRequestResourceType() {
 		RequestResourceTypeImpl requestResourceType = new RequestResourceTypeImpl();
 		return requestResourceType;
@@ -10266,6 +12151,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestStatus createRequestStatus() {
 		RequestStatusImpl requestStatus = new RequestStatusImpl();
 		return requestStatus;
@@ -10276,6 +12162,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchDefinition createResearchDefinition() {
 		ResearchDefinitionImpl researchDefinition = new ResearchDefinitionImpl();
 		return researchDefinition;
@@ -10286,6 +12173,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchElementDefinition createResearchElementDefinition() {
 		ResearchElementDefinitionImpl researchElementDefinition = new ResearchElementDefinitionImpl();
 		return researchElementDefinition;
@@ -10296,6 +12184,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchElementDefinitionCharacteristic createResearchElementDefinitionCharacteristic() {
 		ResearchElementDefinitionCharacteristicImpl researchElementDefinitionCharacteristic = new ResearchElementDefinitionCharacteristicImpl();
 		return researchElementDefinitionCharacteristic;
@@ -10306,6 +12195,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchElementType createResearchElementType() {
 		ResearchElementTypeImpl researchElementType = new ResearchElementTypeImpl();
 		return researchElementType;
@@ -10316,6 +12206,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchStudy createResearchStudy() {
 		ResearchStudyImpl researchStudy = new ResearchStudyImpl();
 		return researchStudy;
@@ -10326,6 +12217,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchStudyArm createResearchStudyArm() {
 		ResearchStudyArmImpl researchStudyArm = new ResearchStudyArmImpl();
 		return researchStudyArm;
@@ -10336,6 +12228,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchStudyObjective createResearchStudyObjective() {
 		ResearchStudyObjectiveImpl researchStudyObjective = new ResearchStudyObjectiveImpl();
 		return researchStudyObjective;
@@ -10346,6 +12239,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchStudyStatus createResearchStudyStatus() {
 		ResearchStudyStatusImpl researchStudyStatus = new ResearchStudyStatusImpl();
 		return researchStudyStatus;
@@ -10356,6 +12250,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchSubject createResearchSubject() {
 		ResearchSubjectImpl researchSubject = new ResearchSubjectImpl();
 		return researchSubject;
@@ -10366,6 +12261,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchSubjectStatus createResearchSubjectStatus() {
 		ResearchSubjectStatusImpl researchSubjectStatus = new ResearchSubjectStatusImpl();
 		return researchSubjectStatus;
@@ -10376,6 +12272,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Resource createResource() {
 		ResourceImpl resource = new ResourceImpl();
 		return resource;
@@ -10386,6 +12283,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceContainer createResourceContainer() {
 		ResourceContainerImpl resourceContainer = new ResourceContainerImpl();
 		return resourceContainer;
@@ -10396,6 +12294,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType createResourceType() {
 		ResourceTypeImpl resourceType = new ResourceTypeImpl();
 		return resourceType;
@@ -10406,6 +12305,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceVersionPolicy createResourceVersionPolicy() {
 		ResourceVersionPolicyImpl resourceVersionPolicy = new ResourceVersionPolicyImpl();
 		return resourceVersionPolicy;
@@ -10416,6 +12316,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResponseType createResponseType() {
 		ResponseTypeImpl responseType = new ResponseTypeImpl();
 		return responseType;
@@ -10426,6 +12327,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RestfulCapabilityMode createRestfulCapabilityMode() {
 		RestfulCapabilityModeImpl restfulCapabilityMode = new RestfulCapabilityModeImpl();
 		return restfulCapabilityMode;
@@ -10436,6 +12338,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RiskAssessment createRiskAssessment() {
 		RiskAssessmentImpl riskAssessment = new RiskAssessmentImpl();
 		return riskAssessment;
@@ -10446,6 +12349,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RiskAssessmentPrediction createRiskAssessmentPrediction() {
 		RiskAssessmentPredictionImpl riskAssessmentPrediction = new RiskAssessmentPredictionImpl();
 		return riskAssessmentPrediction;
@@ -10456,6 +12360,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData createSampledData() {
 		SampledDataImpl sampledData = new SampledDataImpl();
 		return sampledData;
@@ -10466,6 +12371,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledDataDataType createSampledDataDataType() {
 		SampledDataDataTypeImpl sampledDataDataType = new SampledDataDataTypeImpl();
 		return sampledDataDataType;
@@ -10476,6 +12382,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Schedule createSchedule() {
 		ScheduleImpl schedule = new ScheduleImpl();
 		return schedule;
@@ -10486,6 +12393,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchComparator createSearchComparator() {
 		SearchComparatorImpl searchComparator = new SearchComparatorImpl();
 		return searchComparator;
@@ -10496,6 +12404,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchEntryMode createSearchEntryMode() {
 		SearchEntryModeImpl searchEntryMode = new SearchEntryModeImpl();
 		return searchEntryMode;
@@ -10506,6 +12415,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchModifierCode createSearchModifierCode() {
 		SearchModifierCodeImpl searchModifierCode = new SearchModifierCodeImpl();
 		return searchModifierCode;
@@ -10516,6 +12426,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchParameter createSearchParameter() {
 		SearchParameterImpl searchParameter = new SearchParameterImpl();
 		return searchParameter;
@@ -10526,6 +12437,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchParameterComponent createSearchParameterComponent() {
 		SearchParameterComponentImpl searchParameterComponent = new SearchParameterComponentImpl();
 		return searchParameterComponent;
@@ -10536,6 +12448,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchParamType createSearchParamType() {
 		SearchParamTypeImpl searchParamType = new SearchParamTypeImpl();
 		return searchParamType;
@@ -10546,6 +12459,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SequenceType createSequenceType() {
 		SequenceTypeImpl sequenceType = new SequenceTypeImpl();
 		return sequenceType;
@@ -10556,6 +12470,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServiceRequest createServiceRequest() {
 		ServiceRequestImpl serviceRequest = new ServiceRequestImpl();
 		return serviceRequest;
@@ -10566,6 +12481,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature createSignature() {
 		SignatureImpl signature = new SignatureImpl();
 		return signature;
@@ -10576,6 +12492,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SlicingRules createSlicingRules() {
 		SlicingRulesImpl slicingRules = new SlicingRulesImpl();
 		return slicingRules;
@@ -10586,6 +12503,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Slot createSlot() {
 		SlotImpl slot = new SlotImpl();
 		return slot;
@@ -10596,6 +12514,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SlotStatus createSlotStatus() {
 		SlotStatusImpl slotStatus = new SlotStatusImpl();
 		return slotStatus;
@@ -10606,6 +12525,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SortDirection createSortDirection() {
 		SortDirectionImpl sortDirection = new SortDirectionImpl();
 		return sortDirection;
@@ -10616,6 +12536,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SPDXLicense createSPDXLicense() {
 		SPDXLicenseImpl spdxLicense = new SPDXLicenseImpl();
 		return spdxLicense;
@@ -10626,6 +12547,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Specimen createSpecimen() {
 		SpecimenImpl specimen = new SpecimenImpl();
 		return specimen;
@@ -10636,6 +12558,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenCollection createSpecimenCollection() {
 		SpecimenCollectionImpl specimenCollection = new SpecimenCollectionImpl();
 		return specimenCollection;
@@ -10646,6 +12569,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenContainedPreference createSpecimenContainedPreference() {
 		SpecimenContainedPreferenceImpl specimenContainedPreference = new SpecimenContainedPreferenceImpl();
 		return specimenContainedPreference;
@@ -10656,6 +12580,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenContainer createSpecimenContainer() {
 		SpecimenContainerImpl specimenContainer = new SpecimenContainerImpl();
 		return specimenContainer;
@@ -10666,6 +12591,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinition createSpecimenDefinition() {
 		SpecimenDefinitionImpl specimenDefinition = new SpecimenDefinitionImpl();
 		return specimenDefinition;
@@ -10676,6 +12602,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinitionAdditive createSpecimenDefinitionAdditive() {
 		SpecimenDefinitionAdditiveImpl specimenDefinitionAdditive = new SpecimenDefinitionAdditiveImpl();
 		return specimenDefinitionAdditive;
@@ -10686,6 +12613,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinitionContainer createSpecimenDefinitionContainer() {
 		SpecimenDefinitionContainerImpl specimenDefinitionContainer = new SpecimenDefinitionContainerImpl();
 		return specimenDefinitionContainer;
@@ -10696,6 +12624,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinitionHandling createSpecimenDefinitionHandling() {
 		SpecimenDefinitionHandlingImpl specimenDefinitionHandling = new SpecimenDefinitionHandlingImpl();
 		return specimenDefinitionHandling;
@@ -10706,6 +12635,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenDefinitionTypeTested createSpecimenDefinitionTypeTested() {
 		SpecimenDefinitionTypeTestedImpl specimenDefinitionTypeTested = new SpecimenDefinitionTypeTestedImpl();
 		return specimenDefinitionTypeTested;
@@ -10716,6 +12646,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenProcessing createSpecimenProcessing() {
 		SpecimenProcessingImpl specimenProcessing = new SpecimenProcessingImpl();
 		return specimenProcessing;
@@ -10726,6 +12657,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpecimenStatus createSpecimenStatus() {
 		SpecimenStatusImpl specimenStatus = new SpecimenStatusImpl();
 		return specimenStatus;
@@ -10736,6 +12668,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Status createStatus() {
 		StatusImpl status = new StatusImpl();
 		return status;
@@ -10746,6 +12679,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StrandType createStrandType() {
 		StrandTypeImpl strandType = new StrandTypeImpl();
 		return strandType;
@@ -10756,6 +12690,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String createString() {
 		StringImpl string = new StringImpl();
 		return string;
@@ -10766,6 +12701,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinition createStructureDefinition() {
 		StructureDefinitionImpl structureDefinition = new StructureDefinitionImpl();
 		return structureDefinition;
@@ -10776,6 +12712,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinitionContext createStructureDefinitionContext() {
 		StructureDefinitionContextImpl structureDefinitionContext = new StructureDefinitionContextImpl();
 		return structureDefinitionContext;
@@ -10786,6 +12723,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinitionDifferential createStructureDefinitionDifferential() {
 		StructureDefinitionDifferentialImpl structureDefinitionDifferential = new StructureDefinitionDifferentialImpl();
 		return structureDefinitionDifferential;
@@ -10796,6 +12734,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinitionKind createStructureDefinitionKind() {
 		StructureDefinitionKindImpl structureDefinitionKind = new StructureDefinitionKindImpl();
 		return structureDefinitionKind;
@@ -10806,6 +12745,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinitionMapping createStructureDefinitionMapping() {
 		StructureDefinitionMappingImpl structureDefinitionMapping = new StructureDefinitionMappingImpl();
 		return structureDefinitionMapping;
@@ -10816,6 +12756,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureDefinitionSnapshot createStructureDefinitionSnapshot() {
 		StructureDefinitionSnapshotImpl structureDefinitionSnapshot = new StructureDefinitionSnapshotImpl();
 		return structureDefinitionSnapshot;
@@ -10826,6 +12767,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMap createStructureMap() {
 		StructureMapImpl structureMap = new StructureMapImpl();
 		return structureMap;
@@ -10836,6 +12778,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapContextType createStructureMapContextType() {
 		StructureMapContextTypeImpl structureMapContextType = new StructureMapContextTypeImpl();
 		return structureMapContextType;
@@ -10846,6 +12789,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapDependent createStructureMapDependent() {
 		StructureMapDependentImpl structureMapDependent = new StructureMapDependentImpl();
 		return structureMapDependent;
@@ -10856,6 +12800,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapGroup createStructureMapGroup() {
 		StructureMapGroupImpl structureMapGroup = new StructureMapGroupImpl();
 		return structureMapGroup;
@@ -10866,6 +12811,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapGroupTypeMode createStructureMapGroupTypeMode() {
 		StructureMapGroupTypeModeImpl structureMapGroupTypeMode = new StructureMapGroupTypeModeImpl();
 		return structureMapGroupTypeMode;
@@ -10876,6 +12822,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapInput createStructureMapInput() {
 		StructureMapInputImpl structureMapInput = new StructureMapInputImpl();
 		return structureMapInput;
@@ -10886,6 +12833,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapInputMode createStructureMapInputMode() {
 		StructureMapInputModeImpl structureMapInputMode = new StructureMapInputModeImpl();
 		return structureMapInputMode;
@@ -10896,6 +12844,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapModelMode createStructureMapModelMode() {
 		StructureMapModelModeImpl structureMapModelMode = new StructureMapModelModeImpl();
 		return structureMapModelMode;
@@ -10906,6 +12855,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapParameter createStructureMapParameter() {
 		StructureMapParameterImpl structureMapParameter = new StructureMapParameterImpl();
 		return structureMapParameter;
@@ -10916,6 +12866,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapRule createStructureMapRule() {
 		StructureMapRuleImpl structureMapRule = new StructureMapRuleImpl();
 		return structureMapRule;
@@ -10926,6 +12877,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapSource createStructureMapSource() {
 		StructureMapSourceImpl structureMapSource = new StructureMapSourceImpl();
 		return structureMapSource;
@@ -10936,6 +12888,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapSourceListMode createStructureMapSourceListMode() {
 		StructureMapSourceListModeImpl structureMapSourceListMode = new StructureMapSourceListModeImpl();
 		return structureMapSourceListMode;
@@ -10946,6 +12899,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapStructure createStructureMapStructure() {
 		StructureMapStructureImpl structureMapStructure = new StructureMapStructureImpl();
 		return structureMapStructure;
@@ -10956,6 +12910,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapTarget createStructureMapTarget() {
 		StructureMapTargetImpl structureMapTarget = new StructureMapTargetImpl();
 		return structureMapTarget;
@@ -10966,6 +12921,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapTargetListMode createStructureMapTargetListMode() {
 		StructureMapTargetListModeImpl structureMapTargetListMode = new StructureMapTargetListModeImpl();
 		return structureMapTargetListMode;
@@ -10976,6 +12932,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapTransform createStructureMapTransform() {
 		StructureMapTransformImpl structureMapTransform = new StructureMapTransformImpl();
 		return structureMapTransform;
@@ -10986,6 +12943,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Subscription createSubscription() {
 		SubscriptionImpl subscription = new SubscriptionImpl();
 		return subscription;
@@ -10996,6 +12954,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionChannel createSubscriptionChannel() {
 		SubscriptionChannelImpl subscriptionChannel = new SubscriptionChannelImpl();
 		return subscriptionChannel;
@@ -11006,6 +12965,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionChannelType createSubscriptionChannelType() {
 		SubscriptionChannelTypeImpl subscriptionChannelType = new SubscriptionChannelTypeImpl();
 		return subscriptionChannelType;
@@ -11016,6 +12976,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionNotificationType createSubscriptionNotificationType() {
 		SubscriptionNotificationTypeImpl subscriptionNotificationType = new SubscriptionNotificationTypeImpl();
 		return subscriptionNotificationType;
@@ -11026,6 +12987,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionStatus createSubscriptionStatus() {
 		SubscriptionStatusImpl subscriptionStatus = new SubscriptionStatusImpl();
 		return subscriptionStatus;
@@ -11036,6 +12998,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionStatusCodes createSubscriptionStatusCodes() {
 		SubscriptionStatusCodesImpl subscriptionStatusCodes = new SubscriptionStatusCodesImpl();
 		return subscriptionStatusCodes;
@@ -11046,6 +13009,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionStatusNotificationEvent createSubscriptionStatusNotificationEvent() {
 		SubscriptionStatusNotificationEventImpl subscriptionStatusNotificationEvent = new SubscriptionStatusNotificationEventImpl();
 		return subscriptionStatusNotificationEvent;
@@ -11056,6 +13020,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopic createSubscriptionTopic() {
 		SubscriptionTopicImpl subscriptionTopic = new SubscriptionTopicImpl();
 		return subscriptionTopic;
@@ -11066,6 +13031,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicCanFilterBy createSubscriptionTopicCanFilterBy() {
 		SubscriptionTopicCanFilterByImpl subscriptionTopicCanFilterBy = new SubscriptionTopicCanFilterByImpl();
 		return subscriptionTopicCanFilterBy;
@@ -11076,6 +13042,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicEventTrigger createSubscriptionTopicEventTrigger() {
 		SubscriptionTopicEventTriggerImpl subscriptionTopicEventTrigger = new SubscriptionTopicEventTriggerImpl();
 		return subscriptionTopicEventTrigger;
@@ -11086,6 +13053,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicNotificationShape createSubscriptionTopicNotificationShape() {
 		SubscriptionTopicNotificationShapeImpl subscriptionTopicNotificationShape = new SubscriptionTopicNotificationShapeImpl();
 		return subscriptionTopicNotificationShape;
@@ -11096,6 +13064,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicQueryCriteria createSubscriptionTopicQueryCriteria() {
 		SubscriptionTopicQueryCriteriaImpl subscriptionTopicQueryCriteria = new SubscriptionTopicQueryCriteriaImpl();
 		return subscriptionTopicQueryCriteria;
@@ -11106,6 +13075,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicResourceTrigger createSubscriptionTopicResourceTrigger() {
 		SubscriptionTopicResourceTriggerImpl subscriptionTopicResourceTrigger = new SubscriptionTopicResourceTriggerImpl();
 		return subscriptionTopicResourceTrigger;
@@ -11116,6 +13086,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substance createSubstance() {
 		SubstanceImpl substance = new SubstanceImpl();
 		return substance;
@@ -11126,6 +13097,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinition createSubstanceDefinition() {
 		SubstanceDefinitionImpl substanceDefinition = new SubstanceDefinitionImpl();
 		return substanceDefinition;
@@ -11136,6 +13108,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionCode createSubstanceDefinitionCode() {
 		SubstanceDefinitionCodeImpl substanceDefinitionCode = new SubstanceDefinitionCodeImpl();
 		return substanceDefinitionCode;
@@ -11146,6 +13119,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionMoiety createSubstanceDefinitionMoiety() {
 		SubstanceDefinitionMoietyImpl substanceDefinitionMoiety = new SubstanceDefinitionMoietyImpl();
 		return substanceDefinitionMoiety;
@@ -11156,6 +13130,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionMolecularWeight createSubstanceDefinitionMolecularWeight() {
 		SubstanceDefinitionMolecularWeightImpl substanceDefinitionMolecularWeight = new SubstanceDefinitionMolecularWeightImpl();
 		return substanceDefinitionMolecularWeight;
@@ -11166,6 +13141,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionName createSubstanceDefinitionName() {
 		SubstanceDefinitionNameImpl substanceDefinitionName = new SubstanceDefinitionNameImpl();
 		return substanceDefinitionName;
@@ -11176,6 +13152,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionOfficial createSubstanceDefinitionOfficial() {
 		SubstanceDefinitionOfficialImpl substanceDefinitionOfficial = new SubstanceDefinitionOfficialImpl();
 		return substanceDefinitionOfficial;
@@ -11186,6 +13163,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionProperty createSubstanceDefinitionProperty() {
 		SubstanceDefinitionPropertyImpl substanceDefinitionProperty = new SubstanceDefinitionPropertyImpl();
 		return substanceDefinitionProperty;
@@ -11196,6 +13174,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionRelationship createSubstanceDefinitionRelationship() {
 		SubstanceDefinitionRelationshipImpl substanceDefinitionRelationship = new SubstanceDefinitionRelationshipImpl();
 		return substanceDefinitionRelationship;
@@ -11206,6 +13185,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionRepresentation createSubstanceDefinitionRepresentation() {
 		SubstanceDefinitionRepresentationImpl substanceDefinitionRepresentation = new SubstanceDefinitionRepresentationImpl();
 		return substanceDefinitionRepresentation;
@@ -11216,6 +13196,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionSourceMaterial createSubstanceDefinitionSourceMaterial() {
 		SubstanceDefinitionSourceMaterialImpl substanceDefinitionSourceMaterial = new SubstanceDefinitionSourceMaterialImpl();
 		return substanceDefinitionSourceMaterial;
@@ -11226,6 +13207,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionStructure createSubstanceDefinitionStructure() {
 		SubstanceDefinitionStructureImpl substanceDefinitionStructure = new SubstanceDefinitionStructureImpl();
 		return substanceDefinitionStructure;
@@ -11236,6 +13218,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceIngredient createSubstanceIngredient() {
 		SubstanceIngredientImpl substanceIngredient = new SubstanceIngredientImpl();
 		return substanceIngredient;
@@ -11246,6 +13229,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceInstance createSubstanceInstance() {
 		SubstanceInstanceImpl substanceInstance = new SubstanceInstanceImpl();
 		return substanceInstance;
@@ -11256,6 +13240,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDelivery createSupplyDelivery() {
 		SupplyDeliveryImpl supplyDelivery = new SupplyDeliveryImpl();
 		return supplyDelivery;
@@ -11266,6 +13251,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDeliveryStatus createSupplyDeliveryStatus() {
 		SupplyDeliveryStatusImpl supplyDeliveryStatus = new SupplyDeliveryStatusImpl();
 		return supplyDeliveryStatus;
@@ -11276,6 +13262,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDeliverySuppliedItem createSupplyDeliverySuppliedItem() {
 		SupplyDeliverySuppliedItemImpl supplyDeliverySuppliedItem = new SupplyDeliverySuppliedItemImpl();
 		return supplyDeliverySuppliedItem;
@@ -11286,6 +13273,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyRequest createSupplyRequest() {
 		SupplyRequestImpl supplyRequest = new SupplyRequestImpl();
 		return supplyRequest;
@@ -11296,6 +13284,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyRequestParameter createSupplyRequestParameter() {
 		SupplyRequestParameterImpl supplyRequestParameter = new SupplyRequestParameterImpl();
 		return supplyRequestParameter;
@@ -11306,6 +13295,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyRequestStatus createSupplyRequestStatus() {
 		SupplyRequestStatusImpl supplyRequestStatus = new SupplyRequestStatusImpl();
 		return supplyRequestStatus;
@@ -11316,6 +13306,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemRestfulInteraction createSystemRestfulInteraction() {
 		SystemRestfulInteractionImpl systemRestfulInteraction = new SystemRestfulInteractionImpl();
 		return systemRestfulInteraction;
@@ -11326,6 +13317,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Task createTask() {
 		TaskImpl task = new TaskImpl();
 		return task;
@@ -11336,6 +13328,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskInput createTaskInput() {
 		TaskInputImpl taskInput = new TaskInputImpl();
 		return taskInput;
@@ -11346,6 +13339,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskIntent createTaskIntent() {
 		TaskIntentImpl taskIntent = new TaskIntentImpl();
 		return taskIntent;
@@ -11356,6 +13350,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskOutput createTaskOutput() {
 		TaskOutputImpl taskOutput = new TaskOutputImpl();
 		return taskOutput;
@@ -11366,6 +13361,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskRestriction createTaskRestriction() {
 		TaskRestrictionImpl taskRestriction = new TaskRestrictionImpl();
 		return taskRestriction;
@@ -11376,6 +13372,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TaskStatus createTaskStatus() {
 		TaskStatusImpl taskStatus = new TaskStatusImpl();
 		return taskStatus;
@@ -11386,6 +13383,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilities createTerminologyCapabilities() {
 		TerminologyCapabilitiesImpl terminologyCapabilities = new TerminologyCapabilitiesImpl();
 		return terminologyCapabilities;
@@ -11396,6 +13394,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesClosure createTerminologyCapabilitiesClosure() {
 		TerminologyCapabilitiesClosureImpl terminologyCapabilitiesClosure = new TerminologyCapabilitiesClosureImpl();
 		return terminologyCapabilitiesClosure;
@@ -11406,6 +13405,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesCodeSystem createTerminologyCapabilitiesCodeSystem() {
 		TerminologyCapabilitiesCodeSystemImpl terminologyCapabilitiesCodeSystem = new TerminologyCapabilitiesCodeSystemImpl();
 		return terminologyCapabilitiesCodeSystem;
@@ -11416,6 +13416,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesExpansion createTerminologyCapabilitiesExpansion() {
 		TerminologyCapabilitiesExpansionImpl terminologyCapabilitiesExpansion = new TerminologyCapabilitiesExpansionImpl();
 		return terminologyCapabilitiesExpansion;
@@ -11426,6 +13427,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesFilter createTerminologyCapabilitiesFilter() {
 		TerminologyCapabilitiesFilterImpl terminologyCapabilitiesFilter = new TerminologyCapabilitiesFilterImpl();
 		return terminologyCapabilitiesFilter;
@@ -11436,6 +13438,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesImplementation createTerminologyCapabilitiesImplementation() {
 		TerminologyCapabilitiesImplementationImpl terminologyCapabilitiesImplementation = new TerminologyCapabilitiesImplementationImpl();
 		return terminologyCapabilitiesImplementation;
@@ -11446,6 +13449,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesParameter createTerminologyCapabilitiesParameter() {
 		TerminologyCapabilitiesParameterImpl terminologyCapabilitiesParameter = new TerminologyCapabilitiesParameterImpl();
 		return terminologyCapabilitiesParameter;
@@ -11456,6 +13460,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesSoftware createTerminologyCapabilitiesSoftware() {
 		TerminologyCapabilitiesSoftwareImpl terminologyCapabilitiesSoftware = new TerminologyCapabilitiesSoftwareImpl();
 		return terminologyCapabilitiesSoftware;
@@ -11466,6 +13471,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesTranslation createTerminologyCapabilitiesTranslation() {
 		TerminologyCapabilitiesTranslationImpl terminologyCapabilitiesTranslation = new TerminologyCapabilitiesTranslationImpl();
 		return terminologyCapabilitiesTranslation;
@@ -11476,6 +13482,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesValidateCode createTerminologyCapabilitiesValidateCode() {
 		TerminologyCapabilitiesValidateCodeImpl terminologyCapabilitiesValidateCode = new TerminologyCapabilitiesValidateCodeImpl();
 		return terminologyCapabilitiesValidateCode;
@@ -11486,6 +13493,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TerminologyCapabilitiesVersion createTerminologyCapabilitiesVersion() {
 		TerminologyCapabilitiesVersionImpl terminologyCapabilitiesVersion = new TerminologyCapabilitiesVersionImpl();
 		return terminologyCapabilitiesVersion;
@@ -11496,6 +13504,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReport createTestReport() {
 		TestReportImpl testReport = new TestReportImpl();
 		return testReport;
@@ -11506,6 +13515,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportAction createTestReportAction() {
 		TestReportActionImpl testReportAction = new TestReportActionImpl();
 		return testReportAction;
@@ -11516,6 +13526,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportAction1 createTestReportAction1() {
 		TestReportAction1Impl testReportAction1 = new TestReportAction1Impl();
 		return testReportAction1;
@@ -11526,6 +13537,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportAction2 createTestReportAction2() {
 		TestReportAction2Impl testReportAction2 = new TestReportAction2Impl();
 		return testReportAction2;
@@ -11536,6 +13548,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportActionResult createTestReportActionResult() {
 		TestReportActionResultImpl testReportActionResult = new TestReportActionResultImpl();
 		return testReportActionResult;
@@ -11546,6 +13559,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportAssert createTestReportAssert() {
 		TestReportAssertImpl testReportAssert = new TestReportAssertImpl();
 		return testReportAssert;
@@ -11556,6 +13570,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportOperation createTestReportOperation() {
 		TestReportOperationImpl testReportOperation = new TestReportOperationImpl();
 		return testReportOperation;
@@ -11566,6 +13581,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportParticipant createTestReportParticipant() {
 		TestReportParticipantImpl testReportParticipant = new TestReportParticipantImpl();
 		return testReportParticipant;
@@ -11576,6 +13592,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportParticipantType createTestReportParticipantType() {
 		TestReportParticipantTypeImpl testReportParticipantType = new TestReportParticipantTypeImpl();
 		return testReportParticipantType;
@@ -11586,6 +13603,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportResult createTestReportResult() {
 		TestReportResultImpl testReportResult = new TestReportResultImpl();
 		return testReportResult;
@@ -11596,6 +13614,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportSetup createTestReportSetup() {
 		TestReportSetupImpl testReportSetup = new TestReportSetupImpl();
 		return testReportSetup;
@@ -11606,6 +13625,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportStatus createTestReportStatus() {
 		TestReportStatusImpl testReportStatus = new TestReportStatusImpl();
 		return testReportStatus;
@@ -11616,6 +13636,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportTeardown createTestReportTeardown() {
 		TestReportTeardownImpl testReportTeardown = new TestReportTeardownImpl();
 		return testReportTeardown;
@@ -11626,6 +13647,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportTest createTestReportTest() {
 		TestReportTestImpl testReportTest = new TestReportTestImpl();
 		return testReportTest;
@@ -11636,6 +13658,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScript createTestScript() {
 		TestScriptImpl testScript = new TestScriptImpl();
 		return testScript;
@@ -11646,6 +13669,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptAction createTestScriptAction() {
 		TestScriptActionImpl testScriptAction = new TestScriptActionImpl();
 		return testScriptAction;
@@ -11656,6 +13680,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptAction1 createTestScriptAction1() {
 		TestScriptAction1Impl testScriptAction1 = new TestScriptAction1Impl();
 		return testScriptAction1;
@@ -11666,6 +13691,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptAction2 createTestScriptAction2() {
 		TestScriptAction2Impl testScriptAction2 = new TestScriptAction2Impl();
 		return testScriptAction2;
@@ -11676,6 +13702,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptAssert createTestScriptAssert() {
 		TestScriptAssertImpl testScriptAssert = new TestScriptAssertImpl();
 		return testScriptAssert;
@@ -11686,6 +13713,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptCapability createTestScriptCapability() {
 		TestScriptCapabilityImpl testScriptCapability = new TestScriptCapabilityImpl();
 		return testScriptCapability;
@@ -11696,6 +13724,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptDestination createTestScriptDestination() {
 		TestScriptDestinationImpl testScriptDestination = new TestScriptDestinationImpl();
 		return testScriptDestination;
@@ -11706,6 +13735,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptFixture createTestScriptFixture() {
 		TestScriptFixtureImpl testScriptFixture = new TestScriptFixtureImpl();
 		return testScriptFixture;
@@ -11716,6 +13746,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptLink createTestScriptLink() {
 		TestScriptLinkImpl testScriptLink = new TestScriptLinkImpl();
 		return testScriptLink;
@@ -11726,6 +13757,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptMetadata createTestScriptMetadata() {
 		TestScriptMetadataImpl testScriptMetadata = new TestScriptMetadataImpl();
 		return testScriptMetadata;
@@ -11736,6 +13768,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptOperation createTestScriptOperation() {
 		TestScriptOperationImpl testScriptOperation = new TestScriptOperationImpl();
 		return testScriptOperation;
@@ -11746,6 +13779,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptOrigin createTestScriptOrigin() {
 		TestScriptOriginImpl testScriptOrigin = new TestScriptOriginImpl();
 		return testScriptOrigin;
@@ -11756,6 +13790,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptRequestHeader createTestScriptRequestHeader() {
 		TestScriptRequestHeaderImpl testScriptRequestHeader = new TestScriptRequestHeaderImpl();
 		return testScriptRequestHeader;
@@ -11766,6 +13801,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptRequestMethodCode createTestScriptRequestMethodCode() {
 		TestScriptRequestMethodCodeImpl testScriptRequestMethodCode = new TestScriptRequestMethodCodeImpl();
 		return testScriptRequestMethodCode;
@@ -11776,6 +13812,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptSetup createTestScriptSetup() {
 		TestScriptSetupImpl testScriptSetup = new TestScriptSetupImpl();
 		return testScriptSetup;
@@ -11786,6 +13823,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptTeardown createTestScriptTeardown() {
 		TestScriptTeardownImpl testScriptTeardown = new TestScriptTeardownImpl();
 		return testScriptTeardown;
@@ -11796,6 +13834,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptTest createTestScriptTest() {
 		TestScriptTestImpl testScriptTest = new TestScriptTestImpl();
 		return testScriptTest;
@@ -11806,6 +13845,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptVariable createTestScriptVariable() {
 		TestScriptVariableImpl testScriptVariable = new TestScriptVariableImpl();
 		return testScriptVariable;
@@ -11816,6 +13856,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time createTime() {
 		TimeImpl time = new TimeImpl();
 		return time;
@@ -11826,6 +13867,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing createTiming() {
 		TimingImpl timing = new TimingImpl();
 		return timing;
@@ -11836,6 +13878,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimingRepeat createTimingRepeat() {
 		TimingRepeatImpl timingRepeat = new TimingRepeatImpl();
 		return timingRepeat;
@@ -11846,6 +13889,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition createTriggerDefinition() {
 		TriggerDefinitionImpl triggerDefinition = new TriggerDefinitionImpl();
 		return triggerDefinition;
@@ -11856,6 +13900,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerType createTriggerType() {
 		TriggerTypeImpl triggerType = new TriggerTypeImpl();
 		return triggerType;
@@ -11866,6 +13911,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDerivationRule createTypeDerivationRule() {
 		TypeDerivationRuleImpl typeDerivationRule = new TypeDerivationRuleImpl();
 		return typeDerivationRule;
@@ -11876,6 +13922,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeRestfulInteraction createTypeRestfulInteraction() {
 		TypeRestfulInteractionImpl typeRestfulInteraction = new TypeRestfulInteractionImpl();
 		return typeRestfulInteraction;
@@ -11886,6 +13933,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UDIEntryType createUDIEntryType() {
 		UDIEntryTypeImpl udiEntryType = new UDIEntryTypeImpl();
 		return udiEntryType;
@@ -11896,6 +13944,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnitsOfTime createUnitsOfTime() {
 		UnitsOfTimeImpl unitsOfTime = new UnitsOfTimeImpl();
 		return unitsOfTime;
@@ -11906,6 +13955,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt createUnsignedInt() {
 		UnsignedIntImpl unsignedInt = new UnsignedIntImpl();
 		return unsignedInt;
@@ -11916,6 +13966,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri createUri() {
 		UriImpl uri = new UriImpl();
 		return uri;
@@ -11926,6 +13977,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url createUrl() {
 		UrlImpl url = new UrlImpl();
 		return url;
@@ -11936,6 +13988,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext createUsageContext() {
 		UsageContextImpl usageContext = new UsageContextImpl();
 		return usageContext;
@@ -11946,6 +13999,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Use createUse() {
 		UseImpl use = new UseImpl();
 		return use;
@@ -11956,6 +14010,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid createUuid() {
 		UuidImpl uuid = new UuidImpl();
 		return uuid;
@@ -11966,6 +14021,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSet createValueSet() {
 		ValueSetImpl valueSet = new ValueSetImpl();
 		return valueSet;
@@ -11976,6 +14032,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetCompose createValueSetCompose() {
 		ValueSetComposeImpl valueSetCompose = new ValueSetComposeImpl();
 		return valueSetCompose;
@@ -11986,6 +14043,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetConcept createValueSetConcept() {
 		ValueSetConceptImpl valueSetConcept = new ValueSetConceptImpl();
 		return valueSetConcept;
@@ -11996,6 +14054,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetContains createValueSetContains() {
 		ValueSetContainsImpl valueSetContains = new ValueSetContainsImpl();
 		return valueSetContains;
@@ -12006,6 +14065,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetDesignation createValueSetDesignation() {
 		ValueSetDesignationImpl valueSetDesignation = new ValueSetDesignationImpl();
 		return valueSetDesignation;
@@ -12016,6 +14076,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetExpansion createValueSetExpansion() {
 		ValueSetExpansionImpl valueSetExpansion = new ValueSetExpansionImpl();
 		return valueSetExpansion;
@@ -12026,6 +14087,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetFilter createValueSetFilter() {
 		ValueSetFilterImpl valueSetFilter = new ValueSetFilterImpl();
 		return valueSetFilter;
@@ -12036,6 +14098,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetInclude createValueSetInclude() {
 		ValueSetIncludeImpl valueSetInclude = new ValueSetIncludeImpl();
 		return valueSetInclude;
@@ -12046,6 +14109,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSetParameter createValueSetParameter() {
 		ValueSetParameterImpl valueSetParameter = new ValueSetParameterImpl();
 		return valueSetParameter;
@@ -12056,6 +14120,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableType createVariableType() {
 		VariableTypeImpl variableType = new VariableTypeImpl();
 		return variableType;
@@ -12066,6 +14131,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResult createVerificationResult() {
 		VerificationResultImpl verificationResult = new VerificationResultImpl();
 		return verificationResult;
@@ -12076,6 +14142,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResultAttestation createVerificationResultAttestation() {
 		VerificationResultAttestationImpl verificationResultAttestation = new VerificationResultAttestationImpl();
 		return verificationResultAttestation;
@@ -12086,6 +14153,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResultPrimarySource createVerificationResultPrimarySource() {
 		VerificationResultPrimarySourceImpl verificationResultPrimarySource = new VerificationResultPrimarySourceImpl();
 		return verificationResultPrimarySource;
@@ -12096,6 +14164,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResultValidator createVerificationResultValidator() {
 		VerificationResultValidatorImpl verificationResultValidator = new VerificationResultValidatorImpl();
 		return verificationResultValidator;
@@ -12106,6 +14175,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionBase createVisionBase() {
 		VisionBaseImpl visionBase = new VisionBaseImpl();
 		return visionBase;
@@ -12116,6 +14186,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionEyes createVisionEyes() {
 		VisionEyesImpl visionEyes = new VisionEyesImpl();
 		return visionEyes;
@@ -12126,6 +14197,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionPrescription createVisionPrescription() {
 		VisionPrescriptionImpl visionPrescription = new VisionPrescriptionImpl();
 		return visionPrescription;
@@ -12136,6 +14208,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionPrescriptionLensSpecification createVisionPrescriptionLensSpecification() {
 		VisionPrescriptionLensSpecificationImpl visionPrescriptionLensSpecification = new VisionPrescriptionLensSpecificationImpl();
 		return visionPrescriptionLensSpecification;
@@ -12146,6 +14219,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionPrescriptionPrism createVisionPrescriptionPrism() {
 		VisionPrescriptionPrismImpl visionPrescriptionPrism = new VisionPrescriptionPrismImpl();
 		return visionPrescriptionPrism;
@@ -12156,6 +14230,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XPathUsageType createXPathUsageType() {
 		XPathUsageTypeImpl xPathUsageType = new XPathUsageTypeImpl();
 		return xPathUsageType;
@@ -21252,6 +23327,7 @@ public class FhirFactoryImpl extends EFactoryImpl implements FhirFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FhirPackage getFhirPackage() {
 		return (FhirPackage)getEPackage();
 	}

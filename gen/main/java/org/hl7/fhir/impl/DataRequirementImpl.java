@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.Code;
 import org.hl7.fhir.CodeableConcept;
@@ -159,6 +164,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getType() {
 		return type;
 	}
@@ -183,6 +189,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Code newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -202,6 +209,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getProfile() {
 		if (profile == null) {
 			profile = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.DATA_REQUIREMENT__PROFILE);
@@ -214,6 +222,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubjectCodeableConcept() {
 		return subjectCodeableConcept;
 	}
@@ -238,6 +247,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectCodeableConcept(CodeableConcept newSubjectCodeableConcept) {
 		if (newSubjectCodeableConcept != subjectCodeableConcept) {
 			NotificationChain msgs = null;
@@ -257,6 +267,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubjectReference() {
 		return subjectReference;
 	}
@@ -281,6 +292,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectReference(Reference newSubjectReference) {
 		if (newSubjectReference != subjectReference) {
 			NotificationChain msgs = null;
@@ -300,6 +312,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getMustSupport() {
 		if (mustSupport == null) {
 			mustSupport = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.DATA_REQUIREMENT__MUST_SUPPORT);
@@ -312,6 +325,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataRequirementCodeFilter> getCodeFilter() {
 		if (codeFilter == null) {
 			codeFilter = new EObjectContainmentEList<DataRequirementCodeFilter>(DataRequirementCodeFilter.class, this, FhirPackage.DATA_REQUIREMENT__CODE_FILTER);
@@ -324,6 +338,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataRequirementDateFilter> getDateFilter() {
 		if (dateFilter == null) {
 			dateFilter = new EObjectContainmentEList<DataRequirementDateFilter>(DataRequirementDateFilter.class, this, FhirPackage.DATA_REQUIREMENT__DATE_FILTER);
@@ -336,6 +351,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getLimit() {
 		return limit;
 	}
@@ -360,6 +376,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLimit(PositiveInt newLimit) {
 		if (newLimit != limit) {
 			NotificationChain msgs = null;
@@ -379,6 +396,7 @@ public class DataRequirementImpl extends ElementImpl implements DataRequirement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataRequirementSort> getSort() {
 		if (sort == null) {
 			sort = new EObjectContainmentEList<DataRequirementSort>(DataRequirementSort.class, this, FhirPackage.DATA_REQUIREMENT__SORT);

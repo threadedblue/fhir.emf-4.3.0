@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EncounterHospitalization;
 import org.hl7.fhir.FhirPackage;
@@ -154,6 +159,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getPreAdmissionIdentifier() {
 		return preAdmissionIdentifier;
 	}
@@ -178,6 +184,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreAdmissionIdentifier(Identifier newPreAdmissionIdentifier) {
 		if (newPreAdmissionIdentifier != preAdmissionIdentifier) {
 			NotificationChain msgs = null;
@@ -197,6 +204,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOrigin() {
 		return origin;
 	}
@@ -221,6 +229,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrigin(Reference newOrigin) {
 		if (newOrigin != origin) {
 			NotificationChain msgs = null;
@@ -240,6 +249,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAdmitSource() {
 		return admitSource;
 	}
@@ -264,6 +274,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdmitSource(CodeableConcept newAdmitSource) {
 		if (newAdmitSource != admitSource) {
 			NotificationChain msgs = null;
@@ -283,6 +294,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getReAdmission() {
 		return reAdmission;
 	}
@@ -307,6 +319,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReAdmission(CodeableConcept newReAdmission) {
 		if (newReAdmission != reAdmission) {
 			NotificationChain msgs = null;
@@ -326,6 +339,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getDietPreference() {
 		if (dietPreference == null) {
 			dietPreference = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ENCOUNTER_HOSPITALIZATION__DIET_PREFERENCE);
@@ -338,6 +352,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialCourtesy() {
 		if (specialCourtesy == null) {
 			specialCourtesy = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ENCOUNTER_HOSPITALIZATION__SPECIAL_COURTESY);
@@ -350,6 +365,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialArrangement() {
 		if (specialArrangement == null) {
 			specialArrangement = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ENCOUNTER_HOSPITALIZATION__SPECIAL_ARRANGEMENT);
@@ -362,6 +378,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDestination() {
 		return destination;
 	}
@@ -386,6 +403,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestination(Reference newDestination) {
 		if (newDestination != destination) {
 			NotificationChain msgs = null;
@@ -405,6 +423,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDischargeDisposition() {
 		return dischargeDisposition;
 	}
@@ -429,6 +448,7 @@ public class EncounterHospitalizationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDischargeDisposition(CodeableConcept newDischargeDisposition) {
 		if (newDischargeDisposition != dischargeDisposition) {
 			NotificationChain msgs = null;

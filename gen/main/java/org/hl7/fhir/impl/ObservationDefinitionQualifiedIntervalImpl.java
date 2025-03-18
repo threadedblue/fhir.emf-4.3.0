@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AdministrativeGender;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -144,6 +149,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationRangeCategory getCategory() {
 		return category;
 	}
@@ -168,6 +174,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(ObservationRangeCategory newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -187,6 +194,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getRange() {
 		return range;
 	}
@@ -211,6 +219,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRange(Range newRange) {
 		if (newRange != range) {
 			NotificationChain msgs = null;
@@ -230,6 +239,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getContext() {
 		return context;
 	}
@@ -254,6 +264,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContext(CodeableConcept newContext) {
 		if (newContext != context) {
 			NotificationChain msgs = null;
@@ -273,6 +284,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAppliesTo() {
 		if (appliesTo == null) {
 			appliesTo = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.OBSERVATION_DEFINITION_QUALIFIED_INTERVAL__APPLIES_TO);
@@ -285,6 +297,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrativeGender getGender() {
 		return gender;
 	}
@@ -309,6 +322,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGender(AdministrativeGender newGender) {
 		if (newGender != gender) {
 			NotificationChain msgs = null;
@@ -328,6 +342,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getAge() {
 		return age;
 	}
@@ -352,6 +367,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAge(Range newAge) {
 		if (newAge != age) {
 			NotificationChain msgs = null;
@@ -371,6 +387,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getGestationalAge() {
 		return gestationalAge;
 	}
@@ -395,6 +412,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGestationalAge(Range newGestationalAge) {
 		if (newGestationalAge != gestationalAge) {
 			NotificationChain msgs = null;
@@ -414,6 +432,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCondition() {
 		return condition;
 	}
@@ -438,6 +457,7 @@ public class ObservationDefinitionQualifiedIntervalImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(org.hl7.fhir.String newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;

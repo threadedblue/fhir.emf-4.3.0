@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
@@ -261,6 +266,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.REQUEST_GROUP__IDENTIFIER);
@@ -273,6 +279,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getInstantiatesCanonical() {
 		if (instantiatesCanonical == null) {
 			instantiatesCanonical = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.REQUEST_GROUP__INSTANTIATES_CANONICAL);
@@ -285,6 +292,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Uri> getInstantiatesUri() {
 		if (instantiatesUri == null) {
 			instantiatesUri = new EObjectContainmentEList<Uri>(Uri.class, this, FhirPackage.REQUEST_GROUP__INSTANTIATES_URI);
@@ -297,6 +305,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getBasedOn() {
 		if (basedOn == null) {
 			basedOn = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.REQUEST_GROUP__BASED_ON);
@@ -309,6 +318,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReplaces() {
 		if (replaces == null) {
 			replaces = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.REQUEST_GROUP__REPLACES);
@@ -321,6 +331,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getGroupIdentifier() {
 		return groupIdentifier;
 	}
@@ -345,6 +356,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroupIdentifier(Identifier newGroupIdentifier) {
 		if (newGroupIdentifier != groupIdentifier) {
 			NotificationChain msgs = null;
@@ -364,6 +376,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestStatus getStatus() {
 		return status;
 	}
@@ -388,6 +401,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(RequestStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -407,6 +421,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestIntent getIntent() {
 		return intent;
 	}
@@ -431,6 +446,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIntent(RequestIntent newIntent) {
 		if (newIntent != intent) {
 			NotificationChain msgs = null;
@@ -450,6 +466,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestPriority getPriority() {
 		return priority;
 	}
@@ -474,6 +491,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(RequestPriority newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -493,6 +511,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -517,6 +536,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -536,6 +556,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -560,6 +581,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -579,6 +601,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -603,6 +626,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -622,6 +646,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getAuthoredOn() {
 		return authoredOn;
 	}
@@ -646,6 +671,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthoredOn(DateTime newAuthoredOn) {
 		if (newAuthoredOn != authoredOn) {
 			NotificationChain msgs = null;
@@ -665,6 +691,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAuthor() {
 		return author;
 	}
@@ -689,6 +716,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthor(Reference newAuthor) {
 		if (newAuthor != author) {
 			NotificationChain msgs = null;
@@ -708,6 +736,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getReasonCode() {
 		if (reasonCode == null) {
 			reasonCode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.REQUEST_GROUP__REASON_CODE);
@@ -720,6 +749,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReasonReference() {
 		if (reasonReference == null) {
 			reasonReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.REQUEST_GROUP__REASON_REFERENCE);
@@ -732,6 +762,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.REQUEST_GROUP__NOTE);
@@ -744,6 +775,7 @@ public class RequestGroupImpl extends DomainResourceImpl implements RequestGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RequestGroupAction> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<RequestGroupAction>(RequestGroupAction.class, this, FhirPackage.REQUEST_GROUP__ACTION);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.NutritionOrderAdministration;
 import org.hl7.fhir.Quantity;
@@ -94,6 +97,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getSchedule() {
 		return schedule;
 	}
@@ -118,6 +122,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSchedule(Timing newSchedule) {
 		if (newSchedule != schedule) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -161,6 +167,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getRateQuantity() {
 		return rateQuantity;
 	}
@@ -204,6 +212,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRateQuantity(Quantity newRateQuantity) {
 		if (newRateQuantity != rateQuantity) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getRateRatio() {
 		return rateRatio;
 	}
@@ -247,6 +257,7 @@ public class NutritionOrderAdministrationImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRateRatio(Ratio newRateRatio) {
 		if (newRateRatio != rateRatio) {
 			NotificationChain msgs = null;

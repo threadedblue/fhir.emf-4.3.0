@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Id;
@@ -82,6 +85,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getUri() {
 		return uri;
 	}
@@ -106,6 +110,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUri(Canonical newUri) {
 		if (newUri != uri) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getPackageId() {
 		return packageId;
 	}
@@ -149,6 +155,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackageId(Id newPackageId) {
 		if (newPackageId != packageId) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -192,6 +200,7 @@ public class ImplementationGuideDependsOnImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CitationContributorship;
 import org.hl7.fhir.CitationEntry;
 import org.hl7.fhir.CitationSummary1;
@@ -87,6 +92,7 @@ public class CitationContributorshipImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getComplete() {
 		return complete;
 	}
@@ -111,6 +117,7 @@ public class CitationContributorshipImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComplete(org.hl7.fhir.Boolean newComplete) {
 		if (newComplete != complete) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class CitationContributorshipImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationEntry> getEntry() {
 		if (entry == null) {
 			entry = new EObjectContainmentEList<CitationEntry>(CitationEntry.class, this, FhirPackage.CITATION_CONTRIBUTORSHIP__ENTRY);
@@ -142,6 +150,7 @@ public class CitationContributorshipImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationSummary1> getSummary() {
 		if (summary == null) {
 			summary = new EObjectContainmentEList<CitationSummary1>(CitationSummary1.class, this, FhirPackage.CITATION_CONTRIBUTORSHIP__SUMMARY);

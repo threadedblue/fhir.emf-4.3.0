@@ -10,7 +10,7 @@ public class Ecore {
 
 	private static final Logger log = LoggerFactory.getLogger(Ecore.class);
 
-	public File getFhirEcore() {
+	public static File getFhirEcore() {
 		return new File("model/fhir.ecore");
 	}
 

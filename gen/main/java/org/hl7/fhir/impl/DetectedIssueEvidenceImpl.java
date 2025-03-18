@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DetectedIssueEvidence;
 import org.hl7.fhir.FhirPackage;
@@ -74,6 +78,7 @@ public class DetectedIssueEvidenceImpl extends BackboneElementImpl implements De
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCode() {
 		if (code == null) {
 			code = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.DETECTED_ISSUE_EVIDENCE__CODE);
@@ -86,6 +91,7 @@ public class DetectedIssueEvidenceImpl extends BackboneElementImpl implements De
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getDetail() {
 		if (detail == null) {
 			detail = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DETECTED_ISSUE_EVIDENCE__DETAIL);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -83,6 +86,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -107,6 +111,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getExpiry() {
 		return expiry;
 	}
@@ -150,6 +156,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpiry(DateTime newExpiry) {
 		if (newExpiry != expiry) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -193,6 +201,7 @@ public class SubstanceInstanceImpl extends BackboneElementImpl implements Substa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;

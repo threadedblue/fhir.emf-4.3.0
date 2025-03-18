@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactDetail;
@@ -529,6 +534,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -553,6 +559,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -572,6 +579,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MEASURE__IDENTIFIER);
@@ -584,6 +592,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -608,6 +617,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -627,6 +637,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -651,6 +662,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -670,6 +682,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -694,6 +707,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -713,6 +727,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSubtitle() {
 		return subtitle;
 	}
@@ -737,6 +752,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubtitle(org.hl7.fhir.String newSubtitle) {
 		if (newSubtitle != subtitle) {
 			NotificationChain msgs = null;
@@ -756,6 +772,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -780,6 +797,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -799,6 +817,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -823,6 +842,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -842,6 +862,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubjectCodeableConcept() {
 		return subjectCodeableConcept;
 	}
@@ -866,6 +887,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectCodeableConcept(CodeableConcept newSubjectCodeableConcept) {
 		if (newSubjectCodeableConcept != subjectCodeableConcept) {
 			NotificationChain msgs = null;
@@ -885,6 +907,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubjectReference() {
 		return subjectReference;
 	}
@@ -909,6 +932,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectReference(Reference newSubjectReference) {
 		if (newSubjectReference != subjectReference) {
 			NotificationChain msgs = null;
@@ -928,6 +952,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -952,6 +977,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -971,6 +997,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -995,6 +1022,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -1014,6 +1042,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MEASURE__CONTACT);
@@ -1026,6 +1055,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -1050,6 +1080,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -1069,6 +1100,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.MEASURE__USE_CONTEXT);
@@ -1081,6 +1113,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEASURE__JURISDICTION);
@@ -1093,6 +1126,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -1117,6 +1151,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -1136,6 +1171,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUsage() {
 		return usage;
 	}
@@ -1160,6 +1196,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsage(org.hl7.fhir.String newUsage) {
 		if (newUsage != usage) {
 			NotificationChain msgs = null;
@@ -1179,6 +1216,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -1203,6 +1241,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -1222,6 +1261,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getApprovalDate() {
 		return approvalDate;
 	}
@@ -1246,6 +1286,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApprovalDate(Date newApprovalDate) {
 		if (newApprovalDate != approvalDate) {
 			NotificationChain msgs = null;
@@ -1265,6 +1306,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getLastReviewDate() {
 		return lastReviewDate;
 	}
@@ -1289,6 +1331,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastReviewDate(Date newLastReviewDate) {
 		if (newLastReviewDate != lastReviewDate) {
 			NotificationChain msgs = null;
@@ -1308,6 +1351,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -1332,6 +1376,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectivePeriod(Period newEffectivePeriod) {
 		if (newEffectivePeriod != effectivePeriod) {
 			NotificationChain msgs = null;
@@ -1351,6 +1396,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTopic() {
 		if (topic == null) {
 			topic = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEASURE__TOPIC);
@@ -1363,6 +1409,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MEASURE__AUTHOR);
@@ -1375,6 +1422,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MEASURE__EDITOR);
@@ -1387,6 +1435,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MEASURE__REVIEWER);
@@ -1399,6 +1448,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MEASURE__ENDORSER);
@@ -1411,6 +1461,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getRelatedArtifact() {
 		if (relatedArtifact == null) {
 			relatedArtifact = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.MEASURE__RELATED_ARTIFACT);
@@ -1423,6 +1474,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getLibrary() {
 		if (library == null) {
 			library = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.MEASURE__LIBRARY);
@@ -1435,6 +1487,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDisclaimer() {
 		return disclaimer;
 	}
@@ -1459,6 +1512,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisclaimer(Markdown newDisclaimer) {
 		if (newDisclaimer != disclaimer) {
 			NotificationChain msgs = null;
@@ -1478,6 +1532,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getScoring() {
 		return scoring;
 	}
@@ -1502,6 +1557,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScoring(CodeableConcept newScoring) {
 		if (newScoring != scoring) {
 			NotificationChain msgs = null;
@@ -1521,6 +1577,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCompositeScoring() {
 		return compositeScoring;
 	}
@@ -1545,6 +1602,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCompositeScoring(CodeableConcept newCompositeScoring) {
 		if (newCompositeScoring != compositeScoring) {
 			NotificationChain msgs = null;
@@ -1564,6 +1622,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEASURE__TYPE);
@@ -1576,6 +1635,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRiskAdjustment() {
 		return riskAdjustment;
 	}
@@ -1600,6 +1660,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRiskAdjustment(org.hl7.fhir.String newRiskAdjustment) {
 		if (newRiskAdjustment != riskAdjustment) {
 			NotificationChain msgs = null;
@@ -1619,6 +1680,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRateAggregation() {
 		return rateAggregation;
 	}
@@ -1643,6 +1705,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRateAggregation(org.hl7.fhir.String newRateAggregation) {
 		if (newRateAggregation != rateAggregation) {
 			NotificationChain msgs = null;
@@ -1662,6 +1725,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getRationale() {
 		return rationale;
 	}
@@ -1686,6 +1750,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRationale(Markdown newRationale) {
 		if (newRationale != rationale) {
 			NotificationChain msgs = null;
@@ -1705,6 +1770,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getClinicalRecommendationStatement() {
 		return clinicalRecommendationStatement;
 	}
@@ -1729,6 +1795,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClinicalRecommendationStatement(Markdown newClinicalRecommendationStatement) {
 		if (newClinicalRecommendationStatement != clinicalRecommendationStatement) {
 			NotificationChain msgs = null;
@@ -1748,6 +1815,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getImprovementNotation() {
 		return improvementNotation;
 	}
@@ -1772,6 +1840,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImprovementNotation(CodeableConcept newImprovementNotation) {
 		if (newImprovementNotation != improvementNotation) {
 			NotificationChain msgs = null;
@@ -1791,6 +1860,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Markdown> getDefinition() {
 		if (definition == null) {
 			definition = new EObjectContainmentEList<Markdown>(Markdown.class, this, FhirPackage.MEASURE__DEFINITION);
@@ -1803,6 +1873,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getGuidance() {
 		return guidance;
 	}
@@ -1827,6 +1898,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuidance(Markdown newGuidance) {
 		if (newGuidance != guidance) {
 			NotificationChain msgs = null;
@@ -1846,6 +1918,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureGroup> getGroup() {
 		if (group == null) {
 			group = new EObjectContainmentEList<MeasureGroup>(MeasureGroup.class, this, FhirPackage.MEASURE__GROUP);
@@ -1858,6 +1931,7 @@ public class MeasureImpl extends DomainResourceImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureSupplementalData> getSupplementalData() {
 		if (supplementalData == null) {
 			supplementalData = new EObjectContainmentEList<MeasureSupplementalData>(MeasureSupplementalData.class, this, FhirPackage.MEASURE__SUPPLEMENTAL_DATA);

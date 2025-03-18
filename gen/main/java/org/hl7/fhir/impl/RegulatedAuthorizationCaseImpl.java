@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -122,6 +127,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -146,6 +152,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -165,6 +172,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -189,6 +197,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -208,6 +217,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStatus() {
 		return status;
 	}
@@ -232,6 +242,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(CodeableConcept newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -251,6 +262,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getDatePeriod() {
 		return datePeriod;
 	}
@@ -275,6 +287,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatePeriod(Period newDatePeriod) {
 		if (newDatePeriod != datePeriod) {
 			NotificationChain msgs = null;
@@ -294,6 +307,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDateDateTime() {
 		return dateDateTime;
 	}
@@ -318,6 +332,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateDateTime(DateTime newDateDateTime) {
 		if (newDateDateTime != dateDateTime) {
 			NotificationChain msgs = null;
@@ -337,6 +352,7 @@ public class RegulatedAuthorizationCaseImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RegulatedAuthorizationCase> getApplication() {
 		if (application == null) {
 			application = new EObjectContainmentEList<RegulatedAuthorizationCase>(RegulatedAuthorizationCase.class, this, FhirPackage.REGULATED_AUTHORIZATION_CASE__APPLICATION);

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContractAction;
 import org.hl7.fhir.ContractAsset;
@@ -204,6 +209,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -228,6 +234,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -247,6 +254,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getIssued() {
 		return issued;
 	}
@@ -271,6 +279,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssued(DateTime newIssued) {
 		if (newIssued != issued) {
 			NotificationChain msgs = null;
@@ -290,6 +299,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getApplies() {
 		return applies;
 	}
@@ -314,6 +324,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApplies(Period newApplies) {
 		if (newApplies != applies) {
 			NotificationChain msgs = null;
@@ -333,6 +344,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getTopicCodeableConcept() {
 		return topicCodeableConcept;
 	}
@@ -357,6 +369,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTopicCodeableConcept(CodeableConcept newTopicCodeableConcept) {
 		if (newTopicCodeableConcept != topicCodeableConcept) {
 			NotificationChain msgs = null;
@@ -376,6 +389,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTopicReference() {
 		return topicReference;
 	}
@@ -400,6 +414,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTopicReference(Reference newTopicReference) {
 		if (newTopicReference != topicReference) {
 			NotificationChain msgs = null;
@@ -419,6 +434,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -443,6 +459,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -462,6 +479,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubType() {
 		return subType;
 	}
@@ -486,6 +504,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubType(CodeableConcept newSubType) {
 		if (newSubType != subType) {
 			NotificationChain msgs = null;
@@ -505,6 +524,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -529,6 +549,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -548,6 +569,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractSecurityLabel> getSecurityLabel() {
 		if (securityLabel == null) {
 			securityLabel = new EObjectContainmentEList<ContractSecurityLabel>(ContractSecurityLabel.class, this, FhirPackage.CONTRACT_TERM__SECURITY_LABEL);
@@ -560,6 +582,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractOffer getOffer() {
 		return offer;
 	}
@@ -584,6 +607,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOffer(ContractOffer newOffer) {
 		if (newOffer != offer) {
 			NotificationChain msgs = null;
@@ -603,6 +627,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractAsset> getAsset() {
 		if (asset == null) {
 			asset = new EObjectContainmentEList<ContractAsset>(ContractAsset.class, this, FhirPackage.CONTRACT_TERM__ASSET);
@@ -615,6 +640,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractAction> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<ContractAction>(ContractAction.class, this, FhirPackage.CONTRACT_TERM__ACTION);
@@ -627,6 +653,7 @@ public class ContractTermImpl extends BackboneElementImpl implements ContractTer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractTerm> getGroup() {
 		if (group == null) {
 			group = new EObjectContainmentEList<ContractTerm>(ContractTerm.class, this, FhirPackage.CONTRACT_TERM__GROUP);

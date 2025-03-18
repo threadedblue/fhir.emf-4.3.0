@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.ConstraintSeverity;
 import org.hl7.fhir.ElementDefinitionConstraint;
@@ -127,6 +130,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getKey() {
 		return key;
 	}
@@ -151,6 +155,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(Id newKey) {
 		if (newKey != key) {
 			NotificationChain msgs = null;
@@ -170,6 +175,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRequirements() {
 		return requirements;
 	}
@@ -194,6 +200,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequirements(org.hl7.fhir.String newRequirements) {
 		if (newRequirements != requirements) {
 			NotificationChain msgs = null;
@@ -213,6 +220,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConstraintSeverity getSeverity() {
 		return severity;
 	}
@@ -237,6 +245,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeverity(ConstraintSeverity newSeverity) {
 		if (newSeverity != severity) {
 			NotificationChain msgs = null;
@@ -256,6 +265,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getHuman() {
 		return human;
 	}
@@ -280,6 +290,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHuman(org.hl7.fhir.String newHuman) {
 		if (newHuman != human) {
 			NotificationChain msgs = null;
@@ -299,6 +310,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getExpression() {
 		return expression;
 	}
@@ -323,6 +335,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(org.hl7.fhir.String newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -342,6 +355,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getXpath() {
 		return xpath;
 	}
@@ -366,6 +380,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setXpath(org.hl7.fhir.String newXpath) {
 		if (newXpath != xpath) {
 			NotificationChain msgs = null;
@@ -385,6 +400,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getSource() {
 		return source;
 	}
@@ -409,6 +425,7 @@ public class ElementDefinitionConstraintImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Canonical newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;

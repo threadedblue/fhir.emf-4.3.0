@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EpisodeOfCareDiagnosis;
 import org.hl7.fhir.FhirPackage;
@@ -83,6 +86,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCondition() {
 		return condition;
 	}
@@ -107,6 +111,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Reference newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -150,6 +156,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getRank() {
 		return rank;
 	}
@@ -193,6 +201,7 @@ public class EpisodeOfCareDiagnosisImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRank(PositiveInt newRank) {
 		if (newRank != rank) {
 			NotificationChain msgs = null;

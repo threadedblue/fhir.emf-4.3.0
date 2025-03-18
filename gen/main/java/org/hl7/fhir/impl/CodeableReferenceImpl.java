@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CodeableReference;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class CodeableReferenceImpl extends ElementImpl implements CodeableRefere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getConcept() {
 		return concept;
 	}
@@ -95,6 +99,7 @@ public class CodeableReferenceImpl extends ElementImpl implements CodeableRefere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConcept(CodeableConcept newConcept) {
 		if (newConcept != concept) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CodeableReferenceImpl extends ElementImpl implements CodeableRefere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReference() {
 		return reference;
 	}
@@ -138,6 +144,7 @@ public class CodeableReferenceImpl extends ElementImpl implements CodeableRefere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Reference newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;

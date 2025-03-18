@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -106,6 +109,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getValue() {
 		return value;
 	}
@@ -130,6 +134,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Decimal newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -149,6 +154,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuantityComparator getComparator() {
 		return comparator;
 	}
@@ -173,6 +179,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComparator(QuantityComparator newComparator) {
 		if (newComparator != comparator) {
 			NotificationChain msgs = null;
@@ -192,6 +199,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUnit() {
 		return unit;
 	}
@@ -216,6 +224,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(org.hl7.fhir.String newUnit) {
 		if (newUnit != unit) {
 			NotificationChain msgs = null;
@@ -235,6 +244,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSystem() {
 		return system;
 	}
@@ -259,6 +269,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(Uri newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -302,6 +314,7 @@ public class QuantityImpl extends ElementImpl implements Quantity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.SubscriptionTopicNotificationShape;
 import org.hl7.fhir.Uri;
@@ -86,6 +91,7 @@ public class SubscriptionTopicNotificationShapeImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getResource() {
 		return resource;
 	}
@@ -110,6 +116,7 @@ public class SubscriptionTopicNotificationShapeImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Uri newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -129,6 +136,7 @@ public class SubscriptionTopicNotificationShapeImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getInclude() {
 		if (include == null) {
 			include = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.SUBSCRIPTION_TOPIC_NOTIFICATION_SHAPE__INCLUDE);
@@ -141,6 +149,7 @@ public class SubscriptionTopicNotificationShapeImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getRevInclude() {
 		if (revInclude == null) {
 			revInclude = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.SUBSCRIPTION_TOPIC_NOTIFICATION_SHAPE__REV_INCLUDE);

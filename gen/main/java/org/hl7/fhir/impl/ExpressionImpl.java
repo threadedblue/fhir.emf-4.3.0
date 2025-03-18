@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Expression;
 import org.hl7.fhir.ExpressionLanguage;
 import org.hl7.fhir.FhirPackage;
@@ -105,6 +108,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -129,6 +133,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -148,6 +153,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getName() {
 		return name;
 	}
@@ -172,6 +178,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(Id newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -191,6 +198,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionLanguage getLanguage() {
 		return language;
 	}
@@ -215,6 +223,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLanguage(ExpressionLanguage newLanguage) {
 		if (newLanguage != language) {
 			NotificationChain msgs = null;
@@ -234,6 +243,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getExpression() {
 		return expression;
 	}
@@ -258,6 +268,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(org.hl7.fhir.String newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -277,6 +288,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getReference() {
 		return reference;
 	}
@@ -301,6 +313,7 @@ public class ExpressionImpl extends ElementImpl implements Expression {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Uri newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;

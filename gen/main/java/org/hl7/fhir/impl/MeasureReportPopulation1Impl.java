@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MeasureReportPopulation1;
@@ -82,6 +85,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -106,6 +110,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getCount() {
 		return count;
 	}
@@ -149,6 +155,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCount(org.hl7.fhir.Integer newCount) {
 		if (newCount != count) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubjectResults() {
 		return subjectResults;
 	}
@@ -192,6 +200,7 @@ public class MeasureReportPopulation1Impl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectResults(Reference newSubjectResults) {
 		if (newSubjectResults != subjectResults) {
 			NotificationChain msgs = null;

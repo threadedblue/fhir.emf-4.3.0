@@ -2,11 +2,16 @@
  */
 package org.hl7.fhir.impl;
 
+import java.lang.String;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.Age;
 import org.hl7.fhir.Annotation;
@@ -677,6 +682,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getValueBase64Binary() {
 		return valueBase64Binary;
 	}
@@ -701,6 +707,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBase64Binary(Base64Binary newValueBase64Binary) {
 		if (newValueBase64Binary != valueBase64Binary) {
 			NotificationChain msgs = null;
@@ -720,6 +727,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getValueBoolean() {
 		return valueBoolean;
 	}
@@ -744,6 +752,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBoolean(org.hl7.fhir.Boolean newValueBoolean) {
 		if (newValueBoolean != valueBoolean) {
 			NotificationChain msgs = null;
@@ -763,6 +772,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getValueCanonical() {
 		return valueCanonical;
 	}
@@ -787,6 +797,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCanonical(Canonical newValueCanonical) {
 		if (newValueCanonical != valueCanonical) {
 			NotificationChain msgs = null;
@@ -806,6 +817,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getValueCode() {
 		return valueCode;
 	}
@@ -830,6 +842,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCode(Code newValueCode) {
 		if (newValueCode != valueCode) {
 			NotificationChain msgs = null;
@@ -849,6 +862,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getValueDate() {
 		return valueDate;
 	}
@@ -873,6 +887,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDate(Date newValueDate) {
 		if (newValueDate != valueDate) {
 			NotificationChain msgs = null;
@@ -892,6 +907,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getValueDateTime() {
 		return valueDateTime;
 	}
@@ -916,6 +932,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDateTime(DateTime newValueDateTime) {
 		if (newValueDateTime != valueDateTime) {
 			NotificationChain msgs = null;
@@ -935,6 +952,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getValueDecimal() {
 		return valueDecimal;
 	}
@@ -959,6 +977,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDecimal(Decimal newValueDecimal) {
 		if (newValueDecimal != valueDecimal) {
 			NotificationChain msgs = null;
@@ -978,6 +997,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getValueId() {
 		return valueId;
 	}
@@ -1002,6 +1022,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueId(Id newValueId) {
 		if (newValueId != valueId) {
 			NotificationChain msgs = null;
@@ -1021,6 +1042,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getValueInstant() {
 		return valueInstant;
 	}
@@ -1045,6 +1067,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueInstant(Instant newValueInstant) {
 		if (newValueInstant != valueInstant) {
 			NotificationChain msgs = null;
@@ -1064,6 +1087,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getValueInteger() {
 		return valueInteger;
 	}
@@ -1088,6 +1112,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueInteger(org.hl7.fhir.Integer newValueInteger) {
 		if (newValueInteger != valueInteger) {
 			NotificationChain msgs = null;
@@ -1107,6 +1132,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getValueMarkdown() {
 		return valueMarkdown;
 	}
@@ -1131,6 +1157,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueMarkdown(Markdown newValueMarkdown) {
 		if (newValueMarkdown != valueMarkdown) {
 			NotificationChain msgs = null;
@@ -1150,6 +1177,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid getValueOid() {
 		return valueOid;
 	}
@@ -1174,6 +1202,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueOid(Oid newValueOid) {
 		if (newValueOid != valueOid) {
 			NotificationChain msgs = null;
@@ -1193,6 +1222,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getValuePositiveInt() {
 		return valuePositiveInt;
 	}
@@ -1217,6 +1247,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValuePositiveInt(PositiveInt newValuePositiveInt) {
 		if (newValuePositiveInt != valuePositiveInt) {
 			NotificationChain msgs = null;
@@ -1236,6 +1267,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValueString() {
 		return valueString;
 	}
@@ -1260,6 +1292,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueString(org.hl7.fhir.String newValueString) {
 		if (newValueString != valueString) {
 			NotificationChain msgs = null;
@@ -1279,6 +1312,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getValueTime() {
 		return valueTime;
 	}
@@ -1303,6 +1337,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueTime(Time newValueTime) {
 		if (newValueTime != valueTime) {
 			NotificationChain msgs = null;
@@ -1322,6 +1357,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getValueUnsignedInt() {
 		return valueUnsignedInt;
 	}
@@ -1346,6 +1382,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUnsignedInt(UnsignedInt newValueUnsignedInt) {
 		if (newValueUnsignedInt != valueUnsignedInt) {
 			NotificationChain msgs = null;
@@ -1365,6 +1402,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getValueUri() {
 		return valueUri;
 	}
@@ -1389,6 +1427,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUri(Uri newValueUri) {
 		if (newValueUri != valueUri) {
 			NotificationChain msgs = null;
@@ -1408,6 +1447,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getValueUrl() {
 		return valueUrl;
 	}
@@ -1432,6 +1472,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUrl(Url newValueUrl) {
 		if (newValueUrl != valueUrl) {
 			NotificationChain msgs = null;
@@ -1451,6 +1492,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid getValueUuid() {
 		return valueUuid;
 	}
@@ -1475,6 +1517,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUuid(Uuid newValueUuid) {
 		if (newValueUuid != valueUuid) {
 			NotificationChain msgs = null;
@@ -1494,6 +1537,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getValueAddress() {
 		return valueAddress;
 	}
@@ -1518,6 +1562,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueAddress(Address newValueAddress) {
 		if (newValueAddress != valueAddress) {
 			NotificationChain msgs = null;
@@ -1537,6 +1582,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getValueAge() {
 		return valueAge;
 	}
@@ -1561,6 +1607,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueAge(Age newValueAge) {
 		if (newValueAge != valueAge) {
 			NotificationChain msgs = null;
@@ -1580,6 +1627,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getValueAnnotation() {
 		return valueAnnotation;
 	}
@@ -1604,6 +1652,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueAnnotation(Annotation newValueAnnotation) {
 		if (newValueAnnotation != valueAnnotation) {
 			NotificationChain msgs = null;
@@ -1623,6 +1672,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getValueAttachment() {
 		return valueAttachment;
 	}
@@ -1647,6 +1697,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueAttachment(Attachment newValueAttachment) {
 		if (newValueAttachment != valueAttachment) {
 			NotificationChain msgs = null;
@@ -1666,6 +1717,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getValueCodeableConcept() {
 		return valueCodeableConcept;
 	}
@@ -1690,6 +1742,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCodeableConcept(CodeableConcept newValueCodeableConcept) {
 		if (newValueCodeableConcept != valueCodeableConcept) {
 			NotificationChain msgs = null;
@@ -1709,6 +1762,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getValueCodeableReference() {
 		return valueCodeableReference;
 	}
@@ -1733,6 +1787,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCodeableReference(CodeableReference newValueCodeableReference) {
 		if (newValueCodeableReference != valueCodeableReference) {
 			NotificationChain msgs = null;
@@ -1752,6 +1807,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getValueCoding() {
 		return valueCoding;
 	}
@@ -1776,6 +1832,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCoding(Coding newValueCoding) {
 		if (newValueCoding != valueCoding) {
 			NotificationChain msgs = null;
@@ -1795,6 +1852,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getValueContactPoint() {
 		return valueContactPoint;
 	}
@@ -1819,6 +1877,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueContactPoint(ContactPoint newValueContactPoint) {
 		if (newValueContactPoint != valueContactPoint) {
 			NotificationChain msgs = null;
@@ -1838,6 +1897,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count getValueCount() {
 		return valueCount;
 	}
@@ -1862,6 +1922,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCount(Count newValueCount) {
 		if (newValueCount != valueCount) {
 			NotificationChain msgs = null;
@@ -1881,6 +1942,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance getValueDistance() {
 		return valueDistance;
 	}
@@ -1905,6 +1967,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDistance(Distance newValueDistance) {
 		if (newValueDistance != valueDistance) {
 			NotificationChain msgs = null;
@@ -1924,6 +1987,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getValueDuration() {
 		return valueDuration;
 	}
@@ -1948,6 +2012,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDuration(Duration newValueDuration) {
 		if (newValueDuration != valueDuration) {
 			NotificationChain msgs = null;
@@ -1967,6 +2032,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getValueHumanName() {
 		return valueHumanName;
 	}
@@ -1991,6 +2057,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueHumanName(HumanName newValueHumanName) {
 		if (newValueHumanName != valueHumanName) {
 			NotificationChain msgs = null;
@@ -2010,6 +2077,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getValueIdentifier() {
 		return valueIdentifier;
 	}
@@ -2034,6 +2102,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueIdentifier(Identifier newValueIdentifier) {
 		if (newValueIdentifier != valueIdentifier) {
 			NotificationChain msgs = null;
@@ -2053,6 +2122,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getValueMoney() {
 		return valueMoney;
 	}
@@ -2077,6 +2147,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueMoney(Money newValueMoney) {
 		if (newValueMoney != valueMoney) {
 			NotificationChain msgs = null;
@@ -2096,6 +2167,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getValuePeriod() {
 		return valuePeriod;
 	}
@@ -2120,6 +2192,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValuePeriod(Period newValuePeriod) {
 		if (newValuePeriod != valuePeriod) {
 			NotificationChain msgs = null;
@@ -2139,6 +2212,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getValueQuantity() {
 		return valueQuantity;
 	}
@@ -2163,6 +2237,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueQuantity(Quantity newValueQuantity) {
 		if (newValueQuantity != valueQuantity) {
 			NotificationChain msgs = null;
@@ -2182,6 +2257,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getValueRange() {
 		return valueRange;
 	}
@@ -2206,6 +2282,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRange(Range newValueRange) {
 		if (newValueRange != valueRange) {
 			NotificationChain msgs = null;
@@ -2225,6 +2302,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getValueRatio() {
 		return valueRatio;
 	}
@@ -2249,6 +2327,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRatio(Ratio newValueRatio) {
 		if (newValueRatio != valueRatio) {
 			NotificationChain msgs = null;
@@ -2268,6 +2347,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange getValueRatioRange() {
 		return valueRatioRange;
 	}
@@ -2292,6 +2372,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRatioRange(RatioRange newValueRatioRange) {
 		if (newValueRatioRange != valueRatioRange) {
 			NotificationChain msgs = null;
@@ -2311,6 +2392,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getValueReference() {
 		return valueReference;
 	}
@@ -2335,6 +2417,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueReference(Reference newValueReference) {
 		if (newValueReference != valueReference) {
 			NotificationChain msgs = null;
@@ -2354,6 +2437,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getValueSampledData() {
 		return valueSampledData;
 	}
@@ -2378,6 +2462,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueSampledData(SampledData newValueSampledData) {
 		if (newValueSampledData != valueSampledData) {
 			NotificationChain msgs = null;
@@ -2397,6 +2482,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getValueSignature() {
 		return valueSignature;
 	}
@@ -2421,6 +2507,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueSignature(Signature newValueSignature) {
 		if (newValueSignature != valueSignature) {
 			NotificationChain msgs = null;
@@ -2440,6 +2527,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getValueTiming() {
 		return valueTiming;
 	}
@@ -2464,6 +2552,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueTiming(Timing newValueTiming) {
 		if (newValueTiming != valueTiming) {
 			NotificationChain msgs = null;
@@ -2483,6 +2572,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail getValueContactDetail() {
 		return valueContactDetail;
 	}
@@ -2507,6 +2597,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueContactDetail(ContactDetail newValueContactDetail) {
 		if (newValueContactDetail != valueContactDetail) {
 			NotificationChain msgs = null;
@@ -2526,6 +2617,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor getValueContributor() {
 		return valueContributor;
 	}
@@ -2550,6 +2642,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueContributor(Contributor newValueContributor) {
 		if (newValueContributor != valueContributor) {
 			NotificationChain msgs = null;
@@ -2569,6 +2662,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getValueDataRequirement() {
 		return valueDataRequirement;
 	}
@@ -2593,6 +2687,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDataRequirement(DataRequirement newValueDataRequirement) {
 		if (newValueDataRequirement != valueDataRequirement) {
 			NotificationChain msgs = null;
@@ -2612,6 +2707,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getValueExpression() {
 		return valueExpression;
 	}
@@ -2636,6 +2732,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueExpression(Expression newValueExpression) {
 		if (newValueExpression != valueExpression) {
 			NotificationChain msgs = null;
@@ -2655,6 +2752,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getValueParameterDefinition() {
 		return valueParameterDefinition;
 	}
@@ -2679,6 +2777,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueParameterDefinition(ParameterDefinition newValueParameterDefinition) {
 		if (newValueParameterDefinition != valueParameterDefinition) {
 			NotificationChain msgs = null;
@@ -2698,6 +2797,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact getValueRelatedArtifact() {
 		return valueRelatedArtifact;
 	}
@@ -2722,6 +2822,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRelatedArtifact(RelatedArtifact newValueRelatedArtifact) {
 		if (newValueRelatedArtifact != valueRelatedArtifact) {
 			NotificationChain msgs = null;
@@ -2741,6 +2842,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition getValueTriggerDefinition() {
 		return valueTriggerDefinition;
 	}
@@ -2765,6 +2867,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueTriggerDefinition(TriggerDefinition newValueTriggerDefinition) {
 		if (newValueTriggerDefinition != valueTriggerDefinition) {
 			NotificationChain msgs = null;
@@ -2784,6 +2887,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext getValueUsageContext() {
 		return valueUsageContext;
 	}
@@ -2808,6 +2912,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueUsageContext(UsageContext newValueUsageContext) {
 		if (newValueUsageContext != valueUsageContext) {
 			NotificationChain msgs = null;
@@ -2827,6 +2932,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage getValueDosage() {
 		return valueDosage;
 	}
@@ -2851,6 +2957,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDosage(Dosage newValueDosage) {
 		if (newValueDosage != valueDosage) {
 			NotificationChain msgs = null;
@@ -2870,6 +2977,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUrl() {
 		return url;
 	}
@@ -2879,6 +2987,7 @@ public class ExtensionImpl extends ElementImpl implements Extension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(String newUrl) {
 		String oldUrl = url;
 		url = newUrl;

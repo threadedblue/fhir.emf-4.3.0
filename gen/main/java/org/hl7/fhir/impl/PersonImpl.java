@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.AdministrativeGender;
 import org.hl7.fhir.Attachment;
@@ -171,6 +176,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.PERSON__IDENTIFIER);
@@ -183,6 +189,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<HumanName> getName() {
 		if (name == null) {
 			name = new EObjectContainmentEList<HumanName>(HumanName.class, this, FhirPackage.PERSON__NAME);
@@ -195,6 +202,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.PERSON__TELECOM);
@@ -207,6 +215,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdministrativeGender getGender() {
 		return gender;
 	}
@@ -231,6 +240,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGender(AdministrativeGender newGender) {
 		if (newGender != gender) {
 			NotificationChain msgs = null;
@@ -250,6 +260,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getBirthDate() {
 		return birthDate;
 	}
@@ -274,6 +285,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBirthDate(Date newBirthDate) {
 		if (newBirthDate != birthDate) {
 			NotificationChain msgs = null;
@@ -293,6 +305,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Address> getAddress() {
 		if (address == null) {
 			address = new EObjectContainmentEList<Address>(Address.class, this, FhirPackage.PERSON__ADDRESS);
@@ -305,6 +318,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getPhoto() {
 		return photo;
 	}
@@ -329,6 +343,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPhoto(Attachment newPhoto) {
 		if (newPhoto != photo) {
 			NotificationChain msgs = null;
@@ -348,6 +363,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getManagingOrganization() {
 		return managingOrganization;
 	}
@@ -372,6 +388,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManagingOrganization(Reference newManagingOrganization) {
 		if (newManagingOrganization != managingOrganization) {
 			NotificationChain msgs = null;
@@ -391,6 +408,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActive() {
 		return active;
 	}
@@ -415,6 +433,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActive(org.hl7.fhir.Boolean newActive) {
 		if (newActive != active) {
 			NotificationChain msgs = null;
@@ -434,6 +453,7 @@ public class PersonImpl extends DomainResourceImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PersonLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<PersonLink>(PersonLink.class, this, FhirPackage.PERSON__LINK);

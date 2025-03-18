@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.InteractionTrigger;
 import org.hl7.fhir.Markdown;
@@ -111,6 +116,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -135,6 +141,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -154,6 +161,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getResource() {
 		return resource;
 	}
@@ -178,6 +186,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Uri newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -197,6 +206,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionTrigger> getSupportedInteraction() {
 		if (supportedInteraction == null) {
 			supportedInteraction = new EObjectContainmentEList<InteractionTrigger>(InteractionTrigger.class, this, FhirPackage.SUBSCRIPTION_TOPIC_RESOURCE_TRIGGER__SUPPORTED_INTERACTION);
@@ -209,6 +219,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubscriptionTopicQueryCriteria getQueryCriteria() {
 		return queryCriteria;
 	}
@@ -233,6 +244,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQueryCriteria(SubscriptionTopicQueryCriteria newQueryCriteria) {
 		if (newQueryCriteria != queryCriteria) {
 			NotificationChain msgs = null;
@@ -252,6 +264,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getFhirPathCriteria() {
 		return fhirPathCriteria;
 	}
@@ -276,6 +289,7 @@ public class SubscriptionTopicResourceTriggerImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFhirPathCriteria(org.hl7.fhir.String newFhirPathCriteria) {
 		if (newFhirPathCriteria != fhirPathCriteria) {
 			NotificationChain msgs = null;

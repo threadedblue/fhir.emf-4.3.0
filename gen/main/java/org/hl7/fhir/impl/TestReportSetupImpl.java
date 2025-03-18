@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestReportAction;
 import org.hl7.fhir.TestReportSetup;
@@ -62,6 +66,7 @@ public class TestReportSetupImpl extends BackboneElementImpl implements TestRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestReportAction> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<TestReportAction>(TestReportAction.class, this, FhirPackage.TEST_REPORT_SETUP__ACTION);

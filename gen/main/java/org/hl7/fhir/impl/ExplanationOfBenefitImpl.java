@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
@@ -550,6 +555,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__IDENTIFIER);
@@ -562,6 +568,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitStatus getStatus() {
 		return status;
 	}
@@ -586,6 +593,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ExplanationOfBenefitStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -605,6 +613,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -629,6 +638,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -648,6 +658,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubType() {
 		return subType;
 	}
@@ -672,6 +683,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubType(CodeableConcept newSubType) {
 		if (newSubType != subType) {
 			NotificationChain msgs = null;
@@ -691,6 +703,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Use getUse() {
 		return use;
 	}
@@ -715,6 +728,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUse(Use newUse) {
 		if (newUse != use) {
 			NotificationChain msgs = null;
@@ -734,6 +748,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -758,6 +773,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -777,6 +793,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getBillablePeriod() {
 		return billablePeriod;
 	}
@@ -801,6 +818,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBillablePeriod(Period newBillablePeriod) {
 		if (newBillablePeriod != billablePeriod) {
 			NotificationChain msgs = null;
@@ -820,6 +838,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreated() {
 		return created;
 	}
@@ -844,6 +863,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreated(DateTime newCreated) {
 		if (newCreated != created) {
 			NotificationChain msgs = null;
@@ -863,6 +883,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEnterer() {
 		return enterer;
 	}
@@ -887,6 +908,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnterer(Reference newEnterer) {
 		if (newEnterer != enterer) {
 			NotificationChain msgs = null;
@@ -906,6 +928,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getInsurer() {
 		return insurer;
 	}
@@ -930,6 +953,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInsurer(Reference newInsurer) {
 		if (newInsurer != insurer) {
 			NotificationChain msgs = null;
@@ -949,6 +973,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getProvider() {
 		return provider;
 	}
@@ -973,6 +998,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvider(Reference newProvider) {
 		if (newProvider != provider) {
 			NotificationChain msgs = null;
@@ -992,6 +1018,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPriority() {
 		return priority;
 	}
@@ -1016,6 +1043,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(CodeableConcept newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -1035,6 +1063,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFundsReserveRequested() {
 		return fundsReserveRequested;
 	}
@@ -1059,6 +1088,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFundsReserveRequested(CodeableConcept newFundsReserveRequested) {
 		if (newFundsReserveRequested != fundsReserveRequested) {
 			NotificationChain msgs = null;
@@ -1078,6 +1108,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFundsReserve() {
 		return fundsReserve;
 	}
@@ -1102,6 +1133,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFundsReserve(CodeableConcept newFundsReserve) {
 		if (newFundsReserve != fundsReserve) {
 			NotificationChain msgs = null;
@@ -1121,6 +1153,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitRelated> getRelated() {
 		if (related == null) {
 			related = new EObjectContainmentEList<ExplanationOfBenefitRelated>(ExplanationOfBenefitRelated.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__RELATED);
@@ -1133,6 +1166,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPrescription() {
 		return prescription;
 	}
@@ -1157,6 +1191,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrescription(Reference newPrescription) {
 		if (newPrescription != prescription) {
 			NotificationChain msgs = null;
@@ -1176,6 +1211,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOriginalPrescription() {
 		return originalPrescription;
 	}
@@ -1200,6 +1236,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalPrescription(Reference newOriginalPrescription) {
 		if (newOriginalPrescription != originalPrescription) {
 			NotificationChain msgs = null;
@@ -1219,6 +1256,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitPayee getPayee() {
 		return payee;
 	}
@@ -1243,6 +1281,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPayee(ExplanationOfBenefitPayee newPayee) {
 		if (newPayee != payee) {
 			NotificationChain msgs = null;
@@ -1262,6 +1301,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReferral() {
 		return referral;
 	}
@@ -1286,6 +1326,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferral(Reference newReferral) {
 		if (newReferral != referral) {
 			NotificationChain msgs = null;
@@ -1305,6 +1346,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFacility() {
 		return facility;
 	}
@@ -1329,6 +1371,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFacility(Reference newFacility) {
 		if (newFacility != facility) {
 			NotificationChain msgs = null;
@@ -1348,6 +1391,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getClaim() {
 		return claim;
 	}
@@ -1372,6 +1416,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClaim(Reference newClaim) {
 		if (newClaim != claim) {
 			NotificationChain msgs = null;
@@ -1391,6 +1436,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getClaimResponse() {
 		return claimResponse;
 	}
@@ -1415,6 +1461,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClaimResponse(Reference newClaimResponse) {
 		if (newClaimResponse != claimResponse) {
 			NotificationChain msgs = null;
@@ -1434,6 +1481,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RemittanceOutcome getOutcome() {
 		return outcome;
 	}
@@ -1458,6 +1506,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutcome(RemittanceOutcome newOutcome) {
 		if (newOutcome != outcome) {
 			NotificationChain msgs = null;
@@ -1477,6 +1526,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisposition() {
 		return disposition;
 	}
@@ -1501,6 +1551,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisposition(org.hl7.fhir.String newDisposition) {
 		if (newDisposition != disposition) {
 			NotificationChain msgs = null;
@@ -1520,6 +1571,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getPreAuthRef() {
 		if (preAuthRef == null) {
 			preAuthRef = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__PRE_AUTH_REF);
@@ -1532,6 +1584,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Period> getPreAuthRefPeriod() {
 		if (preAuthRefPeriod == null) {
 			preAuthRefPeriod = new EObjectContainmentEList<Period>(Period.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__PRE_AUTH_REF_PERIOD);
@@ -1544,6 +1597,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitCareTeam> getCareTeam() {
 		if (careTeam == null) {
 			careTeam = new EObjectContainmentEList<ExplanationOfBenefitCareTeam>(ExplanationOfBenefitCareTeam.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__CARE_TEAM);
@@ -1556,6 +1610,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitSupportingInfo> getSupportingInfo() {
 		if (supportingInfo == null) {
 			supportingInfo = new EObjectContainmentEList<ExplanationOfBenefitSupportingInfo>(ExplanationOfBenefitSupportingInfo.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__SUPPORTING_INFO);
@@ -1568,6 +1623,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitDiagnosis> getDiagnosis() {
 		if (diagnosis == null) {
 			diagnosis = new EObjectContainmentEList<ExplanationOfBenefitDiagnosis>(ExplanationOfBenefitDiagnosis.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__DIAGNOSIS);
@@ -1580,6 +1636,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitProcedure> getProcedure() {
 		if (procedure == null) {
 			procedure = new EObjectContainmentEList<ExplanationOfBenefitProcedure>(ExplanationOfBenefitProcedure.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__PROCEDURE);
@@ -1592,6 +1649,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getPrecedence() {
 		return precedence;
 	}
@@ -1616,6 +1674,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrecedence(PositiveInt newPrecedence) {
 		if (newPrecedence != precedence) {
 			NotificationChain msgs = null;
@@ -1635,6 +1694,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitInsurance> getInsurance() {
 		if (insurance == null) {
 			insurance = new EObjectContainmentEList<ExplanationOfBenefitInsurance>(ExplanationOfBenefitInsurance.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__INSURANCE);
@@ -1647,6 +1707,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitAccident getAccident() {
 		return accident;
 	}
@@ -1671,6 +1732,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccident(ExplanationOfBenefitAccident newAccident) {
 		if (newAccident != accident) {
 			NotificationChain msgs = null;
@@ -1690,6 +1752,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitItem> getItem() {
 		if (item == null) {
 			item = new EObjectContainmentEList<ExplanationOfBenefitItem>(ExplanationOfBenefitItem.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__ITEM);
@@ -1702,6 +1765,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitAddItem> getAddItem() {
 		if (addItem == null) {
 			addItem = new EObjectContainmentEList<ExplanationOfBenefitAddItem>(ExplanationOfBenefitAddItem.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__ADD_ITEM);
@@ -1714,6 +1778,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitAdjudication> getAdjudication() {
 		if (adjudication == null) {
 			adjudication = new EObjectContainmentEList<ExplanationOfBenefitAdjudication>(ExplanationOfBenefitAdjudication.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__ADJUDICATION);
@@ -1726,6 +1791,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitTotal> getTotal() {
 		if (total == null) {
 			total = new EObjectContainmentEList<ExplanationOfBenefitTotal>(ExplanationOfBenefitTotal.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__TOTAL);
@@ -1738,6 +1804,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExplanationOfBenefitPayment getPayment() {
 		return payment;
 	}
@@ -1762,6 +1829,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPayment(ExplanationOfBenefitPayment newPayment) {
 		if (newPayment != payment) {
 			NotificationChain msgs = null;
@@ -1781,6 +1849,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFormCode() {
 		return formCode;
 	}
@@ -1805,6 +1874,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormCode(CodeableConcept newFormCode) {
 		if (newFormCode != formCode) {
 			NotificationChain msgs = null;
@@ -1824,6 +1894,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getForm() {
 		return form;
 	}
@@ -1848,6 +1919,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setForm(Attachment newForm) {
 		if (newForm != form) {
 			NotificationChain msgs = null;
@@ -1867,6 +1939,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitProcessNote> getProcessNote() {
 		if (processNote == null) {
 			processNote = new EObjectContainmentEList<ExplanationOfBenefitProcessNote>(ExplanationOfBenefitProcessNote.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__PROCESS_NOTE);
@@ -1879,6 +1952,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getBenefitPeriod() {
 		return benefitPeriod;
 	}
@@ -1903,6 +1977,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBenefitPeriod(Period newBenefitPeriod) {
 		if (newBenefitPeriod != benefitPeriod) {
 			NotificationChain msgs = null;
@@ -1922,6 +1997,7 @@ public class ExplanationOfBenefitImpl extends DomainResourceImpl implements Expl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExplanationOfBenefitBenefitBalance> getBenefitBalance() {
 		if (benefitBalance == null) {
 			benefitBalance = new EObjectContainmentEList<ExplanationOfBenefitBenefitBalance>(ExplanationOfBenefitBenefitBalance.class, this, FhirPackage.EXPLANATION_OF_BENEFIT__BENEFIT_BALANCE);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Population;
@@ -104,6 +107,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getAgeRange() {
 		return ageRange;
 	}
@@ -128,6 +132,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAgeRange(Range newAgeRange) {
 		if (newAgeRange != ageRange) {
 			NotificationChain msgs = null;
@@ -147,6 +152,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAgeCodeableConcept() {
 		return ageCodeableConcept;
 	}
@@ -171,6 +177,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAgeCodeableConcept(CodeableConcept newAgeCodeableConcept) {
 		if (newAgeCodeableConcept != ageCodeableConcept) {
 			NotificationChain msgs = null;
@@ -190,6 +197,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getGender() {
 		return gender;
 	}
@@ -214,6 +222,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGender(CodeableConcept newGender) {
 		if (newGender != gender) {
 			NotificationChain msgs = null;
@@ -233,6 +242,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRace() {
 		return race;
 	}
@@ -257,6 +267,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRace(CodeableConcept newRace) {
 		if (newRace != race) {
 			NotificationChain msgs = null;
@@ -276,6 +287,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPhysiologicalCondition() {
 		return physiologicalCondition;
 	}
@@ -300,6 +312,7 @@ public class PopulationImpl extends BackboneElementImpl implements Population {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPhysiologicalCondition(CodeableConcept newPhysiologicalCondition) {
 		if (newPhysiologicalCondition != physiologicalCondition) {
 			NotificationChain msgs = null;

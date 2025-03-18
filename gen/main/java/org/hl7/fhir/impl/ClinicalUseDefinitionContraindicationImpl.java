@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ClinicalUseDefinitionContraindication;
 import org.hl7.fhir.ClinicalUseDefinitionOtherTherapy;
 import org.hl7.fhir.CodeableReference;
@@ -110,6 +115,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getDiseaseSymptomProcedure() {
 		return diseaseSymptomProcedure;
 	}
@@ -134,6 +140,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiseaseSymptomProcedure(CodeableReference newDiseaseSymptomProcedure) {
 		if (newDiseaseSymptomProcedure != diseaseSymptomProcedure) {
 			NotificationChain msgs = null;
@@ -153,6 +160,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getDiseaseStatus() {
 		return diseaseStatus;
 	}
@@ -177,6 +185,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiseaseStatus(CodeableReference newDiseaseStatus) {
 		if (newDiseaseStatus != diseaseStatus) {
 			NotificationChain msgs = null;
@@ -196,6 +205,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableReference> getComorbidity() {
 		if (comorbidity == null) {
 			comorbidity = new EObjectContainmentEList<CodeableReference>(CodeableReference.class, this, FhirPackage.CLINICAL_USE_DEFINITION_CONTRAINDICATION__COMORBIDITY);
@@ -208,6 +218,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getIndication() {
 		if (indication == null) {
 			indication = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CLINICAL_USE_DEFINITION_CONTRAINDICATION__INDICATION);
@@ -220,6 +231,7 @@ public class ClinicalUseDefinitionContraindicationImpl extends BackboneElementIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClinicalUseDefinitionOtherTherapy> getOtherTherapy() {
 		if (otherTherapy == null) {
 			otherTherapy = new EObjectContainmentEList<ClinicalUseDefinitionOtherTherapy>(ClinicalUseDefinitionOtherTherapy.class, this, FhirPackage.CLINICAL_USE_DEFINITION_CONTRAINDICATION__OTHER_THERAPY);

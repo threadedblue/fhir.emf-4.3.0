@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CoverageEligibilityResponseBenefit;
 import org.hl7.fhir.FhirPackage;
@@ -127,6 +130,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -151,6 +155,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -170,6 +175,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getAllowedUnsignedInt() {
 		return allowedUnsignedInt;
 	}
@@ -194,6 +200,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowedUnsignedInt(UnsignedInt newAllowedUnsignedInt) {
 		if (newAllowedUnsignedInt != allowedUnsignedInt) {
 			NotificationChain msgs = null;
@@ -213,6 +220,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAllowedString() {
 		return allowedString;
 	}
@@ -237,6 +245,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowedString(org.hl7.fhir.String newAllowedString) {
 		if (newAllowedString != allowedString) {
 			NotificationChain msgs = null;
@@ -256,6 +265,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getAllowedMoney() {
 		return allowedMoney;
 	}
@@ -280,6 +290,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowedMoney(Money newAllowedMoney) {
 		if (newAllowedMoney != allowedMoney) {
 			NotificationChain msgs = null;
@@ -299,6 +310,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getUsedUnsignedInt() {
 		return usedUnsignedInt;
 	}
@@ -323,6 +335,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsedUnsignedInt(UnsignedInt newUsedUnsignedInt) {
 		if (newUsedUnsignedInt != usedUnsignedInt) {
 			NotificationChain msgs = null;
@@ -342,6 +355,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUsedString() {
 		return usedString;
 	}
@@ -366,6 +380,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsedString(org.hl7.fhir.String newUsedString) {
 		if (newUsedString != usedString) {
 			NotificationChain msgs = null;
@@ -385,6 +400,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getUsedMoney() {
 		return usedMoney;
 	}
@@ -409,6 +425,7 @@ public class CoverageEligibilityResponseBenefitImpl extends BackboneElementImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsedMoney(Money newUsedMoney) {
 		if (newUsedMoney != usedMoney) {
 			NotificationChain msgs = null;

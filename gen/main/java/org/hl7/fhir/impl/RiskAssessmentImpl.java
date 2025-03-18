@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
@@ -258,6 +263,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.RISK_ASSESSMENT__IDENTIFIER);
@@ -270,6 +276,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getBasedOn() {
 		return basedOn;
 	}
@@ -294,6 +301,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBasedOn(Reference newBasedOn) {
 		if (newBasedOn != basedOn) {
 			NotificationChain msgs = null;
@@ -313,6 +321,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getParent() {
 		return parent;
 	}
@@ -337,6 +346,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParent(Reference newParent) {
 		if (newParent != parent) {
 			NotificationChain msgs = null;
@@ -356,6 +366,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationStatus getStatus() {
 		return status;
 	}
@@ -380,6 +391,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ObservationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -399,6 +411,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -423,6 +436,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -442,6 +456,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -466,6 +481,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -485,6 +501,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -509,6 +526,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -528,6 +546,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -552,6 +571,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -571,6 +591,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getOccurrenceDateTime() {
 		return occurrenceDateTime;
 	}
@@ -595,6 +616,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrenceDateTime(DateTime newOccurrenceDateTime) {
 		if (newOccurrenceDateTime != occurrenceDateTime) {
 			NotificationChain msgs = null;
@@ -614,6 +636,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getOccurrencePeriod() {
 		return occurrencePeriod;
 	}
@@ -638,6 +661,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrencePeriod(Period newOccurrencePeriod) {
 		if (newOccurrencePeriod != occurrencePeriod) {
 			NotificationChain msgs = null;
@@ -657,6 +681,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCondition() {
 		return condition;
 	}
@@ -681,6 +706,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Reference newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -700,6 +726,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPerformer() {
 		return performer;
 	}
@@ -724,6 +751,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerformer(Reference newPerformer) {
 		if (newPerformer != performer) {
 			NotificationChain msgs = null;
@@ -743,6 +771,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getReasonCode() {
 		if (reasonCode == null) {
 			reasonCode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.RISK_ASSESSMENT__REASON_CODE);
@@ -755,6 +784,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReasonReference() {
 		if (reasonReference == null) {
 			reasonReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.RISK_ASSESSMENT__REASON_REFERENCE);
@@ -767,6 +797,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getBasis() {
 		if (basis == null) {
 			basis = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.RISK_ASSESSMENT__BASIS);
@@ -779,6 +810,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RiskAssessmentPrediction> getPrediction() {
 		if (prediction == null) {
 			prediction = new EObjectContainmentEList<RiskAssessmentPrediction>(RiskAssessmentPrediction.class, this, FhirPackage.RISK_ASSESSMENT__PREDICTION);
@@ -791,6 +823,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMitigation() {
 		return mitigation;
 	}
@@ -815,6 +848,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMitigation(org.hl7.fhir.String newMitigation) {
 		if (newMitigation != mitigation) {
 			NotificationChain msgs = null;
@@ -834,6 +868,7 @@ public class RiskAssessmentImpl extends DomainResourceImpl implements RiskAssess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.RISK_ASSESSMENT__NOTE);

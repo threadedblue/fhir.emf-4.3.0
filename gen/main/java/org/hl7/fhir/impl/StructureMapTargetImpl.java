@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Id;
 import org.hl7.fhir.StructureMapContextType;
@@ -145,6 +150,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getContext() {
 		return context;
 	}
@@ -169,6 +175,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContext(Id newContext) {
 		if (newContext != context) {
 			NotificationChain msgs = null;
@@ -188,6 +195,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapContextType getContextType() {
 		return contextType;
 	}
@@ -212,6 +220,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContextType(StructureMapContextType newContextType) {
 		if (newContextType != contextType) {
 			NotificationChain msgs = null;
@@ -231,6 +240,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getElement() {
 		return element;
 	}
@@ -255,6 +265,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElement(org.hl7.fhir.String newElement) {
 		if (newElement != element) {
 			NotificationChain msgs = null;
@@ -274,6 +285,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getVariable() {
 		return variable;
 	}
@@ -298,6 +310,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(Id newVariable) {
 		if (newVariable != variable) {
 			NotificationChain msgs = null;
@@ -317,6 +330,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StructureMapTargetListMode> getListMode() {
 		if (listMode == null) {
 			listMode = new EObjectContainmentEList<StructureMapTargetListMode>(StructureMapTargetListMode.class, this, FhirPackage.STRUCTURE_MAP_TARGET__LIST_MODE);
@@ -329,6 +343,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getListRuleId() {
 		return listRuleId;
 	}
@@ -353,6 +368,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setListRuleId(Id newListRuleId) {
 		if (newListRuleId != listRuleId) {
 			NotificationChain msgs = null;
@@ -372,6 +388,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapTransform getTransform() {
 		return transform;
 	}
@@ -396,6 +413,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransform(StructureMapTransform newTransform) {
 		if (newTransform != transform) {
 			NotificationChain msgs = null;
@@ -415,6 +433,7 @@ public class StructureMapTargetImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StructureMapParameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<StructureMapParameter>(StructureMapParameter.class, this, FhirPackage.STRUCTURE_MAP_TARGET__PARAMETER);

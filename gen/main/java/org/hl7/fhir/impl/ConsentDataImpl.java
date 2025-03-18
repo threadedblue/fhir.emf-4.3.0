@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ConsentData;
 import org.hl7.fhir.ConsentDataMeaning;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class ConsentDataImpl extends BackboneElementImpl implements ConsentData 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentDataMeaning getMeaning() {
 		return meaning;
 	}
@@ -95,6 +99,7 @@ public class ConsentDataImpl extends BackboneElementImpl implements ConsentData 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeaning(ConsentDataMeaning newMeaning) {
 		if (newMeaning != meaning) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ConsentDataImpl extends BackboneElementImpl implements ConsentData 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReference() {
 		return reference;
 	}
@@ -138,6 +144,7 @@ public class ConsentDataImpl extends BackboneElementImpl implements ConsentData 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Reference newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;

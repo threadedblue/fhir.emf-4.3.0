@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -133,6 +138,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SPECIMEN_CONTAINER__IDENTIFIER);
@@ -145,6 +151,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -169,6 +176,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -188,6 +196,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -212,6 +221,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -231,6 +241,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getCapacity() {
 		return capacity;
 	}
@@ -255,6 +266,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCapacity(Quantity newCapacity) {
 		if (newCapacity != capacity) {
 			NotificationChain msgs = null;
@@ -274,6 +286,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getSpecimenQuantity() {
 		return specimenQuantity;
 	}
@@ -298,6 +311,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecimenQuantity(Quantity newSpecimenQuantity) {
 		if (newSpecimenQuantity != specimenQuantity) {
 			NotificationChain msgs = null;
@@ -317,6 +331,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAdditiveCodeableConcept() {
 		return additiveCodeableConcept;
 	}
@@ -341,6 +356,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveCodeableConcept(CodeableConcept newAdditiveCodeableConcept) {
 		if (newAdditiveCodeableConcept != additiveCodeableConcept) {
 			NotificationChain msgs = null;
@@ -360,6 +376,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAdditiveReference() {
 		return additiveReference;
 	}
@@ -384,6 +401,7 @@ public class SpecimenContainerImpl extends BackboneElementImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveReference(Reference newAdditiveReference) {
 		if (newAdditiveReference != additiveReference) {
 			NotificationChain msgs = null;

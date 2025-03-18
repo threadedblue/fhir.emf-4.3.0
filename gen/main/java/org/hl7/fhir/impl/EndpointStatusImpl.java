@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.EndpointStatus;
 import org.hl7.fhir.EndpointStatusEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class EndpointStatusImpl extends ElementImpl implements EndpointStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EndpointStatusEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class EndpointStatusImpl extends ElementImpl implements EndpointStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(EndpointStatusEnum newValue) {
 		EndpointStatusEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class EndpointStatusImpl extends ElementImpl implements EndpointStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		EndpointStatusEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class EndpointStatusImpl extends ElementImpl implements EndpointStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

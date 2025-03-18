@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.CodeSystemProperty;
 import org.hl7.fhir.FhirPackage;
@@ -94,6 +97,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -118,6 +122,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUri() {
 		return uri;
 	}
@@ -161,6 +167,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUri(Uri newUri) {
 		if (newUri != uri) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -204,6 +212,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PropertyType getType() {
 		return type;
 	}
@@ -247,6 +257,7 @@ public class CodeSystemPropertyImpl extends BackboneElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(PropertyType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

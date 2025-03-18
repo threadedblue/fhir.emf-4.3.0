@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CatalogEntryRelatedEntry;
 import org.hl7.fhir.CatalogEntryRelationType;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class CatalogEntryRelatedEntryImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntryRelationType getRelationtype() {
 		return relationtype;
 	}
@@ -95,6 +99,7 @@ public class CatalogEntryRelatedEntryImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationtype(CatalogEntryRelationType newRelationtype) {
 		if (newRelationtype != relationtype) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CatalogEntryRelatedEntryImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getItem() {
 		return item;
 	}
@@ -138,6 +144,7 @@ public class CatalogEntryRelatedEntryImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItem(Reference newItem) {
 		if (newItem != item) {
 			NotificationChain msgs = null;

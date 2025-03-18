@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.AuditEventAgentNetworkType;
 import org.hl7.fhir.AuditEventNetwork;
 import org.hl7.fhir.FhirPackage;
@@ -70,6 +73,7 @@ public class AuditEventNetworkImpl extends BackboneElementImpl implements AuditE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAddress() {
 		return address;
 	}
@@ -94,6 +98,7 @@ public class AuditEventNetworkImpl extends BackboneElementImpl implements AuditE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAddress(org.hl7.fhir.String newAddress) {
 		if (newAddress != address) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class AuditEventNetworkImpl extends BackboneElementImpl implements AuditE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventAgentNetworkType getType() {
 		return type;
 	}
@@ -137,6 +143,7 @@ public class AuditEventNetworkImpl extends BackboneElementImpl implements AuditE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AuditEventAgentNetworkType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

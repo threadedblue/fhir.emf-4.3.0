@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BundleSearch;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class BundleSearchImpl extends BackboneElementImpl implements BundleSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SearchEntryMode getMode() {
 		return mode;
 	}
@@ -95,6 +99,7 @@ public class BundleSearchImpl extends BackboneElementImpl implements BundleSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(SearchEntryMode newMode) {
 		if (newMode != mode) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class BundleSearchImpl extends BackboneElementImpl implements BundleSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getScore() {
 		return score;
 	}
@@ -138,6 +144,7 @@ public class BundleSearchImpl extends BackboneElementImpl implements BundleSearc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScore(Decimal newScore) {
 		if (newScore != score) {
 			NotificationChain msgs = null;

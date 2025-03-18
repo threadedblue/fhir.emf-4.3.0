@@ -5,13 +5,18 @@ package org.w3._1999.xhtml.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.w3._1999.xhtml.AType;
 import org.w3._1999.xhtml.AbbrType;
 import org.w3._1999.xhtml.AcronymType;
@@ -112,6 +117,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeatureMap getMixed() {
 		if (mixed == null) {
 			mixed = new BasicFeatureMap(this, XhtmlPackage.INLINE__MIXED);
@@ -124,6 +130,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeatureMap getInline() {
 		return (FeatureMap)getMixed().<FeatureMap.Entry>list(XhtmlPackage.eINSTANCE.getInline_Inline());
 	}
@@ -133,6 +140,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AType> getA() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_A());
 	}
@@ -142,6 +150,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BrType> getBr() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Br());
 	}
@@ -151,6 +160,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SpanType> getSpan() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Span());
 	}
@@ -160,6 +170,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BdoType> getBdo() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Bdo());
 	}
@@ -169,6 +180,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MapType> getMap() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Map());
 	}
@@ -178,6 +190,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImgType> getImg() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Img());
 	}
@@ -187,6 +200,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TtType> getTt() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Tt());
 	}
@@ -196,6 +210,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IType> getI() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_I());
 	}
@@ -205,6 +220,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BType> getB() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_B());
 	}
@@ -214,6 +230,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BigType> getBig() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Big());
 	}
@@ -223,6 +240,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SmallType> getSmall() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Small());
 	}
@@ -232,6 +250,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EmType> getEm() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Em());
 	}
@@ -241,6 +260,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StrongType> getStrong() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Strong());
 	}
@@ -250,6 +270,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DfnType> getDfn() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Dfn());
 	}
@@ -259,6 +280,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeType> getCode() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Code());
 	}
@@ -268,6 +290,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<QType> getQ() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Q());
 	}
@@ -277,6 +300,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SampType> getSamp() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Samp());
 	}
@@ -286,6 +310,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<KbdType> getKbd() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Kbd());
 	}
@@ -295,6 +320,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VarType> getVar() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Var());
 	}
@@ -304,6 +330,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CiteType> getCite() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Cite());
 	}
@@ -313,6 +340,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AbbrType> getAbbr() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Abbr());
 	}
@@ -322,6 +350,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AcronymType> getAcronym() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Acronym());
 	}
@@ -331,6 +360,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubType> getSub() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Sub());
 	}
@@ -340,6 +370,7 @@ public class InlineImpl extends MinimalEObjectImpl.Container implements Inline {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SupType> getSup() {
 		return getInline().list(XhtmlPackage.eINSTANCE.getInline_Sup());
 	}

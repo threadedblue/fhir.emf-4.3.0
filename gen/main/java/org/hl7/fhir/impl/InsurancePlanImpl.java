@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -214,6 +219,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.INSURANCE_PLAN__IDENTIFIER);
@@ -226,6 +232,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -250,6 +257,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -269,6 +277,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.INSURANCE_PLAN__TYPE);
@@ -281,6 +290,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -305,6 +315,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -324,6 +335,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getAlias() {
 		if (alias == null) {
 			alias = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.INSURANCE_PLAN__ALIAS);
@@ -336,6 +348,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -360,6 +373,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -379,6 +393,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOwnedBy() {
 		return ownedBy;
 	}
@@ -403,6 +418,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedBy(Reference newOwnedBy) {
 		if (newOwnedBy != ownedBy) {
 			NotificationChain msgs = null;
@@ -422,6 +438,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAdministeredBy() {
 		return administeredBy;
 	}
@@ -446,6 +463,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdministeredBy(Reference newAdministeredBy) {
 		if (newAdministeredBy != administeredBy) {
 			NotificationChain msgs = null;
@@ -465,6 +483,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getCoverageArea() {
 		if (coverageArea == null) {
 			coverageArea = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN__COVERAGE_AREA);
@@ -477,6 +496,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanContact> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<InsurancePlanContact>(InsurancePlanContact.class, this, FhirPackage.INSURANCE_PLAN__CONTACT);
@@ -489,6 +509,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEndpoint() {
 		if (endpoint == null) {
 			endpoint = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN__ENDPOINT);
@@ -501,6 +522,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getNetwork() {
 		if (network == null) {
 			network = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN__NETWORK);
@@ -513,6 +535,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanCoverage> getCoverage() {
 		if (coverage == null) {
 			coverage = new EObjectContainmentEList<InsurancePlanCoverage>(InsurancePlanCoverage.class, this, FhirPackage.INSURANCE_PLAN__COVERAGE);
@@ -525,6 +548,7 @@ public class InsurancePlanImpl extends DomainResourceImpl implements InsurancePl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanPlan> getPlan() {
 		if (plan == null) {
 			plan = new EObjectContainmentEList<InsurancePlanPlan>(InsurancePlanPlan.class, this, FhirPackage.INSURANCE_PLAN__PLAN);

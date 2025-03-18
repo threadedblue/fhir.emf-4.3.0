@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TerminologyCapabilitiesCodeSystem;
@@ -87,6 +92,7 @@ public class TerminologyCapabilitiesCodeSystemImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getUri() {
 		return uri;
 	}
@@ -111,6 +117,7 @@ public class TerminologyCapabilitiesCodeSystemImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUri(Canonical newUri) {
 		if (newUri != uri) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class TerminologyCapabilitiesCodeSystemImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TerminologyCapabilitiesVersion> getVersion() {
 		if (version == null) {
 			version = new EObjectContainmentEList<TerminologyCapabilitiesVersion>(TerminologyCapabilitiesVersion.class, this, FhirPackage.TERMINOLOGY_CAPABILITIES_CODE_SYSTEM__VERSION);
@@ -142,6 +150,7 @@ public class TerminologyCapabilitiesCodeSystemImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getSubsumption() {
 		return subsumption;
 	}
@@ -166,6 +175,7 @@ public class TerminologyCapabilitiesCodeSystemImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubsumption(org.hl7.fhir.Boolean newSubsumption) {
 		if (newSubsumption != subsumption) {
 			NotificationChain msgs = null;

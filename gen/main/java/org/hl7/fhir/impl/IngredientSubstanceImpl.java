@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableReference;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.IngredientStrength;
@@ -76,6 +81,7 @@ public class IngredientSubstanceImpl extends BackboneElementImpl implements Ingr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getCode() {
 		return code;
 	}
@@ -100,6 +106,7 @@ public class IngredientSubstanceImpl extends BackboneElementImpl implements Ingr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableReference newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -119,6 +126,7 @@ public class IngredientSubstanceImpl extends BackboneElementImpl implements Ingr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IngredientStrength> getStrength() {
 		if (strength == null) {
 			strength = new EObjectContainmentEList<IngredientStrength>(IngredientStrength.class, this, FhirPackage.INGREDIENT_SUBSTANCE__STRENGTH);

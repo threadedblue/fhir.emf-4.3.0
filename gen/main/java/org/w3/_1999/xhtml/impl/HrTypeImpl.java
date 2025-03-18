@@ -5,9 +5,12 @@ package org.w3._1999.xhtml.impl;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.HrType;
 import org.w3._1999.xhtml.XhtmlPackage;
@@ -205,6 +208,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -214,6 +218,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -226,6 +231,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -235,6 +241,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -249,6 +256,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -263,6 +271,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -272,6 +281,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -281,6 +291,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -293,6 +304,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -302,6 +314,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -314,6 +327,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -323,6 +337,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -335,6 +350,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -344,6 +360,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -356,6 +373,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -365,6 +383,7 @@ public class HrTypeImpl extends MinimalEObjectImpl.Container implements HrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;

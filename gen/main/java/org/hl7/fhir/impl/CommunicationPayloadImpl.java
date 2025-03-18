@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CommunicationPayload;
 import org.hl7.fhir.FhirPackage;
@@ -82,6 +85,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getContentString() {
 		return contentString;
 	}
@@ -106,6 +110,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentString(org.hl7.fhir.String newContentString) {
 		if (newContentString != contentString) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getContentAttachment() {
 		return contentAttachment;
 	}
@@ -149,6 +155,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentAttachment(Attachment newContentAttachment) {
 		if (newContentAttachment != contentAttachment) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getContentReference() {
 		return contentReference;
 	}
@@ -192,6 +200,7 @@ public class CommunicationPayloadImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentReference(Reference newContentReference) {
 		if (newContentReference != contentReference) {
 			NotificationChain msgs = null;

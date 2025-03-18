@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EvidenceReportSection;
 import org.hl7.fhir.FhirPackage;
@@ -189,6 +194,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -213,6 +219,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -232,6 +239,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFocus() {
 		return focus;
 	}
@@ -256,6 +264,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocus(CodeableConcept newFocus) {
 		if (newFocus != focus) {
 			NotificationChain msgs = null;
@@ -275,6 +284,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFocusReference() {
 		return focusReference;
 	}
@@ -299,6 +309,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocusReference(Reference newFocusReference) {
 		if (newFocusReference != focusReference) {
 			NotificationChain msgs = null;
@@ -318,6 +329,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.EVIDENCE_REPORT_SECTION__AUTHOR);
@@ -330,6 +342,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Narrative getText() {
 		return text;
 	}
@@ -354,6 +367,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(Narrative newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -373,6 +387,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListMode getMode() {
 		return mode;
 	}
@@ -397,6 +412,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(ListMode newMode) {
 		if (newMode != mode) {
 			NotificationChain msgs = null;
@@ -416,6 +432,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOrderedBy() {
 		return orderedBy;
 	}
@@ -440,6 +457,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrderedBy(CodeableConcept newOrderedBy) {
 		if (newOrderedBy != orderedBy) {
 			NotificationChain msgs = null;
@@ -459,6 +477,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getEntryClassifier() {
 		if (entryClassifier == null) {
 			entryClassifier = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.EVIDENCE_REPORT_SECTION__ENTRY_CLASSIFIER);
@@ -471,6 +490,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEntryReference() {
 		if (entryReference == null) {
 			entryReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.EVIDENCE_REPORT_SECTION__ENTRY_REFERENCE);
@@ -483,6 +503,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Quantity> getEntryQuantity() {
 		if (entryQuantity == null) {
 			entryQuantity = new EObjectContainmentEList<Quantity>(Quantity.class, this, FhirPackage.EVIDENCE_REPORT_SECTION__ENTRY_QUANTITY);
@@ -495,6 +516,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getEmptyReason() {
 		return emptyReason;
 	}
@@ -519,6 +541,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEmptyReason(CodeableConcept newEmptyReason) {
 		if (newEmptyReason != emptyReason) {
 			NotificationChain msgs = null;
@@ -538,6 +561,7 @@ public class EvidenceReportSectionImpl extends BackboneElementImpl implements Ev
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceReportSection> getSection() {
 		if (section == null) {
 			section = new EObjectContainmentEList<EvidenceReportSection>(EvidenceReportSection.class, this, FhirPackage.EVIDENCE_REPORT_SECTION__SECTION);

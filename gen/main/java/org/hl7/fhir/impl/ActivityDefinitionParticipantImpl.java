@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ActionParticipantType;
 import org.hl7.fhir.ActivityDefinitionParticipant;
 import org.hl7.fhir.CodeableConcept;
@@ -71,6 +74,7 @@ public class ActivityDefinitionParticipantImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionParticipantType getType() {
 		return type;
 	}
@@ -95,6 +99,7 @@ public class ActivityDefinitionParticipantImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ActionParticipantType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ActivityDefinitionParticipantImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -138,6 +144,7 @@ public class ActivityDefinitionParticipantImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;

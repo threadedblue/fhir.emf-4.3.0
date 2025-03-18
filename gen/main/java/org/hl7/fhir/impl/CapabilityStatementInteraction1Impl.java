@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CapabilityStatementInteraction1;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
@@ -71,6 +74,7 @@ public class CapabilityStatementInteraction1Impl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemRestfulInteraction getCode() {
 		return code;
 	}
@@ -95,6 +99,7 @@ public class CapabilityStatementInteraction1Impl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(SystemRestfulInteraction newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CapabilityStatementInteraction1Impl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDocumentation() {
 		return documentation;
 	}
@@ -138,6 +144,7 @@ public class CapabilityStatementInteraction1Impl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentation(Markdown newDocumentation) {
 		if (newDocumentation != documentation) {
 			NotificationChain msgs = null;

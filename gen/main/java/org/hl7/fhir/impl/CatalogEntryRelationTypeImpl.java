@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CatalogEntryRelationType;
 import org.hl7.fhir.CatalogEntryRelationTypeEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class CatalogEntryRelationTypeImpl extends ElementImpl implements Catalog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatalogEntryRelationTypeEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class CatalogEntryRelationTypeImpl extends ElementImpl implements Catalog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(CatalogEntryRelationTypeEnum newValue) {
 		CatalogEntryRelationTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class CatalogEntryRelationTypeImpl extends ElementImpl implements Catalog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		CatalogEntryRelationTypeEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class CatalogEntryRelationTypeImpl extends ElementImpl implements Catalog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

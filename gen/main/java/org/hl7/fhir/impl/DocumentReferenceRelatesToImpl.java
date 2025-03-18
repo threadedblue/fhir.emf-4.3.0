@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DocumentReferenceRelatesTo;
 import org.hl7.fhir.DocumentRelationshipType;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class DocumentReferenceRelatesToImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRelationshipType getCode() {
 		return code;
 	}
@@ -95,6 +99,7 @@ public class DocumentReferenceRelatesToImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(DocumentRelationshipType newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class DocumentReferenceRelatesToImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTarget() {
 		return target;
 	}
@@ -138,6 +144,7 @@ public class DocumentReferenceRelatesToImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Reference newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;

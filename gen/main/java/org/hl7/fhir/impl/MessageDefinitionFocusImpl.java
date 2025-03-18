@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MessageDefinitionFocus;
@@ -94,6 +97,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceType getCode() {
 		return code;
 	}
@@ -118,6 +122,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(ResourceType newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getProfile() {
 		return profile;
 	}
@@ -161,6 +167,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProfile(Canonical newProfile) {
 		if (newProfile != profile) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getMin() {
 		return min;
 	}
@@ -204,6 +212,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(UnsignedInt newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -247,6 +257,7 @@ public class MessageDefinitionFocusImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;

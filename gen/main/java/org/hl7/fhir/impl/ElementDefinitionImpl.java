@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.Age;
 import org.hl7.fhir.Annotation;
@@ -2308,6 +2313,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPath() {
 		return path;
 	}
@@ -2332,6 +2338,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(org.hl7.fhir.String newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
@@ -2351,6 +2358,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PropertyRepresentation> getRepresentation() {
 		if (representation == null) {
 			representation = new EObjectContainmentEList<PropertyRepresentation>(PropertyRepresentation.class, this, FhirPackage.ELEMENT_DEFINITION__REPRESENTATION);
@@ -2363,6 +2371,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSliceName() {
 		return sliceName;
 	}
@@ -2387,6 +2396,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSliceName(org.hl7.fhir.String newSliceName) {
 		if (newSliceName != sliceName) {
 			NotificationChain msgs = null;
@@ -2406,6 +2416,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getSliceIsConstraining() {
 		return sliceIsConstraining;
 	}
@@ -2430,6 +2441,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSliceIsConstraining(org.hl7.fhir.Boolean newSliceIsConstraining) {
 		if (newSliceIsConstraining != sliceIsConstraining) {
 			NotificationChain msgs = null;
@@ -2449,6 +2461,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLabel() {
 		return label;
 	}
@@ -2473,6 +2486,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(org.hl7.fhir.String newLabel) {
 		if (newLabel != label) {
 			NotificationChain msgs = null;
@@ -2492,6 +2506,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getCode() {
 		if (code == null) {
 			code = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.ELEMENT_DEFINITION__CODE);
@@ -2504,6 +2519,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionSlicing getSlicing() {
 		return slicing;
 	}
@@ -2528,6 +2544,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSlicing(ElementDefinitionSlicing newSlicing) {
 		if (newSlicing != slicing) {
 			NotificationChain msgs = null;
@@ -2547,6 +2564,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getShort() {
 		return short_;
 	}
@@ -2571,6 +2589,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShort(org.hl7.fhir.String newShort) {
 		if (newShort != short_) {
 			NotificationChain msgs = null;
@@ -2590,6 +2609,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDefinition() {
 		return definition;
 	}
@@ -2614,6 +2634,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(Markdown newDefinition) {
 		if (newDefinition != definition) {
 			NotificationChain msgs = null;
@@ -2633,6 +2654,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getComment() {
 		return comment;
 	}
@@ -2657,6 +2679,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(Markdown newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;
@@ -2676,6 +2699,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getRequirements() {
 		return requirements;
 	}
@@ -2700,6 +2724,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequirements(Markdown newRequirements) {
 		if (newRequirements != requirements) {
 			NotificationChain msgs = null;
@@ -2719,6 +2744,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getAlias() {
 		if (alias == null) {
 			alias = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.ELEMENT_DEFINITION__ALIAS);
@@ -2731,6 +2757,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getMin() {
 		return min;
 	}
@@ -2755,6 +2782,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(UnsignedInt newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -2774,6 +2802,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -2798,6 +2827,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;
@@ -2817,6 +2847,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionBase getBase() {
 		return base;
 	}
@@ -2841,6 +2872,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase(ElementDefinitionBase newBase) {
 		if (newBase != base) {
 			NotificationChain msgs = null;
@@ -2860,6 +2892,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getContentReference() {
 		return contentReference;
 	}
@@ -2884,6 +2917,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentReference(Uri newContentReference) {
 		if (newContentReference != contentReference) {
 			NotificationChain msgs = null;
@@ -2903,6 +2937,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinitionType> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<ElementDefinitionType>(ElementDefinitionType.class, this, FhirPackage.ELEMENT_DEFINITION__TYPE);
@@ -2915,6 +2950,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getDefaultValueBase64Binary() {
 		return defaultValueBase64Binary;
 	}
@@ -2939,6 +2975,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueBase64Binary(Base64Binary newDefaultValueBase64Binary) {
 		if (newDefaultValueBase64Binary != defaultValueBase64Binary) {
 			NotificationChain msgs = null;
@@ -2958,6 +2995,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getDefaultValueBoolean() {
 		return defaultValueBoolean;
 	}
@@ -2982,6 +3020,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueBoolean(org.hl7.fhir.Boolean newDefaultValueBoolean) {
 		if (newDefaultValueBoolean != defaultValueBoolean) {
 			NotificationChain msgs = null;
@@ -3001,6 +3040,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getDefaultValueCanonical() {
 		return defaultValueCanonical;
 	}
@@ -3025,6 +3065,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCanonical(Canonical newDefaultValueCanonical) {
 		if (newDefaultValueCanonical != defaultValueCanonical) {
 			NotificationChain msgs = null;
@@ -3044,6 +3085,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getDefaultValueCode() {
 		return defaultValueCode;
 	}
@@ -3068,6 +3110,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCode(Code newDefaultValueCode) {
 		if (newDefaultValueCode != defaultValueCode) {
 			NotificationChain msgs = null;
@@ -3087,6 +3130,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDefaultValueDate() {
 		return defaultValueDate;
 	}
@@ -3111,6 +3155,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDate(Date newDefaultValueDate) {
 		if (newDefaultValueDate != defaultValueDate) {
 			NotificationChain msgs = null;
@@ -3130,6 +3175,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDefaultValueDateTime() {
 		return defaultValueDateTime;
 	}
@@ -3154,6 +3200,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDateTime(DateTime newDefaultValueDateTime) {
 		if (newDefaultValueDateTime != defaultValueDateTime) {
 			NotificationChain msgs = null;
@@ -3173,6 +3220,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getDefaultValueDecimal() {
 		return defaultValueDecimal;
 	}
@@ -3197,6 +3245,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDecimal(Decimal newDefaultValueDecimal) {
 		if (newDefaultValueDecimal != defaultValueDecimal) {
 			NotificationChain msgs = null;
@@ -3216,6 +3265,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getDefaultValueId() {
 		return defaultValueId;
 	}
@@ -3240,6 +3290,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueId(Id newDefaultValueId) {
 		if (newDefaultValueId != defaultValueId) {
 			NotificationChain msgs = null;
@@ -3259,6 +3310,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getDefaultValueInstant() {
 		return defaultValueInstant;
 	}
@@ -3283,6 +3335,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueInstant(Instant newDefaultValueInstant) {
 		if (newDefaultValueInstant != defaultValueInstant) {
 			NotificationChain msgs = null;
@@ -3302,6 +3355,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getDefaultValueInteger() {
 		return defaultValueInteger;
 	}
@@ -3326,6 +3380,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueInteger(org.hl7.fhir.Integer newDefaultValueInteger) {
 		if (newDefaultValueInteger != defaultValueInteger) {
 			NotificationChain msgs = null;
@@ -3345,6 +3400,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDefaultValueMarkdown() {
 		return defaultValueMarkdown;
 	}
@@ -3369,6 +3425,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueMarkdown(Markdown newDefaultValueMarkdown) {
 		if (newDefaultValueMarkdown != defaultValueMarkdown) {
 			NotificationChain msgs = null;
@@ -3388,6 +3445,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid getDefaultValueOid() {
 		return defaultValueOid;
 	}
@@ -3412,6 +3470,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueOid(Oid newDefaultValueOid) {
 		if (newDefaultValueOid != defaultValueOid) {
 			NotificationChain msgs = null;
@@ -3431,6 +3490,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDefaultValuePositiveInt() {
 		return defaultValuePositiveInt;
 	}
@@ -3455,6 +3515,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValuePositiveInt(PositiveInt newDefaultValuePositiveInt) {
 		if (newDefaultValuePositiveInt != defaultValuePositiveInt) {
 			NotificationChain msgs = null;
@@ -3474,6 +3535,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDefaultValueString() {
 		return defaultValueString;
 	}
@@ -3498,6 +3560,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueString(org.hl7.fhir.String newDefaultValueString) {
 		if (newDefaultValueString != defaultValueString) {
 			NotificationChain msgs = null;
@@ -3517,6 +3580,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getDefaultValueTime() {
 		return defaultValueTime;
 	}
@@ -3541,6 +3605,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTime(Time newDefaultValueTime) {
 		if (newDefaultValueTime != defaultValueTime) {
 			NotificationChain msgs = null;
@@ -3560,6 +3625,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getDefaultValueUnsignedInt() {
 		return defaultValueUnsignedInt;
 	}
@@ -3584,6 +3650,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUnsignedInt(UnsignedInt newDefaultValueUnsignedInt) {
 		if (newDefaultValueUnsignedInt != defaultValueUnsignedInt) {
 			NotificationChain msgs = null;
@@ -3603,6 +3670,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getDefaultValueUri() {
 		return defaultValueUri;
 	}
@@ -3627,6 +3695,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUri(Uri newDefaultValueUri) {
 		if (newDefaultValueUri != defaultValueUri) {
 			NotificationChain msgs = null;
@@ -3646,6 +3715,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getDefaultValueUrl() {
 		return defaultValueUrl;
 	}
@@ -3670,6 +3740,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUrl(Url newDefaultValueUrl) {
 		if (newDefaultValueUrl != defaultValueUrl) {
 			NotificationChain msgs = null;
@@ -3689,6 +3760,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid getDefaultValueUuid() {
 		return defaultValueUuid;
 	}
@@ -3713,6 +3785,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUuid(Uuid newDefaultValueUuid) {
 		if (newDefaultValueUuid != defaultValueUuid) {
 			NotificationChain msgs = null;
@@ -3732,6 +3805,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getDefaultValueAddress() {
 		return defaultValueAddress;
 	}
@@ -3756,6 +3830,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAddress(Address newDefaultValueAddress) {
 		if (newDefaultValueAddress != defaultValueAddress) {
 			NotificationChain msgs = null;
@@ -3775,6 +3850,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getDefaultValueAge() {
 		return defaultValueAge;
 	}
@@ -3799,6 +3875,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAge(Age newDefaultValueAge) {
 		if (newDefaultValueAge != defaultValueAge) {
 			NotificationChain msgs = null;
@@ -3818,6 +3895,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getDefaultValueAnnotation() {
 		return defaultValueAnnotation;
 	}
@@ -3842,6 +3920,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAnnotation(Annotation newDefaultValueAnnotation) {
 		if (newDefaultValueAnnotation != defaultValueAnnotation) {
 			NotificationChain msgs = null;
@@ -3861,6 +3940,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getDefaultValueAttachment() {
 		return defaultValueAttachment;
 	}
@@ -3885,6 +3965,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAttachment(Attachment newDefaultValueAttachment) {
 		if (newDefaultValueAttachment != defaultValueAttachment) {
 			NotificationChain msgs = null;
@@ -3904,6 +3985,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDefaultValueCodeableConcept() {
 		return defaultValueCodeableConcept;
 	}
@@ -3928,6 +4010,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCodeableConcept(CodeableConcept newDefaultValueCodeableConcept) {
 		if (newDefaultValueCodeableConcept != defaultValueCodeableConcept) {
 			NotificationChain msgs = null;
@@ -3947,6 +4030,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getDefaultValueCodeableReference() {
 		return defaultValueCodeableReference;
 	}
@@ -3971,6 +4055,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCodeableReference(CodeableReference newDefaultValueCodeableReference) {
 		if (newDefaultValueCodeableReference != defaultValueCodeableReference) {
 			NotificationChain msgs = null;
@@ -3990,6 +4075,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getDefaultValueCoding() {
 		return defaultValueCoding;
 	}
@@ -4014,6 +4100,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCoding(Coding newDefaultValueCoding) {
 		if (newDefaultValueCoding != defaultValueCoding) {
 			NotificationChain msgs = null;
@@ -4033,6 +4120,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getDefaultValueContactPoint() {
 		return defaultValueContactPoint;
 	}
@@ -4057,6 +4145,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContactPoint(ContactPoint newDefaultValueContactPoint) {
 		if (newDefaultValueContactPoint != defaultValueContactPoint) {
 			NotificationChain msgs = null;
@@ -4076,6 +4165,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count getDefaultValueCount() {
 		return defaultValueCount;
 	}
@@ -4100,6 +4190,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCount(Count newDefaultValueCount) {
 		if (newDefaultValueCount != defaultValueCount) {
 			NotificationChain msgs = null;
@@ -4119,6 +4210,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance getDefaultValueDistance() {
 		return defaultValueDistance;
 	}
@@ -4143,6 +4235,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDistance(Distance newDefaultValueDistance) {
 		if (newDefaultValueDistance != defaultValueDistance) {
 			NotificationChain msgs = null;
@@ -4162,6 +4255,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDefaultValueDuration() {
 		return defaultValueDuration;
 	}
@@ -4186,6 +4280,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDuration(Duration newDefaultValueDuration) {
 		if (newDefaultValueDuration != defaultValueDuration) {
 			NotificationChain msgs = null;
@@ -4205,6 +4300,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getDefaultValueHumanName() {
 		return defaultValueHumanName;
 	}
@@ -4229,6 +4325,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueHumanName(HumanName newDefaultValueHumanName) {
 		if (newDefaultValueHumanName != defaultValueHumanName) {
 			NotificationChain msgs = null;
@@ -4248,6 +4345,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getDefaultValueIdentifier() {
 		return defaultValueIdentifier;
 	}
@@ -4272,6 +4370,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueIdentifier(Identifier newDefaultValueIdentifier) {
 		if (newDefaultValueIdentifier != defaultValueIdentifier) {
 			NotificationChain msgs = null;
@@ -4291,6 +4390,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getDefaultValueMoney() {
 		return defaultValueMoney;
 	}
@@ -4315,6 +4415,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueMoney(Money newDefaultValueMoney) {
 		if (newDefaultValueMoney != defaultValueMoney) {
 			NotificationChain msgs = null;
@@ -4334,6 +4435,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getDefaultValuePeriod() {
 		return defaultValuePeriod;
 	}
@@ -4358,6 +4460,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValuePeriod(Period newDefaultValuePeriod) {
 		if (newDefaultValuePeriod != defaultValuePeriod) {
 			NotificationChain msgs = null;
@@ -4377,6 +4480,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDefaultValueQuantity() {
 		return defaultValueQuantity;
 	}
@@ -4401,6 +4505,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueQuantity(Quantity newDefaultValueQuantity) {
 		if (newDefaultValueQuantity != defaultValueQuantity) {
 			NotificationChain msgs = null;
@@ -4420,6 +4525,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getDefaultValueRange() {
 		return defaultValueRange;
 	}
@@ -4444,6 +4550,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRange(Range newDefaultValueRange) {
 		if (newDefaultValueRange != defaultValueRange) {
 			NotificationChain msgs = null;
@@ -4463,6 +4570,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getDefaultValueRatio() {
 		return defaultValueRatio;
 	}
@@ -4487,6 +4595,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRatio(Ratio newDefaultValueRatio) {
 		if (newDefaultValueRatio != defaultValueRatio) {
 			NotificationChain msgs = null;
@@ -4506,6 +4615,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange getDefaultValueRatioRange() {
 		return defaultValueRatioRange;
 	}
@@ -4530,6 +4640,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRatioRange(RatioRange newDefaultValueRatioRange) {
 		if (newDefaultValueRatioRange != defaultValueRatioRange) {
 			NotificationChain msgs = null;
@@ -4549,6 +4660,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDefaultValueReference() {
 		return defaultValueReference;
 	}
@@ -4573,6 +4685,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueReference(Reference newDefaultValueReference) {
 		if (newDefaultValueReference != defaultValueReference) {
 			NotificationChain msgs = null;
@@ -4592,6 +4705,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getDefaultValueSampledData() {
 		return defaultValueSampledData;
 	}
@@ -4616,6 +4730,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueSampledData(SampledData newDefaultValueSampledData) {
 		if (newDefaultValueSampledData != defaultValueSampledData) {
 			NotificationChain msgs = null;
@@ -4635,6 +4750,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getDefaultValueSignature() {
 		return defaultValueSignature;
 	}
@@ -4659,6 +4775,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueSignature(Signature newDefaultValueSignature) {
 		if (newDefaultValueSignature != defaultValueSignature) {
 			NotificationChain msgs = null;
@@ -4678,6 +4795,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getDefaultValueTiming() {
 		return defaultValueTiming;
 	}
@@ -4702,6 +4820,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTiming(Timing newDefaultValueTiming) {
 		if (newDefaultValueTiming != defaultValueTiming) {
 			NotificationChain msgs = null;
@@ -4721,6 +4840,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail getDefaultValueContactDetail() {
 		return defaultValueContactDetail;
 	}
@@ -4745,6 +4865,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContactDetail(ContactDetail newDefaultValueContactDetail) {
 		if (newDefaultValueContactDetail != defaultValueContactDetail) {
 			NotificationChain msgs = null;
@@ -4764,6 +4885,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor getDefaultValueContributor() {
 		return defaultValueContributor;
 	}
@@ -4788,6 +4910,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContributor(Contributor newDefaultValueContributor) {
 		if (newDefaultValueContributor != defaultValueContributor) {
 			NotificationChain msgs = null;
@@ -4807,6 +4930,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getDefaultValueDataRequirement() {
 		return defaultValueDataRequirement;
 	}
@@ -4831,6 +4955,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDataRequirement(DataRequirement newDefaultValueDataRequirement) {
 		if (newDefaultValueDataRequirement != defaultValueDataRequirement) {
 			NotificationChain msgs = null;
@@ -4850,6 +4975,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefaultValueExpression() {
 		return defaultValueExpression;
 	}
@@ -4874,6 +5000,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueExpression(Expression newDefaultValueExpression) {
 		if (newDefaultValueExpression != defaultValueExpression) {
 			NotificationChain msgs = null;
@@ -4893,6 +5020,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getDefaultValueParameterDefinition() {
 		return defaultValueParameterDefinition;
 	}
@@ -4917,6 +5045,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueParameterDefinition(ParameterDefinition newDefaultValueParameterDefinition) {
 		if (newDefaultValueParameterDefinition != defaultValueParameterDefinition) {
 			NotificationChain msgs = null;
@@ -4936,6 +5065,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact getDefaultValueRelatedArtifact() {
 		return defaultValueRelatedArtifact;
 	}
@@ -4960,6 +5090,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRelatedArtifact(RelatedArtifact newDefaultValueRelatedArtifact) {
 		if (newDefaultValueRelatedArtifact != defaultValueRelatedArtifact) {
 			NotificationChain msgs = null;
@@ -4979,6 +5110,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition getDefaultValueTriggerDefinition() {
 		return defaultValueTriggerDefinition;
 	}
@@ -5003,6 +5135,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTriggerDefinition(TriggerDefinition newDefaultValueTriggerDefinition) {
 		if (newDefaultValueTriggerDefinition != defaultValueTriggerDefinition) {
 			NotificationChain msgs = null;
@@ -5022,6 +5155,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext getDefaultValueUsageContext() {
 		return defaultValueUsageContext;
 	}
@@ -5046,6 +5180,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUsageContext(UsageContext newDefaultValueUsageContext) {
 		if (newDefaultValueUsageContext != defaultValueUsageContext) {
 			NotificationChain msgs = null;
@@ -5065,6 +5200,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage getDefaultValueDosage() {
 		return defaultValueDosage;
 	}
@@ -5089,6 +5225,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDosage(Dosage newDefaultValueDosage) {
 		if (newDefaultValueDosage != defaultValueDosage) {
 			NotificationChain msgs = null;
@@ -5108,6 +5245,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getMeaningWhenMissing() {
 		return meaningWhenMissing;
 	}
@@ -5132,6 +5270,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeaningWhenMissing(Markdown newMeaningWhenMissing) {
 		if (newMeaningWhenMissing != meaningWhenMissing) {
 			NotificationChain msgs = null;
@@ -5151,6 +5290,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getOrderMeaning() {
 		return orderMeaning;
 	}
@@ -5175,6 +5315,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrderMeaning(org.hl7.fhir.String newOrderMeaning) {
 		if (newOrderMeaning != orderMeaning) {
 			NotificationChain msgs = null;
@@ -5194,6 +5335,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getFixedBase64Binary() {
 		return fixedBase64Binary;
 	}
@@ -5218,6 +5360,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedBase64Binary(Base64Binary newFixedBase64Binary) {
 		if (newFixedBase64Binary != fixedBase64Binary) {
 			NotificationChain msgs = null;
@@ -5237,6 +5380,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getFixedBoolean() {
 		return fixedBoolean;
 	}
@@ -5261,6 +5405,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedBoolean(org.hl7.fhir.Boolean newFixedBoolean) {
 		if (newFixedBoolean != fixedBoolean) {
 			NotificationChain msgs = null;
@@ -5280,6 +5425,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getFixedCanonical() {
 		return fixedCanonical;
 	}
@@ -5304,6 +5450,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCanonical(Canonical newFixedCanonical) {
 		if (newFixedCanonical != fixedCanonical) {
 			NotificationChain msgs = null;
@@ -5323,6 +5470,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getFixedCode() {
 		return fixedCode;
 	}
@@ -5347,6 +5495,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCode(Code newFixedCode) {
 		if (newFixedCode != fixedCode) {
 			NotificationChain msgs = null;
@@ -5366,6 +5515,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getFixedDate() {
 		return fixedDate;
 	}
@@ -5390,6 +5540,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDate(Date newFixedDate) {
 		if (newFixedDate != fixedDate) {
 			NotificationChain msgs = null;
@@ -5409,6 +5560,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getFixedDateTime() {
 		return fixedDateTime;
 	}
@@ -5433,6 +5585,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDateTime(DateTime newFixedDateTime) {
 		if (newFixedDateTime != fixedDateTime) {
 			NotificationChain msgs = null;
@@ -5452,6 +5605,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getFixedDecimal() {
 		return fixedDecimal;
 	}
@@ -5476,6 +5630,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDecimal(Decimal newFixedDecimal) {
 		if (newFixedDecimal != fixedDecimal) {
 			NotificationChain msgs = null;
@@ -5495,6 +5650,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getFixedId() {
 		return fixedId;
 	}
@@ -5519,6 +5675,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedId(Id newFixedId) {
 		if (newFixedId != fixedId) {
 			NotificationChain msgs = null;
@@ -5538,6 +5695,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getFixedInstant() {
 		return fixedInstant;
 	}
@@ -5562,6 +5720,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedInstant(Instant newFixedInstant) {
 		if (newFixedInstant != fixedInstant) {
 			NotificationChain msgs = null;
@@ -5581,6 +5740,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getFixedInteger() {
 		return fixedInteger;
 	}
@@ -5605,6 +5765,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedInteger(org.hl7.fhir.Integer newFixedInteger) {
 		if (newFixedInteger != fixedInteger) {
 			NotificationChain msgs = null;
@@ -5624,6 +5785,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getFixedMarkdown() {
 		return fixedMarkdown;
 	}
@@ -5648,6 +5810,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedMarkdown(Markdown newFixedMarkdown) {
 		if (newFixedMarkdown != fixedMarkdown) {
 			NotificationChain msgs = null;
@@ -5667,6 +5830,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid getFixedOid() {
 		return fixedOid;
 	}
@@ -5691,6 +5855,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedOid(Oid newFixedOid) {
 		if (newFixedOid != fixedOid) {
 			NotificationChain msgs = null;
@@ -5710,6 +5875,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getFixedPositiveInt() {
 		return fixedPositiveInt;
 	}
@@ -5734,6 +5900,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedPositiveInt(PositiveInt newFixedPositiveInt) {
 		if (newFixedPositiveInt != fixedPositiveInt) {
 			NotificationChain msgs = null;
@@ -5753,6 +5920,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getFixedString() {
 		return fixedString;
 	}
@@ -5777,6 +5945,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedString(org.hl7.fhir.String newFixedString) {
 		if (newFixedString != fixedString) {
 			NotificationChain msgs = null;
@@ -5796,6 +5965,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getFixedTime() {
 		return fixedTime;
 	}
@@ -5820,6 +5990,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedTime(Time newFixedTime) {
 		if (newFixedTime != fixedTime) {
 			NotificationChain msgs = null;
@@ -5839,6 +6010,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getFixedUnsignedInt() {
 		return fixedUnsignedInt;
 	}
@@ -5863,6 +6035,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedUnsignedInt(UnsignedInt newFixedUnsignedInt) {
 		if (newFixedUnsignedInt != fixedUnsignedInt) {
 			NotificationChain msgs = null;
@@ -5882,6 +6055,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getFixedUri() {
 		return fixedUri;
 	}
@@ -5906,6 +6080,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedUri(Uri newFixedUri) {
 		if (newFixedUri != fixedUri) {
 			NotificationChain msgs = null;
@@ -5925,6 +6100,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getFixedUrl() {
 		return fixedUrl;
 	}
@@ -5949,6 +6125,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedUrl(Url newFixedUrl) {
 		if (newFixedUrl != fixedUrl) {
 			NotificationChain msgs = null;
@@ -5968,6 +6145,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid getFixedUuid() {
 		return fixedUuid;
 	}
@@ -5992,6 +6170,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedUuid(Uuid newFixedUuid) {
 		if (newFixedUuid != fixedUuid) {
 			NotificationChain msgs = null;
@@ -6011,6 +6190,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getFixedAddress() {
 		return fixedAddress;
 	}
@@ -6035,6 +6215,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedAddress(Address newFixedAddress) {
 		if (newFixedAddress != fixedAddress) {
 			NotificationChain msgs = null;
@@ -6054,6 +6235,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getFixedAge() {
 		return fixedAge;
 	}
@@ -6078,6 +6260,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedAge(Age newFixedAge) {
 		if (newFixedAge != fixedAge) {
 			NotificationChain msgs = null;
@@ -6097,6 +6280,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getFixedAnnotation() {
 		return fixedAnnotation;
 	}
@@ -6121,6 +6305,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedAnnotation(Annotation newFixedAnnotation) {
 		if (newFixedAnnotation != fixedAnnotation) {
 			NotificationChain msgs = null;
@@ -6140,6 +6325,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getFixedAttachment() {
 		return fixedAttachment;
 	}
@@ -6164,6 +6350,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedAttachment(Attachment newFixedAttachment) {
 		if (newFixedAttachment != fixedAttachment) {
 			NotificationChain msgs = null;
@@ -6183,6 +6370,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFixedCodeableConcept() {
 		return fixedCodeableConcept;
 	}
@@ -6207,6 +6395,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCodeableConcept(CodeableConcept newFixedCodeableConcept) {
 		if (newFixedCodeableConcept != fixedCodeableConcept) {
 			NotificationChain msgs = null;
@@ -6226,6 +6415,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getFixedCodeableReference() {
 		return fixedCodeableReference;
 	}
@@ -6250,6 +6440,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCodeableReference(CodeableReference newFixedCodeableReference) {
 		if (newFixedCodeableReference != fixedCodeableReference) {
 			NotificationChain msgs = null;
@@ -6269,6 +6460,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getFixedCoding() {
 		return fixedCoding;
 	}
@@ -6293,6 +6485,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCoding(Coding newFixedCoding) {
 		if (newFixedCoding != fixedCoding) {
 			NotificationChain msgs = null;
@@ -6312,6 +6505,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getFixedContactPoint() {
 		return fixedContactPoint;
 	}
@@ -6336,6 +6530,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedContactPoint(ContactPoint newFixedContactPoint) {
 		if (newFixedContactPoint != fixedContactPoint) {
 			NotificationChain msgs = null;
@@ -6355,6 +6550,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count getFixedCount() {
 		return fixedCount;
 	}
@@ -6379,6 +6575,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedCount(Count newFixedCount) {
 		if (newFixedCount != fixedCount) {
 			NotificationChain msgs = null;
@@ -6398,6 +6595,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance getFixedDistance() {
 		return fixedDistance;
 	}
@@ -6422,6 +6620,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDistance(Distance newFixedDistance) {
 		if (newFixedDistance != fixedDistance) {
 			NotificationChain msgs = null;
@@ -6441,6 +6640,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getFixedDuration() {
 		return fixedDuration;
 	}
@@ -6465,6 +6665,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDuration(Duration newFixedDuration) {
 		if (newFixedDuration != fixedDuration) {
 			NotificationChain msgs = null;
@@ -6484,6 +6685,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getFixedHumanName() {
 		return fixedHumanName;
 	}
@@ -6508,6 +6710,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedHumanName(HumanName newFixedHumanName) {
 		if (newFixedHumanName != fixedHumanName) {
 			NotificationChain msgs = null;
@@ -6527,6 +6730,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getFixedIdentifier() {
 		return fixedIdentifier;
 	}
@@ -6551,6 +6755,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedIdentifier(Identifier newFixedIdentifier) {
 		if (newFixedIdentifier != fixedIdentifier) {
 			NotificationChain msgs = null;
@@ -6570,6 +6775,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getFixedMoney() {
 		return fixedMoney;
 	}
@@ -6594,6 +6800,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedMoney(Money newFixedMoney) {
 		if (newFixedMoney != fixedMoney) {
 			NotificationChain msgs = null;
@@ -6613,6 +6820,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getFixedPeriod() {
 		return fixedPeriod;
 	}
@@ -6637,6 +6845,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedPeriod(Period newFixedPeriod) {
 		if (newFixedPeriod != fixedPeriod) {
 			NotificationChain msgs = null;
@@ -6656,6 +6865,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getFixedQuantity() {
 		return fixedQuantity;
 	}
@@ -6680,6 +6890,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedQuantity(Quantity newFixedQuantity) {
 		if (newFixedQuantity != fixedQuantity) {
 			NotificationChain msgs = null;
@@ -6699,6 +6910,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getFixedRange() {
 		return fixedRange;
 	}
@@ -6723,6 +6935,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedRange(Range newFixedRange) {
 		if (newFixedRange != fixedRange) {
 			NotificationChain msgs = null;
@@ -6742,6 +6955,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getFixedRatio() {
 		return fixedRatio;
 	}
@@ -6766,6 +6980,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedRatio(Ratio newFixedRatio) {
 		if (newFixedRatio != fixedRatio) {
 			NotificationChain msgs = null;
@@ -6785,6 +7000,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange getFixedRatioRange() {
 		return fixedRatioRange;
 	}
@@ -6809,6 +7025,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedRatioRange(RatioRange newFixedRatioRange) {
 		if (newFixedRatioRange != fixedRatioRange) {
 			NotificationChain msgs = null;
@@ -6828,6 +7045,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFixedReference() {
 		return fixedReference;
 	}
@@ -6852,6 +7070,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedReference(Reference newFixedReference) {
 		if (newFixedReference != fixedReference) {
 			NotificationChain msgs = null;
@@ -6871,6 +7090,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getFixedSampledData() {
 		return fixedSampledData;
 	}
@@ -6895,6 +7115,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedSampledData(SampledData newFixedSampledData) {
 		if (newFixedSampledData != fixedSampledData) {
 			NotificationChain msgs = null;
@@ -6914,6 +7135,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getFixedSignature() {
 		return fixedSignature;
 	}
@@ -6938,6 +7160,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedSignature(Signature newFixedSignature) {
 		if (newFixedSignature != fixedSignature) {
 			NotificationChain msgs = null;
@@ -6957,6 +7180,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getFixedTiming() {
 		return fixedTiming;
 	}
@@ -6981,6 +7205,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedTiming(Timing newFixedTiming) {
 		if (newFixedTiming != fixedTiming) {
 			NotificationChain msgs = null;
@@ -7000,6 +7225,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail getFixedContactDetail() {
 		return fixedContactDetail;
 	}
@@ -7024,6 +7250,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedContactDetail(ContactDetail newFixedContactDetail) {
 		if (newFixedContactDetail != fixedContactDetail) {
 			NotificationChain msgs = null;
@@ -7043,6 +7270,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor getFixedContributor() {
 		return fixedContributor;
 	}
@@ -7067,6 +7295,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedContributor(Contributor newFixedContributor) {
 		if (newFixedContributor != fixedContributor) {
 			NotificationChain msgs = null;
@@ -7086,6 +7315,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getFixedDataRequirement() {
 		return fixedDataRequirement;
 	}
@@ -7110,6 +7340,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDataRequirement(DataRequirement newFixedDataRequirement) {
 		if (newFixedDataRequirement != fixedDataRequirement) {
 			NotificationChain msgs = null;
@@ -7129,6 +7360,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getFixedExpression() {
 		return fixedExpression;
 	}
@@ -7153,6 +7385,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedExpression(Expression newFixedExpression) {
 		if (newFixedExpression != fixedExpression) {
 			NotificationChain msgs = null;
@@ -7172,6 +7405,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getFixedParameterDefinition() {
 		return fixedParameterDefinition;
 	}
@@ -7196,6 +7430,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedParameterDefinition(ParameterDefinition newFixedParameterDefinition) {
 		if (newFixedParameterDefinition != fixedParameterDefinition) {
 			NotificationChain msgs = null;
@@ -7215,6 +7450,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact getFixedRelatedArtifact() {
 		return fixedRelatedArtifact;
 	}
@@ -7239,6 +7475,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedRelatedArtifact(RelatedArtifact newFixedRelatedArtifact) {
 		if (newFixedRelatedArtifact != fixedRelatedArtifact) {
 			NotificationChain msgs = null;
@@ -7258,6 +7495,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition getFixedTriggerDefinition() {
 		return fixedTriggerDefinition;
 	}
@@ -7282,6 +7520,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedTriggerDefinition(TriggerDefinition newFixedTriggerDefinition) {
 		if (newFixedTriggerDefinition != fixedTriggerDefinition) {
 			NotificationChain msgs = null;
@@ -7301,6 +7540,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext getFixedUsageContext() {
 		return fixedUsageContext;
 	}
@@ -7325,6 +7565,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedUsageContext(UsageContext newFixedUsageContext) {
 		if (newFixedUsageContext != fixedUsageContext) {
 			NotificationChain msgs = null;
@@ -7344,6 +7585,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage getFixedDosage() {
 		return fixedDosage;
 	}
@@ -7368,6 +7610,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixedDosage(Dosage newFixedDosage) {
 		if (newFixedDosage != fixedDosage) {
 			NotificationChain msgs = null;
@@ -7387,6 +7630,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getPatternBase64Binary() {
 		return patternBase64Binary;
 	}
@@ -7411,6 +7655,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternBase64Binary(Base64Binary newPatternBase64Binary) {
 		if (newPatternBase64Binary != patternBase64Binary) {
 			NotificationChain msgs = null;
@@ -7430,6 +7675,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getPatternBoolean() {
 		return patternBoolean;
 	}
@@ -7454,6 +7700,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternBoolean(org.hl7.fhir.Boolean newPatternBoolean) {
 		if (newPatternBoolean != patternBoolean) {
 			NotificationChain msgs = null;
@@ -7473,6 +7720,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getPatternCanonical() {
 		return patternCanonical;
 	}
@@ -7497,6 +7745,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCanonical(Canonical newPatternCanonical) {
 		if (newPatternCanonical != patternCanonical) {
 			NotificationChain msgs = null;
@@ -7516,6 +7765,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getPatternCode() {
 		return patternCode;
 	}
@@ -7540,6 +7790,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCode(Code newPatternCode) {
 		if (newPatternCode != patternCode) {
 			NotificationChain msgs = null;
@@ -7559,6 +7810,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getPatternDate() {
 		return patternDate;
 	}
@@ -7583,6 +7835,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDate(Date newPatternDate) {
 		if (newPatternDate != patternDate) {
 			NotificationChain msgs = null;
@@ -7602,6 +7855,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getPatternDateTime() {
 		return patternDateTime;
 	}
@@ -7626,6 +7880,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDateTime(DateTime newPatternDateTime) {
 		if (newPatternDateTime != patternDateTime) {
 			NotificationChain msgs = null;
@@ -7645,6 +7900,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getPatternDecimal() {
 		return patternDecimal;
 	}
@@ -7669,6 +7925,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDecimal(Decimal newPatternDecimal) {
 		if (newPatternDecimal != patternDecimal) {
 			NotificationChain msgs = null;
@@ -7688,6 +7945,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getPatternId() {
 		return patternId;
 	}
@@ -7712,6 +7970,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternId(Id newPatternId) {
 		if (newPatternId != patternId) {
 			NotificationChain msgs = null;
@@ -7731,6 +7990,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getPatternInstant() {
 		return patternInstant;
 	}
@@ -7755,6 +8015,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternInstant(Instant newPatternInstant) {
 		if (newPatternInstant != patternInstant) {
 			NotificationChain msgs = null;
@@ -7774,6 +8035,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getPatternInteger() {
 		return patternInteger;
 	}
@@ -7798,6 +8060,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternInteger(org.hl7.fhir.Integer newPatternInteger) {
 		if (newPatternInteger != patternInteger) {
 			NotificationChain msgs = null;
@@ -7817,6 +8080,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPatternMarkdown() {
 		return patternMarkdown;
 	}
@@ -7841,6 +8105,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternMarkdown(Markdown newPatternMarkdown) {
 		if (newPatternMarkdown != patternMarkdown) {
 			NotificationChain msgs = null;
@@ -7860,6 +8125,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid getPatternOid() {
 		return patternOid;
 	}
@@ -7884,6 +8150,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternOid(Oid newPatternOid) {
 		if (newPatternOid != patternOid) {
 			NotificationChain msgs = null;
@@ -7903,6 +8170,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getPatternPositiveInt() {
 		return patternPositiveInt;
 	}
@@ -7927,6 +8195,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternPositiveInt(PositiveInt newPatternPositiveInt) {
 		if (newPatternPositiveInt != patternPositiveInt) {
 			NotificationChain msgs = null;
@@ -7946,6 +8215,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPatternString() {
 		return patternString;
 	}
@@ -7970,6 +8240,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternString(org.hl7.fhir.String newPatternString) {
 		if (newPatternString != patternString) {
 			NotificationChain msgs = null;
@@ -7989,6 +8260,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getPatternTime() {
 		return patternTime;
 	}
@@ -8013,6 +8285,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternTime(Time newPatternTime) {
 		if (newPatternTime != patternTime) {
 			NotificationChain msgs = null;
@@ -8032,6 +8305,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getPatternUnsignedInt() {
 		return patternUnsignedInt;
 	}
@@ -8056,6 +8330,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternUnsignedInt(UnsignedInt newPatternUnsignedInt) {
 		if (newPatternUnsignedInt != patternUnsignedInt) {
 			NotificationChain msgs = null;
@@ -8075,6 +8350,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getPatternUri() {
 		return patternUri;
 	}
@@ -8099,6 +8375,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternUri(Uri newPatternUri) {
 		if (newPatternUri != patternUri) {
 			NotificationChain msgs = null;
@@ -8118,6 +8395,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getPatternUrl() {
 		return patternUrl;
 	}
@@ -8142,6 +8420,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternUrl(Url newPatternUrl) {
 		if (newPatternUrl != patternUrl) {
 			NotificationChain msgs = null;
@@ -8161,6 +8440,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid getPatternUuid() {
 		return patternUuid;
 	}
@@ -8185,6 +8465,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternUuid(Uuid newPatternUuid) {
 		if (newPatternUuid != patternUuid) {
 			NotificationChain msgs = null;
@@ -8204,6 +8485,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getPatternAddress() {
 		return patternAddress;
 	}
@@ -8228,6 +8510,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternAddress(Address newPatternAddress) {
 		if (newPatternAddress != patternAddress) {
 			NotificationChain msgs = null;
@@ -8247,6 +8530,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getPatternAge() {
 		return patternAge;
 	}
@@ -8271,6 +8555,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternAge(Age newPatternAge) {
 		if (newPatternAge != patternAge) {
 			NotificationChain msgs = null;
@@ -8290,6 +8575,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getPatternAnnotation() {
 		return patternAnnotation;
 	}
@@ -8314,6 +8600,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternAnnotation(Annotation newPatternAnnotation) {
 		if (newPatternAnnotation != patternAnnotation) {
 			NotificationChain msgs = null;
@@ -8333,6 +8620,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getPatternAttachment() {
 		return patternAttachment;
 	}
@@ -8357,6 +8645,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternAttachment(Attachment newPatternAttachment) {
 		if (newPatternAttachment != patternAttachment) {
 			NotificationChain msgs = null;
@@ -8376,6 +8665,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPatternCodeableConcept() {
 		return patternCodeableConcept;
 	}
@@ -8400,6 +8690,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCodeableConcept(CodeableConcept newPatternCodeableConcept) {
 		if (newPatternCodeableConcept != patternCodeableConcept) {
 			NotificationChain msgs = null;
@@ -8419,6 +8710,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getPatternCodeableReference() {
 		return patternCodeableReference;
 	}
@@ -8443,6 +8735,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCodeableReference(CodeableReference newPatternCodeableReference) {
 		if (newPatternCodeableReference != patternCodeableReference) {
 			NotificationChain msgs = null;
@@ -8462,6 +8755,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getPatternCoding() {
 		return patternCoding;
 	}
@@ -8486,6 +8780,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCoding(Coding newPatternCoding) {
 		if (newPatternCoding != patternCoding) {
 			NotificationChain msgs = null;
@@ -8505,6 +8800,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getPatternContactPoint() {
 		return patternContactPoint;
 	}
@@ -8529,6 +8825,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternContactPoint(ContactPoint newPatternContactPoint) {
 		if (newPatternContactPoint != patternContactPoint) {
 			NotificationChain msgs = null;
@@ -8548,6 +8845,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count getPatternCount() {
 		return patternCount;
 	}
@@ -8572,6 +8870,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternCount(Count newPatternCount) {
 		if (newPatternCount != patternCount) {
 			NotificationChain msgs = null;
@@ -8591,6 +8890,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance getPatternDistance() {
 		return patternDistance;
 	}
@@ -8615,6 +8915,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDistance(Distance newPatternDistance) {
 		if (newPatternDistance != patternDistance) {
 			NotificationChain msgs = null;
@@ -8634,6 +8935,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getPatternDuration() {
 		return patternDuration;
 	}
@@ -8658,6 +8960,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDuration(Duration newPatternDuration) {
 		if (newPatternDuration != patternDuration) {
 			NotificationChain msgs = null;
@@ -8677,6 +8980,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getPatternHumanName() {
 		return patternHumanName;
 	}
@@ -8701,6 +9005,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternHumanName(HumanName newPatternHumanName) {
 		if (newPatternHumanName != patternHumanName) {
 			NotificationChain msgs = null;
@@ -8720,6 +9025,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getPatternIdentifier() {
 		return patternIdentifier;
 	}
@@ -8744,6 +9050,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternIdentifier(Identifier newPatternIdentifier) {
 		if (newPatternIdentifier != patternIdentifier) {
 			NotificationChain msgs = null;
@@ -8763,6 +9070,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getPatternMoney() {
 		return patternMoney;
 	}
@@ -8787,6 +9095,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternMoney(Money newPatternMoney) {
 		if (newPatternMoney != patternMoney) {
 			NotificationChain msgs = null;
@@ -8806,6 +9115,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPatternPeriod() {
 		return patternPeriod;
 	}
@@ -8830,6 +9140,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternPeriod(Period newPatternPeriod) {
 		if (newPatternPeriod != patternPeriod) {
 			NotificationChain msgs = null;
@@ -8849,6 +9160,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getPatternQuantity() {
 		return patternQuantity;
 	}
@@ -8873,6 +9185,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternQuantity(Quantity newPatternQuantity) {
 		if (newPatternQuantity != patternQuantity) {
 			NotificationChain msgs = null;
@@ -8892,6 +9205,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getPatternRange() {
 		return patternRange;
 	}
@@ -8916,6 +9230,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternRange(Range newPatternRange) {
 		if (newPatternRange != patternRange) {
 			NotificationChain msgs = null;
@@ -8935,6 +9250,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getPatternRatio() {
 		return patternRatio;
 	}
@@ -8959,6 +9275,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternRatio(Ratio newPatternRatio) {
 		if (newPatternRatio != patternRatio) {
 			NotificationChain msgs = null;
@@ -8978,6 +9295,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange getPatternRatioRange() {
 		return patternRatioRange;
 	}
@@ -9002,6 +9320,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternRatioRange(RatioRange newPatternRatioRange) {
 		if (newPatternRatioRange != patternRatioRange) {
 			NotificationChain msgs = null;
@@ -9021,6 +9340,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatternReference() {
 		return patternReference;
 	}
@@ -9045,6 +9365,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternReference(Reference newPatternReference) {
 		if (newPatternReference != patternReference) {
 			NotificationChain msgs = null;
@@ -9064,6 +9385,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getPatternSampledData() {
 		return patternSampledData;
 	}
@@ -9088,6 +9410,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternSampledData(SampledData newPatternSampledData) {
 		if (newPatternSampledData != patternSampledData) {
 			NotificationChain msgs = null;
@@ -9107,6 +9430,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getPatternSignature() {
 		return patternSignature;
 	}
@@ -9131,6 +9455,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternSignature(Signature newPatternSignature) {
 		if (newPatternSignature != patternSignature) {
 			NotificationChain msgs = null;
@@ -9150,6 +9475,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getPatternTiming() {
 		return patternTiming;
 	}
@@ -9174,6 +9500,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternTiming(Timing newPatternTiming) {
 		if (newPatternTiming != patternTiming) {
 			NotificationChain msgs = null;
@@ -9193,6 +9520,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail getPatternContactDetail() {
 		return patternContactDetail;
 	}
@@ -9217,6 +9545,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternContactDetail(ContactDetail newPatternContactDetail) {
 		if (newPatternContactDetail != patternContactDetail) {
 			NotificationChain msgs = null;
@@ -9236,6 +9565,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor getPatternContributor() {
 		return patternContributor;
 	}
@@ -9260,6 +9590,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternContributor(Contributor newPatternContributor) {
 		if (newPatternContributor != patternContributor) {
 			NotificationChain msgs = null;
@@ -9279,6 +9610,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getPatternDataRequirement() {
 		return patternDataRequirement;
 	}
@@ -9303,6 +9635,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDataRequirement(DataRequirement newPatternDataRequirement) {
 		if (newPatternDataRequirement != patternDataRequirement) {
 			NotificationChain msgs = null;
@@ -9322,6 +9655,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getPatternExpression() {
 		return patternExpression;
 	}
@@ -9346,6 +9680,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternExpression(Expression newPatternExpression) {
 		if (newPatternExpression != patternExpression) {
 			NotificationChain msgs = null;
@@ -9365,6 +9700,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getPatternParameterDefinition() {
 		return patternParameterDefinition;
 	}
@@ -9389,6 +9725,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternParameterDefinition(ParameterDefinition newPatternParameterDefinition) {
 		if (newPatternParameterDefinition != patternParameterDefinition) {
 			NotificationChain msgs = null;
@@ -9408,6 +9745,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact getPatternRelatedArtifact() {
 		return patternRelatedArtifact;
 	}
@@ -9432,6 +9770,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternRelatedArtifact(RelatedArtifact newPatternRelatedArtifact) {
 		if (newPatternRelatedArtifact != patternRelatedArtifact) {
 			NotificationChain msgs = null;
@@ -9451,6 +9790,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition getPatternTriggerDefinition() {
 		return patternTriggerDefinition;
 	}
@@ -9475,6 +9815,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternTriggerDefinition(TriggerDefinition newPatternTriggerDefinition) {
 		if (newPatternTriggerDefinition != patternTriggerDefinition) {
 			NotificationChain msgs = null;
@@ -9494,6 +9835,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext getPatternUsageContext() {
 		return patternUsageContext;
 	}
@@ -9518,6 +9860,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternUsageContext(UsageContext newPatternUsageContext) {
 		if (newPatternUsageContext != patternUsageContext) {
 			NotificationChain msgs = null;
@@ -9537,6 +9880,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage getPatternDosage() {
 		return patternDosage;
 	}
@@ -9561,6 +9905,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatternDosage(Dosage newPatternDosage) {
 		if (newPatternDosage != patternDosage) {
 			NotificationChain msgs = null;
@@ -9580,6 +9925,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinitionExample> getExample() {
 		if (example == null) {
 			example = new EObjectContainmentEList<ElementDefinitionExample>(ElementDefinitionExample.class, this, FhirPackage.ELEMENT_DEFINITION__EXAMPLE);
@@ -9592,6 +9938,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getMinValueDate() {
 		return minValueDate;
 	}
@@ -9616,6 +9963,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueDate(Date newMinValueDate) {
 		if (newMinValueDate != minValueDate) {
 			NotificationChain msgs = null;
@@ -9635,6 +9983,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getMinValueDateTime() {
 		return minValueDateTime;
 	}
@@ -9659,6 +10008,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueDateTime(DateTime newMinValueDateTime) {
 		if (newMinValueDateTime != minValueDateTime) {
 			NotificationChain msgs = null;
@@ -9678,6 +10028,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getMinValueInstant() {
 		return minValueInstant;
 	}
@@ -9702,6 +10053,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueInstant(Instant newMinValueInstant) {
 		if (newMinValueInstant != minValueInstant) {
 			NotificationChain msgs = null;
@@ -9721,6 +10073,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getMinValueTime() {
 		return minValueTime;
 	}
@@ -9745,6 +10098,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueTime(Time newMinValueTime) {
 		if (newMinValueTime != minValueTime) {
 			NotificationChain msgs = null;
@@ -9764,6 +10118,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getMinValueDecimal() {
 		return minValueDecimal;
 	}
@@ -9788,6 +10143,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueDecimal(Decimal newMinValueDecimal) {
 		if (newMinValueDecimal != minValueDecimal) {
 			NotificationChain msgs = null;
@@ -9807,6 +10163,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMinValueInteger() {
 		return minValueInteger;
 	}
@@ -9831,6 +10188,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueInteger(org.hl7.fhir.Integer newMinValueInteger) {
 		if (newMinValueInteger != minValueInteger) {
 			NotificationChain msgs = null;
@@ -9850,6 +10208,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getMinValuePositiveInt() {
 		return minValuePositiveInt;
 	}
@@ -9874,6 +10233,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValuePositiveInt(PositiveInt newMinValuePositiveInt) {
 		if (newMinValuePositiveInt != minValuePositiveInt) {
 			NotificationChain msgs = null;
@@ -9893,6 +10253,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getMinValueUnsignedInt() {
 		return minValueUnsignedInt;
 	}
@@ -9917,6 +10278,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueUnsignedInt(UnsignedInt newMinValueUnsignedInt) {
 		if (newMinValueUnsignedInt != minValueUnsignedInt) {
 			NotificationChain msgs = null;
@@ -9936,6 +10298,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMinValueQuantity() {
 		return minValueQuantity;
 	}
@@ -9960,6 +10323,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinValueQuantity(Quantity newMinValueQuantity) {
 		if (newMinValueQuantity != minValueQuantity) {
 			NotificationChain msgs = null;
@@ -9979,6 +10343,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getMaxValueDate() {
 		return maxValueDate;
 	}
@@ -10003,6 +10368,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueDate(Date newMaxValueDate) {
 		if (newMaxValueDate != maxValueDate) {
 			NotificationChain msgs = null;
@@ -10022,6 +10388,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getMaxValueDateTime() {
 		return maxValueDateTime;
 	}
@@ -10046,6 +10413,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueDateTime(DateTime newMaxValueDateTime) {
 		if (newMaxValueDateTime != maxValueDateTime) {
 			NotificationChain msgs = null;
@@ -10065,6 +10433,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getMaxValueInstant() {
 		return maxValueInstant;
 	}
@@ -10089,6 +10458,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueInstant(Instant newMaxValueInstant) {
 		if (newMaxValueInstant != maxValueInstant) {
 			NotificationChain msgs = null;
@@ -10108,6 +10478,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getMaxValueTime() {
 		return maxValueTime;
 	}
@@ -10132,6 +10503,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueTime(Time newMaxValueTime) {
 		if (newMaxValueTime != maxValueTime) {
 			NotificationChain msgs = null;
@@ -10151,6 +10523,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getMaxValueDecimal() {
 		return maxValueDecimal;
 	}
@@ -10175,6 +10548,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueDecimal(Decimal newMaxValueDecimal) {
 		if (newMaxValueDecimal != maxValueDecimal) {
 			NotificationChain msgs = null;
@@ -10194,6 +10568,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMaxValueInteger() {
 		return maxValueInteger;
 	}
@@ -10218,6 +10593,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueInteger(org.hl7.fhir.Integer newMaxValueInteger) {
 		if (newMaxValueInteger != maxValueInteger) {
 			NotificationChain msgs = null;
@@ -10237,6 +10613,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getMaxValuePositiveInt() {
 		return maxValuePositiveInt;
 	}
@@ -10261,6 +10638,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValuePositiveInt(PositiveInt newMaxValuePositiveInt) {
 		if (newMaxValuePositiveInt != maxValuePositiveInt) {
 			NotificationChain msgs = null;
@@ -10280,6 +10658,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getMaxValueUnsignedInt() {
 		return maxValueUnsignedInt;
 	}
@@ -10304,6 +10683,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueUnsignedInt(UnsignedInt newMaxValueUnsignedInt) {
 		if (newMaxValueUnsignedInt != maxValueUnsignedInt) {
 			NotificationChain msgs = null;
@@ -10323,6 +10703,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMaxValueQuantity() {
 		return maxValueQuantity;
 	}
@@ -10347,6 +10728,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxValueQuantity(Quantity newMaxValueQuantity) {
 		if (newMaxValueQuantity != maxValueQuantity) {
 			NotificationChain msgs = null;
@@ -10366,6 +10748,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMaxLength() {
 		return maxLength;
 	}
@@ -10390,6 +10773,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxLength(org.hl7.fhir.Integer newMaxLength) {
 		if (newMaxLength != maxLength) {
 			NotificationChain msgs = null;
@@ -10409,6 +10793,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Id> getCondition() {
 		if (condition == null) {
 			condition = new EObjectContainmentEList<Id>(Id.class, this, FhirPackage.ELEMENT_DEFINITION__CONDITION);
@@ -10421,6 +10806,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinitionConstraint> getConstraint() {
 		if (constraint == null) {
 			constraint = new EObjectContainmentEList<ElementDefinitionConstraint>(ElementDefinitionConstraint.class, this, FhirPackage.ELEMENT_DEFINITION__CONSTRAINT);
@@ -10433,6 +10819,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getMustSupport() {
 		return mustSupport;
 	}
@@ -10457,6 +10844,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMustSupport(org.hl7.fhir.Boolean newMustSupport) {
 		if (newMustSupport != mustSupport) {
 			NotificationChain msgs = null;
@@ -10476,6 +10864,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIsModifier() {
 		return isModifier;
 	}
@@ -10500,6 +10889,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsModifier(org.hl7.fhir.Boolean newIsModifier) {
 		if (newIsModifier != isModifier) {
 			NotificationChain msgs = null;
@@ -10519,6 +10909,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getIsModifierReason() {
 		return isModifierReason;
 	}
@@ -10543,6 +10934,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsModifierReason(org.hl7.fhir.String newIsModifierReason) {
 		if (newIsModifierReason != isModifierReason) {
 			NotificationChain msgs = null;
@@ -10562,6 +10954,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIsSummary() {
 		return isSummary;
 	}
@@ -10586,6 +10979,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsSummary(org.hl7.fhir.Boolean newIsSummary) {
 		if (newIsSummary != isSummary) {
 			NotificationChain msgs = null;
@@ -10605,6 +10999,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementDefinitionBinding getBinding() {
 		return binding;
 	}
@@ -10629,6 +11024,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBinding(ElementDefinitionBinding newBinding) {
 		if (newBinding != binding) {
 			NotificationChain msgs = null;
@@ -10648,6 +11044,7 @@ public class ElementDefinitionImpl extends BackboneElementImpl implements Elemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinitionMapping> getMapping() {
 		if (mapping == null) {
 			mapping = new EObjectContainmentEList<ElementDefinitionMapping>(ElementDefinitionMapping.class, this, FhirPackage.ELEMENT_DEFINITION__MAPPING);

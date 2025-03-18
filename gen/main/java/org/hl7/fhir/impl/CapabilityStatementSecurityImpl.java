@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CapabilityStatementSecurity;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -87,6 +92,7 @@ public class CapabilityStatementSecurityImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getCors() {
 		return cors;
 	}
@@ -111,6 +117,7 @@ public class CapabilityStatementSecurityImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCors(org.hl7.fhir.Boolean newCors) {
 		if (newCors != cors) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class CapabilityStatementSecurityImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getService() {
 		if (service == null) {
 			service = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CAPABILITY_STATEMENT_SECURITY__SERVICE);
@@ -142,6 +150,7 @@ public class CapabilityStatementSecurityImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -166,6 +175,7 @@ public class CapabilityStatementSecurityImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;

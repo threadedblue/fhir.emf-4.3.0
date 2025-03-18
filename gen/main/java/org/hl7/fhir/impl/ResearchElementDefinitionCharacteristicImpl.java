@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DataRequirement;
@@ -293,6 +298,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDefinitionCodeableConcept() {
 		return definitionCodeableConcept;
 	}
@@ -317,6 +323,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinitionCodeableConcept(CodeableConcept newDefinitionCodeableConcept) {
 		if (newDefinitionCodeableConcept != definitionCodeableConcept) {
 			NotificationChain msgs = null;
@@ -336,6 +343,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getDefinitionCanonical() {
 		return definitionCanonical;
 	}
@@ -360,6 +368,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinitionCanonical(Canonical newDefinitionCanonical) {
 		if (newDefinitionCanonical != definitionCanonical) {
 			NotificationChain msgs = null;
@@ -379,6 +388,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefinitionExpression() {
 		return definitionExpression;
 	}
@@ -403,6 +413,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinitionExpression(Expression newDefinitionExpression) {
 		if (newDefinitionExpression != definitionExpression) {
 			NotificationChain msgs = null;
@@ -422,6 +433,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getDefinitionDataRequirement() {
 		return definitionDataRequirement;
 	}
@@ -446,6 +458,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinitionDataRequirement(DataRequirement newDefinitionDataRequirement) {
 		if (newDefinitionDataRequirement != definitionDataRequirement) {
 			NotificationChain msgs = null;
@@ -465,6 +478,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUsageContext() {
 		if (usageContext == null) {
 			usageContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.RESEARCH_ELEMENT_DEFINITION_CHARACTERISTIC__USAGE_CONTEXT);
@@ -477,6 +491,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExclude() {
 		return exclude;
 	}
@@ -501,6 +516,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExclude(org.hl7.fhir.Boolean newExclude) {
 		if (newExclude != exclude) {
 			NotificationChain msgs = null;
@@ -520,6 +536,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
@@ -544,6 +561,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnitOfMeasure(CodeableConcept newUnitOfMeasure) {
 		if (newUnitOfMeasure != unitOfMeasure) {
 			NotificationChain msgs = null;
@@ -563,6 +581,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getStudyEffectiveDescription() {
 		return studyEffectiveDescription;
 	}
@@ -587,6 +606,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveDescription(org.hl7.fhir.String newStudyEffectiveDescription) {
 		if (newStudyEffectiveDescription != studyEffectiveDescription) {
 			NotificationChain msgs = null;
@@ -606,6 +626,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getStudyEffectiveDateTime() {
 		return studyEffectiveDateTime;
 	}
@@ -630,6 +651,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveDateTime(DateTime newStudyEffectiveDateTime) {
 		if (newStudyEffectiveDateTime != studyEffectiveDateTime) {
 			NotificationChain msgs = null;
@@ -649,6 +671,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getStudyEffectivePeriod() {
 		return studyEffectivePeriod;
 	}
@@ -673,6 +696,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectivePeriod(Period newStudyEffectivePeriod) {
 		if (newStudyEffectivePeriod != studyEffectivePeriod) {
 			NotificationChain msgs = null;
@@ -692,6 +716,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getStudyEffectiveDuration() {
 		return studyEffectiveDuration;
 	}
@@ -716,6 +741,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveDuration(Duration newStudyEffectiveDuration) {
 		if (newStudyEffectiveDuration != studyEffectiveDuration) {
 			NotificationChain msgs = null;
@@ -735,6 +761,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getStudyEffectiveTiming() {
 		return studyEffectiveTiming;
 	}
@@ -759,6 +786,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveTiming(Timing newStudyEffectiveTiming) {
 		if (newStudyEffectiveTiming != studyEffectiveTiming) {
 			NotificationChain msgs = null;
@@ -778,6 +806,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getStudyEffectiveTimeFromStart() {
 		return studyEffectiveTimeFromStart;
 	}
@@ -802,6 +831,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveTimeFromStart(Duration newStudyEffectiveTimeFromStart) {
 		if (newStudyEffectiveTimeFromStart != studyEffectiveTimeFromStart) {
 			NotificationChain msgs = null;
@@ -821,6 +851,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupMeasure getStudyEffectiveGroupMeasure() {
 		return studyEffectiveGroupMeasure;
 	}
@@ -845,6 +876,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudyEffectiveGroupMeasure(GroupMeasure newStudyEffectiveGroupMeasure) {
 		if (newStudyEffectiveGroupMeasure != studyEffectiveGroupMeasure) {
 			NotificationChain msgs = null;
@@ -864,6 +896,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getParticipantEffectiveDescription() {
 		return participantEffectiveDescription;
 	}
@@ -888,6 +921,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveDescription(org.hl7.fhir.String newParticipantEffectiveDescription) {
 		if (newParticipantEffectiveDescription != participantEffectiveDescription) {
 			NotificationChain msgs = null;
@@ -907,6 +941,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getParticipantEffectiveDateTime() {
 		return participantEffectiveDateTime;
 	}
@@ -931,6 +966,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveDateTime(DateTime newParticipantEffectiveDateTime) {
 		if (newParticipantEffectiveDateTime != participantEffectiveDateTime) {
 			NotificationChain msgs = null;
@@ -950,6 +986,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getParticipantEffectivePeriod() {
 		return participantEffectivePeriod;
 	}
@@ -974,6 +1011,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectivePeriod(Period newParticipantEffectivePeriod) {
 		if (newParticipantEffectivePeriod != participantEffectivePeriod) {
 			NotificationChain msgs = null;
@@ -993,6 +1031,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getParticipantEffectiveDuration() {
 		return participantEffectiveDuration;
 	}
@@ -1017,6 +1056,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveDuration(Duration newParticipantEffectiveDuration) {
 		if (newParticipantEffectiveDuration != participantEffectiveDuration) {
 			NotificationChain msgs = null;
@@ -1036,6 +1076,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getParticipantEffectiveTiming() {
 		return participantEffectiveTiming;
 	}
@@ -1060,6 +1101,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveTiming(Timing newParticipantEffectiveTiming) {
 		if (newParticipantEffectiveTiming != participantEffectiveTiming) {
 			NotificationChain msgs = null;
@@ -1079,6 +1121,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getParticipantEffectiveTimeFromStart() {
 		return participantEffectiveTimeFromStart;
 	}
@@ -1103,6 +1146,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveTimeFromStart(Duration newParticipantEffectiveTimeFromStart) {
 		if (newParticipantEffectiveTimeFromStart != participantEffectiveTimeFromStart) {
 			NotificationChain msgs = null;
@@ -1122,6 +1166,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GroupMeasure getParticipantEffectiveGroupMeasure() {
 		return participantEffectiveGroupMeasure;
 	}
@@ -1146,6 +1191,7 @@ public class ResearchElementDefinitionCharacteristicImpl extends BackboneElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParticipantEffectiveGroupMeasure(GroupMeasure newParticipantEffectiveGroupMeasure) {
 		if (newParticipantEffectiveGroupMeasure != participantEffectiveGroupMeasure) {
 			NotificationChain msgs = null;

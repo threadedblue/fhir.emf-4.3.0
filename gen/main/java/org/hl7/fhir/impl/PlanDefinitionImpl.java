@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactDetail;
@@ -430,6 +435,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -454,6 +460,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -473,6 +480,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.PLAN_DEFINITION__IDENTIFIER);
@@ -485,6 +493,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -509,6 +518,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -528,6 +538,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -552,6 +563,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -571,6 +583,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -595,6 +608,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -614,6 +628,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSubtitle() {
 		return subtitle;
 	}
@@ -638,6 +653,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubtitle(org.hl7.fhir.String newSubtitle) {
 		if (newSubtitle != subtitle) {
 			NotificationChain msgs = null;
@@ -657,6 +673,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -681,6 +698,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -700,6 +718,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -724,6 +743,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -743,6 +763,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -767,6 +788,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -786,6 +808,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubjectCodeableConcept() {
 		return subjectCodeableConcept;
 	}
@@ -810,6 +833,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectCodeableConcept(CodeableConcept newSubjectCodeableConcept) {
 		if (newSubjectCodeableConcept != subjectCodeableConcept) {
 			NotificationChain msgs = null;
@@ -829,6 +853,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubjectReference() {
 		return subjectReference;
 	}
@@ -853,6 +878,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectReference(Reference newSubjectReference) {
 		if (newSubjectReference != subjectReference) {
 			NotificationChain msgs = null;
@@ -872,6 +898,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getSubjectCanonical() {
 		return subjectCanonical;
 	}
@@ -896,6 +923,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectCanonical(Canonical newSubjectCanonical) {
 		if (newSubjectCanonical != subjectCanonical) {
 			NotificationChain msgs = null;
@@ -915,6 +943,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -939,6 +968,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -958,6 +988,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -982,6 +1013,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -1001,6 +1033,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.PLAN_DEFINITION__CONTACT);
@@ -1013,6 +1046,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -1037,6 +1071,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -1056,6 +1091,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.PLAN_DEFINITION__USE_CONTEXT);
@@ -1068,6 +1104,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.PLAN_DEFINITION__JURISDICTION);
@@ -1080,6 +1117,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -1104,6 +1142,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -1123,6 +1162,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUsage() {
 		return usage;
 	}
@@ -1147,6 +1187,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsage(org.hl7.fhir.String newUsage) {
 		if (newUsage != usage) {
 			NotificationChain msgs = null;
@@ -1166,6 +1207,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -1190,6 +1232,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -1209,6 +1252,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getApprovalDate() {
 		return approvalDate;
 	}
@@ -1233,6 +1277,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApprovalDate(Date newApprovalDate) {
 		if (newApprovalDate != approvalDate) {
 			NotificationChain msgs = null;
@@ -1252,6 +1297,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getLastReviewDate() {
 		return lastReviewDate;
 	}
@@ -1276,6 +1322,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastReviewDate(Date newLastReviewDate) {
 		if (newLastReviewDate != lastReviewDate) {
 			NotificationChain msgs = null;
@@ -1295,6 +1342,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -1319,6 +1367,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectivePeriod(Period newEffectivePeriod) {
 		if (newEffectivePeriod != effectivePeriod) {
 			NotificationChain msgs = null;
@@ -1338,6 +1387,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTopic() {
 		if (topic == null) {
 			topic = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.PLAN_DEFINITION__TOPIC);
@@ -1350,6 +1400,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.PLAN_DEFINITION__AUTHOR);
@@ -1362,6 +1413,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.PLAN_DEFINITION__EDITOR);
@@ -1374,6 +1426,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.PLAN_DEFINITION__REVIEWER);
@@ -1386,6 +1439,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.PLAN_DEFINITION__ENDORSER);
@@ -1398,6 +1452,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getRelatedArtifact() {
 		if (relatedArtifact == null) {
 			relatedArtifact = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.PLAN_DEFINITION__RELATED_ARTIFACT);
@@ -1410,6 +1465,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getLibrary() {
 		if (library == null) {
 			library = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.PLAN_DEFINITION__LIBRARY);
@@ -1422,6 +1478,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PlanDefinitionGoal> getGoal() {
 		if (goal == null) {
 			goal = new EObjectContainmentEList<PlanDefinitionGoal>(PlanDefinitionGoal.class, this, FhirPackage.PLAN_DEFINITION__GOAL);
@@ -1434,6 +1491,7 @@ public class PlanDefinitionImpl extends DomainResourceImpl implements PlanDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PlanDefinitionAction> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<PlanDefinitionAction>(PlanDefinitionAction.class, this, FhirPackage.PLAN_DEFINITION__ACTION);

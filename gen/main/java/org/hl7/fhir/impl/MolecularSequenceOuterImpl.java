@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceOuter;
 
@@ -69,6 +72,7 @@ public class MolecularSequenceOuterImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getStart() {
 		return start;
 	}
@@ -93,6 +97,7 @@ public class MolecularSequenceOuterImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(org.hl7.fhir.Integer newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -112,6 +117,7 @@ public class MolecularSequenceOuterImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getEnd() {
 		return end;
 	}
@@ -136,6 +142,7 @@ public class MolecularSequenceOuterImpl extends BackboneElementImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(org.hl7.fhir.Integer newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
 import org.hl7.fhir.Reference;
@@ -93,6 +96,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getReference() {
 		return reference;
 	}
@@ -117,6 +121,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(org.hl7.fhir.String newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getType() {
 		return type;
 	}
@@ -160,6 +166,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Uri newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -203,6 +211,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -246,6 +256,7 @@ public class ReferenceImpl extends ElementImpl implements Reference {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;

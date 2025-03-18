@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ClinicalUseDefinitionInteractant;
 import org.hl7.fhir.ClinicalUseDefinitionInteraction;
 import org.hl7.fhir.CodeableConcept;
@@ -110,6 +115,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClinicalUseDefinitionInteractant> getInteractant() {
 		if (interactant == null) {
 			interactant = new EObjectContainmentEList<ClinicalUseDefinitionInteractant>(ClinicalUseDefinitionInteractant.class, this, FhirPackage.CLINICAL_USE_DEFINITION_INTERACTION__INTERACTANT);
@@ -122,6 +128,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -146,6 +153,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -165,6 +173,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getEffect() {
 		return effect;
 	}
@@ -189,6 +198,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffect(CodeableReference newEffect) {
 		if (newEffect != effect) {
 			NotificationChain msgs = null;
@@ -208,6 +218,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getIncidence() {
 		return incidence;
 	}
@@ -232,6 +243,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIncidence(CodeableConcept newIncidence) {
 		if (newIncidence != incidence) {
 			NotificationChain msgs = null;
@@ -251,6 +263,7 @@ public class ClinicalUseDefinitionInteractionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getManagement() {
 		if (management == null) {
 			management = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CLINICAL_USE_DEFINITION_INTERACTION__MANAGEMENT);

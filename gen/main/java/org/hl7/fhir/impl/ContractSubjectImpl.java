@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContractSubject;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +81,7 @@ public class ContractSubjectImpl extends BackboneElementImpl implements Contract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReference() {
 		if (reference == null) {
 			reference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CONTRACT_SUBJECT__REFERENCE);
@@ -88,6 +94,7 @@ public class ContractSubjectImpl extends BackboneElementImpl implements Contract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -112,6 +119,7 @@ public class ContractSubjectImpl extends BackboneElementImpl implements Contract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;

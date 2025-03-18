@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationKnowledgeKinetics;
@@ -87,6 +92,7 @@ public class MedicationKnowledgeKineticsImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Quantity> getAreaUnderCurve() {
 		if (areaUnderCurve == null) {
 			areaUnderCurve = new EObjectContainmentEList<Quantity>(Quantity.class, this, FhirPackage.MEDICATION_KNOWLEDGE_KINETICS__AREA_UNDER_CURVE);
@@ -99,6 +105,7 @@ public class MedicationKnowledgeKineticsImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Quantity> getLethalDose50() {
 		if (lethalDose50 == null) {
 			lethalDose50 = new EObjectContainmentEList<Quantity>(Quantity.class, this, FhirPackage.MEDICATION_KNOWLEDGE_KINETICS__LETHAL_DOSE50);
@@ -111,6 +118,7 @@ public class MedicationKnowledgeKineticsImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getHalfLifePeriod() {
 		return halfLifePeriod;
 	}
@@ -135,6 +143,7 @@ public class MedicationKnowledgeKineticsImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHalfLifePeriod(Duration newHalfLifePeriod) {
 		if (newHalfLifePeriod != halfLifePeriod) {
 			NotificationChain msgs = null;

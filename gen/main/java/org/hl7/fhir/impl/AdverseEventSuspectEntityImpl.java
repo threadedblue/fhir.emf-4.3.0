@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AdverseEventCausality;
 import org.hl7.fhir.AdverseEventSuspectEntity;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +81,7 @@ public class AdverseEventSuspectEntityImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getInstance() {
 		return instance;
 	}
@@ -100,6 +106,7 @@ public class AdverseEventSuspectEntityImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstance(Reference newInstance) {
 		if (newInstance != instance) {
 			NotificationChain msgs = null;
@@ -119,6 +126,7 @@ public class AdverseEventSuspectEntityImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AdverseEventCausality> getCausality() {
 		if (causality == null) {
 			causality = new EObjectContainmentEList<AdverseEventCausality>(AdverseEventCausality.class, this, FhirPackage.ADVERSE_EVENT_SUSPECT_ENTITY__CAUSALITY);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CapabilityStatementEndpoint;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class CapabilityStatementEndpointImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getProtocol() {
 		return protocol;
 	}
@@ -95,6 +99,7 @@ public class CapabilityStatementEndpointImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(Coding newProtocol) {
 		if (newProtocol != protocol) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CapabilityStatementEndpointImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getAddress() {
 		return address;
 	}
@@ -138,6 +144,7 @@ public class CapabilityStatementEndpointImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAddress(Url newAddress) {
 		if (newAddress != address) {
 			NotificationChain msgs = null;

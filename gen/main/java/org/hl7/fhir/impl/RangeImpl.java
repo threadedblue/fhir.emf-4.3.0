@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
 import org.hl7.fhir.Range;
@@ -70,6 +73,7 @@ public class RangeImpl extends ElementImpl implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getLow() {
 		return low;
 	}
@@ -94,6 +98,7 @@ public class RangeImpl extends ElementImpl implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLow(Quantity newLow) {
 		if (newLow != low) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class RangeImpl extends ElementImpl implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getHigh() {
 		return high;
 	}
@@ -137,6 +143,7 @@ public class RangeImpl extends ElementImpl implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHigh(Quantity newHigh) {
 		if (newHigh != high) {
 			NotificationChain msgs = null;

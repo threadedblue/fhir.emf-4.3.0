@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.ExplanationOfBenefitProcedure;
@@ -122,6 +127,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -146,6 +152,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -165,6 +172,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.EXPLANATION_OF_BENEFIT_PROCEDURE__TYPE);
@@ -177,6 +185,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -201,6 +210,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -220,6 +230,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getProcedureCodeableConcept() {
 		return procedureCodeableConcept;
 	}
@@ -244,6 +255,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProcedureCodeableConcept(CodeableConcept newProcedureCodeableConcept) {
 		if (newProcedureCodeableConcept != procedureCodeableConcept) {
 			NotificationChain msgs = null;
@@ -263,6 +275,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getProcedureReference() {
 		return procedureReference;
 	}
@@ -287,6 +300,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProcedureReference(Reference newProcedureReference) {
 		if (newProcedureReference != procedureReference) {
 			NotificationChain msgs = null;
@@ -306,6 +320,7 @@ public class ExplanationOfBenefitProcedureImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getUdi() {
 		if (udi == null) {
 			udi = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.EXPLANATION_OF_BENEFIT_PROCEDURE__UDI);

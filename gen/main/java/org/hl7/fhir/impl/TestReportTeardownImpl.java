@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestReportAction2;
 import org.hl7.fhir.TestReportTeardown;
@@ -62,6 +66,7 @@ public class TestReportTeardownImpl extends BackboneElementImpl implements TestR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestReportAction2> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<TestReportAction2>(TestReportAction2.class, this, FhirPackage.TEST_REPORT_TEARDOWN__ACTION);

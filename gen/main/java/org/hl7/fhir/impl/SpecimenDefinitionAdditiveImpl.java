@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -71,6 +74,7 @@ public class SpecimenDefinitionAdditiveImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAdditiveCodeableConcept() {
 		return additiveCodeableConcept;
 	}
@@ -95,6 +99,7 @@ public class SpecimenDefinitionAdditiveImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveCodeableConcept(CodeableConcept newAdditiveCodeableConcept) {
 		if (newAdditiveCodeableConcept != additiveCodeableConcept) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class SpecimenDefinitionAdditiveImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAdditiveReference() {
 		return additiveReference;
 	}
@@ -138,6 +144,7 @@ public class SpecimenDefinitionAdditiveImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditiveReference(Reference newAdditiveReference) {
 		if (newAdditiveReference != additiveReference) {
 			NotificationChain msgs = null;

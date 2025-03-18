@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DeviceVersion;
 import org.hl7.fhir.FhirPackage;
@@ -82,6 +85,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -106,6 +110,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getComponent() {
 		return component;
 	}
@@ -149,6 +155,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComponent(Identifier newComponent) {
 		if (newComponent != component) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValue() {
 		return value;
 	}
@@ -192,6 +200,7 @@ public class DeviceVersionImpl extends BackboneElementImpl implements DeviceVers
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(org.hl7.fhir.String newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

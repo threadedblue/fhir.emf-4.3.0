@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -260,6 +265,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SUPPLY_REQUEST__IDENTIFIER);
@@ -272,6 +278,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyRequestStatus getStatus() {
 		return status;
 	}
@@ -296,6 +303,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(SupplyRequestStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -315,6 +323,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCategory() {
 		return category;
 	}
@@ -339,6 +348,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(CodeableConcept newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -358,6 +368,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestPriority getPriority() {
 		return priority;
 	}
@@ -382,6 +393,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(RequestPriority newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -401,6 +413,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getItemCodeableConcept() {
 		return itemCodeableConcept;
 	}
@@ -425,6 +438,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemCodeableConcept(CodeableConcept newItemCodeableConcept) {
 		if (newItemCodeableConcept != itemCodeableConcept) {
 			NotificationChain msgs = null;
@@ -444,6 +458,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getItemReference() {
 		return itemReference;
 	}
@@ -468,6 +483,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemReference(Reference newItemReference) {
 		if (newItemReference != itemReference) {
 			NotificationChain msgs = null;
@@ -487,6 +503,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -511,6 +528,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -530,6 +548,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SupplyRequestParameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<SupplyRequestParameter>(SupplyRequestParameter.class, this, FhirPackage.SUPPLY_REQUEST__PARAMETER);
@@ -542,6 +561,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getOccurrenceDateTime() {
 		return occurrenceDateTime;
 	}
@@ -566,6 +586,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrenceDateTime(DateTime newOccurrenceDateTime) {
 		if (newOccurrenceDateTime != occurrenceDateTime) {
 			NotificationChain msgs = null;
@@ -585,6 +606,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getOccurrencePeriod() {
 		return occurrencePeriod;
 	}
@@ -609,6 +631,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrencePeriod(Period newOccurrencePeriod) {
 		if (newOccurrencePeriod != occurrencePeriod) {
 			NotificationChain msgs = null;
@@ -628,6 +651,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getOccurrenceTiming() {
 		return occurrenceTiming;
 	}
@@ -652,6 +676,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrenceTiming(Timing newOccurrenceTiming) {
 		if (newOccurrenceTiming != occurrenceTiming) {
 			NotificationChain msgs = null;
@@ -671,6 +696,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getAuthoredOn() {
 		return authoredOn;
 	}
@@ -695,6 +721,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthoredOn(DateTime newAuthoredOn) {
 		if (newAuthoredOn != authoredOn) {
 			NotificationChain msgs = null;
@@ -714,6 +741,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getRequester() {
 		return requester;
 	}
@@ -738,6 +766,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequester(Reference newRequester) {
 		if (newRequester != requester) {
 			NotificationChain msgs = null;
@@ -757,6 +786,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSupplier() {
 		if (supplier == null) {
 			supplier = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUPPLY_REQUEST__SUPPLIER);
@@ -769,6 +799,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getReasonCode() {
 		if (reasonCode == null) {
 			reasonCode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUPPLY_REQUEST__REASON_CODE);
@@ -781,6 +812,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReasonReference() {
 		if (reasonReference == null) {
 			reasonReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUPPLY_REQUEST__REASON_REFERENCE);
@@ -793,6 +825,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDeliverFrom() {
 		return deliverFrom;
 	}
@@ -817,6 +850,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeliverFrom(Reference newDeliverFrom) {
 		if (newDeliverFrom != deliverFrom) {
 			NotificationChain msgs = null;
@@ -836,6 +870,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDeliverTo() {
 		return deliverTo;
 	}
@@ -860,6 +895,7 @@ public class SupplyRequestImpl extends DomainResourceImpl implements SupplyReque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeliverTo(Reference newDeliverTo) {
 		if (newDeliverTo != deliverTo) {
 			NotificationChain msgs = null;

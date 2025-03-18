@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationKnowledgeAdministrationGuidelines;
@@ -100,6 +105,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeDosage> getDosage() {
 		if (dosage == null) {
 			dosage = new EObjectContainmentEList<MedicationKnowledgeDosage>(MedicationKnowledgeDosage.class, this, FhirPackage.MEDICATION_KNOWLEDGE_ADMINISTRATION_GUIDELINES__DOSAGE);
@@ -112,6 +118,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getIndicationCodeableConcept() {
 		return indicationCodeableConcept;
 	}
@@ -136,6 +143,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndicationCodeableConcept(CodeableConcept newIndicationCodeableConcept) {
 		if (newIndicationCodeableConcept != indicationCodeableConcept) {
 			NotificationChain msgs = null;
@@ -155,6 +163,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getIndicationReference() {
 		return indicationReference;
 	}
@@ -179,6 +188,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndicationReference(Reference newIndicationReference) {
 		if (newIndicationReference != indicationReference) {
 			NotificationChain msgs = null;
@@ -198,6 +208,7 @@ public class MedicationKnowledgeAdministrationGuidelinesImpl extends BackboneEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgePatientCharacteristics> getPatientCharacteristics() {
 		if (patientCharacteristics == null) {
 			patientCharacteristics = new EObjectContainmentEList<MedicationKnowledgePatientCharacteristics>(MedicationKnowledgePatientCharacteristics.class, this, FhirPackage.MEDICATION_KNOWLEDGE_ADMINISTRATION_GUIDELINES__PATIENT_CHARACTERISTICS);

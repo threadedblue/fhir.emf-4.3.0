@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Bundle;
 import org.hl7.fhir.BundleEntry;
 import org.hl7.fhir.BundleLink;
@@ -136,6 +141,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -160,6 +166,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleType getType() {
 		return type;
 	}
@@ -203,6 +211,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(BundleType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getTimestamp() {
 		return timestamp;
 	}
@@ -246,6 +256,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimestamp(Instant newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
@@ -265,6 +276,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getTotal() {
 		return total;
 	}
@@ -289,6 +301,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTotal(UnsignedInt newTotal) {
 		if (newTotal != total) {
 			NotificationChain msgs = null;
@@ -308,6 +321,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BundleLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<BundleLink>(BundleLink.class, this, FhirPackage.BUNDLE__LINK);
@@ -320,6 +334,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BundleEntry> getEntry() {
 		if (entry == null) {
 			entry = new EObjectContainmentEList<BundleEntry>(BundleEntry.class, this, FhirPackage.BUNDLE__ENTRY);
@@ -332,6 +347,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getSignature() {
 		return signature;
 	}
@@ -356,6 +372,7 @@ public class BundleImpl extends ResourceImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignature(Signature newSignature) {
 		if (newSignature != signature) {
 			NotificationChain msgs = null;

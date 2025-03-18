@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AuditEventDetail;
 import org.hl7.fhir.AuditEventEntity;
 import org.hl7.fhir.Base64Binary;
@@ -155,6 +160,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getWhat() {
 		return what;
 	}
@@ -179,6 +185,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWhat(Reference newWhat) {
 		if (newWhat != what) {
 			NotificationChain msgs = null;
@@ -198,6 +205,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getType() {
 		return type;
 	}
@@ -222,6 +230,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Coding newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -241,6 +250,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getRole() {
 		return role;
 	}
@@ -265,6 +275,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(Coding newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -284,6 +295,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getLifecycle() {
 		return lifecycle;
 	}
@@ -308,6 +320,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLifecycle(Coding newLifecycle) {
 		if (newLifecycle != lifecycle) {
 			NotificationChain msgs = null;
@@ -327,6 +340,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getSecurityLabel() {
 		if (securityLabel == null) {
 			securityLabel = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.AUDIT_EVENT_ENTITY__SECURITY_LABEL);
@@ -339,6 +353,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -363,6 +378,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -382,6 +398,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -406,6 +423,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -425,6 +443,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getQuery() {
 		return query;
 	}
@@ -449,6 +468,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuery(Base64Binary newQuery) {
 		if (newQuery != query) {
 			NotificationChain msgs = null;
@@ -468,6 +488,7 @@ public class AuditEventEntityImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AuditEventDetail> getDetail() {
 		if (detail == null) {
 			detail = new EObjectContainmentEList<AuditEventDetail>(AuditEventDetail.class, this, FhirPackage.AUDIT_EVENT_ENTITY__DETAIL);

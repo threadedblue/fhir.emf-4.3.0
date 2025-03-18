@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -111,6 +116,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSystem() {
 		return system;
 	}
@@ -135,6 +141,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(Uri newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -154,6 +161,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -178,6 +186,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -197,6 +206,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetConcept> getConcept() {
 		if (concept == null) {
 			concept = new EObjectContainmentEList<ValueSetConcept>(ValueSetConcept.class, this, FhirPackage.VALUE_SET_INCLUDE__CONCEPT);
@@ -209,6 +219,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetFilter> getFilter() {
 		if (filter == null) {
 			filter = new EObjectContainmentEList<ValueSetFilter>(ValueSetFilter.class, this, FhirPackage.VALUE_SET_INCLUDE__FILTER);
@@ -221,6 +232,7 @@ public class ValueSetIncludeImpl extends BackboneElementImpl implements ValueSet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getValueSet() {
 		if (valueSet == null) {
 			valueSet = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.VALUE_SET_INCLUDE__VALUE_SET);

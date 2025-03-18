@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BiologicallyDerivedProductManipulation;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -82,6 +85,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -106,6 +110,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTimeDateTime() {
 		return timeDateTime;
 	}
@@ -149,6 +155,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimeDateTime(DateTime newTimeDateTime) {
 		if (newTimeDateTime != timeDateTime) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getTimePeriod() {
 		return timePeriod;
 	}
@@ -192,6 +200,7 @@ public class BiologicallyDerivedProductManipulationImpl extends BackboneElementI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimePeriod(Period newTimePeriod) {
 		if (newTimePeriod != timePeriod) {
 			NotificationChain msgs = null;

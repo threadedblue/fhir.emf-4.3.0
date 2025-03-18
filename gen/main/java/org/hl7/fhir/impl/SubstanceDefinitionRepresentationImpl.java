@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -93,6 +96,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -117,6 +121,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRepresentation() {
 		return representation;
 	}
@@ -160,6 +166,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepresentation(org.hl7.fhir.String newRepresentation) {
 		if (newRepresentation != representation) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFormat() {
 		return format;
 	}
@@ -203,6 +211,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormat(CodeableConcept newFormat) {
 		if (newFormat != format) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDocument() {
 		return document;
 	}
@@ -246,6 +256,7 @@ public class SubstanceDefinitionRepresentationImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocument(Reference newDocument) {
 		if (newDocument != document) {
 			NotificationChain msgs = null;

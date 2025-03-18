@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CitationWhoClassified;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -103,6 +106,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPerson() {
 		return person;
 	}
@@ -127,6 +131,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerson(Reference newPerson) {
 		if (newPerson != person) {
 			NotificationChain msgs = null;
@@ -146,6 +151,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOrganization() {
 		return organization;
 	}
@@ -170,6 +176,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrganization(Reference newOrganization) {
 		if (newOrganization != organization) {
 			NotificationChain msgs = null;
@@ -189,6 +196,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPublisher() {
 		return publisher;
 	}
@@ -213,6 +221,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(Reference newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -232,6 +241,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getClassifierCopyright() {
 		return classifierCopyright;
 	}
@@ -256,6 +266,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifierCopyright(org.hl7.fhir.String newClassifierCopyright) {
 		if (newClassifierCopyright != classifierCopyright) {
 			NotificationChain msgs = null;
@@ -275,6 +286,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getFreeToShare() {
 		return freeToShare;
 	}
@@ -299,6 +311,7 @@ public class CitationWhoClassifiedImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFreeToShare(org.hl7.fhir.Boolean newFreeToShare) {
 		if (newFreeToShare != freeToShare) {
 			NotificationChain msgs = null;

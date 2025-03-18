@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.FhirPackage;
@@ -139,6 +142,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getWho() {
 		return who;
 	}
@@ -163,6 +167,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWho(Reference newWho) {
 		if (newWho != who) {
 			NotificationChain msgs = null;
@@ -182,6 +187,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOnBehalfOf() {
 		return onBehalfOf;
 	}
@@ -206,6 +212,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnBehalfOf(Reference newOnBehalfOf) {
 		if (newOnBehalfOf != onBehalfOf) {
 			NotificationChain msgs = null;
@@ -225,6 +232,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCommunicationMethod() {
 		return communicationMethod;
 	}
@@ -249,6 +257,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCommunicationMethod(CodeableConcept newCommunicationMethod) {
 		if (newCommunicationMethod != communicationMethod) {
 			NotificationChain msgs = null;
@@ -268,6 +277,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return date;
 	}
@@ -292,6 +302,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -311,6 +322,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSourceIdentityCertificate() {
 		return sourceIdentityCertificate;
 	}
@@ -335,6 +347,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceIdentityCertificate(org.hl7.fhir.String newSourceIdentityCertificate) {
 		if (newSourceIdentityCertificate != sourceIdentityCertificate) {
 			NotificationChain msgs = null;
@@ -354,6 +367,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getProxyIdentityCertificate() {
 		return proxyIdentityCertificate;
 	}
@@ -378,6 +392,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProxyIdentityCertificate(org.hl7.fhir.String newProxyIdentityCertificate) {
 		if (newProxyIdentityCertificate != proxyIdentityCertificate) {
 			NotificationChain msgs = null;
@@ -397,6 +412,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getProxySignature() {
 		return proxySignature;
 	}
@@ -421,6 +437,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProxySignature(Signature newProxySignature) {
 		if (newProxySignature != proxySignature) {
 			NotificationChain msgs = null;
@@ -440,6 +457,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getSourceSignature() {
 		return sourceSignature;
 	}
@@ -464,6 +482,7 @@ public class VerificationResultAttestationImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceSignature(Signature newSourceSignature) {
 		if (newSourceSignature != sourceSignature) {
 			NotificationChain msgs = null;

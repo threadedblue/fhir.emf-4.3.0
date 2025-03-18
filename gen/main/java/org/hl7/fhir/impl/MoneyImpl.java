@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class MoneyImpl extends ElementImpl implements Money {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getValue() {
 		return value;
 	}
@@ -95,6 +99,7 @@ public class MoneyImpl extends ElementImpl implements Money {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Decimal newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class MoneyImpl extends ElementImpl implements Money {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCurrency() {
 		return currency;
 	}
@@ -138,6 +144,7 @@ public class MoneyImpl extends ElementImpl implements Money {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCurrency(Code newCurrency) {
 		if (newCurrency != currency) {
 			NotificationChain msgs = null;

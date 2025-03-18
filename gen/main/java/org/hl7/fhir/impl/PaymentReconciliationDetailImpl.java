@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.FhirPackage;
@@ -162,6 +165,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -186,6 +190,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -205,6 +210,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getPredecessor() {
 		return predecessor;
 	}
@@ -229,6 +235,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPredecessor(Identifier newPredecessor) {
 		if (newPredecessor != predecessor) {
 			NotificationChain msgs = null;
@@ -248,6 +255,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -272,6 +280,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -291,6 +300,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getRequest() {
 		return request;
 	}
@@ -315,6 +325,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequest(Reference newRequest) {
 		if (newRequest != request) {
 			NotificationChain msgs = null;
@@ -334,6 +345,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubmitter() {
 		return submitter;
 	}
@@ -358,6 +370,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubmitter(Reference newSubmitter) {
 		if (newSubmitter != submitter) {
 			NotificationChain msgs = null;
@@ -377,6 +390,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getResponse() {
 		return response;
 	}
@@ -401,6 +415,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponse(Reference newResponse) {
 		if (newResponse != response) {
 			NotificationChain msgs = null;
@@ -420,6 +435,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return date;
 	}
@@ -444,6 +460,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -463,6 +480,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getResponsible() {
 		return responsible;
 	}
@@ -487,6 +505,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponsible(Reference newResponsible) {
 		if (newResponsible != responsible) {
 			NotificationChain msgs = null;
@@ -506,6 +525,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPayee() {
 		return payee;
 	}
@@ -530,6 +550,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPayee(Reference newPayee) {
 		if (newPayee != payee) {
 			NotificationChain msgs = null;
@@ -549,6 +570,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getAmount() {
 		return amount;
 	}
@@ -573,6 +595,7 @@ public class PaymentReconciliationDetailImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(Money newAmount) {
 		if (newAmount != amount) {
 			NotificationChain msgs = null;

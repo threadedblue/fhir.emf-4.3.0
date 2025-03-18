@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -121,6 +126,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -145,6 +151,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -164,6 +171,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getTypeCollected() {
 		return typeCollected;
 	}
@@ -188,6 +196,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeCollected(CodeableConcept newTypeCollected) {
 		if (newTypeCollected != typeCollected) {
 			NotificationChain msgs = null;
@@ -207,6 +216,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getPatientPreparation() {
 		if (patientPreparation == null) {
 			patientPreparation = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SPECIMEN_DEFINITION__PATIENT_PREPARATION);
@@ -219,6 +229,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTimeAspect() {
 		return timeAspect;
 	}
@@ -243,6 +254,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimeAspect(org.hl7.fhir.String newTimeAspect) {
 		if (newTimeAspect != timeAspect) {
 			NotificationChain msgs = null;
@@ -262,6 +274,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCollection() {
 		if (collection == null) {
 			collection = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SPECIMEN_DEFINITION__COLLECTION);
@@ -274,6 +287,7 @@ public class SpecimenDefinitionImpl extends DomainResourceImpl implements Specim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SpecimenDefinitionTypeTested> getTypeTested() {
 		if (typeTested == null) {
 			typeTested = new EObjectContainmentEList<SpecimenDefinitionTypeTested>(SpecimenDefinitionTypeTested.class, this, FhirPackage.SPECIMEN_DEFINITION__TYPE_TESTED);

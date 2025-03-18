@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ExplanationOfBenefitDiagnosis;
 import org.hl7.fhir.FhirPackage;
@@ -121,6 +126,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -145,6 +151,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -164,6 +171,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDiagnosisCodeableConcept() {
 		return diagnosisCodeableConcept;
 	}
@@ -188,6 +196,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiagnosisCodeableConcept(CodeableConcept newDiagnosisCodeableConcept) {
 		if (newDiagnosisCodeableConcept != diagnosisCodeableConcept) {
 			NotificationChain msgs = null;
@@ -207,6 +216,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDiagnosisReference() {
 		return diagnosisReference;
 	}
@@ -231,6 +241,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiagnosisReference(Reference newDiagnosisReference) {
 		if (newDiagnosisReference != diagnosisReference) {
 			NotificationChain msgs = null;
@@ -250,6 +261,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.EXPLANATION_OF_BENEFIT_DIAGNOSIS__TYPE);
@@ -262,6 +274,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOnAdmission() {
 		return onAdmission;
 	}
@@ -286,6 +299,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnAdmission(CodeableConcept newOnAdmission) {
 		if (newOnAdmission != onAdmission) {
 			NotificationChain msgs = null;
@@ -305,6 +319,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPackageCode() {
 		return packageCode;
 	}
@@ -329,6 +344,7 @@ public class ExplanationOfBenefitDiagnosisImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackageCode(CodeableConcept newPackageCode) {
 		if (newPackageCode != packageCode) {
 			NotificationChain msgs = null;

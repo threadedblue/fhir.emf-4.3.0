@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
@@ -166,6 +171,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubstanceDefinitionReference() {
 		return substanceDefinitionReference;
 	}
@@ -190,6 +196,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstanceDefinitionReference(Reference newSubstanceDefinitionReference) {
 		if (newSubstanceDefinitionReference != substanceDefinitionReference) {
 			NotificationChain msgs = null;
@@ -209,6 +216,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubstanceDefinitionCodeableConcept() {
 		return substanceDefinitionCodeableConcept;
 	}
@@ -233,6 +241,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstanceDefinitionCodeableConcept(CodeableConcept newSubstanceDefinitionCodeableConcept) {
 		if (newSubstanceDefinitionCodeableConcept != substanceDefinitionCodeableConcept) {
 			NotificationChain msgs = null;
@@ -252,6 +261,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -276,6 +286,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -295,6 +306,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIsDefining() {
 		return isDefining;
 	}
@@ -319,6 +331,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDefining(org.hl7.fhir.Boolean newIsDefining) {
 		if (newIsDefining != isDefining) {
 			NotificationChain msgs = null;
@@ -338,6 +351,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getAmountQuantity() {
 		return amountQuantity;
 	}
@@ -362,6 +376,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmountQuantity(Quantity newAmountQuantity) {
 		if (newAmountQuantity != amountQuantity) {
 			NotificationChain msgs = null;
@@ -381,6 +396,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getAmountRatio() {
 		return amountRatio;
 	}
@@ -405,6 +421,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmountRatio(Ratio newAmountRatio) {
 		if (newAmountRatio != amountRatio) {
 			NotificationChain msgs = null;
@@ -424,6 +441,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAmountString() {
 		return amountString;
 	}
@@ -448,6 +466,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmountString(org.hl7.fhir.String newAmountString) {
 		if (newAmountString != amountString) {
 			NotificationChain msgs = null;
@@ -467,6 +486,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getRatioHighLimitAmount() {
 		return ratioHighLimitAmount;
 	}
@@ -491,6 +511,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRatioHighLimitAmount(Ratio newRatioHighLimitAmount) {
 		if (newRatioHighLimitAmount != ratioHighLimitAmount) {
 			NotificationChain msgs = null;
@@ -510,6 +531,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getComparator() {
 		return comparator;
 	}
@@ -534,6 +556,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComparator(CodeableConcept newComparator) {
 		if (newComparator != comparator) {
 			NotificationChain msgs = null;
@@ -553,6 +576,7 @@ public class SubstanceDefinitionRelationshipImpl extends BackboneElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSource() {
 		if (source == null) {
 			source = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUBSTANCE_DEFINITION_RELATIONSHIP__SOURCE);

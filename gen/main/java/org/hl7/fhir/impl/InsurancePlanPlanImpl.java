@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -123,6 +128,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.INSURANCE_PLAN_PLAN__IDENTIFIER);
@@ -135,6 +141,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -159,6 +166,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -178,6 +186,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getCoverageArea() {
 		if (coverageArea == null) {
 			coverageArea = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN_PLAN__COVERAGE_AREA);
@@ -190,6 +199,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getNetwork() {
 		if (network == null) {
 			network = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN_PLAN__NETWORK);
@@ -202,6 +212,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanGeneralCost> getGeneralCost() {
 		if (generalCost == null) {
 			generalCost = new EObjectContainmentEList<InsurancePlanGeneralCost>(InsurancePlanGeneralCost.class, this, FhirPackage.INSURANCE_PLAN_PLAN__GENERAL_COST);
@@ -214,6 +225,7 @@ public class InsurancePlanPlanImpl extends BackboneElementImpl implements Insura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanSpecificCost> getSpecificCost() {
 		if (specificCost == null) {
 			specificCost = new EObjectContainmentEList<InsurancePlanSpecificCost>(InsurancePlanSpecificCost.class, this, FhirPackage.INSURANCE_PLAN_PLAN__SPECIFIC_COST);

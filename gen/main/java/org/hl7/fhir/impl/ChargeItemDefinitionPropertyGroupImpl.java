@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ChargeItemDefinitionApplicability;
 import org.hl7.fhir.ChargeItemDefinitionPriceComponent;
 import org.hl7.fhir.ChargeItemDefinitionPropertyGroup;
@@ -74,6 +78,7 @@ public class ChargeItemDefinitionPropertyGroupImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ChargeItemDefinitionApplicability> getApplicability() {
 		if (applicability == null) {
 			applicability = new EObjectContainmentEList<ChargeItemDefinitionApplicability>(ChargeItemDefinitionApplicability.class, this, FhirPackage.CHARGE_ITEM_DEFINITION_PROPERTY_GROUP__APPLICABILITY);
@@ -86,6 +91,7 @@ public class ChargeItemDefinitionPropertyGroupImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ChargeItemDefinitionPriceComponent> getPriceComponent() {
 		if (priceComponent == null) {
 			priceComponent = new EObjectContainmentEList<ChargeItemDefinitionPriceComponent>(ChargeItemDefinitionPriceComponent.class, this, FhirPackage.CHARGE_ITEM_DEFINITION_PROPERTY_GROUP__PRICE_COMPONENT);

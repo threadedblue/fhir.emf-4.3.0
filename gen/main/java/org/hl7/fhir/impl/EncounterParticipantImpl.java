@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EncounterParticipant;
 import org.hl7.fhir.FhirPackage;
@@ -88,6 +93,7 @@ public class EncounterParticipantImpl extends BackboneElementImpl implements Enc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.ENCOUNTER_PARTICIPANT__TYPE);
@@ -100,6 +106,7 @@ public class EncounterParticipantImpl extends BackboneElementImpl implements Enc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -124,6 +131,7 @@ public class EncounterParticipantImpl extends BackboneElementImpl implements Enc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -143,6 +151,7 @@ public class EncounterParticipantImpl extends BackboneElementImpl implements Enc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getIndividual() {
 		return individual;
 	}
@@ -167,6 +176,7 @@ public class EncounterParticipantImpl extends BackboneElementImpl implements Enc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndividual(Reference newIndividual) {
 		if (newIndividual != individual) {
 			NotificationChain msgs = null;

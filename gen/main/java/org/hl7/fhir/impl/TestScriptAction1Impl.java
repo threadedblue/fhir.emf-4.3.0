@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestScriptAction1;
 import org.hl7.fhir.TestScriptAssert;
@@ -71,6 +74,7 @@ public class TestScriptAction1Impl extends BackboneElementImpl implements TestSc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptOperation getOperation() {
 		return operation;
 	}
@@ -95,6 +99,7 @@ public class TestScriptAction1Impl extends BackboneElementImpl implements TestSc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(TestScriptOperation newOperation) {
 		if (newOperation != operation) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class TestScriptAction1Impl extends BackboneElementImpl implements TestSc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptAssert getAssert() {
 		return assert_;
 	}
@@ -138,6 +144,7 @@ public class TestScriptAction1Impl extends BackboneElementImpl implements TestSc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssert(TestScriptAssert newAssert) {
 		if (newAssert != assert_) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.ContractFriendly;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class ContractFriendlyImpl extends BackboneElementImpl implements Contrac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getContentAttachment() {
 		return contentAttachment;
 	}
@@ -95,6 +99,7 @@ public class ContractFriendlyImpl extends BackboneElementImpl implements Contrac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentAttachment(Attachment newContentAttachment) {
 		if (newContentAttachment != contentAttachment) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ContractFriendlyImpl extends BackboneElementImpl implements Contrac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getContentReference() {
 		return contentReference;
 	}
@@ -138,6 +144,7 @@ public class ContractFriendlyImpl extends BackboneElementImpl implements Contrac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentReference(Reference newContentReference) {
 		if (newContentReference != contentReference) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationIngredient;
@@ -94,6 +97,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getItemCodeableConcept() {
 		return itemCodeableConcept;
 	}
@@ -118,6 +122,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemCodeableConcept(CodeableConcept newItemCodeableConcept) {
 		if (newItemCodeableConcept != itemCodeableConcept) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getItemReference() {
 		return itemReference;
 	}
@@ -161,6 +167,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemReference(Reference newItemReference) {
 		if (newItemReference != itemReference) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIsActive() {
 		return isActive;
 	}
@@ -204,6 +212,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsActive(org.hl7.fhir.Boolean newIsActive) {
 		if (newIsActive != isActive) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getStrength() {
 		return strength;
 	}
@@ -247,6 +257,7 @@ public class MedicationIngredientImpl extends BackboneElementImpl implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrength(Ratio newStrength) {
 		if (newStrength != strength) {
 			NotificationChain msgs = null;

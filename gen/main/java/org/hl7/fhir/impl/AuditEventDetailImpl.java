@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.AuditEventDetail;
 import org.hl7.fhir.Base64Binary;
 import org.hl7.fhir.FhirPackage;
@@ -81,6 +84,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getType() {
 		return type;
 	}
@@ -105,6 +109,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(org.hl7.fhir.String newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValueString() {
 		return valueString;
 	}
@@ -148,6 +154,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueString(org.hl7.fhir.String newValueString) {
 		if (newValueString != valueString) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getValueBase64Binary() {
 		return valueBase64Binary;
 	}
@@ -191,6 +199,7 @@ public class AuditEventDetailImpl extends BackboneElementImpl implements AuditEv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBase64Binary(Base64Binary newValueBase64Binary) {
 		if (newValueBase64Binary != valueBase64Binary) {
 			NotificationChain msgs = null;

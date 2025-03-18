@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CoverageEligibilityRequestDiagnosis;
 import org.hl7.fhir.CoverageEligibilityRequestItem;
@@ -168,6 +173,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PositiveInt> getSupportingInfoSequence() {
 		if (supportingInfoSequence == null) {
 			supportingInfoSequence = new EObjectContainmentEList<PositiveInt>(PositiveInt.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST_ITEM__SUPPORTING_INFO_SEQUENCE);
@@ -180,6 +186,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCategory() {
 		return category;
 	}
@@ -204,6 +211,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(CodeableConcept newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -223,6 +231,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getProductOrService() {
 		return productOrService;
 	}
@@ -247,6 +256,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProductOrService(CodeableConcept newProductOrService) {
 		if (newProductOrService != productOrService) {
 			NotificationChain msgs = null;
@@ -266,6 +276,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getModifier() {
 		if (modifier == null) {
 			modifier = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST_ITEM__MODIFIER);
@@ -278,6 +289,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getProvider() {
 		return provider;
 	}
@@ -302,6 +314,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvider(Reference newProvider) {
 		if (newProvider != provider) {
 			NotificationChain msgs = null;
@@ -321,6 +334,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -345,6 +359,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -364,6 +379,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getUnitPrice() {
 		return unitPrice;
 	}
@@ -388,6 +404,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnitPrice(Money newUnitPrice) {
 		if (newUnitPrice != unitPrice) {
 			NotificationChain msgs = null;
@@ -407,6 +424,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFacility() {
 		return facility;
 	}
@@ -431,6 +449,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFacility(Reference newFacility) {
 		if (newFacility != facility) {
 			NotificationChain msgs = null;
@@ -450,6 +469,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CoverageEligibilityRequestDiagnosis> getDiagnosis() {
 		if (diagnosis == null) {
 			diagnosis = new EObjectContainmentEList<CoverageEligibilityRequestDiagnosis>(CoverageEligibilityRequestDiagnosis.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST_ITEM__DIAGNOSIS);
@@ -462,6 +482,7 @@ public class CoverageEligibilityRequestItemImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getDetail() {
 		if (detail == null) {
 			detail = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.COVERAGE_ELIGIBILITY_REQUEST_ITEM__DETAIL);

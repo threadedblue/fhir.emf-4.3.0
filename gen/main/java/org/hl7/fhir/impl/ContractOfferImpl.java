@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContractAnswer;
 import org.hl7.fhir.ContractOffer;
@@ -168,6 +173,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CONTRACT_OFFER__IDENTIFIER);
@@ -180,6 +186,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractParty> getParty() {
 		if (party == null) {
 			party = new EObjectContainmentEList<ContractParty>(ContractParty.class, this, FhirPackage.CONTRACT_OFFER__PARTY);
@@ -192,6 +199,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTopic() {
 		return topic;
 	}
@@ -216,6 +224,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTopic(Reference newTopic) {
 		if (newTopic != topic) {
 			NotificationChain msgs = null;
@@ -235,6 +244,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -259,6 +269,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDecision() {
 		return decision;
 	}
@@ -302,6 +314,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecision(CodeableConcept newDecision) {
 		if (newDecision != decision) {
 			NotificationChain msgs = null;
@@ -321,6 +334,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getDecisionMode() {
 		if (decisionMode == null) {
 			decisionMode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONTRACT_OFFER__DECISION_MODE);
@@ -333,6 +347,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractAnswer> getAnswer() {
 		if (answer == null) {
 			answer = new EObjectContainmentEList<ContractAnswer>(ContractAnswer.class, this, FhirPackage.CONTRACT_OFFER__ANSWER);
@@ -345,6 +360,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -369,6 +385,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -388,6 +405,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getLinkId() {
 		if (linkId == null) {
 			linkId = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.CONTRACT_OFFER__LINK_ID);
@@ -400,6 +418,7 @@ public class ContractOfferImpl extends BackboneElementImpl implements ContractOf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnsignedInt> getSecurityLabelNumber() {
 		if (securityLabelNumber == null) {
 			securityLabelNumber = new EObjectContainmentEList<UnsignedInt>(UnsignedInt.class, this, FhirPackage.CONTRACT_OFFER__SECURITY_LABEL_NUMBER);

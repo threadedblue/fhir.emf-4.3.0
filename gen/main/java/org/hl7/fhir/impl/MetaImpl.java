@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.FhirPackage;
@@ -123,6 +128,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getVersionId() {
 		return versionId;
 	}
@@ -147,6 +153,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersionId(Id newVersionId) {
 		if (newVersionId != versionId) {
 			NotificationChain msgs = null;
@@ -166,6 +173,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getLastUpdated() {
 		return lastUpdated;
 	}
@@ -190,6 +198,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastUpdated(Instant newLastUpdated) {
 		if (newLastUpdated != lastUpdated) {
 			NotificationChain msgs = null;
@@ -209,6 +218,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSource() {
 		return source;
 	}
@@ -233,6 +243,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Uri newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -252,6 +263,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getProfile() {
 		if (profile == null) {
 			profile = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.META__PROFILE);
@@ -264,6 +276,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getSecurity() {
 		if (security == null) {
 			security = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.META__SECURITY);
@@ -276,6 +289,7 @@ public class MetaImpl extends ElementImpl implements Meta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getTag() {
 		if (tag == null) {
 			tag = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.META__TAG);

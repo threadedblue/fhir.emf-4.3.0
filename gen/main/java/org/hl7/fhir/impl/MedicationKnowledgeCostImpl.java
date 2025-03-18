@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationKnowledgeCost;
@@ -82,6 +85,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -106,6 +110,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSource() {
 		return source;
 	}
@@ -149,6 +155,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(org.hl7.fhir.String newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getCost() {
 		return cost;
 	}
@@ -192,6 +200,7 @@ public class MedicationKnowledgeCostImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCost(Money newCost) {
 		if (newCost != cost) {
 			NotificationChain msgs = null;

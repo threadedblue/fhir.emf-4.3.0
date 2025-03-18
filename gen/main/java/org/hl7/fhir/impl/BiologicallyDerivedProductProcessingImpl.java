@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BiologicallyDerivedProductProcessing;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
@@ -106,6 +109,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -130,6 +134,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -149,6 +154,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getProcedure() {
 		return procedure;
 	}
@@ -173,6 +179,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProcedure(CodeableConcept newProcedure) {
 		if (newProcedure != procedure) {
 			NotificationChain msgs = null;
@@ -192,6 +199,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAdditive() {
 		return additive;
 	}
@@ -216,6 +224,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAdditive(Reference newAdditive) {
 		if (newAdditive != additive) {
 			NotificationChain msgs = null;
@@ -235,6 +244,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTimeDateTime() {
 		return timeDateTime;
 	}
@@ -259,6 +269,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimeDateTime(DateTime newTimeDateTime) {
 		if (newTimeDateTime != timeDateTime) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getTimePeriod() {
 		return timePeriod;
 	}
@@ -302,6 +314,7 @@ public class BiologicallyDerivedProductProcessingImpl extends BackboneElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimePeriod(Period newTimePeriod) {
 		if (newTimePeriod != timePeriod) {
 			NotificationChain msgs = null;

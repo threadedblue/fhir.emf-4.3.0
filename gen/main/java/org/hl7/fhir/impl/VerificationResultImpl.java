@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.DateTime;
@@ -215,6 +220,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getTarget() {
 		if (target == null) {
 			target = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.VERIFICATION_RESULT__TARGET);
@@ -227,6 +233,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getTargetLocation() {
 		if (targetLocation == null) {
 			targetLocation = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.VERIFICATION_RESULT__TARGET_LOCATION);
@@ -239,6 +246,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getNeed() {
 		return need;
 	}
@@ -263,6 +271,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNeed(CodeableConcept newNeed) {
 		if (newNeed != need) {
 			NotificationChain msgs = null;
@@ -282,6 +291,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Status getStatus() {
 		return status;
 	}
@@ -306,6 +316,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(Status newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -325,6 +336,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getStatusDate() {
 		return statusDate;
 	}
@@ -349,6 +361,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatusDate(DateTime newStatusDate) {
 		if (newStatusDate != statusDate) {
 			NotificationChain msgs = null;
@@ -368,6 +381,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getValidationType() {
 		return validationType;
 	}
@@ -392,6 +406,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidationType(CodeableConcept newValidationType) {
 		if (newValidationType != validationType) {
 			NotificationChain msgs = null;
@@ -411,6 +426,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getValidationProcess() {
 		if (validationProcess == null) {
 			validationProcess = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.VERIFICATION_RESULT__VALIDATION_PROCESS);
@@ -423,6 +439,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getFrequency() {
 		return frequency;
 	}
@@ -447,6 +464,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrequency(Timing newFrequency) {
 		if (newFrequency != frequency) {
 			NotificationChain msgs = null;
@@ -466,6 +484,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getLastPerformed() {
 		return lastPerformed;
 	}
@@ -490,6 +509,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastPerformed(DateTime newLastPerformed) {
 		if (newLastPerformed != lastPerformed) {
 			NotificationChain msgs = null;
@@ -509,6 +529,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getNextScheduled() {
 		return nextScheduled;
 	}
@@ -533,6 +554,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNextScheduled(Date newNextScheduled) {
 		if (newNextScheduled != nextScheduled) {
 			NotificationChain msgs = null;
@@ -552,6 +574,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFailureAction() {
 		return failureAction;
 	}
@@ -576,6 +599,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFailureAction(CodeableConcept newFailureAction) {
 		if (newFailureAction != failureAction) {
 			NotificationChain msgs = null;
@@ -595,6 +619,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VerificationResultPrimarySource> getPrimarySource() {
 		if (primarySource == null) {
 			primarySource = new EObjectContainmentEList<VerificationResultPrimarySource>(VerificationResultPrimarySource.class, this, FhirPackage.VERIFICATION_RESULT__PRIMARY_SOURCE);
@@ -607,6 +632,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VerificationResultAttestation getAttestation() {
 		return attestation;
 	}
@@ -631,6 +657,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttestation(VerificationResultAttestation newAttestation) {
 		if (newAttestation != attestation) {
 			NotificationChain msgs = null;
@@ -650,6 +677,7 @@ public class VerificationResultImpl extends DomainResourceImpl implements Verifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VerificationResultValidator> getValidator() {
 		if (validator == null) {
 			validator = new EObjectContainmentEList<VerificationResultValidator>(VerificationResultValidator.class, this, FhirPackage.VERIFICATION_RESULT__VALIDATOR);

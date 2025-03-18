@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FHIRVersion;
 import org.hl7.fhir.FhirPackage;
@@ -133,6 +138,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReference() {
 		return reference;
 	}
@@ -157,6 +163,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Reference newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -176,6 +183,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FHIRVersion> getFhirVersion() {
 		if (fhirVersion == null) {
 			fhirVersion = new EObjectContainmentEList<FHIRVersion>(FHIRVersion.class, this, FhirPackage.IMPLEMENTATION_GUIDE_RESOURCE__FHIR_VERSION);
@@ -188,6 +196,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -212,6 +221,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -231,6 +241,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -255,6 +266,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -274,6 +286,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExampleBoolean() {
 		return exampleBoolean;
 	}
@@ -298,6 +311,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExampleBoolean(org.hl7.fhir.Boolean newExampleBoolean) {
 		if (newExampleBoolean != exampleBoolean) {
 			NotificationChain msgs = null;
@@ -317,6 +331,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getExampleCanonical() {
 		return exampleCanonical;
 	}
@@ -341,6 +356,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExampleCanonical(Canonical newExampleCanonical) {
 		if (newExampleCanonical != exampleCanonical) {
 			NotificationChain msgs = null;
@@ -360,6 +376,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getGroupingId() {
 		return groupingId;
 	}
@@ -384,6 +401,7 @@ public class ImplementationGuideResourceImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroupingId(Id newGroupingId) {
 		if (newGroupingId != groupingId) {
 			NotificationChain msgs = null;

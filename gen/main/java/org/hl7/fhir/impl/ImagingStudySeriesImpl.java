@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -191,6 +196,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getUid() {
 		return uid;
 	}
@@ -215,6 +221,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUid(Id newUid) {
 		if (newUid != uid) {
 			NotificationChain msgs = null;
@@ -234,6 +241,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getNumber() {
 		return number;
 	}
@@ -258,6 +266,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(UnsignedInt newNumber) {
 		if (newNumber != number) {
 			NotificationChain msgs = null;
@@ -277,6 +286,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getModality() {
 		return modality;
 	}
@@ -301,6 +311,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModality(Coding newModality) {
 		if (newModality != modality) {
 			NotificationChain msgs = null;
@@ -320,6 +331,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -344,6 +356,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -363,6 +376,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getNumberOfInstances() {
 		return numberOfInstances;
 	}
@@ -387,6 +401,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumberOfInstances(UnsignedInt newNumberOfInstances) {
 		if (newNumberOfInstances != numberOfInstances) {
 			NotificationChain msgs = null;
@@ -406,6 +421,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEndpoint() {
 		if (endpoint == null) {
 			endpoint = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.IMAGING_STUDY_SERIES__ENDPOINT);
@@ -418,6 +434,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getBodySite() {
 		return bodySite;
 	}
@@ -442,6 +459,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodySite(Coding newBodySite) {
 		if (newBodySite != bodySite) {
 			NotificationChain msgs = null;
@@ -461,6 +479,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getLaterality() {
 		return laterality;
 	}
@@ -485,6 +504,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLaterality(Coding newLaterality) {
 		if (newLaterality != laterality) {
 			NotificationChain msgs = null;
@@ -504,6 +524,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSpecimen() {
 		if (specimen == null) {
 			specimen = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.IMAGING_STUDY_SERIES__SPECIMEN);
@@ -516,6 +537,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getStarted() {
 		return started;
 	}
@@ -540,6 +562,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStarted(DateTime newStarted) {
 		if (newStarted != started) {
 			NotificationChain msgs = null;
@@ -559,6 +582,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImagingStudyPerformer> getPerformer() {
 		if (performer == null) {
 			performer = new EObjectContainmentEList<ImagingStudyPerformer>(ImagingStudyPerformer.class, this, FhirPackage.IMAGING_STUDY_SERIES__PERFORMER);
@@ -571,6 +595,7 @@ public class ImagingStudySeriesImpl extends BackboneElementImpl implements Imagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImagingStudyInstance> getInstance() {
 		if (instance == null) {
 			instance = new EObjectContainmentEList<ImagingStudyInstance>(ImagingStudyInstance.class, this, FhirPackage.IMAGING_STUDY_SERIES__INSTANCE);

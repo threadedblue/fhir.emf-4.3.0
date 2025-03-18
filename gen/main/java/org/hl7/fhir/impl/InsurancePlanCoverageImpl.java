@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.InsurancePlanBenefit;
@@ -88,6 +93,7 @@ public class InsurancePlanCoverageImpl extends BackboneElementImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -112,6 +118,7 @@ public class InsurancePlanCoverageImpl extends BackboneElementImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -131,6 +138,7 @@ public class InsurancePlanCoverageImpl extends BackboneElementImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getNetwork() {
 		if (network == null) {
 			network = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INSURANCE_PLAN_COVERAGE__NETWORK);
@@ -143,6 +151,7 @@ public class InsurancePlanCoverageImpl extends BackboneElementImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InsurancePlanBenefit> getBenefit() {
 		if (benefit == null) {
 			benefit = new EObjectContainmentEList<InsurancePlanBenefit>(InsurancePlanBenefit.class, this, FhirPackage.INSURANCE_PLAN_COVERAGE__BENEFIT);

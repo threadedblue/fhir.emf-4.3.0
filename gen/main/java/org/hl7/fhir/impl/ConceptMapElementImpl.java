@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.ConceptMapElement;
 import org.hl7.fhir.ConceptMapTarget;
@@ -87,6 +92,7 @@ public class ConceptMapElementImpl extends BackboneElementImpl implements Concep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -111,6 +117,7 @@ public class ConceptMapElementImpl extends BackboneElementImpl implements Concep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class ConceptMapElementImpl extends BackboneElementImpl implements Concep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -154,6 +162,7 @@ public class ConceptMapElementImpl extends BackboneElementImpl implements Concep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -173,6 +182,7 @@ public class ConceptMapElementImpl extends BackboneElementImpl implements Concep
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConceptMapTarget> getTarget() {
 		if (target == null) {
 			target = new EObjectContainmentEList<ConceptMapTarget>(ConceptMapTarget.class, this, FhirPackage.CONCEPT_MAP_ELEMENT__TARGET);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.AdverseEventCausality;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAssessment() {
 		return assessment;
 	}
@@ -117,6 +121,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssessment(CodeableConcept newAssessment) {
 		if (newAssessment != assessment) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getProductRelatedness() {
 		return productRelatedness;
 	}
@@ -160,6 +166,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProductRelatedness(org.hl7.fhir.String newProductRelatedness) {
 		if (newProductRelatedness != productRelatedness) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAuthor() {
 		return author;
 	}
@@ -203,6 +211,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthor(Reference newAuthor) {
 		if (newAuthor != author) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -246,6 +256,7 @@ public class AdverseEventCausalityImpl extends BackboneElementImpl implements Ad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;

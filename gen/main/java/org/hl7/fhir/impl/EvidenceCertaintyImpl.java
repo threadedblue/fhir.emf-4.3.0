@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.EvidenceCertainty;
@@ -120,6 +125,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -144,6 +150,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -163,6 +170,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.EVIDENCE_CERTAINTY__NOTE);
@@ -175,6 +183,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -199,6 +208,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -218,6 +228,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRating() {
 		return rating;
 	}
@@ -242,6 +253,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRating(CodeableConcept newRating) {
 		if (newRating != rating) {
 			NotificationChain msgs = null;
@@ -261,6 +273,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRater() {
 		return rater;
 	}
@@ -285,6 +298,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRater(org.hl7.fhir.String newRater) {
 		if (newRater != rater) {
 			NotificationChain msgs = null;
@@ -304,6 +318,7 @@ public class EvidenceCertaintyImpl extends BackboneElementImpl implements Eviden
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceCertainty> getSubcomponent() {
 		if (subcomponent == null) {
 			subcomponent = new EObjectContainmentEList<EvidenceCertainty>(EvidenceCertainty.class, this, FhirPackage.EVIDENCE_CERTAINTY__SUBCOMPONENT);

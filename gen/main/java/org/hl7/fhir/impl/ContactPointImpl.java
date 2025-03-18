@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ContactPoint;
 import org.hl7.fhir.ContactPointSystem;
 import org.hl7.fhir.ContactPointUse;
@@ -106,6 +109,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPointSystem getSystem() {
 		return system;
 	}
@@ -130,6 +134,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(ContactPointSystem newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -149,6 +154,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValue() {
 		return value;
 	}
@@ -173,6 +179,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(org.hl7.fhir.String newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -192,6 +199,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPointUse getUse() {
 		return use;
 	}
@@ -216,6 +224,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUse(ContactPointUse newUse) {
 		if (newUse != use) {
 			NotificationChain msgs = null;
@@ -235,6 +244,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getRank() {
 		return rank;
 	}
@@ -259,6 +269,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRank(PositiveInt newRank) {
 		if (newRank != rank) {
 			NotificationChain msgs = null;
@@ -278,6 +289,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -302,6 +314,7 @@ public class ContactPointImpl extends ElementImpl implements ContactPoint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;

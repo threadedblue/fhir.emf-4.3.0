@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Id;
 import org.hl7.fhir.StructureMapGroup;
@@ -122,6 +127,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getName() {
 		return name;
 	}
@@ -146,6 +152,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(Id newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -165,6 +172,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getExtends() {
 		return extends_;
 	}
@@ -189,6 +197,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtends(Id newExtends) {
 		if (newExtends != extends_) {
 			NotificationChain msgs = null;
@@ -208,6 +217,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapGroupTypeMode getTypeMode() {
 		return typeMode;
 	}
@@ -232,6 +242,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeMode(StructureMapGroupTypeMode newTypeMode) {
 		if (newTypeMode != typeMode) {
 			NotificationChain msgs = null;
@@ -251,6 +262,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDocumentation() {
 		return documentation;
 	}
@@ -275,6 +287,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentation(org.hl7.fhir.String newDocumentation) {
 		if (newDocumentation != documentation) {
 			NotificationChain msgs = null;
@@ -294,6 +307,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StructureMapInput> getInput() {
 		if (input == null) {
 			input = new EObjectContainmentEList<StructureMapInput>(StructureMapInput.class, this, FhirPackage.STRUCTURE_MAP_GROUP__INPUT);
@@ -306,6 +320,7 @@ public class StructureMapGroupImpl extends BackboneElementImpl implements Struct
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StructureMapRule> getRule() {
 		if (rule == null) {
 			rule = new EObjectContainmentEList<StructureMapRule>(StructureMapRule.class, this, FhirPackage.STRUCTURE_MAP_GROUP__RULE);

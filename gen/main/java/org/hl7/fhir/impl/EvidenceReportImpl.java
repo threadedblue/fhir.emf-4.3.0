@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactDetail;
@@ -274,6 +279,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -298,6 +304,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -317,6 +324,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -341,6 +349,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -360,6 +369,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.EVIDENCE_REPORT__USE_CONTEXT);
@@ -372,6 +382,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.EVIDENCE_REPORT__IDENTIFIER);
@@ -384,6 +395,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getRelatedIdentifier() {
 		if (relatedIdentifier == null) {
 			relatedIdentifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.EVIDENCE_REPORT__RELATED_IDENTIFIER);
@@ -396,6 +408,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCiteAsReference() {
 		return citeAsReference;
 	}
@@ -420,6 +433,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCiteAsReference(Reference newCiteAsReference) {
 		if (newCiteAsReference != citeAsReference) {
 			NotificationChain msgs = null;
@@ -439,6 +453,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCiteAsMarkdown() {
 		return citeAsMarkdown;
 	}
@@ -463,6 +478,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCiteAsMarkdown(Markdown newCiteAsMarkdown) {
 		if (newCiteAsMarkdown != citeAsMarkdown) {
 			NotificationChain msgs = null;
@@ -482,6 +498,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -506,6 +523,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -525,6 +543,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.EVIDENCE_REPORT__NOTE);
@@ -537,6 +556,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getRelatedArtifact() {
 		if (relatedArtifact == null) {
 			relatedArtifact = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.EVIDENCE_REPORT__RELATED_ARTIFACT);
@@ -549,6 +569,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceReportSubject getSubject() {
 		return subject;
 	}
@@ -573,6 +594,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(EvidenceReportSubject newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -592,6 +614,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -616,6 +639,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -635,6 +659,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_REPORT__CONTACT);
@@ -647,6 +672,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_REPORT__AUTHOR);
@@ -659,6 +685,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_REPORT__EDITOR);
@@ -671,6 +698,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_REPORT__REVIEWER);
@@ -683,6 +711,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_REPORT__ENDORSER);
@@ -695,6 +724,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceReportRelatesTo> getRelatesTo() {
 		if (relatesTo == null) {
 			relatesTo = new EObjectContainmentEList<EvidenceReportRelatesTo>(EvidenceReportRelatesTo.class, this, FhirPackage.EVIDENCE_REPORT__RELATES_TO);
@@ -707,6 +737,7 @@ public class EvidenceReportImpl extends DomainResourceImpl implements EvidenceRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceReportSection> getSection() {
 		if (section == null) {
 			section = new EObjectContainmentEList<EvidenceReportSection>(EvidenceReportSection.class, this, FhirPackage.EVIDENCE_REPORT__SECTION);

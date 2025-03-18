@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.FilterOperator;
 import org.hl7.fhir.FilterOperatorEnum;
@@ -31,7 +34,7 @@ public class FilterOperatorImpl extends ElementImpl implements FilterOperator {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final FilterOperatorEnum VALUE_EDEFAULT = FilterOperatorEnum._;
+	protected static final FilterOperatorEnum VALUE_EDEFAULT = FilterOperatorEnum.__;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -76,6 +79,7 @@ public class FilterOperatorImpl extends ElementImpl implements FilterOperator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FilterOperatorEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class FilterOperatorImpl extends ElementImpl implements FilterOperator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(FilterOperatorEnum newValue) {
 		FilterOperatorEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class FilterOperatorImpl extends ElementImpl implements FilterOperator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		FilterOperatorEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class FilterOperatorImpl extends ElementImpl implements FilterOperator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

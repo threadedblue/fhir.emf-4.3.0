@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FHIRSubstanceStatus;
 import org.hl7.fhir.FhirPackage;
@@ -134,6 +139,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SUBSTANCE__IDENTIFIER);
@@ -146,6 +152,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRSubstanceStatus getStatus() {
 		return status;
 	}
@@ -170,6 +177,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(FHIRSubstanceStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -189,6 +197,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSTANCE__CATEGORY);
@@ -201,6 +210,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -225,6 +235,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -244,6 +255,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -268,6 +280,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -287,6 +300,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceInstance> getInstance() {
 		if (instance == null) {
 			instance = new EObjectContainmentEList<SubstanceInstance>(SubstanceInstance.class, this, FhirPackage.SUBSTANCE__INSTANCE);
@@ -299,6 +313,7 @@ public class SubstanceImpl extends DomainResourceImpl implements Substance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceIngredient> getIngredient() {
 		if (ingredient == null) {
 			ingredient = new EObjectContainmentEList<SubstanceIngredient>(SubstanceIngredient.class, this, FhirPackage.SUBSTANCE__INGREDIENT);

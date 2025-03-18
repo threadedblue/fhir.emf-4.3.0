@@ -5,9 +5,12 @@ package org.w3._1999.xhtml.impl;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.w3._1999.xhtml.BrType;
 import org.w3._1999.xhtml.XhtmlPackage;
 
@@ -132,6 +135,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -141,6 +145,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -153,6 +158,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -162,6 +168,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -174,6 +181,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -183,6 +191,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -195,6 +204,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -204,6 +214,7 @@ public class BrTypeImpl extends MinimalEObjectImpl.Container implements BrType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;

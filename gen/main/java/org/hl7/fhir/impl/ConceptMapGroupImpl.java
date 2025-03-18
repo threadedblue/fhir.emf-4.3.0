@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ConceptMapElement;
 import org.hl7.fhir.ConceptMapGroup;
 import org.hl7.fhir.ConceptMapUnmapped;
@@ -121,6 +126,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSource() {
 		return source;
 	}
@@ -145,6 +151,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Uri newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -164,6 +171,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSourceVersion() {
 		return sourceVersion;
 	}
@@ -188,6 +196,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceVersion(org.hl7.fhir.String newSourceVersion) {
 		if (newSourceVersion != sourceVersion) {
 			NotificationChain msgs = null;
@@ -207,6 +216,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getTarget() {
 		return target;
 	}
@@ -231,6 +241,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Uri newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -250,6 +261,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTargetVersion() {
 		return targetVersion;
 	}
@@ -274,6 +286,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetVersion(org.hl7.fhir.String newTargetVersion) {
 		if (newTargetVersion != targetVersion) {
 			NotificationChain msgs = null;
@@ -293,6 +306,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConceptMapElement> getElement() {
 		if (element == null) {
 			element = new EObjectContainmentEList<ConceptMapElement>(ConceptMapElement.class, this, FhirPackage.CONCEPT_MAP_GROUP__ELEMENT);
@@ -305,6 +319,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapUnmapped getUnmapped() {
 		return unmapped;
 	}
@@ -329,6 +344,7 @@ public class ConceptMapGroupImpl extends BackboneElementImpl implements ConceptM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnmapped(ConceptMapUnmapped newUnmapped) {
 		if (newUnmapped != unmapped) {
 			NotificationChain msgs = null;

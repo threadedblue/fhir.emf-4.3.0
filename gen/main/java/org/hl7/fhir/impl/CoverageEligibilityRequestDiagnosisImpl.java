@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CoverageEligibilityRequestDiagnosis;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class CoverageEligibilityRequestDiagnosisImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDiagnosisCodeableConcept() {
 		return diagnosisCodeableConcept;
 	}
@@ -95,6 +99,7 @@ public class CoverageEligibilityRequestDiagnosisImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiagnosisCodeableConcept(CodeableConcept newDiagnosisCodeableConcept) {
 		if (newDiagnosisCodeableConcept != diagnosisCodeableConcept) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class CoverageEligibilityRequestDiagnosisImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDiagnosisReference() {
 		return diagnosisReference;
 	}
@@ -138,6 +144,7 @@ public class CoverageEligibilityRequestDiagnosisImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiagnosisReference(Reference newDiagnosisReference) {
 		if (newDiagnosisReference != diagnosisReference) {
 			NotificationChain msgs = null;

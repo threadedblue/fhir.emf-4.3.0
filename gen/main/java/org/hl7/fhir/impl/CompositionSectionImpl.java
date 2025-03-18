@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CompositionSection;
 import org.hl7.fhir.FhirPackage;
@@ -166,6 +171,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -190,6 +196,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -209,6 +216,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -233,6 +241,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -252,6 +261,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.COMPOSITION_SECTION__AUTHOR);
@@ -264,6 +274,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getFocus() {
 		return focus;
 	}
@@ -288,6 +299,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocus(Reference newFocus) {
 		if (newFocus != focus) {
 			NotificationChain msgs = null;
@@ -307,6 +319,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Narrative getText() {
 		return text;
 	}
@@ -331,6 +344,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(Narrative newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -350,6 +364,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListMode getMode() {
 		return mode;
 	}
@@ -374,6 +389,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(ListMode newMode) {
 		if (newMode != mode) {
 			NotificationChain msgs = null;
@@ -393,6 +409,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOrderedBy() {
 		return orderedBy;
 	}
@@ -417,6 +434,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrderedBy(CodeableConcept newOrderedBy) {
 		if (newOrderedBy != orderedBy) {
 			NotificationChain msgs = null;
@@ -436,6 +454,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEntry() {
 		if (entry == null) {
 			entry = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.COMPOSITION_SECTION__ENTRY);
@@ -448,6 +467,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getEmptyReason() {
 		return emptyReason;
 	}
@@ -472,6 +492,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEmptyReason(CodeableConcept newEmptyReason) {
 		if (newEmptyReason != emptyReason) {
 			NotificationChain msgs = null;
@@ -491,6 +512,7 @@ public class CompositionSectionImpl extends BackboneElementImpl implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CompositionSection> getSection() {
 		if (section == null) {
 			section = new EObjectContainmentEList<CompositionSection>(CompositionSection.class, this, FhirPackage.COMPOSITION_SECTION__SECTION);

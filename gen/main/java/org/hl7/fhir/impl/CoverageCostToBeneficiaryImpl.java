@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CoverageCostToBeneficiary;
 import org.hl7.fhir.CoverageException;
@@ -100,6 +105,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -124,6 +130,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getValueQuantity() {
 		return valueQuantity;
 	}
@@ -167,6 +175,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueQuantity(Quantity newValueQuantity) {
 		if (newValueQuantity != valueQuantity) {
 			NotificationChain msgs = null;
@@ -186,6 +195,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getValueMoney() {
 		return valueMoney;
 	}
@@ -210,6 +220,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueMoney(Money newValueMoney) {
 		if (newValueMoney != valueMoney) {
 			NotificationChain msgs = null;
@@ -229,6 +240,7 @@ public class CoverageCostToBeneficiaryImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CoverageException> getException() {
 		if (exception == null) {
 			exception = new EObjectContainmentEList<CoverageException>(CoverageException.class, this, FhirPackage.COVERAGE_COST_TO_BENEFICIARY__EXCEPTION);

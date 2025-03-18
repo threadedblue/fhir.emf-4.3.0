@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CoverageEligibilityRequestInsurance;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -81,6 +84,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getFocal() {
 		return focal;
 	}
@@ -105,6 +109,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFocal(org.hl7.fhir.Boolean newFocal) {
 		if (newFocal != focal) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCoverage() {
 		return coverage;
 	}
@@ -148,6 +154,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoverage(Reference newCoverage) {
 		if (newCoverage != coverage) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getBusinessArrangement() {
 		return businessArrangement;
 	}
@@ -191,6 +199,7 @@ public class CoverageEligibilityRequestInsuranceImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBusinessArrangement(org.hl7.fhir.String newBusinessArrangement) {
 		if (newBusinessArrangement != businessArrangement) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -99,6 +104,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -123,6 +129,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -142,6 +149,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -166,6 +174,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -185,6 +194,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getPeriod() {
 		return period;
 	}
@@ -209,6 +219,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Quantity newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -228,6 +239,7 @@ public class ProductShelfLifeImpl extends BackboneElementImpl implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialPrecautionsForStorage() {
 		if (specialPrecautionsForStorage == null) {
 			specialPrecautionsForStorage = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.PRODUCT_SHELF_LIFE__SPECIAL_PRECAUTIONS_FOR_STORAGE);

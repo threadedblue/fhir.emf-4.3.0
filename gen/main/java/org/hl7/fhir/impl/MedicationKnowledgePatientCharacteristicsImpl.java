@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationKnowledgePatientCharacteristics;
@@ -87,6 +92,7 @@ public class MedicationKnowledgePatientCharacteristicsImpl extends BackboneEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCharacteristicCodeableConcept() {
 		return characteristicCodeableConcept;
 	}
@@ -111,6 +117,7 @@ public class MedicationKnowledgePatientCharacteristicsImpl extends BackboneEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharacteristicCodeableConcept(CodeableConcept newCharacteristicCodeableConcept) {
 		if (newCharacteristicCodeableConcept != characteristicCodeableConcept) {
 			NotificationChain msgs = null;
@@ -130,6 +137,7 @@ public class MedicationKnowledgePatientCharacteristicsImpl extends BackboneEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getCharacteristicQuantity() {
 		return characteristicQuantity;
 	}
@@ -154,6 +162,7 @@ public class MedicationKnowledgePatientCharacteristicsImpl extends BackboneEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharacteristicQuantity(Quantity newCharacteristicQuantity) {
 		if (newCharacteristicQuantity != characteristicQuantity) {
 			NotificationChain msgs = null;
@@ -173,6 +182,7 @@ public class MedicationKnowledgePatientCharacteristicsImpl extends BackboneEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getValue() {
 		if (value == null) {
 			value = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.MEDICATION_KNOWLEDGE_PATIENT_CHARACTERISTICS__VALUE);

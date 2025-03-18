@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
 import org.hl7.fhir.TerminologyCapabilitiesExpansion;
@@ -109,6 +114,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getHierarchical() {
 		return hierarchical;
 	}
@@ -133,6 +139,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHierarchical(org.hl7.fhir.Boolean newHierarchical) {
 		if (newHierarchical != hierarchical) {
 			NotificationChain msgs = null;
@@ -152,6 +159,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getPaging() {
 		return paging;
 	}
@@ -176,6 +184,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPaging(org.hl7.fhir.Boolean newPaging) {
 		if (newPaging != paging) {
 			NotificationChain msgs = null;
@@ -195,6 +204,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIncomplete() {
 		return incomplete;
 	}
@@ -219,6 +229,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIncomplete(org.hl7.fhir.Boolean newIncomplete) {
 		if (newIncomplete != incomplete) {
 			NotificationChain msgs = null;
@@ -238,6 +249,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TerminologyCapabilitiesParameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<TerminologyCapabilitiesParameter>(TerminologyCapabilitiesParameter.class, this, FhirPackage.TERMINOLOGY_CAPABILITIES_EXPANSION__PARAMETER);
@@ -250,6 +262,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getTextFilter() {
 		return textFilter;
 	}
@@ -274,6 +287,7 @@ public class TerminologyCapabilitiesExpansionImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTextFilter(Markdown newTextFilter) {
 		if (newTextFilter != textFilter) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -176,6 +181,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getHeight() {
 		return height;
 	}
@@ -200,6 +206,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(Quantity newHeight) {
 		if (newHeight != height) {
 			NotificationChain msgs = null;
@@ -219,6 +226,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getWidth() {
 		return width;
 	}
@@ -243,6 +251,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(Quantity newWidth) {
 		if (newWidth != width) {
 			NotificationChain msgs = null;
@@ -262,6 +271,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDepth() {
 		return depth;
 	}
@@ -286,6 +296,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDepth(Quantity newDepth) {
 		if (newDepth != depth) {
 			NotificationChain msgs = null;
@@ -305,6 +316,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getWeight() {
 		return weight;
 	}
@@ -329,6 +341,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWeight(Quantity newWeight) {
 		if (newWeight != weight) {
 			NotificationChain msgs = null;
@@ -348,6 +361,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getNominalVolume() {
 		return nominalVolume;
 	}
@@ -372,6 +386,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNominalVolume(Quantity newNominalVolume) {
 		if (newNominalVolume != nominalVolume) {
 			NotificationChain msgs = null;
@@ -391,6 +406,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getExternalDiameter() {
 		return externalDiameter;
 	}
@@ -415,6 +431,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExternalDiameter(Quantity newExternalDiameter) {
 		if (newExternalDiameter != externalDiameter) {
 			NotificationChain msgs = null;
@@ -434,6 +451,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getShape() {
 		return shape;
 	}
@@ -458,6 +476,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShape(org.hl7.fhir.String newShape) {
 		if (newShape != shape) {
 			NotificationChain msgs = null;
@@ -477,6 +496,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getColor() {
 		if (color == null) {
 			color = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.PROD_CHARACTERISTIC__COLOR);
@@ -489,6 +509,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getImprint() {
 		if (imprint == null) {
 			imprint = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.PROD_CHARACTERISTIC__IMPRINT);
@@ -501,6 +522,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attachment> getImage() {
 		if (image == null) {
 			image = new EObjectContainmentEList<Attachment>(Attachment.class, this, FhirPackage.PROD_CHARACTERISTIC__IMAGE);
@@ -513,6 +535,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getScoring() {
 		return scoring;
 	}
@@ -537,6 +560,7 @@ public class ProdCharacteristicImpl extends BackboneElementImpl implements ProdC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScoring(CodeableConcept newScoring) {
 		if (newScoring != scoring) {
 			NotificationChain msgs = null;

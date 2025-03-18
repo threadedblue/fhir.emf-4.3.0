@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -139,6 +142,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOutcome() {
 		return outcome;
 	}
@@ -163,6 +167,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutcome(CodeableConcept newOutcome) {
 		if (newOutcome != outcome) {
 			NotificationChain msgs = null;
@@ -182,6 +187,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getProbabilityDecimal() {
 		return probabilityDecimal;
 	}
@@ -206,6 +212,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProbabilityDecimal(Decimal newProbabilityDecimal) {
 		if (newProbabilityDecimal != probabilityDecimal) {
 			NotificationChain msgs = null;
@@ -225,6 +232,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getProbabilityRange() {
 		return probabilityRange;
 	}
@@ -249,6 +257,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProbabilityRange(Range newProbabilityRange) {
 		if (newProbabilityRange != probabilityRange) {
 			NotificationChain msgs = null;
@@ -268,6 +277,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getQualitativeRisk() {
 		return qualitativeRisk;
 	}
@@ -292,6 +302,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualitativeRisk(CodeableConcept newQualitativeRisk) {
 		if (newQualitativeRisk != qualitativeRisk) {
 			NotificationChain msgs = null;
@@ -311,6 +322,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getRelativeRisk() {
 		return relativeRisk;
 	}
@@ -335,6 +347,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelativeRisk(Decimal newRelativeRisk) {
 		if (newRelativeRisk != relativeRisk) {
 			NotificationChain msgs = null;
@@ -354,6 +367,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getWhenPeriod() {
 		return whenPeriod;
 	}
@@ -378,6 +392,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWhenPeriod(Period newWhenPeriod) {
 		if (newWhenPeriod != whenPeriod) {
 			NotificationChain msgs = null;
@@ -397,6 +412,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getWhenRange() {
 		return whenRange;
 	}
@@ -421,6 +437,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWhenRange(Range newWhenRange) {
 		if (newWhenRange != whenRange) {
 			NotificationChain msgs = null;
@@ -440,6 +457,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRationale() {
 		return rationale;
 	}
@@ -464,6 +482,7 @@ public class RiskAssessmentPredictionImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRationale(org.hl7.fhir.String newRationale) {
 		if (newRationale != rationale) {
 			NotificationChain msgs = null;

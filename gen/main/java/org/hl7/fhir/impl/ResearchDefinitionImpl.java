@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactDetail;
@@ -450,6 +455,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -474,6 +480,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -493,6 +500,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.RESEARCH_DEFINITION__IDENTIFIER);
@@ -505,6 +513,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -529,6 +538,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -548,6 +558,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -572,6 +583,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -591,6 +603,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -615,6 +628,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -634,6 +648,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getShortTitle() {
 		return shortTitle;
 	}
@@ -658,6 +673,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShortTitle(org.hl7.fhir.String newShortTitle) {
 		if (newShortTitle != shortTitle) {
 			NotificationChain msgs = null;
@@ -677,6 +693,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSubtitle() {
 		return subtitle;
 	}
@@ -701,6 +718,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubtitle(org.hl7.fhir.String newSubtitle) {
 		if (newSubtitle != subtitle) {
 			NotificationChain msgs = null;
@@ -720,6 +738,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -744,6 +763,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -763,6 +783,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -787,6 +808,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -806,6 +828,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubjectCodeableConcept() {
 		return subjectCodeableConcept;
 	}
@@ -830,6 +853,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectCodeableConcept(CodeableConcept newSubjectCodeableConcept) {
 		if (newSubjectCodeableConcept != subjectCodeableConcept) {
 			NotificationChain msgs = null;
@@ -849,6 +873,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubjectReference() {
 		return subjectReference;
 	}
@@ -873,6 +898,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubjectReference(Reference newSubjectReference) {
 		if (newSubjectReference != subjectReference) {
 			NotificationChain msgs = null;
@@ -892,6 +918,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -916,6 +943,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -935,6 +963,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -959,6 +988,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -978,6 +1008,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.RESEARCH_DEFINITION__CONTACT);
@@ -990,6 +1021,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -1014,6 +1046,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -1033,6 +1066,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getComment() {
 		if (comment == null) {
 			comment = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.RESEARCH_DEFINITION__COMMENT);
@@ -1045,6 +1079,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.RESEARCH_DEFINITION__USE_CONTEXT);
@@ -1057,6 +1092,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.RESEARCH_DEFINITION__JURISDICTION);
@@ -1069,6 +1105,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -1093,6 +1130,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -1112,6 +1150,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUsage() {
 		return usage;
 	}
@@ -1136,6 +1175,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsage(org.hl7.fhir.String newUsage) {
 		if (newUsage != usage) {
 			NotificationChain msgs = null;
@@ -1155,6 +1195,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -1179,6 +1220,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -1198,6 +1240,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getApprovalDate() {
 		return approvalDate;
 	}
@@ -1222,6 +1265,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApprovalDate(Date newApprovalDate) {
 		if (newApprovalDate != approvalDate) {
 			NotificationChain msgs = null;
@@ -1241,6 +1285,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getLastReviewDate() {
 		return lastReviewDate;
 	}
@@ -1265,6 +1310,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastReviewDate(Date newLastReviewDate) {
 		if (newLastReviewDate != lastReviewDate) {
 			NotificationChain msgs = null;
@@ -1284,6 +1330,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -1308,6 +1355,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectivePeriod(Period newEffectivePeriod) {
 		if (newEffectivePeriod != effectivePeriod) {
 			NotificationChain msgs = null;
@@ -1327,6 +1375,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTopic() {
 		if (topic == null) {
 			topic = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.RESEARCH_DEFINITION__TOPIC);
@@ -1339,6 +1388,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.RESEARCH_DEFINITION__AUTHOR);
@@ -1351,6 +1401,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.RESEARCH_DEFINITION__EDITOR);
@@ -1363,6 +1414,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.RESEARCH_DEFINITION__REVIEWER);
@@ -1375,6 +1427,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.RESEARCH_DEFINITION__ENDORSER);
@@ -1387,6 +1440,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getRelatedArtifact() {
 		if (relatedArtifact == null) {
 			relatedArtifact = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.RESEARCH_DEFINITION__RELATED_ARTIFACT);
@@ -1399,6 +1453,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getLibrary() {
 		if (library == null) {
 			library = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.RESEARCH_DEFINITION__LIBRARY);
@@ -1411,6 +1466,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPopulation() {
 		return population;
 	}
@@ -1435,6 +1491,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPopulation(Reference newPopulation) {
 		if (newPopulation != population) {
 			NotificationChain msgs = null;
@@ -1454,6 +1511,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getExposure() {
 		return exposure;
 	}
@@ -1478,6 +1536,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExposure(Reference newExposure) {
 		if (newExposure != exposure) {
 			NotificationChain msgs = null;
@@ -1497,6 +1556,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getExposureAlternative() {
 		return exposureAlternative;
 	}
@@ -1521,6 +1581,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExposureAlternative(Reference newExposureAlternative) {
 		if (newExposureAlternative != exposureAlternative) {
 			NotificationChain msgs = null;
@@ -1540,6 +1601,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOutcome() {
 		return outcome;
 	}
@@ -1564,6 +1626,7 @@ public class ResearchDefinitionImpl extends DomainResourceImpl implements Resear
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutcome(Reference newOutcome) {
 		if (newOutcome != outcome) {
 			NotificationChain msgs = null;

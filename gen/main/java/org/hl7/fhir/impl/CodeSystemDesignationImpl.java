@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.CodeSystemDesignation;
 import org.hl7.fhir.Coding;
@@ -82,6 +85,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getLanguage() {
 		return language;
 	}
@@ -106,6 +110,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLanguage(Code newLanguage) {
 		if (newLanguage != language) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getUse() {
 		return use;
 	}
@@ -149,6 +155,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUse(Coding newUse) {
 		if (newUse != use) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValue() {
 		return value;
 	}
@@ -192,6 +200,7 @@ public class CodeSystemDesignationImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(org.hl7.fhir.String newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

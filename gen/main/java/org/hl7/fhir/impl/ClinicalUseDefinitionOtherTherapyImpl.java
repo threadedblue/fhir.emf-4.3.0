@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ClinicalUseDefinitionOtherTherapy;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CodeableReference;
@@ -71,6 +74,7 @@ public class ClinicalUseDefinitionOtherTherapyImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRelationshipType() {
 		return relationshipType;
 	}
@@ -95,6 +99,7 @@ public class ClinicalUseDefinitionOtherTherapyImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationshipType(CodeableConcept newRelationshipType) {
 		if (newRelationshipType != relationshipType) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class ClinicalUseDefinitionOtherTherapyImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getTherapy() {
 		return therapy;
 	}
@@ -138,6 +144,7 @@ public class ClinicalUseDefinitionOtherTherapyImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTherapy(CodeableReference newTherapy) {
 		if (newTherapy != therapy) {
 			NotificationChain msgs = null;

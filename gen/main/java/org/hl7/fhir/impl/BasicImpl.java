@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Basic;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Date;
@@ -111,6 +116,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.BASIC__IDENTIFIER);
@@ -123,6 +129,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -147,6 +154,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -166,6 +174,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -190,6 +199,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -209,6 +219,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getCreated() {
 		return created;
 	}
@@ -233,6 +244,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreated(Date newCreated) {
 		if (newCreated != created) {
 			NotificationChain msgs = null;
@@ -252,6 +264,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAuthor() {
 		return author;
 	}
@@ -276,6 +289,7 @@ public class BasicImpl extends DomainResourceImpl implements Basic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthor(Reference newAuthor) {
 		if (newAuthor != author) {
 			NotificationChain msgs = null;

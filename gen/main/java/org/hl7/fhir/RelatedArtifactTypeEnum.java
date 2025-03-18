@@ -2,6 +2,8 @@
  */
 package org.hl7.fhir;
 
+import java.lang.String;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -356,6 +358,7 @@ public enum RelatedArtifactTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -365,6 +368,7 @@ public enum RelatedArtifactTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -374,6 +378,7 @@ public enum RelatedArtifactTypeEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CodeableConcept;
@@ -316,6 +321,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MEDIA__IDENTIFIER);
@@ -328,6 +334,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getBasedOn() {
 		if (basedOn == null) {
 			basedOn = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEDIA__BASED_ON);
@@ -340,6 +347,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPartOf() {
 		if (partOf == null) {
 			partOf = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEDIA__PART_OF);
@@ -352,6 +360,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EventStatus getStatus() {
 		return status;
 	}
@@ -376,6 +385,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(EventStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -395,6 +405,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -419,6 +430,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -438,6 +450,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getModality() {
 		return modality;
 	}
@@ -462,6 +475,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModality(CodeableConcept newModality) {
 		if (newModality != modality) {
 			NotificationChain msgs = null;
@@ -481,6 +495,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getView() {
 		return view;
 	}
@@ -505,6 +520,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setView(CodeableConcept newView) {
 		if (newView != view) {
 			NotificationChain msgs = null;
@@ -524,6 +540,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -548,6 +565,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -567,6 +585,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -591,6 +610,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -610,6 +630,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreatedDateTime() {
 		return createdDateTime;
 	}
@@ -634,6 +655,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreatedDateTime(DateTime newCreatedDateTime) {
 		if (newCreatedDateTime != createdDateTime) {
 			NotificationChain msgs = null;
@@ -653,6 +675,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getCreatedPeriod() {
 		return createdPeriod;
 	}
@@ -677,6 +700,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreatedPeriod(Period newCreatedPeriod) {
 		if (newCreatedPeriod != createdPeriod) {
 			NotificationChain msgs = null;
@@ -696,6 +720,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getIssued() {
 		return issued;
 	}
@@ -720,6 +745,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssued(Instant newIssued) {
 		if (newIssued != issued) {
 			NotificationChain msgs = null;
@@ -739,6 +765,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getOperator() {
 		return operator;
 	}
@@ -763,6 +790,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(Reference newOperator) {
 		if (newOperator != operator) {
 			NotificationChain msgs = null;
@@ -782,6 +810,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getReasonCode() {
 		if (reasonCode == null) {
 			reasonCode = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MEDIA__REASON_CODE);
@@ -794,6 +823,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getBodySite() {
 		return bodySite;
 	}
@@ -818,6 +848,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodySite(CodeableConcept newBodySite) {
 		if (newBodySite != bodySite) {
 			NotificationChain msgs = null;
@@ -837,6 +868,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDeviceName() {
 		return deviceName;
 	}
@@ -861,6 +893,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceName(org.hl7.fhir.String newDeviceName) {
 		if (newDeviceName != deviceName) {
 			NotificationChain msgs = null;
@@ -880,6 +913,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDevice() {
 		return device;
 	}
@@ -904,6 +938,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDevice(Reference newDevice) {
 		if (newDevice != device) {
 			NotificationChain msgs = null;
@@ -923,6 +958,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getHeight() {
 		return height;
 	}
@@ -947,6 +983,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(PositiveInt newHeight) {
 		if (newHeight != height) {
 			NotificationChain msgs = null;
@@ -966,6 +1003,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getWidth() {
 		return width;
 	}
@@ -990,6 +1028,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(PositiveInt newWidth) {
 		if (newWidth != width) {
 			NotificationChain msgs = null;
@@ -1009,6 +1048,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getFrames() {
 		return frames;
 	}
@@ -1033,6 +1073,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrames(PositiveInt newFrames) {
 		if (newFrames != frames) {
 			NotificationChain msgs = null;
@@ -1052,6 +1093,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getDuration() {
 		return duration;
 	}
@@ -1076,6 +1118,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDuration(Decimal newDuration) {
 		if (newDuration != duration) {
 			NotificationChain msgs = null;
@@ -1095,6 +1138,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getContent() {
 		return content;
 	}
@@ -1119,6 +1163,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContent(Attachment newContent) {
 		if (newContent != content) {
 			NotificationChain msgs = null;
@@ -1138,6 +1183,7 @@ public class MediaImpl extends DomainResourceImpl implements Media {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.MEDIA__NOTE);

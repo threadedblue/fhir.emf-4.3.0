@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.Citation;
 import org.hl7.fhir.CitationCitedArtifact;
@@ -387,6 +392,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -411,6 +417,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -430,6 +437,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION__IDENTIFIER);
@@ -442,6 +450,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -466,6 +475,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -485,6 +495,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -509,6 +520,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -528,6 +540,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -552,6 +565,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -571,6 +585,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -595,6 +610,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -614,6 +630,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -638,6 +655,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -657,6 +675,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -681,6 +700,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -700,6 +720,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -724,6 +745,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -743,6 +765,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.CITATION__CONTACT);
@@ -755,6 +778,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -779,6 +803,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -798,6 +823,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.CITATION__USE_CONTEXT);
@@ -810,6 +836,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION__JURISDICTION);
@@ -822,6 +849,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -846,6 +874,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -865,6 +894,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -889,6 +919,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -908,6 +939,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getApprovalDate() {
 		return approvalDate;
 	}
@@ -932,6 +964,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApprovalDate(Date newApprovalDate) {
 		if (newApprovalDate != approvalDate) {
 			NotificationChain msgs = null;
@@ -951,6 +984,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getLastReviewDate() {
 		return lastReviewDate;
 	}
@@ -975,6 +1009,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastReviewDate(Date newLastReviewDate) {
 		if (newLastReviewDate != lastReviewDate) {
 			NotificationChain msgs = null;
@@ -994,6 +1029,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -1018,6 +1054,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectivePeriod(Period newEffectivePeriod) {
 		if (newEffectivePeriod != effectivePeriod) {
 			NotificationChain msgs = null;
@@ -1037,6 +1074,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.CITATION__AUTHOR);
@@ -1049,6 +1087,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.CITATION__EDITOR);
@@ -1061,6 +1100,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.CITATION__REVIEWER);
@@ -1073,6 +1113,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.CITATION__ENDORSER);
@@ -1085,6 +1126,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationSummary> getSummary() {
 		if (summary == null) {
 			summary = new EObjectContainmentEList<CitationSummary>(CitationSummary.class, this, FhirPackage.CITATION__SUMMARY);
@@ -1097,6 +1139,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationClassification> getClassification() {
 		if (classification == null) {
 			classification = new EObjectContainmentEList<CitationClassification>(CitationClassification.class, this, FhirPackage.CITATION__CLASSIFICATION);
@@ -1109,6 +1152,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.CITATION__NOTE);
@@ -1121,6 +1165,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCurrentState() {
 		if (currentState == null) {
 			currentState = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION__CURRENT_STATE);
@@ -1133,6 +1178,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationStatusDate> getStatusDate() {
 		if (statusDate == null) {
 			statusDate = new EObjectContainmentEList<CitationStatusDate>(CitationStatusDate.class, this, FhirPackage.CITATION__STATUS_DATE);
@@ -1145,6 +1191,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationRelatesTo> getRelatesTo() {
 		if (relatesTo == null) {
 			relatesTo = new EObjectContainmentEList<CitationRelatesTo>(CitationRelatesTo.class, this, FhirPackage.CITATION__RELATES_TO);
@@ -1157,6 +1204,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationCitedArtifact getCitedArtifact() {
 		return citedArtifact;
 	}
@@ -1181,6 +1229,7 @@ public class CitationImpl extends DomainResourceImpl implements Citation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCitedArtifact(CitationCitedArtifact newCitedArtifact) {
 		if (newCitedArtifact != citedArtifact) {
 			NotificationChain msgs = null;

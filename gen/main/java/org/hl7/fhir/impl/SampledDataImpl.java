@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.PositiveInt;
@@ -128,6 +131,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getOrigin() {
 		return origin;
 	}
@@ -152,6 +156,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrigin(Quantity newOrigin) {
 		if (newOrigin != origin) {
 			NotificationChain msgs = null;
@@ -171,6 +176,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getPeriod() {
 		return period;
 	}
@@ -195,6 +201,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Decimal newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -214,6 +221,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getFactor() {
 		return factor;
 	}
@@ -238,6 +246,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFactor(Decimal newFactor) {
 		if (newFactor != factor) {
 			NotificationChain msgs = null;
@@ -257,6 +266,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getLowerLimit() {
 		return lowerLimit;
 	}
@@ -281,6 +291,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerLimit(Decimal newLowerLimit) {
 		if (newLowerLimit != lowerLimit) {
 			NotificationChain msgs = null;
@@ -300,6 +311,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getUpperLimit() {
 		return upperLimit;
 	}
@@ -324,6 +336,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperLimit(Decimal newUpperLimit) {
 		if (newUpperLimit != upperLimit) {
 			NotificationChain msgs = null;
@@ -343,6 +356,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDimensions() {
 		return dimensions;
 	}
@@ -367,6 +381,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDimensions(PositiveInt newDimensions) {
 		if (newDimensions != dimensions) {
 			NotificationChain msgs = null;
@@ -386,6 +401,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledDataDataType getData() {
 		return data;
 	}
@@ -410,6 +426,7 @@ public class SampledDataImpl extends ElementImpl implements SampledData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setData(SampledDataDataType newData) {
 		if (newData != data) {
 			NotificationChain msgs = null;

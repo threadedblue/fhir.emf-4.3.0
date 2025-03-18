@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Coding;
@@ -341,6 +346,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -365,6 +371,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -384,6 +391,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MESSAGE_DEFINITION__IDENTIFIER);
@@ -396,6 +404,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -420,6 +429,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -439,6 +449,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -463,6 +474,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -482,6 +494,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -506,6 +519,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -525,6 +539,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getReplaces() {
 		if (replaces == null) {
 			replaces = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.MESSAGE_DEFINITION__REPLACES);
@@ -537,6 +552,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -561,6 +577,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -580,6 +597,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExperimental() {
 		return experimental;
 	}
@@ -604,6 +622,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExperimental(org.hl7.fhir.Boolean newExperimental) {
 		if (newExperimental != experimental) {
 			NotificationChain msgs = null;
@@ -623,6 +642,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -647,6 +667,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -666,6 +687,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -690,6 +712,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -709,6 +732,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.MESSAGE_DEFINITION__CONTACT);
@@ -721,6 +745,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -745,6 +770,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -764,6 +790,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.MESSAGE_DEFINITION__USE_CONTEXT);
@@ -776,6 +803,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MESSAGE_DEFINITION__JURISDICTION);
@@ -788,6 +816,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getPurpose() {
 		return purpose;
 	}
@@ -812,6 +841,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(Markdown newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -831,6 +861,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -855,6 +886,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -874,6 +906,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getBase() {
 		return base;
 	}
@@ -898,6 +931,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase(Canonical newBase) {
 		if (newBase != base) {
 			NotificationChain msgs = null;
@@ -917,6 +951,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getParent() {
 		if (parent == null) {
 			parent = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.MESSAGE_DEFINITION__PARENT);
@@ -929,6 +964,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getEventCoding() {
 		return eventCoding;
 	}
@@ -953,6 +989,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEventCoding(Coding newEventCoding) {
 		if (newEventCoding != eventCoding) {
 			NotificationChain msgs = null;
@@ -972,6 +1009,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getEventUri() {
 		return eventUri;
 	}
@@ -996,6 +1034,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEventUri(Uri newEventUri) {
 		if (newEventUri != eventUri) {
 			NotificationChain msgs = null;
@@ -1015,6 +1054,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageSignificanceCategory getCategory() {
 		return category;
 	}
@@ -1039,6 +1079,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(MessageSignificanceCategory newCategory) {
 		if (newCategory != category) {
 			NotificationChain msgs = null;
@@ -1058,6 +1099,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MessageDefinitionFocus> getFocus() {
 		if (focus == null) {
 			focus = new EObjectContainmentEList<MessageDefinitionFocus>(MessageDefinitionFocus.class, this, FhirPackage.MESSAGE_DEFINITION__FOCUS);
@@ -1070,6 +1112,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageheaderResponseRequest getResponseRequired() {
 		return responseRequired;
 	}
@@ -1094,6 +1137,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponseRequired(MessageheaderResponseRequest newResponseRequired) {
 		if (newResponseRequired != responseRequired) {
 			NotificationChain msgs = null;
@@ -1113,6 +1157,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MessageDefinitionAllowedResponse> getAllowedResponse() {
 		if (allowedResponse == null) {
 			allowedResponse = new EObjectContainmentEList<MessageDefinitionAllowedResponse>(MessageDefinitionAllowedResponse.class, this, FhirPackage.MESSAGE_DEFINITION__ALLOWED_RESPONSE);
@@ -1125,6 +1170,7 @@ public class MessageDefinitionImpl extends DomainResourceImpl implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getGraph() {
 		if (graph == null) {
 			graph = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.MESSAGE_DEFINITION__GRAPH);

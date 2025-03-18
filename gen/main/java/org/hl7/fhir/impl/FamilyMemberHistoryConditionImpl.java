@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Age;
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CodeableConcept;
@@ -145,6 +150,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -169,6 +175,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -188,6 +195,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOutcome() {
 		return outcome;
 	}
@@ -212,6 +220,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutcome(CodeableConcept newOutcome) {
 		if (newOutcome != outcome) {
 			NotificationChain msgs = null;
@@ -231,6 +240,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getContributedToDeath() {
 		return contributedToDeath;
 	}
@@ -255,6 +265,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContributedToDeath(org.hl7.fhir.Boolean newContributedToDeath) {
 		if (newContributedToDeath != contributedToDeath) {
 			NotificationChain msgs = null;
@@ -274,6 +285,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getOnsetAge() {
 		return onsetAge;
 	}
@@ -298,6 +310,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetAge(Age newOnsetAge) {
 		if (newOnsetAge != onsetAge) {
 			NotificationChain msgs = null;
@@ -317,6 +330,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getOnsetRange() {
 		return onsetRange;
 	}
@@ -341,6 +355,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetRange(Range newOnsetRange) {
 		if (newOnsetRange != onsetRange) {
 			NotificationChain msgs = null;
@@ -360,6 +375,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getOnsetPeriod() {
 		return onsetPeriod;
 	}
@@ -384,6 +400,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetPeriod(Period newOnsetPeriod) {
 		if (newOnsetPeriod != onsetPeriod) {
 			NotificationChain msgs = null;
@@ -403,6 +420,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getOnsetString() {
 		return onsetString;
 	}
@@ -427,6 +445,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetString(org.hl7.fhir.String newOnsetString) {
 		if (newOnsetString != onsetString) {
 			NotificationChain msgs = null;
@@ -446,6 +465,7 @@ public class FamilyMemberHistoryConditionImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.FAMILY_MEMBER_HISTORY_CONDITION__NOTE);

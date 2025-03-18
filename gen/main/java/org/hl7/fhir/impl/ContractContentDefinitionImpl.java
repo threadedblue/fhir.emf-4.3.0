@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContractContentDefinition;
 import org.hl7.fhir.ContractResourcePublicationStatusCodes;
@@ -118,6 +121,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -142,6 +146,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -161,6 +166,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubType() {
 		return subType;
 	}
@@ -185,6 +191,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubType(CodeableConcept newSubType) {
 		if (newSubType != subType) {
 			NotificationChain msgs = null;
@@ -204,6 +211,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPublisher() {
 		return publisher;
 	}
@@ -228,6 +236,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(Reference newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -247,6 +256,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getPublicationDate() {
 		return publicationDate;
 	}
@@ -271,6 +281,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublicationDate(DateTime newPublicationDate) {
 		if (newPublicationDate != publicationDate) {
 			NotificationChain msgs = null;
@@ -290,6 +301,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContractResourcePublicationStatusCodes getPublicationStatus() {
 		return publicationStatus;
 	}
@@ -314,6 +326,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublicationStatus(ContractResourcePublicationStatusCodes newPublicationStatus) {
 		if (newPublicationStatus != publicationStatus) {
 			NotificationChain msgs = null;
@@ -333,6 +346,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -357,6 +371,7 @@ public class ContractContentDefinitionImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;

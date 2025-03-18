@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CatalogEntry;
 import org.hl7.fhir.CatalogEntryRelatedEntry;
 import org.hl7.fhir.CodeableConcept;
@@ -202,6 +207,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CATALOG_ENTRY__IDENTIFIER);
@@ -214,6 +220,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -238,6 +245,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -257,6 +265,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getOrderable() {
 		return orderable;
 	}
@@ -281,6 +290,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrderable(org.hl7.fhir.Boolean newOrderable) {
 		if (newOrderable != orderable) {
 			NotificationChain msgs = null;
@@ -300,6 +310,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReferencedItem() {
 		return referencedItem;
 	}
@@ -324,6 +335,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferencedItem(Reference newReferencedItem) {
 		if (newReferencedItem != referencedItem) {
 			NotificationChain msgs = null;
@@ -343,6 +355,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getAdditionalIdentifier() {
 		if (additionalIdentifier == null) {
 			additionalIdentifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CATALOG_ENTRY__ADDITIONAL_IDENTIFIER);
@@ -355,6 +368,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getClassification() {
 		if (classification == null) {
 			classification = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CATALOG_ENTRY__CLASSIFICATION);
@@ -367,6 +381,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -391,6 +406,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -410,6 +426,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getValidityPeriod() {
 		return validityPeriod;
 	}
@@ -434,6 +451,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidityPeriod(Period newValidityPeriod) {
 		if (newValidityPeriod != validityPeriod) {
 			NotificationChain msgs = null;
@@ -453,6 +471,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getValidTo() {
 		return validTo;
 	}
@@ -477,6 +496,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidTo(DateTime newValidTo) {
 		if (newValidTo != validTo) {
 			NotificationChain msgs = null;
@@ -496,6 +516,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getLastUpdated() {
 		return lastUpdated;
 	}
@@ -520,6 +541,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastUpdated(DateTime newLastUpdated) {
 		if (newLastUpdated != lastUpdated) {
 			NotificationChain msgs = null;
@@ -539,6 +561,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAdditionalCharacteristic() {
 		if (additionalCharacteristic == null) {
 			additionalCharacteristic = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CATALOG_ENTRY__ADDITIONAL_CHARACTERISTIC);
@@ -551,6 +574,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAdditionalClassification() {
 		if (additionalClassification == null) {
 			additionalClassification = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CATALOG_ENTRY__ADDITIONAL_CLASSIFICATION);
@@ -563,6 +587,7 @@ public class CatalogEntryImpl extends DomainResourceImpl implements CatalogEntry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CatalogEntryRelatedEntry> getRelatedEntry() {
 		if (relatedEntry == null) {
 			relatedEntry = new EObjectContainmentEList<CatalogEntryRelatedEntry>(CatalogEntryRelatedEntry.class, this, FhirPackage.CATALOG_ENTRY__RELATED_ENTRY);

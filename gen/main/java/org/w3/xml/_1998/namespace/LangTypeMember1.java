@@ -22,22 +22,22 @@ public enum LangTypeMember1 implements Enumerator {
 	 * The '<em><b></b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #__VALUE
+	 * @see #___VALUE
 	 * @generated
 	 * @ordered
 	 */
-	_(0, "_", "");
+	__(0, "__", "");
 
 	/**
 	 * The '<em><b></b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #_
+	 * @see #__
 	 * @model literal=""
 	 * @generated
 	 * @ordered
 	 */
-	public static final int __VALUE = 0;
+	public static final int ___VALUE = 0;
 
 	/**
 	 * An array of all the '<em><b>Lang Type Member1</b></em>' enumerators.
@@ -47,7 +47,7 @@ public enum LangTypeMember1 implements Enumerator {
 	 */
 	private static final LangTypeMember1[] VALUES_ARRAY =
 		new LangTypeMember1[] {
-			_,
+			__,
 		};
 
 	/**
@@ -104,7 +104,7 @@ public enum LangTypeMember1 implements Enumerator {
 	 */
 	public static LangTypeMember1 get(int value) {
 		switch (value) {
-			case __VALUE: return _;
+			case ___VALUE: return __;
 		}
 		return null;
 	}
@@ -147,6 +147,7 @@ public enum LangTypeMember1 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -156,6 +157,7 @@ public enum LangTypeMember1 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -165,6 +167,7 @@ public enum LangTypeMember1 implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

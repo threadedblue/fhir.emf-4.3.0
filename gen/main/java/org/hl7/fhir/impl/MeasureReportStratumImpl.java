@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MeasureReportComponent;
@@ -100,6 +105,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getValue() {
 		return value;
 	}
@@ -124,6 +130,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(CodeableConcept newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureReportComponent> getComponent() {
 		if (component == null) {
 			component = new EObjectContainmentEList<MeasureReportComponent>(MeasureReportComponent.class, this, FhirPackage.MEASURE_REPORT_STRATUM__COMPONENT);
@@ -155,6 +163,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureReportPopulation1> getPopulation() {
 		if (population == null) {
 			population = new EObjectContainmentEList<MeasureReportPopulation1>(MeasureReportPopulation1.class, this, FhirPackage.MEASURE_REPORT_STRATUM__POPULATION);
@@ -167,6 +176,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMeasureScore() {
 		return measureScore;
 	}
@@ -191,6 +201,7 @@ public class MeasureReportStratumImpl extends BackboneElementImpl implements Mea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasureScore(Quantity newMeasureScore) {
 		if (newMeasureScore != measureScore) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.EncounterClassHistory;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class EncounterClassHistoryImpl extends BackboneElementImpl implements En
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getClass_() {
 		return class_;
 	}
@@ -95,6 +99,7 @@ public class EncounterClassHistoryImpl extends BackboneElementImpl implements En
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(Coding newClass) {
 		if (newClass != class_) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class EncounterClassHistoryImpl extends BackboneElementImpl implements En
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -138,6 +144,7 @@ public class EncounterClassHistoryImpl extends BackboneElementImpl implements En
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;

@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ResourceType;
 import org.hl7.fhir.ResourceTypeEnum;
@@ -76,6 +79,7 @@ public class ResourceTypeImpl extends ElementImpl implements ResourceType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceTypeEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class ResourceTypeImpl extends ElementImpl implements ResourceType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(ResourceTypeEnum newValue) {
 		ResourceTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class ResourceTypeImpl extends ElementImpl implements ResourceType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		ResourceTypeEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class ResourceTypeImpl extends ElementImpl implements ResourceType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

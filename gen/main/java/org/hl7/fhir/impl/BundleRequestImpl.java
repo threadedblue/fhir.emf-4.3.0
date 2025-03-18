@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BundleRequest;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.HTTPVerb;
@@ -116,6 +119,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HTTPVerb getMethod() {
 		return method;
 	}
@@ -140,6 +144,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(HTTPVerb newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -159,6 +164,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -183,6 +189,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -202,6 +209,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getIfNoneMatch() {
 		return ifNoneMatch;
 	}
@@ -226,6 +234,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfNoneMatch(org.hl7.fhir.String newIfNoneMatch) {
 		if (newIfNoneMatch != ifNoneMatch) {
 			NotificationChain msgs = null;
@@ -245,6 +254,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getIfModifiedSince() {
 		return ifModifiedSince;
 	}
@@ -269,6 +279,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfModifiedSince(Instant newIfModifiedSince) {
 		if (newIfModifiedSince != ifModifiedSince) {
 			NotificationChain msgs = null;
@@ -288,6 +299,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getIfMatch() {
 		return ifMatch;
 	}
@@ -312,6 +324,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfMatch(org.hl7.fhir.String newIfMatch) {
 		if (newIfMatch != ifMatch) {
 			NotificationChain msgs = null;
@@ -331,6 +344,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getIfNoneExist() {
 		return ifNoneExist;
 	}
@@ -355,6 +369,7 @@ public class BundleRequestImpl extends BackboneElementImpl implements BundleRequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfNoneExist(org.hl7.fhir.String newIfNoneExist) {
 		if (newIfNoneExist != ifNoneExist) {
 			NotificationChain msgs = null;

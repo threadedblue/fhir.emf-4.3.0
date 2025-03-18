@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceInner;
@@ -105,6 +108,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getVariantType() {
 		return variantType;
 	}
@@ -129,6 +133,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariantType(CodeableConcept newVariantType) {
 		if (newVariantType != variantType) {
 			NotificationChain msgs = null;
@@ -148,6 +153,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExact() {
 		return exact;
 	}
@@ -172,6 +178,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExact(org.hl7.fhir.Boolean newExact) {
 		if (newExact != exact) {
 			NotificationChain msgs = null;
@@ -191,6 +198,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getLength() {
 		return length;
 	}
@@ -215,6 +223,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLength(org.hl7.fhir.Integer newLength) {
 		if (newLength != length) {
 			NotificationChain msgs = null;
@@ -234,6 +243,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceOuter getOuter() {
 		return outer;
 	}
@@ -258,6 +268,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOuter(MolecularSequenceOuter newOuter) {
 		if (newOuter != outer) {
 			NotificationChain msgs = null;
@@ -277,6 +288,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceInner getInner() {
 		return inner;
 	}
@@ -301,6 +313,7 @@ public class MolecularSequenceStructureVariantImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInner(MolecularSequenceInner newInner) {
 		if (newInner != inner) {
 			NotificationChain msgs = null;

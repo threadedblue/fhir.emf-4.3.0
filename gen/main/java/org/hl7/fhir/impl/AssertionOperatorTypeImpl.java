@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.AssertionOperatorType;
 import org.hl7.fhir.AssertionOperatorTypeEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class AssertionOperatorTypeImpl extends ElementImpl implements AssertionO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssertionOperatorTypeEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class AssertionOperatorTypeImpl extends ElementImpl implements AssertionO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(AssertionOperatorTypeEnum newValue) {
 		AssertionOperatorTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class AssertionOperatorTypeImpl extends ElementImpl implements AssertionO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		AssertionOperatorTypeEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class AssertionOperatorTypeImpl extends ElementImpl implements AssertionO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

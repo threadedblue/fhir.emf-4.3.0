@@ -3,18 +3,24 @@
 package org.w3._1999.xhtml.impl;
 
 import java.math.BigInteger;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.w3._1999.xhtml.CaptionType;
 import org.w3._1999.xhtml.ColType;
 import org.w3._1999.xhtml.ColgroupType;
@@ -463,6 +469,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CaptionType getCaption() {
 		return caption;
 	}
@@ -487,6 +494,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaption(CaptionType newCaption) {
 		if (newCaption != caption) {
 			NotificationChain msgs = null;
@@ -506,6 +514,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ColType> getCol() {
 		if (col == null) {
 			col = new EObjectContainmentEList<ColType>(ColType.class, this, XhtmlPackage.TABLE_TYPE__COL);
@@ -518,6 +527,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ColgroupType> getColgroup() {
 		if (colgroup == null) {
 			colgroup = new EObjectContainmentEList<ColgroupType>(ColgroupType.class, this, XhtmlPackage.TABLE_TYPE__COLGROUP);
@@ -530,6 +540,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TheadType getThead() {
 		return thead;
 	}
@@ -554,6 +565,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThead(TheadType newThead) {
 		if (newThead != thead) {
 			NotificationChain msgs = null;
@@ -573,6 +585,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TfootType getTfoot() {
 		return tfoot;
 	}
@@ -597,6 +610,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTfoot(TfootType newTfoot) {
 		if (newTfoot != tfoot) {
 			NotificationChain msgs = null;
@@ -616,6 +630,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TbodyType> getTbody() {
 		if (tbody == null) {
 			tbody = new EObjectContainmentEList<TbodyType>(TbodyType.class, this, XhtmlPackage.TABLE_TYPE__TBODY);
@@ -628,6 +643,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TrType> getTr() {
 		if (tr == null) {
 			tr = new EObjectContainmentEList<TrType>(TrType.class, this, XhtmlPackage.TABLE_TYPE__TR);
@@ -640,6 +656,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigInteger getBorder() {
 		return border;
 	}
@@ -649,6 +666,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBorder(BigInteger newBorder) {
 		BigInteger oldBorder = border;
 		border = newBorder;
@@ -661,6 +679,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCellpadding() {
 		return cellpadding;
 	}
@@ -670,6 +689,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCellpadding(String newCellpadding) {
 		String oldCellpadding = cellpadding;
 		cellpadding = newCellpadding;
@@ -682,6 +702,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCellspacing() {
 		return cellspacing;
 	}
@@ -691,6 +712,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCellspacing(String newCellspacing) {
 		String oldCellspacing = cellspacing;
 		cellspacing = newCellspacing;
@@ -703,6 +725,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -712,6 +735,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -724,6 +748,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -733,6 +758,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -747,6 +773,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -761,6 +788,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -770,6 +798,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TFrame getFrame() {
 		return frame;
 	}
@@ -779,6 +808,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrame(TFrame newFrame) {
 		TFrame oldFrame = frame;
 		frame = newFrame == null ? FRAME_EDEFAULT : newFrame;
@@ -793,6 +823,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetFrame() {
 		TFrame oldFrame = frame;
 		boolean oldFrameESet = frameESet;
@@ -807,6 +838,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetFrame() {
 		return frameESet;
 	}
@@ -816,6 +848,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -825,6 +858,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -837,6 +871,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -846,6 +881,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -858,6 +894,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -867,6 +904,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -879,6 +917,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TRules getRules() {
 		return rules;
 	}
@@ -888,6 +927,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRules(TRules newRules) {
 		TRules oldRules = rules;
 		rules = newRules == null ? RULES_EDEFAULT : newRules;
@@ -902,6 +942,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetRules() {
 		TRules oldRules = rules;
 		boolean oldRulesESet = rulesESet;
@@ -916,6 +957,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetRules() {
 		return rulesESet;
 	}
@@ -925,6 +967,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -934,6 +977,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -946,6 +990,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSummary() {
 		return summary;
 	}
@@ -955,6 +1000,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSummary(String newSummary) {
 		String oldSummary = summary;
 		summary = newSummary;
@@ -967,6 +1013,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -976,6 +1023,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -988,6 +1036,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getWidth() {
 		return width;
 	}
@@ -997,6 +1046,7 @@ public class TableTypeImpl extends MinimalEObjectImpl.Container implements Table
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(String newWidth) {
 		String oldWidth = width;
 		width = newWidth;

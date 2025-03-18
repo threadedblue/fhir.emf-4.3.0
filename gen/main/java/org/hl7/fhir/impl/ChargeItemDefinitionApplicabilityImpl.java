@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ChargeItemDefinitionApplicability;
 import org.hl7.fhir.FhirPackage;
 
@@ -80,6 +83,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -104,6 +108,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -123,6 +128,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLanguage() {
 		return language;
 	}
@@ -147,6 +153,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLanguage(org.hl7.fhir.String newLanguage) {
 		if (newLanguage != language) {
 			NotificationChain msgs = null;
@@ -166,6 +173,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getExpression() {
 		return expression;
 	}
@@ -190,6 +198,7 @@ public class ChargeItemDefinitionApplicabilityImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(org.hl7.fhir.String newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;

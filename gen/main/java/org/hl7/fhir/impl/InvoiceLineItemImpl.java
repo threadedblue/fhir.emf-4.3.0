@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.InvoiceLineItem;
@@ -100,6 +105,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -124,6 +130,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getChargeItemReference() {
 		return chargeItemReference;
 	}
@@ -167,6 +175,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChargeItemReference(Reference newChargeItemReference) {
 		if (newChargeItemReference != chargeItemReference) {
 			NotificationChain msgs = null;
@@ -186,6 +195,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getChargeItemCodeableConcept() {
 		return chargeItemCodeableConcept;
 	}
@@ -210,6 +220,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChargeItemCodeableConcept(CodeableConcept newChargeItemCodeableConcept) {
 		if (newChargeItemCodeableConcept != chargeItemCodeableConcept) {
 			NotificationChain msgs = null;
@@ -229,6 +240,7 @@ public class InvoiceLineItemImpl extends BackboneElementImpl implements InvoiceL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InvoicePriceComponent> getPriceComponent() {
 		if (priceComponent == null) {
 			priceComponent = new EObjectContainmentEList<InvoicePriceComponent>(InvoicePriceComponent.class, this, FhirPackage.INVOICE_LINE_ITEM__PRICE_COMPONENT);

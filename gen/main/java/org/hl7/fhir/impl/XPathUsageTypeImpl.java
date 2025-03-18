@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.XPathUsageType;
 import org.hl7.fhir.XPathUsageTypeEnum;
@@ -76,6 +79,7 @@ public class XPathUsageTypeImpl extends ElementImpl implements XPathUsageType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XPathUsageTypeEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class XPathUsageTypeImpl extends ElementImpl implements XPathUsageType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(XPathUsageTypeEnum newValue) {
 		XPathUsageTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class XPathUsageTypeImpl extends ElementImpl implements XPathUsageType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		XPathUsageTypeEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class XPathUsageTypeImpl extends ElementImpl implements XPathUsageType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

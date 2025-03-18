@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.ConceptMapDependsOn;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getProperty() {
 		return property;
 	}
@@ -117,6 +121,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProperty(Uri newProperty) {
 		if (newProperty != property) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getSystem() {
 		return system;
 	}
@@ -160,6 +166,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(Canonical newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValue() {
 		return value;
 	}
@@ -203,6 +211,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(org.hl7.fhir.String newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -246,6 +256,7 @@ public class ConceptMapDependsOnImpl extends BackboneElementImpl implements Conc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;

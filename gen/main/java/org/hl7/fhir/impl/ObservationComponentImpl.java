@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -226,6 +231,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -250,6 +256,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -269,6 +276,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getValueQuantity() {
 		return valueQuantity;
 	}
@@ -293,6 +301,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueQuantity(Quantity newValueQuantity) {
 		if (newValueQuantity != valueQuantity) {
 			NotificationChain msgs = null;
@@ -312,6 +321,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getValueCodeableConcept() {
 		return valueCodeableConcept;
 	}
@@ -336,6 +346,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueCodeableConcept(CodeableConcept newValueCodeableConcept) {
 		if (newValueCodeableConcept != valueCodeableConcept) {
 			NotificationChain msgs = null;
@@ -355,6 +366,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getValueString() {
 		return valueString;
 	}
@@ -379,6 +391,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueString(org.hl7.fhir.String newValueString) {
 		if (newValueString != valueString) {
 			NotificationChain msgs = null;
@@ -398,6 +411,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getValueBoolean() {
 		return valueBoolean;
 	}
@@ -422,6 +436,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueBoolean(org.hl7.fhir.Boolean newValueBoolean) {
 		if (newValueBoolean != valueBoolean) {
 			NotificationChain msgs = null;
@@ -441,6 +456,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getValueInteger() {
 		return valueInteger;
 	}
@@ -465,6 +481,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueInteger(org.hl7.fhir.Integer newValueInteger) {
 		if (newValueInteger != valueInteger) {
 			NotificationChain msgs = null;
@@ -484,6 +501,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getValueRange() {
 		return valueRange;
 	}
@@ -508,6 +526,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRange(Range newValueRange) {
 		if (newValueRange != valueRange) {
 			NotificationChain msgs = null;
@@ -527,6 +546,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getValueRatio() {
 		return valueRatio;
 	}
@@ -551,6 +571,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueRatio(Ratio newValueRatio) {
 		if (newValueRatio != valueRatio) {
 			NotificationChain msgs = null;
@@ -570,6 +591,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getValueSampledData() {
 		return valueSampledData;
 	}
@@ -594,6 +616,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueSampledData(SampledData newValueSampledData) {
 		if (newValueSampledData != valueSampledData) {
 			NotificationChain msgs = null;
@@ -613,6 +636,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getValueTime() {
 		return valueTime;
 	}
@@ -637,6 +661,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueTime(Time newValueTime) {
 		if (newValueTime != valueTime) {
 			NotificationChain msgs = null;
@@ -656,6 +681,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getValueDateTime() {
 		return valueDateTime;
 	}
@@ -680,6 +706,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDateTime(DateTime newValueDateTime) {
 		if (newValueDateTime != valueDateTime) {
 			NotificationChain msgs = null;
@@ -699,6 +726,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getValuePeriod() {
 		return valuePeriod;
 	}
@@ -723,6 +751,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValuePeriod(Period newValuePeriod) {
 		if (newValuePeriod != valuePeriod) {
 			NotificationChain msgs = null;
@@ -742,6 +771,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDataAbsentReason() {
 		return dataAbsentReason;
 	}
@@ -766,6 +796,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataAbsentReason(CodeableConcept newDataAbsentReason) {
 		if (newDataAbsentReason != dataAbsentReason) {
 			NotificationChain msgs = null;
@@ -785,6 +816,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getInterpretation() {
 		if (interpretation == null) {
 			interpretation = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.OBSERVATION_COMPONENT__INTERPRETATION);
@@ -797,6 +829,7 @@ public class ObservationComponentImpl extends BackboneElementImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ObservationReferenceRange> getReferenceRange() {
 		if (referenceRange == null) {
 			referenceRange = new EObjectContainmentEList<ObservationReferenceRange>(ObservationReferenceRange.class, this, FhirPackage.OBSERVATION_COMPONENT__REFERENCE_RANGE);

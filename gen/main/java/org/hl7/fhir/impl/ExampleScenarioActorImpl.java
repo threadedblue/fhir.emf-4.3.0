@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ExampleScenarioActor;
 import org.hl7.fhir.ExampleScenarioActorType;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getActorId() {
 		return actorId;
 	}
@@ -117,6 +121,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActorId(org.hl7.fhir.String newActorId) {
 		if (newActorId != actorId) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioActorType getType() {
 		return type;
 	}
@@ -160,6 +166,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ExampleScenarioActorType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -203,6 +211,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -246,6 +256,7 @@ public class ExampleScenarioActorImpl extends BackboneElementImpl implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;

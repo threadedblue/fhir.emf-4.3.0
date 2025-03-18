@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ExampleScenarioContainedInstance;
 import org.hl7.fhir.FhirPackage;
 
@@ -69,6 +72,7 @@ public class ExampleScenarioContainedInstanceImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getResourceId() {
 		return resourceId;
 	}
@@ -93,6 +97,7 @@ public class ExampleScenarioContainedInstanceImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResourceId(org.hl7.fhir.String newResourceId) {
 		if (newResourceId != resourceId) {
 			NotificationChain msgs = null;
@@ -112,6 +117,7 @@ public class ExampleScenarioContainedInstanceImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersionId() {
 		return versionId;
 	}
@@ -136,6 +142,7 @@ public class ExampleScenarioContainedInstanceImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersionId(org.hl7.fhir.String newVersionId) {
 		if (newVersionId != versionId) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Consent;
@@ -215,6 +220,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CONSENT__IDENTIFIER);
@@ -227,6 +233,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentState getStatus() {
 		return status;
 	}
@@ -251,6 +258,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ConsentState newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -270,6 +278,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getScope() {
 		return scope;
 	}
@@ -294,6 +303,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScope(CodeableConcept newScope) {
 		if (newScope != scope) {
 			NotificationChain msgs = null;
@@ -313,6 +323,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONSENT__CATEGORY);
@@ -325,6 +336,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -349,6 +361,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -368,6 +381,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDateTime() {
 		return dateTime;
 	}
@@ -392,6 +406,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateTime(DateTime newDateTime) {
 		if (newDateTime != dateTime) {
 			NotificationChain msgs = null;
@@ -411,6 +426,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPerformer() {
 		if (performer == null) {
 			performer = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CONSENT__PERFORMER);
@@ -423,6 +439,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getOrganization() {
 		if (organization == null) {
 			organization = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CONSENT__ORGANIZATION);
@@ -435,6 +452,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getSourceAttachment() {
 		return sourceAttachment;
 	}
@@ -459,6 +477,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceAttachment(Attachment newSourceAttachment) {
 		if (newSourceAttachment != sourceAttachment) {
 			NotificationChain msgs = null;
@@ -478,6 +497,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSourceReference() {
 		return sourceReference;
 	}
@@ -502,6 +522,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceReference(Reference newSourceReference) {
 		if (newSourceReference != sourceReference) {
 			NotificationChain msgs = null;
@@ -521,6 +542,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConsentPolicy> getPolicy() {
 		if (policy == null) {
 			policy = new EObjectContainmentEList<ConsentPolicy>(ConsentPolicy.class, this, FhirPackage.CONSENT__POLICY);
@@ -533,6 +555,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPolicyRule() {
 		return policyRule;
 	}
@@ -557,6 +580,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPolicyRule(CodeableConcept newPolicyRule) {
 		if (newPolicyRule != policyRule) {
 			NotificationChain msgs = null;
@@ -576,6 +600,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConsentVerification> getVerification() {
 		if (verification == null) {
 			verification = new EObjectContainmentEList<ConsentVerification>(ConsentVerification.class, this, FhirPackage.CONSENT__VERIFICATION);
@@ -588,6 +613,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentProvision getProvision() {
 		return provision;
 	}
@@ -612,6 +638,7 @@ public class ConsentImpl extends DomainResourceImpl implements Consent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvision(ConsentProvision newProvision) {
 		if (newProvision != provision) {
 			NotificationChain msgs = null;

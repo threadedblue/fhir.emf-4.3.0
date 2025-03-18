@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.IngredientManufacturer;
 import org.hl7.fhir.IngredientManufacturerRole;
@@ -71,6 +74,7 @@ public class IngredientManufacturerImpl extends BackboneElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientManufacturerRole getRole() {
 		return role;
 	}
@@ -95,6 +99,7 @@ public class IngredientManufacturerImpl extends BackboneElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(IngredientManufacturerRole newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class IngredientManufacturerImpl extends BackboneElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getManufacturer() {
 		return manufacturer;
 	}
@@ -138,6 +144,7 @@ public class IngredientManufacturerImpl extends BackboneElementImpl implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufacturer(Reference newManufacturer) {
 		if (newManufacturer != manufacturer) {
 			NotificationChain msgs = null;

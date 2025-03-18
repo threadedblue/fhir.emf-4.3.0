@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CitationAbstract;
 import org.hl7.fhir.CitationCitedArtifact;
@@ -231,6 +236,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION_CITED_ARTIFACT__IDENTIFIER);
@@ -243,6 +249,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getRelatedIdentifier() {
 		if (relatedIdentifier == null) {
 			relatedIdentifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION_CITED_ARTIFACT__RELATED_IDENTIFIER);
@@ -255,6 +262,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDateAccessed() {
 		return dateAccessed;
 	}
@@ -279,6 +287,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateAccessed(DateTime newDateAccessed) {
 		if (newDateAccessed != dateAccessed) {
 			NotificationChain msgs = null;
@@ -298,6 +307,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationVersion getVersion() {
 		return version;
 	}
@@ -322,6 +332,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(CitationVersion newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -341,6 +352,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCurrentState() {
 		if (currentState == null) {
 			currentState = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION_CITED_ARTIFACT__CURRENT_STATE);
@@ -353,6 +365,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationStatusDate1> getStatusDate() {
 		if (statusDate == null) {
 			statusDate = new EObjectContainmentEList<CitationStatusDate1>(CitationStatusDate1.class, this, FhirPackage.CITATION_CITED_ARTIFACT__STATUS_DATE);
@@ -365,6 +378,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationTitle> getTitle() {
 		if (title == null) {
 			title = new EObjectContainmentEList<CitationTitle>(CitationTitle.class, this, FhirPackage.CITATION_CITED_ARTIFACT__TITLE);
@@ -377,6 +391,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationAbstract> getAbstract() {
 		if (abstract_ == null) {
 			abstract_ = new EObjectContainmentEList<CitationAbstract>(CitationAbstract.class, this, FhirPackage.CITATION_CITED_ARTIFACT__ABSTRACT);
@@ -389,6 +404,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPart getPart() {
 		return part;
 	}
@@ -413,6 +429,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPart(CitationPart newPart) {
 		if (newPart != part) {
 			NotificationChain msgs = null;
@@ -432,6 +449,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationRelatesTo1> getRelatesTo() {
 		if (relatesTo == null) {
 			relatesTo = new EObjectContainmentEList<CitationRelatesTo1>(CitationRelatesTo1.class, this, FhirPackage.CITATION_CITED_ARTIFACT__RELATES_TO);
@@ -444,6 +462,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationPublicationForm> getPublicationForm() {
 		if (publicationForm == null) {
 			publicationForm = new EObjectContainmentEList<CitationPublicationForm>(CitationPublicationForm.class, this, FhirPackage.CITATION_CITED_ARTIFACT__PUBLICATION_FORM);
@@ -456,6 +475,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationWebLocation> getWebLocation() {
 		if (webLocation == null) {
 			webLocation = new EObjectContainmentEList<CitationWebLocation>(CitationWebLocation.class, this, FhirPackage.CITATION_CITED_ARTIFACT__WEB_LOCATION);
@@ -468,6 +488,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationClassification1> getClassification() {
 		if (classification == null) {
 			classification = new EObjectContainmentEList<CitationClassification1>(CitationClassification1.class, this, FhirPackage.CITATION_CITED_ARTIFACT__CLASSIFICATION);
@@ -480,6 +501,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationContributorship getContributorship() {
 		return contributorship;
 	}
@@ -504,6 +526,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContributorship(CitationContributorship newContributorship) {
 		if (newContributorship != contributorship) {
 			NotificationChain msgs = null;
@@ -523,6 +546,7 @@ public class CitationCitedArtifactImpl extends BackboneElementImpl implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.CITATION_CITED_ARTIFACT__NOTE);

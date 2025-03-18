@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -143,6 +148,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSystem() {
 		return system;
 	}
@@ -167,6 +173,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(Uri newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -186,6 +193,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAbstract() {
 		return abstract_;
 	}
@@ -210,6 +218,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstract(org.hl7.fhir.Boolean newAbstract) {
 		if (newAbstract != abstract_) {
 			NotificationChain msgs = null;
@@ -229,6 +238,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getInactive() {
 		return inactive;
 	}
@@ -253,6 +263,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInactive(org.hl7.fhir.Boolean newInactive) {
 		if (newInactive != inactive) {
 			NotificationChain msgs = null;
@@ -272,6 +283,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -296,6 +308,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -315,6 +328,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -339,6 +353,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -358,6 +373,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -382,6 +398,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -401,6 +418,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetDesignation> getDesignation() {
 		if (designation == null) {
 			designation = new EObjectContainmentEList<ValueSetDesignation>(ValueSetDesignation.class, this, FhirPackage.VALUE_SET_CONTAINS__DESIGNATION);
@@ -413,6 +431,7 @@ public class ValueSetContainsImpl extends BackboneElementImpl implements ValueSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetContains> getContains() {
 		if (contains == null) {
 			contains = new EObjectContainmentEList<ValueSetContains>(ValueSetContains.class, this, FhirPackage.VALUE_SET_CONTAINS__CONTAINS);

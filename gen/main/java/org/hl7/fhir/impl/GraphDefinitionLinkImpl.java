@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.GraphDefinitionLink;
 import org.hl7.fhir.GraphDefinitionTarget;
@@ -119,6 +124,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPath() {
 		return path;
 	}
@@ -143,6 +149,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(org.hl7.fhir.String newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
@@ -162,6 +169,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSliceName() {
 		return sliceName;
 	}
@@ -186,6 +194,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSliceName(org.hl7.fhir.String newSliceName) {
 		if (newSliceName != sliceName) {
 			NotificationChain msgs = null;
@@ -205,6 +214,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMin() {
 		return min;
 	}
@@ -229,6 +239,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(org.hl7.fhir.Integer newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -248,6 +259,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -272,6 +284,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;
@@ -291,6 +304,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -315,6 +329,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -334,6 +349,7 @@ public class GraphDefinitionLinkImpl extends BackboneElementImpl implements Grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GraphDefinitionTarget> getTarget() {
 		if (target == null) {
 			target = new EObjectContainmentEList<GraphDefinitionTarget>(GraphDefinitionTarget.class, this, FhirPackage.GRAPH_DEFINITION_LINK__TARGET);

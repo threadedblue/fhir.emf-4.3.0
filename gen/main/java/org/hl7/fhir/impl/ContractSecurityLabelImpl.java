@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.ContractSecurityLabel;
 import org.hl7.fhir.FhirPackage;
@@ -98,6 +103,7 @@ public class ContractSecurityLabelImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnsignedInt> getNumber() {
 		if (number == null) {
 			number = new EObjectContainmentEList<UnsignedInt>(UnsignedInt.class, this, FhirPackage.CONTRACT_SECURITY_LABEL__NUMBER);
@@ -110,6 +116,7 @@ public class ContractSecurityLabelImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getClassification() {
 		return classification;
 	}
@@ -134,6 +141,7 @@ public class ContractSecurityLabelImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassification(Coding newClassification) {
 		if (newClassification != classification) {
 			NotificationChain msgs = null;
@@ -153,6 +161,7 @@ public class ContractSecurityLabelImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.CONTRACT_SECURITY_LABEL__CATEGORY);
@@ -165,6 +174,7 @@ public class ContractSecurityLabelImpl extends BackboneElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getControl() {
 		if (control == null) {
 			control = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.CONTRACT_SECURITY_LABEL__CONTROL);

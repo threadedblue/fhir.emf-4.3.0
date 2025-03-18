@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
 import org.hl7.fhir.Period;
@@ -144,6 +149,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.RESEARCH_SUBJECT__IDENTIFIER);
@@ -156,6 +162,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResearchSubjectStatus getStatus() {
 		return status;
 	}
@@ -180,6 +187,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ResearchSubjectStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -199,6 +207,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -223,6 +232,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -242,6 +252,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getStudy() {
 		return study;
 	}
@@ -266,6 +277,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStudy(Reference newStudy) {
 		if (newStudy != study) {
 			NotificationChain msgs = null;
@@ -285,6 +297,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getIndividual() {
 		return individual;
 	}
@@ -309,6 +322,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndividual(Reference newIndividual) {
 		if (newIndividual != individual) {
 			NotificationChain msgs = null;
@@ -328,6 +342,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAssignedArm() {
 		return assignedArm;
 	}
@@ -352,6 +367,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssignedArm(org.hl7.fhir.String newAssignedArm) {
 		if (newAssignedArm != assignedArm) {
 			NotificationChain msgs = null;
@@ -371,6 +387,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getActualArm() {
 		return actualArm;
 	}
@@ -395,6 +412,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActualArm(org.hl7.fhir.String newActualArm) {
 		if (newActualArm != actualArm) {
 			NotificationChain msgs = null;
@@ -414,6 +432,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getConsent() {
 		return consent;
 	}
@@ -438,6 +457,7 @@ public class ResearchSubjectImpl extends DomainResourceImpl implements ResearchS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConsent(Reference newConsent) {
 		if (newConsent != consent) {
 			NotificationChain msgs = null;

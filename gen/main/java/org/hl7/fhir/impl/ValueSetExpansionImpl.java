@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -122,6 +127,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getIdentifier() {
 		return identifier;
 	}
@@ -146,6 +152,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Uri newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -165,6 +172,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTimestamp() {
 		return timestamp;
 	}
@@ -189,6 +197,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimestamp(DateTime newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
@@ -208,6 +217,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getTotal() {
 		return total;
 	}
@@ -232,6 +242,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTotal(org.hl7.fhir.Integer newTotal) {
 		if (newTotal != total) {
 			NotificationChain msgs = null;
@@ -251,6 +262,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getOffset() {
 		return offset;
 	}
@@ -275,6 +287,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOffset(org.hl7.fhir.Integer newOffset) {
 		if (newOffset != offset) {
 			NotificationChain msgs = null;
@@ -294,6 +307,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetParameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<ValueSetParameter>(ValueSetParameter.class, this, FhirPackage.VALUE_SET_EXPANSION__PARAMETER);
@@ -306,6 +320,7 @@ public class ValueSetExpansionImpl extends BackboneElementImpl implements ValueS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSetContains> getContains() {
 		if (contains == null) {
 			contains = new EObjectContainmentEList<ValueSetContains>(ValueSetContains.class, this, FhirPackage.VALUE_SET_EXPANSION__CONTAINS);

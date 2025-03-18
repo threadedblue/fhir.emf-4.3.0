@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceRepository;
 import org.hl7.fhir.RepositoryType;
@@ -115,6 +118,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RepositoryType getType() {
 		return type;
 	}
@@ -139,6 +143,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(RepositoryType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -158,6 +163,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -182,6 +188,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -201,6 +208,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -225,6 +233,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -244,6 +253,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDatasetId() {
 		return datasetId;
 	}
@@ -268,6 +278,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatasetId(org.hl7.fhir.String newDatasetId) {
 		if (newDatasetId != datasetId) {
 			NotificationChain msgs = null;
@@ -287,6 +298,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVariantsetId() {
 		return variantsetId;
 	}
@@ -311,6 +323,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariantsetId(org.hl7.fhir.String newVariantsetId) {
 		if (newVariantsetId != variantsetId) {
 			NotificationChain msgs = null;
@@ -330,6 +343,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getReadsetId() {
 		return readsetId;
 	}
@@ -354,6 +368,7 @@ public class MolecularSequenceRepositoryImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReadsetId(org.hl7.fhir.String newReadsetId) {
 		if (newReadsetId != readsetId) {
 			NotificationChain msgs = null;

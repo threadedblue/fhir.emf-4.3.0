@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
@@ -182,6 +187,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MEASURE_REPORT__IDENTIFIER);
@@ -194,6 +200,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportStatus getStatus() {
 		return status;
 	}
@@ -218,6 +225,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(MeasureReportStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -237,6 +245,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MeasureReportType getType() {
 		return type;
 	}
@@ -261,6 +270,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(MeasureReportType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -280,6 +290,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getMeasure() {
 		return measure;
 	}
@@ -304,6 +315,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasure(Canonical newMeasure) {
 		if (newMeasure != measure) {
 			NotificationChain msgs = null;
@@ -323,6 +335,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -347,6 +360,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -366,6 +380,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -390,6 +405,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -409,6 +425,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReporter() {
 		return reporter;
 	}
@@ -433,6 +450,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReporter(Reference newReporter) {
 		if (newReporter != reporter) {
 			NotificationChain msgs = null;
@@ -452,6 +470,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -476,6 +495,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -495,6 +515,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getImprovementNotation() {
 		return improvementNotation;
 	}
@@ -519,6 +540,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImprovementNotation(CodeableConcept newImprovementNotation) {
 		if (newImprovementNotation != improvementNotation) {
 			NotificationChain msgs = null;
@@ -538,6 +560,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MeasureReportGroup> getGroup() {
 		if (group == null) {
 			group = new EObjectContainmentEList<MeasureReportGroup>(MeasureReportGroup.class, this, FhirPackage.MEASURE_REPORT__GROUP);
@@ -550,6 +573,7 @@ public class MeasureReportImpl extends DomainResourceImpl implements MeasureRepo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEvaluatedResource() {
 		if (evaluatedResource == null) {
 			evaluatedResource = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEASURE_REPORT__EVALUATED_RESOURCE);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ActionRelationshipType;
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
@@ -95,6 +98,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getActionId() {
 		return actionId;
 	}
@@ -119,6 +123,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActionId(Id newActionId) {
 		if (newActionId != actionId) {
 			NotificationChain msgs = null;
@@ -138,6 +143,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionRelationshipType getRelationship() {
 		return relationship;
 	}
@@ -162,6 +168,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationship(ActionRelationshipType newRelationship) {
 		if (newRelationship != relationship) {
 			NotificationChain msgs = null;
@@ -181,6 +188,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getOffsetDuration() {
 		return offsetDuration;
 	}
@@ -205,6 +213,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOffsetDuration(Duration newOffsetDuration) {
 		if (newOffsetDuration != offsetDuration) {
 			NotificationChain msgs = null;
@@ -224,6 +233,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getOffsetRange() {
 		return offsetRange;
 	}
@@ -248,6 +258,7 @@ public class PlanDefinitionRelatedActionImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOffsetRange(Range newOffsetRange) {
 		if (newOffsetRange != offsetRange) {
 			NotificationChain msgs = null;

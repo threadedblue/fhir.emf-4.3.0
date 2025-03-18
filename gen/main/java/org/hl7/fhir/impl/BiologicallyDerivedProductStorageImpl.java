@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BiologicallyDerivedProductStorage;
 import org.hl7.fhir.BiologicallyDerivedProductStorageScale;
 import org.hl7.fhir.Decimal;
@@ -94,6 +97,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -118,6 +122,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getTemperature() {
 		return temperature;
 	}
@@ -161,6 +167,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemperature(Decimal newTemperature) {
 		if (newTemperature != temperature) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BiologicallyDerivedProductStorageScale getScale() {
 		return scale;
 	}
@@ -204,6 +212,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScale(BiologicallyDerivedProductStorageScale newScale) {
 		if (newScale != scale) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getDuration() {
 		return duration;
 	}
@@ -247,6 +257,7 @@ public class BiologicallyDerivedProductStorageImpl extends BackboneElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDuration(Period newDuration) {
 		if (newDuration != duration) {
 			NotificationChain msgs = null;

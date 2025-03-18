@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.ClinicalImpression;
 import org.hl7.fhir.ClinicalImpressionFinding;
@@ -293,6 +298,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CLINICAL_IMPRESSION__IDENTIFIER);
@@ -305,6 +311,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClinicalImpressionStatus getStatus() {
 		return status;
 	}
@@ -329,6 +336,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(ClinicalImpressionStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -348,6 +356,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStatusReason() {
 		return statusReason;
 	}
@@ -372,6 +381,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatusReason(CodeableConcept newStatusReason) {
 		if (newStatusReason != statusReason) {
 			NotificationChain msgs = null;
@@ -391,6 +401,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -415,6 +426,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -434,6 +446,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -458,6 +471,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -477,6 +491,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -501,6 +516,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -520,6 +536,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -544,6 +561,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -563,6 +581,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getEffectiveDateTime() {
 		return effectiveDateTime;
 	}
@@ -587,6 +606,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectiveDateTime(DateTime newEffectiveDateTime) {
 		if (newEffectiveDateTime != effectiveDateTime) {
 			NotificationChain msgs = null;
@@ -606,6 +626,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectivePeriod() {
 		return effectivePeriod;
 	}
@@ -630,6 +651,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectivePeriod(Period newEffectivePeriod) {
 		if (newEffectivePeriod != effectivePeriod) {
 			NotificationChain msgs = null;
@@ -649,6 +671,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -673,6 +696,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -692,6 +716,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAssessor() {
 		return assessor;
 	}
@@ -716,6 +741,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssessor(Reference newAssessor) {
 		if (newAssessor != assessor) {
 			NotificationChain msgs = null;
@@ -735,6 +761,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPrevious() {
 		return previous;
 	}
@@ -759,6 +786,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrevious(Reference newPrevious) {
 		if (newPrevious != previous) {
 			NotificationChain msgs = null;
@@ -778,6 +806,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getProblem() {
 		if (problem == null) {
 			problem = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CLINICAL_IMPRESSION__PROBLEM);
@@ -790,6 +819,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClinicalImpressionInvestigation> getInvestigation() {
 		if (investigation == null) {
 			investigation = new EObjectContainmentEList<ClinicalImpressionInvestigation>(ClinicalImpressionInvestigation.class, this, FhirPackage.CLINICAL_IMPRESSION__INVESTIGATION);
@@ -802,6 +832,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Uri> getProtocol() {
 		if (protocol == null) {
 			protocol = new EObjectContainmentEList<Uri>(Uri.class, this, FhirPackage.CLINICAL_IMPRESSION__PROTOCOL);
@@ -814,6 +845,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSummary() {
 		return summary;
 	}
@@ -838,6 +870,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSummary(org.hl7.fhir.String newSummary) {
 		if (newSummary != summary) {
 			NotificationChain msgs = null;
@@ -857,6 +890,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClinicalImpressionFinding> getFinding() {
 		if (finding == null) {
 			finding = new EObjectContainmentEList<ClinicalImpressionFinding>(ClinicalImpressionFinding.class, this, FhirPackage.CLINICAL_IMPRESSION__FINDING);
@@ -869,6 +903,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getPrognosisCodeableConcept() {
 		if (prognosisCodeableConcept == null) {
 			prognosisCodeableConcept = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CLINICAL_IMPRESSION__PROGNOSIS_CODEABLE_CONCEPT);
@@ -881,6 +916,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPrognosisReference() {
 		if (prognosisReference == null) {
 			prognosisReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CLINICAL_IMPRESSION__PROGNOSIS_REFERENCE);
@@ -893,6 +929,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSupportingInfo() {
 		if (supportingInfo == null) {
 			supportingInfo = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CLINICAL_IMPRESSION__SUPPORTING_INFO);
@@ -905,6 +942,7 @@ public class ClinicalImpressionImpl extends DomainResourceImpl implements Clinic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.CLINICAL_IMPRESSION__NOTE);

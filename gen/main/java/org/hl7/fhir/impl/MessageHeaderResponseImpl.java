@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Id;
 import org.hl7.fhir.MessageHeaderResponse;
@@ -83,6 +86,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getIdentifier() {
 		return identifier;
 	}
@@ -107,6 +111,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Id newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResponseType getCode() {
 		return code;
 	}
@@ -150,6 +156,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(ResponseType newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDetails() {
 		return details;
 	}
@@ -193,6 +201,7 @@ public class MessageHeaderResponseImpl extends BackboneElementImpl implements Me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetails(Reference newDetails) {
 		if (newDetails != details) {
 			NotificationChain msgs = null;

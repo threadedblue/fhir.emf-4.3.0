@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Base64Binary;
 import org.hl7.fhir.FhirPackage;
 
@@ -66,6 +69,7 @@ public class Base64BinaryImpl extends ElementImpl implements Base64Binary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public byte[] getValue() {
 		return value;
 	}
@@ -75,6 +79,7 @@ public class Base64BinaryImpl extends ElementImpl implements Base64Binary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(byte[] newValue) {
 		byte[] oldValue = value;
 		value = newValue;

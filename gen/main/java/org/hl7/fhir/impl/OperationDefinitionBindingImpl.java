@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BindingStrength;
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
@@ -71,6 +74,7 @@ public class OperationDefinitionBindingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BindingStrength getStrength() {
 		return strength;
 	}
@@ -95,6 +99,7 @@ public class OperationDefinitionBindingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrength(BindingStrength newStrength) {
 		if (newStrength != strength) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class OperationDefinitionBindingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getValueSet() {
 		return valueSet;
 	}
@@ -138,6 +144,7 @@ public class OperationDefinitionBindingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueSet(Canonical newValueSet) {
 		if (newValueSet != valueSet) {
 			NotificationChain msgs = null;

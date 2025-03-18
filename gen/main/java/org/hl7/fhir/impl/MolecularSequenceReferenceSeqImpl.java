@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceReferenceSeq;
@@ -150,6 +153,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getChromosome() {
 		return chromosome;
 	}
@@ -174,6 +178,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChromosome(CodeableConcept newChromosome) {
 		if (newChromosome != chromosome) {
 			NotificationChain msgs = null;
@@ -193,6 +198,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getGenomeBuild() {
 		return genomeBuild;
 	}
@@ -217,6 +223,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGenomeBuild(org.hl7.fhir.String newGenomeBuild) {
 		if (newGenomeBuild != genomeBuild) {
 			NotificationChain msgs = null;
@@ -236,6 +243,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrientationType getOrientation() {
 		return orientation;
 	}
@@ -260,6 +268,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrientation(OrientationType newOrientation) {
 		if (newOrientation != orientation) {
 			NotificationChain msgs = null;
@@ -279,6 +288,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getReferenceSeqId() {
 		return referenceSeqId;
 	}
@@ -303,6 +313,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferenceSeqId(CodeableConcept newReferenceSeqId) {
 		if (newReferenceSeqId != referenceSeqId) {
 			NotificationChain msgs = null;
@@ -322,6 +333,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReferenceSeqPointer() {
 		return referenceSeqPointer;
 	}
@@ -346,6 +358,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferenceSeqPointer(Reference newReferenceSeqPointer) {
 		if (newReferenceSeqPointer != referenceSeqPointer) {
 			NotificationChain msgs = null;
@@ -365,6 +378,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getReferenceSeqString() {
 		return referenceSeqString;
 	}
@@ -389,6 +403,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferenceSeqString(org.hl7.fhir.String newReferenceSeqString) {
 		if (newReferenceSeqString != referenceSeqString) {
 			NotificationChain msgs = null;
@@ -408,6 +423,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StrandType getStrand() {
 		return strand;
 	}
@@ -432,6 +448,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrand(StrandType newStrand) {
 		if (newStrand != strand) {
 			NotificationChain msgs = null;
@@ -451,6 +468,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getWindowStart() {
 		return windowStart;
 	}
@@ -475,6 +493,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWindowStart(org.hl7.fhir.Integer newWindowStart) {
 		if (newWindowStart != windowStart) {
 			NotificationChain msgs = null;
@@ -494,6 +513,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getWindowEnd() {
 		return windowEnd;
 	}
@@ -518,6 +538,7 @@ public class MolecularSequenceReferenceSeqImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWindowEnd(org.hl7.fhir.Integer newWindowEnd) {
 		if (newWindowEnd != windowEnd) {
 			NotificationChain msgs = null;

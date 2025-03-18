@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
@@ -110,6 +115,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -134,6 +140,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -153,6 +160,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getResource() {
 		return resource;
 	}
@@ -177,6 +185,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Uri newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -196,6 +205,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getFilterParameter() {
 		return filterParameter;
 	}
@@ -220,6 +230,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFilterParameter(org.hl7.fhir.String newFilterParameter) {
 		if (newFilterParameter != filterParameter) {
 			NotificationChain msgs = null;
@@ -239,6 +250,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getFilterDefinition() {
 		return filterDefinition;
 	}
@@ -263,6 +275,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFilterDefinition(Uri newFilterDefinition) {
 		if (newFilterDefinition != filterDefinition) {
 			NotificationChain msgs = null;
@@ -282,6 +295,7 @@ public class SubscriptionTopicCanFilterByImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Code> getModifier() {
 		if (modifier == null) {
 			modifier = new EObjectContainmentEList<Code>(Code.class, this, FhirPackage.SUBSCRIPTION_TOPIC_CAN_FILTER_BY__MODIFIER);

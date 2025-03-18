@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Duration;
 import org.hl7.fhir.FhirPackage;
@@ -94,6 +97,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getTemperatureQualifier() {
 		return temperatureQualifier;
 	}
@@ -118,6 +122,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemperatureQualifier(CodeableConcept newTemperatureQualifier) {
 		if (newTemperatureQualifier != temperatureQualifier) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getTemperatureRange() {
 		return temperatureRange;
 	}
@@ -161,6 +167,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemperatureRange(Range newTemperatureRange) {
 		if (newTemperatureRange != temperatureRange) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getMaxDuration() {
 		return maxDuration;
 	}
@@ -204,6 +212,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDuration(Duration newMaxDuration) {
 		if (newMaxDuration != maxDuration) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getInstruction() {
 		return instruction;
 	}
@@ -247,6 +257,7 @@ public class SpecimenDefinitionHandlingImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstruction(org.hl7.fhir.String newInstruction) {
 		if (newInstruction != instruction) {
 			NotificationChain msgs = null;

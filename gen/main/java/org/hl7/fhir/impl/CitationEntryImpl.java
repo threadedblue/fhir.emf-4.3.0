@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.CitationAffiliationInfo;
 import org.hl7.fhir.CitationContributionInstance;
@@ -192,6 +197,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getName() {
 		return name;
 	}
@@ -216,6 +222,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(HumanName newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -235,6 +242,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getInitials() {
 		return initials;
 	}
@@ -259,6 +267,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitials(org.hl7.fhir.String newInitials) {
 		if (newInitials != initials) {
 			NotificationChain msgs = null;
@@ -278,6 +287,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCollectiveName() {
 		return collectiveName;
 	}
@@ -302,6 +312,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollectiveName(org.hl7.fhir.String newCollectiveName) {
 		if (newCollectiveName != collectiveName) {
 			NotificationChain msgs = null;
@@ -321,6 +332,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION_ENTRY__IDENTIFIER);
@@ -333,6 +345,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationAffiliationInfo> getAffiliationInfo() {
 		if (affiliationInfo == null) {
 			affiliationInfo = new EObjectContainmentEList<CitationAffiliationInfo>(CitationAffiliationInfo.class, this, FhirPackage.CITATION_ENTRY__AFFILIATION_INFO);
@@ -345,6 +358,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Address> getAddress() {
 		if (address == null) {
 			address = new EObjectContainmentEList<Address>(Address.class, this, FhirPackage.CITATION_ENTRY__ADDRESS);
@@ -357,6 +371,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.CITATION_ENTRY__TELECOM);
@@ -369,6 +384,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getContributionType() {
 		if (contributionType == null) {
 			contributionType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION_ENTRY__CONTRIBUTION_TYPE);
@@ -381,6 +397,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -405,6 +422,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -424,6 +442,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CitationContributionInstance> getContributionInstance() {
 		if (contributionInstance == null) {
 			contributionInstance = new EObjectContainmentEList<CitationContributionInstance>(CitationContributionInstance.class, this, FhirPackage.CITATION_ENTRY__CONTRIBUTION_INSTANCE);
@@ -436,6 +455,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getCorrespondingContact() {
 		return correspondingContact;
 	}
@@ -460,6 +480,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCorrespondingContact(org.hl7.fhir.Boolean newCorrespondingContact) {
 		if (newCorrespondingContact != correspondingContact) {
 			NotificationChain msgs = null;
@@ -479,6 +500,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getListOrder() {
 		return listOrder;
 	}
@@ -503,6 +525,7 @@ public class CitationEntryImpl extends BackboneElementImpl implements CitationEn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setListOrder(PositiveInt newListOrder) {
 		if (newListOrder != listOrder) {
 			NotificationChain msgs = null;

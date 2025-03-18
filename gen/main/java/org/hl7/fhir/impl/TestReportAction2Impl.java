@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestReportAction2;
 import org.hl7.fhir.TestReportOperation;
@@ -59,6 +62,7 @@ public class TestReportAction2Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportOperation getOperation() {
 		return operation;
 	}
@@ -83,6 +87,7 @@ public class TestReportAction2Impl extends BackboneElementImpl implements TestRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(TestReportOperation newOperation) {
 		if (newOperation != operation) {
 			NotificationChain msgs = null;

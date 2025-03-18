@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -168,6 +173,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__IDENTIFIER);
@@ -180,6 +186,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -204,6 +211,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -223,6 +231,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getQuantity() {
 		return quantity;
 	}
@@ -247,6 +256,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(org.hl7.fhir.Integer newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -266,6 +276,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getMaterial() {
 		if (material == null) {
 			material = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__MATERIAL);
@@ -278,6 +289,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAlternateMaterial() {
 		if (alternateMaterial == null) {
 			alternateMaterial = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__ALTERNATE_MATERIAL);
@@ -290,6 +302,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackagedProductDefinitionShelfLifeStorage> getShelfLifeStorage() {
 		if (shelfLifeStorage == null) {
 			shelfLifeStorage = new EObjectContainmentEList<PackagedProductDefinitionShelfLifeStorage>(PackagedProductDefinitionShelfLifeStorage.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__SHELF_LIFE_STORAGE);
@@ -302,6 +315,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getManufacturer() {
 		if (manufacturer == null) {
 			manufacturer = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__MANUFACTURER);
@@ -314,6 +328,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackagedProductDefinitionProperty> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<PackagedProductDefinitionProperty>(PackagedProductDefinitionProperty.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__PROPERTY);
@@ -326,6 +341,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackagedProductDefinitionContainedItem> getContainedItem() {
 		if (containedItem == null) {
 			containedItem = new EObjectContainmentEList<PackagedProductDefinitionContainedItem>(PackagedProductDefinitionContainedItem.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__CONTAINED_ITEM);
@@ -338,6 +354,7 @@ public class PackagedProductDefinitionPackageImpl extends BackboneElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackagedProductDefinitionPackage> getPackage() {
 		if (package_ == null) {
 			package_ = new EObjectContainmentEList<PackagedProductDefinitionPackage>(PackagedProductDefinitionPackage.class, this, FhirPackage.PACKAGED_PRODUCT_DEFINITION_PACKAGE__PACKAGE);

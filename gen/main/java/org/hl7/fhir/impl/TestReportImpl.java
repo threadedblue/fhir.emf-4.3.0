@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
@@ -194,6 +199,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -218,6 +224,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -237,6 +244,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -261,6 +269,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -280,6 +289,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportStatus getStatus() {
 		return status;
 	}
@@ -304,6 +314,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(TestReportStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -323,6 +334,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTestScript() {
 		return testScript;
 	}
@@ -347,6 +359,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTestScript(Reference newTestScript) {
 		if (newTestScript != testScript) {
 			NotificationChain msgs = null;
@@ -366,6 +379,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportResult getResult() {
 		return result;
 	}
@@ -390,6 +404,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(TestReportResult newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -409,6 +424,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getScore() {
 		return score;
 	}
@@ -433,6 +449,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScore(Decimal newScore) {
 		if (newScore != score) {
 			NotificationChain msgs = null;
@@ -452,6 +469,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTester() {
 		return tester;
 	}
@@ -476,6 +494,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTester(org.hl7.fhir.String newTester) {
 		if (newTester != tester) {
 			NotificationChain msgs = null;
@@ -495,6 +514,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getIssued() {
 		return issued;
 	}
@@ -519,6 +539,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssued(DateTime newIssued) {
 		if (newIssued != issued) {
 			NotificationChain msgs = null;
@@ -538,6 +559,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestReportParticipant> getParticipant() {
 		if (participant == null) {
 			participant = new EObjectContainmentEList<TestReportParticipant>(TestReportParticipant.class, this, FhirPackage.TEST_REPORT__PARTICIPANT);
@@ -550,6 +572,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportSetup getSetup() {
 		return setup;
 	}
@@ -574,6 +597,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSetup(TestReportSetup newSetup) {
 		if (newSetup != setup) {
 			NotificationChain msgs = null;
@@ -593,6 +617,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestReportTest> getTest() {
 		if (test == null) {
 			test = new EObjectContainmentEList<TestReportTest>(TestReportTest.class, this, FhirPackage.TEST_REPORT__TEST);
@@ -605,6 +630,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestReportTeardown getTeardown() {
 		return teardown;
 	}
@@ -629,6 +655,7 @@ public class TestReportImpl extends DomainResourceImpl implements TestReport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTeardown(TestReportTeardown newTeardown) {
 		if (newTeardown != teardown) {
 			NotificationChain msgs = null;

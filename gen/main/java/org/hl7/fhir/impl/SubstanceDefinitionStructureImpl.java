@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -144,6 +149,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStereochemistry() {
 		return stereochemistry;
 	}
@@ -168,6 +174,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStereochemistry(CodeableConcept newStereochemistry) {
 		if (newStereochemistry != stereochemistry) {
 			NotificationChain msgs = null;
@@ -187,6 +194,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getOpticalActivity() {
 		return opticalActivity;
 	}
@@ -211,6 +219,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpticalActivity(CodeableConcept newOpticalActivity) {
 		if (newOpticalActivity != opticalActivity) {
 			NotificationChain msgs = null;
@@ -230,6 +239,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMolecularFormula() {
 		return molecularFormula;
 	}
@@ -254,6 +264,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMolecularFormula(org.hl7.fhir.String newMolecularFormula) {
 		if (newMolecularFormula != molecularFormula) {
 			NotificationChain msgs = null;
@@ -273,6 +284,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMolecularFormulaByMoiety() {
 		return molecularFormulaByMoiety;
 	}
@@ -297,6 +309,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMolecularFormulaByMoiety(org.hl7.fhir.String newMolecularFormulaByMoiety) {
 		if (newMolecularFormulaByMoiety != molecularFormulaByMoiety) {
 			NotificationChain msgs = null;
@@ -316,6 +329,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubstanceDefinitionMolecularWeight getMolecularWeight() {
 		return molecularWeight;
 	}
@@ -340,6 +354,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMolecularWeight(SubstanceDefinitionMolecularWeight newMolecularWeight) {
 		if (newMolecularWeight != molecularWeight) {
 			NotificationChain msgs = null;
@@ -359,6 +374,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTechnique() {
 		if (technique == null) {
 			technique = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSTANCE_DEFINITION_STRUCTURE__TECHNIQUE);
@@ -371,6 +387,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSourceDocument() {
 		if (sourceDocument == null) {
 			sourceDocument = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUBSTANCE_DEFINITION_STRUCTURE__SOURCE_DOCUMENT);
@@ -383,6 +400,7 @@ public class SubstanceDefinitionStructureImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceDefinitionRepresentation> getRepresentation() {
 		if (representation == null) {
 			representation = new EObjectContainmentEList<SubstanceDefinitionRepresentation>(SubstanceDefinitionRepresentation.class, this, FhirPackage.SUBSTANCE_DEFINITION_STRUCTURE__REPRESENTATION);

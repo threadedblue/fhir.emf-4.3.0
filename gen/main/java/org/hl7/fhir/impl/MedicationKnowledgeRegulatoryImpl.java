@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicationKnowledgeMaxDispense;
 import org.hl7.fhir.MedicationKnowledgeRegulatory;
@@ -100,6 +105,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getRegulatoryAuthority() {
 		return regulatoryAuthority;
 	}
@@ -124,6 +130,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegulatoryAuthority(Reference newRegulatoryAuthority) {
 		if (newRegulatoryAuthority != regulatoryAuthority) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeSubstitution> getSubstitution() {
 		if (substitution == null) {
 			substitution = new EObjectContainmentEList<MedicationKnowledgeSubstitution>(MedicationKnowledgeSubstitution.class, this, FhirPackage.MEDICATION_KNOWLEDGE_REGULATORY__SUBSTITUTION);
@@ -155,6 +163,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicationKnowledgeSchedule> getSchedule() {
 		if (schedule == null) {
 			schedule = new EObjectContainmentEList<MedicationKnowledgeSchedule>(MedicationKnowledgeSchedule.class, this, FhirPackage.MEDICATION_KNOWLEDGE_REGULATORY__SCHEDULE);
@@ -167,6 +176,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MedicationKnowledgeMaxDispense getMaxDispense() {
 		return maxDispense;
 	}
@@ -191,6 +201,7 @@ public class MedicationKnowledgeRegulatoryImpl extends BackboneElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxDispense(MedicationKnowledgeMaxDispense newMaxDispense) {
 		if (newMaxDispense != maxDispense) {
 			NotificationChain msgs = null;

@@ -2,6 +2,8 @@
  */
 package org.hl7.fhir;
 
+import java.lang.String;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -38,13 +40,11 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Equals
 	 * <!-- end-model-doc -->
-	 * @see #__VALUE
+	 * @see #___VALUE
 	 * @generated
 	 * @ordered
 	 */
-	_(1, "_", "="),
-
-	/**
+	__(1, "__", "="), /**
 	 * The '<em><b>1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,12 +130,12 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Equals
 	 * <!-- end-model-doc -->
-	 * @see #_
+	 * @see #__
 	 * @model literal="="
 	 * @generated
 	 * @ordered
 	 */
-	public static final int __VALUE = 1;
+	public static final int ___VALUE = 1;
 
 	/**
 	 * The '<em><b>1</b></em>' literal value.
@@ -216,7 +216,7 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	private static final QuestionnaireItemOperatorEnum[] VALUES_ARRAY =
 		new QuestionnaireItemOperatorEnum[] {
 			EXISTS,
-			_,
+			__,
 			_1,
 			_2,
 			_3,
@@ -279,7 +279,7 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	public static QuestionnaireItemOperatorEnum get(int value) {
 		switch (value) {
 			case EXISTS_VALUE: return EXISTS;
-			case __VALUE: return _;
+			case ___VALUE: return __;
 			case _1_VALUE: return _1;
 			case _2_VALUE: return _2;
 			case _3_VALUE: return _3;
@@ -327,6 +327,7 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -336,6 +337,7 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -345,6 +347,7 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

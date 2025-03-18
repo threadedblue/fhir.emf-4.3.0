@@ -2,6 +2,8 @@
  */
 package org.hl7.fhir;
 
+import java.lang.String;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -25,13 +27,11 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Less than
 	 * <!-- end-model-doc -->
-	 * @see #__VALUE
+	 * @see #___VALUE
 	 * @generated
 	 * @ordered
 	 */
-	_(0, "_", "<"),
-
-	/**
+	__(0, "__", "<"), /**
 	 * The '<em><b>1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,12 +77,12 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Less than
 	 * <!-- end-model-doc -->
-	 * @see #_
+	 * @see #__
 	 * @model literal="&lt;"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int __VALUE = 0;
+	public static final int ___VALUE = 0;
 
 	/**
 	 * The '<em><b>1</b></em>' literal value.
@@ -134,7 +134,7 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 */
 	private static final QuantityComparatorEnum[] VALUES_ARRAY =
 		new QuantityComparatorEnum[] {
-			_,
+			__,
 			_1,
 			_2,
 			_3,
@@ -194,7 +194,7 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 */
 	public static QuantityComparatorEnum get(int value) {
 		switch (value) {
-			case __VALUE: return _;
+			case ___VALUE: return __;
 			case _1_VALUE: return _1;
 			case _2_VALUE: return _2;
 			case _3_VALUE: return _3;
@@ -240,6 +240,7 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -249,6 +250,7 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -258,6 +260,7 @@ public enum QuantityComparatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

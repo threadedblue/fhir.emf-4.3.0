@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.FhirPackage;
@@ -104,6 +107,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSystem() {
 		return system;
 	}
@@ -128,6 +132,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(Uri newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -147,6 +152,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -171,6 +177,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -190,6 +197,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -214,6 +222,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -233,6 +242,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -257,6 +267,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -276,6 +287,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getUserSelected() {
 		return userSelected;
 	}
@@ -300,6 +312,7 @@ public class CodingImpl extends ElementImpl implements Coding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUserSelected(org.hl7.fhir.Boolean newUserSelected) {
 		if (newUserSelected != userSelected) {
 			NotificationChain msgs = null;

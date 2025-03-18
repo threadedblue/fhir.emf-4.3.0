@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Ratio;
@@ -83,6 +86,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getQuantity() {
 		return quantity;
 	}
@@ -107,6 +111,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Ratio newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubstanceCodeableConcept() {
 		return substanceCodeableConcept;
 	}
@@ -150,6 +156,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstanceCodeableConcept(CodeableConcept newSubstanceCodeableConcept) {
 		if (newSubstanceCodeableConcept != substanceCodeableConcept) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubstanceReference() {
 		return substanceReference;
 	}
@@ -193,6 +201,7 @@ public class SubstanceIngredientImpl extends BackboneElementImpl implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstanceReference(Reference newSubstanceReference) {
 		if (newSubstanceReference != substanceReference) {
 			NotificationChain msgs = null;

@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Confidentiality;
 import org.hl7.fhir.ConfidentialityEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class ConfidentialityImpl extends ElementImpl implements Confidentiality 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConfidentialityEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class ConfidentialityImpl extends ElementImpl implements Confidentiality 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(ConfidentialityEnum newValue) {
 		ConfidentialityEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class ConfidentialityImpl extends ElementImpl implements Confidentiality 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		ConfidentialityEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class ConfidentialityImpl extends ElementImpl implements Confidentiality 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

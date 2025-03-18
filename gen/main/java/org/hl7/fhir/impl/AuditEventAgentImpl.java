@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AuditEventAgent;
 import org.hl7.fhir.AuditEventNetwork;
 import org.hl7.fhir.CodeableConcept;
@@ -178,6 +183,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -202,6 +208,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -221,6 +228,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getRole() {
 		if (role == null) {
 			role = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.AUDIT_EVENT_AGENT__ROLE);
@@ -233,6 +241,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getWho() {
 		return who;
 	}
@@ -257,6 +266,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWho(Reference newWho) {
 		if (newWho != who) {
 			NotificationChain msgs = null;
@@ -276,6 +286,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAltId() {
 		return altId;
 	}
@@ -300,6 +311,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAltId(org.hl7.fhir.String newAltId) {
 		if (newAltId != altId) {
 			NotificationChain msgs = null;
@@ -319,6 +331,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -343,6 +356,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -362,6 +376,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getRequestor() {
 		return requestor;
 	}
@@ -386,6 +401,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequestor(org.hl7.fhir.Boolean newRequestor) {
 		if (newRequestor != requestor) {
 			NotificationChain msgs = null;
@@ -405,6 +421,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getLocation() {
 		return location;
 	}
@@ -429,6 +446,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(Reference newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -448,6 +466,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Uri> getPolicy() {
 		if (policy == null) {
 			policy = new EObjectContainmentEList<Uri>(Uri.class, this, FhirPackage.AUDIT_EVENT_AGENT__POLICY);
@@ -460,6 +479,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getMedia() {
 		return media;
 	}
@@ -484,6 +504,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMedia(Coding newMedia) {
 		if (newMedia != media) {
 			NotificationChain msgs = null;
@@ -503,6 +524,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuditEventNetwork getNetwork() {
 		return network;
 	}
@@ -527,6 +549,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNetwork(AuditEventNetwork newNetwork) {
 		if (newNetwork != network) {
 			NotificationChain msgs = null;
@@ -546,6 +569,7 @@ public class AuditEventAgentImpl extends BackboneElementImpl implements AuditEve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getPurposeOfUse() {
 		if (purposeOfUse == null) {
 			purposeOfUse = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.AUDIT_EVENT_AGENT__PURPOSE_OF_USE);

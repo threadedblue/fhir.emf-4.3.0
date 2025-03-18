@@ -2,6 +2,8 @@
  */
 package org.hl7.fhir;
 
+import java.lang.String;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -25,13 +27,11 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Equals
 	 * <!-- end-model-doc -->
-	 * @see #__VALUE
+	 * @see #___VALUE
 	 * @generated
 	 * @ordered
 	 */
-	_(0, "_", "="),
-
-	/**
+	__(0, "__", "="), /**
 	 * The '<em><b>Is A</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,12 +142,12 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * <!-- begin-model-doc -->
 	 * Equals
 	 * <!-- end-model-doc -->
-	 * @see #_
+	 * @see #__
 	 * @model literal="="
 	 * @generated
 	 * @ordered
 	 */
-	public static final int __VALUE = 0;
+	public static final int ___VALUE = 0;
 
 	/**
 	 * The '<em><b>Is A</b></em>' literal value.
@@ -269,7 +269,7 @@ public enum FilterOperatorEnum implements Enumerator {
 	 */
 	private static final FilterOperatorEnum[] VALUES_ARRAY =
 		new FilterOperatorEnum[] {
-			_,
+			__,
 			IS_A,
 			DESCENDENT_OF,
 			IS_NOT_A,
@@ -334,7 +334,7 @@ public enum FilterOperatorEnum implements Enumerator {
 	 */
 	public static FilterOperatorEnum get(int value) {
 		switch (value) {
-			case __VALUE: return _;
+			case ___VALUE: return __;
 			case IS_A_VALUE: return IS_A;
 			case DESCENDENT_OF_VALUE: return DESCENDENT_OF;
 			case IS_NOT_A_VALUE: return IS_NOT_A;
@@ -385,6 +385,7 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -394,6 +395,7 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -403,6 +405,7 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

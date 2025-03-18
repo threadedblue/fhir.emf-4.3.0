@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.BundleLink;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -70,6 +73,7 @@ public class BundleLinkImpl extends BackboneElementImpl implements BundleLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getRelation() {
 		return relation;
 	}
@@ -94,6 +98,7 @@ public class BundleLinkImpl extends BackboneElementImpl implements BundleLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelation(org.hl7.fhir.String newRelation) {
 		if (newRelation != relation) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class BundleLinkImpl extends BackboneElementImpl implements BundleLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -137,6 +143,7 @@ public class BundleLinkImpl extends BackboneElementImpl implements BundleLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;

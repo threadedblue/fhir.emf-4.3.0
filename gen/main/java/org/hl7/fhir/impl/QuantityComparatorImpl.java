@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.QuantityComparator;
 import org.hl7.fhir.QuantityComparatorEnum;
@@ -31,7 +34,7 @@ public class QuantityComparatorImpl extends ElementImpl implements QuantityCompa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final QuantityComparatorEnum VALUE_EDEFAULT = QuantityComparatorEnum._;
+	protected static final QuantityComparatorEnum VALUE_EDEFAULT = QuantityComparatorEnum.__;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -76,6 +79,7 @@ public class QuantityComparatorImpl extends ElementImpl implements QuantityCompa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuantityComparatorEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class QuantityComparatorImpl extends ElementImpl implements QuantityCompa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(QuantityComparatorEnum newValue) {
 		QuantityComparatorEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class QuantityComparatorImpl extends ElementImpl implements QuantityCompa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		QuantityComparatorEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class QuantityComparatorImpl extends ElementImpl implements QuantityCompa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

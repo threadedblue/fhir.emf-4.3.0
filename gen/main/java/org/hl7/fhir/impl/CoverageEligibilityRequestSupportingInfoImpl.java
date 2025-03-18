@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CoverageEligibilityRequestSupportingInfo;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.PositiveInt;
@@ -82,6 +85,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -106,6 +110,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -125,6 +130,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getInformation() {
 		return information;
 	}
@@ -149,6 +155,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInformation(Reference newInformation) {
 		if (newInformation != information) {
 			NotificationChain msgs = null;
@@ -168,6 +175,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAppliesToAll() {
 		return appliesToAll;
 	}
@@ -192,6 +200,7 @@ public class CoverageEligibilityRequestSupportingInfoImpl extends BackboneElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppliesToAll(org.hl7.fhir.Boolean newAppliesToAll) {
 		if (newAppliesToAll != appliesToAll) {
 			NotificationChain msgs = null;

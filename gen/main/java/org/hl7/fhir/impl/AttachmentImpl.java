@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.Base64Binary;
 import org.hl7.fhir.Code;
@@ -140,6 +143,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getContentType() {
 		return contentType;
 	}
@@ -164,6 +168,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentType(Code newContentType) {
 		if (newContentType != contentType) {
 			NotificationChain msgs = null;
@@ -183,6 +188,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getLanguage() {
 		return language;
 	}
@@ -207,6 +213,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLanguage(Code newLanguage) {
 		if (newLanguage != language) {
 			NotificationChain msgs = null;
@@ -226,6 +233,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getData() {
 		return data;
 	}
@@ -250,6 +258,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setData(Base64Binary newData) {
 		if (newData != data) {
 			NotificationChain msgs = null;
@@ -269,6 +278,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getUrl() {
 		return url;
 	}
@@ -293,6 +303,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Url newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -312,6 +323,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getSize() {
 		return size;
 	}
@@ -336,6 +348,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSize(UnsignedInt newSize) {
 		if (newSize != size) {
 			NotificationChain msgs = null;
@@ -355,6 +368,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getHash() {
 		return hash;
 	}
@@ -379,6 +393,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHash(Base64Binary newHash) {
 		if (newHash != hash) {
 			NotificationChain msgs = null;
@@ -398,6 +413,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -422,6 +438,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -441,6 +458,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreation() {
 		return creation;
 	}
@@ -465,6 +483,7 @@ public class AttachmentImpl extends ElementImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreation(DateTime newCreation) {
 		if (newCreation != creation) {
 			NotificationChain msgs = null;

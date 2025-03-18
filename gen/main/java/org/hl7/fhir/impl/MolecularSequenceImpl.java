@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
 import org.hl7.fhir.MolecularSequence;
@@ -237,6 +242,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MOLECULAR_SEQUENCE__IDENTIFIER);
@@ -249,6 +255,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SequenceType getType() {
 		return type;
 	}
@@ -273,6 +280,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(SequenceType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -292,6 +300,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getCoordinateSystem() {
 		return coordinateSystem;
 	}
@@ -316,6 +325,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoordinateSystem(org.hl7.fhir.Integer newCoordinateSystem) {
 		if (newCoordinateSystem != coordinateSystem) {
 			NotificationChain msgs = null;
@@ -335,6 +345,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -359,6 +370,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -378,6 +390,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSpecimen() {
 		return specimen;
 	}
@@ -402,6 +415,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecimen(Reference newSpecimen) {
 		if (newSpecimen != specimen) {
 			NotificationChain msgs = null;
@@ -421,6 +435,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDevice() {
 		return device;
 	}
@@ -445,6 +460,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDevice(Reference newDevice) {
 		if (newDevice != device) {
 			NotificationChain msgs = null;
@@ -464,6 +480,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPerformer() {
 		return performer;
 	}
@@ -488,6 +505,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerformer(Reference newPerformer) {
 		if (newPerformer != performer) {
 			NotificationChain msgs = null;
@@ -507,6 +525,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -531,6 +550,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -550,6 +570,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MolecularSequenceReferenceSeq getReferenceSeq() {
 		return referenceSeq;
 	}
@@ -574,6 +595,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferenceSeq(MolecularSequenceReferenceSeq newReferenceSeq) {
 		if (newReferenceSeq != referenceSeq) {
 			NotificationChain msgs = null;
@@ -593,6 +615,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MolecularSequenceVariant> getVariant() {
 		if (variant == null) {
 			variant = new EObjectContainmentEList<MolecularSequenceVariant>(MolecularSequenceVariant.class, this, FhirPackage.MOLECULAR_SEQUENCE__VARIANT);
@@ -605,6 +628,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getObservedSeq() {
 		return observedSeq;
 	}
@@ -629,6 +653,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObservedSeq(org.hl7.fhir.String newObservedSeq) {
 		if (newObservedSeq != observedSeq) {
 			NotificationChain msgs = null;
@@ -648,6 +673,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MolecularSequenceQuality> getQuality() {
 		if (quality == null) {
 			quality = new EObjectContainmentEList<MolecularSequenceQuality>(MolecularSequenceQuality.class, this, FhirPackage.MOLECULAR_SEQUENCE__QUALITY);
@@ -660,6 +686,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getReadCoverage() {
 		return readCoverage;
 	}
@@ -684,6 +711,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReadCoverage(org.hl7.fhir.Integer newReadCoverage) {
 		if (newReadCoverage != readCoverage) {
 			NotificationChain msgs = null;
@@ -703,6 +731,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MolecularSequenceRepository> getRepository() {
 		if (repository == null) {
 			repository = new EObjectContainmentEList<MolecularSequenceRepository>(MolecularSequenceRepository.class, this, FhirPackage.MOLECULAR_SEQUENCE__REPOSITORY);
@@ -715,6 +744,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPointer() {
 		if (pointer == null) {
 			pointer = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MOLECULAR_SEQUENCE__POINTER);
@@ -727,6 +757,7 @@ public class MolecularSequenceImpl extends DomainResourceImpl implements Molecul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MolecularSequenceStructureVariant> getStructureVariant() {
 		if (structureVariant == null) {
 			structureVariant = new EObjectContainmentEList<MolecularSequenceStructureVariant>(MolecularSequenceStructureVariant.class, this, FhirPackage.MOLECULAR_SEQUENCE__STRUCTURE_VARIANT);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TerminologyCapabilitiesValidateCode;
 
@@ -58,6 +61,7 @@ public class TerminologyCapabilitiesValidateCodeImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getTranslations() {
 		return translations;
 	}
@@ -82,6 +86,7 @@ public class TerminologyCapabilitiesValidateCodeImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTranslations(org.hl7.fhir.Boolean newTranslations) {
 		if (newTranslations != translations) {
 			NotificationChain msgs = null;

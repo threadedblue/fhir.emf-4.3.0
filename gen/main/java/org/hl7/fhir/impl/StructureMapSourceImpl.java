@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.Age;
 import org.hl7.fhir.Annotation;
@@ -755,6 +758,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getContext() {
 		return context;
 	}
@@ -779,6 +783,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContext(Id newContext) {
 		if (newContext != context) {
 			NotificationChain msgs = null;
@@ -798,6 +803,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getMin() {
 		return min;
 	}
@@ -822,6 +828,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(org.hl7.fhir.Integer newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -841,6 +848,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -865,6 +873,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;
@@ -884,6 +893,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getType() {
 		return type;
 	}
@@ -908,6 +918,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(org.hl7.fhir.String newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -927,6 +938,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Base64Binary getDefaultValueBase64Binary() {
 		return defaultValueBase64Binary;
 	}
@@ -951,6 +963,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueBase64Binary(Base64Binary newDefaultValueBase64Binary) {
 		if (newDefaultValueBase64Binary != defaultValueBase64Binary) {
 			NotificationChain msgs = null;
@@ -970,6 +983,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getDefaultValueBoolean() {
 		return defaultValueBoolean;
 	}
@@ -994,6 +1008,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueBoolean(org.hl7.fhir.Boolean newDefaultValueBoolean) {
 		if (newDefaultValueBoolean != defaultValueBoolean) {
 			NotificationChain msgs = null;
@@ -1013,6 +1028,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getDefaultValueCanonical() {
 		return defaultValueCanonical;
 	}
@@ -1037,6 +1053,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCanonical(Canonical newDefaultValueCanonical) {
 		if (newDefaultValueCanonical != defaultValueCanonical) {
 			NotificationChain msgs = null;
@@ -1056,6 +1073,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getDefaultValueCode() {
 		return defaultValueCode;
 	}
@@ -1080,6 +1098,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCode(Code newDefaultValueCode) {
 		if (newDefaultValueCode != defaultValueCode) {
 			NotificationChain msgs = null;
@@ -1099,6 +1118,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDefaultValueDate() {
 		return defaultValueDate;
 	}
@@ -1123,6 +1143,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDate(Date newDefaultValueDate) {
 		if (newDefaultValueDate != defaultValueDate) {
 			NotificationChain msgs = null;
@@ -1142,6 +1163,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDefaultValueDateTime() {
 		return defaultValueDateTime;
 	}
@@ -1166,6 +1188,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDateTime(DateTime newDefaultValueDateTime) {
 		if (newDefaultValueDateTime != defaultValueDateTime) {
 			NotificationChain msgs = null;
@@ -1185,6 +1208,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getDefaultValueDecimal() {
 		return defaultValueDecimal;
 	}
@@ -1209,6 +1233,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDecimal(Decimal newDefaultValueDecimal) {
 		if (newDefaultValueDecimal != defaultValueDecimal) {
 			NotificationChain msgs = null;
@@ -1228,6 +1253,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getDefaultValueId() {
 		return defaultValueId;
 	}
@@ -1252,6 +1278,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueId(Id newDefaultValueId) {
 		if (newDefaultValueId != defaultValueId) {
 			NotificationChain msgs = null;
@@ -1271,6 +1298,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getDefaultValueInstant() {
 		return defaultValueInstant;
 	}
@@ -1295,6 +1323,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueInstant(Instant newDefaultValueInstant) {
 		if (newDefaultValueInstant != defaultValueInstant) {
 			NotificationChain msgs = null;
@@ -1314,6 +1343,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getDefaultValueInteger() {
 		return defaultValueInteger;
 	}
@@ -1338,6 +1368,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueInteger(org.hl7.fhir.Integer newDefaultValueInteger) {
 		if (newDefaultValueInteger != defaultValueInteger) {
 			NotificationChain msgs = null;
@@ -1357,6 +1388,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDefaultValueMarkdown() {
 		return defaultValueMarkdown;
 	}
@@ -1381,6 +1413,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueMarkdown(Markdown newDefaultValueMarkdown) {
 		if (newDefaultValueMarkdown != defaultValueMarkdown) {
 			NotificationChain msgs = null;
@@ -1400,6 +1433,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Oid getDefaultValueOid() {
 		return defaultValueOid;
 	}
@@ -1424,6 +1458,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueOid(Oid newDefaultValueOid) {
 		if (newDefaultValueOid != defaultValueOid) {
 			NotificationChain msgs = null;
@@ -1443,6 +1478,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDefaultValuePositiveInt() {
 		return defaultValuePositiveInt;
 	}
@@ -1467,6 +1503,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValuePositiveInt(PositiveInt newDefaultValuePositiveInt) {
 		if (newDefaultValuePositiveInt != defaultValuePositiveInt) {
 			NotificationChain msgs = null;
@@ -1486,6 +1523,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDefaultValueString() {
 		return defaultValueString;
 	}
@@ -1510,6 +1548,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueString(org.hl7.fhir.String newDefaultValueString) {
 		if (newDefaultValueString != defaultValueString) {
 			NotificationChain msgs = null;
@@ -1529,6 +1568,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getDefaultValueTime() {
 		return defaultValueTime;
 	}
@@ -1553,6 +1593,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTime(Time newDefaultValueTime) {
 		if (newDefaultValueTime != defaultValueTime) {
 			NotificationChain msgs = null;
@@ -1572,6 +1613,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getDefaultValueUnsignedInt() {
 		return defaultValueUnsignedInt;
 	}
@@ -1596,6 +1638,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUnsignedInt(UnsignedInt newDefaultValueUnsignedInt) {
 		if (newDefaultValueUnsignedInt != defaultValueUnsignedInt) {
 			NotificationChain msgs = null;
@@ -1615,6 +1658,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getDefaultValueUri() {
 		return defaultValueUri;
 	}
@@ -1639,6 +1683,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUri(Uri newDefaultValueUri) {
 		if (newDefaultValueUri != defaultValueUri) {
 			NotificationChain msgs = null;
@@ -1658,6 +1703,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getDefaultValueUrl() {
 		return defaultValueUrl;
 	}
@@ -1682,6 +1728,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUrl(Url newDefaultValueUrl) {
 		if (newDefaultValueUrl != defaultValueUrl) {
 			NotificationChain msgs = null;
@@ -1701,6 +1748,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uuid getDefaultValueUuid() {
 		return defaultValueUuid;
 	}
@@ -1725,6 +1773,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUuid(Uuid newDefaultValueUuid) {
 		if (newDefaultValueUuid != defaultValueUuid) {
 			NotificationChain msgs = null;
@@ -1744,6 +1793,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getDefaultValueAddress() {
 		return defaultValueAddress;
 	}
@@ -1768,6 +1818,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAddress(Address newDefaultValueAddress) {
 		if (newDefaultValueAddress != defaultValueAddress) {
 			NotificationChain msgs = null;
@@ -1787,6 +1838,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getDefaultValueAge() {
 		return defaultValueAge;
 	}
@@ -1811,6 +1863,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAge(Age newDefaultValueAge) {
 		if (newDefaultValueAge != defaultValueAge) {
 			NotificationChain msgs = null;
@@ -1830,6 +1883,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getDefaultValueAnnotation() {
 		return defaultValueAnnotation;
 	}
@@ -1854,6 +1908,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAnnotation(Annotation newDefaultValueAnnotation) {
 		if (newDefaultValueAnnotation != defaultValueAnnotation) {
 			NotificationChain msgs = null;
@@ -1873,6 +1928,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getDefaultValueAttachment() {
 		return defaultValueAttachment;
 	}
@@ -1897,6 +1953,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueAttachment(Attachment newDefaultValueAttachment) {
 		if (newDefaultValueAttachment != defaultValueAttachment) {
 			NotificationChain msgs = null;
@@ -1916,6 +1973,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getDefaultValueCodeableConcept() {
 		return defaultValueCodeableConcept;
 	}
@@ -1940,6 +1998,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCodeableConcept(CodeableConcept newDefaultValueCodeableConcept) {
 		if (newDefaultValueCodeableConcept != defaultValueCodeableConcept) {
 			NotificationChain msgs = null;
@@ -1959,6 +2018,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getDefaultValueCoding() {
 		return defaultValueCoding;
 	}
@@ -1983,6 +2043,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCoding(Coding newDefaultValueCoding) {
 		if (newDefaultValueCoding != defaultValueCoding) {
 			NotificationChain msgs = null;
@@ -2002,6 +2063,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getDefaultValueContactPoint() {
 		return defaultValueContactPoint;
 	}
@@ -2026,6 +2088,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContactPoint(ContactPoint newDefaultValueContactPoint) {
 		if (newDefaultValueContactPoint != defaultValueContactPoint) {
 			NotificationChain msgs = null;
@@ -2045,6 +2108,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Count getDefaultValueCount() {
 		return defaultValueCount;
 	}
@@ -2069,6 +2133,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueCount(Count newDefaultValueCount) {
 		if (newDefaultValueCount != defaultValueCount) {
 			NotificationChain msgs = null;
@@ -2088,6 +2153,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distance getDefaultValueDistance() {
 		return defaultValueDistance;
 	}
@@ -2112,6 +2178,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDistance(Distance newDefaultValueDistance) {
 		if (newDefaultValueDistance != defaultValueDistance) {
 			NotificationChain msgs = null;
@@ -2131,6 +2198,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getDefaultValueDuration() {
 		return defaultValueDuration;
 	}
@@ -2155,6 +2223,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDuration(Duration newDefaultValueDuration) {
 		if (newDefaultValueDuration != defaultValueDuration) {
 			NotificationChain msgs = null;
@@ -2174,6 +2243,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getDefaultValueHumanName() {
 		return defaultValueHumanName;
 	}
@@ -2198,6 +2268,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueHumanName(HumanName newDefaultValueHumanName) {
 		if (newDefaultValueHumanName != defaultValueHumanName) {
 			NotificationChain msgs = null;
@@ -2217,6 +2288,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getDefaultValueIdentifier() {
 		return defaultValueIdentifier;
 	}
@@ -2241,6 +2313,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueIdentifier(Identifier newDefaultValueIdentifier) {
 		if (newDefaultValueIdentifier != defaultValueIdentifier) {
 			NotificationChain msgs = null;
@@ -2260,6 +2333,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Money getDefaultValueMoney() {
 		return defaultValueMoney;
 	}
@@ -2284,6 +2358,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueMoney(Money newDefaultValueMoney) {
 		if (newDefaultValueMoney != defaultValueMoney) {
 			NotificationChain msgs = null;
@@ -2303,6 +2378,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getDefaultValuePeriod() {
 		return defaultValuePeriod;
 	}
@@ -2327,6 +2403,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValuePeriod(Period newDefaultValuePeriod) {
 		if (newDefaultValuePeriod != defaultValuePeriod) {
 			NotificationChain msgs = null;
@@ -2346,6 +2423,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDefaultValueQuantity() {
 		return defaultValueQuantity;
 	}
@@ -2370,6 +2448,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueQuantity(Quantity newDefaultValueQuantity) {
 		if (newDefaultValueQuantity != defaultValueQuantity) {
 			NotificationChain msgs = null;
@@ -2389,6 +2468,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getDefaultValueRange() {
 		return defaultValueRange;
 	}
@@ -2413,6 +2493,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRange(Range newDefaultValueRange) {
 		if (newDefaultValueRange != defaultValueRange) {
 			NotificationChain msgs = null;
@@ -2432,6 +2513,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getDefaultValueRatio() {
 		return defaultValueRatio;
 	}
@@ -2456,6 +2538,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRatio(Ratio newDefaultValueRatio) {
 		if (newDefaultValueRatio != defaultValueRatio) {
 			NotificationChain msgs = null;
@@ -2475,6 +2558,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDefaultValueReference() {
 		return defaultValueReference;
 	}
@@ -2499,6 +2583,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueReference(Reference newDefaultValueReference) {
 		if (newDefaultValueReference != defaultValueReference) {
 			NotificationChain msgs = null;
@@ -2518,6 +2603,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampledData getDefaultValueSampledData() {
 		return defaultValueSampledData;
 	}
@@ -2542,6 +2628,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueSampledData(SampledData newDefaultValueSampledData) {
 		if (newDefaultValueSampledData != defaultValueSampledData) {
 			NotificationChain msgs = null;
@@ -2561,6 +2648,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signature getDefaultValueSignature() {
 		return defaultValueSignature;
 	}
@@ -2585,6 +2673,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueSignature(Signature newDefaultValueSignature) {
 		if (newDefaultValueSignature != defaultValueSignature) {
 			NotificationChain msgs = null;
@@ -2604,6 +2693,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getDefaultValueTiming() {
 		return defaultValueTiming;
 	}
@@ -2628,6 +2718,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTiming(Timing newDefaultValueTiming) {
 		if (newDefaultValueTiming != defaultValueTiming) {
 			NotificationChain msgs = null;
@@ -2647,6 +2738,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactDetail getDefaultValueContactDetail() {
 		return defaultValueContactDetail;
 	}
@@ -2671,6 +2763,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContactDetail(ContactDetail newDefaultValueContactDetail) {
 		if (newDefaultValueContactDetail != defaultValueContactDetail) {
 			NotificationChain msgs = null;
@@ -2690,6 +2783,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Contributor getDefaultValueContributor() {
 		return defaultValueContributor;
 	}
@@ -2714,6 +2808,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueContributor(Contributor newDefaultValueContributor) {
 		if (newDefaultValueContributor != defaultValueContributor) {
 			NotificationChain msgs = null;
@@ -2733,6 +2828,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataRequirement getDefaultValueDataRequirement() {
 		return defaultValueDataRequirement;
 	}
@@ -2757,6 +2853,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDataRequirement(DataRequirement newDefaultValueDataRequirement) {
 		if (newDefaultValueDataRequirement != defaultValueDataRequirement) {
 			NotificationChain msgs = null;
@@ -2776,6 +2873,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefaultValueExpression() {
 		return defaultValueExpression;
 	}
@@ -2800,6 +2898,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueExpression(Expression newDefaultValueExpression) {
 		if (newDefaultValueExpression != defaultValueExpression) {
 			NotificationChain msgs = null;
@@ -2819,6 +2918,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDefinition getDefaultValueParameterDefinition() {
 		return defaultValueParameterDefinition;
 	}
@@ -2843,6 +2943,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueParameterDefinition(ParameterDefinition newDefaultValueParameterDefinition) {
 		if (newDefaultValueParameterDefinition != defaultValueParameterDefinition) {
 			NotificationChain msgs = null;
@@ -2862,6 +2963,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifact getDefaultValueRelatedArtifact() {
 		return defaultValueRelatedArtifact;
 	}
@@ -2886,6 +2988,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueRelatedArtifact(RelatedArtifact newDefaultValueRelatedArtifact) {
 		if (newDefaultValueRelatedArtifact != defaultValueRelatedArtifact) {
 			NotificationChain msgs = null;
@@ -2905,6 +3008,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerDefinition getDefaultValueTriggerDefinition() {
 		return defaultValueTriggerDefinition;
 	}
@@ -2929,6 +3033,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueTriggerDefinition(TriggerDefinition newDefaultValueTriggerDefinition) {
 		if (newDefaultValueTriggerDefinition != defaultValueTriggerDefinition) {
 			NotificationChain msgs = null;
@@ -2948,6 +3053,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsageContext getDefaultValueUsageContext() {
 		return defaultValueUsageContext;
 	}
@@ -2972,6 +3078,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueUsageContext(UsageContext newDefaultValueUsageContext) {
 		if (newDefaultValueUsageContext != defaultValueUsageContext) {
 			NotificationChain msgs = null;
@@ -2991,6 +3098,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dosage getDefaultValueDosage() {
 		return defaultValueDosage;
 	}
@@ -3015,6 +3123,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueDosage(Dosage newDefaultValueDosage) {
 		if (newDefaultValueDosage != defaultValueDosage) {
 			NotificationChain msgs = null;
@@ -3034,6 +3143,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Meta getDefaultValueMeta() {
 		return defaultValueMeta;
 	}
@@ -3058,6 +3168,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValueMeta(Meta newDefaultValueMeta) {
 		if (newDefaultValueMeta != defaultValueMeta) {
 			NotificationChain msgs = null;
@@ -3077,6 +3188,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getElement() {
 		return element;
 	}
@@ -3101,6 +3213,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElement(org.hl7.fhir.String newElement) {
 		if (newElement != element) {
 			NotificationChain msgs = null;
@@ -3120,6 +3233,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructureMapSourceListMode getListMode() {
 		return listMode;
 	}
@@ -3144,6 +3258,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setListMode(StructureMapSourceListMode newListMode) {
 		if (newListMode != listMode) {
 			NotificationChain msgs = null;
@@ -3163,6 +3278,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getVariable() {
 		return variable;
 	}
@@ -3187,6 +3303,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(Id newVariable) {
 		if (newVariable != variable) {
 			NotificationChain msgs = null;
@@ -3206,6 +3323,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCondition() {
 		return condition;
 	}
@@ -3230,6 +3348,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(org.hl7.fhir.String newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -3249,6 +3368,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCheck() {
 		return check;
 	}
@@ -3273,6 +3393,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCheck(org.hl7.fhir.String newCheck) {
 		if (newCheck != check) {
 			NotificationChain msgs = null;
@@ -3292,6 +3413,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLogMessage() {
 		return logMessage;
 	}
@@ -3316,6 +3438,7 @@ public class StructureMapSourceImpl extends BackboneElementImpl implements Struc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogMessage(org.hl7.fhir.String newLogMessage) {
 		if (newLogMessage != logMessage) {
 			NotificationChain msgs = null;

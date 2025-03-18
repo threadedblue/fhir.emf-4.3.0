@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MedicinalProductDefinitionCountryLanguage;
@@ -99,6 +104,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getProductName() {
 		return productName;
 	}
@@ -123,6 +129,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProductName(org.hl7.fhir.String newProductName) {
 		if (newProductName != productName) {
 			NotificationChain msgs = null;
@@ -142,6 +149,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -166,6 +174,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -185,6 +194,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicinalProductDefinitionNamePart> getNamePart() {
 		if (namePart == null) {
 			namePart = new EObjectContainmentEList<MedicinalProductDefinitionNamePart>(MedicinalProductDefinitionNamePart.class, this, FhirPackage.MEDICINAL_PRODUCT_DEFINITION_NAME__NAME_PART);
@@ -197,6 +207,7 @@ public class MedicinalProductDefinitionNameImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MedicinalProductDefinitionCountryLanguage> getCountryLanguage() {
 		if (countryLanguage == null) {
 			countryLanguage = new EObjectContainmentEList<MedicinalProductDefinitionCountryLanguage>(MedicinalProductDefinitionCountryLanguage.class, this, FhirPackage.MEDICINAL_PRODUCT_DEFINITION_NAME__COUNTRY_LANGUAGE);

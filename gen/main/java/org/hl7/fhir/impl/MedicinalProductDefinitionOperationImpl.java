@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CodeableReference;
 import org.hl7.fhir.FhirPackage;
@@ -100,6 +105,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getType() {
 		return type;
 	}
@@ -124,6 +130,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableReference newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getEffectiveDate() {
 		return effectiveDate;
 	}
@@ -167,6 +175,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffectiveDate(Period newEffectiveDate) {
 		if (newEffectiveDate != effectiveDate) {
 			NotificationChain msgs = null;
@@ -186,6 +195,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getOrganization() {
 		if (organization == null) {
 			organization = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MEDICINAL_PRODUCT_DEFINITION_OPERATION__ORGANIZATION);
@@ -198,6 +208,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getConfidentialityIndicator() {
 		return confidentialityIndicator;
 	}
@@ -222,6 +233,7 @@ public class MedicinalProductDefinitionOperationImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfidentialityIndicator(CodeableConcept newConfidentialityIndicator) {
 		if (newConfidentialityIndicator != confidentialityIndicator) {
 			NotificationChain msgs = null;

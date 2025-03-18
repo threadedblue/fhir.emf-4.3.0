@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ClaimResponseError;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getItemSequence() {
 		return itemSequence;
 	}
@@ -117,6 +121,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemSequence(PositiveInt newItemSequence) {
 		if (newItemSequence != itemSequence) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDetailSequence() {
 		return detailSequence;
 	}
@@ -160,6 +166,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailSequence(PositiveInt newDetailSequence) {
 		if (newDetailSequence != detailSequence) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSubDetailSequence() {
 		return subDetailSequence;
 	}
@@ -203,6 +211,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubDetailSequence(PositiveInt newSubDetailSequence) {
 		if (newSubDetailSequence != subDetailSequence) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -246,6 +256,7 @@ public class ClaimResponseErrorImpl extends BackboneElementImpl implements Claim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;

@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.IngredientManufacturerRole;
 import org.hl7.fhir.IngredientManufacturerRoleEnum;
@@ -76,6 +79,7 @@ public class IngredientManufacturerRoleImpl extends ElementImpl implements Ingre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientManufacturerRoleEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class IngredientManufacturerRoleImpl extends ElementImpl implements Ingre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(IngredientManufacturerRoleEnum newValue) {
 		IngredientManufacturerRoleEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class IngredientManufacturerRoleImpl extends ElementImpl implements Ingre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		IngredientManufacturerRoleEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class IngredientManufacturerRoleImpl extends ElementImpl implements Ingre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

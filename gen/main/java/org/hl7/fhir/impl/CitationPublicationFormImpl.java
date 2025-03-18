@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CitationPeriodicRelease;
 import org.hl7.fhir.CitationPublicationForm;
 import org.hl7.fhir.CitationPublishedIn;
@@ -178,6 +183,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPublishedIn getPublishedIn() {
 		return publishedIn;
 	}
@@ -202,6 +208,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublishedIn(CitationPublishedIn newPublishedIn) {
 		if (newPublishedIn != publishedIn) {
 			NotificationChain msgs = null;
@@ -221,6 +228,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationPeriodicRelease getPeriodicRelease() {
 		return periodicRelease;
 	}
@@ -245,6 +253,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriodicRelease(CitationPeriodicRelease newPeriodicRelease) {
 		if (newPeriodicRelease != periodicRelease) {
 			NotificationChain msgs = null;
@@ -264,6 +273,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getArticleDate() {
 		return articleDate;
 	}
@@ -288,6 +298,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArticleDate(DateTime newArticleDate) {
 		if (newArticleDate != articleDate) {
 			NotificationChain msgs = null;
@@ -307,6 +318,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getLastRevisionDate() {
 		return lastRevisionDate;
 	}
@@ -331,6 +343,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastRevisionDate(DateTime newLastRevisionDate) {
 		if (newLastRevisionDate != lastRevisionDate) {
 			NotificationChain msgs = null;
@@ -350,6 +363,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getLanguage() {
 		if (language == null) {
 			language = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION_PUBLICATION_FORM__LANGUAGE);
@@ -362,6 +376,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getAccessionNumber() {
 		return accessionNumber;
 	}
@@ -386,6 +401,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccessionNumber(org.hl7.fhir.String newAccessionNumber) {
 		if (newAccessionNumber != accessionNumber) {
 			NotificationChain msgs = null;
@@ -405,6 +421,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPageString() {
 		return pageString;
 	}
@@ -429,6 +446,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageString(org.hl7.fhir.String newPageString) {
 		if (newPageString != pageString) {
 			NotificationChain msgs = null;
@@ -448,6 +466,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getFirstPage() {
 		return firstPage;
 	}
@@ -472,6 +491,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstPage(org.hl7.fhir.String newFirstPage) {
 		if (newFirstPage != firstPage) {
 			NotificationChain msgs = null;
@@ -491,6 +511,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLastPage() {
 		return lastPage;
 	}
@@ -515,6 +536,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastPage(org.hl7.fhir.String newLastPage) {
 		if (newLastPage != lastPage) {
 			NotificationChain msgs = null;
@@ -534,6 +556,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPageCount() {
 		return pageCount;
 	}
@@ -558,6 +581,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageCount(org.hl7.fhir.String newPageCount) {
 		if (newPageCount != pageCount) {
 			NotificationChain msgs = null;
@@ -577,6 +601,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCopyright() {
 		return copyright;
 	}
@@ -601,6 +626,7 @@ public class CitationPublicationFormImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Markdown newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;

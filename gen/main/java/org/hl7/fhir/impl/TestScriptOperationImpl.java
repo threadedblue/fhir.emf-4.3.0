@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.FHIRDefinedType;
@@ -245,6 +250,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getType() {
 		return type;
 	}
@@ -269,6 +275,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Coding newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -288,6 +295,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FHIRDefinedType getResource() {
 		return resource;
 	}
@@ -312,6 +320,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(FHIRDefinedType newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -331,6 +340,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLabel() {
 		return label;
 	}
@@ -355,6 +365,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(org.hl7.fhir.String newLabel) {
 		if (newLabel != label) {
 			NotificationChain msgs = null;
@@ -374,6 +385,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -398,6 +410,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -417,6 +430,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getAccept() {
 		return accept;
 	}
@@ -441,6 +455,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccept(Code newAccept) {
 		if (newAccept != accept) {
 			NotificationChain msgs = null;
@@ -460,6 +475,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getContentType() {
 		return contentType;
 	}
@@ -484,6 +500,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContentType(Code newContentType) {
 		if (newContentType != contentType) {
 			NotificationChain msgs = null;
@@ -503,6 +520,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getDestination() {
 		return destination;
 	}
@@ -527,6 +545,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestination(org.hl7.fhir.Integer newDestination) {
 		if (newDestination != destination) {
 			NotificationChain msgs = null;
@@ -546,6 +565,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getEncodeRequestUrl() {
 		return encodeRequestUrl;
 	}
@@ -570,6 +590,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncodeRequestUrl(org.hl7.fhir.Boolean newEncodeRequestUrl) {
 		if (newEncodeRequestUrl != encodeRequestUrl) {
 			NotificationChain msgs = null;
@@ -589,6 +610,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestScriptRequestMethodCode getMethod() {
 		return method;
 	}
@@ -613,6 +635,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(TestScriptRequestMethodCode newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -632,6 +655,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Integer getOrigin() {
 		return origin;
 	}
@@ -656,6 +680,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrigin(org.hl7.fhir.Integer newOrigin) {
 		if (newOrigin != origin) {
 			NotificationChain msgs = null;
@@ -675,6 +700,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getParams() {
 		return params;
 	}
@@ -699,6 +725,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParams(org.hl7.fhir.String newParams) {
 		if (newParams != params) {
 			NotificationChain msgs = null;
@@ -718,6 +745,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestScriptRequestHeader> getRequestHeader() {
 		if (requestHeader == null) {
 			requestHeader = new EObjectContainmentEList<TestScriptRequestHeader>(TestScriptRequestHeader.class, this, FhirPackage.TEST_SCRIPT_OPERATION__REQUEST_HEADER);
@@ -730,6 +758,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getRequestId() {
 		return requestId;
 	}
@@ -754,6 +783,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequestId(Id newRequestId) {
 		if (newRequestId != requestId) {
 			NotificationChain msgs = null;
@@ -773,6 +803,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getResponseId() {
 		return responseId;
 	}
@@ -797,6 +828,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponseId(Id newResponseId) {
 		if (newResponseId != responseId) {
 			NotificationChain msgs = null;
@@ -816,6 +848,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getSourceId() {
 		return sourceId;
 	}
@@ -840,6 +873,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceId(Id newSourceId) {
 		if (newSourceId != sourceId) {
 			NotificationChain msgs = null;
@@ -859,6 +893,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getTargetId() {
 		return targetId;
 	}
@@ -883,6 +918,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetId(Id newTargetId) {
 		if (newTargetId != targetId) {
 			NotificationChain msgs = null;
@@ -902,6 +938,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getUrl() {
 		return url;
 	}
@@ -926,6 +963,7 @@ public class TestScriptOperationImpl extends BackboneElementImpl implements Test
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(org.hl7.fhir.String newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;

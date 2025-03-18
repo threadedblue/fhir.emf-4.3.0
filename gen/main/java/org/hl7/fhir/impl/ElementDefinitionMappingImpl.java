@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.ElementDefinitionMapping;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getIdentity() {
 		return identity;
 	}
@@ -117,6 +121,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentity(Id newIdentity) {
 		if (newIdentity != identity) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getLanguage() {
 		return language;
 	}
@@ -160,6 +166,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLanguage(Code newLanguage) {
 		if (newLanguage != language) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMap() {
 		return map;
 	}
@@ -203,6 +211,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMap(org.hl7.fhir.String newMap) {
 		if (newMap != map) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getComment() {
 		return comment;
 	}
@@ -246,6 +256,7 @@ public class ElementDefinitionMappingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(org.hl7.fhir.String newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;

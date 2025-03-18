@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ConsentPolicy;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -70,6 +73,7 @@ public class ConsentPolicyImpl extends BackboneElementImpl implements ConsentPol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getAuthority() {
 		return authority;
 	}
@@ -94,6 +98,7 @@ public class ConsentPolicyImpl extends BackboneElementImpl implements ConsentPol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthority(Uri newAuthority) {
 		if (newAuthority != authority) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class ConsentPolicyImpl extends BackboneElementImpl implements ConsentPol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUri() {
 		return uri;
 	}
@@ -137,6 +143,7 @@ public class ConsentPolicyImpl extends BackboneElementImpl implements ConsentPol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUri(Uri newUri) {
 		if (newUri != uri) {
 			NotificationChain msgs = null;

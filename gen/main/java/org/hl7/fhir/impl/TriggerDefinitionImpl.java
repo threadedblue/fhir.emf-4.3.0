@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.DataRequirement;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.DateTime;
@@ -147,6 +152,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TriggerType getType() {
 		return type;
 	}
@@ -171,6 +177,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TriggerType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -190,6 +197,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -214,6 +222,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -233,6 +242,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getTimingTiming() {
 		return timingTiming;
 	}
@@ -257,6 +267,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingTiming(Timing newTimingTiming) {
 		if (newTimingTiming != timingTiming) {
 			NotificationChain msgs = null;
@@ -276,6 +287,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTimingReference() {
 		return timingReference;
 	}
@@ -300,6 +312,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingReference(Reference newTimingReference) {
 		if (newTimingReference != timingReference) {
 			NotificationChain msgs = null;
@@ -319,6 +332,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getTimingDate() {
 		return timingDate;
 	}
@@ -343,6 +357,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingDate(Date newTimingDate) {
 		if (newTimingDate != timingDate) {
 			NotificationChain msgs = null;
@@ -362,6 +377,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTimingDateTime() {
 		return timingDateTime;
 	}
@@ -386,6 +402,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingDateTime(DateTime newTimingDateTime) {
 		if (newTimingDateTime != timingDateTime) {
 			NotificationChain msgs = null;
@@ -405,6 +422,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataRequirement> getData() {
 		if (data == null) {
 			data = new EObjectContainmentEList<DataRequirement>(DataRequirement.class, this, FhirPackage.TRIGGER_DEFINITION__DATA);
@@ -417,6 +435,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getCondition() {
 		return condition;
 	}
@@ -441,6 +460,7 @@ public class TriggerDefinitionImpl extends ElementImpl implements TriggerDefinit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Expression newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;

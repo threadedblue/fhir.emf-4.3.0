@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ExplanationOfBenefitRelated;
 import org.hl7.fhir.FhirPackage;
@@ -83,6 +86,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getClaim() {
 		return claim;
 	}
@@ -107,6 +111,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClaim(Reference newClaim) {
 		if (newClaim != claim) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRelationship() {
 		return relationship;
 	}
@@ -150,6 +156,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationship(CodeableConcept newRelationship) {
 		if (newRelationship != relationship) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getReference() {
 		return reference;
 	}
@@ -193,6 +201,7 @@ public class ExplanationOfBenefitRelatedImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Identifier newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;

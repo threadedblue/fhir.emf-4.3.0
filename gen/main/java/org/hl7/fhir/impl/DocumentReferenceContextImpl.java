@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DocumentReferenceContext;
 import org.hl7.fhir.FhirPackage;
@@ -132,6 +137,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getEncounter() {
 		if (encounter == null) {
 			encounter = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DOCUMENT_REFERENCE_CONTEXT__ENCOUNTER);
@@ -144,6 +150,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getEvent() {
 		if (event == null) {
 			event = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.DOCUMENT_REFERENCE_CONTEXT__EVENT);
@@ -156,6 +163,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -180,6 +188,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -199,6 +208,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getFacilityType() {
 		return facilityType;
 	}
@@ -223,6 +233,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFacilityType(CodeableConcept newFacilityType) {
 		if (newFacilityType != facilityType) {
 			NotificationChain msgs = null;
@@ -242,6 +253,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPracticeSetting() {
 		return practiceSetting;
 	}
@@ -266,6 +278,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPracticeSetting(CodeableConcept newPracticeSetting) {
 		if (newPracticeSetting != practiceSetting) {
 			NotificationChain msgs = null;
@@ -285,6 +298,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSourcePatientInfo() {
 		return sourcePatientInfo;
 	}
@@ -309,6 +323,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourcePatientInfo(Reference newSourcePatientInfo) {
 		if (newSourcePatientInfo != sourcePatientInfo) {
 			NotificationChain msgs = null;
@@ -328,6 +343,7 @@ public class DocumentReferenceContextImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getRelated() {
 		if (related == null) {
 			related = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DOCUMENT_REFERENCE_CONTEXT__RELATED);

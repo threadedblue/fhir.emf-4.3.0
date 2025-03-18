@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DeviceDefinitionMaterial;
 import org.hl7.fhir.FhirPackage;
@@ -81,6 +84,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSubstance() {
 		return substance;
 	}
@@ -105,6 +109,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstance(CodeableConcept newSubstance) {
 		if (newSubstance != substance) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAlternate() {
 		return alternate;
 	}
@@ -148,6 +154,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlternate(org.hl7.fhir.Boolean newAlternate) {
 		if (newAlternate != alternate) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAllergenicIndicator() {
 		return allergenicIndicator;
 	}
@@ -191,6 +199,7 @@ public class DeviceDefinitionMaterialImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllergenicIndicator(org.hl7.fhir.Boolean newAllergenicIndicator) {
 		if (newAllergenicIndicator != allergenicIndicator) {
 			NotificationChain msgs = null;

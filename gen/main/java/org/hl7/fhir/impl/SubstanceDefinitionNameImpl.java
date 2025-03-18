@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Reference;
@@ -176,6 +181,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -200,6 +206,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -219,6 +226,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -243,6 +251,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -262,6 +271,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStatus() {
 		return status;
 	}
@@ -286,6 +296,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(CodeableConcept newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -305,6 +316,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getPreferred() {
 		return preferred;
 	}
@@ -329,6 +341,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreferred(org.hl7.fhir.Boolean newPreferred) {
 		if (newPreferred != preferred) {
 			NotificationChain msgs = null;
@@ -348,6 +361,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getLanguage() {
 		if (language == null) {
 			language = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__LANGUAGE);
@@ -360,6 +374,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getDomain() {
 		if (domain == null) {
 			domain = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__DOMAIN);
@@ -372,6 +387,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getJurisdiction() {
 		if (jurisdiction == null) {
 			jurisdiction = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__JURISDICTION);
@@ -384,6 +400,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceDefinitionName> getSynonym() {
 		if (synonym == null) {
 			synonym = new EObjectContainmentEList<SubstanceDefinitionName>(SubstanceDefinitionName.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__SYNONYM);
@@ -396,6 +413,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceDefinitionName> getTranslation() {
 		if (translation == null) {
 			translation = new EObjectContainmentEList<SubstanceDefinitionName>(SubstanceDefinitionName.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__TRANSLATION);
@@ -408,6 +426,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SubstanceDefinitionOfficial> getOfficial() {
 		if (official == null) {
 			official = new EObjectContainmentEList<SubstanceDefinitionOfficial>(SubstanceDefinitionOfficial.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__OFFICIAL);
@@ -420,6 +439,7 @@ public class SubstanceDefinitionNameImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getSource() {
 		if (source == null) {
 			source = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUBSTANCE_DEFINITION_NAME__SOURCE);

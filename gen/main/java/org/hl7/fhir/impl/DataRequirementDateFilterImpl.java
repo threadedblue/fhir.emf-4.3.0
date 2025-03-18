@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DataRequirementDateFilter;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.Duration;
@@ -105,6 +108,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPath() {
 		return path;
 	}
@@ -129,6 +133,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(org.hl7.fhir.String newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
@@ -148,6 +153,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSearchParam() {
 		return searchParam;
 	}
@@ -172,6 +178,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSearchParam(org.hl7.fhir.String newSearchParam) {
 		if (newSearchParam != searchParam) {
 			NotificationChain msgs = null;
@@ -191,6 +198,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getValueDateTime() {
 		return valueDateTime;
 	}
@@ -215,6 +223,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDateTime(DateTime newValueDateTime) {
 		if (newValueDateTime != valueDateTime) {
 			NotificationChain msgs = null;
@@ -234,6 +243,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getValuePeriod() {
 		return valuePeriod;
 	}
@@ -258,6 +268,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValuePeriod(Period newValuePeriod) {
 		if (newValuePeriod != valuePeriod) {
 			NotificationChain msgs = null;
@@ -277,6 +288,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getValueDuration() {
 		return valueDuration;
 	}
@@ -301,6 +313,7 @@ public class DataRequirementDateFilterImpl extends ElementImpl implements DataRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValueDuration(Duration newValueDuration) {
 		if (newValueDuration != valueDuration) {
 			NotificationChain msgs = null;

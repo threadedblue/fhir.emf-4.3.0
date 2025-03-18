@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
 import org.hl7.fhir.Ratio;
@@ -70,6 +73,7 @@ public class RatioImpl extends ElementImpl implements Ratio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getNumerator() {
 		return numerator;
 	}
@@ -94,6 +98,7 @@ public class RatioImpl extends ElementImpl implements Ratio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumerator(Quantity newNumerator) {
 		if (newNumerator != numerator) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class RatioImpl extends ElementImpl implements Ratio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getDenominator() {
 		return denominator;
 	}
@@ -137,6 +143,7 @@ public class RatioImpl extends ElementImpl implements Ratio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDenominator(Quantity newDenominator) {
 		if (newDenominator != denominator) {
 			NotificationChain msgs = null;

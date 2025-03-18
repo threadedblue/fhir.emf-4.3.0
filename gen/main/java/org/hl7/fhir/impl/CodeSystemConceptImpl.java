@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.CodeSystemConcept;
 import org.hl7.fhir.CodeSystemDesignation;
@@ -121,6 +126,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -145,6 +151,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -164,6 +171,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -188,6 +196,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -207,6 +216,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDefinition() {
 		return definition;
 	}
@@ -231,6 +241,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(org.hl7.fhir.String newDefinition) {
 		if (newDefinition != definition) {
 			NotificationChain msgs = null;
@@ -250,6 +261,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeSystemDesignation> getDesignation() {
 		if (designation == null) {
 			designation = new EObjectContainmentEList<CodeSystemDesignation>(CodeSystemDesignation.class, this, FhirPackage.CODE_SYSTEM_CONCEPT__DESIGNATION);
@@ -262,6 +274,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeSystemProperty1> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<CodeSystemProperty1>(CodeSystemProperty1.class, this, FhirPackage.CODE_SYSTEM_CONCEPT__PROPERTY);
@@ -274,6 +287,7 @@ public class CodeSystemConceptImpl extends BackboneElementImpl implements CodeSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeSystemConcept> getConcept() {
 		if (concept == null) {
 			concept = new EObjectContainmentEList<CodeSystemConcept>(CodeSystemConcept.class, this, FhirPackage.CODE_SYSTEM_CONCEPT__CONCEPT);

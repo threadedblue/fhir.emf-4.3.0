@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.CodeableReference;
 import org.hl7.fhir.FhirPackage;
@@ -111,6 +116,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getSubstance() {
 		return substance;
 	}
@@ -135,6 +141,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstance(CodeableReference newSubstance) {
 		if (newSubstance != substance) {
 			NotificationChain msgs = null;
@@ -154,6 +161,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ratio getStrengthRatio() {
 		return strengthRatio;
 	}
@@ -178,6 +186,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrengthRatio(Ratio newStrengthRatio) {
 		if (newStrengthRatio != strengthRatio) {
 			NotificationChain msgs = null;
@@ -197,6 +206,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RatioRange getStrengthRatioRange() {
 		return strengthRatioRange;
 	}
@@ -221,6 +231,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrengthRatioRange(RatioRange newStrengthRatioRange) {
 		if (newStrengthRatioRange != strengthRatioRange) {
 			NotificationChain msgs = null;
@@ -240,6 +251,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMeasurementPoint() {
 		return measurementPoint;
 	}
@@ -264,6 +276,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMeasurementPoint(org.hl7.fhir.String newMeasurementPoint) {
 		if (newMeasurementPoint != measurementPoint) {
 			NotificationChain msgs = null;
@@ -283,6 +296,7 @@ public class IngredientReferenceStrengthImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCountry() {
 		if (country == null) {
 			country = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.INGREDIENT_REFERENCE_STRENGTH__COUNTRY);

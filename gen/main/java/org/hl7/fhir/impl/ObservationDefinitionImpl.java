@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -201,6 +206,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.OBSERVATION_DEFINITION__CATEGORY);
@@ -213,6 +219,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -237,6 +244,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -256,6 +264,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.OBSERVATION_DEFINITION__IDENTIFIER);
@@ -268,6 +277,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ObservationDataType> getPermittedDataType() {
 		if (permittedDataType == null) {
 			permittedDataType = new EObjectContainmentEList<ObservationDataType>(ObservationDataType.class, this, FhirPackage.OBSERVATION_DEFINITION__PERMITTED_DATA_TYPE);
@@ -280,6 +290,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getMultipleResultsAllowed() {
 		return multipleResultsAllowed;
 	}
@@ -304,6 +315,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultipleResultsAllowed(org.hl7.fhir.Boolean newMultipleResultsAllowed) {
 		if (newMultipleResultsAllowed != multipleResultsAllowed) {
 			NotificationChain msgs = null;
@@ -323,6 +335,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMethod() {
 		return method;
 	}
@@ -347,6 +360,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(CodeableConcept newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -366,6 +380,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPreferredReportName() {
 		return preferredReportName;
 	}
@@ -390,6 +405,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreferredReportName(org.hl7.fhir.String newPreferredReportName) {
 		if (newPreferredReportName != preferredReportName) {
 			NotificationChain msgs = null;
@@ -409,6 +425,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObservationDefinitionQuantitativeDetails getQuantitativeDetails() {
 		return quantitativeDetails;
 	}
@@ -433,6 +450,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantitativeDetails(ObservationDefinitionQuantitativeDetails newQuantitativeDetails) {
 		if (newQuantitativeDetails != quantitativeDetails) {
 			NotificationChain msgs = null;
@@ -452,6 +470,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ObservationDefinitionQualifiedInterval> getQualifiedInterval() {
 		if (qualifiedInterval == null) {
 			qualifiedInterval = new EObjectContainmentEList<ObservationDefinitionQualifiedInterval>(ObservationDefinitionQualifiedInterval.class, this, FhirPackage.OBSERVATION_DEFINITION__QUALIFIED_INTERVAL);
@@ -464,6 +483,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getValidCodedValueSet() {
 		return validCodedValueSet;
 	}
@@ -488,6 +508,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValidCodedValueSet(Reference newValidCodedValueSet) {
 		if (newValidCodedValueSet != validCodedValueSet) {
 			NotificationChain msgs = null;
@@ -507,6 +528,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getNormalCodedValueSet() {
 		return normalCodedValueSet;
 	}
@@ -531,6 +553,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNormalCodedValueSet(Reference newNormalCodedValueSet) {
 		if (newNormalCodedValueSet != normalCodedValueSet) {
 			NotificationChain msgs = null;
@@ -550,6 +573,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAbnormalCodedValueSet() {
 		return abnormalCodedValueSet;
 	}
@@ -574,6 +598,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbnormalCodedValueSet(Reference newAbnormalCodedValueSet) {
 		if (newAbnormalCodedValueSet != abnormalCodedValueSet) {
 			NotificationChain msgs = null;
@@ -593,6 +618,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getCriticalCodedValueSet() {
 		return criticalCodedValueSet;
 	}
@@ -617,6 +643,7 @@ public class ObservationDefinitionImpl extends DomainResourceImpl implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCriticalCodedValueSet(Reference newCriticalCodedValueSet) {
 		if (newCriticalCodedValueSet != criticalCodedValueSet) {
 			NotificationChain msgs = null;

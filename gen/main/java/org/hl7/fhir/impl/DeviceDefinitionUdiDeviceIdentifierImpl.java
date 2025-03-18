@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DeviceDefinitionUdiDeviceIdentifier;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Uri;
@@ -81,6 +84,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDeviceIdentifier() {
 		return deviceIdentifier;
 	}
@@ -105,6 +109,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeviceIdentifier(org.hl7.fhir.String newDeviceIdentifier) {
 		if (newDeviceIdentifier != deviceIdentifier) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getIssuer() {
 		return issuer;
 	}
@@ -148,6 +154,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssuer(Uri newIssuer) {
 		if (newIssuer != issuer) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getJurisdiction() {
 		return jurisdiction;
 	}
@@ -191,6 +199,7 @@ public class DeviceDefinitionUdiDeviceIdentifierImpl extends BackboneElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setJurisdiction(Uri newJurisdiction) {
 		if (newJurisdiction != jurisdiction) {
 			NotificationChain msgs = null;

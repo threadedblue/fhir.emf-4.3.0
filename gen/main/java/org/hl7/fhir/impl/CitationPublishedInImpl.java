@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CitationPublishedIn;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -110,6 +115,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -134,6 +140,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -153,6 +160,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.CITATION_PUBLISHED_IN__IDENTIFIER);
@@ -165,6 +173,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -189,6 +198,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -208,6 +218,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPublisher() {
 		return publisher;
 	}
@@ -232,6 +243,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(Reference newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -251,6 +263,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisherLocation() {
 		return publisherLocation;
 	}
@@ -275,6 +288,7 @@ public class CitationPublishedInImpl extends BackboneElementImpl implements Cita
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisherLocation(org.hl7.fhir.String newPublisherLocation) {
 		if (newPublisherLocation != publisherLocation) {
 			NotificationChain msgs = null;

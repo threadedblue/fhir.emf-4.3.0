@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.ConsentActor;
@@ -179,6 +184,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsentProvisionType getType() {
 		return type;
 	}
@@ -203,6 +209,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ConsentProvisionType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -222,6 +229,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getPeriod() {
 		return period;
 	}
@@ -246,6 +254,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPeriod(Period newPeriod) {
 		if (newPeriod != period) {
 			NotificationChain msgs = null;
@@ -265,6 +274,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConsentActor> getActor() {
 		if (actor == null) {
 			actor = new EObjectContainmentEList<ConsentActor>(ConsentActor.class, this, FhirPackage.CONSENT_PROVISION__ACTOR);
@@ -277,6 +287,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONSENT_PROVISION__ACTION);
@@ -289,6 +300,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getSecurityLabel() {
 		if (securityLabel == null) {
 			securityLabel = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.CONSENT_PROVISION__SECURITY_LABEL);
@@ -301,6 +313,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getPurpose() {
 		if (purpose == null) {
 			purpose = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.CONSENT_PROVISION__PURPOSE);
@@ -313,6 +326,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Coding> getClass_() {
 		if (class_ == null) {
 			class_ = new EObjectContainmentEList<Coding>(Coding.class, this, FhirPackage.CONSENT_PROVISION__CLASS);
@@ -325,6 +339,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCode() {
 		if (code == null) {
 			code = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONSENT_PROVISION__CODE);
@@ -337,6 +352,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getDataPeriod() {
 		return dataPeriod;
 	}
@@ -361,6 +377,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataPeriod(Period newDataPeriod) {
 		if (newDataPeriod != dataPeriod) {
 			NotificationChain msgs = null;
@@ -380,6 +397,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConsentData> getData() {
 		if (data == null) {
 			data = new EObjectContainmentEList<ConsentData>(ConsentData.class, this, FhirPackage.CONSENT_PROVISION__DATA);
@@ -392,6 +410,7 @@ public class ConsentProvisionImpl extends BackboneElementImpl implements Consent
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConsentProvision> getProvision() {
 		if (provision == null) {
 			provision = new EObjectContainmentEList<ConsentProvision>(ConsentProvision.class, this, FhirPackage.CONSENT_PROVISION__PROVISION);

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ExtensionContextType;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.StructureDefinitionContext;
@@ -70,6 +73,7 @@ public class StructureDefinitionContextImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionContextType getType() {
 		return type;
 	}
@@ -94,6 +98,7 @@ public class StructureDefinitionContextImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ExtensionContextType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class StructureDefinitionContextImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getExpression() {
 		return expression;
 	}
@@ -137,6 +143,7 @@ public class StructureDefinitionContextImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(org.hl7.fhir.String newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;

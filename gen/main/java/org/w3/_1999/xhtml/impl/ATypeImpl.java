@@ -3,11 +3,15 @@
 package org.w3._1999.xhtml.impl;
 
 import java.math.BigInteger;
+
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.w3._1999.xhtml.AType;
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.Shape;
@@ -446,6 +450,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAccesskey() {
 		return accesskey;
 	}
@@ -455,6 +460,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccesskey(String newAccesskey) {
 		String oldAccesskey = accesskey;
 		accesskey = newAccesskey;
@@ -467,6 +473,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCharset() {
 		return charset;
 	}
@@ -476,6 +483,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharset(String newCharset) {
 		String oldCharset = charset;
 		charset = newCharset;
@@ -488,6 +496,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getClass_() {
 		return class_;
 	}
@@ -497,6 +506,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(List<String> newClass) {
 		List<String> oldClass = class_;
 		class_ = newClass;
@@ -509,6 +519,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCoords() {
 		return coords;
 	}
@@ -518,6 +529,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoords(String newCoords) {
 		String oldCoords = coords;
 		coords = newCoords;
@@ -530,6 +542,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -539,6 +552,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -553,6 +567,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -567,6 +582,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -576,6 +592,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHref() {
 		return href;
 	}
@@ -585,6 +602,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHref(String newHref) {
 		String oldHref = href;
 		href = newHref;
@@ -597,6 +615,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHreflang() {
 		return hreflang;
 	}
@@ -606,6 +625,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHreflang(String newHreflang) {
 		String oldHreflang = hreflang;
 		hreflang = newHreflang;
@@ -618,6 +638,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -627,6 +648,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -639,6 +661,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -648,6 +671,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -660,6 +684,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -669,6 +694,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -681,6 +707,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -690,6 +717,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -702,6 +730,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getRel() {
 		return rel;
 	}
@@ -711,6 +740,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRel(List<String> newRel) {
 		List<String> oldRel = rel;
 		rel = newRel;
@@ -723,6 +753,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List<String> getRev() {
 		return rev;
 	}
@@ -732,6 +763,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRev(List<String> newRev) {
 		List<String> oldRev = rev;
 		rev = newRev;
@@ -744,6 +776,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Shape getShape() {
 		return shape;
 	}
@@ -753,6 +786,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShape(Shape newShape) {
 		Shape oldShape = shape;
 		shape = newShape == null ? SHAPE_EDEFAULT : newShape;
@@ -767,6 +801,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetShape() {
 		Shape oldShape = shape;
 		boolean oldShapeESet = shapeESet;
@@ -781,6 +816,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetShape() {
 		return shapeESet;
 	}
@@ -790,6 +826,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -799,6 +836,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -811,6 +849,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigInteger getTabindex() {
 		return tabindex;
 	}
@@ -820,6 +859,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTabindex(BigInteger newTabindex) {
 		BigInteger oldTabindex = tabindex;
 		tabindex = newTabindex;
@@ -832,6 +872,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -841,6 +882,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -853,6 +895,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getType() {
 		return type;
 	}
@@ -862,6 +905,7 @@ public class ATypeImpl extends AContentImpl implements AType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(String newType) {
 		String oldType = type;
 		type = newType;

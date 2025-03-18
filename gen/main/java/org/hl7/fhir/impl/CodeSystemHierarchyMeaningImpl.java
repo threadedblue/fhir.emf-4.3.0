@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeSystemHierarchyMeaning;
 import org.hl7.fhir.CodeSystemHierarchyMeaningEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class CodeSystemHierarchyMeaningImpl extends ElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeSystemHierarchyMeaningEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class CodeSystemHierarchyMeaningImpl extends ElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(CodeSystemHierarchyMeaningEnum newValue) {
 		CodeSystemHierarchyMeaningEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class CodeSystemHierarchyMeaningImpl extends ElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		CodeSystemHierarchyMeaningEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class CodeSystemHierarchyMeaningImpl extends ElementImpl implements CodeS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

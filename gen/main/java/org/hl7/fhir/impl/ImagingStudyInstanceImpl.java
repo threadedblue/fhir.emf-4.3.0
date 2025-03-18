@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Id;
@@ -94,6 +97,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Id getUid() {
 		return uid;
 	}
@@ -118,6 +122,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUid(Id newUid) {
 		if (newUid != uid) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getSopClass() {
 		return sopClass;
 	}
@@ -161,6 +167,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSopClass(Coding newSopClass) {
 		if (newSopClass != sopClass) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getNumber() {
 		return number;
 	}
@@ -204,6 +212,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumber(UnsignedInt newNumber) {
 		if (newNumber != number) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -247,6 +257,7 @@ public class ImagingStudyInstanceImpl extends BackboneElementImpl implements Ima
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;

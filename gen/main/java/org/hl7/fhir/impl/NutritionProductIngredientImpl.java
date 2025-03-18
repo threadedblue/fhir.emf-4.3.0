@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableReference;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.NutritionProductIngredient;
@@ -76,6 +81,7 @@ public class NutritionProductIngredientImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableReference getItem() {
 		return item;
 	}
@@ -100,6 +106,7 @@ public class NutritionProductIngredientImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItem(CodeableReference newItem) {
 		if (newItem != item) {
 			NotificationChain msgs = null;
@@ -119,6 +126,7 @@ public class NutritionProductIngredientImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Ratio> getAmount() {
 		if (amount == null) {
 			amount = new EObjectContainmentEList<Ratio>(Ratio.class, this, FhirPackage.NUTRITION_PRODUCT_INGREDIENT__AMOUNT);

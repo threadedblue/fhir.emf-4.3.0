@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ElementDefinitionBase;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.UnsignedInt;
@@ -81,6 +84,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPath() {
 		return path;
 	}
@@ -105,6 +109,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(org.hl7.fhir.String newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
@@ -124,6 +129,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnsignedInt getMin() {
 		return min;
 	}
@@ -148,6 +154,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(UnsignedInt newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -167,6 +174,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMax() {
 		return max;
 	}
@@ -191,6 +199,7 @@ public class ElementDefinitionBaseImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(org.hl7.fhir.String newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;

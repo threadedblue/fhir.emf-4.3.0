@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.VisionBase;
@@ -71,6 +74,7 @@ public class VisionPrescriptionPrismImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decimal getAmount() {
 		return amount;
 	}
@@ -95,6 +99,7 @@ public class VisionPrescriptionPrismImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAmount(Decimal newAmount) {
 		if (newAmount != amount) {
 			NotificationChain msgs = null;
@@ -114,6 +119,7 @@ public class VisionPrescriptionPrismImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisionBase getBase() {
 		return base;
 	}
@@ -138,6 +144,7 @@ public class VisionPrescriptionPrismImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase(VisionBase newBase) {
 		if (newBase != base) {
 			NotificationChain msgs = null;

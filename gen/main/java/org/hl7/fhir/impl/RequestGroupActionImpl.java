@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ActionCardinalityBehavior;
 import org.hl7.fhir.ActionGroupingBehavior;
 import org.hl7.fhir.ActionPrecheckBehavior;
@@ -333,6 +338,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPrefix() {
 		return prefix;
 	}
@@ -357,6 +363,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefix(org.hl7.fhir.String newPrefix) {
 		if (newPrefix != prefix) {
 			NotificationChain msgs = null;
@@ -376,6 +383,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -400,6 +408,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -419,6 +428,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -443,6 +453,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -462,6 +473,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTextEquivalent() {
 		return textEquivalent;
 	}
@@ -486,6 +498,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTextEquivalent(org.hl7.fhir.String newTextEquivalent) {
 		if (newTextEquivalent != textEquivalent) {
 			NotificationChain msgs = null;
@@ -505,6 +518,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RequestPriority getPriority() {
 		return priority;
 	}
@@ -529,6 +543,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(RequestPriority newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -548,6 +563,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getCode() {
 		if (code == null) {
 			code = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.REQUEST_GROUP_ACTION__CODE);
@@ -560,6 +576,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getDocumentation() {
 		if (documentation == null) {
 			documentation = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.REQUEST_GROUP_ACTION__DOCUMENTATION);
@@ -572,6 +589,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RequestGroupCondition> getCondition() {
 		if (condition == null) {
 			condition = new EObjectContainmentEList<RequestGroupCondition>(RequestGroupCondition.class, this, FhirPackage.REQUEST_GROUP_ACTION__CONDITION);
@@ -584,6 +602,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RequestGroupRelatedAction> getRelatedAction() {
 		if (relatedAction == null) {
 			relatedAction = new EObjectContainmentEList<RequestGroupRelatedAction>(RequestGroupRelatedAction.class, this, FhirPackage.REQUEST_GROUP_ACTION__RELATED_ACTION);
@@ -596,6 +615,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getTimingDateTime() {
 		return timingDateTime;
 	}
@@ -620,6 +640,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingDateTime(DateTime newTimingDateTime) {
 		if (newTimingDateTime != timingDateTime) {
 			NotificationChain msgs = null;
@@ -639,6 +660,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getTimingAge() {
 		return timingAge;
 	}
@@ -663,6 +685,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingAge(Age newTimingAge) {
 		if (newTimingAge != timingAge) {
 			NotificationChain msgs = null;
@@ -682,6 +705,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getTimingPeriod() {
 		return timingPeriod;
 	}
@@ -706,6 +730,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingPeriod(Period newTimingPeriod) {
 		if (newTimingPeriod != timingPeriod) {
 			NotificationChain msgs = null;
@@ -725,6 +750,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration getTimingDuration() {
 		return timingDuration;
 	}
@@ -749,6 +775,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingDuration(Duration newTimingDuration) {
 		if (newTimingDuration != timingDuration) {
 			NotificationChain msgs = null;
@@ -768,6 +795,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getTimingRange() {
 		return timingRange;
 	}
@@ -792,6 +820,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingRange(Range newTimingRange) {
 		if (newTimingRange != timingRange) {
 			NotificationChain msgs = null;
@@ -811,6 +840,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getTimingTiming() {
 		return timingTiming;
 	}
@@ -835,6 +865,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimingTiming(Timing newTimingTiming) {
 		if (newTimingTiming != timingTiming) {
 			NotificationChain msgs = null;
@@ -854,6 +885,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getParticipant() {
 		if (participant == null) {
 			participant = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.REQUEST_GROUP_ACTION__PARTICIPANT);
@@ -866,6 +898,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -890,6 +923,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -909,6 +943,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionGroupingBehavior getGroupingBehavior() {
 		return groupingBehavior;
 	}
@@ -933,6 +968,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroupingBehavior(ActionGroupingBehavior newGroupingBehavior) {
 		if (newGroupingBehavior != groupingBehavior) {
 			NotificationChain msgs = null;
@@ -952,6 +988,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionSelectionBehavior getSelectionBehavior() {
 		return selectionBehavior;
 	}
@@ -976,6 +1013,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelectionBehavior(ActionSelectionBehavior newSelectionBehavior) {
 		if (newSelectionBehavior != selectionBehavior) {
 			NotificationChain msgs = null;
@@ -995,6 +1033,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionRequiredBehavior getRequiredBehavior() {
 		return requiredBehavior;
 	}
@@ -1019,6 +1058,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiredBehavior(ActionRequiredBehavior newRequiredBehavior) {
 		if (newRequiredBehavior != requiredBehavior) {
 			NotificationChain msgs = null;
@@ -1038,6 +1078,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionPrecheckBehavior getPrecheckBehavior() {
 		return precheckBehavior;
 	}
@@ -1062,6 +1103,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrecheckBehavior(ActionPrecheckBehavior newPrecheckBehavior) {
 		if (newPrecheckBehavior != precheckBehavior) {
 			NotificationChain msgs = null;
@@ -1081,6 +1123,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionCardinalityBehavior getCardinalityBehavior() {
 		return cardinalityBehavior;
 	}
@@ -1105,6 +1148,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCardinalityBehavior(ActionCardinalityBehavior newCardinalityBehavior) {
 		if (newCardinalityBehavior != cardinalityBehavior) {
 			NotificationChain msgs = null;
@@ -1124,6 +1168,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getResource() {
 		return resource;
 	}
@@ -1148,6 +1193,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Reference newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -1167,6 +1213,7 @@ public class RequestGroupActionImpl extends BackboneElementImpl implements Reque
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RequestGroupAction> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<RequestGroupAction>(RequestGroupAction.class, this, FhirPackage.REQUEST_GROUP_ACTION__ACTION);

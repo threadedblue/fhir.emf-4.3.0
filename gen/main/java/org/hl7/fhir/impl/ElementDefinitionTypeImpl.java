@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.AggregationMode;
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.ElementDefinitionType;
@@ -111,6 +116,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getCode() {
 		return code;
 	}
@@ -135,6 +141,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Uri newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -154,6 +161,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getProfile() {
 		if (profile == null) {
 			profile = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.ELEMENT_DEFINITION_TYPE__PROFILE);
@@ -166,6 +174,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Canonical> getTargetProfile() {
 		if (targetProfile == null) {
 			targetProfile = new EObjectContainmentEList<Canonical>(Canonical.class, this, FhirPackage.ELEMENT_DEFINITION_TYPE__TARGET_PROFILE);
@@ -178,6 +187,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AggregationMode> getAggregation() {
 		if (aggregation == null) {
 			aggregation = new EObjectContainmentEList<AggregationMode>(AggregationMode.class, this, FhirPackage.ELEMENT_DEFINITION_TYPE__AGGREGATION);
@@ -190,6 +200,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReferenceVersionRules getVersioning() {
 		return versioning;
 	}
@@ -214,6 +225,7 @@ public class ElementDefinitionTypeImpl extends BackboneElementImpl implements El
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersioning(ReferenceVersionRules newVersioning) {
 		if (newVersioning != versioning) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.Coding;
 import org.hl7.fhir.ContractAnswer;
@@ -225,6 +230,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getScope() {
 		return scope;
 	}
@@ -249,6 +255,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScope(CodeableConcept newScope) {
 		if (newScope != scope) {
 			NotificationChain msgs = null;
@@ -268,6 +275,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONTRACT_ASSET__TYPE);
@@ -280,6 +288,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getTypeReference() {
 		if (typeReference == null) {
 			typeReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CONTRACT_ASSET__TYPE_REFERENCE);
@@ -292,6 +301,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSubtype() {
 		if (subtype == null) {
 			subtype = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONTRACT_ASSET__SUBTYPE);
@@ -304,6 +314,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coding getRelationship() {
 		return relationship;
 	}
@@ -328,6 +339,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationship(Coding newRelationship) {
 		if (newRelationship != relationship) {
 			NotificationChain msgs = null;
@@ -347,6 +359,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractContext> getContext() {
 		if (context == null) {
 			context = new EObjectContainmentEList<ContractContext>(ContractContext.class, this, FhirPackage.CONTRACT_ASSET__CONTEXT);
@@ -359,6 +372,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCondition() {
 		return condition;
 	}
@@ -383,6 +397,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(org.hl7.fhir.String newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -402,6 +417,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getPeriodType() {
 		if (periodType == null) {
 			periodType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CONTRACT_ASSET__PERIOD_TYPE);
@@ -414,6 +430,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Period> getPeriod() {
 		if (period == null) {
 			period = new EObjectContainmentEList<Period>(Period.class, this, FhirPackage.CONTRACT_ASSET__PERIOD);
@@ -426,6 +443,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Period> getUsePeriod() {
 		if (usePeriod == null) {
 			usePeriod = new EObjectContainmentEList<Period>(Period.class, this, FhirPackage.CONTRACT_ASSET__USE_PERIOD);
@@ -438,6 +456,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -462,6 +481,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;
@@ -481,6 +501,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getLinkId() {
 		if (linkId == null) {
 			linkId = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.CONTRACT_ASSET__LINK_ID);
@@ -493,6 +514,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractAnswer> getAnswer() {
 		if (answer == null) {
 			answer = new EObjectContainmentEList<ContractAnswer>(ContractAnswer.class, this, FhirPackage.CONTRACT_ASSET__ANSWER);
@@ -505,6 +527,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnsignedInt> getSecurityLabelNumber() {
 		if (securityLabelNumber == null) {
 			securityLabelNumber = new EObjectContainmentEList<UnsignedInt>(UnsignedInt.class, this, FhirPackage.CONTRACT_ASSET__SECURITY_LABEL_NUMBER);
@@ -517,6 +540,7 @@ public class ContractAssetImpl extends BackboneElementImpl implements ContractAs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContractValuedItem> getValuedItem() {
 		if (valuedItem == null) {
 			valuedItem = new EObjectContainmentEList<ContractValuedItem>(ContractValuedItem.class, this, FhirPackage.CONTRACT_ASSET__VALUED_ITEM);

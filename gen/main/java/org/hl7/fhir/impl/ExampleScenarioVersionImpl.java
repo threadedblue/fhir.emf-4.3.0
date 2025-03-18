@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ExampleScenarioVersion;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Markdown;
@@ -70,6 +73,7 @@ public class ExampleScenarioVersionImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersionId() {
 		return versionId;
 	}
@@ -94,6 +98,7 @@ public class ExampleScenarioVersionImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersionId(org.hl7.fhir.String newVersionId) {
 		if (newVersionId != versionId) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class ExampleScenarioVersionImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -137,6 +143,7 @@ public class ExampleScenarioVersionImpl extends BackboneElementImpl implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;

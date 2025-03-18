@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CitationDateOfPublication;
 import org.hl7.fhir.Date;
 import org.hl7.fhir.FhirPackage;
@@ -114,6 +117,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return date;
 	}
@@ -138,6 +142,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -157,6 +162,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getYear() {
 		return year;
 	}
@@ -181,6 +187,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setYear(org.hl7.fhir.String newYear) {
 		if (newYear != year) {
 			NotificationChain msgs = null;
@@ -200,6 +207,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMonth() {
 		return month;
 	}
@@ -224,6 +232,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMonth(org.hl7.fhir.String newMonth) {
 		if (newMonth != month) {
 			NotificationChain msgs = null;
@@ -243,6 +252,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDay() {
 		return day;
 	}
@@ -267,6 +277,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDay(org.hl7.fhir.String newDay) {
 		if (newDay != day) {
 			NotificationChain msgs = null;
@@ -286,6 +297,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSeason() {
 		return season;
 	}
@@ -310,6 +322,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSeason(org.hl7.fhir.String newSeason) {
 		if (newSeason != season) {
 			NotificationChain msgs = null;
@@ -329,6 +342,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getText() {
 		return text;
 	}
@@ -353,6 +367,7 @@ public class CitationDateOfPublicationImpl extends BackboneElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(org.hl7.fhir.String newText) {
 		if (newText != text) {
 			NotificationChain msgs = null;

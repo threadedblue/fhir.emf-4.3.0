@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Decimal;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MolecularSequenceRoc;
@@ -128,6 +132,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.Integer> getScore() {
 		if (score == null) {
 			score = new EObjectContainmentEList<org.hl7.fhir.Integer>(org.hl7.fhir.Integer.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__SCORE);
@@ -140,6 +145,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.Integer> getNumTP() {
 		if (numTP == null) {
 			numTP = new EObjectContainmentEList<org.hl7.fhir.Integer>(org.hl7.fhir.Integer.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__NUM_TP);
@@ -152,6 +158,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.Integer> getNumFP() {
 		if (numFP == null) {
 			numFP = new EObjectContainmentEList<org.hl7.fhir.Integer>(org.hl7.fhir.Integer.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__NUM_FP);
@@ -164,6 +171,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.Integer> getNumFN() {
 		if (numFN == null) {
 			numFN = new EObjectContainmentEList<org.hl7.fhir.Integer>(org.hl7.fhir.Integer.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__NUM_FN);
@@ -176,6 +184,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Decimal> getPrecision() {
 		if (precision == null) {
 			precision = new EObjectContainmentEList<Decimal>(Decimal.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__PRECISION);
@@ -188,6 +197,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Decimal> getSensitivity() {
 		if (sensitivity == null) {
 			sensitivity = new EObjectContainmentEList<Decimal>(Decimal.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__SENSITIVITY);
@@ -200,6 +210,7 @@ public class MolecularSequenceRocImpl extends BackboneElementImpl implements Mol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Decimal> getFMeasure() {
 		if (fMeasure == null) {
 			fMeasure = new EObjectContainmentEList<Decimal>(Decimal.class, this, FhirPackage.MOLECULAR_SEQUENCE_ROC__FMEASURE);

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.BundleEntry;
 import org.hl7.fhir.BundleLink;
 import org.hl7.fhir.BundleRequest;
@@ -124,6 +129,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BundleLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<BundleLink>(BundleLink.class, this, FhirPackage.BUNDLE_ENTRY__LINK);
@@ -136,6 +142,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getFullUrl() {
 		return fullUrl;
 	}
@@ -160,6 +167,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFullUrl(Uri newFullUrl) {
 		if (newFullUrl != fullUrl) {
 			NotificationChain msgs = null;
@@ -179,6 +187,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResourceContainer getResource() {
 		return resource;
 	}
@@ -203,6 +212,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(ResourceContainer newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;
@@ -222,6 +232,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleSearch getSearch() {
 		return search;
 	}
@@ -246,6 +257,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSearch(BundleSearch newSearch) {
 		if (newSearch != search) {
 			NotificationChain msgs = null;
@@ -265,6 +277,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleRequest getRequest() {
 		return request;
 	}
@@ -289,6 +302,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequest(BundleRequest newRequest) {
 		if (newRequest != request) {
 			NotificationChain msgs = null;
@@ -308,6 +322,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BundleResponse getResponse() {
 		return response;
 	}
@@ -332,6 +347,7 @@ public class BundleEntryImpl extends BackboneElementImpl implements BundleEntry 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponse(BundleResponse newResponse) {
 		if (newResponse != response) {
 			NotificationChain msgs = null;

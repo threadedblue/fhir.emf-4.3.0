@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.BodyStructure;
 import org.hl7.fhir.CodeableConcept;
@@ -144,6 +149,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.BODY_STRUCTURE__IDENTIFIER);
@@ -156,6 +162,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActive() {
 		return active;
 	}
@@ -180,6 +187,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActive(org.hl7.fhir.Boolean newActive) {
 		if (newActive != active) {
 			NotificationChain msgs = null;
@@ -199,6 +207,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMorphology() {
 		return morphology;
 	}
@@ -223,6 +232,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMorphology(CodeableConcept newMorphology) {
 		if (newMorphology != morphology) {
 			NotificationChain msgs = null;
@@ -242,6 +252,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getLocation() {
 		return location;
 	}
@@ -266,6 +277,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(CodeableConcept newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
@@ -285,6 +297,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getLocationQualifier() {
 		if (locationQualifier == null) {
 			locationQualifier = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.BODY_STRUCTURE__LOCATION_QUALIFIER);
@@ -297,6 +310,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -321,6 +335,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -340,6 +355,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attachment> getImage() {
 		if (image == null) {
 			image = new EObjectContainmentEList<Attachment>(Attachment.class, this, FhirPackage.BODY_STRUCTURE__IMAGE);
@@ -352,6 +368,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -376,6 +393,7 @@ public class BodyStructureImpl extends DomainResourceImpl implements BodyStructu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DeviceDefinitionDeviceName;
 import org.hl7.fhir.DeviceNameType;
 import org.hl7.fhir.FhirPackage;
@@ -70,6 +73,7 @@ public class DeviceDefinitionDeviceNameImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -94,6 +98,7 @@ public class DeviceDefinitionDeviceNameImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class DeviceDefinitionDeviceNameImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeviceNameType getType() {
 		return type;
 	}
@@ -137,6 +143,7 @@ public class DeviceDefinitionDeviceNameImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(DeviceNameType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

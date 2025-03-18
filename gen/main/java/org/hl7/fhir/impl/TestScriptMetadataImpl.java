@@ -5,11 +5,15 @@ package org.hl7.fhir.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestScriptCapability;
 import org.hl7.fhir.TestScriptLink;
@@ -74,6 +78,7 @@ public class TestScriptMetadataImpl extends BackboneElementImpl implements TestS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestScriptLink> getLink() {
 		if (link == null) {
 			link = new EObjectContainmentEList<TestScriptLink>(TestScriptLink.class, this, FhirPackage.TEST_SCRIPT_METADATA__LINK);
@@ -86,6 +91,7 @@ public class TestScriptMetadataImpl extends BackboneElementImpl implements TestS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestScriptCapability> getCapability() {
 		if (capability == null) {
 			capability = new EObjectContainmentEList<TestScriptCapability>(TestScriptCapability.class, this, FhirPackage.TEST_SCRIPT_METADATA__CAPABILITY);

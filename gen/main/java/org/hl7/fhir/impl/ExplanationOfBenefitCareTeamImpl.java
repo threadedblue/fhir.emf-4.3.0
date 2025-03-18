@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ExplanationOfBenefitCareTeam;
 import org.hl7.fhir.FhirPackage;
@@ -105,6 +108,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getSequence() {
 		return sequence;
 	}
@@ -129,6 +133,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSequence(PositiveInt newSequence) {
 		if (newSequence != sequence) {
 			NotificationChain msgs = null;
@@ -148,6 +153,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getProvider() {
 		return provider;
 	}
@@ -172,6 +178,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProvider(Reference newProvider) {
 		if (newProvider != provider) {
 			NotificationChain msgs = null;
@@ -191,6 +198,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getResponsible() {
 		return responsible;
 	}
@@ -215,6 +223,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResponsible(org.hl7.fhir.Boolean newResponsible) {
 		if (newResponsible != responsible) {
 			NotificationChain msgs = null;
@@ -234,6 +243,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -258,6 +268,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -277,6 +288,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getQualification() {
 		return qualification;
 	}
@@ -301,6 +313,7 @@ public class ExplanationOfBenefitCareTeamImpl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualification(CodeableConcept newQualification) {
 		if (newQualification != qualification) {
 			NotificationChain msgs = null;

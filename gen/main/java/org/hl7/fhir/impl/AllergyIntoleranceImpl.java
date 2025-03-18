@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Age;
 import org.hl7.fhir.AllergyIntolerance;
 import org.hl7.fhir.AllergyIntoleranceCategory;
@@ -284,6 +289,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.ALLERGY_INTOLERANCE__IDENTIFIER);
@@ -296,6 +302,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getClinicalStatus() {
 		return clinicalStatus;
 	}
@@ -320,6 +327,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClinicalStatus(CodeableConcept newClinicalStatus) {
 		if (newClinicalStatus != clinicalStatus) {
 			NotificationChain msgs = null;
@@ -339,6 +347,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getVerificationStatus() {
 		return verificationStatus;
 	}
@@ -363,6 +372,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVerificationStatus(CodeableConcept newVerificationStatus) {
 		if (newVerificationStatus != verificationStatus) {
 			NotificationChain msgs = null;
@@ -382,6 +392,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceType getType() {
 		return type;
 	}
@@ -406,6 +417,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AllergyIntoleranceType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -425,6 +437,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AllergyIntoleranceCategory> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<AllergyIntoleranceCategory>(AllergyIntoleranceCategory.class, this, FhirPackage.ALLERGY_INTOLERANCE__CATEGORY);
@@ -437,6 +450,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AllergyIntoleranceCriticality getCriticality() {
 		return criticality;
 	}
@@ -461,6 +475,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCriticality(AllergyIntoleranceCriticality newCriticality) {
 		if (newCriticality != criticality) {
 			NotificationChain msgs = null;
@@ -480,6 +495,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -504,6 +520,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -523,6 +540,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -547,6 +565,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -566,6 +585,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getEncounter() {
 		return encounter;
 	}
@@ -590,6 +610,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncounter(Reference newEncounter) {
 		if (newEncounter != encounter) {
 			NotificationChain msgs = null;
@@ -609,6 +630,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getOnsetDateTime() {
 		return onsetDateTime;
 	}
@@ -633,6 +655,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetDateTime(DateTime newOnsetDateTime) {
 		if (newOnsetDateTime != onsetDateTime) {
 			NotificationChain msgs = null;
@@ -652,6 +675,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Age getOnsetAge() {
 		return onsetAge;
 	}
@@ -676,6 +700,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetAge(Age newOnsetAge) {
 		if (newOnsetAge != onsetAge) {
 			NotificationChain msgs = null;
@@ -695,6 +720,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getOnsetPeriod() {
 		return onsetPeriod;
 	}
@@ -719,6 +745,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetPeriod(Period newOnsetPeriod) {
 		if (newOnsetPeriod != onsetPeriod) {
 			NotificationChain msgs = null;
@@ -738,6 +765,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Range getOnsetRange() {
 		return onsetRange;
 	}
@@ -762,6 +790,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetRange(Range newOnsetRange) {
 		if (newOnsetRange != onsetRange) {
 			NotificationChain msgs = null;
@@ -781,6 +810,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getOnsetString() {
 		return onsetString;
 	}
@@ -805,6 +835,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnsetString(org.hl7.fhir.String newOnsetString) {
 		if (newOnsetString != onsetString) {
 			NotificationChain msgs = null;
@@ -824,6 +855,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getRecordedDate() {
 		return recordedDate;
 	}
@@ -848,6 +880,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRecordedDate(DateTime newRecordedDate) {
 		if (newRecordedDate != recordedDate) {
 			NotificationChain msgs = null;
@@ -867,6 +900,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getRecorder() {
 		return recorder;
 	}
@@ -891,6 +925,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRecorder(Reference newRecorder) {
 		if (newRecorder != recorder) {
 			NotificationChain msgs = null;
@@ -910,6 +945,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getAsserter() {
 		return asserter;
 	}
@@ -934,6 +970,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAsserter(Reference newAsserter) {
 		if (newAsserter != asserter) {
 			NotificationChain msgs = null;
@@ -953,6 +990,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getLastOccurrence() {
 		return lastOccurrence;
 	}
@@ -977,6 +1015,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastOccurrence(DateTime newLastOccurrence) {
 		if (newLastOccurrence != lastOccurrence) {
 			NotificationChain msgs = null;
@@ -996,6 +1035,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.ALLERGY_INTOLERANCE__NOTE);
@@ -1008,6 +1048,7 @@ public class AllergyIntoleranceImpl extends DomainResourceImpl implements Allerg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AllergyIntoleranceReaction> getReaction() {
 		if (reaction == null) {
 			reaction = new EObjectContainmentEList<AllergyIntoleranceReaction>(AllergyIntoleranceReaction.class, this, FhirPackage.ALLERGY_INTOLERANCE__REACTION);

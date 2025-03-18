@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -178,6 +183,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SLOT__IDENTIFIER);
@@ -190,6 +196,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getServiceCategory() {
 		if (serviceCategory == null) {
 			serviceCategory = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SLOT__SERVICE_CATEGORY);
@@ -202,6 +209,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getServiceType() {
 		if (serviceType == null) {
 			serviceType = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SLOT__SERVICE_TYPE);
@@ -214,6 +222,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getSpecialty() {
 		if (specialty == null) {
 			specialty = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.SLOT__SPECIALTY);
@@ -226,6 +235,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getAppointmentType() {
 		return appointmentType;
 	}
@@ -250,6 +260,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppointmentType(CodeableConcept newAppointmentType) {
 		if (newAppointmentType != appointmentType) {
 			NotificationChain msgs = null;
@@ -269,6 +280,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSchedule() {
 		return schedule;
 	}
@@ -293,6 +305,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSchedule(Reference newSchedule) {
 		if (newSchedule != schedule) {
 			NotificationChain msgs = null;
@@ -312,6 +325,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SlotStatus getStatus() {
 		return status;
 	}
@@ -336,6 +350,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(SlotStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -355,6 +370,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getStart() {
 		return start;
 	}
@@ -379,6 +395,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(Instant newStart) {
 		if (newStart != start) {
 			NotificationChain msgs = null;
@@ -398,6 +415,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Instant getEnd() {
 		return end;
 	}
@@ -422,6 +440,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(Instant newEnd) {
 		if (newEnd != end) {
 			NotificationChain msgs = null;
@@ -441,6 +460,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getOverbooked() {
 		return overbooked;
 	}
@@ -465,6 +485,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOverbooked(org.hl7.fhir.Boolean newOverbooked) {
 		if (newOverbooked != overbooked) {
 			NotificationChain msgs = null;
@@ -484,6 +505,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getComment() {
 		return comment;
 	}
@@ -508,6 +530,7 @@ public class SlotImpl extends DomainResourceImpl implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(org.hl7.fhir.String newComment) {
 		if (newComment != comment) {
 			NotificationChain msgs = null;

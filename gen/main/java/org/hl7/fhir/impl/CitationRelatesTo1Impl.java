@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.CitationRelatesTo1;
 import org.hl7.fhir.CodeableConcept;
@@ -123,6 +128,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRelationshipType() {
 		return relationshipType;
 	}
@@ -147,6 +153,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelationshipType(CodeableConcept newRelationshipType) {
 		if (newRelationshipType != relationshipType) {
 			NotificationChain msgs = null;
@@ -166,6 +173,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getTargetClassifier() {
 		if (targetClassifier == null) {
 			targetClassifier = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CITATION_RELATES_TO1__TARGET_CLASSIFIER);
@@ -178,6 +186,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getTargetUri() {
 		return targetUri;
 	}
@@ -202,6 +211,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetUri(Uri newTargetUri) {
 		if (newTargetUri != targetUri) {
 			NotificationChain msgs = null;
@@ -221,6 +231,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getTargetIdentifier() {
 		return targetIdentifier;
 	}
@@ -245,6 +256,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetIdentifier(Identifier newTargetIdentifier) {
 		if (newTargetIdentifier != targetIdentifier) {
 			NotificationChain msgs = null;
@@ -264,6 +276,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTargetReference() {
 		return targetReference;
 	}
@@ -288,6 +301,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetReference(Reference newTargetReference) {
 		if (newTargetReference != targetReference) {
 			NotificationChain msgs = null;
@@ -307,6 +321,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getTargetAttachment() {
 		return targetAttachment;
 	}
@@ -331,6 +346,7 @@ public class CitationRelatesTo1Impl extends BackboneElementImpl implements Citat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetAttachment(Attachment newTargetAttachment) {
 		if (newTargetAttachment != targetAttachment) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.DocumentManifest;
@@ -191,6 +196,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getMasterIdentifier() {
 		return masterIdentifier;
 	}
@@ -215,6 +221,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMasterIdentifier(Identifier newMasterIdentifier) {
 		if (newMasterIdentifier != masterIdentifier) {
 			NotificationChain msgs = null;
@@ -234,6 +241,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.DOCUMENT_MANIFEST__IDENTIFIER);
@@ -246,6 +254,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentReferenceStatus getStatus() {
 		return status;
 	}
@@ -270,6 +279,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(DocumentReferenceStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -289,6 +299,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -313,6 +324,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -332,6 +344,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSubject() {
 		return subject;
 	}
@@ -356,6 +369,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubject(Reference newSubject) {
 		if (newSubject != subject) {
 			NotificationChain msgs = null;
@@ -375,6 +389,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getCreated() {
 		return created;
 	}
@@ -399,6 +414,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCreated(DateTime newCreated) {
 		if (newCreated != created) {
 			NotificationChain msgs = null;
@@ -418,6 +434,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DOCUMENT_MANIFEST__AUTHOR);
@@ -430,6 +447,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getRecipient() {
 		if (recipient == null) {
 			recipient = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DOCUMENT_MANIFEST__RECIPIENT);
@@ -442,6 +460,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getSource() {
 		return source;
 	}
@@ -466,6 +485,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Uri newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -485,6 +505,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -509,6 +530,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -528,6 +550,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getContent() {
 		if (content == null) {
 			content = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.DOCUMENT_MANIFEST__CONTENT);
@@ -540,6 +563,7 @@ public class DocumentManifestImpl extends DomainResourceImpl implements Document
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DocumentManifestRelated> getRelated() {
 		if (related == null) {
 			related = new EObjectContainmentEList<DocumentManifestRelated>(DocumentManifestRelated.class, this, FhirPackage.DOCUMENT_MANIFEST__RELATED);

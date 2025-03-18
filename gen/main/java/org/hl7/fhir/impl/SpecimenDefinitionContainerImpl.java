@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
@@ -154,6 +159,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getMaterial() {
 		return material;
 	}
@@ -178,6 +184,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaterial(CodeableConcept newMaterial) {
 		if (newMaterial != material) {
 			NotificationChain msgs = null;
@@ -197,6 +204,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -221,6 +229,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -240,6 +249,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCap() {
 		return cap;
 	}
@@ -264,6 +274,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCap(CodeableConcept newCap) {
 		if (newCap != cap) {
 			NotificationChain msgs = null;
@@ -283,6 +294,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -307,6 +319,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -326,6 +339,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getCapacity() {
 		return capacity;
 	}
@@ -350,6 +364,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCapacity(Quantity newCapacity) {
 		if (newCapacity != capacity) {
 			NotificationChain msgs = null;
@@ -369,6 +384,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getMinimumVolumeQuantity() {
 		return minimumVolumeQuantity;
 	}
@@ -393,6 +409,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinimumVolumeQuantity(Quantity newMinimumVolumeQuantity) {
 		if (newMinimumVolumeQuantity != minimumVolumeQuantity) {
 			NotificationChain msgs = null;
@@ -412,6 +429,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getMinimumVolumeString() {
 		return minimumVolumeString;
 	}
@@ -436,6 +454,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinimumVolumeString(org.hl7.fhir.String newMinimumVolumeString) {
 		if (newMinimumVolumeString != minimumVolumeString) {
 			NotificationChain msgs = null;
@@ -455,6 +474,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SpecimenDefinitionAdditive> getAdditive() {
 		if (additive == null) {
 			additive = new EObjectContainmentEList<SpecimenDefinitionAdditive>(SpecimenDefinitionAdditive.class, this, FhirPackage.SPECIMEN_DEFINITION_CONTAINER__ADDITIVE);
@@ -467,6 +487,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPreparation() {
 		return preparation;
 	}
@@ -491,6 +512,7 @@ public class SpecimenDefinitionContainerImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreparation(org.hl7.fhir.String newPreparation) {
 		if (newPreparation != preparation) {
 			NotificationChain msgs = null;

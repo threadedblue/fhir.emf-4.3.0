@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ImplementationGuideManifest;
 import org.hl7.fhir.ImplementationGuidePage1;
@@ -110,6 +115,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getRendering() {
 		return rendering;
 	}
@@ -134,6 +140,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRendering(Url newRendering) {
 		if (newRendering != rendering) {
 			NotificationChain msgs = null;
@@ -153,6 +160,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImplementationGuideResource1> getResource() {
 		if (resource == null) {
 			resource = new EObjectContainmentEList<ImplementationGuideResource1>(ImplementationGuideResource1.class, this, FhirPackage.IMPLEMENTATION_GUIDE_MANIFEST__RESOURCE);
@@ -165,6 +173,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImplementationGuidePage1> getPage() {
 		if (page == null) {
 			page = new EObjectContainmentEList<ImplementationGuidePage1>(ImplementationGuidePage1.class, this, FhirPackage.IMPLEMENTATION_GUIDE_MANIFEST__PAGE);
@@ -177,6 +186,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getImage() {
 		if (image == null) {
 			image = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.IMPLEMENTATION_GUIDE_MANIFEST__IMAGE);
@@ -189,6 +199,7 @@ public class ImplementationGuideManifestImpl extends BackboneElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.hl7.fhir.String> getOther() {
 		if (other == null) {
 			other = new EObjectContainmentEList<org.hl7.fhir.String>(org.hl7.fhir.String.class, this, FhirPackage.IMPLEMENTATION_GUIDE_MANIFEST__OTHER);

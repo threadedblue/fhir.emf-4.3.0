@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ImmunizationEducation;
@@ -93,6 +96,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDocumentType() {
 		return documentType;
 	}
@@ -117,6 +121,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocumentType(org.hl7.fhir.String newDocumentType) {
 		if (newDocumentType != documentType) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getReference() {
 		return reference;
 	}
@@ -160,6 +166,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Uri newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getPublicationDate() {
 		return publicationDate;
 	}
@@ -203,6 +211,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublicationDate(DateTime newPublicationDate) {
 		if (newPublicationDate != publicationDate) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getPresentationDate() {
 		return presentationDate;
 	}
@@ -246,6 +256,7 @@ public class ImmunizationEducationImpl extends BackboneElementImpl implements Im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPresentationDate(DateTime newPresentationDate) {
 		if (newPresentationDate != presentationDate) {
 			NotificationChain msgs = null;

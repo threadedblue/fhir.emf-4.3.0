@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -134,6 +139,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.MANUFACTURED_ITEM_DEFINITION__IDENTIFIER);
@@ -146,6 +152,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -170,6 +177,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -189,6 +197,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getManufacturedDoseForm() {
 		return manufacturedDoseForm;
 	}
@@ -213,6 +222,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManufacturedDoseForm(CodeableConcept newManufacturedDoseForm) {
 		if (newManufacturedDoseForm != manufacturedDoseForm) {
 			NotificationChain msgs = null;
@@ -232,6 +242,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getUnitOfPresentation() {
 		return unitOfPresentation;
 	}
@@ -256,6 +267,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnitOfPresentation(CodeableConcept newUnitOfPresentation) {
 		if (newUnitOfPresentation != unitOfPresentation) {
 			NotificationChain msgs = null;
@@ -275,6 +287,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getManufacturer() {
 		if (manufacturer == null) {
 			manufacturer = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.MANUFACTURED_ITEM_DEFINITION__MANUFACTURER);
@@ -287,6 +300,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getIngredient() {
 		if (ingredient == null) {
 			ingredient = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.MANUFACTURED_ITEM_DEFINITION__INGREDIENT);
@@ -299,6 +313,7 @@ public class ManufacturedItemDefinitionImpl extends DomainResourceImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManufacturedItemDefinitionProperty> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<ManufacturedItemDefinitionProperty>(ManufacturedItemDefinitionProperty.class, this, FhirPackage.MANUFACTURED_ITEM_DEFINITION__PROPERTY);

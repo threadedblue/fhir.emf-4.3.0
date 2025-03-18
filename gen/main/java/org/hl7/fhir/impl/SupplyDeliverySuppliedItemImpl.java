@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Quantity;
@@ -83,6 +86,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantity getQuantity() {
 		return quantity;
 	}
@@ -107,6 +111,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantity(Quantity newQuantity) {
 		if (newQuantity != quantity) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getItemCodeableConcept() {
 		return itemCodeableConcept;
 	}
@@ -150,6 +156,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemCodeableConcept(CodeableConcept newItemCodeableConcept) {
 		if (newItemCodeableConcept != itemCodeableConcept) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getItemReference() {
 		return itemReference;
 	}
@@ -193,6 +201,7 @@ public class SupplyDeliverySuppliedItemImpl extends BackboneElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setItemReference(Reference newItemReference) {
 		if (newItemReference != itemReference) {
 			NotificationChain msgs = null;

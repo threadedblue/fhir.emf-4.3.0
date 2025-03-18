@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ElementDefinitionDiscriminator;
 import org.hl7.fhir.ElementDefinitionSlicing;
 import org.hl7.fhir.FhirPackage;
@@ -98,6 +103,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementDefinitionDiscriminator> getDiscriminator() {
 		if (discriminator == null) {
 			discriminator = new EObjectContainmentEList<ElementDefinitionDiscriminator>(ElementDefinitionDiscriminator.class, this, FhirPackage.ELEMENT_DEFINITION_SLICING__DISCRIMINATOR);
@@ -110,6 +116,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -134,6 +141,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -153,6 +161,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getOrdered() {
 		return ordered;
 	}
@@ -177,6 +186,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrdered(org.hl7.fhir.Boolean newOrdered) {
 		if (newOrdered != ordered) {
 			NotificationChain msgs = null;
@@ -196,6 +206,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SlicingRules getRules() {
 		return rules;
 	}
@@ -220,6 +231,7 @@ public class ElementDefinitionSlicingImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRules(SlicingRules newRules) {
 		if (newRules != rules) {
 			NotificationChain msgs = null;

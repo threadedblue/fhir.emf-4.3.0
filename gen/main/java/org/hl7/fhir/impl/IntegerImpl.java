@@ -2,9 +2,14 @@
  */
 package org.hl7.fhir.impl;
 
+import java.lang.Integer;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 
 /**
@@ -74,6 +79,7 @@ public class IntegerImpl extends ElementImpl implements org.hl7.fhir.Integer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -83,6 +89,7 @@ public class IntegerImpl extends ElementImpl implements org.hl7.fhir.Integer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(int newValue) {
 		int oldValue = value;
 		value = newValue;
@@ -97,6 +104,7 @@ public class IntegerImpl extends ElementImpl implements org.hl7.fhir.Integer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		int oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -111,6 +119,7 @@ public class IntegerImpl extends ElementImpl implements org.hl7.fhir.Integer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

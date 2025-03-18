@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DataRequirementSort;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.SortDirection;
@@ -70,6 +73,7 @@ public class DataRequirementSortImpl extends ElementImpl implements DataRequirem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPath() {
 		return path;
 	}
@@ -94,6 +98,7 @@ public class DataRequirementSortImpl extends ElementImpl implements DataRequirem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(org.hl7.fhir.String newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
@@ -113,6 +118,7 @@ public class DataRequirementSortImpl extends ElementImpl implements DataRequirem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SortDirection getDirection() {
 		return direction;
 	}
@@ -137,6 +143,7 @@ public class DataRequirementSortImpl extends ElementImpl implements DataRequirem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDirection(SortDirection newDirection) {
 		if (newDirection != direction) {
 			NotificationChain msgs = null;

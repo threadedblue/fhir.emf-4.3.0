@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -203,6 +208,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.SUPPLY_DELIVERY__IDENTIFIER);
@@ -215,6 +221,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getBasedOn() {
 		if (basedOn == null) {
 			basedOn = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUPPLY_DELIVERY__BASED_ON);
@@ -227,6 +234,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getPartOf() {
 		if (partOf == null) {
 			partOf = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUPPLY_DELIVERY__PART_OF);
@@ -239,6 +247,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDeliveryStatus getStatus() {
 		return status;
 	}
@@ -263,6 +272,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(SupplyDeliveryStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -282,6 +292,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getPatient() {
 		return patient;
 	}
@@ -306,6 +317,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPatient(Reference newPatient) {
 		if (newPatient != patient) {
 			NotificationChain msgs = null;
@@ -325,6 +337,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -349,6 +362,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -368,6 +382,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupplyDeliverySuppliedItem getSuppliedItem() {
 		return suppliedItem;
 	}
@@ -392,6 +407,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSuppliedItem(SupplyDeliverySuppliedItem newSuppliedItem) {
 		if (newSuppliedItem != suppliedItem) {
 			NotificationChain msgs = null;
@@ -411,6 +427,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getOccurrenceDateTime() {
 		return occurrenceDateTime;
 	}
@@ -435,6 +452,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrenceDateTime(DateTime newOccurrenceDateTime) {
 		if (newOccurrenceDateTime != occurrenceDateTime) {
 			NotificationChain msgs = null;
@@ -454,6 +472,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Period getOccurrencePeriod() {
 		return occurrencePeriod;
 	}
@@ -478,6 +497,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrencePeriod(Period newOccurrencePeriod) {
 		if (newOccurrencePeriod != occurrencePeriod) {
 			NotificationChain msgs = null;
@@ -497,6 +517,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Timing getOccurrenceTiming() {
 		return occurrenceTiming;
 	}
@@ -521,6 +542,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOccurrenceTiming(Timing newOccurrenceTiming) {
 		if (newOccurrenceTiming != occurrenceTiming) {
 			NotificationChain msgs = null;
@@ -540,6 +562,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getSupplier() {
 		return supplier;
 	}
@@ -564,6 +587,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSupplier(Reference newSupplier) {
 		if (newSupplier != supplier) {
 			NotificationChain msgs = null;
@@ -583,6 +607,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getDestination() {
 		return destination;
 	}
@@ -607,6 +632,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestination(Reference newDestination) {
 		if (newDestination != destination) {
 			NotificationChain msgs = null;
@@ -626,6 +652,7 @@ public class SupplyDeliveryImpl extends DomainResourceImpl implements SupplyDeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getReceiver() {
 		if (receiver == null) {
 			receiver = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.SUPPLY_DELIVERY__RECEIVER);

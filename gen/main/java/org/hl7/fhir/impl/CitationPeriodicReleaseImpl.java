@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CitationDateOfPublication;
 import org.hl7.fhir.CitationPeriodicRelease;
 import org.hl7.fhir.CodeableConcept;
@@ -93,6 +96,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCitedMedium() {
 		return citedMedium;
 	}
@@ -117,6 +121,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCitedMedium(CodeableConcept newCitedMedium) {
 		if (newCitedMedium != citedMedium) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVolume() {
 		return volume;
 	}
@@ -160,6 +166,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVolume(org.hl7.fhir.String newVolume) {
 		if (newVolume != volume) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getIssue() {
 		return issue;
 	}
@@ -203,6 +211,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIssue(org.hl7.fhir.String newIssue) {
 		if (newIssue != issue) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CitationDateOfPublication getDateOfPublication() {
 		return dateOfPublication;
 	}
@@ -246,6 +256,7 @@ public class CitationPeriodicReleaseImpl extends BackboneElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateOfPublication(CitationDateOfPublication newDateOfPublication) {
 		if (newDateOfPublication != dateOfPublication) {
 			NotificationChain msgs = null;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Attachment;
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
@@ -129,6 +132,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RelatedArtifactType getType() {
 		return type;
 	}
@@ -153,6 +157,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(RelatedArtifactType newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -172,6 +177,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getLabel() {
 		return label;
 	}
@@ -196,6 +202,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(org.hl7.fhir.String newLabel) {
 		if (newLabel != label) {
 			NotificationChain msgs = null;
@@ -215,6 +222,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -239,6 +247,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -258,6 +267,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getCitation() {
 		return citation;
 	}
@@ -282,6 +292,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCitation(Markdown newCitation) {
 		if (newCitation != citation) {
 			NotificationChain msgs = null;
@@ -301,6 +312,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getUrl() {
 		return url;
 	}
@@ -325,6 +337,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Url newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -344,6 +357,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attachment getDocument() {
 		return document;
 	}
@@ -368,6 +382,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDocument(Attachment newDocument) {
 		if (newDocument != document) {
 			NotificationChain msgs = null;
@@ -387,6 +402,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getResource() {
 		return resource;
 	}
@@ -411,6 +427,7 @@ public class RelatedArtifactImpl extends ElementImpl implements RelatedArtifact 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResource(Canonical newResource) {
 		if (newResource != resource) {
 			NotificationChain msgs = null;

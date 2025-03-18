@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.Code;
 import org.hl7.fhir.ConceptMapGroupUnmappedMode;
@@ -94,6 +97,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConceptMapGroupUnmappedMode getMode() {
 		return mode;
 	}
@@ -118,6 +122,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(ConceptMapGroupUnmappedMode newMode) {
 		if (newMode != mode) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Code getCode() {
 		return code;
 	}
@@ -161,6 +167,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(Code newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDisplay() {
 		return display;
 	}
@@ -204,6 +212,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisplay(org.hl7.fhir.String newDisplay) {
 		if (newDisplay != display) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getUrl() {
 		return url;
 	}
@@ -247,6 +257,7 @@ public class ConceptMapUnmappedImpl extends BackboneElementImpl implements Conce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Canonical newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;

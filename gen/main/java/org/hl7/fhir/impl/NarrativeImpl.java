@@ -4,12 +4,16 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Narrative;
 import org.hl7.fhir.NarrativeStatus;
+
 import org.w3._1999.xhtml.DivType;
 
 /**
@@ -71,6 +75,7 @@ public class NarrativeImpl extends ElementImpl implements Narrative {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NarrativeStatus getStatus() {
 		return status;
 	}
@@ -95,6 +100,7 @@ public class NarrativeImpl extends ElementImpl implements Narrative {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(NarrativeStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -114,6 +120,7 @@ public class NarrativeImpl extends ElementImpl implements Narrative {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DivType getDiv() {
 		return div;
 	}
@@ -138,6 +145,7 @@ public class NarrativeImpl extends ElementImpl implements Narrative {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDiv(DivType newDiv) {
 		if (newDiv != div) {
 			NotificationChain msgs = null;

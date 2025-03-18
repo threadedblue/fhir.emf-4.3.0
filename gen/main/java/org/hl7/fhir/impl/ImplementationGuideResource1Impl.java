@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.Canonical;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.ImplementationGuideResource1;
@@ -94,6 +97,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReference() {
 		return reference;
 	}
@@ -118,6 +122,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Reference newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -137,6 +142,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getExampleBoolean() {
 		return exampleBoolean;
 	}
@@ -161,6 +167,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExampleBoolean(org.hl7.fhir.Boolean newExampleBoolean) {
 		if (newExampleBoolean != exampleBoolean) {
 			NotificationChain msgs = null;
@@ -180,6 +187,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Canonical getExampleCanonical() {
 		return exampleCanonical;
 	}
@@ -204,6 +212,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExampleCanonical(Canonical newExampleCanonical) {
 		if (newExampleCanonical != exampleCanonical) {
 			NotificationChain msgs = null;
@@ -223,6 +232,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getRelativePath() {
 		return relativePath;
 	}
@@ -247,6 +257,7 @@ public class ImplementationGuideResource1Impl extends BackboneElementImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRelativePath(Url newRelativePath) {
 		if (newRelativePath != relativePath) {
 			NotificationChain msgs = null;

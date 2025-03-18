@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CitationSummary1;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
@@ -93,6 +96,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getType() {
 		return type;
 	}
@@ -117,6 +121,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CodeableConcept newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -136,6 +141,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getStyle() {
 		return style;
 	}
@@ -160,6 +166,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(CodeableConcept newStyle) {
 		if (newStyle != style) {
 			NotificationChain msgs = null;
@@ -179,6 +186,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getSource() {
 		return source;
 	}
@@ -203,6 +211,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(CodeableConcept newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -222,6 +231,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getValue() {
 		return value;
 	}
@@ -246,6 +256,7 @@ public class CitationSummary1Impl extends BackboneElementImpl implements Citatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Markdown newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

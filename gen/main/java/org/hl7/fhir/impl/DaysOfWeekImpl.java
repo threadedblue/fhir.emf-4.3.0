@@ -3,8 +3,11 @@
 package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DaysOfWeek;
 import org.hl7.fhir.DaysOfWeekEnum;
 import org.hl7.fhir.FhirPackage;
@@ -76,6 +79,7 @@ public class DaysOfWeekImpl extends ElementImpl implements DaysOfWeek {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DaysOfWeekEnum getValue() {
 		return value;
 	}
@@ -85,6 +89,7 @@ public class DaysOfWeekImpl extends ElementImpl implements DaysOfWeek {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(DaysOfWeekEnum newValue) {
 		DaysOfWeekEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
@@ -99,6 +104,7 @@ public class DaysOfWeekImpl extends ElementImpl implements DaysOfWeek {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		DaysOfWeekEnum oldValue = value;
 		boolean oldValueESet = valueESet;
@@ -113,6 +119,7 @@ public class DaysOfWeekImpl extends ElementImpl implements DaysOfWeek {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return valueESet;
 	}

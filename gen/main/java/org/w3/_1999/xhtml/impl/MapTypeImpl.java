@@ -6,15 +6,20 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.w3._1999.xhtml.AddressType;
 import org.w3._1999.xhtml.AreaType;
 import org.w3._1999.xhtml.BlockquoteType;
@@ -288,6 +293,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeatureMap getBlock() {
 		if (block == null) {
 			block = new BasicFeatureMap(this, XhtmlPackage.MAP_TYPE__BLOCK);
@@ -300,6 +306,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PType> getP() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_P());
 	}
@@ -309,6 +316,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H1Type> getH1() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H1());
 	}
@@ -318,6 +326,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H2Type> getH2() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H2());
 	}
@@ -327,6 +336,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H3Type> getH3() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H3());
 	}
@@ -336,6 +346,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H4Type> getH4() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H4());
 	}
@@ -345,6 +356,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H5Type> getH5() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H5());
 	}
@@ -354,6 +366,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<H6Type> getH6() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_H6());
 	}
@@ -363,6 +376,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DivType> getDiv() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Div());
 	}
@@ -372,6 +386,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UlType> getUl() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Ul());
 	}
@@ -381,6 +396,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OlType> getOl() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Ol());
 	}
@@ -390,6 +406,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DlType> getDl() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Dl());
 	}
@@ -399,6 +416,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PreType> getPre() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Pre());
 	}
@@ -408,6 +426,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<HrType> getHr() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Hr());
 	}
@@ -417,6 +436,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BlockquoteType> getBlockquote() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Blockquote());
 	}
@@ -426,6 +446,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AddressType> getAddress() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Address());
 	}
@@ -435,6 +456,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TableType> getTable() {
 		return getBlock().list(XhtmlPackage.eINSTANCE.getMapType_Table());
 	}
@@ -444,6 +466,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AreaType> getArea() {
 		if (area == null) {
 			area = new EObjectContainmentEList<AreaType>(AreaType.class, this, XhtmlPackage.MAP_TYPE__AREA);
@@ -456,6 +479,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getClass_() {
 		return class_;
 	}
@@ -465,6 +489,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass(Object newClass) {
 		Object oldClass = class_;
 		class_ = newClass;
@@ -477,6 +502,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DirType getDir() {
 		return dir;
 	}
@@ -486,6 +512,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDir(DirType newDir) {
 		DirType oldDir = dir;
 		dir = newDir == null ? DIR_EDEFAULT : newDir;
@@ -500,6 +527,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDir() {
 		DirType oldDir = dir;
 		boolean oldDirESet = dirESet;
@@ -514,6 +542,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDir() {
 		return dirESet;
 	}
@@ -523,6 +552,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -532,6 +562,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -544,6 +575,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLang() {
 		return lang;
 	}
@@ -553,6 +585,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang(String newLang) {
 		String oldLang = lang;
 		lang = newLang;
@@ -565,6 +598,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getLang1() {
 		return lang1;
 	}
@@ -574,6 +608,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLang1(Object newLang1) {
 		Object oldLang1 = lang1;
 		lang1 = newLang1;
@@ -586,6 +621,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -595,6 +631,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -607,6 +644,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return style;
 	}
@@ -616,6 +654,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		String oldStyle = style;
 		style = newStyle;
@@ -628,6 +667,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -637,6 +677,7 @@ public class MapTypeImpl extends MinimalEObjectImpl.Container implements MapType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;

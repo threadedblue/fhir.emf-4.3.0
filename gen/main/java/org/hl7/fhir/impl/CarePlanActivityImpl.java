@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CarePlanActivity;
 import org.hl7.fhir.CarePlanDetail;
@@ -111,6 +116,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getOutcomeCodeableConcept() {
 		if (outcomeCodeableConcept == null) {
 			outcomeCodeableConcept = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.CARE_PLAN_ACTIVITY__OUTCOME_CODEABLE_CONCEPT);
@@ -123,6 +129,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getOutcomeReference() {
 		if (outcomeReference == null) {
 			outcomeReference = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.CARE_PLAN_ACTIVITY__OUTCOME_REFERENCE);
@@ -135,6 +142,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getProgress() {
 		if (progress == null) {
 			progress = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.CARE_PLAN_ACTIVITY__PROGRESS);
@@ -147,6 +155,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getReference() {
 		return reference;
 	}
@@ -171,6 +180,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReference(Reference newReference) {
 		if (newReference != reference) {
 			NotificationChain msgs = null;
@@ -190,6 +200,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CarePlanDetail getDetail() {
 		return detail;
 	}
@@ -214,6 +225,7 @@ public class CarePlanActivityImpl extends BackboneElementImpl implements CarePla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetail(CarePlanDetail newDetail) {
 		if (newDetail != detail) {
 			NotificationChain msgs = null;

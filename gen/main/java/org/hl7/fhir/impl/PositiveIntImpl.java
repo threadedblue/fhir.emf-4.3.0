@@ -5,8 +5,11 @@ package org.hl7.fhir.impl;
 import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.PositiveInt;
 
@@ -68,6 +71,7 @@ public class PositiveIntImpl extends ElementImpl implements PositiveInt {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigInteger getValue() {
 		return value;
 	}
@@ -77,6 +81,7 @@ public class PositiveIntImpl extends ElementImpl implements PositiveInt {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(BigInteger newValue) {
 		BigInteger oldValue = value;
 		value = newValue;

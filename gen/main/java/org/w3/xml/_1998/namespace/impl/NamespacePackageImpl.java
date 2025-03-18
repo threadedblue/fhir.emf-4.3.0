@@ -9,17 +9,25 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
 import org.hl7.fhir.FhirPackage;
+
 import org.hl7.fhir.impl.FhirPackageImpl;
+
 import org.w3._1999.xhtml.XhtmlPackage;
+
 import org.w3._1999.xhtml.impl.XhtmlPackageImpl;
+
 import org.w3.xml._1998.namespace.DocumentRoot;
 import org.w3.xml._1998.namespace.LangTypeMember1;
 import org.w3.xml._1998.namespace.NamespaceFactory;
 import org.w3.xml._1998.namespace.NamespacePackage;
 import org.w3.xml._1998.namespace.SpaceType;
+
 import org.w3.xml._1998.namespace.util.NamespaceValidator;
 
 /**
@@ -144,6 +152,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 		EValidator.Registry.INSTANCE.put
 			(theNamespacePackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return NamespaceValidator.INSTANCE;
 				 }
@@ -162,6 +171,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDocumentRoot() {
 		return documentRootEClass;
 	}
@@ -171,6 +181,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Mixed() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
 	}
@@ -180,6 +191,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDocumentRoot_XMLNSPrefixMap() {
 		return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
 	}
@@ -189,6 +201,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDocumentRoot_XSISchemaLocation() {
 		return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
 	}
@@ -198,6 +211,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Base() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(3);
 	}
@@ -207,6 +221,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Id() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(4);
 	}
@@ -216,6 +231,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Lang() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(5);
 	}
@@ -225,6 +241,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Space() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(6);
 	}
@@ -234,6 +251,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLangTypeMember1() {
 		return langTypeMember1EEnum;
 	}
@@ -243,6 +261,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSpaceType() {
 		return spaceTypeEEnum;
 	}
@@ -252,6 +271,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getLangType() {
 		return langTypeEDataType;
 	}
@@ -261,6 +281,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getLangTypeMember1Object() {
 		return langTypeMember1ObjectEDataType;
 	}
@@ -270,6 +291,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getSpaceTypeObject() {
 		return spaceTypeObjectEDataType;
 	}
@@ -279,6 +301,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamespaceFactory getNamespaceFactory() {
 		return (NamespaceFactory)getEFactoryInstance();
 	}
@@ -365,7 +388,7 @@ public class NamespacePackageImpl extends EPackageImpl implements NamespacePacka
 
 		// Initialize enums and add enum literals
 		initEEnum(langTypeMember1EEnum, LangTypeMember1.class, "LangTypeMember1");
-		addEEnumLiteral(langTypeMember1EEnum, LangTypeMember1._);
+		addEEnumLiteral(langTypeMember1EEnum, LangTypeMember1.__);
 
 		initEEnum(spaceTypeEEnum, SpaceType.class, "SpaceType");
 		addEEnumLiteral(spaceTypeEEnum, SpaceType.DEFAULT);

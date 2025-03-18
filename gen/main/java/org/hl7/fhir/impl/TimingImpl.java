@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
@@ -88,6 +93,7 @@ public class TimingImpl extends BackboneElementImpl implements Timing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DateTime> getEvent() {
 		if (event == null) {
 			event = new EObjectContainmentEList<DateTime>(DateTime.class, this, FhirPackage.TIMING__EVENT);
@@ -100,6 +106,7 @@ public class TimingImpl extends BackboneElementImpl implements Timing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimingRepeat getRepeat() {
 		return repeat;
 	}
@@ -124,6 +131,7 @@ public class TimingImpl extends BackboneElementImpl implements Timing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepeat(TimingRepeat newRepeat) {
 		if (newRepeat != repeat) {
 			NotificationChain msgs = null;
@@ -143,6 +151,7 @@ public class TimingImpl extends BackboneElementImpl implements Timing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getCode() {
 		return code;
 	}
@@ -167,6 +176,7 @@ public class TimingImpl extends BackboneElementImpl implements Timing {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(CodeableConcept newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;

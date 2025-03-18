@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ClaimResponseAdjudication;
 import org.hl7.fhir.ClaimResponseDetail;
 import org.hl7.fhir.ClaimResponseSubDetail;
@@ -99,6 +104,7 @@ public class ClaimResponseDetailImpl extends BackboneElementImpl implements Clai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PositiveInt getDetailSequence() {
 		return detailSequence;
 	}
@@ -123,6 +129,7 @@ public class ClaimResponseDetailImpl extends BackboneElementImpl implements Clai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDetailSequence(PositiveInt newDetailSequence) {
 		if (newDetailSequence != detailSequence) {
 			NotificationChain msgs = null;
@@ -142,6 +149,7 @@ public class ClaimResponseDetailImpl extends BackboneElementImpl implements Clai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PositiveInt> getNoteNumber() {
 		if (noteNumber == null) {
 			noteNumber = new EObjectContainmentEList<PositiveInt>(PositiveInt.class, this, FhirPackage.CLAIM_RESPONSE_DETAIL__NOTE_NUMBER);
@@ -154,6 +162,7 @@ public class ClaimResponseDetailImpl extends BackboneElementImpl implements Clai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClaimResponseAdjudication> getAdjudication() {
 		if (adjudication == null) {
 			adjudication = new EObjectContainmentEList<ClaimResponseAdjudication>(ClaimResponseAdjudication.class, this, FhirPackage.CLAIM_RESPONSE_DETAIL__ADJUDICATION);
@@ -166,6 +175,7 @@ public class ClaimResponseDetailImpl extends BackboneElementImpl implements Clai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClaimResponseSubDetail> getSubDetail() {
 		if (subDetail == null) {
 			subDetail = new EObjectContainmentEList<ClaimResponseSubDetail>(ClaimResponseSubDetail.class, this, FhirPackage.CLAIM_RESPONSE_DETAIL__SUB_DETAIL);

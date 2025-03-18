@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.ContactPoint;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.MessageHeaderSource;
@@ -104,6 +107,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -128,6 +132,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -147,6 +152,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSoftware() {
 		return software;
 	}
@@ -171,6 +177,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSoftware(org.hl7.fhir.String newSoftware) {
 		if (newSoftware != software) {
 			NotificationChain msgs = null;
@@ -190,6 +197,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -214,6 +222,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -233,6 +242,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ContactPoint getContact() {
 		return contact;
 	}
@@ -257,6 +267,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContact(ContactPoint newContact) {
 		if (newContact != contact) {
 			NotificationChain msgs = null;
@@ -276,6 +287,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Url getEndpoint() {
 		return endpoint;
 	}
@@ -300,6 +312,7 @@ public class MessageHeaderSourceImpl extends BackboneElementImpl implements Mess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEndpoint(Url newEndpoint) {
 		if (newEndpoint != endpoint) {
 			NotificationChain msgs = null;

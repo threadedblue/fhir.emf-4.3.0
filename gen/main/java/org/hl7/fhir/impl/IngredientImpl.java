@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.Identifier;
@@ -146,6 +151,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getIdentifier() {
 		return identifier;
 	}
@@ -170,6 +176,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(Identifier newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
@@ -189,6 +196,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -213,6 +221,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -232,6 +241,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reference> getFor() {
 		if (for_ == null) {
 			for_ = new EObjectContainmentEList<Reference>(Reference.class, this, FhirPackage.INGREDIENT__FOR);
@@ -244,6 +254,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getRole() {
 		return role;
 	}
@@ -268,6 +279,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(CodeableConcept newRole) {
 		if (newRole != role) {
 			NotificationChain msgs = null;
@@ -287,6 +299,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CodeableConcept> getFunction() {
 		if (function == null) {
 			function = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FhirPackage.INGREDIENT__FUNCTION);
@@ -299,6 +312,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAllergenicIndicator() {
 		return allergenicIndicator;
 	}
@@ -323,6 +337,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllergenicIndicator(org.hl7.fhir.Boolean newAllergenicIndicator) {
 		if (newAllergenicIndicator != allergenicIndicator) {
 			NotificationChain msgs = null;
@@ -342,6 +357,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IngredientManufacturer> getManufacturer() {
 		if (manufacturer == null) {
 			manufacturer = new EObjectContainmentEList<IngredientManufacturer>(IngredientManufacturer.class, this, FhirPackage.INGREDIENT__MANUFACTURER);
@@ -354,6 +370,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IngredientSubstance getSubstance() {
 		return substance;
 	}
@@ -378,6 +395,7 @@ public class IngredientImpl extends DomainResourceImpl implements Ingredient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstance(IngredientSubstance newSubstance) {
 		if (newSubstance != substance) {
 			NotificationChain msgs = null;

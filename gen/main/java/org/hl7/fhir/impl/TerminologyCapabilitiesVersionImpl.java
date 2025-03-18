@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Code;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TerminologyCapabilitiesFilter;
@@ -120,6 +125,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getCode() {
 		return code;
 	}
@@ -144,6 +150,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(org.hl7.fhir.String newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -163,6 +170,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getIsDefault() {
 		return isDefault;
 	}
@@ -187,6 +195,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDefault(org.hl7.fhir.Boolean newIsDefault) {
 		if (newIsDefault != isDefault) {
 			NotificationChain msgs = null;
@@ -206,6 +215,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getCompositional() {
 		return compositional;
 	}
@@ -230,6 +240,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCompositional(org.hl7.fhir.Boolean newCompositional) {
 		if (newCompositional != compositional) {
 			NotificationChain msgs = null;
@@ -249,6 +260,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Code> getLanguage() {
 		if (language == null) {
 			language = new EObjectContainmentEList<Code>(Code.class, this, FhirPackage.TERMINOLOGY_CAPABILITIES_VERSION__LANGUAGE);
@@ -261,6 +273,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TerminologyCapabilitiesFilter> getFilter() {
 		if (filter == null) {
 			filter = new EObjectContainmentEList<TerminologyCapabilitiesFilter>(TerminologyCapabilitiesFilter.class, this, FhirPackage.TERMINOLOGY_CAPABILITIES_VERSION__FILTER);
@@ -273,6 +286,7 @@ public class TerminologyCapabilitiesVersionImpl extends BackboneElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Code> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<Code>(Code.class, this, FhirPackage.TERMINOLOGY_CAPABILITIES_VERSION__PROPERTY);

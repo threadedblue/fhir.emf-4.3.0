@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.TestReportAction1;
 import org.hl7.fhir.TestReportTest;
@@ -86,6 +91,7 @@ public class TestReportTestImpl extends BackboneElementImpl implements TestRepor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -110,6 +116,7 @@ public class TestReportTestImpl extends BackboneElementImpl implements TestRepor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -129,6 +136,7 @@ public class TestReportTestImpl extends BackboneElementImpl implements TestRepor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getDescription() {
 		return description;
 	}
@@ -153,6 +161,7 @@ public class TestReportTestImpl extends BackboneElementImpl implements TestRepor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(org.hl7.fhir.String newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -172,6 +181,7 @@ public class TestReportTestImpl extends BackboneElementImpl implements TestRepor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TestReportAction1> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<TestReportAction1>(TestReportAction1.class, this, FhirPackage.TEST_REPORT_TEST__ACTION);

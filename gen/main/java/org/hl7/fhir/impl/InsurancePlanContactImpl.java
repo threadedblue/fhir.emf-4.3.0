@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Address;
 import org.hl7.fhir.CodeableConcept;
 import org.hl7.fhir.ContactPoint;
@@ -100,6 +105,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeableConcept getPurpose() {
 		return purpose;
 	}
@@ -124,6 +130,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPurpose(CodeableConcept newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
@@ -143,6 +150,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HumanName getName() {
 		return name;
 	}
@@ -167,6 +175,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(HumanName newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -186,6 +195,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactPoint> getTelecom() {
 		if (telecom == null) {
 			telecom = new EObjectContainmentEList<ContactPoint>(ContactPoint.class, this, FhirPackage.INSURANCE_PLAN_CONTACT__TELECOM);
@@ -198,6 +208,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Address getAddress() {
 		return address;
 	}
@@ -222,6 +233,7 @@ public class InsurancePlanContactImpl extends BackboneElementImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAddress(Address newAddress) {
 		if (newAddress != address) {
 			NotificationChain msgs = null;

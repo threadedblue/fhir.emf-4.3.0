@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.ExampleScenarioAlternative;
 import org.hl7.fhir.ExampleScenarioOperation;
 import org.hl7.fhir.ExampleScenarioProcess;
@@ -99,6 +104,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExampleScenarioProcess> getProcess() {
 		if (process == null) {
 			process = new EObjectContainmentEList<ExampleScenarioProcess>(ExampleScenarioProcess.class, this, FhirPackage.EXAMPLE_SCENARIO_STEP__PROCESS);
@@ -111,6 +117,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getPause() {
 		return pause;
 	}
@@ -135,6 +142,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPause(org.hl7.fhir.Boolean newPause) {
 		if (newPause != pause) {
 			NotificationChain msgs = null;
@@ -154,6 +162,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExampleScenarioOperation getOperation() {
 		return operation;
 	}
@@ -178,6 +187,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(ExampleScenarioOperation newOperation) {
 		if (newOperation != operation) {
 			NotificationChain msgs = null;
@@ -197,6 +207,7 @@ public class ExampleScenarioStepImpl extends BackboneElementImpl implements Exam
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExampleScenarioAlternative> getAlternative() {
 		if (alternative == null) {
 			alternative = new EObjectContainmentEList<ExampleScenarioAlternative>(ExampleScenarioAlternative.class, this, FhirPackage.EXAMPLE_SCENARIO_STEP__ALTERNATIVE);

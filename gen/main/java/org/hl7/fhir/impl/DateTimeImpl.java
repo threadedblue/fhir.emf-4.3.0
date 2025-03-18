@@ -5,8 +5,11 @@ package org.hl7.fhir.impl;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.DateTime;
 import org.hl7.fhir.FhirPackage;
 
@@ -68,6 +71,7 @@ public class DateTimeImpl extends ElementImpl implements DateTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XMLGregorianCalendar getValue() {
 		return value;
 	}
@@ -77,6 +81,7 @@ public class DateTimeImpl extends ElementImpl implements DateTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(XMLGregorianCalendar newValue) {
 		XMLGregorianCalendar oldValue = value;
 		value = newValue;

@@ -4,9 +4,12 @@ package org.hl7.fhir.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.hl7.fhir.CompositionRelatesTo;
 import org.hl7.fhir.DocumentRelationshipType;
 import org.hl7.fhir.FhirPackage;
@@ -83,6 +86,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRelationshipType getCode() {
 		return code;
 	}
@@ -107,6 +111,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(DocumentRelationshipType newCode) {
 		if (newCode != code) {
 			NotificationChain msgs = null;
@@ -126,6 +131,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Identifier getTargetIdentifier() {
 		return targetIdentifier;
 	}
@@ -150,6 +156,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetIdentifier(Identifier newTargetIdentifier) {
 		if (newTargetIdentifier != targetIdentifier) {
 			NotificationChain msgs = null;
@@ -169,6 +176,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reference getTargetReference() {
 		return targetReference;
 	}
@@ -193,6 +201,7 @@ public class CompositionRelatesToImpl extends BackboneElementImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTargetReference(Reference newTargetReference) {
 		if (newTargetReference != targetReference) {
 			NotificationChain msgs = null;

@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.Annotation;
 import org.hl7.fhir.CharacteristicCombination;
 import org.hl7.fhir.ContactDetail;
@@ -329,6 +334,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uri getUrl() {
 		return url;
 	}
@@ -353,6 +359,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(Uri newUrl) {
 		if (newUrl != url) {
 			NotificationChain msgs = null;
@@ -372,6 +379,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Identifier> getIdentifier() {
 		if (identifier == null) {
 			identifier = new EObjectContainmentEList<Identifier>(Identifier.class, this, FhirPackage.EVIDENCE_VARIABLE__IDENTIFIER);
@@ -384,6 +392,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getVersion() {
 		return version;
 	}
@@ -408,6 +417,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(org.hl7.fhir.String newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -427,6 +437,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getName() {
 		return name;
 	}
@@ -451,6 +462,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(org.hl7.fhir.String newName) {
 		if (newName != name) {
 			NotificationChain msgs = null;
@@ -470,6 +482,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getTitle() {
 		return title;
 	}
@@ -494,6 +507,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(org.hl7.fhir.String newTitle) {
 		if (newTitle != title) {
 			NotificationChain msgs = null;
@@ -513,6 +527,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getShortTitle() {
 		return shortTitle;
 	}
@@ -537,6 +552,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShortTitle(org.hl7.fhir.String newShortTitle) {
 		if (newShortTitle != shortTitle) {
 			NotificationChain msgs = null;
@@ -556,6 +572,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getSubtitle() {
 		return subtitle;
 	}
@@ -580,6 +597,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubtitle(org.hl7.fhir.String newSubtitle) {
 		if (newSubtitle != subtitle) {
 			NotificationChain msgs = null;
@@ -599,6 +617,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PublicationStatus getStatus() {
 		return status;
 	}
@@ -623,6 +642,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(PublicationStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
@@ -642,6 +662,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTime getDate() {
 		return date;
 	}
@@ -666,6 +687,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(DateTime newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
@@ -685,6 +707,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Markdown getDescription() {
 		return description;
 	}
@@ -709,6 +732,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Markdown newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -728,6 +752,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getNote() {
 		if (note == null) {
 			note = new EObjectContainmentEList<Annotation>(Annotation.class, this, FhirPackage.EVIDENCE_VARIABLE__NOTE);
@@ -740,6 +765,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UsageContext> getUseContext() {
 		if (useContext == null) {
 			useContext = new EObjectContainmentEList<UsageContext>(UsageContext.class, this, FhirPackage.EVIDENCE_VARIABLE__USE_CONTEXT);
@@ -752,6 +778,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.String getPublisher() {
 		return publisher;
 	}
@@ -776,6 +803,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPublisher(org.hl7.fhir.String newPublisher) {
 		if (newPublisher != publisher) {
 			NotificationChain msgs = null;
@@ -795,6 +823,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getContact() {
 		if (contact == null) {
 			contact = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_VARIABLE__CONTACT);
@@ -807,6 +836,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getAuthor() {
 		if (author == null) {
 			author = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_VARIABLE__AUTHOR);
@@ -819,6 +849,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEditor() {
 		if (editor == null) {
 			editor = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_VARIABLE__EDITOR);
@@ -831,6 +862,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getReviewer() {
 		if (reviewer == null) {
 			reviewer = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_VARIABLE__REVIEWER);
@@ -843,6 +875,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContactDetail> getEndorser() {
 		if (endorser == null) {
 			endorser = new EObjectContainmentEList<ContactDetail>(ContactDetail.class, this, FhirPackage.EVIDENCE_VARIABLE__ENDORSER);
@@ -855,6 +888,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RelatedArtifact> getRelatedArtifact() {
 		if (relatedArtifact == null) {
 			relatedArtifact = new EObjectContainmentEList<RelatedArtifact>(RelatedArtifact.class, this, FhirPackage.EVIDENCE_VARIABLE__RELATED_ARTIFACT);
@@ -867,6 +901,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getActual() {
 		return actual;
 	}
@@ -891,6 +926,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActual(org.hl7.fhir.Boolean newActual) {
 		if (newActual != actual) {
 			NotificationChain msgs = null;
@@ -910,6 +946,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CharacteristicCombination getCharacteristicCombination() {
 		return characteristicCombination;
 	}
@@ -934,6 +971,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCharacteristicCombination(CharacteristicCombination newCharacteristicCombination) {
 		if (newCharacteristicCombination != characteristicCombination) {
 			NotificationChain msgs = null;
@@ -953,6 +991,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceVariableCharacteristic> getCharacteristic() {
 		if (characteristic == null) {
 			characteristic = new EObjectContainmentEList<EvidenceVariableCharacteristic>(EvidenceVariableCharacteristic.class, this, FhirPackage.EVIDENCE_VARIABLE__CHARACTERISTIC);
@@ -965,6 +1004,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EvidenceVariableHandling getHandling() {
 		return handling;
 	}
@@ -989,6 +1029,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHandling(EvidenceVariableHandling newHandling) {
 		if (newHandling != handling) {
 			NotificationChain msgs = null;
@@ -1008,6 +1049,7 @@ public class EvidenceVariableImpl extends DomainResourceImpl implements Evidence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EvidenceVariableCategory> getCategory() {
 		if (category == null) {
 			category = new EObjectContainmentEList<EvidenceVariableCategory>(EvidenceVariableCategory.class, this, FhirPackage.EVIDENCE_VARIABLE__CATEGORY);

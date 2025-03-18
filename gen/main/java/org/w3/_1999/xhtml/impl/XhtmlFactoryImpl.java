@@ -3,6 +3,7 @@
 package org.w3._1999.xhtml.impl;
 
 import java.math.BigInteger;
+
 import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -11,81 +12,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import org.w3._1999.xhtml.AContent;
-import org.w3._1999.xhtml.AType;
-import org.w3._1999.xhtml.AbbrType;
-import org.w3._1999.xhtml.AcronymType;
-import org.w3._1999.xhtml.AddressType;
-import org.w3._1999.xhtml.AlignType;
-import org.w3._1999.xhtml.AreaType;
-import org.w3._1999.xhtml.BType;
-import org.w3._1999.xhtml.BdoType;
-import org.w3._1999.xhtml.BigType;
-import org.w3._1999.xhtml.Block;
-import org.w3._1999.xhtml.BlockquoteType;
-import org.w3._1999.xhtml.BrType;
-import org.w3._1999.xhtml.CaptionType;
-import org.w3._1999.xhtml.CiteType;
-import org.w3._1999.xhtml.CodeType;
-import org.w3._1999.xhtml.ColType;
-import org.w3._1999.xhtml.ColgroupType;
-import org.w3._1999.xhtml.DdType;
-import org.w3._1999.xhtml.DfnType;
-import org.w3._1999.xhtml.DirType;
-import org.w3._1999.xhtml.DirType1;
-import org.w3._1999.xhtml.DivType;
-import org.w3._1999.xhtml.DlType;
-import org.w3._1999.xhtml.DocumentRoot;
-import org.w3._1999.xhtml.DtType;
-import org.w3._1999.xhtml.EmType;
-import org.w3._1999.xhtml.Flow;
-import org.w3._1999.xhtml.H1Type;
-import org.w3._1999.xhtml.H2Type;
-import org.w3._1999.xhtml.H3Type;
-import org.w3._1999.xhtml.H4Type;
-import org.w3._1999.xhtml.H5Type;
-import org.w3._1999.xhtml.H6Type;
-import org.w3._1999.xhtml.HrType;
-import org.w3._1999.xhtml.IType;
-import org.w3._1999.xhtml.ImgType;
-import org.w3._1999.xhtml.Inline;
-import org.w3._1999.xhtml.IsmapType;
-import org.w3._1999.xhtml.KbdType;
-import org.w3._1999.xhtml.LiType;
-import org.w3._1999.xhtml.MapType;
-import org.w3._1999.xhtml.NohrefType;
-import org.w3._1999.xhtml.OlType;
-import org.w3._1999.xhtml.PType;
-import org.w3._1999.xhtml.PreContent;
-import org.w3._1999.xhtml.PreType;
-import org.w3._1999.xhtml.QType;
-import org.w3._1999.xhtml.SampType;
-import org.w3._1999.xhtml.Scope;
-import org.w3._1999.xhtml.Shape;
-import org.w3._1999.xhtml.SmallType;
-import org.w3._1999.xhtml.SpanType;
-import org.w3._1999.xhtml.StrongType;
-import org.w3._1999.xhtml.SubType;
-import org.w3._1999.xhtml.SupType;
-import org.w3._1999.xhtml.TFrame;
-import org.w3._1999.xhtml.TRules;
-import org.w3._1999.xhtml.TableType;
-import org.w3._1999.xhtml.TbodyType;
-import org.w3._1999.xhtml.TdType;
-import org.w3._1999.xhtml.TfootType;
-import org.w3._1999.xhtml.ThType;
-import org.w3._1999.xhtml.TheadType;
-import org.w3._1999.xhtml.TrType;
-import org.w3._1999.xhtml.TtType;
-import org.w3._1999.xhtml.UlType;
-import org.w3._1999.xhtml.ValignType;
-import org.w3._1999.xhtml.VarType;
-import org.w3._1999.xhtml.XhtmlFactory;
-import org.w3._1999.xhtml.XhtmlPackage;
+
+import org.w3._1999.xhtml.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -386,6 +321,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbbrType createAbbrType() {
 		AbbrTypeImpl abbrType = new AbbrTypeImpl();
 		return abbrType;
@@ -396,6 +332,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AContent createAContent() {
 		AContentImpl aContent = new AContentImpl();
 		return aContent;
@@ -406,6 +343,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AcronymType createAcronymType() {
 		AcronymTypeImpl acronymType = new AcronymTypeImpl();
 		return acronymType;
@@ -416,6 +354,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddressType createAddressType() {
 		AddressTypeImpl addressType = new AddressTypeImpl();
 		return addressType;
@@ -426,6 +365,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AreaType createAreaType() {
 		AreaTypeImpl areaType = new AreaTypeImpl();
 		return areaType;
@@ -436,6 +376,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AType createAType() {
 		ATypeImpl aType = new ATypeImpl();
 		return aType;
@@ -446,6 +387,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BdoType createBdoType() {
 		BdoTypeImpl bdoType = new BdoTypeImpl();
 		return bdoType;
@@ -456,6 +398,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BigType createBigType() {
 		BigTypeImpl bigType = new BigTypeImpl();
 		return bigType;
@@ -466,6 +409,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -476,6 +420,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BlockquoteType createBlockquoteType() {
 		BlockquoteTypeImpl blockquoteType = new BlockquoteTypeImpl();
 		return blockquoteType;
@@ -486,6 +431,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BrType createBrType() {
 		BrTypeImpl brType = new BrTypeImpl();
 		return brType;
@@ -496,6 +442,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BType createBType() {
 		BTypeImpl bType = new BTypeImpl();
 		return bType;
@@ -506,6 +453,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CaptionType createCaptionType() {
 		CaptionTypeImpl captionType = new CaptionTypeImpl();
 		return captionType;
@@ -516,6 +464,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CiteType createCiteType() {
 		CiteTypeImpl citeType = new CiteTypeImpl();
 		return citeType;
@@ -526,6 +475,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CodeType createCodeType() {
 		CodeTypeImpl codeType = new CodeTypeImpl();
 		return codeType;
@@ -536,6 +486,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColgroupType createColgroupType() {
 		ColgroupTypeImpl colgroupType = new ColgroupTypeImpl();
 		return colgroupType;
@@ -546,6 +497,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColType createColType() {
 		ColTypeImpl colType = new ColTypeImpl();
 		return colType;
@@ -556,6 +508,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DdType createDdType() {
 		DdTypeImpl ddType = new DdTypeImpl();
 		return ddType;
@@ -566,6 +519,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DfnType createDfnType() {
 		DfnTypeImpl dfnType = new DfnTypeImpl();
 		return dfnType;
@@ -576,6 +530,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DivType createDivType() {
 		DivTypeImpl divType = new DivTypeImpl();
 		return divType;
@@ -586,6 +541,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DlType createDlType() {
 		DlTypeImpl dlType = new DlTypeImpl();
 		return dlType;
@@ -596,6 +552,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
@@ -606,6 +563,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DtType createDtType() {
 		DtTypeImpl dtType = new DtTypeImpl();
 		return dtType;
@@ -616,6 +574,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EmType createEmType() {
 		EmTypeImpl emType = new EmTypeImpl();
 		return emType;
@@ -626,6 +585,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Flow createFlow() {
 		FlowImpl flow = new FlowImpl();
 		return flow;
@@ -636,6 +596,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H1Type createH1Type() {
 		H1TypeImpl h1Type = new H1TypeImpl();
 		return h1Type;
@@ -646,6 +607,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H2Type createH2Type() {
 		H2TypeImpl h2Type = new H2TypeImpl();
 		return h2Type;
@@ -656,6 +618,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H3Type createH3Type() {
 		H3TypeImpl h3Type = new H3TypeImpl();
 		return h3Type;
@@ -666,6 +629,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H4Type createH4Type() {
 		H4TypeImpl h4Type = new H4TypeImpl();
 		return h4Type;
@@ -676,6 +640,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H5Type createH5Type() {
 		H5TypeImpl h5Type = new H5TypeImpl();
 		return h5Type;
@@ -686,6 +651,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public H6Type createH6Type() {
 		H6TypeImpl h6Type = new H6TypeImpl();
 		return h6Type;
@@ -696,6 +662,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HrType createHrType() {
 		HrTypeImpl hrType = new HrTypeImpl();
 		return hrType;
@@ -706,6 +673,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ImgType createImgType() {
 		ImgTypeImpl imgType = new ImgTypeImpl();
 		return imgType;
@@ -716,6 +684,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Inline createInline() {
 		InlineImpl inline = new InlineImpl();
 		return inline;
@@ -726,6 +695,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IType createIType() {
 		ITypeImpl iType = new ITypeImpl();
 		return iType;
@@ -736,6 +706,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public KbdType createKbdType() {
 		KbdTypeImpl kbdType = new KbdTypeImpl();
 		return kbdType;
@@ -746,6 +717,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiType createLiType() {
 		LiTypeImpl liType = new LiTypeImpl();
 		return liType;
@@ -756,6 +728,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MapType createMapType() {
 		MapTypeImpl mapType = new MapTypeImpl();
 		return mapType;
@@ -766,6 +739,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OlType createOlType() {
 		OlTypeImpl olType = new OlTypeImpl();
 		return olType;
@@ -776,6 +750,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PreContent createPreContent() {
 		PreContentImpl preContent = new PreContentImpl();
 		return preContent;
@@ -786,6 +761,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PreType createPreType() {
 		PreTypeImpl preType = new PreTypeImpl();
 		return preType;
@@ -796,6 +772,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PType createPType() {
 		PTypeImpl pType = new PTypeImpl();
 		return pType;
@@ -806,6 +783,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QType createQType() {
 		QTypeImpl qType = new QTypeImpl();
 		return qType;
@@ -816,6 +794,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SampType createSampType() {
 		SampTypeImpl sampType = new SampTypeImpl();
 		return sampType;
@@ -826,6 +805,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SmallType createSmallType() {
 		SmallTypeImpl smallType = new SmallTypeImpl();
 		return smallType;
@@ -836,6 +816,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SpanType createSpanType() {
 		SpanTypeImpl spanType = new SpanTypeImpl();
 		return spanType;
@@ -846,6 +827,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StrongType createStrongType() {
 		StrongTypeImpl strongType = new StrongTypeImpl();
 		return strongType;
@@ -856,6 +838,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SubType createSubType() {
 		SubTypeImpl subType = new SubTypeImpl();
 		return subType;
@@ -866,6 +849,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupType createSupType() {
 		SupTypeImpl supType = new SupTypeImpl();
 		return supType;
@@ -876,6 +860,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TableType createTableType() {
 		TableTypeImpl tableType = new TableTypeImpl();
 		return tableType;
@@ -886,6 +871,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TbodyType createTbodyType() {
 		TbodyTypeImpl tbodyType = new TbodyTypeImpl();
 		return tbodyType;
@@ -896,6 +882,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TdType createTdType() {
 		TdTypeImpl tdType = new TdTypeImpl();
 		return tdType;
@@ -906,6 +893,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TfootType createTfootType() {
 		TfootTypeImpl tfootType = new TfootTypeImpl();
 		return tfootType;
@@ -916,6 +904,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TheadType createTheadType() {
 		TheadTypeImpl theadType = new TheadTypeImpl();
 		return theadType;
@@ -926,6 +915,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThType createThType() {
 		ThTypeImpl thType = new ThTypeImpl();
 		return thType;
@@ -936,6 +926,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TrType createTrType() {
 		TrTypeImpl trType = new TrTypeImpl();
 		return trType;
@@ -946,6 +937,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TtType createTtType() {
 		TtTypeImpl ttType = new TtTypeImpl();
 		return ttType;
@@ -956,6 +948,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UlType createUlType() {
 		UlTypeImpl ulType = new UlTypeImpl();
 		return ulType;
@@ -966,6 +959,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VarType createVarType() {
 		VarTypeImpl varType = new VarTypeImpl();
 		return varType;
@@ -1716,6 +1710,7 @@ public class XhtmlFactoryImpl extends EFactoryImpl implements XhtmlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XhtmlPackage getXhtmlPackage() {
 		return (XhtmlPackage)getEPackage();
 	}

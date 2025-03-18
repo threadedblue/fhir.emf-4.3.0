@@ -6,12 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.hl7.fhir.DaysOfWeek;
 import org.hl7.fhir.FhirPackage;
 import org.hl7.fhir.LocationHoursOfOperation;
@@ -98,6 +103,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DaysOfWeek> getDaysOfWeek() {
 		if (daysOfWeek == null) {
 			daysOfWeek = new EObjectContainmentEList<DaysOfWeek>(DaysOfWeek.class, this, FhirPackage.LOCATION_HOURS_OF_OPERATION__DAYS_OF_WEEK);
@@ -110,6 +116,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.hl7.fhir.Boolean getAllDay() {
 		return allDay;
 	}
@@ -134,6 +141,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllDay(org.hl7.fhir.Boolean newAllDay) {
 		if (newAllDay != allDay) {
 			NotificationChain msgs = null;
@@ -153,6 +161,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getOpeningTime() {
 		return openingTime;
 	}
@@ -177,6 +186,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpeningTime(Time newOpeningTime) {
 		if (newOpeningTime != openingTime) {
 			NotificationChain msgs = null;
@@ -196,6 +206,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getClosingTime() {
 		return closingTime;
 	}
@@ -220,6 +231,7 @@ public class LocationHoursOfOperationImpl extends BackboneElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClosingTime(Time newClosingTime) {
 		if (newClosingTime != closingTime) {
 			NotificationChain msgs = null;
