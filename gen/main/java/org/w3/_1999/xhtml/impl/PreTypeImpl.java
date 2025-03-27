@@ -10,11 +10,11 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.xml.namespace.SpaceType;
+
 import org.w3._1999.xhtml.DirType;
 import org.w3._1999.xhtml.PreType;
 import org.w3._1999.xhtml.XhtmlPackage;
-
-import org.w3.xml._1998.namespace.SpaceType;
 
 /**
  * <!-- begin-user-doc -->
@@ -134,7 +134,7 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object LANG1_EDEFAULT = null;
+	protected static final String LANG1_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLang1() <em>Lang1</em>}' attribute.
@@ -144,7 +144,7 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object lang1 = LANG1_EDEFAULT;
+	protected String lang1 = LANG1_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSpace() <em>Space</em>}' attribute.
@@ -154,7 +154,7 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final SpaceType SPACE_EDEFAULT = SpaceType.PRESERVE;
+	protected static final SpaceType SPACE_EDEFAULT = SpaceType.PRESERVE_LITERAL;
 
 	/**
 	 * The cached value of the '{@link #getSpace() <em>Space</em>}' attribute.
@@ -359,7 +359,7 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 	 * @generated
 	 */
 	@Override
-	public Object getLang1() {
+	public String getLang1() {
 		return lang1;
 	}
 
@@ -369,8 +369,8 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 	 * @generated
 	 */
 	@Override
-	public void setLang1(Object newLang1) {
-		Object oldLang1 = lang1;
+	public void setLang1(String newLang1) {
+		String oldLang1 = lang1;
 		lang1 = newLang1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, XhtmlPackage.PRE_TYPE__LANG1, oldLang1, lang1));
@@ -522,7 +522,7 @@ public class PreTypeImpl extends PreContentImpl implements PreType {
 				setLang((String)newValue);
 				return;
 			case XhtmlPackage.PRE_TYPE__LANG1:
-				setLang1(newValue);
+				setLang1((String)newValue);
 				return;
 			case XhtmlPackage.PRE_TYPE__SPACE:
 				setSpace((SpaceType)newValue);

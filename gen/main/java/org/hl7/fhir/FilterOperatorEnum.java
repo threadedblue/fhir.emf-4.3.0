@@ -31,7 +31,9 @@ public enum FilterOperatorEnum implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	__(0, "__", "="), /**
+	__(0, "__", "="),
+
+	/**
 	 * The '<em><b>Is A</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fhir.emf-4.3.0/gen/main/java" modelPluginID="fhir.emf-4.3.0"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fhir.emf-fhir.emf-4.3.0/gem/main/java" modelPluginID="fhir.emf-fhir.emf-4.3.0"
     modelName="Fhir" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    testsDirectory="/fhir.emf-4.3.0.tests/gen/test/java" importerID="org.eclipse.xsd.ecore.importer"
-    complianceLevel="17.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
-  <foreignModel>model/fhir-codegen-xsd-4.3.0/fhir-single.xsd</foreignModel>
+    testsDirectory="/fhir.emf-fhir.emf-4.3.0.tests/gen/test/java" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="17.0" copyrightFields="false" usedGenPackages="../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>model/fhir-codegen-xsd-4.3.0/fhir-all.xsd</foreignModel>
   <genPackages prefix="Xhtml" basePackage="org.w3._1999" resource="XML" disposableProviderFactory="true"
       loadInitialization="true" literalsInterface="false" ecorePackage="xhtml.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//AlignType">
@@ -891,28 +892,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/lang1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/style"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/title"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Namespace" basePackage="org.w3.xml._1998" resource="XML" disposableProviderFactory="true"
-      ecorePackage="namespace.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="namespace.ecore#//LangTypeMember1">
-      <genEnumLiterals ecoreEnumLiteral="namespace.ecore#//LangTypeMember1/_"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="namespace.ecore#//SpaceType">
-      <genEnumLiterals ecoreEnumLiteral="namespace.ecore#//SpaceType/default"/>
-      <genEnumLiterals ecoreEnumLiteral="namespace.ecore#//SpaceType/preserve"/>
-    </genEnums>
-    <genDataTypes ecoreDataType="namespace.ecore#//LangType"/>
-    <genDataTypes ecoreDataType="namespace.ecore#//LangTypeMember1Object"/>
-    <genDataTypes ecoreDataType="namespace.ecore#//SpaceTypeObject"/>
-    <genClasses ecoreClass="namespace.ecore#//DocumentRoot">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute namespace.ecore#//DocumentRoot/mixed"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference namespace.ecore#//DocumentRoot/xMLNSPrefixMap"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference namespace.ecore#//DocumentRoot/xSISchemaLocation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute namespace.ecore#//DocumentRoot/base"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute namespace.ecore#//DocumentRoot/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute namespace.ecore#//DocumentRoot/lang"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute namespace.ecore#//DocumentRoot/space"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Fhir" basePackage="org.hl7" resource="XML" disposableProviderFactory="true"

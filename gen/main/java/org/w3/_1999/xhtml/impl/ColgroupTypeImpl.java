@@ -231,7 +231,7 @@ public class ColgroupTypeImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object LANG1_EDEFAULT = null;
+	protected static final String LANG1_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLang1() <em>Lang1</em>}' attribute.
@@ -241,7 +241,7 @@ public class ColgroupTypeImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 * @ordered
 	 */
-	protected Object lang1 = LANG1_EDEFAULT;
+	protected String lang1 = LANG1_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
@@ -614,7 +614,7 @@ public class ColgroupTypeImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public Object getLang1() {
+	public String getLang1() {
 		return lang1;
 	}
 
@@ -624,8 +624,8 @@ public class ColgroupTypeImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public void setLang1(Object newLang1) {
-		Object oldLang1 = lang1;
+	public void setLang1(String newLang1) {
+		String oldLang1 = lang1;
 		lang1 = newLang1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, XhtmlPackage.COLGROUP_TYPE__LANG1, oldLang1, lang1));
@@ -889,7 +889,7 @@ public class ColgroupTypeImpl extends MinimalEObjectImpl.Container implements Co
 				setLang((String)newValue);
 				return;
 			case XhtmlPackage.COLGROUP_TYPE__LANG1:
-				setLang1(newValue);
+				setLang1((String)newValue);
 				return;
 			case XhtmlPackage.COLGROUP_TYPE__SPAN:
 				setSpan((BigInteger)newValue);

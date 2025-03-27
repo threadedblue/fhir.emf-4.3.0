@@ -308,13 +308,13 @@ public interface ImgType extends EObject {
 	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Lang1</em>' attribute.
-	 * @see #setLang1(Object)
+	 * @see #setLang1(String)
 	 * @see org.w3._1999.xhtml.XhtmlPackage#getImgType_Lang1()
-	 * @model dataType="org.w3.xml._1998.namespace.LangType"
+	 * @model dataType="org.eclipse.emf.ecore.xml.namespace.LangType"
 	 *        extendedMetaData="kind='attribute' name='lang' namespace='http://www.w3.org/XML/1998/namespace'"
 	 * @generated
 	 */
-	Object getLang1();
+	String getLang1();
 
 	/**
 	 * Sets the value of the '{@link org.w3._1999.xhtml.ImgType#getLang1 <em>Lang1</em>}' attribute.
@@ -324,7 +324,7 @@ public interface ImgType extends EObject {
 	 * @see #getLang1()
 	 * @generated
 	 */
-	void setLang1(Object value);
+	void setLang1(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Longdesc</b></em>' attribute.

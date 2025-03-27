@@ -4,7 +4,7 @@ package org.w3._1999.xhtml;
 
 import java.util.List;
 
-import org.w3.xml._1998.namespace.SpaceType;
+import org.eclipse.emf.ecore.xml.namespace.SpaceType;
 
 /**
  * <!-- begin-user-doc -->
@@ -203,13 +203,13 @@ public interface PreType extends PreContent {
 	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Lang1</em>' attribute.
-	 * @see #setLang1(Object)
+	 * @see #setLang1(String)
 	 * @see org.w3._1999.xhtml.XhtmlPackage#getPreType_Lang1()
-	 * @model dataType="org.w3.xml._1998.namespace.LangType"
+	 * @model dataType="org.eclipse.emf.ecore.xml.namespace.LangType"
 	 *        extendedMetaData="kind='attribute' name='lang' namespace='http://www.w3.org/XML/1998/namespace'"
 	 * @generated
 	 */
-	Object getLang1();
+	String getLang1();
 
 	/**
 	 * Sets the value of the '{@link org.w3._1999.xhtml.PreType#getLang1 <em>Lang1</em>}' attribute.
@@ -219,12 +219,12 @@ public interface PreType extends PreContent {
 	 * @see #getLang1()
 	 * @generated
 	 */
-	void setLang1(Object value);
+	void setLang1(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Space</b></em>' attribute.
 	 * The default value is <code>"preserve"</code>.
-	 * The literals are from the enumeration {@link org.w3.xml._1998.namespace.SpaceType}.
+	 * The literals are from the enumeration {@link org.eclipse.emf.ecore.xml.namespace.SpaceType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -246,7 +246,7 @@ public interface PreType extends PreContent {
 	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Space</em>' attribute.
-	 * @see org.w3.xml._1998.namespace.SpaceType
+	 * @see org.eclipse.emf.ecore.xml.namespace.SpaceType
 	 * @see #isSetSpace()
 	 * @see #unsetSpace()
 	 * @see #setSpace(SpaceType)
@@ -262,7 +262,7 @@ public interface PreType extends PreContent {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Space</em>' attribute.
-	 * @see org.w3.xml._1998.namespace.SpaceType
+	 * @see org.eclipse.emf.ecore.xml.namespace.SpaceType
 	 * @see #isSetSpace()
 	 * @see #unsetSpace()
 	 * @see #getSpace()

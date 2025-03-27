@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
+import org.eclipse.emf.ecore.xml.namespace.XMLNamespacePackage;
+
 import org.hl7.fhir.FhirFactory;
 import org.hl7.fhir.FhirPackage;
 
@@ -29,10 +31,6 @@ import org.hl7.fhir.util.FhirValidator;
 import org.w3._1999.xhtml.XhtmlPackage;
 
 import org.w3._1999.xhtml.impl.XhtmlPackageImpl;
-
-import org.w3.xml._1998.namespace.NamespacePackage;
-
-import org.w3.xml._1998.namespace.impl.NamespacePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -9864,21 +9862,16 @@ public class FhirPackageImpl extends EPackageImpl implements FhirPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		XMLNamespacePackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(XhtmlPackage.eNS_URI);
 		XhtmlPackageImpl theXhtmlPackage = (XhtmlPackageImpl)(registeredPackage instanceof XhtmlPackageImpl ? registeredPackage : XhtmlPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NamespacePackage.eNS_URI);
-		NamespacePackageImpl theNamespacePackage = (NamespacePackageImpl)(registeredPackage instanceof NamespacePackageImpl ? registeredPackage : NamespacePackage.eINSTANCE);
 
 		// Load packages
 		theFhirPackage.loadPackage();
 		theXhtmlPackage.loadPackage();
-
-		// Create package meta-data objects
-		theNamespacePackage.createPackageContents();
-
-		// Initialize created meta-data
-		theNamespacePackage.initializePackageContents();
 
 		// Fix loaded packages
 		theFhirPackage.fixPackageContents();

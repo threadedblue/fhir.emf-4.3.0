@@ -44,7 +44,9 @@ public enum QuestionnaireItemOperatorEnum implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	__(1, "__", "="), /**
+	__(1, "__", "="),
+
+	/**
 	 * The '<em><b>1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
