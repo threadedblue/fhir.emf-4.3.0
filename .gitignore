@@ -7,4 +7,4 @@ build/
 /.gradle/
 .git push --set-upstream origin maingit brgit brgitDS_Store/
 .java-version
-
+.DS_Store/

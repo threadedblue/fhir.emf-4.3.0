@@ -13,7 +13,7 @@ application {
 
 version = '4.3.0'
 
-group 'org.cormac'
+group 'org.hl7.fhir'
 def archive ='fhir.emf'
 
 description = 'Codebase generated from the HL7/FHIR specification'
